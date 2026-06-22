@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公式サッカーハイライトまとめ（W杯26 / Jリーグ / プレミア）| Football Highlights Compass</title>
+<meta name="description" content="日本から公式に見られるサッカーのハイライトを、複数の公式ソースを並べて整理。埋め込めるものは埋め込み、権利元が禁止しているものは公式へ案内。広告なし・ネタバレ防止。">
+<style>
+  :root{
+    --bg:#0f1216; --card:#171b21; --card2:#1d222a; --line:#2a313c;
+    --text:#e8edf3; --muted:#9aa6b2; --accent:#19c37d; --accent2:#3b82f6;
+    --warn:#f4b740; --pill:#222a34; --red:#ff0033;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:880px; margin:0 auto; padding:24px 18px 80px}
+  header.site{display:flex; align-items:center; gap:10px; padding:6px 0 18px; border-bottom:1px solid var(--line)}
+  header.site .logo{font-size:20px}
+  header.site .name{font-weight:700; letter-spacing:.02em}
+  header.site .name small{display:block; font-weight:400; color:var(--muted); font-size:12px; letter-spacing:0}
+  h1{font-size:23px; line-height:1.4; margin:26px 0 6px}
+  .sub{color:var(--muted); margin:0 0 18px}
+  .notices{display:grid; gap:8px; margin:18px 0 6px}
+  .notice{display:flex; gap:10px; align-items:flex-start; background:var(--card); border:1px solid var(--line);
+    border-left:3px solid var(--accent); border-radius:10px; padding:10px 12px; font-size:14px}
+  .notice.blue{border-left-color:var(--accent2)}
+  .notice.warn{border-left-color:var(--warn)}
+  .notice .i{font-size:15px; line-height:1.5}
+  h2.sec{font-size:18px; margin:38px 0 4px; padding-top:18px; border-top:1px solid var(--line)}
+  .sec-desc{color:var(--muted); font-size:13.5px; margin:0 0 14px}
+  h3.kicker{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin:26px 0 12px; font-weight:700}
+  table.summary{width:100%; border-collapse:collapse; font-size:13.5px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+  table.summary th,table.summary td{padding:10px 12px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  table.summary th{background:var(--card2); color:var(--muted); font-weight:600; font-size:12px}
+  table.summary tr:last-child td{border-bottom:none}
+  .jp{color:var(--accent); font-weight:700}
+  .legend{color:var(--muted); font-size:12px; margin:8px 2px 0}
+  .match{background:var(--card); border:1px solid var(--line); border-radius:14px; margin:14px 0; overflow:hidden}
+  .match>summary{list-style:none; cursor:pointer; padding:15px 18px; display:flex; align-items:center; gap:12px; user-select:none}
+  .match>summary::-webkit-details-marker{display:none}
+  .match>summary .chev{margin-left:auto; color:var(--muted); transition:transform .2s; font-size:13px}
+  .match[open]>summary .chev{transform:rotate(90deg)}
+  .match>summary .ttl{font-weight:700; font-size:16px}
+  .match>summary .meta{color:var(--muted); font-size:12.5px}
+  .match>summary .spoilerpill{margin-left:6px; font-size:11px; color:var(--muted); background:var(--pill); border:1px solid var(--line); padding:2px 8px; border-radius:999px; white-space:nowrap}
+  .body{padding:2px 18px 18px; border-top:1px solid var(--line)}
+  .score{font-size:21px; font-weight:800; margin:14px 0 2px}
+  .score .n{color:var(--accent)}
+  ul.facts{margin:8px 0 14px; padding-left:18px; color:var(--text); font-size:14px}
+  ul.facts li{margin:3px 0}
+
+  /* ===== 多重ソース（複数の公式ソースを並列配置） ===== */
+  .sources{display:grid; gap:10px; margin-top:6px}
+  .source{border:1px solid var(--line); border-radius:11px; background:var(--card2); overflow:hidden}
+  .source-head{display:flex; align-items:center; gap:9px; padding:10px 12px; font-size:13px; flex-wrap:wrap}
+  .source-head .name{font-weight:700}
+  .source-head .geo{color:var(--muted)}
+  .tag{font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; white-space:nowrap; border:1px solid transparent}
+  .tag.embed{background:rgba(25,195,125,.14); color:var(--accent); border-color:rgba(25,195,125,.35)}
+  .tag.link{background:rgba(59,130,246,.14); color:#9cc0ff; border-color:rgba(59,130,246,.35)}
+  .tag.blocked{background:rgba(244,183,64,.13); color:var(--warn); border-color:rgba(244,183,64,.35)}
+  .embedwrap{position:relative; width:100%; aspect-ratio:16/9; background:#000; border-top:1px solid var(--line)}
+  .embedwrap iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  a.golink{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; padding:12px; border-top:1px solid var(--line)}
+  a.golink:hover{background:#20262f}
+  a.golink .play{flex:0 0 auto; width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:var(--red); color:#fff; font-size:15px}
+  a.golink .play.fifa{background:#326efd}
+  a.golink .play.dazn{background:#f8f400; color:#111}
+  a.golink .lbl{font-size:13.5px}
+  a.golink .lbl small{display:block; color:var(--muted); font-size:12px}
+  a.golink .go{margin-left:auto; color:var(--accent2); font-size:12.5px; white-space:nowrap}
+  .src{color:var(--muted); font-size:12px; margin-top:12px}
+  .src a{color:var(--muted)}
+  footer{margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+  footer ul{padding-left:18px}
+  .adfree{display:inline-flex; align-items:center; gap:6px; background:rgba(25,195,125,.12); color:var(--accent); border:1px solid rgba(25,195,125,.3); padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <span class="logo">⚽🧭</span>
+    <span class="name">Football Highlights Compass
+      <small>公式ハイライトだけを、日本語で探しやすく。</small>
+    </span>
+  </header>
+
+  <h1>公式サッカーハイライトまとめ<br>（W杯26 / Jリーグ / 日本人所属クラブ）</h1>
+  <p class="sub">日本から公式に見られる映像を、<b>1試合あたり複数の公式ソースを並べて</b>整理しました。埋め込めるものは埋め込み、権利元が埋め込みを禁止しているものは公式ページへ案内します。対象は<b>ワールドカップ・Jリーグ・日本人選手所属クラブ</b>に絞っています。</p>
+
+  <div class="notices">
+    <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。</div></div>
+    <div class="notice blue"><span class="i">🚫📢</span><div><span class="adfree">広告ゼロ</span> このサイトに広告はありません。動画は各権利元の公式プレイヤーで再生されます（プレイヤー内の広告は権利元のものです）。</div></div>
+    <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
+  </div>
+
+  <h3 class="kicker">今週のまとめ（ネタバレなし）</h3>
+  <table class="summary">
+    <thead>
+      <tr><th>試合</th><th>大会</th><th>日本人</th><th>主な公式ソース</th><th>このサイトで</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>日本 vs チュニジア</td><td>W杯 GF 第2節</td><td class="jp">◯</td><td>FIFA公式 / DAZNフル</td><td>🔗 公式へ案内</td></tr>
+      <tr><td>オランダ vs 日本</td><td>W杯 GF 第1節</td><td class="jp">◯</td><td>FIFA公式 / DAZN（YouTube） / DAZNフル</td><td>🔗 案内＋▶ DAZN埋め込み</td></tr>
+      <tr><td>スペイン vs サウジ</td><td>W杯 GH 第2節</td><td>—</td><td>FIFA公式 / DAZNフル</td><td>🔗 公式へ案内</td></tr>
+      <tr><td>鹿島 vs FC東京</td><td>Jリーグ</td><td class="jp">◯</td><td>DAZN（YouTube）</td><td>▶ 埋め込み再生</td></tr>
+      <tr><td>久保 ソシエダ×ラージョ</td><td>LaLiga 第8節</td><td class="jp">◯</td><td>DAZN（YouTube）</td><td>▶ 埋め込み再生</td></tr>
+      <tr><td>鈴木彩艶 ジェノア×パルマ</td><td>セリエA 第7節</td><td class="jp">◯</td><td>DAZN（YouTube）</td><td>▶ 埋め込み再生</td></tr>
+    </tbody>
+  </table>
+  <p class="legend">🔗 公式へ案内 = 権利元が埋め込みを禁止しているため公式ページへリンク ／ ▶ 埋め込み再生 = このページ内で再生可。</p>
+
+  <!-- ============ SECTION A: World Cup ============ -->
+  <h2 class="sec">FIFAワールドカップ26（日本から見られる公式へ案内）</h2>
+  <p class="sec-desc">FIFAは公式ハイライトの外部サイト埋め込みを禁止しています（実機で確認）。当サイトは映像を抱え込まず、日本から見られる公式ソースを<b>複数並べて</b>案内します。</p>
+
+  <!-- Tunisia 0-4 Japan -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">日本 vs チュニジア</div><div class="meta">グループF・第2節 / 6/21・モントレー</div></div>
+      <span class="spoilerpill">タップでスコア表示</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <div class="score">チュニジア <span class="n">0</span> - <span class="n">4</span> 日本</div>
+      <ul class="facts">
+        <li><b>得点：</b>鎌田大地 4'（大会最速級）／ 上田綺世 31', 83'（2得点）／ 伊東純也 69'</li>
+        <li><b>トピック：</b>W杯通算1,000試合目。日本がアジア勢として初めてW杯1試合4得点。勝点4でオランダと並びグループF首位浮上、チュニジアは敗退。</li>
+        <li><b>日本人選手：</b>鎌田大地・上田綺世・伊東純也 ほか</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag blocked">🔗 公式へ（埋め込み不可）</span><span class="name">FIFA公式チャンネル</span><span class="geo">YouTube・全世界配信</span></div>
+          <a class="golink" href="https://www.youtube.com/watch?v=V7z6uzD91Ao" target="_blank" rel="noopener">
+            <span class="play fifa">▶</span>
+            <span class="lbl">Highlights | Tunisia 0-4 Japan | FIFA World Cup 2026™<small>FIFAが埋め込みを禁止しているため公式ページで再生</small></span>
+            <span class="go">YouTubeで開く ↗</span>
+          </a>
+        </div>
+        <div class="source">
+          <div class="source-head"><span class="tag link">🔗 リンク</span><span class="name">DAZN（フルマッチ）</span><span class="geo">日本・日本代表戦は無料／NHK系でも放送</span></div>
+          <a class="golink" href="https://www.dazn.com/ja-JP/competition/fifa-world-cup" target="_blank" rel="noopener">
+            <span class="play dazn">▶</span>
+            <span class="lbl">FIFAワールドカップ26 — フルマッチ<small>DAZN「FIFAワールドカップ26」内</small></span>
+            <span class="go">DAZNで開く ↗</span>
+          </a>
+        </div>
+      </div>
+      <p class="src">出典: <a href="https://www.espn.com/soccer/match/_/gameId/760449/japan-tunisia">ESPN</a> ／ <a href="https://www.aljazeera.com/sports/2026/6/21/japan-tunisia-4-0-fifa-world-cup-2026-ayase-ueda-daichi-kamada-junya-ito">Al Jazeera</a></p>
+    </div>
+  </details>
+
+  <!-- Netherlands 2-2 Japan -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">オランダ vs 日本</div><div class="meta">グループF・第1節 / 6/14・ダラス（AT&Tスタジアム）</div></div>
+      <span class="spoilerpill">タップでスコア表示</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <div class="score">オランダ <span class="n">2</span> - <span class="n">2</span> 日本</div>
+      <ul class="facts">
+        <li><b>得点：</b>ファン・ダイク 50', サマービル 64'（蘭）／ 中村 57', 鎌田大地 89'（日）</li>
+        <li><b>トピック：</b>終了間際、鎌田の折り返しがネットを揺らし日本がドローに持ち込む劇的な一戦。</li>
+        <li><b>日本人選手：</b>鎌田大地・中村 ほか</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag blocked">🔗 公式へ（埋め込み不可）</span><span class="name">FIFA公式チャンネル</span><span class="geo">YouTube・全世界配信</span></div>
+          <a class="golink" href="https://www.youtube.com/watch?v=r8SvHZxALQs" target="_blank" rel="noopener">
+            <span class="play fifa">▶</span>
+            <span class="lbl">Highlights | Netherlands 2-2 Japan | FIFA World Cup 2026™<small>FIFAが埋め込みを禁止しているため公式ページで再生</small></span>
+            <span class="go">YouTubeで開く ↗</span>
+          </a>
+        </div>
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可（実機確認済み）｜W杯をDAZN版で埋め込み</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/3jIMk43CECY" loading="lazy"
+              title="【オランダ×日本｜ハイライト】FIFAワールドカップ2026 グループF第1節（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="source">
+          <div class="source-head"><span class="tag link">🔗 リンク</span><span class="name">FIFA.com 公式マッチレポート</span><span class="geo">全世界・無料</span></div>
+          <a class="golink" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-japan-highlights-match-report" target="_blank" rel="noopener">
+            <span class="play fifa">📝</span>
+            <span class="lbl">Netherlands 2-2 Japan | Match report and highlights<small>FIFA.com</small></span>
+            <span class="go">FIFA.comで開く ↗</span>
+          </a>
+        </div>
+        <div class="source">
+          <div class="source-head"><span class="tag link">🔗 リンク</span><span class="name">DAZN（フルマッチ）</span><span class="geo">日本</span></div>
+          <a class="golink" href="https://www.dazn.com/ja-JP/competition/fifa-world-cup" target="_blank" rel="noopener">
+            <span class="play dazn">▶</span>
+            <span class="lbl">FIFAワールドカップ26 — フルマッチ<small>DAZN「FIFAワールドカップ26」内</small></span>
+            <span class="go">DAZNで開く ↗</span>
+          </a>
+        </div>
+      </div>
+      <p class="src">出典: <a href="https://www.espn.com/soccer/match/_/gameId/760425/japan-netherlands">ESPN</a> ／ <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021470">FIFA.com</a></p>
+    </div>
+  </details>
+
+  <!-- Spain 4-0 Saudi Arabia -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">スペイン vs サウジアラビア</div><div class="meta">グループH・第2節 / 6/21</div></div>
+      <span class="spoilerpill">タップでスコア表示</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <div class="score">スペイン <span class="n">4</span> - <span class="n">0</span> サウジアラビア</div>
+      <ul class="facts">
+        <li><b>トピック：</b>ラミン・ヤマルがキャリア初のW杯ゴール。スペインが快勝。</li>
+        <li><b>日本人選手：</b>なし</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag link">🔗 リンク</span><span class="name">FIFA.com 公式ハイライト一覧</span><span class="geo">全世界・無料</span></div>
+          <a class="golink" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/highlights" target="_blank" rel="noopener">
+            <span class="play fifa">▶</span>
+            <span class="lbl">Spain v Saudi Arabia（一覧内）<small>FIFA公式YouTube個別IDは未特定（候補は全て地域放送局のため不採用）</small></span>
+            <span class="go">FIFA.comで開く ↗</span>
+          </a>
+        </div>
+        <div class="source">
+          <div class="source-head"><span class="tag link">🔗 リンク</span><span class="name">DAZN（フルマッチ）</span><span class="geo">日本</span></div>
+          <a class="golink" href="https://www.dazn.com/ja-JP/competition/fifa-world-cup" target="_blank" rel="noopener">
+            <span class="play dazn">▶</span>
+            <span class="lbl">FIFAワールドカップ26 — フルマッチ<small>DAZN「FIFAワールドカップ26」内</small></span>
+            <span class="go">DAZNで開く ↗</span>
+          </a>
+        </div>
+      </div>
+      <p class="src">出典: <a href="https://www.goal.com/en-gb/lists/spain-player-ratings-saudi-arabia-world-cup-lamine-yamal-mikel-oyarzabal/blt427b9a6935511c77">Goal.com</a></p>
+    </div>
+  </details>
+
+  <!-- ============ SECTION B: Embeddable ============ -->
+  <h2 class="sec">Jリーグ（公式ハイライト・埋め込み）</h2>
+  <p class="sec-desc">DAZN（DAZN Japan公式YouTube）が配信するJリーグ公式ハイライト。権利元が埋め込みを許可しているので、公式プレイヤーをこのページ内で再生できます（実機確認済み）。</p>
+
+  <!-- J-League (DAZN Japan) -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">鹿島アントラーズ vs FC東京</div><div class="meta">Jリーグ 2026・公式ハイライト</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts">
+        <li><b>ソース：</b>DAZN（DAZN Japan 公式YouTubeチャンネル）。Jリーグの公式ハイライトを配信。</li>
+        <li><b>スコア：</b>下の公式映像でご確認ください（ネタバレ防止のため未記載）。</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込みOK</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/WpjPq5ZMMdI" loading="lazy"
+              title="【鹿島アントラーズ×ＦＣ東京｜ハイライト】2026｜Jリーグ"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- ============ SECTION C: Japanese players' clubs (DAZN Japan) ============ -->
+  <h2 class="sec">日本人所属クラブのハイライト（海外リーグ・DAZN Japan）</h2>
+  <p class="sec-desc">DAZN Japan公式チャンネルが上げている海外リーグの公式ハイライト。日本人選手の出場試合を集めました。発行元＝DAZN JapanをoEmbedで確認、<b>日本から埋め込み再生できることも実機で確認済み。</b></p>
+
+  <!-- Kubo -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">久保建英 ─ ソシエダ vs ラージョ</div><div class="meta">ラ・リーガ 第8節 / 2025-26</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts">
+        <li><b>ソース：</b>DAZN Japan 公式YouTube。<b>日本人選手：</b>久保建英（途中出場）。</li>
+        <li><b>スコア：</b>公式映像でご確認ください（ネタバレ防止のため未記載）。</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込み（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可（実機確認済み）</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/rqvRbGTw2zc" loading="lazy"
+              title="【久保建英が途中出場｜ソシエダ×ラージョ｜ハイライト】ラ・リーガ第8節｜2025-26シーズン（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Suzuki Zion -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">鈴木彩艶 ─ ジェノア vs パルマ</div><div class="meta">セリエA 第7節 / 2025-26</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts">
+        <li><b>ソース：</b>DAZN Japan 公式YouTube。<b>日本人選手：</b>鈴木彩艶（GK・PKストップなどの活躍でMOM）。</li>
+        <li><b>スコア：</b>公式映像でご確認ください（ネタバレ防止のため未記載）。</li>
+      </ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込み（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可（実機確認済み）</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/jfG6X7SW4_o" loading="lazy"
+              title="【鈴木彩艶がPKストップなどの大活躍でMOM｜ジェノア×パルマ｜ハイライト】セリエA第7節｜2025-26シーズン（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Kubo 2: Getafe -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">久保建英 ─ ヘタフェ vs ソシエダ</div><div class="meta">ラ・リーガ 第19節 / 2025-26・劇的決勝弾アシスト</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。<b>日本人選手：</b>久保建英（劇的決勝弾をアシスト）。</li></ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/LOL10LZNTHc" loading="lazy"
+              title="【久保建英が劇的決勝弾をアシスト！｜ヘタフェ×レアル・ソシエダ｜ハイライト】ラ・リーガ第19節｜2025-26シーズン（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Kubo 3: Atletico -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">久保建英 ─ ソシエダ vs アトレティコ</div><div class="meta">ラ・リーガ 第18節 / 2025-26・アシスト</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。<b>日本人選手：</b>久保建英（アシスト）。</li></ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/OWUC97ci0Wo" loading="lazy"
+              title="【久保建英がアシスト｜レアル・ソシエダ×アトレティコ・マドリー｜ハイライト】ラ・リーガ第18節｜2025-26シーズン（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Suzuki 2: Torino -->
+  <details class="match">
+    <summary>
+      <div><div class="ttl">鈴木彩艶 ─ パルマ vs トリノ</div><div class="meta">セリエA 第5節 / 2025-26・先発出場</div></div>
+      <span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span>
+    </summary>
+    <div class="body">
+      <ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。<b>日本人選手：</b>鈴木彩艶（GK・先発出場）。</li></ul>
+      <div class="sources">
+        <div class="source">
+          <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
+          <div class="embedwrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/MACbJ7UcTlI" loading="lazy"
+              title="【鈴木彩艶が先発出場、青嶋達也アナがDAZN初実況!!｜パルマ×トリノ｜ハイライト】セリエA第5節｜2025-26シーズン（DAZN Japan）"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    <p><b>このページについて</b></p>
+    <ul>
+      <li><b>当サイトに広告はありません。</b> 動画は各権利元の公式プレイヤーで再生され、その中の広告・公式表記は一切改変していません。</li>
+      <li>掲載しているのは公式・権利元が公開している映像のみです。無断転載・切り抜き・再アップロードは扱いません。</li>
+      <li><b>多重ソース方針：</b> 1試合につき複数の公式ソースを並べ、埋め込みを許可しているもの（DAZN等）は埋め込み、禁止しているもの（FIFA等）は公式ページへ案内します。埋め込み可否は実機で検証しています。</li>
+      <li>米国放送局（FOX 等）の動画は日本から視聴できないため案内しません。ジオブロック回避の案内も行いません。</li>
+      <li>リンク切れ・削除、権利申し立ては <i>{{問い合わせ先}}</i> までご連絡ください。確認のうえ速やかに対応します。</li>
+    </ul>
+    <p>© 2026 Football Highlights Compass — 公式映像の発見サイト（プロトタイプ）</p>
+  </footer>
+
+</div>
+</body>
+</html>

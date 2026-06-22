@@ -1,0 +1,9 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+
+# Claude Code local artifacts (keep launch.json so preview works)
+.claude/settings.local.json
+
+# Local test scaffolding (not part of the published site)
+site/test/

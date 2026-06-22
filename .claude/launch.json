@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "embedtest",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8123", "--directory", "C:\\Users\\今枝龍之介\\ASE\\FootballMovie\\site\\test"],
+      "port": 8123
+    },
+    {
+      "name": "site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8124", "--directory", "C:\\Users\\今枝龍之介\\ASE\\FootballMovie\\site"],
+      "port": 8124
+    }
+  ]
+}
