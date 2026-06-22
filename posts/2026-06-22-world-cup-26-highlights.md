@@ -194,6 +194,20 @@ YouTubeは `file://`（ファイルを直接ダブルクリック）で開いた
 
 ---
 
+## 拡充ログ（2026-06-22 追加分・全てDAZN Japan/Bundesliga公式・oEmbed確認済）
+
+埋め込みID一覧（`https://www.youtube-nocookie.com/embed/<ID>`）。詳細は `data/videos.2026-06-22.csv`、表示は `site/index.html`。
+
+**W杯（DAZN Japan・6試合）**: ブラジル×モロッコ=yhuXl2aHrLY / ブラジル×ハイチ=Wnf2zqWAC1c / イングランド×クロアチア=opi0JMADRt4 / ポルトガル×コンゴ民主(ロナウド6大会連続)=_XPEH5LAlOs / スコットランド×モロッコ(RECAP)=ucu6WdoGg-0 / ベルギー×イラン(RECAP)=kj6zFsFGuXI
+
+**Jリーグ（DAZN Japan・8試合）**: 浦和×川崎(13)=Bzaf-Ze7cA0 / 川崎×浦和(9)=B1kg0E4awQo / 浦和×FC東京(17)=nzocyS4-GeM / 水戸×浦和(16)=VHzzi-UUoZg / FC東京×東京V(16)=_3U7OSj0Occ / 神戸×鹿島(PO)=1O3ccdnGHQM / 神戸×京都(W12)=QH4F85TiD0M / 水戸×川崎(18)=h__TwuTBbVc
+
+**日本人所属クラブ（9試合）**: 南野 モナコ×PSG(Ligue1 14)=v1TbRkKaXTA / 南野 マルセイユ×モナコ(16)=TLDF6uzkhi0 / 南野 オセール×モナコ(4)=THvY90wwxag / 守田 スポルティング×ベンフィカ(PT30)=uPdJUTn5ljg / 守田 スポルティング×ギマランイス(32)=d0FN8OzbEZ8 / 堂安 フランクフルト×アウクスブルク(Bundes14)=-vFmvKfs9zU / 堂安 アウクスブルク×フランクフルト(31)=uzCiKEliU3I / 菅原・堂安 ブレーメン×フランクフルト(18)=VdyjoOpJXJs / 伊藤洋輝在籍 バイエルン×シュトゥットガルト(Bundesliga公式・優勝決定)=L9QqzxzkFXc
+
+> 調査メモ: 三笘(ブライトン)・遠藤(リバプール)は「Premier League」公式チャンネルがフルハイライトを上げておらず（Stan Sport等の放送局名義のみ）採用不可。冨安は2025-26アーセナル退団済み。上田(フェイエ)はエールディヴィジ公式名義が無く（ESPN NL/クラブ名義）採用不可。日付は多くが要確認（暫定値）。
+
+---
+
 ## このページについて
 
 - **当サイトに広告はありません。** 動画は各権利元の公式プレイヤーで再生され、広告・公式表記は改変していません。
