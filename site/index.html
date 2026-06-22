@@ -103,9 +103,9 @@
       <tr><th>カテゴリ</th><th>試合</th><th>このサイトで</th></tr>
     </thead>
     <tbody>
-      <tr><td>⚽ FIFAワールドカップ26</td><td>10</td><td>🔗 公式案内 ＋ ▶ DAZN埋め込み</td></tr>
-      <tr><td>🇯🇵 Jリーグ 2026</td><td>9</td><td>▶ 埋め込み再生</td></tr>
-      <tr><td>🌍 日本人所属クラブ（海外）</td><td>14</td><td>▶ 埋め込み再生</td></tr>
+      <tr><td>⚽ FIFAワールドカップ26</td><td id="cnt-wc">10</td><td>🔗 公式案内 ＋ ▶ DAZN埋め込み</td></tr>
+      <tr><td>🇯🇵 Jリーグ 2026</td><td id="cnt-jl">9</td><td>▶ 埋め込み再生</td></tr>
+      <tr><td>🌍 日本人所属クラブ（海外）</td><td id="cnt-club">14</td><td>▶ 埋め込み再生</td></tr>
     </tbody>
   </table>
   <p class="legend">🔗 公式案内 = 権利元が埋め込み禁止のため公式ページへリンク ／ ▶ 埋め込み再生 = このページ内で再生可。各試合は下のセクションでタップして開く。</p>
@@ -340,6 +340,8 @@
     </div>
   </details>
 
+  <div id="wc-extra"></div>
+
   <!-- ============ SECTION B: Embeddable ============ -->
   <h2 class="sec">Jリーグ（公式ハイライト・埋め込み）</h2>
   <p class="sec-desc">DAZN（DAZN Japan公式YouTube）が配信するJリーグ公式ハイライト。権利元が埋め込みを許可しているので、公式プレイヤーをこのページ内で再生できます（実機確認済み）。</p>
@@ -455,6 +457,8 @@
       </div></div>
     </div>
   </details>
+
+  <div id="jl-extra"></div>
 
   <!-- ============ SECTION C: Japanese players' clubs (DAZN Japan) ============ -->
   <h2 class="sec">日本人所属クラブのハイライト（海外リーグ・DAZN Japan）</h2>
@@ -670,6 +674,8 @@
     </div>
   </details>
 
+  <div id="club-extra"></div>
+
   <footer>
     <p><b>このページについて</b></p>
     <ul>
@@ -684,5 +690,90 @@
   </footer>
 
 </div>
+<script>
+// 追加掲載データ（DAZN Japan / Bundesliga 公式・oEmbed確認済）。ここに足すだけでカードが増える。
+const EXTRA_WC = [
+  {ttl:"ハイチ vs スコットランド", meta:"グループC・第1節（MATCH RECAP）", id:"O1PmiWBYId8"},
+  {ttl:"ガーナ vs パナマ", meta:"グループL・第1節", id:"x8YbDZ2XJ5s"},
+  {ttl:"ウズベキスタン vs コロンビア", meta:"グループK・第1節・ウズベキW杯初ゴール", id:"lZfqA5K0t-Q"},
+  {ttl:"メキシコ vs 南アフリカ", meta:"グループA・第1節（MATCH RECAP）", id:"Ht804w5UO0E"},
+  {ttl:"韓国 vs チェコ", meta:"グループA・第1節（MATCH RECAP）", id:"1kc2lD5KzKU"},
+  {ttl:"メキシコ vs 韓国", meta:"グループA・第2節（MATCH RECAP）", id:"v7SmkAqQwzM"},
+  {ttl:"カナダ vs カタール", meta:"グループB・第2節（MATCH RECAP）", id:"oH_QKjqMTrg"},
+  {ttl:"アメリカ vs パラグアイ", meta:"グループD・第1節（MATCH RECAP）", id:"jpOLXF6Mpxs"},
+  {ttl:"トルコ vs パラグアイ", meta:"グループD・第2節", id:"D9lZubMQlT4"},
+  {ttl:"アメリカ vs オーストラリア", meta:"グループD・第2節（MATCH RECAP）", id:"wie62X1Ysbc"},
+  {ttl:"エクアドル vs キュラソー", meta:"グループE・第2節（MATCH RECAP）", id:"hpPVZkcAvD4"},
+  {ttl:"オランダ vs スウェーデン", meta:"グループF・第2節（日本と同組）", id:"T7psPCftyBs"},
+  {ttl:"ニュージーランド vs エジプト", meta:"グループG・第2節（MATCH RECAP）", id:"j7UpL1CqtIs"},
+  {ttl:"ウルグアイ vs カーボベルデ", meta:"グループH・第2節（MATCH RECAP）", id:"YXsTSlSME_8"},
+];
+const EXTRA_JL = [];
+const EXTRA_CLUB = [
+  {ttl:"久保建英 ─ ジローナ vs ソシエダ", meta:"ラ・リーガ 第36節 / 2025-26", jp:"久保建英（先発）", id:"7JNt2J_Hmt4"},
+  {ttl:"久保建英 ─ ソシエダ vs ビジャレアル", meta:"ラ・リーガ 第14節 / 2025-26・今季初アシスト", jp:"久保建英（アシスト）", id:"xulpkDJlelM"},
+  {ttl:"久保建英 ─ オサスナ vs ソシエダ", meta:"ラ・リーガ 第13節 / 2025-26", jp:"久保建英（途中出場）", id:"do4mdgHs2bg"},
+  {ttl:"久保建英 ─ ソシエダ vs アスレティック・クルブ", meta:"ラ・リーガ 第11節 / 2025-26・バスクダービー", jp:"久保建英（復帰）", id:"0bMvj-9bDTY"},
+  {ttl:"久保建英 ─ ソシエダ vs ジローナ", meta:"ラ・リーガ 第16節 / 2025-26", jp:"久保建英（先発）", id:"d_xQ4ruO5nI"},
+  {ttl:"久保建英 ─ アラベス vs ソシエダ", meta:"ラ・リーガ 第33節 / 2024-25", jp:"久保建英（先発）", id:"lO0Nzq6v3Zw"},
+  {ttl:"久保建英 ─ レバンテ vs ソシエダ", meta:"ラ・リーガ 第17節 / 2025-26・今季2ゴール目", jp:"久保建英（得点）", id:"Kf6Wtoz61B0"},
+  {ttl:"鈴木彩艶 ─ ローマ vs パルマ", meta:"セリエA 第9節 / 2025-26", jp:"鈴木彩艶（先発）", id:"xY5vLBC1Gmk"},
+  {ttl:"鈴木彩艶 ─ コモ vs パルマ", meta:"セリエA 第37節 / 2025-26", jp:"鈴木彩艶（フル出場）", id:"ixWdJzvORbg"},
+  {ttl:"鈴木彩艶 ─ ラツィオ vs パルマ", meta:"セリエA 第31節 / 2025-26", jp:"鈴木彩艶（先発）", id:"ydFoO8j2AW4"},
+  {ttl:"鈴木彩艶 ─ パルマ vs コモ", meta:"セリエA 第8節 / 2025-26・2試合連続無失点", jp:"鈴木彩艶（無失点）", id:"OBsGcorT4Dk"},
+  {ttl:"鈴木彩艶 ─ パルマ vs ボローニャ", meta:"セリエA 第10節 / 2025-26", jp:"鈴木彩艶（先制点の起点）", id:"9Mc86D_V17s"},
+  {ttl:"鈴木彩艶 ─ パルマ vs クレモネーゼ", meta:"セリエA 第30節 / 2025-26", jp:"鈴木彩艶（先発）", id:"I2D_GFwJKYw"},
+  {ttl:"鈴木彩艶 ─ パルマ vs ミラン", meta:"セリエA 第11節 / 2025-26", jp:"鈴木彩艶（先発）", id:"j45PkuzjtI4"},
+  {ttl:"鈴木彩艶 ─ パルマ vs ピサ", meta:"セリエA 第34節 / 2025-26", jp:"鈴木彩艶（フル出場）", id:"qpO65eFp240"},
+  {ttl:"鈴木彩艶 ─ パルマ vs ナポリ", meta:"セリエA 第32節 / 2025-26", jp:"鈴木彩艶（フル出場）", id:"mboApyqPqjY"},
+  {ttl:"南野拓実 ─ アンジェ vs モナコ", meta:"リーグアン 第8節 / 2025-26・アシスト", jp:"南野拓実（途中出場アシスト）", id:"Xy7znt4rxB8"},
+  {ttl:"南野拓実 ─ ナント vs モナコ", meta:"リーグアン 第10節 / 2025-26", jp:"南野拓実（先発）", id:"l0pd4Ff0IWQ"},
+  {ttl:"南野拓実 ─ モナコ vs メス", meta:"リーグアン 第5節 / 2025-26・同点弾アシスト", jp:"南野拓実（アシスト）", id:"G1hMNzyYHJA"},
+  {ttl:"南野拓実 ─ モナコ vs マルセイユ", meta:"リーグアン 第29節 / 2024-25・先制ゴール", jp:"南野拓実（先制点）", id:"u50Q3k_p_tM"},
+  {ttl:"堂安律 ─ フランクフルト vs ヴォルフスブルク", meta:"ブンデスリーガ 第12節 / 2025-26", jp:"堂安律（フル出場）", id:"4dZMoJcjxJU"},
+  {ttl:"堂安律 ─ フランクフルト vs シュトゥットガルト", meta:"ブンデスリーガ 第34節 / 2025-26", jp:"堂安律（フル出場）", id:"ok8DMoroA_s"},
+  {ttl:"堂安律 ─ フランクフルト vs バイエルン", meta:"ブンデスリーガ 第6節 / 2025-26", jp:"堂安律（先発）", id:"tJ8w0I1TGzs"},
+  {ttl:"堂安律 ─ フランクフルト vs ケルン", meta:"ブンデスリーガ 第28節 / 2025-26", jp:"堂安律（先発）", id:"0-zugQtxY48"},
+  {ttl:"堂安律 ─ フランクフルト vs ハイデンハイム", meta:"ブンデスリーガ 第26節 / 2025-26", jp:"堂安律（先発）", id:"eTFaQiGr6JI"},
+  {ttl:"堂安律・藤田譲瑠チマ ─ フランクフルト vs ザンクト・パウリ", meta:"ブンデスリーガ 第8節 / 2025-26", jp:"堂安律・藤田譲瑠チマ（先発）", id:"WLu5wfNEq7M"},
+  {ttl:"堂安律 ─ フランクフルト vs ドルトムント", meta:"DFBポカール ラウンド32 / 2025-26", jp:"堂安律（先発）", id:"VzWMyjs-NO0"},
+  {ttl:"守田英正 ─ スポルティング vs サンタ・クララ", meta:"ポルトガルリーグ 第28節 / 2025-26・アシスト", jp:"守田英正（アシスト）", id:"24Xum8BKgZA"},
+  {ttl:"守田英正 ─ リオ・アヴェ vs スポルティング", meta:"ポルトガルリーグ 第33節 / 2025-26", jp:"守田英正（先発）", id:"EF-t5VcbNh4"},
+  {ttl:"守田英正 ─ ポルト vs スポルティング", meta:"ポルトガルリーグ 第21節 / 2025-26・上位対決", jp:"守田英正（先発）", id:"8z677lfFJHQ"},
+  {ttl:"守田英正 ─ スポルティング vs ファマリカン", meta:"ポルトガルリーグ 第22節 / 2025-26", jp:"守田英正（先発）", id:"_Xjq698qvJ8"},
+  {ttl:"守田英正 ─ スポルティング vs カーザ・ピア", meta:"ポルトガルリーグ 第18節 / 2025-26", jp:"守田英正（フル出場）", id:"9zSgulHWDgg"},
+  {ttl:"守田英正 ─ スポルティング vs エストリル", meta:"ポルトガルリーグ 第24節 / 2025-26", jp:"守田英正（先発）", id:"AtQbzjq173E"},
+  {ttl:"佐野海舟 ─ ライプツィヒ vs マインツ", meta:"ブンデスリーガ 第20節 / 2025-26", jp:"佐野海舟（フル出場）", id:"3qZnugDzCP4"},
+  {ttl:"佐野海舟 ─ アウクスブルク vs マインツ", meta:"ブンデスリーガ 第3節 / 2025-26・1ゴール1アシスト", jp:"佐野海舟（1G1A）", id:"Mx7pDwk934M"},
+  {ttl:"佐野海舟 ─ マインツ vs バイエルン", meta:"ブンデスリーガ 第31節 / 2025-26", jp:"佐野海舟（奮闘）", id:"pKWnFYZ3NgY"},
+  {ttl:"佐野海舟・藤田譲瑠チマ ─ マインツ vs ザンクト・パウリ", meta:"ブンデスリーガ 第15節 / 2025-26", jp:"佐野海舟・藤田譲瑠チマ（先発）", id:"NRey8uTcL8I"},
+  {ttl:"佐野海舟 ─ マインツ vs アウクスブルク", meta:"ブンデスリーガ 第21節 / 2025-26", jp:"佐野海舟（フル出場）", id:"CI9K1sQIF7s"},
+  {ttl:"佐野海舟 ─ マインツ vs ドルトムント", meta:"ブンデスリーガ 第5節 / 2025-26", jp:"佐野海舟（フル出場）", id:"TnSY33rP8mE"},
+  {ttl:"佐野海舟・川﨑颯太 ─ マインツ vs フライブルク", meta:"ブンデスリーガ 第28節 / 2025-26", jp:"佐野海舟・川﨑颯太（先発）", id:"UlEMwz1j-G0"},
+  {ttl:"佐野海舟 ─ ホッフェンハイム vs マインツ", meta:"ブンデスリーガ 第28節 / 2025-26", jp:"佐野海舟（攻守に躍動）", id:"zvGlkMqjVHM"},
+  {ttl:"伊藤洋輝 ─ バイエルン vs ウニオン・ベルリン", meta:"ブンデスリーガ 第27節 / 2025-26・代表復帰", jp:"伊藤洋輝（出場）", id:"1Z4ppSGXILM"},
+  {ttl:"伊藤洋輝 ─ ケルン vs バイエルン", meta:"ブンデスリーガ 第17節 / 2025-26・今季2アシスト目", jp:"伊藤洋輝（アシスト）", id:"X-LVmJTfqoA"},
+  {ttl:"伊藤洋輝 ─ バイエルン vs アウクスブルク", meta:"ブンデスリーガ 第19節 / 2025-26・今季初ゴール", jp:"伊藤洋輝（得点）", id:"D5VxUeFfZb8"},
+  {ttl:"伊藤洋輝・佐野海舟・川﨑颯太 ─ バイエルン vs マインツ", meta:"ブンデスリーガ 第14節 / 2025-26", jp:"伊藤洋輝・佐野海舟・川﨑颯太（先発）", id:"5B2ut8vVKn0"},
+  {ttl:"菅原由勢 ─ ブレーメン vs ヴォルフスブルク", meta:"ブンデスリーガ 第10節 / 2025-26・逆転アシスト", jp:"菅原由勢（アシスト）", id:"4epALsFs2Nc"},
+  {ttl:"菅原由勢・長田澪 ─ ブレーメン vs バイエルン", meta:"ブンデスリーガ 第22節 / 2025-26", jp:"菅原由勢・長田澪（出場）", id:"cWwnzplU89Q"},
+  {ttl:"菅原由勢 ─ ホッフェンハイム vs ブレーメン", meta:"ブンデスリーガ 第33節 / 2025-26", jp:"菅原由勢（出場）", id:"qo_pVSuH02I"},
+];
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');}
+function mkMatch(m){
+  var jp = m.jp ? '<b>日本人選手：</b>'+m.jp+'。' : '';
+  return '<details class="match"><summary><div><div class="ttl">'+m.ttl+'</div><div class="meta">'+m.meta+'</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>'
+    +'<div class="body"><ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。'+jp+'<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul>'
+    +'<div class="sources"><div class="source"><div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>'
+    +'<div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/'+m.id+'" loading="lazy" title="'+esc(m.title||m.ttl)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+    +'</div></div></div></details>';
+}
+function fill(id, arr){var el=document.getElementById(id); if(el) el.innerHTML = arr.map(mkMatch).join('');}
+fill('wc-extra', EXTRA_WC); fill('jl-extra', EXTRA_JL); fill('club-extra', EXTRA_CLUB);
+var c;
+if(c=document.getElementById('cnt-wc')) c.textContent = 10 + EXTRA_WC.length;
+if(c=document.getElementById('cnt-jl')) c.textContent = 9 + EXTRA_JL.length;
+if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length;
+</script>
 </body>
 </html>
