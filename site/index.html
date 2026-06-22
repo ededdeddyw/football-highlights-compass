@@ -76,6 +76,16 @@
   footer{margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
   footer ul{padding-left:18px}
   .adfree{display:inline-flex; align-items:center; gap:6px; background:rgba(25,195,125,.12); color:var(--accent); border:1px solid rgba(25,195,125,.3); padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700}
+  /* 検索・絞り込みバー */
+  .filterbar{position:sticky; top:0; z-index:30; background:var(--bg); padding:10px 0 12px; border-bottom:1px solid var(--line); margin:14px 0 6px}
+  .filterbar input{width:100%; padding:11px 13px; border-radius:10px; border:1px solid var(--line); background:var(--card2); color:var(--text); font-size:15px; -webkit-appearance:none}
+  .filterbar input:focus{outline:none; border-color:var(--accent)}
+  .chips-label{font-size:11px; color:var(--muted); margin:10px 2px 5px; letter-spacing:.04em}
+  .chips{display:flex; flex-wrap:wrap; gap:6px}
+  .chip{font-size:12px; padding:5px 11px; border-radius:999px; border:1px solid var(--line); background:var(--card2); color:var(--muted); cursor:pointer; user-select:none; white-space:nowrap}
+  .chip:hover{border-color:var(--accent)}
+  .chip.active{background:var(--accent); color:#04221a; border-color:var(--accent); font-weight:700}
+  .result-count{font-size:12px; color:var(--muted); margin-top:9px}
 </style>
 </head>
 <body>
@@ -95,6 +105,15 @@
     <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。</div></div>
     <div class="notice blue"><span class="i">🚫📢</span><div><span class="adfree">広告ゼロ</span> このサイトに広告はありません。動画は各権利元の公式プレイヤーで再生されます（プレイヤー内の広告は権利元のものです）。</div></div>
     <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
+  </div>
+
+  <div class="filterbar">
+    <input id="q" type="search" placeholder="🔎 チーム・選手・大会で検索（例：久保、バルセロナ、ブラジル、鹿島）" autocomplete="off">
+    <div class="chips-label">リーグ・大会</div>
+    <div class="chips" id="league-chips"></div>
+    <div class="chips-label">日本人選手</div>
+    <div class="chips" id="player-chips"></div>
+    <div class="result-count" id="result-count"></div>
   </div>
 
   <h3 class="kicker">今週のまとめ（ネタバレなし）</h3>
@@ -900,6 +919,62 @@ var c;
 if(c=document.getElementById('cnt-wc')) c.textContent = 10 + EXTRA_WC.length;
 if(c=document.getElementById('cnt-jl')) c.textContent = 9 + EXTRA_JL.length;
 if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length;
+
+// ===== 検索・絞り込み（全カード横断・チーム/リーグ/日本人選手） =====
+(function(){
+  var CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
+  function leagueOf(t){
+    if(/グループ|ワールドカップ/.test(t)) return ['wc','W杯26'];
+    if(/Jリーグ|オールスター/.test(t)) return ['jl','Jリーグ'];
+    if(/ラ・リーガ/.test(t)) return ['laliga','ラ・リーガ'];
+    if(/セリエA/.test(t)) return ['seriea','セリエA'];
+    if(/リーグアン/.test(t)) return ['ligue1','リーグアン'];
+    if(/ブンデスリーガ|DFBポカール/.test(t)) return ['bundes','ブンデス'];
+    if(/ポルトガル/.test(t)) return ['portugal','ポルトガル'];
+    return ['other','その他'];
+  }
+  var cards = [].slice.call(document.querySelectorAll('details.match'));
+  var labels = {}, pcount = {};
+  cards.forEach(function(c){
+    var t = c.textContent; c._hay = t.toLowerCase();
+    var lg = leagueOf(t); c.dataset.league = lg[0]; labels[lg[0]] = lg[1];
+    var ps = CANON.filter(function(p){ return t.indexOf(p) >= 0; });
+    c.dataset.players = '|' + ps.join('|') + '|';
+    ps.forEach(function(p){ pcount[p] = (pcount[p]||0) + 1; });
+  });
+  var order = ['wc','jl','laliga','seriea','ligue1','bundes','portugal','other'];
+  var state = { q:'', league:'all', player:'all' };
+  var rc = document.getElementById('result-count');
+  function apply(){
+    var q = state.q.trim().toLowerCase();
+    var active = q !== '' || state.league !== 'all' || state.player !== 'all';
+    var shown = 0;
+    cards.forEach(function(c){
+      var ok = true;
+      if (state.league !== 'all' && c.dataset.league !== state.league) ok = false;
+      if (ok && state.player !== 'all' && c.dataset.players.indexOf('|'+state.player+'|') < 0) ok = false;
+      if (ok && q !== '' && c._hay.indexOf(q) < 0) ok = false;
+      c.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    [].forEach.call(document.querySelectorAll('h2.sec, .sec-desc'), function(e){ e.style.display = active ? 'none' : ''; });
+    var sm = document.querySelector('table.summary'), lg = document.querySelector('.legend');
+    if (sm) sm.style.display = active ? 'none' : '';
+    if (lg) lg.style.display = active ? 'none' : '';
+    rc.textContent = active ? (shown + ' 件 表示中（タップで開く）') : ('全 ' + cards.length + ' 試合 掲載中');
+  }
+  function chip(label, on){ var s = document.createElement('span'); s.className = 'chip' + (on?' active':''); s.textContent = label; return s; }
+  var lc = document.getElementById('league-chips'), lchips = [];
+  var la = chip('すべて', true); la.dataset.k = 'all'; lc.appendChild(la); lchips.push(la);
+  order.forEach(function(k){ if(labels[k]){ var n = cards.filter(function(c){return c.dataset.league===k;}).length; var ch = chip(labels[k]+'('+n+')', false); ch.dataset.k = k; lc.appendChild(ch); lchips.push(ch); } });
+  lchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.league = ch.dataset.k; lchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
+  var pcEl = document.getElementById('player-chips'), pchips = [];
+  var pa = chip('すべて', true); pa.dataset.p = 'all'; pcEl.appendChild(pa); pchips.push(pa);
+  CANON.forEach(function(p){ if(pcount[p]){ var ch = chip(p+'('+pcount[p]+')', false); ch.dataset.p = p; pcEl.appendChild(ch); pchips.push(ch); } });
+  pchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.player = ch.dataset.p; pchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
+  document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; apply(); });
+  apply();
+})();
 </script>
 </body>
 </html>
