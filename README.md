@@ -4,9 +4,23 @@
 
 > 動画を配るサイトではない。公式が公開している映像を見つけやすくする検索サイトである。
 
+🌐 **公開URL: https://ededdeddyw.github.io/football-highlights-compass/**
+
+## ローカルで動かす / 別端末で再開
+
+```bash
+git clone https://github.com/ededdeddyw/football-highlights-compass
+cd football-highlights-compass
+python -m http.server 8124 --directory site   # ← 必ずhttp。file://だと埋め込みがerror153になる
+# ブラウザで http://localhost:8124
+```
+
+- `main` にpushすると GitHub Actions が `site/` を自動でPages公開（[.github/workflows/pages.yml](.github/workflows/pages.yml)）。
+- 企画書・引き継ぎメモ・メモリは**別の非公開リポジトリ** `football-highlights-compass-planning` にあります（戦略系のため非公開）。再開時はそちらの `handoff.md` を参照。
+
 ## このリポジトリの現在地
 
-Phase 1（手動キュレーション）の土台ドキュメントを整備した段階。コードはまだ無い。
+公開済み（W杯26／Jリーグ／日本人所属クラブの多重ソースサイト）。`site/index.html` が本体。
 
 | ファイル | 役割 |
 |---|---|
