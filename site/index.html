@@ -182,6 +182,10 @@
   h1,h2,h3,h4{font-weight:900}
   .flag{height:13px; width:auto; border-radius:2px; vertical-align:-2px; margin-right:2px; box-shadow:0 0 0 .5px rgba(0,0,0,.12)}
   .pickup .flag{height:14px; vertical-align:-2px}
+  /* 広告枠（レスポンシブ） */
+  .ad{margin:24px auto 8px; max-width:728px; text-align:center; min-height:100px}
+  .ad .adlabel{display:block; font-size:10px; letter-spacing:.08em; color:var(--muted); margin-bottom:4px}
+  .ad ins{display:block}
   /* ===== コインフロー型カルーセル（注目の試合・1枚見せ＋左右チラ見せ＋立体） ===== */
   .coverflow{position:relative; margin:14px 0 10px; padding:10px 0 4px; overflow:hidden; touch-action:pan-y}
   .cf-stage{position:relative; width:100%; height:284px; perspective:1300px; perspective-origin:50% 40%}
@@ -192,7 +196,7 @@
   .pcard .pcomp{display:block; font-size:10.5px; font-weight:800; color:var(--accent2); letter-spacing:.01em; line-height:1.42; margin-bottom:3px}
   .pcard .pmatch{display:block; font-size:13.5px; font-weight:700; line-height:1.42}
   .pcard .pmatch .flag{height:13px; vertical-align:-2px; margin:0 1px}
-  .pcard .pmatch .ppre{color:var(--accent2); font-weight:800; margin-right:5px}
+  .pcard .pmatch .ppre{color:var(--accent2); font-weight:700; margin-right:6px}
   .cf-card.is-active{box-shadow:0 18px 44px rgba(12,22,87,.36)}
   .cf-card.is-active .play{background:rgba(225,29,72,.98); box-shadow:0 4px 18px rgba(225,29,72,.55)}
   .cf-nav{position:absolute; top:calc(50% - 32px); z-index:50; width:42px; height:42px; border-radius:50%;
@@ -289,6 +293,12 @@
     </tbody>
   </table>
   <p class="legend">🔗 公式案内 = 権利元が埋め込み禁止のため公式ページへリンク ／ ▶ 埋め込み再生 = このページ内で再生可。各試合は下のセクションでタップして開く。</p>
+
+  <div class="ad">
+    <span class="adlabel">広告</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7948789271209448" data-ad-slot="__AD_SLOT__" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script>
+  </div>
 
   <!-- ============ SECTION A: World Cup ============ -->
   <h2 class="sec">FIFAワールドカップ26（日本から見られる公式へ案内）</h2>
@@ -1324,6 +1334,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   });
 
   window.addEventListener('resize', layout);
+  // 戻る（bfcache復元）時に「Go!」スタンプ等の演出オーバーレイが残らないようリセット
+  window.addEventListener('pageshow', function(){ boom.className='boom'; });
   layout(); startAuto();
 })();
 </script>

@@ -272,7 +272,14 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 /* ページ表示時のフェードイン（カルーセル等からの切替を滑らかに） */
 @keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .post{animation:pageIn .42s cubic-bezier(.2,.7,.2,1) both}
-@media(prefers-reduced-motion:reduce){.post{animation:none}}`;
+@media(prefers-reduced-motion:reduce){.post{animation:none}}
+/* 広告枠（レスポンシブ） */
+.ad{margin:28px auto 6px;max-width:728px;text-align:center;min-height:100px}
+.ad .adlabel{display:block;font-size:10px;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
+.ad ins{display:block}`;
+
+// 広告枠（slot は AdSense 管理画面で作成した広告ユニットIDに置換する）
+const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7948789271209448" data-ad-slot="__AD_SLOT__" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script></div>`;
 
 mkdirSync('site/match', { recursive:true });
 mkdirSync('site/country', { recursive:true });
@@ -325,6 +332,7 @@ function buildMatch(m){
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
   <div class="warn-strip"><span>⚠️</span><div>このページは試合結果・スコアを含みます。ネタバレを避けたい方はご注意ください。</div></div>
   <div class="post-body">${m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')}</div>
+  ${AD}
   ${factHtml}
   ${teamHtml}
   ${relHtml}
@@ -363,6 +371,7 @@ function buildCountry(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
   ${factHtml}
+  ${AD}
   ${list}
   ${related}
   ` + FOOTER();
@@ -394,6 +403,7 @@ function buildClub(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
   ${factHtml}
+  ${AD}
   ${list}
   ${related}
   ` + FOOTER();
