@@ -24,5 +24,9 @@ deploy-secrets*
 scripts/lineups.raw/
 deploy.env*
 *.env.txt
+# 生成物（build-site.mjs の出力）。ソースは index.html + scripts/*.mjs。デプロイは FTP(deploy.mjs) が site/ 全体を配信。
 site/match/
+site/country/
+site/club/
 site/style.css
+site/article.css

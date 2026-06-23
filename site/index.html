@@ -58,6 +58,14 @@
   .notice.blue{border-left-color:var(--accent2)}
   .notice.warn{border-left-color:var(--warn)}
   .notice .i{font-size:15px; line-height:1.5}
+  /* 折りたたみ式の利用ガイド（控えめ配置） */
+  .guide{margin:30px 0 6px; border:1px solid var(--line); border-radius:12px; background:var(--card); overflow:hidden}
+  .guide>summary{list-style:none; cursor:pointer; padding:13px 16px; display:flex; align-items:center; gap:9px; font-size:13.5px; font-weight:700; color:var(--text); user-select:none}
+  .guide>summary::-webkit-details-marker{display:none}
+  .guide>summary .gchev{margin-left:auto; color:var(--muted); transition:transform .2s; font-size:12px; font-weight:400}
+  .guide[open]>summary .gchev{transform:rotate(90deg)}
+  .guide>summary .gtag{font-size:11px; font-weight:700; color:var(--muted); background:var(--pill); border:1px solid var(--line); padding:2px 9px; border-radius:999px}
+  .guide .gbody{padding:2px 16px 16px; display:grid; gap:8px}
   h2.sec{font-size:18px; margin:38px 0 4px; padding-top:18px; border-top:1px solid var(--line)}
   .sec-desc{color:var(--muted); font-size:13.5px; margin:0 0 14px}
   h3.kicker{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin:26px 0 12px; font-weight:700}
@@ -174,6 +182,53 @@
   h1,h2,h3,h4{font-weight:900}
   .flag{height:13px; width:auto; border-radius:2px; vertical-align:-2px; margin-right:2px; box-shadow:0 0 0 .5px rgba(0,0,0,.12)}
   .pickup .flag{height:14px; vertical-align:-2px}
+  /* ===== コインフロー型カルーセル（注目の試合・1枚見せ＋左右チラ見せ＋立体） ===== */
+  .coverflow{position:relative; margin:14px 0 10px; padding:10px 0 4px; overflow:hidden; touch-action:pan-y}
+  .cf-stage{position:relative; width:100%; height:284px; perspective:1300px; perspective-origin:50% 40%}
+  .cf-card{position:absolute; top:0; left:50%; width:clamp(228px,62%,398px); margin:0;
+    transform:translateX(-50%); transform-style:preserve-3d; cursor:pointer; backface-visibility:hidden;
+    transition:transform .52s cubic-bezier(.22,.72,.2,1), opacity .5s ease, filter .5s ease; will-change:transform,opacity}
+  .cf-card .pt{padding:9px 12px 12px}
+  .pcard .pcomp{display:block; font-size:10.5px; font-weight:800; color:var(--accent2); letter-spacing:.01em; line-height:1.42; margin-bottom:3px}
+  .pcard .pmatch{display:block; font-size:13.5px; font-weight:700; line-height:1.42}
+  .pcard .pmatch .flag{height:13px; vertical-align:-2px; margin:0 1px}
+  .pcard .pmatch .ppre{color:var(--accent2); font-weight:800; margin-right:5px}
+  .cf-card.is-active{box-shadow:0 18px 44px rgba(12,22,87,.36)}
+  .cf-card.is-active .play{background:rgba(225,29,72,.98); box-shadow:0 4px 18px rgba(225,29,72,.55)}
+  .cf-nav{position:absolute; top:calc(50% - 32px); z-index:50; width:42px; height:42px; border-radius:50%;
+    border:1px solid var(--line); background:rgba(255,255,255,.92); color:var(--accent); font-size:24px; line-height:1;
+    cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(16,26,86,.18); padding:0}
+  .cf-nav:hover{background:#fff; color:var(--accent2)}
+  .cf-nav.prev{left:0} .cf-nav.next{right:0}
+  .cf-dots{display:flex; justify-content:center; gap:7px; margin-top:8px}
+  .cf-dots b{width:7px; height:7px; border-radius:50%; background:var(--line2); cursor:pointer; transition:transform .2s, background .2s}
+  .cf-dots b.on{background:var(--accent); transform:scale(1.55)}
+  @media(max-width:560px){ .cf-stage{height:212px} .cf-card{width:clamp(186px,72%,300px)} .cf-nav{width:36px; height:36px; font-size:20px} }
+  /* ===== クリック時のインパクト演出（スマブラ風「ドーン！」） ===== */
+  .boom{position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; pointer-events:none; overflow:hidden}
+  .boom.go{display:flex}
+  .boom-flash{position:absolute; inset:0; background:#fff; opacity:0}
+  .boom.go .boom-flash{animation:bFlash .5s ease-out forwards}
+  .boom-burst{position:absolute; width:160vmax; height:160vmax; border-radius:50%; opacity:0;
+    background:repeating-conic-gradient(from 0deg, rgba(255,255,255,0) 0deg 3.4deg, rgba(255,209,64,.30) 3.4deg 6deg)}
+  .boom.go .boom-burst{animation:bBurst .66s ease-out forwards}
+  .boom-rings{position:absolute; width:24vmax; height:24vmax; border-radius:50%; border:9px solid #ffd23c; opacity:0;
+    box-shadow:0 0 50px rgba(255,210,60,.85), inset 0 0 30px rgba(255,210,60,.6)}
+  .boom.go .boom-rings{animation:bRing .6s cubic-bezier(.2,.7,.3,1) forwards}
+  .boom-core{position:relative; z-index:2; text-align:center}
+  .boom-word{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:900; line-height:1; letter-spacing:.03em;
+    font-size:clamp(54px,15vw,158px); color:#fff; -webkit-text-stroke:3px #14206e; text-shadow:0 7px 0 #14206e,0 0 34px rgba(38,54,143,.85); opacity:0}
+  .boom.go .boom-word{animation:bWord .72s cubic-bezier(.2,1.45,.4,1) forwards}
+  .boom-sub{margin-top:10px; font-weight:800; font-size:clamp(14px,3.4vw,21px); color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.65); opacity:0}
+  .boom.go .boom-sub{animation:bSub .72s ease-out forwards}
+  body.shaking{animation:bShake .42s cubic-bezier(.36,.07,.19,.97) both}
+  @keyframes bFlash{0%{opacity:0}10%{opacity:.9}100%{opacity:0}}
+  @keyframes bBurst{0%{transform:scale(.15) rotate(0deg); opacity:0}18%{opacity:.95}100%{transform:scale(1.7) rotate(22deg); opacity:0}}
+  @keyframes bRing{0%{transform:scale(.1); opacity:.95}100%{transform:scale(3); opacity:0}}
+  @keyframes bWord{0%{transform:scale(2.7) rotate(-12deg); opacity:0}30%{transform:scale(1) rotate(-6deg); opacity:1}72%{transform:scale(1) rotate(-6deg); opacity:1}100%{transform:scale(1.18) rotate(-6deg); opacity:0}}
+  @keyframes bSub{0%,28%{opacity:0}45%{opacity:1}78%{opacity:1}100%{opacity:0}}
+  @keyframes bShake{10%{transform:translate(-7px,3px)}20%{transform:translate(8px,-4px)}30%{transform:translate(-10px,4px)}40%{transform:translate(9px,-3px)}50%{transform:translate(-7px,2px)}60%{transform:translate(6px,-2px)}70%{transform:translate(-4px,2px)}80%{transform:translate(3px,-1px)}100%{transform:translate(0,0)}}
+  @media(prefers-reduced-motion:reduce){ .boom.go *{animation:none!important} body.shaking{animation:none!important} .cf-card{transition:none} }
 </style>
 </head>
 <body>
@@ -202,19 +257,18 @@
   </div></div>
 
   <div class="pickup-h">⚡ 注目の試合（ピックアップ）<span class="bar"></span></div>
-  <div class="pickup">
-    <a class="pcard" href="match/TXyBRmgFIs4.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/TXyBRmgFIs4/hqdefault.jpg" alt="日本 vs チュニジア" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本 vs <img class="flag" src="https://flagcdn.com/w20/tn.png" alt=""> チュニジア（W杯 GF）</div></a>
-    <a class="pcard" href="match/3jIMk43CECY.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/3jIMk43CECY/hqdefault.jpg" alt="オランダ vs 日本" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/nl.png" alt=""> オランダ vs <img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本（W杯 GF）</div></a>
-    <a class="pcard" href="match/Mr3hSU26N9c.html"><div class="thumb"><span class="pbadge">🌟 ヤマル</span><img src="https://i.ytimg.com/vi/Mr3hSU26N9c/hqdefault.jpg" alt="スペイン vs サウジアラビア" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/es.png" alt=""> スペイン vs <img class="flag" src="https://flagcdn.com/w20/sa.png" alt=""> サウジアラビア（W杯 GH）</div></a>
-    <a class="pcard" href="match/15UvrUgxL1U.html"><div class="thumb"><span class="pbadge">🏆 Jリーグ</span><img src="https://i.ytimg.com/vi/15UvrUgxL1U/hqdefault.jpg" alt="ヴィッセル神戸 vs 鹿島アントラーズ" loading="lazy"><span class="play">▶</span></div><div class="pt">神戸 vs 鹿島（Jリーグ 王者決定戦）</div></a>
-    <a class="pcard" href="match/v1TbRkKaXTA.html"><div class="thumb"><span class="pbadge">⚽ 南野</span><img src="https://i.ytimg.com/vi/v1TbRkKaXTA/hqdefault.jpg" alt="モナコ vs PSG" loading="lazy"><span class="play">▶</span></div><div class="pt">南野拓実 ─ モナコ vs PSG（リーグアン）</div></a>
-    <a class="pcard" href="match/rqvRbGTw2zc.html"><div class="thumb"><span class="pbadge">🇯🇵 久保</span><img src="https://i.ytimg.com/vi/rqvRbGTw2zc/hqdefault.jpg" alt="ソシエダ vs ラージョ" loading="lazy"><span class="play">▶</span></div><div class="pt">久保建英 ─ ソシエダ vs ラージョ（ラ・リーガ）</div></a>
-  </div>
-
-  <div class="notices">
-    <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。さらに一部の試合は <b>🟢ネタバレ控えめ版（結果が出ないMATCH RECAP）</b> と <b>⚠️ネタバレあり版</b> を並べています。お好みでどうぞ。</div></div>
-    <div class="notice blue"><span class="i">✅</span><div><span class="adfree">公式のみ</span> 掲載しているのは公式・権利元が公開している映像だけ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</div></div>
-    <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
+  <div class="coverflow" id="coverflow" tabindex="0" aria-label="注目の試合カルーセル（左右の矢印で切替・中央をタップで再生）">
+    <div class="cf-stage" id="cfStage">
+      <a class="pcard cf-card" href="match/TXyBRmgFIs4.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/TXyBRmgFIs4/hqdefault.jpg" alt="日本 vs チュニジア" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">FIFA ワールドカップ26｜グループリーグ グループF 第2戦</span><span class="pmatch"><img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本 vs <img class="flag" src="https://flagcdn.com/w20/tn.png" alt=""> チュニジア</span></div></a>
+      <a class="pcard cf-card" href="match/3jIMk43CECY.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/3jIMk43CECY/hqdefault.jpg" alt="オランダ vs 日本" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">FIFA ワールドカップ26｜グループリーグ グループF 第1戦</span><span class="pmatch"><img class="flag" src="https://flagcdn.com/w20/nl.png" alt=""> オランダ vs <img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本</span></div></a>
+      <a class="pcard cf-card" href="match/Mr3hSU26N9c.html"><div class="thumb"><span class="pbadge">🌟 ヤマル</span><img src="https://i.ytimg.com/vi/Mr3hSU26N9c/hqdefault.jpg" alt="スペイン vs サウジアラビア" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">FIFA ワールドカップ26｜グループリーグ グループH 第2戦</span><span class="pmatch"><img class="flag" src="https://flagcdn.com/w20/es.png" alt=""> スペイン vs <img class="flag" src="https://flagcdn.com/w20/sa.png" alt=""> サウジアラビア</span></div></a>
+      <a class="pcard cf-card" href="match/15UvrUgxL1U.html"><div class="thumb"><span class="pbadge">🏆 Jリーグ</span><img src="https://i.ytimg.com/vi/15UvrUgxL1U/hqdefault.jpg" alt="ヴィッセル神戸 vs 鹿島アントラーズ" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">Jリーグ2026｜プレーオフ 1-2位決定戦 第2戦・神戸が王者</span><span class="pmatch">ヴィッセル神戸 vs 鹿島アントラーズ</span></div></a>
+      <a class="pcard cf-card" href="match/v1TbRkKaXTA.html"><div class="thumb"><span class="pbadge">⚽ 南野</span><img src="https://i.ytimg.com/vi/v1TbRkKaXTA/hqdefault.jpg" alt="モナコ vs PSG" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">リーグアン 2025-26｜第14節</span><span class="pmatch"><span class="ppre">南野拓実</span>モナコ vs PSG</span></div></a>
+      <a class="pcard cf-card" href="match/rqvRbGTw2zc.html"><div class="thumb"><span class="pbadge">🇯🇵 久保</span><img src="https://i.ytimg.com/vi/rqvRbGTw2zc/hqdefault.jpg" alt="ソシエダ vs ラージョ" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">ラ・リーガ 2025-26｜第8節</span><span class="pmatch"><span class="ppre">久保建英</span>ソシエダ vs ラージョ</span></div></a>
+    </div>
+    <button class="cf-nav prev" id="cfPrev" aria-label="前の試合">‹</button>
+    <button class="cf-nav next" id="cfNext" aria-label="次の試合">›</button>
+    <div class="cf-dots" id="cfDots"></div>
   </div>
 
   <div class="filterbar">
@@ -817,6 +871,15 @@
 
   <div id="club-extra"></div>
 
+  <details class="guide">
+    <summary><span>ℹ️ このサイトの使い方・掲載方針</span><span class="gtag">3つのこだわり</span><span class="gchev">▶</span></summary>
+    <div class="gbody">
+      <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。さらに一部の試合は <b>🟢ネタバレ控えめ版（結果が出ないMATCH RECAP）</b> と <b>⚠️ネタバレあり版</b> を並べています。お好みでどうぞ。</div></div>
+      <div class="notice blue"><span class="i">✅</span><div><span class="adfree">公式のみ</span> 掲載しているのは公式・権利元が公開している映像だけ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</div></div>
+      <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
+    </div>
+  </details>
+
   <footer>
     <p><b>このページについて</b></p>
     <ul>
@@ -1055,6 +1118,9 @@ function mkMatch(m){
 }
 function fill(id, arr){var el=document.getElementById(id); if(el) el.innerHTML = arr.map(mkMatch).join('');}
 fill('wc-extra', EXTRA_WC); fill('jl-extra', EXTRA_JL); fill('club-extra', EXTRA_CLUB);
+/*ENTITY_PAGES_START*/
+var ENTITY_PAGES = {"日本":"country/japan.html","ブラジル":"country/brazil.html","スペイン":"country/spain.html","オランダ":"country/netherlands.html","イングランド":"country/england.html","ポルトガル":"country/portugal.html","ベルギー":"country/belgium.html","クロアチア":"country/croatia.html","ドイツ":"country/germany.html","スイス":"country/switzerland.html","オーストリア":"country/austria.html","スコットランド":"country/scotland.html","スウェーデン":"country/sweden.html","トルコ":"country/turkey.html","チェコ":"country/czechia.html","ウルグアイ":"country/uruguay.html","コロンビア":"country/colombia.html","パラグアイ":"country/paraguay.html","エクアドル":"country/ecuador.html","アメリカ":"country/usa.html","メキシコ":"country/mexico.html","カナダ":"country/canada.html","モロッコ":"country/morocco.html","チュニジア":"country/tunisia.html","ガーナ":"country/ghana.html","南アフリカ":"country/south-africa.html","エジプト":"country/egypt.html","コートジボワール":"country/ivory-coast.html","カーボベルデ":"country/cape-verde.html","サウジアラビア":"country/saudi-arabia.html","韓国":"country/south-korea.html","イラン":"country/iran.html","ウズベキスタン":"country/uzbekistan.html","カタール":"country/qatar.html","オーストラリア":"country/australia.html","ニュージーランド":"country/new-zealand.html","ハイチ":"country/haiti.html","パナマ":"country/panama.html","キュラソー":"country/curacao.html","コンゴ民主共和国":"country/dr-congo.html","ヨルダン":"country/jordan.html","ボスニア・ヘルツェゴビナ":"country/bosnia.html","ソシエダ":"club/real-sociedad.html","パルマ":"club/parma.html","モナコ":"club/as-monaco.html","スポルティング":"club/sporting-cp.html","フランクフルト":"club/eintracht-frankfurt.html","マインツ":"club/mainz-05.html","ブレーメン":"club/werder-bremen.html","バイエルン":"club/bayern-munich.html","ライプツィヒ":"club/rb-leipzig.html","鹿島アントラーズ":"club/kashima-antlers.html","浦和レッズ":"club/urawa-reds.html","川崎フロンターレ":"club/kawasaki-frontale.html","FC東京":"club/fc-tokyo.html","東京ヴェルディ":"club/tokyo-verdy.html","横浜F・マリノス":"club/yokohama-f-marinos.html","ヴィッセル神戸":"club/vissel-kobe.html","京都サンガF.C.":"club/kyoto-sanga.html","ガンバ大阪":"club/gamba-osaka.html","セレッソ大阪":"club/cerezo-osaka.html","サンフレッチェ広島":"club/sanfrecce-hiroshima.html","名古屋グランパス":"club/nagoya-grampus.html","柏レイソル":"club/kashiwa-reysol.html","清水エスパルス":"club/shimizu-s-pulse.html","アルビレックス新潟":"club/albirex-niigata.html","ジュビロ磐田":"club/jubilo-iwata.html","バルセロナ":"club/fc-barcelona.html","アトレティコ":"club/atletico-madrid.html","バレンシア":"club/valencia.html","ナポリ":"club/napoli.html","ローマ":"club/as-roma.html","ミラン":"club/ac-milan.html","PSG":"club/psg.html","マルセイユ":"club/marseille.html","ドルトムント":"club/borussia-dortmund.html","ベンフィカ":"club/benfica.html","ポルト":"club/fc-porto.html"};
+/*ENTITY_PAGES_END*/
 var c;
 if(c=document.getElementById('cnt-wc')) c.textContent = 10 + EXTRA_WC.length;
 if(c=document.getElementById('cnt-jl')) c.textContent = 9 + EXTRA_JL.length;
@@ -1138,8 +1204,9 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var q=(raw||'').replace(/\s+/g,'').toLowerCase(); if(!q) return [];
     var s=[], add=function(o){ if(s.length<9) s.push(o); };
     Object.keys(playersAll).forEach(function(p){ if(p.toLowerCase().indexOf(q)>=0) add({ic:'🇯🇵',tx:p,tag:'選手',act:function(){setSearch(p);}}); });
-    Object.keys(countries).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:flagOf(tm)||'🌍',tx:tm,tag:'国',act:function(){setSearch(tm);}}); });
-    Object.keys(clubs).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'🛡️',tx:tm,tag:'クラブ',act:function(){setSearch(tm);}}); });
+    var EP=(typeof ENTITY_PAGES!=='undefined')?ENTITY_PAGES:{};
+    Object.keys(countries).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add(EP[tm]?{ic:flagOf(tm)||'🌍',tx:tm,tag:'国ページ',href:EP[tm]}:{ic:flagOf(tm)||'🌍',tx:tm,tag:'国',act:function(){setSearch(tm);}}); });
+    Object.keys(clubs).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add(EP[tm]?{ic:'🛡️',tx:tm,tag:'クラブページ',href:EP[tm]}:{ic:'🛡️',tx:tm,tag:'クラブ',act:function(){setSearch(tm);}}); });
     matchList.forEach(function(m){ if(m.ttl.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'▶',tx:m.ttl,tag:'試合',href:'match/'+m.id+'.html'}); });
     return s.slice(0,9);
   }
@@ -1162,7 +1229,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   var mqEl=document.getElementById('mq'); if(mqEl) attachAC(mqEl, document.getElementById('mqList'));
 
   // ===== ハンバーガーメニュー =====
-  function chips(obj, useFlag){ return Object.keys(obj).sort(function(a,b){return obj[b]-obj[a];}).map(function(k){ var f=useFlag?(flagOf(k)+' '):''; return '<a data-term="'+k.replace(/"/g,'')+'">'+f+k+'<span style="color:var(--muted);font-size:11px">（'+obj[k]+'）</span></a>'; }).join(''); }
+  function chips(obj, useFlag){ var EP=(typeof ENTITY_PAGES!=='undefined')?ENTITY_PAGES:{}; return Object.keys(obj).sort(function(a,b){return obj[b]-obj[a];}).map(function(k){ var f=useFlag?(flagOf(k)+' '):''; var cnt='<span style="color:var(--muted);font-size:11px">（'+obj[k]+'）</span>'; return EP[k] ? '<a href="'+EP[k]+'">'+f+k+cnt+'</a>' : '<a data-term="'+k.replace(/"/g,'')+'">'+f+k+cnt+'</a>'; }).join(''); }
   var mb=document.getElementById('menuBody');
   if(mb){
     mb.innerHTML =
@@ -1178,6 +1245,100 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   var mOv=document.getElementById('menuOverlay'); if(mOv) mOv.addEventListener('click', function(e){ if(e.target===mOv) closeMenu(); });
 
   apply();
+})();
+</script>
+
+<div class="boom" id="boom" aria-hidden="true">
+  <div class="boom-flash"></div>
+  <div class="boom-burst"></div>
+  <div class="boom-rings"></div>
+  <div class="boom-core"><div class="boom-word">ドーン！</div><div class="boom-sub"></div></div>
+</div>
+<script>
+// 注目の試合：コインフロー型カルーセル ＋ クリック時「ドーン！」演出
+(function(){
+  var cf=document.getElementById('coverflow'); if(!cf) return;
+  var stage=document.getElementById('cfStage');
+  var cards=[].slice.call(stage.querySelectorAll('.cf-card'));
+  var N=cards.length; if(!N) return;
+  var dots=document.getElementById('cfDots');
+  var active=0, auto=null, autoStopped=false;
+  var reduce=window.matchMedia && matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  function layout(){
+    cards.forEach(function(card,i){
+      var d=i-active; if(d>N/2)d-=N; if(d<-N/2)d+=N;
+      var s=(d>0?1:(d<0?-1:0)), a=Math.abs(d), tx,sc,ry,op,z,br;
+      if(a===0){tx=0;sc=1;ry=0;op=1;z=30;br=1;}
+      else if(a===1){tx=s*58;sc=.8;ry=-s*34;op=1;z=20;br=.6;}
+      else if(a===2){tx=s*104;sc=.6;ry=-s*42;op=.5;z=10;br=.42;}
+      else {tx=s*126;sc=.5;ry=-s*45;op=0;z=1;br=.4;}
+      card.style.transform='translateX(calc(-50% + '+tx+'%)) scale('+sc+') rotateY('+ry+'deg)';
+      card.style.zIndex=z; card.style.opacity=op; card.style.filter='brightness('+br+')';
+      card.style.pointerEvents=(a>=3?'none':'auto');
+      card.classList.toggle('is-active', a===0);
+      card.setAttribute('aria-hidden', a===0?'false':'true');
+    });
+    if(dots) [].forEach.call(dots.children,function(b,i){ b.classList.toggle('on', i===active); });
+    var h=cards[active].offsetHeight; if(h) stage.style.height=h+'px';
+  }
+  function setActive(i){ active=((i%N)+N)%N; layout(); }
+  function next(){ setActive(active+1); } function prev(){ setActive(active-1); }
+
+  // ドット
+  cards.forEach(function(_,i){ var b=document.createElement('b'); b.addEventListener('click',function(){ stopAuto(); setActive(i); }); dots.appendChild(b); });
+  // 矢印
+  document.getElementById('cfPrev').addEventListener('click',function(){ stopAuto(); prev(); });
+  document.getElementById('cfNext').addEventListener('click',function(){ stopAuto(); next(); });
+  // キーボード
+  cf.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft'){stopAuto();prev();} else if(e.key==='ArrowRight'){stopAuto();next();} });
+  // スワイプ
+  var sx=null;
+  stage.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
+  stage.addEventListener('touchend',function(e){ if(sx==null)return; var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40){ stopAuto(); dx<0?next():prev(); } sx=null; });
+  // 自動送り（操作で停止・ホバーで一時停止）
+  function startAuto(){ if(reduce||autoStopped)return; auto=setInterval(next,4200); }
+  function stopAuto(){ autoStopped=true; if(auto){clearInterval(auto);auto=null;} }
+  cf.addEventListener('mouseenter',function(){ if(auto){clearInterval(auto);auto=null;} });
+  cf.addEventListener('mouseleave',function(){ if(!autoStopped&&!auto) auto=setInterval(next,4200); });
+
+  // 効果音（WebAudioで合成・アセット不要）
+  function thud(){ try{
+    var AC=window.AudioContext||window.webkitAudioContext; if(!AC)return; var ac=new AC();
+    var o=ac.createOscillator(), g=ac.createGain(); o.type='triangle';
+    o.frequency.setValueAtTime(190,ac.currentTime); o.frequency.exponentialRampToValueAtTime(42,ac.currentTime+.19);
+    g.gain.setValueAtTime(.0001,ac.currentTime); g.gain.exponentialRampToValueAtTime(.5,ac.currentTime+.02); g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+.34);
+    o.connect(g).connect(ac.destination); o.start(); o.stop(ac.currentTime+.36);
+    var len=Math.floor(ac.sampleRate*0.16), b=ac.createBuffer(1,len,ac.sampleRate), d=b.getChannelData(0);
+    for(var i=0;i<len;i++){ d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.2); }
+    var ns=ac.createBufferSource(); ns.buffer=b; var ng=ac.createGain(); ng.gain.value=.3; ns.connect(ng).connect(ac.destination); ns.start();
+    setTimeout(function(){ try{ac.close();}catch(e){} },700);
+  }catch(e){} }
+
+  // ドーン！演出 → 遷移
+  var boom=document.getElementById('boom'), sub=boom.querySelector('.boom-sub');
+  function ignite(href,label){
+    if(reduce){ location.href=href; return; }
+    sub.textContent=label||'';
+    boom.classList.remove('go'); void boom.offsetWidth; boom.classList.add('go');
+    document.body.classList.remove('shaking'); void document.body.offsetWidth; document.body.classList.add('shaking');
+    thud();
+    setTimeout(function(){ document.body.classList.remove('shaking'); boom.classList.remove('go'); }, 760);
+    setTimeout(function(){ location.href=href; }, 700);
+  }
+  // カードのクリック：どのカードでも（画像・どこでも）→ドーン！してそのページへ
+  cards.forEach(function(card,i){
+    card.addEventListener('click',function(e){
+      if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return; // 新規タブ等は通常動作
+      e.preventDefault();
+      stopAuto();
+      if(i!==active) setActive(i); // クリックしたカードを中央に寄せつつ
+      var t=card.querySelector('.pmatch')||card.querySelector('.pt'); ignite(card.getAttribute('href'), t?t.textContent.trim():'');
+    });
+  });
+
+  window.addEventListener('resize', layout);
+  layout(); startAuto();
 })();
 </script>
 </body>
