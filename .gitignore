@@ -7,3 +7,15 @@ Thumbs.db
 
 # Local test scaffolding (not part of the published site)
 site/test/
+
+# Node / Playwright (scraper deps — never commit)
+node_modules/
+package-lock.json
+
+# SECRETS — never commit (API keys etc.)
+api-key.txt
+api-key*.txt
+*.key
+.env
+.env.*
+scripts/lineups.raw/
