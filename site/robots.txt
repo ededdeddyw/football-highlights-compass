@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ededdeddyw.github.io/football-highlights-compass/sitemap.xml
