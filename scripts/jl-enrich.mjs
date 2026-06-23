@@ -27,7 +27,8 @@ const CLUBS = [
   ['今治','imabari'], ['高知','kochi'], ['讃岐','sanuki'], ['カマタマーレ','sanuki'],
   ['仙台','sendai'], ['ベガルタ','sendai'],
 ];
-const norm = (name) => { for (const [sub,k] of CLUBS) if (name.includes(sub)) return k; return null; };
+const toHalf = (s) => s.replace(/[Ａ-Ｚａ-ｚ０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+const norm = (name) => { name = toHalf(name); for (const [sub,k] of CLUBS) if (name.includes(toHalf(sub))) return k; return null; };
 
 // ---- サイトの EXTRA_JL カードを index.html から読む ----
 function readCards() {
