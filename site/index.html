@@ -61,6 +61,9 @@
   .tag.embed{background:rgba(25,195,125,.14); color:var(--accent); border-color:rgba(25,195,125,.35)}
   .tag.link{background:rgba(59,130,246,.14); color:#9cc0ff; border-color:rgba(59,130,246,.35)}
   .tag.blocked{background:rgba(244,183,64,.13); color:var(--warn); border-color:rgba(244,183,64,.35)}
+  .tag.clean{background:rgba(25,195,125,.16); color:var(--accent); border-color:rgba(25,195,125,.4)}
+  .tag.spoiler{background:rgba(244,183,64,.16); color:var(--warn); border-color:rgba(244,183,64,.45)}
+  .dualnote{font-size:12px; color:var(--accent); margin:2px 0 9px; font-weight:600}
   .embedwrap{position:relative; width:100%; aspect-ratio:16/9; background:#000; border-top:1px solid var(--line)}
   .embedwrap iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
   a.golink{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; padding:12px; border-top:1px solid var(--line)}
@@ -104,7 +107,7 @@
   <p class="sub">日本から公式に見られる映像を、<b>1試合あたり複数の公式ソースを並べて</b>整理しました。埋め込めるものは埋め込み、権利元が埋め込みを禁止しているものは公式ページへ案内します。対象は<b>ワールドカップ・Jリーグ・日本人選手所属クラブ</b>に絞っています。</p>
 
   <div class="notices">
-    <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。</div></div>
+    <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。さらに一部の試合は <b>🟢ネタバレ控えめ版（結果が出ないMATCH RECAP）</b> と <b>⚠️ネタバレあり版</b> を並べています。お好みでどうぞ。</div></div>
     <div class="notice blue"><span class="i">🚫📢</span><div><span class="adfree">広告ゼロ</span> このサイトに広告はありません。動画は各権利元の公式プレイヤーで再生されます（プレイヤー内の広告は権利元のものです）。</div></div>
     <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
   </div>
@@ -299,10 +302,13 @@
     <summary><div><div class="ttl">ブラジル vs モロッコ</div><div class="meta">グループC・第1節</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>
     <div class="body">
       <ul class="facts"><li><b>トピック：</b>優勝候補ブラジルとモロッコのハイレベルな一戦。<b>スコア：</b>公式映像で確認（ネタバレ防止）。</li></ul>
-      <div class="sources"><div class="source">
-        <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
-        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/yhuXl2aHrLY" loading="lazy" title="【ブラジル×モロッコ｜ハイライト】グループC第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div></div>
+      <div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。</div>
+      <div class="sources">
+        <div class="source"><div class="source-head"><span class="tag clean">🟢 ネタバレ控えめ（RECAP）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">タイトルに結果なし</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/0-5qfsxThHg" loading="lazy" title="ブラジル vs モロッコ MATCH RECAP（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        <div class="source"><div class="source-head"><span class="tag spoiler">⚠️ ネタバレあり（ハイライト）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">結果が映る</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/yhuXl2aHrLY" loading="lazy" title="【ブラジル×モロッコ｜ハイライト】グループC第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      </div>
     </div>
   </details>
 
@@ -310,10 +316,13 @@
     <summary><div><div class="ttl">ブラジル vs ハイチ</div><div class="meta">グループC・第2節</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>
     <div class="body">
       <ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。<b>スコア：</b>公式映像で確認（ネタバレ防止）。</li></ul>
-      <div class="sources"><div class="source">
-        <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
-        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/Wnf2zqWAC1c" loading="lazy" title="【ブラジル×ハイチ｜ハイライト】グループC第2節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div></div>
+      <div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。</div>
+      <div class="sources">
+        <div class="source"><div class="source-head"><span class="tag clean">🟢 ネタバレ控えめ（RECAP）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">タイトルに結果なし</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/dEEPG2lpQdk" loading="lazy" title="ブラジル vs ハイチ MATCH RECAP（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        <div class="source"><div class="source-head"><span class="tag spoiler">⚠️ ネタバレあり（ハイライト）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">結果が映る</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/Wnf2zqWAC1c" loading="lazy" title="【ブラジル×ハイチ｜ハイライト】グループC第2節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      </div>
     </div>
   </details>
 
@@ -321,10 +330,13 @@
     <summary><div><div class="ttl">イングランド vs クロアチア</div><div class="meta">グループL・第1節・撃ち合い</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>
     <div class="body">
       <ul class="facts"><li><b>トピック：</b>ゴラッソ飛び交う壮絶な撃ち合い。<b>スコア：</b>公式映像で確認（ネタバレ防止）。</li></ul>
-      <div class="sources"><div class="source">
-        <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
-        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/opi0JMADRt4" loading="lazy" title="【イングランド×クロアチア｜ハイライト】グループL第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div></div>
+      <div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。</div>
+      <div class="sources">
+        <div class="source"><div class="source-head"><span class="tag clean">🟢 ネタバレ控えめ（RECAP）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">タイトルに結果なし</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/BYyZDXKv0hQ" loading="lazy" title="イングランド vs クロアチア MATCH RECAP（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        <div class="source"><div class="source-head"><span class="tag spoiler">⚠️ ネタバレあり（ハイライト）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">結果が映る</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/opi0JMADRt4" loading="lazy" title="【イングランド×クロアチア｜ハイライト】グループL第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      </div>
     </div>
   </details>
 
@@ -332,10 +344,13 @@
     <summary><div><div class="ttl">ポルトガル vs コンゴ民主共和国</div><div class="meta">グループK・第1節・C・ロナウド6大会連続出場</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>
     <div class="body">
       <ul class="facts"><li><b>トピック：</b>C・ロナウドが6大会連続のW杯出場。<b>スコア：</b>公式映像で確認（ネタバレ防止）。</li></ul>
-      <div class="sources"><div class="source">
-        <div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>
-        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/_XPEH5LAlOs" loading="lazy" title="【ポルトガル×コンゴ民主共和国｜ハイライト】グループK第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div></div>
+      <div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。</div>
+      <div class="sources">
+        <div class="source"><div class="source-head"><span class="tag clean">🟢 ネタバレ控えめ（RECAP）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">タイトルに結果なし</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/lPRpAlZIeZI" loading="lazy" title="ポルトガル vs コンゴ民主共和国 MATCH RECAP（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        <div class="source"><div class="source-head"><span class="tag spoiler">⚠️ ネタバレあり（ハイライト）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">結果が映る</span></div>
+        <div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/_XPEH5LAlOs" loading="lazy" title="【ポルトガル×コンゴ民主共和国｜ハイライト】グループK第1節｜FIFAワールドカップ2026（DAZN Japan）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      </div>
     </div>
   </details>
 
@@ -910,14 +925,28 @@ const EXTRA_CLUB = [
 var JL_PLAYERS = {"stJyA4EIA5M":["大森 博","河野 孝汰","一美 和成","レオ ガウショ","神谷 優太","松本 昌也","小森 飛絢","イサーク キーセ テリン","中島 翔哉","サミュエル グスタフソン","金子 拓郎","松尾 佑介","ルカオ","西川 潤","鈴木 喜丈","長沼 洋一","荻原 拓也","渡邊 凌磨","照内 利和","白井 康介","山根 永遠","江坂 任","西川 周作","宮本 優太","ダニーロ ボザ","根本 健太","マテウス サヴィオ","安居 海渡","レナート モーザー","立田 悠悟","本山 遥","宮本 英治","牲川 歩見","関根 貴大","柴戸 海","二田 理央","松田 駿","阿部 海大","ブラウン ノア 賢信","竹内 涼"],"zcUAhveRtYY":["ジョアン ペドロ","尹 星俊","垣田 裕暉","細谷 真大","原田 亘","小西 雄大","原川 力","山内 日向汰","瀬川 祐輔","三丸 拡","小見 洋太","松田 天馬","本田 風智","奥川 雅也","長沢 駿","福岡 慎平","鈴木 義宜","小泉 佳穂","馬場 晴也","中野 瑠馬","永田 倖大","ラファエル エリアス","小島 亨介","古賀 太陽","杉岡 大暉","久保 藤次郎","中川 敦瑛","太田 岳志","麻田 将吾","須貝 英大","佐藤 響","永井 堅梧","犬飼 智也","汰木 康也","熊坂 光希","圍 謙太朗","平岡 大陽","齊藤 未月","グスタボ バヘット","デイビッジ シルバ"],"aLk-j32VqYE":["中村 草太","丸山 祐市","川辺 駿","前田 直輝","マルシーニョ","宮城 天","伊藤 達哉","加藤 陸次樹","ジャーメイン 良","新井 直人","茶島 雄介","持山 匡佑","紺野 和也","名願 斗哉","東 俊希","志知 孝明","鈴木 章斗","木下 康介","山口 瑠伊","松長根 悠仁","三浦 颯太","山原 怜音","橘田 健人","脇坂 泰斗","河原 創","大内 一生","山﨑 大地","中野 就斗","佐々木 翔","松本 泰志","早坂 勇希","スベンド ブローダーセン","フィリップ ウレモヴィッチ","神橋 良汰","野田 裕人","由井 航太","田中 雄大","菅 大輝","鮎川 峻","小原 基樹"],"CjW8ztH3Wv8":["関根 貴大","早川 隼平","山根 陸","ジョルディ クルークス","近藤 友喜","ユーリ アラウージョ","テヴィス","ディーン デイビッド","谷村 海那","柴戸 海","二田 理央","肥田野 蓮治","イサーク キーセ テリン","マテウス サヴィオ","遠野 大弥","天野 純","渡辺 皓太","宮市 亮","石原 広教","金子 拓郎","安居 海渡","松永 颯汰","木村 凌也","加藤 蓮","井上 太聖","ジェイソン キニョーネス","角田 涼太朗","西川 周作","ダニーロ ボザ","根本 健太","荻原 拓也","渡邊 凌磨","飯倉 大樹","諏訪間 幸成","関富 貫太","喜田 拓也","牲川 歩見","中島 翔哉","長沼 洋一","照内 利和"],"JRZcacj5S3c":["呉屋 大翔","橋本 悠","前嶋 洋太","藤本 一輝","北島 祐二","田口 泰士","小林 祐介","椿 直起","津久井 匠海","田中 和樹","イサカ ゼイン","山脇 樺織","河野 貴志","久保庭 良太","松村 拓実","重見 柾斗","奥野 耕平","碓井 聖生","道脇 豊","椎橋 慧也","佐藤 颯之介","ホセ スアレス","髙橋 壱晟","鳥海 晃司","前 貴之","日高 大","石川 大地","藤田 和輝","上島 拓巳","辻岡 佑真","岡 哲平","見木 友哉","鈴木 椋大","安井 拓也","エドゥアルド","米倉 恒貴","オビ パウエル オビンナ","田代 雅也","宮 大樹","秋野 央樹"],"xpHB3HBD_Sg":["呉屋 大翔","橋本 悠","前嶋 洋太","藤本 一輝","北島 祐二","田口 泰士","小林 祐介","椿 直起","津久井 匠海","田中 和樹","イサカ ゼイン","山脇 樺織","河野 貴志","久保庭 良太","松村 拓実","重見 柾斗","奥野 耕平","碓井 聖生","道脇 豊","椎橋 慧也","佐藤 颯之介","ホセ スアレス","髙橋 壱晟","鳥海 晃司","前 貴之","日高 大","石川 大地","藤田 和輝","上島 拓巳","辻岡 佑真","岡 哲平","見木 友哉","鈴木 椋大","安井 拓也","エドゥアルド","米倉 恒貴","オビ パウエル オビンナ","田代 雅也","宮 大樹","秋野 央樹"],"FauYcbxZRfo":["岡 哲平","山岸 祐也","稲垣 祥","木村 勇大","森 壮一朗","奥野 耕平","北島 祐二","藤本 一輝","秋野 央樹","橋本 悠","湯澤 聖人","田代 雅也","名古 新太郎","ナッシム ベン カリファ","辻岡 佑真","マルクス ヴィニシウス","前嶋 洋太","佐藤 颯之介","シャハブ ザヘディ","椎橋 慧也","中山 克広","甲田 英將","浅野 雄也","杉浦 駿吾","佐藤 瑶大","野上 結貴","オビ パウエル オビンナ","重見 柾斗","シュミット ダニエル","藤井 陽也","原 輝綺","高嶺 朋樹","藤田 和輝","奈良 竜樹","福島 和毅","サニブラウン ハナン","武田 洋平","三國 ケネディエブス","小野 雅史","永井 謙佑"],"RBasLKNTaW0":["山原 怜音","マルセロ ヒアン","室屋 成","伊藤 達哉","家長 昭博","紺野 和也","マルシーニョ","エリソン","ラザル ロマニッチ","脇坂 泰斗","遠藤 渓太","佐藤 龍之介","山田 楓喜","河原 創","山本 悠樹","常盤 亨太","小泉 慶","佐藤 恵允","尾谷 ディヴァインチネドゥ","橘田 健人","大関 友翔","谷口 栄斗","長友 佑都","スベンド ブローダーセン","松長根 悠仁","三浦 颯太","キム スンギュ","稲村 隼翔","アレクサンダー ショルツ","橋本 拳人","長倉 幹樹","早坂 勇希","フィリップ ウレモヴィッチ","野田 裕人","宮城 天","田中 颯","大森 理生","森重 真人","橋本 健人","仲川 輝人"],"A7KsvI_GaGE":["山原 怜音","マルセロ ヒアン","室屋 成","伊藤 達哉","家長 昭博","紺野 和也","マルシーニョ","エリソン","ラザル ロマニッチ","脇坂 泰斗","遠藤 渓太","佐藤 龍之介","山田 楓喜","河原 創","山本 悠樹","常盤 亨太","小泉 慶","佐藤 恵允","尾谷 ディヴァインチネドゥ","橘田 健人","大関 友翔","谷口 栄斗","長友 佑都","スベンド ブローダーセン","松長根 悠仁","三浦 颯太","キム スンギュ","稲村 隼翔","アレクサンダー ショルツ","橋本 拳人","長倉 幹樹","早坂 勇希","フィリップ ウレモヴィッチ","野田 裕人","宮城 天","田中 颯","大森 理生","森重 真人","橋本 健人","仲川 輝人"],"8YHuuly9e7s":["岡村 大八","遠藤 渓太","尾谷 ディヴァインチネドゥ","バングーナガンデ 佳史扶","橋本 健人","常盤 亨太","高 宇洋","マルセロ ヒアン","仲川 輝人","ネタ ラヴィ","下田 北斗","テテ イェンギ","藤尾 翔太","相馬 勇紀","徳村 楓大","佐藤 恵允","山田 楓喜","昌子 源","ドレシェヴィッチ","キム スンギュ","室屋 成","稲村 隼翔","アレクサンダー ショルツ","佐藤 龍之介","小泉 慶","谷 晃生","中山 雄太","前 寛之","林 幸多郎","中村 帆高","ナ サンホ","田中 颯","大森 理生","木本 恭生","菅原 悠太","守田 達弥","望月 ヘンリー海輝","白崎 凌兵","仙頭 啓矢","桑山 侃士"]};
 /*JL_PLAYERS_END*/
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');}
+// 同じ試合で「ネタバレ控えめ(RECAP)」と「ネタバレあり(ハイライト)」の両方がある試合
+var SPOILER_ALT = {
+  'x8YbDZ2XJ5s':{clean:'p9OJdAh-3uU',spoiler:'x8YbDZ2XJ5s'},
+  'lZfqA5K0t-Q':{clean:'HAcVdmkBdIY',spoiler:'lZfqA5K0t-Q'},
+  'hpPVZkcAvD4':{clean:'hpPVZkcAvD4',spoiler:'b3DtY3xXkJs'},
+  'URvgDf2be9c':{clean:'fA-D5X94BhQ',spoiler:'URvgDf2be9c'},
+  'n3G2hHWBHWM':{clean:'O5j0ZWm2K88',spoiler:'n3G2hHWBHWM'}
+};
 function mkMatch(m){
   var jp = m.jp ? '<b>日本人選手：</b>'+m.jp+'。' : '';
   var lu = (JL_PLAYERS[m.id] && JL_PLAYERS[m.id].length) ? '<div class="lineup"><b>出場選手：</b>'+JL_PLAYERS[m.id].join('・')+'<span class="src2">／データ：Jリーグ公式</span></div>' : '';
+  function emb(id,cls,txt,geo){ return '<div class="source"><div class="source-head"><span class="tag '+cls+'">'+txt+'</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">'+geo+'</span></div><div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'" loading="lazy" title="'+esc(m.title||m.ttl)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>'; }
+  var sp = SPOILER_ALT[m.id], sources, note='';
+  if (sp){
+    note = '<div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。お好みでどうぞ。</div>';
+    sources = emb(sp.clean,'clean','🟢 ネタバレ控えめ（RECAP・タイトルに結果なし）','日本から視聴可') + emb(sp.spoiler,'spoiler','⚠️ ネタバレあり（ハイライト・結果が映る）','日本から視聴可');
+  } else {
+    sources = emb(m.id,'embed','▶ 埋め込みOK（DAZN Japan）','日本から視聴可');
+  }
   return '<details class="match"><summary><div><div class="ttl">'+m.ttl+'</div><div class="meta">'+m.meta+'</div></div><span class="spoilerpill">▶ 埋め込み再生</span><span class="chev">▶</span></summary>'
     +'<div class="body"><ul class="facts"><li><b>ソース：</b>DAZN Japan 公式YouTube。'+jp+'<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul>'
-    +'<div class="sources"><div class="source"><div class="source-head"><span class="tag embed">▶ 埋め込みOK（DAZN Japan）</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">日本から視聴可</span></div>'
-    +'<div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/'+m.id+'" loading="lazy" title="'+esc(m.title||m.ttl)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
-    +'</div></div>'+lu+'</div></details>';
+    + note + '<div class="sources">'+sources+'</div>'+lu+'</div></details>';
 }
 function fill(id, arr){var el=document.getElementById(id); if(el) el.innerHTML = arr.map(mkMatch).join('');}
 fill('wc-extra', EXTRA_WC); fill('jl-extra', EXTRA_JL); fill('club-extra', EXTRA_CLUB);
