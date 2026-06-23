@@ -22,3 +22,7 @@ deploy.env
 ftp.txt
 deploy-secrets*
 scripts/lineups.raw/
+deploy.env*
+*.env.txt
+site/match/
+site/style.css
