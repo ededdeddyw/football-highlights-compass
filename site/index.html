@@ -894,8 +894,7 @@
       <li>掲載しているのは公式・権利元が公開している映像のみです。無断転載・切り抜き・再アップロードは扱いません。</li>
       <li><b>多重ソース方針：</b> 1試合につき複数の公式ソースを並べ、埋め込みを許可しているもの（DAZN等）は埋め込み、禁止しているもの（FIFA等）は公式ページへ案内します。埋め込み可否は実機で検証しています。</li>
       <li>米国放送局（FOX 等）の動画は日本から視聴できないため案内しません。ジオブロック回避の案内も行いません。</li>
-      <!-- TODO: 削除依頼の問い合わせ先を確定して差し替える -->
-      <li>リンク切れ・削除、権利申し立ての窓口は<b>準備中</b>です。整い次第ここに連絡先を掲載し、要請には確認のうえ速やかに対応します。</li>
+      <li>掲載内容・リンク切れ・削除、権利申し立てのご連絡先は<a href="privacy.html" style="color:var(--accent2)">プライバシーポリシー・お問い合わせ</a>に掲載しています。確認のうえ速やかに対応します。</li>
     </ul>
     <p>© 2026 Football Highlights Compass — 公式映像の発見サイト（プロトタイプ）</p>
   </footer>
@@ -1328,8 +1327,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
       if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return; // 新規タブ等は通常動作
       e.preventDefault();
       stopAuto();
-      if(i!==active) setActive(i); // クリックしたカードを中央に寄せつつ
-      var t=card.querySelector('.pmatch')||card.querySelector('.pt'); ignite(card.getAttribute('href'), t?t.textContent.trim():'');
+      if(i!==active){ setActive(i); return; } // 中央以外（左右のチラ見せ）→矢印と同じくカルーセルを回す
+      var t=card.querySelector('.pmatch')||card.querySelector('.pt'); ignite(card.getAttribute('href'), t?t.textContent.trim():''); // 中央のみ→演出してそのページへ
     });
   });
 
