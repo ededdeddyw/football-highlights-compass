@@ -115,6 +115,22 @@
   .result-count{font-size:12px; color:var(--muted); margin-top:9px}
   .lineup{margin-top:12px; padding:10px 12px; background:var(--card2); border:1px solid var(--line); border-radius:10px; font-size:13px; line-height:1.9; color:var(--text)}
   .lineup .src2{color:var(--muted); font-size:11px; margin-left:6px}
+  /* ヒーロー＆ピックアップ */
+  .hero{position:relative; margin:2px 0 6px; border-radius:16px; overflow:hidden; color:#fff; box-shadow:0 8px 26px rgba(16,26,86,.22)}
+  .hero .bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+  .hero .ov{position:relative; padding:30px 18px 24px; background:linear-gradient(115deg, rgba(9,16,74,.94), rgba(20,32,104,.8) 52%, rgba(38,54,143,.55))}
+  .hero h1{font-size:24px; margin:0 0 9px; line-height:1.34; font-weight:900; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+  .hero p{color:#e0e7fc; font-size:13.5px; margin:0; line-height:1.7; text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  .pickup-h{font-size:15px; font-weight:800; margin:20px 2px 11px; display:flex; align-items:center; gap:8px; color:var(--text)}
+  .pickup-h .bar{flex:1; height:1px; background:var(--line)}
+  .pickup{display:grid; grid-template-columns:repeat(2,1fr); gap:11px}
+  .pcard{display:block; text-decoration:none; color:inherit; border-radius:13px; overflow:hidden; background:var(--card); border:1px solid var(--line); box-shadow:0 3px 12px rgba(20,30,90,.07); transition:transform .08s, box-shadow .15s}
+  .pcard:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(20,30,90,.14)}
+  .pcard .thumb{position:relative; aspect-ratio:16/9; background:#0b1430}
+  .pcard .thumb img{width:100%; height:100%; object-fit:cover; display:block}
+  .pcard .play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:rgba(225,29,72,.93); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 3px 12px rgba(0,0,0,.35)}
+  .pcard .pbadge{position:absolute; left:8px; top:8px; font-size:10px; font-weight:800; color:#fff; background:rgba(11,22,87,.85); padding:3px 8px; border-radius:999px}
+  .pcard .pt{padding:9px 11px 11px; font-size:12.5px; font-weight:700; line-height:1.42}
 </style>
 </head>
 <body>
@@ -127,8 +143,20 @@
     </span>
   </header>
 
-  <h1>公式サッカーハイライトまとめ<br>（W杯26 / Jリーグ / 日本人所属クラブ）</h1>
-  <p class="sub">日本から公式に見られる映像を、<b>1試合あたり複数の公式ソースを並べて</b>整理しました。埋め込めるものは埋め込み、権利元が埋め込みを禁止しているものは公式ページへ案内します。対象は<b>ワールドカップ・Jリーグ・日本人選手所属クラブ</b>に絞っています。</p>
+  <div class="hero"><img class="bg" src="img/hero.jpg" alt="サッカースタジアム" loading="eager"><div class="ov">
+    <h1>公式サッカーハイライト、まとめて横断検索</h1>
+    <p>ワールドカップ26・Jリーグ・日本人所属クラブ。公式映像のみ・無断転載なし・ネタバレ防止。<b>出場選手で絞り込み</b>もできます。</p>
+  </div></div>
+
+  <div class="pickup-h">⚡ 注目の試合（ピックアップ）<span class="bar"></span></div>
+  <div class="pickup">
+    <a class="pcard" href="match/TXyBRmgFIs4.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/TXyBRmgFIs4/hqdefault.jpg" alt="日本 vs チュニジア" loading="lazy"><span class="play">▶</span></div><div class="pt">日本 vs チュニジア（W杯 グループF）</div></a>
+    <a class="pcard" href="match/3jIMk43CECY.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/3jIMk43CECY/hqdefault.jpg" alt="オランダ vs 日本" loading="lazy"><span class="play">▶</span></div><div class="pt">オランダ vs 日本（W杯 グループF）</div></a>
+    <a class="pcard" href="match/Mr3hSU26N9c.html"><div class="thumb"><span class="pbadge">🌟 ヤマル</span><img src="https://i.ytimg.com/vi/Mr3hSU26N9c/hqdefault.jpg" alt="スペイン vs サウジアラビア" loading="lazy"><span class="play">▶</span></div><div class="pt">スペイン vs サウジアラビア（W杯 グループH）</div></a>
+    <a class="pcard" href="match/15UvrUgxL1U.html"><div class="thumb"><span class="pbadge">🏆 Jリーグ</span><img src="https://i.ytimg.com/vi/15UvrUgxL1U/hqdefault.jpg" alt="ヴィッセル神戸 vs 鹿島アントラーズ" loading="lazy"><span class="play">▶</span></div><div class="pt">神戸 vs 鹿島（Jリーグ 王者決定戦）</div></a>
+    <a class="pcard" href="match/v1TbRkKaXTA.html"><div class="thumb"><span class="pbadge">⚽ 南野</span><img src="https://i.ytimg.com/vi/v1TbRkKaXTA/hqdefault.jpg" alt="モナコ vs PSG" loading="lazy"><span class="play">▶</span></div><div class="pt">南野拓実 ─ モナコ vs PSG（リーグアン）</div></a>
+    <a class="pcard" href="match/rqvRbGTw2zc.html"><div class="thumb"><span class="pbadge">🇯🇵 久保</span><img src="https://i.ytimg.com/vi/rqvRbGTw2zc/hqdefault.jpg" alt="ソシエダ vs ラージョ" loading="lazy"><span class="play">▶</span></div><div class="pt">久保建英 ─ ソシエダ vs ラージョ（ラ・リーガ）</div></a>
+  </div>
 
   <div class="notices">
     <div class="notice"><span class="i">🟢</span><div><b>ネタバレ防止モード。</b> 各試合は最初は閉じています。スコアと映像は、見出しをクリックして開いたときだけ表示されます。さらに一部の試合は <b>🟢ネタバレ控えめ版（結果が出ないMATCH RECAP）</b> と <b>⚠️ネタバレあり版</b> を並べています。お好みでどうぞ。</div></div>
