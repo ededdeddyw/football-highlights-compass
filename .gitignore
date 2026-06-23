@@ -12,10 +12,13 @@ site/test/
 node_modules/
 package-lock.json
 
-# SECRETS — never commit (API keys etc.)
+# SECRETS — never commit (API keys / FTP creds etc.)
 api-key.txt
 api-key*.txt
 *.key
 .env
 .env.*
+deploy.env
+ftp.txt
+deploy-secrets*
 scripts/lineups.raw/
