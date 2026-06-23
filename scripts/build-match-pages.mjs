@@ -96,6 +96,7 @@ for (let i=0;i<data.length;i++){
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#1b2a78">
 <link rel="canonical" href="${url}">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <meta property="og:type" content="video.other"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="${esc(m.ttl)}｜公式ハイライト"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}"><meta property="og:image" content="${ogimg}">
