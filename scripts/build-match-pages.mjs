@@ -98,7 +98,8 @@ for (let i=0;i<data.length;i++){
 <link rel="canonical" href="${url}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta property="og:type" content="video.other"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="${esc(m.ttl)}｜公式ハイライト"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}"><meta property="og:image" content="${ogimg}">
@@ -107,7 +108,7 @@ for (let i=0;i<data.length;i++){
 <link rel="stylesheet" href="../style.css">
 </head><body>
 <div class="wrap">
-  <header class="site"><span class="logo">⚽🧭</span><span class="name">Football Highlights Compass<small>公式ハイライトだけを、日本語で探しやすく。</small></span></header>
+  <header class="site"><a href="../" class="home"><img class="logo" src="../favicon.svg" alt="Football Highlights Compass" width="34" height="34"><span class="name">Football Highlights Compass<small>公式ハイライトだけを、日本語で探しやすく。</small></span></a></header>
   <p style="margin:14px 0 6px"><a href="../" style="color:var(--accent2);text-decoration:none">← 全試合・検索トップへ戻る</a></p>
   <h1 style="font-size:22px;margin:8px 0 2px">${esc(m.ttl)}</h1>
   <p class="sub">${esc(m.meta)}${lg?'　／　'+lg:''}</p>

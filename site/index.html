@@ -6,7 +6,9 @@
 <meta name="google-site-verification" content="brNXrQWcEW41T1Z-su23PWf2zK02kJOji0YHQkL5_GU" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>公式サッカーハイライトまとめ（W杯26 / Jリーグ / 日本人所属クラブ）| Football Highlights Compass</title>
 <meta name="description" content="ワールドカップ26・Jリーグ・日本人所属クラブの公式サッカーハイライトを横断検索。出場選手で絞り込み、ネタバレ控えめ版/あり版を選べる。公式映像のみ・無断転載なし。">
 <meta name="keywords" content="サッカー,ハイライト,ワールドカップ2026,W杯,Jリーグ,久保建英,南野拓実,堂安律,鈴木彩艶,日本代表,公式,DAZN,ネタバレ防止,出場選手">
@@ -39,13 +41,14 @@
   }
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--text);
-    font-family:"Helvetica Neue", Helvetica, Arial, "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-family:"Helvetica Neue", Helvetica, Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", sans-serif;
     line-height:1.85; -webkit-font-smoothing:antialiased; font-feature-settings:"palt" 1;}
   .name, .logo, .menu-btn{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
   .wrap{max-width:880px; margin:0 auto; padding:24px 18px 80px}
   header.site{display:flex; align-items:center; gap:12px; padding:15px 17px; margin:2px 0 6px; border-radius:14px; background:linear-gradient(120deg,#0c1657,#1b2a78 60%,#26368f); color:#fff; box-shadow:0 6px 20px rgba(16,26,86,.22)}
-  header.site .logo{font-size:23px}
-  header.site .name{font-weight:800; letter-spacing:.02em; color:#fff}
+  header.site .home{display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; min-width:0; flex:1 1 auto}
+  header.site .logo{width:34px; height:34px; border-radius:9px; flex:0 0 auto; box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  header.site .name{font-weight:800; letter-spacing:.01em; color:#fff; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
   header.site .name small{display:block; font-weight:400; color:#c4cef2; font-size:12px; letter-spacing:0; margin-top:2px}
   h1{font-size:23px; line-height:1.4; margin:26px 0 6px}
   .sub{color:var(--muted); margin:0 0 18px}
@@ -162,23 +165,27 @@
   /* 編集デザイン（明朝の質感を活かす） */
   h1,h2,h3,h4{letter-spacing:.02em; font-feature-settings:"palt" 1}
   .hero h1{font-size:27px; font-weight:900; line-height:1.4}
-  .hero p{font-family:"Helvetica Neue",Helvetica,Arial,"Noto Serif JP",serif}
+  .hero p{font-weight:500}
   h2.sec{font-size:20px; font-weight:900}
   .pickup-h{font-size:16px; font-weight:900; letter-spacing:.03em}
   .pcard .pt{font-weight:600}
   .match>summary .ttl{font-weight:700}
   .lineup{line-height:2.05}
-  .ac-tag, .pbadge, .tag, .chip, .menu-btn{font-family:"Helvetica Neue",Helvetica,Arial,"Noto Serif JP",sans-serif}
+  h1,h2,h3,h4{font-weight:900}
+  .flag{height:13px; width:auto; border-radius:2px; vertical-align:-2px; margin-right:2px; box-shadow:0 0 0 .5px rgba(0,0,0,.12)}
+  .pickup .flag{height:14px; vertical-align:-2px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="site">
-    <span class="logo">⚽🧭</span>
-    <span class="name">Football Highlights Compass
-      <small>公式ハイライトだけを、日本語で探しやすく。</small>
-    </span>
+    <a href="./" class="home" aria-label="トップへ">
+      <img class="logo" src="/favicon.svg" alt="Football Highlights Compass" width="34" height="34">
+      <span class="name">Football Highlights Compass
+        <small>公式ハイライトだけを、日本語で探しやすく。</small>
+      </span>
+    </a>
     <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">☰</button>
   </header>
   <div class="menu-overlay" id="menuOverlay">
@@ -196,9 +203,9 @@
 
   <div class="pickup-h">⚡ 注目の試合（ピックアップ）<span class="bar"></span></div>
   <div class="pickup">
-    <a class="pcard" href="match/TXyBRmgFIs4.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/TXyBRmgFIs4/hqdefault.jpg" alt="日本 vs チュニジア" loading="lazy"><span class="play">▶</span></div><div class="pt">日本 vs チュニジア（W杯 グループF）</div></a>
-    <a class="pcard" href="match/3jIMk43CECY.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/3jIMk43CECY/hqdefault.jpg" alt="オランダ vs 日本" loading="lazy"><span class="play">▶</span></div><div class="pt">オランダ vs 日本（W杯 グループF）</div></a>
-    <a class="pcard" href="match/Mr3hSU26N9c.html"><div class="thumb"><span class="pbadge">🌟 ヤマル</span><img src="https://i.ytimg.com/vi/Mr3hSU26N9c/hqdefault.jpg" alt="スペイン vs サウジアラビア" loading="lazy"><span class="play">▶</span></div><div class="pt">スペイン vs サウジアラビア（W杯 グループH）</div></a>
+    <a class="pcard" href="match/TXyBRmgFIs4.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/TXyBRmgFIs4/hqdefault.jpg" alt="日本 vs チュニジア" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本 vs <img class="flag" src="https://flagcdn.com/w20/tn.png" alt=""> チュニジア（W杯 GF）</div></a>
+    <a class="pcard" href="match/3jIMk43CECY.html"><div class="thumb"><span class="pbadge">🇯🇵 日本代表</span><img src="https://i.ytimg.com/vi/3jIMk43CECY/hqdefault.jpg" alt="オランダ vs 日本" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/nl.png" alt=""> オランダ vs <img class="flag" src="https://flagcdn.com/w20/jp.png" alt=""> 日本（W杯 GF）</div></a>
+    <a class="pcard" href="match/Mr3hSU26N9c.html"><div class="thumb"><span class="pbadge">🌟 ヤマル</span><img src="https://i.ytimg.com/vi/Mr3hSU26N9c/hqdefault.jpg" alt="スペイン vs サウジアラビア" loading="lazy"><span class="play">▶</span></div><div class="pt"><img class="flag" src="https://flagcdn.com/w20/es.png" alt=""> スペイン vs <img class="flag" src="https://flagcdn.com/w20/sa.png" alt=""> サウジアラビア（W杯 GH）</div></a>
     <a class="pcard" href="match/15UvrUgxL1U.html"><div class="thumb"><span class="pbadge">🏆 Jリーグ</span><img src="https://i.ytimg.com/vi/15UvrUgxL1U/hqdefault.jpg" alt="ヴィッセル神戸 vs 鹿島アントラーズ" loading="lazy"><span class="play">▶</span></div><div class="pt">神戸 vs 鹿島（Jリーグ 王者決定戦）</div></a>
     <a class="pcard" href="match/v1TbRkKaXTA.html"><div class="thumb"><span class="pbadge">⚽ 南野</span><img src="https://i.ytimg.com/vi/v1TbRkKaXTA/hqdefault.jpg" alt="モナコ vs PSG" loading="lazy"><span class="play">▶</span></div><div class="pt">南野拓実 ─ モナコ vs PSG（リーグアン）</div></a>
     <a class="pcard" href="match/rqvRbGTw2zc.html"><div class="thumb"><span class="pbadge">🇯🇵 久保</span><img src="https://i.ytimg.com/vi/rqvRbGTw2zc/hqdefault.jpg" alt="ソシエダ vs ラージョ" loading="lazy"><span class="play">▶</span></div><div class="pt">久保建英 ─ ソシエダ vs ラージョ（ラ・リーガ）</div></a>
@@ -1107,6 +1114,9 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   pchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.player = ch.dataset.p; pchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
   document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; apply(); });
 
+  // ===== 国旗 =====
+  var ISO={'日本':'jp','チュニジア':'tn','オランダ':'nl','スペイン':'es','サウジアラビア':'sa','スウェーデン':'se','ブラジル':'br','モロッコ':'ma','ハイチ':'ht','スコットランド':'gb-sct','ベルギー':'be','イラン':'ir','メキシコ':'mx','南アフリカ':'za','韓国':'kr','チェコ':'cz','カナダ':'ca','カタール':'qa','アメリカ':'us','パラグアイ':'py','オーストラリア':'au','エクアドル':'ec','キュラソー':'cw','ニュージーランド':'nz','エジプト':'eg','ウルグアイ':'uy','コンゴ民主共和国':'cd','クロアチア':'hr','ガーナ':'gh','パナマ':'pa','ウズベキスタン':'uz','コロンビア':'co','ポルトガル':'pt','イングランド':'gb-eng','ドイツ':'de','コートジボワール':'ci','トルコ':'tr','ボスニア・ヘルツェゴビナ':'ba','スイス':'ch','カーボベルデ':'cv','ヨルダン':'jo','オーストリア':'at'};
+  function flagOf(name){ var c=ISO[name]; return c?'<img class="flag" src="https://flagcdn.com/w20/'+c+'.png" srcset="https://flagcdn.com/w40/'+c+'.png 2x" alt="" loading="lazy">':''; }
   // ===== エンティティ（横断検索・メニュー） =====
   var clubs={}, countries={}, playersAll={}, matchList=[];
   cards.forEach(function(c){
@@ -1115,6 +1125,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var teams = mt.split(/\s*vs\s*/i).map(function(s){return s.trim();}).filter(Boolean);
     var wc = c.dataset.league==='wc';
     teams.forEach(function(tm){ if(/オールスター|EAST|WEST|^J1$|^J2|Matchweek/.test(tm))return; if(wc) countries[tm]=(countries[tm]||0)+1; else clubs[tm]=(clubs[tm]||0)+1; });
+    if(wc){ var te=c.querySelector('.ttl'); if(te && teams.length===2 && (flagOf(teams[0])||flagOf(teams[1]))){ te.innerHTML = (flagOf(teams[0])?flagOf(teams[0])+' ':'')+teams[0]+' vs '+(flagOf(teams[1])?flagOf(teams[1])+' ':'')+teams[1]; } }
     (c.dataset.players||'').split('|').filter(Boolean).forEach(function(p){ playersAll[p]=(playersAll[p]||0)+1; });
     var ifr=c.querySelector('iframe'); var id='';
     if(ifr){var mm=(ifr.getAttribute('src')||'').match(/embed\/([A-Za-z0-9_-]{6,})/); if(mm)id=mm[1];}
@@ -1127,7 +1138,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var q=(raw||'').replace(/\s+/g,'').toLowerCase(); if(!q) return [];
     var s=[], add=function(o){ if(s.length<9) s.push(o); };
     Object.keys(playersAll).forEach(function(p){ if(p.toLowerCase().indexOf(q)>=0) add({ic:'🇯🇵',tx:p,tag:'選手',act:function(){setSearch(p);}}); });
-    Object.keys(countries).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'🌍',tx:tm,tag:'国',act:function(){setSearch(tm);}}); });
+    Object.keys(countries).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:flagOf(tm)||'🌍',tx:tm,tag:'国',act:function(){setSearch(tm);}}); });
     Object.keys(clubs).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'🛡️',tx:tm,tag:'クラブ',act:function(){setSearch(tm);}}); });
     matchList.forEach(function(m){ if(m.ttl.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'▶',tx:m.ttl,tag:'試合',href:'match/'+m.id+'.html'}); });
     return s.slice(0,9);
@@ -1151,12 +1162,12 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   var mqEl=document.getElementById('mq'); if(mqEl) attachAC(mqEl, document.getElementById('mqList'));
 
   // ===== ハンバーガーメニュー =====
-  function chips(obj){ return Object.keys(obj).sort(function(a,b){return obj[b]-obj[a];}).map(function(k){ return '<a data-term="'+k.replace(/"/g,'')+'">'+k+'<span style="color:var(--muted);font-size:11px">（'+obj[k]+'）</span></a>'; }).join(''); }
+  function chips(obj, useFlag){ return Object.keys(obj).sort(function(a,b){return obj[b]-obj[a];}).map(function(k){ var f=useFlag?(flagOf(k)+' '):''; return '<a data-term="'+k.replace(/"/g,'')+'">'+f+k+'<span style="color:var(--muted);font-size:11px">（'+obj[k]+'）</span></a>'; }).join(''); }
   var mb=document.getElementById('menuBody');
   if(mb){
     mb.innerHTML =
       '<div class="menu-sec"><h4>🇯🇵 日本人選手</h4><div class="menu-chips">'+chips(playersAll)+'</div></div>'+
-      '<div class="menu-sec"><h4>🌍 国（ワールドカップ）</h4><div class="menu-chips">'+chips(countries)+'</div></div>'+
+      '<div class="menu-sec"><h4>🌍 国（ワールドカップ）</h4><div class="menu-chips">'+chips(countries, true)+'</div></div>'+
       '<div class="menu-sec"><h4>🛡️ クラブ</h4><div class="menu-chips">'+chips(clubs)+'</div></div>';
     Array.prototype.forEach.call(mb.querySelectorAll('a[data-term]'), function(a){ a.addEventListener('click', function(){ setSearch(a.getAttribute('data-term')); }); });
   }
