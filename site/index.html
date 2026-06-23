@@ -204,31 +204,28 @@
   .cf-dots b{width:7px; height:7px; border-radius:50%; background:var(--line2); cursor:pointer; transition:transform .2s, background .2s}
   .cf-dots b.on{background:var(--accent); transform:scale(1.55)}
   @media(max-width:560px){ .cf-stage{height:212px} .cf-card{width:clamp(186px,72%,300px)} .cf-nav{width:36px; height:36px; font-size:20px} }
-  /* ===== クリック時のインパクト演出（スマブラ風「ドーン！」） ===== */
-  .boom{position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; pointer-events:none; overflow:hidden}
+  /* ===== クリック時の演出（Loading…点滅 → Go!ハンコ → ページへ・音/揺れなし） ===== */
+  .boom{position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; pointer-events:none}
   .boom.go{display:flex}
-  .boom-flash{position:absolute; inset:0; background:#fff; opacity:0}
-  .boom.go .boom-flash{animation:bFlash .5s ease-out forwards}
-  .boom-burst{position:absolute; width:160vmax; height:160vmax; border-radius:50%; opacity:0;
-    background:repeating-conic-gradient(from 0deg, rgba(255,255,255,0) 0deg 3.4deg, rgba(255,209,64,.30) 3.4deg 6deg)}
-  .boom.go .boom-burst{animation:bBurst .66s ease-out forwards}
-  .boom-rings{position:absolute; width:24vmax; height:24vmax; border-radius:50%; border:9px solid #ffd23c; opacity:0;
-    box-shadow:0 0 50px rgba(255,210,60,.85), inset 0 0 30px rgba(255,210,60,.6)}
-  .boom.go .boom-rings{animation:bRing .6s cubic-bezier(.2,.7,.3,1) forwards}
-  .boom-core{position:relative; z-index:2; text-align:center}
-  .boom-word{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:900; line-height:1; letter-spacing:.03em;
-    font-size:clamp(54px,15vw,158px); color:#fff; -webkit-text-stroke:3px #14206e; text-shadow:0 7px 0 #14206e,0 0 34px rgba(38,54,143,.85); opacity:0}
-  .boom.go .boom-word{animation:bWord .72s cubic-bezier(.2,1.45,.4,1) forwards}
-  .boom-sub{margin-top:10px; font-weight:800; font-size:clamp(14px,3.4vw,21px); color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.65); opacity:0}
-  .boom.go .boom-sub{animation:bSub .72s ease-out forwards}
-  body.shaking{animation:bShake .42s cubic-bezier(.36,.07,.19,.97) both}
-  @keyframes bFlash{0%{opacity:0}10%{opacity:.9}100%{opacity:0}}
-  @keyframes bBurst{0%{transform:scale(.15) rotate(0deg); opacity:0}18%{opacity:.95}100%{transform:scale(1.7) rotate(22deg); opacity:0}}
-  @keyframes bRing{0%{transform:scale(.1); opacity:.95}100%{transform:scale(3); opacity:0}}
-  @keyframes bWord{0%{transform:scale(2.7) rotate(-12deg); opacity:0}30%{transform:scale(1) rotate(-6deg); opacity:1}72%{transform:scale(1) rotate(-6deg); opacity:1}100%{transform:scale(1.18) rotate(-6deg); opacity:0}}
-  @keyframes bSub{0%,28%{opacity:0}45%{opacity:1}78%{opacity:1}100%{opacity:0}}
-  @keyframes bShake{10%{transform:translate(-7px,3px)}20%{transform:translate(8px,-4px)}30%{transform:translate(-10px,4px)}40%{transform:translate(9px,-3px)}50%{transform:translate(-7px,2px)}60%{transform:translate(6px,-2px)}70%{transform:translate(-4px,2px)}80%{transform:translate(3px,-1px)}100%{transform:translate(0,0)}}
-  @media(prefers-reduced-motion:reduce){ .boom.go *{animation:none!important} body.shaking{animation:none!important} .cf-card{transition:none} }
+  .boom-bg{position:absolute; inset:0; opacity:0; background:radial-gradient(125% 125% at 50% 38%, rgba(22,34,108,.88), rgba(7,11,34,.97)); backdrop-filter:blur(7px) saturate(1.15); -webkit-backdrop-filter:blur(7px) saturate(1.15)}
+  .boom.go .boom-bg{animation:boomBgIn .2s ease-out forwards}
+  .boom.leaving .boom-bg{animation:boomBgOut .34s ease-in forwards}
+  .boom-center{position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center}
+  .boom-load{display:none; font-size:clamp(20px,5.4vw,33px); font-weight:800; letter-spacing:.16em; color:#dbe2fb}
+  .boom.phase-load .boom-load{display:block; animation:boomBlink .2s ease-in-out 2}
+  .boom-stamp{display:none; width:clamp(132px,33vw,184px); height:clamp(132px,33vw,184px); border-radius:50%;
+    border:6px solid #ff463b; color:#ff564c; align-items:center; justify-content:center; transform:rotate(-9deg);
+    box-shadow:0 0 0 2px rgba(255,70,59,.22) inset, 0 12px 44px rgba(0,0,0,.45); text-shadow:0 1px 0 rgba(0,0,0,.18)}
+  .boom-stamp b{font-size:clamp(42px,12vw,72px); font-weight:900; letter-spacing:.02em}
+  .boom.phase-go .boom-stamp{display:flex; animation:boomStamp .42s cubic-bezier(.2,1.4,.35,1) forwards}
+  .boom-sub{display:none; font-size:clamp(13px,3.2vw,18px); font-weight:700; color:#aeb9e6; letter-spacing:.05em}
+  .boom.go .boom-sub{display:block; animation:boomSubIn .5s ease-out forwards}
+  @keyframes boomBgIn{from{opacity:0}to{opacity:1}}
+  @keyframes boomBgOut{from{opacity:1}to{opacity:0}}
+  @keyframes boomBlink{0%,100%{opacity:.18}50%{opacity:1}}
+  @keyframes boomStamp{0%{transform:scale(2.5) rotate(-17deg); opacity:0; filter:blur(3px)}55%{transform:scale(.9) rotate(-9deg); opacity:1; filter:blur(0)}72%{transform:scale(1.05) rotate(-9deg)}100%{transform:scale(1) rotate(-9deg); opacity:1}}
+  @keyframes boomSubIn{0%{opacity:0; transform:translateY(6px)}60%{opacity:1}100%{opacity:1; transform:none}}
+  @media(prefers-reduced-motion:reduce){ .boom.go *{animation:none!important} .cf-card{transition:none} }
 </style>
 </head>
 <body>
@@ -1249,13 +1246,15 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
 </script>
 
 <div class="boom" id="boom" aria-hidden="true">
-  <div class="boom-flash"></div>
-  <div class="boom-burst"></div>
-  <div class="boom-rings"></div>
-  <div class="boom-core"><div class="boom-word">ドーン！</div><div class="boom-sub"></div></div>
+  <div class="boom-bg"></div>
+  <div class="boom-center">
+    <div class="boom-load">Loading…</div>
+    <div class="boom-stamp"><b>Go!</b></div>
+    <div class="boom-sub"></div>
+  </div>
 </div>
 <script>
-// 注目の試合：コインフロー型カルーセル ＋ クリック時「ドーン！」演出
+// 注目の試合：コインフロー型カルーセル ＋ クリック時 Loading…→Go! 演出
 (function(){
   var cf=document.getElementById('coverflow'); if(!cf) return;
   var stage=document.getElementById('cfStage');
@@ -1303,30 +1302,17 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   cf.addEventListener('mouseleave',function(){ if(!autoStopped&&!auto) auto=setInterval(next,4200); });
 
   // 効果音（WebAudioで合成・アセット不要）
-  function thud(){ try{
-    var AC=window.AudioContext||window.webkitAudioContext; if(!AC)return; var ac=new AC();
-    var o=ac.createOscillator(), g=ac.createGain(); o.type='triangle';
-    o.frequency.setValueAtTime(190,ac.currentTime); o.frequency.exponentialRampToValueAtTime(42,ac.currentTime+.19);
-    g.gain.setValueAtTime(.0001,ac.currentTime); g.gain.exponentialRampToValueAtTime(.5,ac.currentTime+.02); g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+.34);
-    o.connect(g).connect(ac.destination); o.start(); o.stop(ac.currentTime+.36);
-    var len=Math.floor(ac.sampleRate*0.16), b=ac.createBuffer(1,len,ac.sampleRate), d=b.getChannelData(0);
-    for(var i=0;i<len;i++){ d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.2); }
-    var ns=ac.createBufferSource(); ns.buffer=b; var ng=ac.createGain(); ng.gain.value=.3; ns.connect(ng).connect(ac.destination); ns.start();
-    setTimeout(function(){ try{ac.close();}catch(e){} },700);
-  }catch(e){} }
-
-  // ドーン！演出 → 遷移
+  // 演出：Loading…点滅（約0.4秒）→ Go!ハンコ → おしゃれにフェードしてページへ（音/揺れなし）
   var boom=document.getElementById('boom'), sub=boom.querySelector('.boom-sub');
   function ignite(href,label){
     if(reduce){ location.href=href; return; }
     sub.textContent=label||'';
-    boom.classList.remove('go'); void boom.offsetWidth; boom.classList.add('go');
-    document.body.classList.remove('shaking'); void document.body.offsetWidth; document.body.classList.add('shaking');
-    thud();
-    setTimeout(function(){ document.body.classList.remove('shaking'); boom.classList.remove('go'); }, 760);
-    setTimeout(function(){ location.href=href; }, 700);
+    boom.className='boom go phase-load'; void boom.offsetWidth;
+    setTimeout(function(){ boom.classList.remove('phase-load'); boom.classList.add('phase-go'); }, 420); // Loading→Go!
+    setTimeout(function(){ boom.classList.add('leaving'); }, 760);                                       // 背景フェードアウト開始
+    setTimeout(function(){ location.href=href; }, 860);                                                  // ページへ
   }
-  // カードのクリック：どのカードでも（画像・どこでも）→ドーン！してそのページへ
+  // カードのクリック：どのカードでも（画像・どこでも）→演出してそのページへ
   cards.forEach(function(card,i){
     card.addEventListener('click',function(e){
       if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return; // 新規タブ等は通常動作

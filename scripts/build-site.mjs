@@ -268,7 +268,11 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 @media(max-width:560px){
   .headline{font-size:27px}.dek{font-size:16.5px}.post{padding:14px 16px 60px}
   .ehero h1{font-size:24px}.ehero .ei{padding:20px 18px;gap:14px}.ehero .crest{width:60px;height:60px}.ehero .crest img{width:48px}
-}`;
+}
+/* ページ表示時のフェードイン（カルーセル等からの切替を滑らかに） */
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.post{animation:pageIn .42s cubic-bezier(.2,.7,.2,1) both}
+@media(prefers-reduced-motion:reduce){.post{animation:none}}`;
 
 mkdirSync('site/match', { recursive:true });
 mkdirSync('site/country', { recursive:true });
