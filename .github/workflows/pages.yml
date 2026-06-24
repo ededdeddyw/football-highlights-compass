@@ -22,6 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build generated pages (個別ページ・article.css・sitemap。生成物はgitignoreのためCIで生成)
+        run: node scripts/build-site.mjs
       - uses: actions/configure-pages@v5
       - name: Upload site/ as Pages artifact
         uses: actions/upload-pages-artifact@v3
