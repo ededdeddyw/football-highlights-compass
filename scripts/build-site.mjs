@@ -25,6 +25,10 @@ function schedFor(m){
   return null;
 }
 
+// ---------- クラブ紋章（TheSportsDB・slug→URL。無いクラブは国旗フォールバック） ----------
+let CREST = {};
+try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('data/club-crests.json','utf8')); } catch(e){ console.warn('crest読込失敗:', e.message); }
+
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
 const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/","logo":DOMAIN+"/apple-touch-icon.png"};
 // 配列なら @graph でまとめる
@@ -431,8 +435,10 @@ function buildCountry(name, info){
 function buildClub(name, info){
   const ms = entityMatches(name); const slug=info.slug; const path=`club/${slug}.html`;
   const flag = flagImg2(info.iso);
+  const crestUrl = CREST[info.slug];
+  const crestHtml = crestUrl ? `<img class="crestimg" src="${crestUrl}" alt="${escA(name)}のエンブレム" loading="lazy">` : (flag||'🛡️');
   const url=`${DOMAIN}/${path}`;
-  const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
+  const ogimg = crestUrl || (ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const dek = info.blurb[0]||'';
   const desc = `${name}（${info.league}）の公式ハイライトとクラブの歴史。${info.founded}年創設・本拠地${info.stadium}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
   const clgraph = [
@@ -453,7 +459,7 @@ function buildClub(name, info){
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'クラブ'},{label:name}])}
   <p class="kicker">${flag} ${esc(info.league)}</p>
-  <div class="ehero"><div class="ei"><span class="crest">${flag||'🛡️'}</span><div><h1>${esc(name)}</h1><div class="esub">${esc(info.country)} ／ ${esc(info.league)} ／ ${esc(String(info.founded))}年創設</div></div></div></div>
+  <div class="ehero"><div class="ei"><span class="crest">${crestHtml}</span><div><h1>${esc(name)}</h1><div class="esub">${esc(info.country)} ／ ${esc(info.league)} ／ ${esc(String(info.founded))}年創設</div></div></div></div>
   <p class="dek">${esc(dek)}</p>
   <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
   ${factHtml}
@@ -469,11 +475,13 @@ let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
 for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 
-// ENTITY_PAGES を index.html に注入
+// ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
 {
   const map = JSON.stringify(ENTITY_PAGES);
-  const re = /\/\*ENTITY_PAGES_START\*\/[\s\S]*?\/\*ENTITY_PAGES_END\*\//;
-  const next = html.replace(re, `/*ENTITY_PAGES_START*/\nvar ENTITY_PAGES = ${map};\n/*ENTITY_PAGES_END*/`);
+  const crestMap = {};
+  for(const [name,info] of Object.entries(CLUBS)) if(CREST[info.slug]) crestMap[name]=CREST[info.slug];
+  let next = html.replace(/\/\*ENTITY_PAGES_START\*\/[\s\S]*?\/\*ENTITY_PAGES_END\*\//, `/*ENTITY_PAGES_START*/\nvar ENTITY_PAGES = ${map};\n/*ENTITY_PAGES_END*/`);
+  next = next.replace(/\/\*CLUB_CRESTS_START\*\/[\s\S]*?\/\*CLUB_CRESTS_END\*\//, `/*CLUB_CRESTS_START*/\nvar CLUB_CRESTS = ${JSON.stringify(crestMap)};\n/*CLUB_CRESTS_END*/`);
   writeFileSync('site/index.html', next);
 }
 
