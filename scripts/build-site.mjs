@@ -317,16 +317,14 @@ const slugs=[];
 function buildMatch(m){
   if(!m.id || slugs.includes(m.id)) return; slugs.push(m.id);
   const lg = LG[m.league]||''; const teamsTxt = m.teams.join(' vs ');
-  // dek（固有サマリー）
-  const s=[];
-  s.push(`${m.prefix?m.prefix+'が出場した':''}${teamsTxt||m.mt}${lg?'、'+lg:''}の公式ハイライトです。`);
+  // dek（統一フォーマットのリード文）：[任意の見どころ。][対戦（大会）の公式ハイライトです。]
+  let hook = '';
   if (m.players.length){
-    let extra = (m.jpNote||'').replace(new RegExp(m.players.join('|'),'g'),'').replace(/[（）()・,，\s]/g,' ').replace(/ほか|など/g,'').trim();
-    s.push(`${m.players.join('・')}が出場${extra?`（${extra}）`:''}。`);
-  }
-  else if (m.topic) s.push(`見どころは${m.topic}。`);
-  s.push(m.dual?'映像は「ネタバレ控えめ版（結果が出ないMATCH RECAP）」と「ネタバレあり版」を用意。お好みで選べます。':'公式映像のみを掲載しています。');
-  const dek = s.join('');
+    const act = (m.jpNote||'').match(/[（(]([^）)]+)[）)]/);
+    const a = act ? act[1].replace(/先発|フル出場|途中出場|出場|復帰/g,'').trim() : '';
+    hook = `${m.players.join('・')}が${a||'出場'}`;
+  } else if (m.topic) hook = m.topic;
+  const dek = `${hook?hook+'。':''}${teamsTxt||m.mt}${lg?`（${lg}）`:''}の公式ハイライトです。`;
   const desc = `${teamsTxt||m.mt}${lg?'（'+lg+'）':''}の公式ハイライト。${m.players.length?m.players.join('・')+'出場。':''}${m.topic?m.topic+'。':''}公式映像のみ・ネタバレ防止。`.slice(0,120);
   // fact card
   const facts=[];
