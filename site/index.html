@@ -31,7 +31,7 @@
 <meta name="twitter:description" content="公式ハイライトを横断検索。出場選手で絞り込み、ネタバレ控えめ版/あり版。公式映像のみ・無断転載なし。">
 <meta name="twitter:image" content="https://highlight-compass.com/og.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Football Highlights Compass","alternateName":"公式サッカーハイライトまとめ","url":"https://highlight-compass.com/","inLanguage":"ja","description":"ワールドカップ26・Jリーグ・日本人所属クラブの公式サッカーハイライトを横断検索。出場選手で絞り込み、ネタバレ控えめ版/あり版を選べる。"}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Football Highlights Compass","alternateName":"公式サッカーハイライトまとめ","url":"https://highlight-compass.com/","inLanguage":"ja","description":"ワールドカップ26・Jリーグ・日本人所属クラブの公式サッカーハイライトを横断検索。出場選手で絞り込み、ネタバレ控えめ版/あり版を選べる。","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://highlight-compass.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","name":"Football Highlights Compass","url":"https://highlight-compass.com/","logo":"https://highlight-compass.com/apple-touch-icon.png","contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://highlight-compass.com/contact.html"}}]}
 </script>
 <style>
   :root{
@@ -1185,6 +1185,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   CANON.forEach(function(p){ if(pcount[p]){ var ch = chip(p+'('+pcount[p]+')', false); ch.dataset.p = p; pcEl.appendChild(ch); pchips.push(ch); } });
   pchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.player = ch.dataset.p; pchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
   document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; apply(); });
+  // URLの ?q= で検索を初期化（schema.org SearchAction 対応）
+  try{ var _q=new URLSearchParams(location.search).get('q'); if(_q){ var qi=document.getElementById('q'); if(qi){ qi.value=_q; state.q=_q; } } }catch(e){}
 
   // ===== 国旗 =====
   var ISO={'日本':'jp','チュニジア':'tn','オランダ':'nl','スペイン':'es','サウジアラビア':'sa','スウェーデン':'se','ブラジル':'br','モロッコ':'ma','ハイチ':'ht','スコットランド':'gb-sct','ベルギー':'be','イラン':'ir','メキシコ':'mx','南アフリカ':'za','韓国':'kr','チェコ':'cz','カナダ':'ca','カタール':'qa','アメリカ':'us','パラグアイ':'py','オーストラリア':'au','エクアドル':'ec','キュラソー':'cw','ニュージーランド':'nz','エジプト':'eg','ウルグアイ':'uy','コンゴ民主共和国':'cd','クロアチア':'hr','ガーナ':'gh','パナマ':'pa','ウズベキスタン':'uz','コロンビア':'co','ポルトガル':'pt','イングランド':'gb-eng','ドイツ':'de','コートジボワール':'ci','トルコ':'tr','ボスニア・ヘルツェゴビナ':'ba','スイス':'ch','カーボベルデ':'cv','ヨルダン':'jo','オーストリア':'at'};

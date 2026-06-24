@@ -6,12 +6,33 @@
 //  - site/sitemap.xml
 //  - index.html 内 ENTITY_PAGES マップを注入
 // を生成する。
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { COUNTRIES, CLUBS } from './entities.mjs';
 
 const DOMAIN = 'https://highlight-compass.com';
-const TODAY = '2026-06-23';
+const TODAY = new Date().toISOString().slice(0,10);   // ビルド実行日（動的）
 const html = readFileSync('site/index.html', 'utf8');
+
+// ---------- W杯スケジュール（P2でデータ投入。無くてもフォールバックで動く） ----------
+let SCHEDULE = [];
+try { if (existsSync('data/wc2026-schedule.json')) SCHEDULE = (JSON.parse(readFileSync('data/wc2026-schedule.json','utf8')).matches)||[]; }
+catch(e){ console.warn('schedule読込失敗:', e.message); }
+const SCHED_BY_VID = new Map(), SCHED_BY_TEAMS = new Map();
+for (const s of SCHEDULE){ if(s.videoId) SCHED_BY_VID.set(s.videoId, s); if(s.home?.ja && s.away?.ja) SCHED_BY_TEAMS.set([s.home.ja,s.away.ja].sort().join('|'), s); }
+function schedFor(m){
+  if (m.id && SCHED_BY_VID.has(m.id)) return SCHED_BY_VID.get(m.id);
+  if (m.league==='wc' && m.teams && m.teams.length===2){ const k=[...m.teams].sort().join('|'); if(SCHED_BY_TEAMS.has(k)) return SCHED_BY_TEAMS.get(k); }
+  return null;
+}
+
+// ---------- 構造化データ（JSON-LD）ヘルパ ----------
+const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/","logo":DOMAIN+"/apple-touch-icon.png"};
+// 配列なら @graph でまとめる
+const ld = x => Array.isArray(x) ? {"@context":"https://schema.org","@graph":x} : x;
+// パンくず（表示用 crumb() と同じ並びから生成）。items:[{name,url?}]
+function crumbLd(items){ return {"@type":"BreadcrumbList","itemListElement":items.map((it,i)=>({"@type":"ListItem","position":i+1,"name":it.name, ...(it.url?{"item":it.url}:{})}))}; }
+// 試合一覧の ItemList
+function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0,30).map((mm,i)=>({"@type":"ListItem","position":i+1,"name":mm.ttl,"url":`${DOMAIN}/match/${mm.id}.html`}))}; }
 
 const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
@@ -132,7 +153,8 @@ const HEAD = (o)=>`<!DOCTYPE html>
 <meta property="og:title" content="${escA(o.ogtitle||o.title)}"><meta property="og:description" content="${escA(o.desc)}">
 <meta property="og:url" content="${o.url}"><meta property="og:image" content="${o.ogimg}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA(o.ogtitle||o.title)}"><meta name="twitter:image" content="${o.ogimg}">
-${o.jsonld?`<script type="application/ld+json">${JSON.stringify(o.jsonld)}</script>`:''}
+${o.published?`<meta property="article:published_time" content="${o.published}">`:''}${o.modified?`<meta property="article:modified_time" content="${o.modified}">`:''}
+${o.jsonld?`<script type="application/ld+json">${JSON.stringify(ld(o.jsonld))}</script>`:''}
 <link rel="stylesheet" href="../article.css">
 </head><body>`;
 
@@ -319,12 +341,28 @@ function buildMatch(m){
   const relHtml = rel.length ? `<h2 class="lined">関連する試合</h2><div class="mcards">${rel.map(r=>matchCard(r.m, r.why)).join('')}</div>` : '';
   const ogimg = m.id?`https://i.ytimg.com/vi/${m.id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const url = `${DOMAIN}/match/${m.id}.html`;
+  const catLabel = lg||'試合';
+  // 日付（スケジュール優先・無ければビルド日）
+  const sched = schedFor(m);
+  const upDate = sched?.koUTC || (sched?.dateLocal ? sched.dateLocal+'T12:00:00+09:00' : `${TODAY}T12:00:00+09:00`);
+  // @graph: VideoObject ＋（W杯のみ）SportsEvent/BroadcastEvent ＋ BreadcrumbList
+  const graph = [
+    {"@type":"VideoObject","name":m.ttl+"｜公式ハイライト","description":desc,"thumbnailUrl":ogimg,"uploadDate":upDate,"embedUrl":m.id?`https://www.youtube.com/embed/${m.id}`:url,"contentUrl":url,"publisher":ORG},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:catLabel},{name:m.mt,url}])
+  ];
+  if (sched){
+    const evName = `${sched.home?.ja||m.teams[0]||''} vs ${sched.away?.ja||m.teams[1]||''}`.trim();
+    const ev = {"@type":"SportsEvent","name":evName,"sport":"Soccer","startDate":sched.koUTC||sched.dateLocal,"eventStatus":"https://schema.org/EventScheduled","superEvent":{"@type":"SportsEvent","name":"FIFA World Cup 2026"}};
+    if(sched.venue) ev.location={"@type":"Place","name":sched.venue,"address":{"@type":"PostalAddress","addressLocality":sched.city||'',"addressCountry":sched.country||''}};
+    if(sched.home?.ja) ev.homeTeam={"@type":"SportsTeam","name":sched.home.ja};
+    if(sched.away?.ja) ev.awayTeam={"@type":"SportsTeam","name":sched.away.ja};
+    graph.push(ev, {"@type":"BroadcastEvent","name":evName+"｜ハイライト配信","isLiveBroadcast":false,"broadcastOfEvent":{"@type":"SportsEvent","name":evName},"publishedOn":{"@type":"BroadcastService","name":sched.broadcaster||"DAZN Japan"}});
+  }
   const head = HEAD({
     title:`${m.ttl}｜公式ハイライト${lg?'・'+lg:''} - Football Highlights Compass`,
     ogtitle:`${m.ttl}｜公式ハイライト`, desc, url, ogimg, ogtype:'video.other',
-    jsonld:{"@context":"https://schema.org","@type":"VideoObject","name":m.ttl+"｜公式ハイライト","description":desc,"thumbnailUrl":ogimg,"uploadDate":"2026-06-01","embedUrl":m.id?`https://www.youtube.com/embed/${m.id}`:url,"publisher":{"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/"}}
+    published:upDate, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph
   });
-  const catLabel = lg||'試合';
   const out = head + TOPBAR + `<article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:catLabel},{label:m.mt}])}
   <p class="kicker">${m.league==='wc'&&m.teams.length===2?flagImg(m.teams[0])+flagImg(m.teams[1]):'⚽'} ${esc(lg||'公式ハイライト')}</p>
@@ -353,8 +391,12 @@ function buildCountry(name, info){
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const dek = info.blurb[0]||'';
   const desc = `${name}代表のW杯26 公式ハイライトと歴史。${info.confed}／最高成績：${info.peak}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
-  const head = HEAD({ title:`${name}代表｜W杯公式ハイライトと歴史 - Football Highlights Compass`, ogtitle:`${name}代表｜W杯公式ハイライトと歴史`, desc, url, ogimg,
-    jsonld:{"@context":"https://schema.org","@type":"SportsTeam","name":name+"代表","sport":"Football","memberOf":{"@type":"SportsOrganization","name":info.confed}} });
+  const cgraph = [
+    {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）'},{name:name+'代表',url}])
+  ];
+  if(ms.length) cgraph.push(itemListLd(ms));
+  const head = HEAD({ title:`${name}代表｜W杯公式ハイライトと歴史 - Football Highlights Compass`, ogtitle:`${name}代表｜W杯公式ハイライトと歴史`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
   const blurbHtml = info.blurb.map(p=>`<p>${esc(p)}</p>`).join('');
   const factHtml = `<div class="factcard"><table>
     <tr><th>所属連盟</th><td>${esc(info.confed)}</td></tr>
@@ -386,8 +428,12 @@ function buildClub(name, info){
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const dek = info.blurb[0]||'';
   const desc = `${name}（${info.league}）の公式ハイライトとクラブの歴史。${info.founded}年創設・本拠地${info.stadium}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
-  const head = HEAD({ title:`${name}｜公式ハイライトとクラブの歴史 - Football Highlights Compass`, ogtitle:`${name}｜公式ハイライトとクラブの歴史`, desc, url, ogimg,
-    jsonld:{"@context":"https://schema.org","@type":"SportsTeam","name":name,"sport":"Football","foundingDate":String(info.founded),"location":info.country} });
+  const clgraph = [
+    {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ'},{name:name,url}])
+  ];
+  if(ms.length) clgraph.push(itemListLd(ms));
+  const head = HEAD({ title:`${name}｜公式ハイライトとクラブの歴史 - Football Highlights Compass`, ogtitle:`${name}｜公式ハイライトとクラブの歴史`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
   const factHtml = `<div class="factcard"><table>
     <tr><th>国・リーグ</th><td>${flag} ${esc(info.country)}／${esc(info.league)}</td></tr>
     <tr><th>創設</th><td>${esc(String(info.founded))}年</td></tr>
@@ -428,7 +474,9 @@ for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 for(const p of ['privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
-for(const s of slugs) sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+const matchById = new Map(data.map(m=>[m.id,m]));
+const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
+for(const s of slugs) sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
 console.log(`試合ページ: ${slugs.length} / 国: ${nc} / クラブ: ${ncl} / sitemap URL: ${slugs.length + new Set(Object.values(ENTITY_PAGES)).size + 1}`);
