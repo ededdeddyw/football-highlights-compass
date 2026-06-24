@@ -168,6 +168,22 @@
   .menu-chips a:hover{border-color:var(--accent); color:var(--accent)}
   .c-crest{height:16px; width:16px; object-fit:contain; vertical-align:-3px; margin-right:1px}
   .ac-item .ac-ic .cr, .ac-ic .cr{height:16px; width:16px; object-fit:contain; vertical-align:-3px}
+  /* ネタバレ防止トグル（フィルタバー内＝常に上部に追従） */
+  .spoiler-toggle{width:100%; margin-bottom:10px; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:var(--card2); color:var(--text); font-size:13px; font-weight:800; cursor:pointer; text-align:center; letter-spacing:.02em}
+  .spoiler-toggle.on{background:rgba(16,185,129,.13); border-color:rgba(16,185,129,.42); color:#047857}
+  /* 試合カードグリッド＋ページ送り */
+  .mgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:10px 0 4px}
+  .gcard{display:flex; flex-direction:column; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:0 2px 9px rgba(20,30,90,.06); transition:transform .09s, box-shadow .15s}
+  .gcard:hover{transform:translateY(-2px); box-shadow:0 9px 22px rgba(20,30,90,.15)}
+  .gthumb{position:relative; aspect-ratio:16/9; background:#0b1430}
+  .gthumb img{width:100%; height:100%; object-fit:cover; display:block}
+  .gplay{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:36px; height:36px; border-radius:50%; background:rgba(225,29,72,.92); color:#fff; display:flex; align-items:center; justify-content:center; font-size:14px; box-shadow:0 3px 12px rgba(0,0,0,.34)}
+  .gttl{padding:9px 11px 11px; font-size:12.5px; font-weight:700; line-height:1.46}
+  .gttl .flag{height:13px; vertical-align:-2px; border-radius:2px}
+  .gpager{display:flex; align-items:center; justify-content:center; gap:14px; margin:16px 0 6px}
+  .pg-btn{font-size:13px; padding:8px 18px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--accent); cursor:pointer; font-weight:700}
+  .pg-btn:disabled{opacity:.4; cursor:default}
+  .pg-info{font-size:13px; color:var(--muted)}
   /* オートコンプリート */
   .ac-wrap{position:relative}
   .ac-list{position:absolute; left:0; right:0; top:calc(100% + 4px); background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 12px 30px rgba(10,18,60,.2); overflow:hidden; z-index:45; display:none}
@@ -278,6 +294,7 @@
   </div>
 
   <div class="filterbar">
+    <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
     <div class="ac-wrap"><input id="q" type="search" placeholder="🔎 チーム・選手・大会で検索（例：久保、バルセロナ、ブラジル、鹿島）" autocomplete="off"><div class="ac-list" id="qList"></div></div>
     <div class="chips-label">リーグ・大会</div>
     <div class="chips" id="league-chips"></div>
@@ -285,6 +302,9 @@
     <div class="chips" id="player-chips"></div>
     <div class="result-count" id="result-count"></div>
   </div>
+
+  <div class="mgrid" id="match-grid"></div>
+  <div class="gpager" id="grid-pager"></div>
 
   <h3 class="kicker">今週のまとめ（ネタバレなし）</h3>
   <table class="summary">
@@ -1174,25 +1194,29 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     ps.forEach(function(p){ pcount[p] = (pcount[p]||0) + 1; });
   });
   var order = ['wc','jl','laliga','seriea','ligue1','bundes','portugal','other'];
-  var state = { q:'', league:'all', player:'all' };
+  var state = { q:'', league:'all', player:'all', page:1 };
+  var PAGE=20, GRID=[], lastList=[], grid, pager;
   var rc = document.getElementById('result-count');
   function apply(){
     var q = state.q.replace(/\s+/g,'').toLowerCase();
-    var active = q !== '' || state.league !== 'all' || state.player !== 'all';
-    var shown = 0;
-    cards.forEach(function(c){
-      var ok = true;
-      if (state.league !== 'all' && c.dataset.league !== state.league) ok = false;
-      if (ok && state.player !== 'all' && c.dataset.players.indexOf('|'+state.player+'|') < 0) ok = false;
-      if (ok && q !== '' && c._hay.indexOf(q) < 0) ok = false;
-      c.style.display = ok ? '' : 'none';
-      if (ok) shown++;
+    lastList = GRID.filter(function(g){
+      if (state.league !== 'all' && g.league !== state.league) return false;
+      if (state.player !== 'all' && g.players.indexOf('|'+state.player+'|') < 0) return false;
+      if (q !== '' && g.hay.indexOf(q) < 0) return false;
+      return true;
     });
-    [].forEach.call(document.querySelectorAll('h2.sec, .sec-desc'), function(e){ e.style.display = active ? 'none' : ''; });
-    var sm = document.querySelector('table.summary'), lg = document.querySelector('.legend');
-    if (sm) sm.style.display = active ? 'none' : '';
-    if (lg) lg.style.display = active ? 'none' : '';
-    rc.textContent = active ? (shown + ' 件 表示中（タップで開く）') : ('全 ' + cards.length + ' 試合 掲載中');
+    state.page = 1; renderPage();
+  }
+  function renderPage(){
+    if(!grid) return;
+    var total=lastList.length, pages=Math.max(1,Math.ceil(total/PAGE));
+    if(state.page>pages) state.page=pages; if(state.page<1) state.page=1;
+    var items=lastList.slice((state.page-1)*PAGE, (state.page-1)*PAGE+PAGE);
+    grid.innerHTML = items.length ? items.map(function(g){
+      return '<a class="gcard" href="match/'+g.id+'.html"><span class="gthumb"><img src="https://i.ytimg.com/vi/'+g.id+'/hqdefault.jpg" alt="" loading="lazy"><span class="gplay">▶</span></span><span class="gttl">'+g.title+'</span></a>';
+    }).join('') : '<p style="color:var(--muted);padding:24px 0;text-align:center;grid-column:1/-1">該当する試合がありません</p>';
+    if(rc) rc.textContent = total+' 試合';
+    pager.innerHTML = total>PAGE ? ('<button class="pg-btn" data-d="-1"'+(state.page<=1?' disabled':'')+'>‹ 前</button><span class="pg-info">'+state.page+' / '+pages+' ページ</span><button class="pg-btn" data-d="1"'+(state.page>=pages?' disabled':'')+'>次 ›</button>') : '';
   }
   function chip(label, on){ var s = document.createElement('span'); s.className = 'chip' + (on?' active':''); s.textContent = label; return s; }
   var lc = document.getElementById('league-chips'), lchips = [];
@@ -1206,6 +1230,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; apply(); });
   // URLの ?q= で検索を初期化（schema.org SearchAction 対応）
   try{ var _q=new URLSearchParams(location.search).get('q'); if(_q){ var qi=document.getElementById('q'); if(qi){ qi.value=_q; state.q=_q; } } }catch(e){}
+  // URLの ?league= でリーグ絞り込みを初期化（試合ページのパンくず「大会」リンク用）
+  try{ var _lg=new URLSearchParams(location.search).get('league'); if(_lg){ var fch=lchips.filter(function(x){return x.dataset.k===_lg;})[0]; if(fch){ state.league=_lg; lchips.forEach(function(x){ x.classList.toggle('active', x===fch); }); } } }catch(e){}
 
   // ===== 国旗 =====
   var ISO={'日本':'jp','チュニジア':'tn','オランダ':'nl','スペイン':'es','サウジアラビア':'sa','スウェーデン':'se','ブラジル':'br','モロッコ':'ma','ハイチ':'ht','スコットランド':'gb-sct','ベルギー':'be','イラン':'ir','メキシコ':'mx','南アフリカ':'za','韓国':'kr','チェコ':'cz','カナダ':'ca','カタール':'qa','アメリカ':'us','パラグアイ':'py','オーストラリア':'au','エクアドル':'ec','キュラソー':'cw','ニュージーランド':'nz','エジプト':'eg','ウルグアイ':'uy','コンゴ民主共和国':'cd','クロアチア':'hr','ガーナ':'gh','パナマ':'pa','ウズベキスタン':'uz','コロンビア':'co','ポルトガル':'pt','イングランド':'gb-eng','ドイツ':'de','コートジボワール':'ci','トルコ':'tr','ボスニア・ヘルツェゴビナ':'ba','スイス':'ch','カーボベルデ':'cv','ヨルダン':'jo','オーストリア':'at'};
@@ -1224,6 +1250,26 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     if(ifr){var mm=(ifr.getAttribute('src')||'').match(/embed\/([A-Za-z0-9_-]{6,})/); if(mm)id=mm[1];}
     if(id) matchList.push({id:id, ttl:t});
   });
+
+  // ===== カードグリッド（サムネイル）＋ページ送り に集約。旧アコーディオン/まとめ表は隠す =====
+  grid = document.getElementById('match-grid'); pager = document.getElementById('grid-pager');
+  cards.forEach(function(c){
+    var ifr=c.querySelector('iframe'); var id='';
+    if(ifr){var mm=(ifr.getAttribute('src')||'').match(/embed\/([A-Za-z0-9_-]{6,})/); if(mm)id=mm[1];}
+    if(!id) return;
+    var te=c.querySelector('.ttl');
+    GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), hay:(c._hay||'') });
+  });
+  [].forEach.call(document.querySelectorAll('details.match, h2.sec, .sec-desc, table.summary, .legend, h3.kicker'), function(e){ e.style.display='none'; });
+  if(pager) pager.addEventListener('click', function(e){ var b=e.target.closest('.pg-btn'); if(!b||b.disabled)return; state.page += (+b.getAttribute('data-d')); renderPage(); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); });
+  if(grid) grid.addEventListener('click', function(e){ var a=e.target.closest('a.gcard'); if(!a)return; if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return; if(window.fhcGo){ e.preventDefault(); var t=a.querySelector('.gttl'); window.fhcGo(a.getAttribute('href'), t?t.textContent.trim():''); } });
+
+  // ===== ネタバレ防止トグル（試合ページのスコア表示/非表示の既定を決める。localStorageに保存） =====
+  function spoilerOn(){ try{ return localStorage.getItem('fhc_spoiler')!=='0'; }catch(e){ return true; } }
+  var ST=document.getElementById('spoilerToggle');
+  function paintST(){ if(!ST)return; var on=spoilerOn(); ST.setAttribute('aria-pressed', on?'true':'false'); ST.className='spoiler-toggle'+(on?' on':''); ST.textContent = on?'🟢 ネタバレ防止：ON（試合ページでスコアを隠す）':'⚪ ネタバレ防止：OFF（スコアを表示）'; }
+  if(ST){ paintST(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); }); }
+
   function setSearch(term){ var q=document.getElementById('q'); q.value=term; state.q=term; state.league='all'; state.player='all'; apply(); closeMenu(); document.querySelectorAll('.ac-list').forEach(function(l){l.classList.remove('open');}); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); }
 
   // ===== オートコンプリート（全テキスト入力に付与） =====
@@ -1343,6 +1389,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     setTimeout(function(){ boom.classList.add('leaving'); }, 760);                                       // 背景フェードアウト開始
     setTimeout(function(){ location.href=href; }, 860);                                                  // ページへ
   }
+  window.fhcGo = ignite;   // カードグリッド等からも同じ演出で遷移できるよう公開
   // カードのクリック：どのカードでも（画像・どこでも）→演出してそのページへ
   cards.forEach(function(card,i){
     card.addEventListener('click',function(e){

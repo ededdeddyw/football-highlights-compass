@@ -289,7 +289,8 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .ehero{position:relative;border-radius:18px;overflow:hidden;margin:0 0 22px;color:#fff;background:linear-gradient(120deg,#0c1657,#1b2a78 58%,#26368f);box-shadow:0 10px 30px rgba(16,26,86,.24)}
 .ehero .ei{display:flex;align-items:center;gap:18px;padding:26px 24px}
 .ehero .crest{flex:0 0 auto;width:74px;height:74px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-size:34px;overflow:hidden}
-.ehero .crest img{width:60px;height:auto;border-radius:5px;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.ehero .crest img{width:46px;height:auto;border-radius:5px;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.score .reveal-score{font-size:14.5px;font-weight:800;padding:8px 16px;border-radius:10px;border:1px solid var(--line2);background:var(--card2);color:var(--accent);cursor:pointer}
 .ehero h1{font-size:30px;font-weight:900;letter-spacing:.01em;margin:0 0 4px;line-height:1.2}
 .ehero .esub{color:#cdd6f6;font-size:13.5px;font-weight:600}
 .post-foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
@@ -358,7 +359,7 @@ function buildMatch(m){
   // @graph: VideoObject ＋（W杯のみ）SportsEvent/BroadcastEvent ＋ BreadcrumbList
   const graph = [
     {"@type":"VideoObject","name":m.ttl+"｜公式ハイライト","description":desc,"thumbnailUrl":ogimg,"uploadDate":upDate,"embedUrl":m.id?`https://www.youtube.com/embed/${m.id}`:url,"contentUrl":url,"publisher":ORG},
-    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:catLabel},{name:m.mt,url}])
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:catLabel,url:`${DOMAIN}/?league=${m.league}`},{name:m.mt,url}])
   ];
   if (sched){
     const evName = `${sched.home?.ja||m.teams[0]||''} vs ${sched.away?.ja||m.teams[1]||''}`.trim();
@@ -375,7 +376,7 @@ function buildMatch(m){
     published:upDate, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph
   });
   const out = head + TOPBAR + `<article class="post">
-  ${crumb([{label:'トップ',href:'../'},{label:catLabel},{label:m.mt}])}
+  ${crumb([{label:'トップ',href:'../'},{label:catLabel,href:`../?league=${m.league}`},{label:m.mt}])}
   <p class="kicker">${m.league==='wc'&&m.teams.length===2?flagImg(m.teams[0])+flagImg(m.teams[1]):'⚽'} ${esc(lg||'公式ハイライト')}</p>
   <h1 class="headline">${titleWithFlags(m)}</h1>
   <p class="dek">${esc(dek)}</p>
@@ -386,6 +387,7 @@ function buildMatch(m){
   ${factHtml}
   ${teamHtml}
   ${relHtml}
+  <script>(function(){var sc=document.querySelector('.post-body .score');if(!sc)return;var hide=true;try{hide=localStorage.getItem('fhc_spoiler')!=='0';}catch(e){}if(!hide)return;var v=sc.innerHTML;sc.innerHTML='<button class="reveal-score" type="button">🟢 ネタバレ防止中：タップでスコアを表示</button>';sc.querySelector('.reveal-score').onclick=function(){sc.innerHTML=v;};}())</script>
   ` + FOOTER(`<p>${m.lineup?'出場選手データ：Jリーグ公式。':''}</p>`);
   writeFileSync(`site/match/${m.id}.html`, out);
 }
