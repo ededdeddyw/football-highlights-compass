@@ -444,8 +444,9 @@ function formationSVG(form){
   const W=200,H=268,top=46,bot=212,n=lines.length, dots=[[W/2,H-16]];
   lines.forEach((cnt,li)=>{ const y= n>1 ? bot-li*((bot-top)/(n-1)) : (top+bot)/2; for(let i=0;i<cnt;i++) dots.push([(i+1)/(cnt+1)*W,y]); });
   const pitch=`<rect class="ln" x="5" y="5" width="${W-10}" height="${H-10}" rx="10"/><line class="ln" x1="5" y1="${H/2}" x2="${W-5}" y2="${H/2}"/><circle class="ln" cx="${W/2}" cy="${H/2}" r="20"/><rect class="ln" x="${W/2-30}" y="5" width="60" height="30"/><rect class="ln" x="${W/2-30}" y="${H-35}" width="60" height="30"/>`;
-  const cs=dots.map(([x,y])=>`<circle class="dot" cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="8"/>`).join('');
-  return `<svg class="formsvg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="代表的なフォーメーション ${form}">${pitch}${cs}</svg>`;
+  const cs=dots.map(([x,y])=>`<circle class="dot" cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="8" fill="#2746c9" stroke="#fff" stroke-width="2"/>`).join('');
+  // fill/stroke はインライン属性でも持たせる：article.css 未読込（キャッシュ/file:///デプロイ漏れ）でも黒塗りにならない保険。CSSが読まれていれば .ln/.dot がテーマ色で上書きする。
+  return `<svg class="formsvg" width="138" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="代表的なフォーメーション ${form}" fill="none" stroke="#d3dcf0" stroke-width="1.5">${pitch}${cs}</svg>`;
 }
 // 「深掘り」セクション（DEEPがある場合のみ）
 function deepSection(name, isClub){
