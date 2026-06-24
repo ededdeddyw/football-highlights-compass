@@ -1,0 +1,24 @@
+{
+  "_note": "FIFAワールドカップ26 全試合スケジュール。実データで埋める（P2）。home/away.ja は team-names.json のキーと一致させる。決勝Tの対戦未定は away.placeholder を使う。検知/ビルドはここを参照。",
+  "tournament": "FIFA World Cup 2026",
+  "updatedAt": "2026-06-24T00:00:00Z",
+  "matches": [
+    {
+      "matchId": "wc2026-example",
+      "stage": "group",
+      "group": "F",
+      "round": "第2節",
+      "dateLocal": "2026-06-21",
+      "koUTC": "2026-06-21T23:00:00Z",
+      "koJST": "2026-06-22T08:00:00+09:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico",
+      "home": { "ja": "日本", "en": "Japan" },
+      "away": { "ja": "チュニジア", "en": "Tunisia" },
+      "broadcaster": "DAZN Japan",
+      "status": "highlighted",
+      "videoId": "TXyBRmgFIs4"
+    }
+  ]
+}

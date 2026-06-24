@@ -1,1 +1,1 @@
-{"name":"fhc-scraper","private":true,"type":"module","scripts":{"build":"node scripts/build-site.mjs"},"dependencies":{"basic-ftp":"^6.0.1","playwright":"^1.61.0"}}
+{"name":"fhc-scraper","private":true,"type":"module","scripts":{"build":"node scripts/build-site.mjs","deploy":"node scripts/deploy.mjs","watch":"node scripts/watch-highlights.mjs","watch:dry":"node scripts/watch-highlights.mjs --dry-run","inject-wc":"node scripts/inject-wc.mjs"},"dependencies":{"basic-ftp":"^6.0.1","playwright":"^1.61.0"}}

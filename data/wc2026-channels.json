@@ -1,0 +1,7 @@
+{
+  "_note": "監視対象のYouTubeチャンネル。channelId（UC...）は実機で確認して埋める。確認方法: 対象チャンネルのページを開き、ページのソース（view-source:）内の \"channelId\":\"UC...\" を探す。または https://commentpicker.com/youtube-channel-id.php 等に @ハンドル/URLを入れる。channelId が空のチャンネルは検知でスキップされる（安全）。",
+  "channels": [
+    { "name": "DAZN Japan", "handle": "@DAZN_JPN", "channelId": "", "weight": 1.0, "enabled": true },
+    { "name": "FIFA", "handle": "@FIFA", "channelId": "", "weight": 0.9, "enabled": true }
+  ]
+}

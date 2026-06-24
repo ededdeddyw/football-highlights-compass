@@ -66,8 +66,11 @@ const SPOILER_ALT = {};
 { const block = slice('var SPOILER_ALT = {','};'); const re=/'([A-Za-z0-9_-]{6,})'\s*:\s*\{\s*clean:\s*'([^']+)'\s*,\s*spoiler:\s*'([^']+)'\s*\}/g; let m; while((m=re.exec(block))) SPOILER_ALT[m[1]]={clean:m[2],spoiler:m[3]}; }
 
 // EXTRA arrays
-function extra(name){ const block = slice('const '+name+' = [', '\n];'); const objs=block.match(/\{[^{}]*\}/g)||[]; return objs.map(o=>({ ttl:(o.match(/ttl:"([^"]*)"/)||[])[1]||'', meta:(o.match(/meta:"([^"]*)"/)||[])[1]||'', jp:(o.match(/jp:"([^"]*)"/)||[])[1]||'', id:(o.match(/id:"([^"]*)"/)||[])[1]||'' })); }
-const EXTRA_WC = extra('EXTRA_WC'), EXTRA_JL = extra('EXTRA_JL'), EXTRA_CLUB = extra('EXTRA_CLUB');
+const parseObjs = s => (s.match(/\{[^{}]*\}/g)||[]).map(o=>({ ttl:(o.match(/ttl:"([^"]*)"/)||[])[1]||'', meta:(o.match(/meta:"([^"]*)"/)||[])[1]||'', jp:(o.match(/jp:"([^"]*)"/)||[])[1]||'', id:(o.match(/id:"([^"]*)"/)||[])[1]||'' }));
+function extra(name){ return parseObjs(slice('const '+name+' = [', '\n];')); }
+// 自動検知ぶん（inject-wc.mjs が /*WC_AUTO*/ マーカーに注入する EXTRA_WC_AUTO）も合流
+function extraAuto(){ const m = html.match(/EXTRA_WC_AUTO\s*=\s*(\[[\s\S]*?\]);/); return m ? parseObjs(m[1]) : []; }
+const EXTRA_WC = [...extra('EXTRA_WC'), ...extraAuto()], EXTRA_JL = extra('EXTRA_JL'), EXTRA_CLUB = extra('EXTRA_CLUB');
 
 // mkMatch / emb 移植（EXTRA の body 再構築用）
 function escJ(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');}

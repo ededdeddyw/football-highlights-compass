@@ -5,12 +5,15 @@
 import { readFileSync, existsSync } from 'node:fs';
 import * as ftp from 'basic-ftp';
 
-if (!existsSync('deploy.env')) { console.error('deploy.env が見つかりません。FTP情報を記載してください。'); process.exit(1); }
+// 認証情報は ①環境変数（GitHub Actions の Secrets）優先 ②無ければ deploy.env から読む
 const env = {};
-for (const line of readFileSync('deploy.env', 'utf8').split(/\r?\n/)) {
-  const m = line.match(/^\s*([A-Z_]+)\s*=\s*(.*)\s*$/); if (m) env[m[1]] = m[2].trim();
+if (existsSync('deploy.env')) {
+  for (const line of readFileSync('deploy.env', 'utf8').split(/\r?\n/)) {
+    const m = line.match(/^\s*([A-Z_]+)\s*=\s*(.*)\s*$/); if (m) env[m[1]] = m[2].trim();
+  }
 }
-for (const k of ['FTP_HOST', 'FTP_USER', 'FTP_PASS', 'FTP_DIR']) if (!env[k]) { console.error('deploy.env に ' + k + ' がありません'); process.exit(1); }
+for (const k of ['FTP_HOST','FTP_USER','FTP_PASS','FTP_DIR','SITE_URL']) if (process.env[k]) env[k] = process.env[k];
+for (const k of ['FTP_HOST', 'FTP_USER', 'FTP_PASS', 'FTP_DIR']) if (!env[k]) { console.error('FTP情報が不足: ' + k + '（deploy.env または環境変数で指定）'); process.exit(1); }
 
 async function connect() {
   const c = new ftp.Client(60000); c.ftp.verbose = false;

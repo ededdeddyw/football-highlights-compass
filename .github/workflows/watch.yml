@@ -1,0 +1,63 @@
+name: Watch WC highlights
+
+# 安全のため既定は手動実行のみ。準備（Secrets登録＋schedule/channelId投入＋watch-config.enabled=true）が
+# できたら下の schedule(cron) のコメントを外して有効化する。W杯終了後は再コメントで停止。
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '*/10 * * * *'   # 10分間隔（Actions cronは遅延・スキップあり＝検知窓を広めに設定済み）
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watch-wc
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: 検知（YouTube RSS）
+        run: node scripts/watch-highlights.mjs
+
+      - name: 検知差分の判定
+        id: diff
+        run: |
+          if git diff --quiet -- data/wc2026-detected.json; then
+            echo "changed=0" >> "$GITHUB_OUTPUT"; echo "新規検知なし。";
+          else
+            echo "changed=1" >> "$GITHUB_OUTPUT"; echo "新規検知あり。";
+          fi
+
+      - name: index へ注入 → サイト生成
+        if: steps.diff.outputs.changed == '1'
+        run: |
+          node scripts/inject-wc.mjs
+          node scripts/build-site.mjs
+
+      - name: FTP デプロイ（本番 highlight-compass.com）
+        if: steps.diff.outputs.changed == '1'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_DIR:  ${{ secrets.FTP_DIR }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          npm install basic-ftp --no-save --no-package-lock --no-audit --no-fund
+          node scripts/deploy.mjs
+
+      - name: コミット＆push（github.io／履歴）
+        if: steps.diff.outputs.changed == '1'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/index.html data/wc2026-detected.json data/wc2026-schedule.json data/wc-detect-candidates.json
+          git commit -m "auto: W杯ハイライト自動検知・記事化" || echo "no changes"
+          git pull --rebase --autostash || true
+          git push
