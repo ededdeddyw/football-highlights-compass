@@ -178,6 +178,7 @@
   .gthumb{position:relative; aspect-ratio:16/9; background:#0b1430}
   .gthumb img{width:100%; height:100%; object-fit:cover; display:block}
   .gplay{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:36px; height:36px; border-radius:50%; background:rgba(225,29,72,.92); color:#fff; display:flex; align-items:center; justify-content:center; font-size:14px; box-shadow:0 3px 12px rgba(0,0,0,.34)}
+  .gscore{position:absolute; right:6px; top:6px; font-size:13px; font-weight:900; color:#fff; background:rgba(11,22,87,.92); padding:3px 9px; border-radius:8px; letter-spacing:.04em; box-shadow:0 2px 8px rgba(0,0,0,.3)}
   .gttl{padding:9px 11px 11px; font-size:12.5px; font-weight:700; line-height:1.46}
   .gttl .flag{height:13px; vertical-align:-2px; border-radius:2px}
   .gpager{display:flex; align-items:center; justify-content:center; gap:14px; margin:16px 0 6px}
@@ -1212,8 +1213,10 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var total=lastList.length, pages=Math.max(1,Math.ceil(total/PAGE));
     if(state.page>pages) state.page=pages; if(state.page<1) state.page=1;
     var items=lastList.slice((state.page-1)*PAGE, (state.page-1)*PAGE+PAGE);
+    var showScore = !spoilerOn();
     grid.innerHTML = items.length ? items.map(function(g){
-      return '<a class="gcard" href="match/'+g.id+'.html"><span class="gthumb"><img src="https://i.ytimg.com/vi/'+g.id+'/hqdefault.jpg" alt="" loading="lazy"><span class="gplay">▶</span></span><span class="gttl">'+g.title+'</span></a>';
+      var sb = (showScore && g.score) ? '<span class="gscore">'+g.score+'</span>' : '';
+      return '<a class="gcard" href="match/'+g.id+'.html"><span class="gthumb"><img src="https://i.ytimg.com/vi/'+g.id+'/hqdefault.jpg" alt="" loading="lazy"><span class="gplay">▶</span>'+sb+'</span><span class="gttl">'+g.title+'</span></a>';
     }).join('') : '<p style="color:var(--muted);padding:24px 0;text-align:center;grid-column:1/-1">該当する試合がありません</p>';
     if(rc) rc.textContent = total+' 試合';
     pager.innerHTML = total>PAGE ? ('<button class="pg-btn" data-d="-1"'+(state.page<=1?' disabled':'')+'>‹ 前</button><span class="pg-info">'+state.page+' / '+pages+' ページ</span><button class="pg-btn" data-d="1"'+(state.page>=pages?' disabled':'')+'>次 ›</button>') : '';
@@ -1258,7 +1261,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     if(ifr){var mm=(ifr.getAttribute('src')||'').match(/embed\/([A-Za-z0-9_-]{6,})/); if(mm)id=mm[1];}
     if(!id) return;
     var te=c.querySelector('.ttl');
-    GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), hay:(c._hay||'') });
+    var scEl=c.querySelector('.score'), score=''; if(scEl){ var ns=scEl.querySelectorAll('.n'); if(ns.length>=2) score=ns[0].textContent.trim()+'-'+ns[1].textContent.trim(); }
+    GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), hay:(c._hay||''), score:score });
   });
   [].forEach.call(document.querySelectorAll('details.match, h2.sec, .sec-desc, table.summary, .legend, h3.kicker'), function(e){ e.style.display='none'; });
   if(pager) pager.addEventListener('click', function(e){ var b=e.target.closest('.pg-btn'); if(!b||b.disabled)return; state.page += (+b.getAttribute('data-d')); renderPage(); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); });
@@ -1267,8 +1271,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   // ===== ネタバレ防止トグル（試合ページのスコア表示/非表示の既定を決める。localStorageに保存） =====
   function spoilerOn(){ try{ return localStorage.getItem('fhc_spoiler')!=='0'; }catch(e){ return true; } }
   var ST=document.getElementById('spoilerToggle');
-  function paintST(){ if(!ST)return; var on=spoilerOn(); ST.setAttribute('aria-pressed', on?'true':'false'); ST.className='spoiler-toggle'+(on?' on':''); ST.textContent = on?'🟢 ネタバレ防止：ON（試合ページでスコアを隠す）':'⚪ ネタバレ防止：OFF（スコアを表示）'; }
-  if(ST){ paintST(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); }); }
+  function paintST(){ if(!ST)return; var on=spoilerOn(); ST.setAttribute('aria-pressed', on?'true':'false'); ST.className='spoiler-toggle'+(on?' on':''); ST.textContent = on?'🟢 ネタバレ防止：ON（一覧・試合ページでスコアを隠す）':'⚪ ネタバレ防止：OFF（一覧でもスコアを表示）'; }
+  if(ST){ paintST(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); renderPage(); }); }
 
   function setSearch(term){ var q=document.getElementById('q'); q.value=term; state.q=term; state.league='all'; state.player='all'; apply(); closeMenu(); document.querySelectorAll('.ac-list').forEach(function(l){l.classList.remove('open');}); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); }
 
