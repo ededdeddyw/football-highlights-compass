@@ -7,7 +7,7 @@
 //  - index.html 内 ENTITY_PAGES マップを注入
 // を生成する。
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { COUNTRIES, CLUBS } from './entities.mjs';
+import { COUNTRIES, CLUBS, DEEP } from './entities.mjs';
 
 const DOMAIN = 'https://highlight-compass.com';
 const TODAY = new Date().toISOString().slice(0,10);   // ビルド実行日（動的）
@@ -295,6 +295,23 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .ehero .crest{flex:0 0 auto;width:74px;height:74px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-size:34px;overflow:hidden}
 .ehero .crest img{width:46px;height:auto;border-radius:5px;box-shadow:0 1px 6px rgba(0,0,0,.4)}
 .score .reveal-score{font-size:14.5px;font-weight:800;padding:8px 16px;border-radius:10px;border:1px solid var(--line2);background:var(--card2);color:var(--accent);cursor:pointer}
+/* 深掘りセクション */
+.deep{margin:6px 0 4px}
+.form-card{display:flex;align-items:center;gap:20px;background:var(--card2);border:1px solid var(--line2);border-radius:14px;padding:14px 20px;margin:12px 0 16px}
+.formsvg{width:138px;height:auto;flex:0 0 auto}
+.formsvg .ln{fill:none;stroke:var(--line2);stroke-width:1.5}
+.formsvg .dot{fill:var(--accent2);stroke:#fff;stroke-width:2}
+.form-meta .form-no{font-size:30px;font-weight:900;letter-spacing:.06em;color:var(--accent);line-height:1}
+.form-meta .form-cap{font-size:12px;color:var(--soft);margin-top:4px}
+.form-meta .form-era{font-size:13.5px;color:var(--muted);font-weight:700;margin-top:8px}
+.deep-style{font-size:15.5px;line-height:1.95;margin:0 0 8px}
+.deep-h{font-size:13.5px;font-weight:800;color:var(--muted);margin:18px 0 9px;letter-spacing:.03em}
+.legend-chip{font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--line2);background:var(--paper);color:var(--ink);display:inline-block}
+.jp-time{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.jp-time li{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--accent2);border-radius:10px;padding:10px 14px;font-size:14.5px}
+.jp-time li b{color:var(--ink);font-weight:800}
+.jp-time li span{color:var(--muted);font-size:13px;margin-left:10px}
+@media(max-width:560px){.form-card{gap:14px;padding:12px 14px}.formsvg{width:112px}.form-meta .form-no{font-size:25px}}
 /* クリック時の演出（Loading…→Go!）個別ページ用 */
 .boom{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;pointer-events:none}
 .boom.go{display:flex}
@@ -420,6 +437,27 @@ data.forEach(buildMatch);
 // ========================= 国・クラブ個別ページ =========================
 const ENTITY_PAGES = PAGE_OF; // name -> "country/slug.html"|"club/slug.html"
 
+// フォーメーションをピッチ図(SVG)に描画（GK＋各ライン）。色はCSS変数で。
+function formationSVG(form){
+  const lines=(form||'').split('-').map(n=>parseInt(n,10)).filter(n=>n>0);
+  if(!lines.length) return '';
+  const W=200,H=268,top=46,bot=212,n=lines.length, dots=[[W/2,H-16]];
+  lines.forEach((cnt,li)=>{ const y= n>1 ? bot-li*((bot-top)/(n-1)) : (top+bot)/2; for(let i=0;i<cnt;i++) dots.push([(i+1)/(cnt+1)*W,y]); });
+  const pitch=`<rect class="ln" x="5" y="5" width="${W-10}" height="${H-10}" rx="10"/><line class="ln" x1="5" y1="${H/2}" x2="${W-5}" y2="${H/2}"/><circle class="ln" cx="${W/2}" cy="${H/2}" r="20"/><rect class="ln" x="${W/2-30}" y="5" width="60" height="30"/><rect class="ln" x="${W/2-30}" y="${H-35}" width="60" height="30"/>`;
+  const cs=dots.map(([x,y])=>`<circle class="dot" cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="8"/>`).join('');
+  return `<svg class="formsvg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="代表的なフォーメーション ${form}">${pitch}${cs}</svg>`;
+}
+// 「深掘り」セクション（DEEPがある場合のみ）
+function deepSection(name, isClub){
+  const d = DEEP[name]; if(!d) return '';
+  let h = '<h2 class="lined">深掘り</h2><div class="deep">';
+  if(d.formation) h += `<div class="form-card">${formationSVG(d.formation)}<div class="form-meta"><div class="form-no">${esc(d.formation)}</div><div class="form-cap">代表的なフォーメーション</div>${d.era?`<div class="form-era">${esc(d.era)}</div>`:''}</div></div>`;
+  if(d.style) h += `<p class="deep-style">${esc(d.style)}</p>`;
+  if(d.legends&&d.legends.length) h += `<h3 class="deep-h">${isClub?'クラブのレジェンド':'歴代のレジェンド'}</h3><div class="chips">${d.legends.map(x=>`<span class="legend-chip">${esc(x)}</span>`).join('')}</div>`;
+  if(d.jp&&d.jp.length) h += `<h3 class="deep-h">ゆかりの日本人選手</h3><ul class="jp-time">${d.jp.map(j=>`<li><b>${esc(j.name)}</b>${j.note?`<span>${esc(j.note)}</span>`:''}</li>`).join('')}</ul>`;
+  return h+'</div>';
+}
+
 function buildCountry(name, info){
   const ms = entityMatches(name); if(!ms.length && !info) return;
   const slug = info.slug; const path=`country/${slug}.html`;
@@ -451,6 +489,7 @@ function buildCountry(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
   ${factHtml}
+  ${deepSection(name,false)}
   ${AD}
   ${list}
   ${related}
@@ -489,6 +528,7 @@ function buildClub(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
   ${factHtml}
+  ${deepSection(name,true)}
   ${AD}
   ${list}
   ${related}
