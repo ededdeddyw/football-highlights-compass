@@ -27,7 +27,7 @@ async function connect() {
 }
 
 // 末尾で切れがちな主要ファイル（表示・SEOに効くもの）は最後に個別保証
-const TAIL = ['index.html', 'sitemap.xml', 'robots.txt', 'og.png', 'ads.txt', 'privacy.html', 'contact.html'];
+const TAIL = ['index.html', 'sitemap.xml', 'robots.txt', 'og.png', 'ads.txt', 'about.html', 'privacy.html', 'contact.html'];
 
 async function uploadFull() {
   const c = await connect();

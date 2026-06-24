@@ -170,7 +170,7 @@ const FOOTER = (extra='')=>`<footer class="post-foot">
   ${extra}
   <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
   <p><a href="../">▶ トップで他の試合を探す（W杯・Jリーグ・日本人所属クラブ）</a></p>
-  <p><a href="../privacy.html">プライバシーポリシー・お問い合わせ</a></p>
+  <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
   <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
 </footer></article></body></html>`;
 
@@ -473,7 +473,7 @@ for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
-for(const p of ['privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n`;
+for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
