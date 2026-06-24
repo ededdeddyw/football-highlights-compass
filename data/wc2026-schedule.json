@@ -1,24 +1,1663 @@
 {
-  "_note": "FIFAワールドカップ26 全試合スケジュール。実データで埋める（P2）。home/away.ja は team-names.json のキーと一致させる。決勝Tの対戦未定は away.placeholder を使う。検知/ビルドはここを参照。",
+  "_note": "グループ72試合は seed-wc-schedule.mjs が生成。決勝T(R32以降)は対戦確定後に追記。出典: Al Jazeera 公式日程(GMT=UTC)。",
   "tournament": "FIFA World Cup 2026",
-  "updatedAt": "2026-06-24T00:00:00Z",
+  "updatedAt": "2026-06-24T05:37:38.034Z",
   "matches": [
     {
-      "matchId": "wc2026-example",
+      "matchId": "wc2026-gA-1-1",
       "stage": "group",
-      "group": "F",
+      "group": "A",
+      "round": "第1節",
+      "dateLocal": "2026-06-11",
+      "koUTC": "2026-06-11T19:00:00Z",
+      "koJST": "2026-06-12T04:00:00+09:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "home": {
+        "ja": "メキシコ",
+        "en": "Mexico"
+      },
+      "away": {
+        "ja": "南アフリカ",
+        "en": "South Africa"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gA-1-2",
+      "stage": "group",
+      "group": "A",
+      "round": "第1節",
+      "dateLocal": "2026-06-11",
+      "koUTC": "2026-06-12T02:00:00Z",
+      "koJST": "2026-06-12T11:00:00+09:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "home": {
+        "ja": "韓国",
+        "en": "South Korea"
+      },
+      "away": {
+        "ja": "チェコ",
+        "en": "Czechia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gA-2-1",
+      "stage": "group",
+      "group": "A",
       "round": "第2節",
-      "dateLocal": "2026-06-21",
-      "koUTC": "2026-06-21T23:00:00Z",
-      "koJST": "2026-06-22T08:00:00+09:00",
+      "dateLocal": "2026-06-18",
+      "koUTC": "2026-06-18T16:00:00Z",
+      "koJST": "2026-06-19T01:00:00+09:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "home": {
+        "ja": "チェコ",
+        "en": "Czechia"
+      },
+      "away": {
+        "ja": "南アフリカ",
+        "en": "South Africa"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gA-2-2",
+      "stage": "group",
+      "group": "A",
+      "round": "第2節",
+      "dateLocal": "2026-06-18",
+      "koUTC": "2026-06-19T01:00:00Z",
+      "koJST": "2026-06-19T10:00:00+09:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "home": {
+        "ja": "メキシコ",
+        "en": "Mexico"
+      },
+      "away": {
+        "ja": "韓国",
+        "en": "South Korea"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gA-3-1",
+      "stage": "group",
+      "group": "A",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-25T01:00:00Z",
+      "koJST": "2026-06-25T10:00:00+09:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "home": {
+        "ja": "チェコ",
+        "en": "Czechia"
+      },
+      "away": {
+        "ja": "メキシコ",
+        "en": "Mexico"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gA-3-2",
+      "stage": "group",
+      "group": "A",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-25T01:00:00Z",
+      "koJST": "2026-06-25T10:00:00+09:00",
       "venue": "Estadio BBVA",
       "city": "Monterrey",
       "country": "Mexico",
-      "home": { "ja": "日本", "en": "Japan" },
-      "away": { "ja": "チュニジア", "en": "Tunisia" },
+      "home": {
+        "ja": "南アフリカ",
+        "en": "South Africa"
+      },
+      "away": {
+        "ja": "韓国",
+        "en": "South Korea"
+      },
       "broadcaster": "DAZN Japan",
-      "status": "highlighted",
-      "videoId": "TXyBRmgFIs4"
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-1-1",
+      "stage": "group",
+      "group": "B",
+      "round": "第1節",
+      "dateLocal": "2026-06-12",
+      "koUTC": "2026-06-12T19:00:00Z",
+      "koJST": "2026-06-13T04:00:00+09:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "home": {
+        "ja": "カナダ",
+        "en": "Canada"
+      },
+      "away": {
+        "ja": "ボスニア・ヘルツェゴビナ",
+        "en": "Bosnia and Herzegovina"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-1-2",
+      "stage": "group",
+      "group": "B",
+      "round": "第1節",
+      "dateLocal": "2026-06-13",
+      "koUTC": "2026-06-13T19:00:00Z",
+      "koJST": "2026-06-14T04:00:00+09:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "home": {
+        "ja": "カタール",
+        "en": "Qatar"
+      },
+      "away": {
+        "ja": "スイス",
+        "en": "Switzerland"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-2-1",
+      "stage": "group",
+      "group": "B",
+      "round": "第2節",
+      "dateLocal": "2026-06-18",
+      "koUTC": "2026-06-18T19:00:00Z",
+      "koJST": "2026-06-19T04:00:00+09:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "home": {
+        "ja": "スイス",
+        "en": "Switzerland"
+      },
+      "away": {
+        "ja": "ボスニア・ヘルツェゴビナ",
+        "en": "Bosnia and Herzegovina"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-2-2",
+      "stage": "group",
+      "group": "B",
+      "round": "第2節",
+      "dateLocal": "2026-06-18",
+      "koUTC": "2026-06-18T22:00:00Z",
+      "koJST": "2026-06-19T07:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "カナダ",
+        "en": "Canada"
+      },
+      "away": {
+        "ja": "カタール",
+        "en": "Qatar"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-3-1",
+      "stage": "group",
+      "group": "B",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-24T19:00:00Z",
+      "koJST": "2026-06-25T04:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "スイス",
+        "en": "Switzerland"
+      },
+      "away": {
+        "ja": "カナダ",
+        "en": "Canada"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gB-3-2",
+      "stage": "group",
+      "group": "B",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-24T19:00:00Z",
+      "koJST": "2026-06-25T04:00:00+09:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "country": "USA",
+      "home": {
+        "ja": "ボスニア・ヘルツェゴビナ",
+        "en": "Bosnia and Herzegovina"
+      },
+      "away": {
+        "ja": "カタール",
+        "en": "Qatar"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-1-1",
+      "stage": "group",
+      "group": "C",
+      "round": "第1節",
+      "dateLocal": "2026-06-13",
+      "koUTC": "2026-06-13T22:00:00Z",
+      "koJST": "2026-06-14T07:00:00+09:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "home": {
+        "ja": "ブラジル",
+        "en": "Brazil"
+      },
+      "away": {
+        "ja": "モロッコ",
+        "en": "Morocco"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-1-2",
+      "stage": "group",
+      "group": "C",
+      "round": "第1節",
+      "dateLocal": "2026-06-13",
+      "koUTC": "2026-06-14T01:00:00Z",
+      "koJST": "2026-06-14T10:00:00+09:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "home": {
+        "ja": "ハイチ",
+        "en": "Haiti"
+      },
+      "away": {
+        "ja": "スコットランド",
+        "en": "Scotland"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-2-1",
+      "stage": "group",
+      "group": "C",
+      "round": "第2節",
+      "dateLocal": "2026-06-19",
+      "koUTC": "2026-06-19T22:00:00Z",
+      "koJST": "2026-06-20T07:00:00+09:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "home": {
+        "ja": "スコットランド",
+        "en": "Scotland"
+      },
+      "away": {
+        "ja": "モロッコ",
+        "en": "Morocco"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-2-2",
+      "stage": "group",
+      "group": "C",
+      "round": "第2節",
+      "dateLocal": "2026-06-19",
+      "koUTC": "2026-06-20T00:30:00Z",
+      "koJST": "2026-06-20T09:30:00+09:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "home": {
+        "ja": "ブラジル",
+        "en": "Brazil"
+      },
+      "away": {
+        "ja": "ハイチ",
+        "en": "Haiti"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-3-1",
+      "stage": "group",
+      "group": "C",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-24T22:00:00Z",
+      "koJST": "2026-06-25T07:00:00+09:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "country": "USA",
+      "home": {
+        "ja": "スコットランド",
+        "en": "Scotland"
+      },
+      "away": {
+        "ja": "ブラジル",
+        "en": "Brazil"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gC-3-2",
+      "stage": "group",
+      "group": "C",
+      "round": "第3節",
+      "dateLocal": "2026-06-24",
+      "koUTC": "2026-06-24T22:00:00Z",
+      "koJST": "2026-06-25T07:00:00+09:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "home": {
+        "ja": "モロッコ",
+        "en": "Morocco"
+      },
+      "away": {
+        "ja": "ハイチ",
+        "en": "Haiti"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-1-1",
+      "stage": "group",
+      "group": "D",
+      "round": "第1節",
+      "dateLocal": "2026-06-12",
+      "koUTC": "2026-06-13T01:00:00Z",
+      "koJST": "2026-06-13T10:00:00+09:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "home": {
+        "ja": "アメリカ",
+        "en": "USA"
+      },
+      "away": {
+        "ja": "パラグアイ",
+        "en": "Paraguay"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-1-2",
+      "stage": "group",
+      "group": "D",
+      "round": "第1節",
+      "dateLocal": "2026-06-13",
+      "koUTC": "2026-06-14T04:00:00Z",
+      "koJST": "2026-06-14T13:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "オーストラリア",
+        "en": "Australia"
+      },
+      "away": {
+        "ja": "トルコ",
+        "en": "Turkiye"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-2-1",
+      "stage": "group",
+      "group": "D",
+      "round": "第2節",
+      "dateLocal": "2026-06-19",
+      "koUTC": "2026-06-19T19:00:00Z",
+      "koJST": "2026-06-20T04:00:00+09:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "country": "USA",
+      "home": {
+        "ja": "アメリカ",
+        "en": "USA"
+      },
+      "away": {
+        "ja": "オーストラリア",
+        "en": "Australia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-2-2",
+      "stage": "group",
+      "group": "D",
+      "round": "第2節",
+      "dateLocal": "2026-06-19",
+      "koUTC": "2026-06-20T03:00:00Z",
+      "koJST": "2026-06-20T12:00:00+09:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "home": {
+        "ja": "トルコ",
+        "en": "Turkiye"
+      },
+      "away": {
+        "ja": "パラグアイ",
+        "en": "Paraguay"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-3-1",
+      "stage": "group",
+      "group": "D",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-26T02:00:00Z",
+      "koJST": "2026-06-26T11:00:00+09:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "home": {
+        "ja": "トルコ",
+        "en": "Turkiye"
+      },
+      "away": {
+        "ja": "アメリカ",
+        "en": "USA"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gD-3-2",
+      "stage": "group",
+      "group": "D",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-26T02:00:00Z",
+      "koJST": "2026-06-26T11:00:00+09:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "home": {
+        "ja": "パラグアイ",
+        "en": "Paraguay"
+      },
+      "away": {
+        "ja": "オーストラリア",
+        "en": "Australia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-1-1",
+      "stage": "group",
+      "group": "E",
+      "round": "第1節",
+      "dateLocal": "2026-06-14",
+      "koUTC": "2026-06-14T17:00:00Z",
+      "koJST": "2026-06-15T02:00:00+09:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "home": {
+        "ja": "ドイツ",
+        "en": "Germany"
+      },
+      "away": {
+        "ja": "キュラソー",
+        "en": "Curacao"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-1-2",
+      "stage": "group",
+      "group": "E",
+      "round": "第1節",
+      "dateLocal": "2026-06-14",
+      "koUTC": "2026-06-14T23:00:00Z",
+      "koJST": "2026-06-15T08:00:00+09:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "home": {
+        "ja": "コートジボワール",
+        "en": "Ivory Coast"
+      },
+      "away": {
+        "ja": "エクアドル",
+        "en": "Ecuador"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-2-1",
+      "stage": "group",
+      "group": "E",
+      "round": "第2節",
+      "dateLocal": "2026-06-20",
+      "koUTC": "2026-06-20T20:00:00Z",
+      "koJST": "2026-06-21T05:00:00+09:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "home": {
+        "ja": "ドイツ",
+        "en": "Germany"
+      },
+      "away": {
+        "ja": "コートジボワール",
+        "en": "Ivory Coast"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-2-2",
+      "stage": "group",
+      "group": "E",
+      "round": "第2節",
+      "dateLocal": "2026-06-20",
+      "koUTC": "2026-06-21T03:00:00Z",
+      "koJST": "2026-06-21T12:00:00+09:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "home": {
+        "ja": "エクアドル",
+        "en": "Ecuador"
+      },
+      "away": {
+        "ja": "キュラソー",
+        "en": "Curacao"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-3-1",
+      "stage": "group",
+      "group": "E",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-25T20:00:00Z",
+      "koJST": "2026-06-26T05:00:00+09:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "home": {
+        "ja": "エクアドル",
+        "en": "Ecuador"
+      },
+      "away": {
+        "ja": "ドイツ",
+        "en": "Germany"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gE-3-2",
+      "stage": "group",
+      "group": "E",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-25T20:00:00Z",
+      "koJST": "2026-06-26T05:00:00+09:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "home": {
+        "ja": "キュラソー",
+        "en": "Curacao"
+      },
+      "away": {
+        "ja": "コートジボワール",
+        "en": "Ivory Coast"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-1-1",
+      "stage": "group",
+      "group": "F",
+      "round": "第1節",
+      "dateLocal": "2026-06-14",
+      "koUTC": "2026-06-14T20:00:00Z",
+      "koJST": "2026-06-15T05:00:00+09:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "home": {
+        "ja": "オランダ",
+        "en": "Netherlands"
+      },
+      "away": {
+        "ja": "日本",
+        "en": "Japan"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-1-2",
+      "stage": "group",
+      "group": "F",
+      "round": "第1節",
+      "dateLocal": "2026-06-14",
+      "koUTC": "2026-06-15T02:00:00Z",
+      "koJST": "2026-06-15T11:00:00+09:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico",
+      "home": {
+        "ja": "スウェーデン",
+        "en": "Sweden"
+      },
+      "away": {
+        "ja": "チュニジア",
+        "en": "Tunisia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-2-1",
+      "stage": "group",
+      "group": "F",
+      "round": "第2節",
+      "dateLocal": "2026-06-20",
+      "koUTC": "2026-06-20T17:00:00Z",
+      "koJST": "2026-06-21T02:00:00+09:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "home": {
+        "ja": "オランダ",
+        "en": "Netherlands"
+      },
+      "away": {
+        "ja": "スウェーデン",
+        "en": "Sweden"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-2-2",
+      "stage": "group",
+      "group": "F",
+      "round": "第2節",
+      "dateLocal": "2026-06-20",
+      "koUTC": "2026-06-21T04:00:00Z",
+      "koJST": "2026-06-21T13:00:00+09:00",
+      "venue": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico",
+      "home": {
+        "ja": "チュニジア",
+        "en": "Tunisia"
+      },
+      "away": {
+        "ja": "日本",
+        "en": "Japan"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-3-1",
+      "stage": "group",
+      "group": "F",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-25T23:00:00Z",
+      "koJST": "2026-06-26T08:00:00+09:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "home": {
+        "ja": "日本",
+        "en": "Japan"
+      },
+      "away": {
+        "ja": "スウェーデン",
+        "en": "Sweden"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gF-3-2",
+      "stage": "group",
+      "group": "F",
+      "round": "第3節",
+      "dateLocal": "2026-06-25",
+      "koUTC": "2026-06-25T23:00:00Z",
+      "koJST": "2026-06-26T08:00:00+09:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "home": {
+        "ja": "チュニジア",
+        "en": "Tunisia"
+      },
+      "away": {
+        "ja": "オランダ",
+        "en": "Netherlands"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-1-1",
+      "stage": "group",
+      "group": "G",
+      "round": "第1節",
+      "dateLocal": "2026-06-15",
+      "koUTC": "2026-06-15T19:00:00Z",
+      "koJST": "2026-06-16T04:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "ベルギー",
+        "en": "Belgium"
+      },
+      "away": {
+        "ja": "エジプト",
+        "en": "Egypt"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-1-2",
+      "stage": "group",
+      "group": "G",
+      "round": "第1節",
+      "dateLocal": "2026-06-15",
+      "koUTC": "2026-06-16T01:00:00Z",
+      "koJST": "2026-06-16T10:00:00+09:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "home": {
+        "ja": "イラン",
+        "en": "Iran"
+      },
+      "away": {
+        "ja": "ニュージーランド",
+        "en": "New Zealand"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-2-1",
+      "stage": "group",
+      "group": "G",
+      "round": "第2節",
+      "dateLocal": "2026-06-21",
+      "koUTC": "2026-06-21T19:00:00Z",
+      "koJST": "2026-06-22T04:00:00+09:00",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "country": "USA",
+      "home": {
+        "ja": "ベルギー",
+        "en": "Belgium"
+      },
+      "away": {
+        "ja": "イラン",
+        "en": "Iran"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-2-2",
+      "stage": "group",
+      "group": "G",
+      "round": "第2節",
+      "dateLocal": "2026-06-21",
+      "koUTC": "2026-06-22T01:00:00Z",
+      "koJST": "2026-06-22T10:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "ニュージーランド",
+        "en": "New Zealand"
+      },
+      "away": {
+        "ja": "エジプト",
+        "en": "Egypt"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-3-1",
+      "stage": "group",
+      "group": "G",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-27T03:00:00Z",
+      "koJST": "2026-06-27T12:00:00+09:00",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "country": "USA",
+      "home": {
+        "ja": "エジプト",
+        "en": "Egypt"
+      },
+      "away": {
+        "ja": "イラン",
+        "en": "Iran"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gG-3-2",
+      "stage": "group",
+      "group": "G",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-27T03:00:00Z",
+      "koJST": "2026-06-27T12:00:00+09:00",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "home": {
+        "ja": "ニュージーランド",
+        "en": "New Zealand"
+      },
+      "away": {
+        "ja": "ベルギー",
+        "en": "Belgium"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-1-1",
+      "stage": "group",
+      "group": "H",
+      "round": "第1節",
+      "dateLocal": "2026-06-15",
+      "koUTC": "2026-06-15T16:00:00Z",
+      "koJST": "2026-06-16T01:00:00+09:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "home": {
+        "ja": "スペイン",
+        "en": "Spain"
+      },
+      "away": {
+        "ja": "カーボベルデ",
+        "en": "Cape Verde"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-1-2",
+      "stage": "group",
+      "group": "H",
+      "round": "第1節",
+      "dateLocal": "2026-06-15",
+      "koUTC": "2026-06-15T22:00:00Z",
+      "koJST": "2026-06-16T07:00:00+09:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "country": "USA",
+      "home": {
+        "ja": "サウジアラビア",
+        "en": "Saudi Arabia"
+      },
+      "away": {
+        "ja": "ウルグアイ",
+        "en": "Uruguay"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-2-1",
+      "stage": "group",
+      "group": "H",
+      "round": "第2節",
+      "dateLocal": "2026-06-21",
+      "koUTC": "2026-06-21T16:00:00Z",
+      "koJST": "2026-06-22T01:00:00+09:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "home": {
+        "ja": "スペイン",
+        "en": "Spain"
+      },
+      "away": {
+        "ja": "サウジアラビア",
+        "en": "Saudi Arabia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-2-2",
+      "stage": "group",
+      "group": "H",
+      "round": "第2節",
+      "dateLocal": "2026-06-21",
+      "koUTC": "2026-06-21T22:00:00Z",
+      "koJST": "2026-06-22T07:00:00+09:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "country": "USA",
+      "home": {
+        "ja": "ウルグアイ",
+        "en": "Uruguay"
+      },
+      "away": {
+        "ja": "カーボベルデ",
+        "en": "Cape Verde"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-3-1",
+      "stage": "group",
+      "group": "H",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-27T00:00:00Z",
+      "koJST": "2026-06-27T09:00:00+09:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "home": {
+        "ja": "カーボベルデ",
+        "en": "Cape Verde"
+      },
+      "away": {
+        "ja": "サウジアラビア",
+        "en": "Saudi Arabia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gH-3-2",
+      "stage": "group",
+      "group": "H",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-27T00:00:00Z",
+      "koJST": "2026-06-27T09:00:00+09:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "home": {
+        "ja": "ウルグアイ",
+        "en": "Uruguay"
+      },
+      "away": {
+        "ja": "スペイン",
+        "en": "Spain"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-1-1",
+      "stage": "group",
+      "group": "I",
+      "round": "第1節",
+      "dateLocal": "2026-06-16",
+      "koUTC": "2026-06-16T19:00:00Z",
+      "koJST": "2026-06-17T04:00:00+09:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "home": {
+        "ja": "フランス",
+        "en": "France"
+      },
+      "away": {
+        "ja": "セネガル",
+        "en": "Senegal"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-1-2",
+      "stage": "group",
+      "group": "I",
+      "round": "第1節",
+      "dateLocal": "2026-06-16",
+      "koUTC": "2026-06-16T22:00:00Z",
+      "koJST": "2026-06-17T07:00:00+09:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "home": {
+        "ja": "イラク",
+        "en": "Iraq"
+      },
+      "away": {
+        "ja": "ノルウェー",
+        "en": "Norway"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-2-1",
+      "stage": "group",
+      "group": "I",
+      "round": "第2節",
+      "dateLocal": "2026-06-22",
+      "koUTC": "2026-06-22T21:00:00Z",
+      "koJST": "2026-06-23T06:00:00+09:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "home": {
+        "ja": "フランス",
+        "en": "France"
+      },
+      "away": {
+        "ja": "イラク",
+        "en": "Iraq"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-2-2",
+      "stage": "group",
+      "group": "I",
+      "round": "第2節",
+      "dateLocal": "2026-06-22",
+      "koUTC": "2026-06-23T00:00:00Z",
+      "koJST": "2026-06-23T09:00:00+09:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "home": {
+        "ja": "ノルウェー",
+        "en": "Norway"
+      },
+      "away": {
+        "ja": "セネガル",
+        "en": "Senegal"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-3-1",
+      "stage": "group",
+      "group": "I",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-26T19:00:00Z",
+      "koJST": "2026-06-27T04:00:00+09:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "home": {
+        "ja": "ノルウェー",
+        "en": "Norway"
+      },
+      "away": {
+        "ja": "フランス",
+        "en": "France"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gI-3-2",
+      "stage": "group",
+      "group": "I",
+      "round": "第3節",
+      "dateLocal": "2026-06-26",
+      "koUTC": "2026-06-26T19:00:00Z",
+      "koJST": "2026-06-27T04:00:00+09:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "home": {
+        "ja": "セネガル",
+        "en": "Senegal"
+      },
+      "away": {
+        "ja": "イラク",
+        "en": "Iraq"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-1-1",
+      "stage": "group",
+      "group": "J",
+      "round": "第1節",
+      "dateLocal": "2026-06-16",
+      "koUTC": "2026-06-17T01:00:00Z",
+      "koJST": "2026-06-17T10:00:00+09:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "home": {
+        "ja": "アルゼンチン",
+        "en": "Argentina"
+      },
+      "away": {
+        "ja": "アルジェリア",
+        "en": "Algeria"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-1-2",
+      "stage": "group",
+      "group": "J",
+      "round": "第1節",
+      "dateLocal": "2026-06-16",
+      "koUTC": "2026-06-17T04:00:00Z",
+      "koJST": "2026-06-17T13:00:00+09:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "home": {
+        "ja": "オーストリア",
+        "en": "Austria"
+      },
+      "away": {
+        "ja": "ヨルダン",
+        "en": "Jordan"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-2-1",
+      "stage": "group",
+      "group": "J",
+      "round": "第2節",
+      "dateLocal": "2026-06-22",
+      "koUTC": "2026-06-22T17:00:00Z",
+      "koJST": "2026-06-23T02:00:00+09:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "home": {
+        "ja": "アルゼンチン",
+        "en": "Argentina"
+      },
+      "away": {
+        "ja": "オーストリア",
+        "en": "Austria"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-2-2",
+      "stage": "group",
+      "group": "J",
+      "round": "第2節",
+      "dateLocal": "2026-06-22",
+      "koUTC": "2026-06-23T03:00:00Z",
+      "koJST": "2026-06-23T12:00:00+09:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "home": {
+        "ja": "ヨルダン",
+        "en": "Jordan"
+      },
+      "away": {
+        "ja": "アルジェリア",
+        "en": "Algeria"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "stage": "group",
+      "group": "J",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-28T02:00:00Z",
+      "koJST": "2026-06-28T11:00:00+09:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "home": {
+        "ja": "アルジェリア",
+        "en": "Algeria"
+      },
+      "away": {
+        "ja": "オーストリア",
+        "en": "Austria"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gJ-3-2",
+      "stage": "group",
+      "group": "J",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-28T02:00:00Z",
+      "koJST": "2026-06-28T11:00:00+09:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "home": {
+        "ja": "ヨルダン",
+        "en": "Jordan"
+      },
+      "away": {
+        "ja": "アルゼンチン",
+        "en": "Argentina"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-1-1",
+      "stage": "group",
+      "group": "K",
+      "round": "第1節",
+      "dateLocal": "2026-06-17",
+      "koUTC": "2026-06-17T17:00:00Z",
+      "koJST": "2026-06-18T02:00:00+09:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "home": {
+        "ja": "ポルトガル",
+        "en": "Portugal"
+      },
+      "away": {
+        "ja": "コンゴ民主共和国",
+        "en": "DR Congo"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-1-2",
+      "stage": "group",
+      "group": "K",
+      "round": "第1節",
+      "dateLocal": "2026-06-17",
+      "koUTC": "2026-06-18T02:00:00Z",
+      "koJST": "2026-06-18T11:00:00+09:00",
+      "venue": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "home": {
+        "ja": "ウズベキスタン",
+        "en": "Uzbekistan"
+      },
+      "away": {
+        "ja": "コロンビア",
+        "en": "Colombia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-2-1",
+      "stage": "group",
+      "group": "K",
+      "round": "第2節",
+      "dateLocal": "2026-06-23",
+      "koUTC": "2026-06-23T17:00:00Z",
+      "koJST": "2026-06-24T02:00:00+09:00",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "home": {
+        "ja": "ポルトガル",
+        "en": "Portugal"
+      },
+      "away": {
+        "ja": "ウズベキスタン",
+        "en": "Uzbekistan"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-2-2",
+      "stage": "group",
+      "group": "K",
+      "round": "第2節",
+      "dateLocal": "2026-06-23",
+      "koUTC": "2026-06-24T02:00:00Z",
+      "koJST": "2026-06-24T11:00:00+09:00",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "home": {
+        "ja": "コロンビア",
+        "en": "Colombia"
+      },
+      "away": {
+        "ja": "コンゴ民主共和国",
+        "en": "DR Congo"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "stage": "group",
+      "group": "K",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-27T23:30:00Z",
+      "koJST": "2026-06-28T08:30:00+09:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "country": "USA",
+      "home": {
+        "ja": "コロンビア",
+        "en": "Colombia"
+      },
+      "away": {
+        "ja": "ポルトガル",
+        "en": "Portugal"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gK-3-2",
+      "stage": "group",
+      "group": "K",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-27T23:30:00Z",
+      "koJST": "2026-06-28T08:30:00+09:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "home": {
+        "ja": "コンゴ民主共和国",
+        "en": "DR Congo"
+      },
+      "away": {
+        "ja": "ウズベキスタン",
+        "en": "Uzbekistan"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-1-1",
+      "stage": "group",
+      "group": "L",
+      "round": "第1節",
+      "dateLocal": "2026-06-17",
+      "koUTC": "2026-06-17T20:00:00Z",
+      "koJST": "2026-06-18T05:00:00+09:00",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "country": "USA",
+      "home": {
+        "ja": "イングランド",
+        "en": "England"
+      },
+      "away": {
+        "ja": "クロアチア",
+        "en": "Croatia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-1-2",
+      "stage": "group",
+      "group": "L",
+      "round": "第1節",
+      "dateLocal": "2026-06-17",
+      "koUTC": "2026-06-17T23:00:00Z",
+      "koJST": "2026-06-18T08:00:00+09:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "home": {
+        "ja": "ガーナ",
+        "en": "Ghana"
+      },
+      "away": {
+        "ja": "パナマ",
+        "en": "Panama"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-2-1",
+      "stage": "group",
+      "group": "L",
+      "round": "第2節",
+      "dateLocal": "2026-06-23",
+      "koUTC": "2026-06-23T20:00:00Z",
+      "koJST": "2026-06-24T05:00:00+09:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "country": "USA",
+      "home": {
+        "ja": "イングランド",
+        "en": "England"
+      },
+      "away": {
+        "ja": "ガーナ",
+        "en": "Ghana"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-2-2",
+      "stage": "group",
+      "group": "L",
+      "round": "第2節",
+      "dateLocal": "2026-06-23",
+      "koUTC": "2026-06-23T23:00:00Z",
+      "koJST": "2026-06-24T08:00:00+09:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "home": {
+        "ja": "パナマ",
+        "en": "Panama"
+      },
+      "away": {
+        "ja": "クロアチア",
+        "en": "Croatia"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-3-1",
+      "stage": "group",
+      "group": "L",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-27T21:00:00Z",
+      "koJST": "2026-06-28T06:00:00+09:00",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "country": "USA",
+      "home": {
+        "ja": "パナマ",
+        "en": "Panama"
+      },
+      "away": {
+        "ja": "イングランド",
+        "en": "England"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
+    },
+    {
+      "matchId": "wc2026-gL-3-2",
+      "stage": "group",
+      "group": "L",
+      "round": "第3節",
+      "dateLocal": "2026-06-27",
+      "koUTC": "2026-06-27T21:00:00Z",
+      "koJST": "2026-06-28T06:00:00+09:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "home": {
+        "ja": "クロアチア",
+        "en": "Croatia"
+      },
+      "away": {
+        "ja": "ガーナ",
+        "en": "Ghana"
+      },
+      "broadcaster": "DAZN Japan",
+      "status": "scheduled",
+      "videoId": null
     }
   ]
 }

@@ -40,5 +40,11 @@
   "キュラソー": { "en": "Curacao", "alt": ["Curaçao", "CUW"] },
   "コンゴ民主共和国": { "en": "DR Congo", "alt": ["Congo DR", "COD", "DRC"] },
   "ヨルダン": { "en": "Jordan", "alt": ["JOR"] },
-  "ボスニア・ヘルツェゴビナ": { "en": "Bosnia and Herzegovina", "alt": ["Bosnia", "BIH"] }
+  "ボスニア・ヘルツェゴビナ": { "en": "Bosnia and Herzegovina", "alt": ["Bosnia", "BIH"] },
+  "フランス": { "en": "France", "alt": ["FRA"] },
+  "セネガル": { "en": "Senegal", "alt": ["SEN"] },
+  "イラク": { "en": "Iraq", "alt": ["IRQ"] },
+  "ノルウェー": { "en": "Norway", "alt": ["NOR"] },
+  "アルゼンチン": { "en": "Argentina", "alt": ["ARG"] },
+  "アルジェリア": { "en": "Algeria", "alt": ["ALG", "Algérie"] }
 }
