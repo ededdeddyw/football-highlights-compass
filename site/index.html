@@ -45,7 +45,8 @@
     line-height:1.85; -webkit-font-smoothing:antialiased; font-feature-settings:"palt" 1;}
   .name, .logo, .menu-btn{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
   .wrap{max-width:880px; margin:0 auto; padding:24px 18px 80px}
-  header.site{display:flex; align-items:center; gap:12px; padding:15px 17px; margin:2px 0 6px; border-radius:14px; background:linear-gradient(120deg,#0c1657,#1b2a78 60%,#26368f); color:#fff; box-shadow:0 6px 20px rgba(16,26,86,.22)}
+  header.site{display:flex; align-items:center; gap:12px; padding:22px 18px; margin:2px 0 6px; border-radius:14px; background:linear-gradient(120deg,rgba(10,18,74,.82),rgba(24,38,112,.66) 55%,rgba(38,54,143,.56)), url(img/hero.jpg) center 38%/cover no-repeat; color:#fff; box-shadow:0 6px 20px rgba(16,26,86,.22)}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
   header.site .home{display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; min-width:0; flex:1 1 auto}
   header.site .logo{width:34px; height:34px; border-radius:9px; flex:0 0 auto; box-shadow:0 2px 8px rgba(0,0,0,.2)}
   header.site .name{font-weight:800; letter-spacing:.01em; color:#fff; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
@@ -252,10 +253,7 @@
     </div>
   </div>
 
-  <div class="hero"><img class="bg" src="img/hero.jpg" alt="サッカースタジアム" loading="eager"><div class="ov">
-    <h1>公式サッカーハイライト、まとめて横断検索</h1>
-    <p>ワールドカップ26・Jリーグ・日本人所属クラブ。公式映像のみ・無断転載なし・ネタバレ防止。<b>出場選手で絞り込み</b>もできます。</p>
-  </div></div>
+  <h1 class="visually-hidden">公式サッカーハイライト横断検索｜ワールドカップ26・Jリーグ・日本人所属クラブ</h1>
 
   <div class="pickup-h">⚡ 注目の試合（ピックアップ）<span class="bar"></span></div>
   <div class="coverflow" id="coverflow" tabindex="0" aria-label="注目の試合カルーセル（左右の矢印で切替・中央をタップで再生）">
