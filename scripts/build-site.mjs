@@ -146,7 +146,7 @@ const HEAD = (o)=>`<!DOCTYPE html>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(o.title)}</title>
 <meta name="description" content="${escA(o.desc)}">
-<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<meta name="robots" content="${o.robots||'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0c1657">
 <link rel="canonical" href="${o.url}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -313,10 +313,14 @@ mkdirSync('site/club', { recursive:true });
 writeFileSync('site/article.css', CSS);
 
 // ========================= 試合ページ =========================
-const slugs=[];
+const slugs=[]; const noindexSlugs=new Set();
 function buildMatch(m){
   if(!m.id || slugs.includes(m.id)) return; slugs.push(m.id);
   const lg = LG[m.league]||''; const teamsTxt = m.teams.join(' vs ');
+  const sched = schedFor(m);
+  // 内容の薄いページ（W杯以外で日本人選手・見どころ・出場選手いずれも無い＝定型のみ）はnoindex（scaled content対策）
+  const thin = m.league!=='wc' && !m.players.length && !m.topic && !m.lineup;
+  if(thin) noindexSlugs.add(m.id);
   // dek（統一フォーマットのリード文）：[任意の見どころ。][対戦（大会）の公式ハイライトです。]
   let hook = '';
   if (m.players.length){
@@ -331,6 +335,8 @@ function buildMatch(m){
   if(lg) facts.push(['大会', lg]);
   facts.push(['対戦', teamsTxt||m.mt]);
   if(m.meta) facts.push(['節・日程', m.meta]);
+  if(sched?.venue) facts.push(['会場', `${sched.venue}（${sched.city||''}${sched.country?'・'+sched.country:''}）`]);
+  if(sched?.koJST) facts.push(['キックオフ', sched.koJST.replace('T',' ').replace(/:00\+09:00$/,'（日本時間）')]);
   if(m.players.length) facts.push(['日本人選手', m.jpNote||m.players.join('・')]);
   if(m.topic) facts.push(['見どころ', m.topic]);
   const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}</table></div>`;
@@ -344,7 +350,6 @@ function buildMatch(m){
   const url = `${DOMAIN}/match/${m.id}.html`;
   const catLabel = lg||'試合';
   // 日付（スケジュール優先・無ければビルド日）
-  const sched = schedFor(m);
   const upDate = sched?.koUTC || (sched?.dateLocal ? sched.dateLocal+'T12:00:00+09:00' : `${TODAY}T12:00:00+09:00`);
   // @graph: VideoObject ＋（W杯のみ）SportsEvent/BroadcastEvent ＋ BreadcrumbList
   const graph = [
@@ -362,6 +367,7 @@ function buildMatch(m){
   const head = HEAD({
     title:`${m.ttl}｜公式ハイライト${lg?'・'+lg:''} - Football Highlights Compass`,
     ogtitle:`${m.ttl}｜公式ハイライト`, desc, url, ogimg, ogtype:'video.other',
+    robots: thin?'noindex,follow':undefined,
     published:upDate, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph
   });
   const out = head + TOPBAR + `<article class="post">
@@ -477,7 +483,7 @@ for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
-for(const s of slugs) sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+for(const s of slugs){ if(noindexSlugs.has(s)) continue; sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`; }
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
 console.log(`試合ページ: ${slugs.length} / 国: ${nc} / クラブ: ${ncl} / sitemap URL: ${slugs.length + new Set(Object.values(ENTITY_PAGES)).size + 1}`);
