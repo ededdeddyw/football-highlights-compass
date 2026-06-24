@@ -170,13 +170,17 @@ const TOPBAR = `<nav class="topbar"><div class="tinner">
   <a class="tback" href="../">← トップ</a>
 </div></nav>`;
 
+// クリック時の演出（Loading…→Go!）。a.mcard クリックを横取りして同じ演出で遷移
+const BOOM = `<div class="boom" id="boom" aria-hidden="true"><div class="boom-bg"></div><div class="boom-center"><div class="boom-load">Loading…</div><div class="boom-stamp"><b>Go!</b></div><div class="boom-sub"></div></div></div>
+<script>(function(){var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;var b=document.getElementById('boom');if(!b)return;var s=b.querySelector('.boom-sub');function go(h,l){if(rm){location.href=h;return;}s.textContent=l||'';b.className='boom go phase-load';void b.offsetWidth;setTimeout(function(){b.classList.remove('phase-load');b.classList.add('phase-go');},420);setTimeout(function(){b.classList.add('leaving');},760);setTimeout(function(){location.href=h;},860);}document.addEventListener('click',function(e){var a=e.target.closest('a.mcard');if(!a)return;if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return;e.preventDefault();var t=a.querySelector('.mttl');go(a.getAttribute('href'),t?t.textContent.trim():'');});window.addEventListener('pageshow',function(){b.className='boom';});}())</script>`;
+
 const FOOTER = (extra='')=>`<footer class="post-foot">
   ${extra}
   <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
   <p><a href="../">▶ トップで他の試合を探す（W杯・Jリーグ・日本人所属クラブ）</a></p>
   <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
   <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
-</footer></article></body></html>`;
+</footer></article>${BOOM}</body></html>`;
 
 function crumb(items){ return `<nav class="crumb">${items.map((it,i)=> it.href?`<a href="${it.href}">${esc(it.label)}</a>`:`<span>${esc(it.label)}</span>`).join('<i>›</i>')}</nav>`; }
 
@@ -291,6 +295,26 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .ehero .crest{flex:0 0 auto;width:74px;height:74px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-size:34px;overflow:hidden}
 .ehero .crest img{width:46px;height:auto;border-radius:5px;box-shadow:0 1px 6px rgba(0,0,0,.4)}
 .score .reveal-score{font-size:14.5px;font-weight:800;padding:8px 16px;border-radius:10px;border:1px solid var(--line2);background:var(--card2);color:var(--accent);cursor:pointer}
+/* クリック時の演出（Loading…→Go!）個別ページ用 */
+.boom{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;pointer-events:none}
+.boom.go{display:flex}
+.boom-bg{position:absolute;inset:0;opacity:0;background:radial-gradient(125% 125% at 50% 38%, rgba(22,34,108,.88), rgba(7,11,34,.97));backdrop-filter:blur(7px) saturate(1.15);-webkit-backdrop-filter:blur(7px) saturate(1.15)}
+.boom.go .boom-bg{animation:boomBgIn .2s ease-out forwards}
+.boom.leaving .boom-bg{animation:boomBgOut .34s ease-in forwards}
+.boom-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.boom-load{display:none;font-size:clamp(20px,5.4vw,33px);font-weight:800;letter-spacing:.16em;color:#dbe2fb}
+.boom.phase-load .boom-load{display:block;animation:boomBlink .2s ease-in-out 2}
+.boom-stamp{display:none;width:clamp(132px,33vw,184px);height:clamp(132px,33vw,184px);border-radius:50%;border:6px solid #ff463b;color:#ff564c;align-items:center;justify-content:center;transform:rotate(-9deg);box-shadow:0 0 0 2px rgba(255,70,59,.22) inset,0 12px 44px rgba(0,0,0,.45);text-shadow:0 1px 0 rgba(0,0,0,.18)}
+.boom-stamp b{font-size:clamp(42px,12vw,72px);font-weight:900;letter-spacing:.02em}
+.boom.phase-go .boom-stamp{display:flex;animation:boomStamp .42s cubic-bezier(.2,1.4,.35,1) forwards}
+.boom-sub{display:none;font-size:clamp(13px,3.2vw,18px);font-weight:700;color:#aeb9e6;letter-spacing:.05em}
+.boom.go .boom-sub{display:block;animation:boomSubIn .5s ease-out forwards}
+@keyframes boomBgIn{from{opacity:0}to{opacity:1}}
+@keyframes boomBgOut{from{opacity:1}to{opacity:0}}
+@keyframes boomBlink{0%,100%{opacity:.18}50%{opacity:1}}
+@keyframes boomStamp{0%{transform:scale(2.5) rotate(-17deg);opacity:0;filter:blur(3px)}55%{transform:scale(.9) rotate(-9deg);opacity:1;filter:blur(0)}72%{transform:scale(1.05) rotate(-9deg)}100%{transform:scale(1) rotate(-9deg);opacity:1}}
+@keyframes boomSubIn{0%{opacity:0;transform:translateY(6px)}60%{opacity:1}100%{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.boom.go *{animation:none!important}}
 .ehero h1{font-size:30px;font-weight:900;letter-spacing:.01em;margin:0 0 4px;line-height:1.2}
 .ehero .esub{color:#cdd6f6;font-size:13.5px;font-weight:600}
 .post-foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
