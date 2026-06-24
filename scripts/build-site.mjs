@@ -29,6 +29,10 @@ function schedFor(m){
 let CREST = {};
 try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('data/club-crests.json','utf8')); } catch(e){ console.warn('crest読込失敗:', e.message); }
 
+// ---------- スコア（videoId→"2-3" 等。実結果ベースで data/scores.json に手動記録。ネタバレOFF時のみ各一覧で表示） ----------
+let SCORES = {};
+try { if (existsSync('data/scores.json')) SCORES = JSON.parse(readFileSync('data/scores.json','utf8')); } catch(e){ console.warn('scores読込失敗:', e.message); }
+
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
 const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/","logo":DOMAIN+"/apple-touch-icon.png"};
 // 配列なら @graph でまとめる
@@ -121,7 +125,10 @@ function norm(m){
   let topic=''; const tm = m.meta.match(/[・/]\s*([^・/]*(?:弾|ゴール|アシスト|勝|敗|ドロー|無失点|セーブ|MOM|優勝|首位|ダービー|決定|突破|快勝|大勝|初[^・/]*)[^・/]*)\s*$/); if (tm) topic=tm[1].trim();
   const dual = /class="dualnote"/.test(body);
   const lineup = /class="lineup"/.test(body);
-  return { id, ttl:m.ttl, mt, prefix, meta:m.meta, league, teams, players, jpNote, topic, dual, lineup, body };
+  // スコア：data/scores.json 優先、無ければ静的 details.match の .score（<span class="n">）から抽出
+  let score = SCORES[id] || '';
+  if(!score){ const sm = body.match(/<div class="score">([\s\S]*?)<\/div>/); if(sm){ const ns = (sm[1].match(/<span class="n">([^<]*)<\/span>/g)||[]).map(x=>x.replace(/<[^>]+>/g,'').trim()); if(ns.length>=2) score = ns[0]+'-'+ns[1]; } }
+  return { id, ttl:m.ttl, mt, prefix, meta:m.meta, league, teams, players, jpNote, topic, dual, lineup, body, score };
 }
 
 const all = [...staticMatches().map(norm), ...EXTRA_WC.map(norm), ...EXTRA_JL.map(norm), ...EXTRA_CLUB.map(norm)];
@@ -163,6 +170,7 @@ const HEAD = (o)=>`<!DOCTYPE html>
 ${o.published?`<meta property="article:published_time" content="${o.published}">`:''}${o.modified?`<meta property="article:modified_time" content="${o.modified}">`:''}
 ${o.jsonld?`<script type="application/ld+json">${JSON.stringify(ld(o.jsonld))}</script>`:''}
 <link rel="stylesheet" href="../article.css">
+<script>try{if(localStorage.getItem('fhc_spoiler')==='0')document.documentElement.className+=' spoiler-off';}catch(e){}</script>
 </head><body>`;
 
 const TOPBAR = `<nav class="topbar"><div class="tinner">
@@ -188,8 +196,9 @@ function crumb(items){ return `<nav class="crumb">${items.map((it,i)=> it.href?`
 function matchCard(m, sub){
   const t = titleWithFlags(m);
   const thumb = m.id?`https://i.ytimg.com/vi/${m.id}/hqdefault.jpg`:'';
+  const sc = m.score?`<span class="mscore">${esc(m.score)}</span>`:'';
   return `<a class="mcard" href="../match/${m.id}.html">
-    <span class="mthumb">${thumb?`<img src="${thumb}" alt="" loading="lazy">`:''}<span class="mplay">▶</span></span>
+    <span class="mthumb">${thumb?`<img src="${thumb}" alt="" loading="lazy">`:''}<span class="mplay">▶</span>${sc}</span>
     <span class="mttl">${t}</span>${sub?`<span class="msub">${esc(sub)}</span>`:''}</a>`;
 }
 function titleWithFlags(m){
@@ -280,6 +289,8 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .mthumb{position:relative;aspect-ratio:16/9;background:#0b1430;display:block}
 .mthumb img{width:100%;height:100%;object-fit:cover;display:block}
 .mplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:rgba(225,29,72,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.mscore{position:absolute;right:6px;top:6px;display:none;font-size:13px;font-weight:900;color:#fff;background:rgba(11,22,87,.92);padding:3px 9px;border-radius:8px;letter-spacing:.04em;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+html.spoiler-off .mscore{display:inline-block}
 .mttl{padding:10px 12px 4px;font-size:13px;font-weight:700;line-height:1.46}
 .mttl .flag{height:13px;border-radius:2px;vertical-align:-2px}
 .mttl em{font-style:normal;color:var(--soft);font-size:.85em;margin:0 2px}
@@ -547,8 +558,11 @@ for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
   const map = JSON.stringify(ENTITY_PAGES);
   const crestMap = {};
   for(const [name,info] of Object.entries(CLUBS)) if(CREST[info.slug]) crestMap[name]=CREST[info.slug];
+  const scoreMap = {};
+  for(const m of data){ if(m.id && m.score) scoreMap[m.id]=m.score; }
   let next = html.replace(/\/\*ENTITY_PAGES_START\*\/[\s\S]*?\/\*ENTITY_PAGES_END\*\//, `/*ENTITY_PAGES_START*/\nvar ENTITY_PAGES = ${map};\n/*ENTITY_PAGES_END*/`);
   next = next.replace(/\/\*CLUB_CRESTS_START\*\/[\s\S]*?\/\*CLUB_CRESTS_END\*\//, `/*CLUB_CRESTS_START*/\nvar CLUB_CRESTS = ${JSON.stringify(crestMap)};\n/*CLUB_CRESTS_END*/`);
+  next = next.replace(/\/\*MATCH_SCORES_START\*\/[\s\S]*?\/\*MATCH_SCORES_END\*\//, `/*MATCH_SCORES_START*/\nvar MATCH_SCORES = ${JSON.stringify(scoreMap)};\n/*MATCH_SCORES_END*/`);
   writeFileSync('site/index.html', next);
 }
 

@@ -150,6 +150,7 @@
   .pcard .thumb img{width:100%; height:100%; object-fit:cover; display:block}
   .pcard .play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:rgba(225,29,72,.93); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 3px 12px rgba(0,0,0,.35)}
   .pcard .pbadge{position:absolute; left:8px; top:8px; font-size:10px; font-weight:800; color:#fff; background:rgba(11,22,87,.85); padding:3px 8px; border-radius:999px}
+  .pcard .pscore{position:absolute; right:8px; top:8px; font-size:13px; font-weight:900; color:#fff; background:rgba(11,22,87,.92); padding:3px 9px; border-radius:8px; letter-spacing:.04em; box-shadow:0 2px 8px rgba(0,0,0,.32)}
   .pcard .pt{padding:9px 11px 11px; font-size:12.5px; font-weight:700; line-height:1.42}
   /* ハンバーガーメニュー */
   .menu-btn{margin-left:auto; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.28); color:#fff; width:40px; height:40px; border-radius:10px; font-size:19px; cursor:pointer; line-height:1; display:flex; align-items:center; justify-content:center; flex:0 0 auto}
@@ -1167,6 +1168,9 @@ var ENTITY_PAGES = {"日本":"country/japan.html","ブラジル":"country/brazil
 /*CLUB_CRESTS_START*/
 var CLUB_CRESTS = {"ソシエダ":"https://r2.thesportsdb.com/images/media/team/badge/vptvpr1473502986.png","パルマ":"https://r2.thesportsdb.com/images/media/team/badge/6yiaxs1627406063.png","モナコ":"https://r2.thesportsdb.com/images/media/team/badge/exjf5l1678808044.png","スポルティング":"https://r2.thesportsdb.com/images/media/team/badge/ohj6ih1628855978.png","フランクフルト":"https://r2.thesportsdb.com/images/media/team/badge/rurwpy1473453269.png","マインツ":"https://r2.thesportsdb.com/images/media/team/badge/fhm9v51552134916.png","ブレーメン":"https://r2.thesportsdb.com/images/media/team/badge/tkvqan1716960454.png","バイエルン":"https://r2.thesportsdb.com/images/media/team/badge/01ogkh1716960412.png","ライプツィヒ":"https://r2.thesportsdb.com/images/media/team/badge/zjgapo1594244951.png","鹿島アントラーズ":"https://r2.thesportsdb.com/images/media/team/badge/2s8ady1578238881.png","浦和レッズ":"https://r2.thesportsdb.com/images/media/team/badge/ce3lhk1578239741.png","川崎フロンターレ":"https://r2.thesportsdb.com/images/media/team/badge/c6pot51578239112.png","FC東京":"https://r2.thesportsdb.com/images/media/team/badge/9ls6lr1698754779.png","東京ヴェルディ":"https://r2.thesportsdb.com/images/media/team/badge/9dqjaw1590071011.png","横浜F・マリノス":"https://r2.thesportsdb.com/images/media/team/badge/rgeshm1578240000.png","ヴィッセル神戸":"https://r2.thesportsdb.com/images/media/team/badge/2axjch1578239819.png","京都サンガF.C.":"https://r2.thesportsdb.com/images/media/team/badge/5akmlf1590070888.png","ガンバ大阪":"https://r2.thesportsdb.com/images/media/team/badge/tq9edk1638813311.png","セレッソ大阪":"https://r2.thesportsdb.com/images/media/team/badge/a7oyde1706245108.png","サンフレッチェ広島":"https://r2.thesportsdb.com/images/media/team/badge/gsgkxj1590068965.png","名古屋グランパス":"https://r2.thesportsdb.com/images/media/team/badge/a1ucr01706244426.png","柏レイソル":"https://r2.thesportsdb.com/images/media/team/badge/mwnejb1578238986.png","アルビレックス新潟":"https://r2.thesportsdb.com/images/media/team/badge/l16fvz1590070788.png","ジュビロ磐田":"https://r2.thesportsdb.com/images/media/team/badge/bmdnci1590070867.png","バルセロナ":"https://r2.thesportsdb.com/images/media/team/badge/wq9sir1639406443.png","アトレティコ":"https://r2.thesportsdb.com/images/media/team/badge/0ulh3q1719984315.png","バレンシア":"https://r2.thesportsdb.com/images/media/team/badge/dm8l6o1655594864.png","ナポリ":"https://r2.thesportsdb.com/images/media/team/badge/l8qyxv1742982541.png","ローマ":"https://r2.thesportsdb.com/images/media/team/badge/jwro2s1760820674.png","ミラン":"https://r2.thesportsdb.com/images/media/team/badge/wvspur1448806617.png","PSG":"https://r2.thesportsdb.com/images/media/team/badge/26f50y1705434178.png","マルセイユ":"https://r2.thesportsdb.com/images/media/team/badge/c6bazh1779212287.png","ドルトムント":"https://r2.thesportsdb.com/images/media/team/badge/tqo8ge1716960353.png","ベンフィカ":"https://r2.thesportsdb.com/images/media/team/badge/hj4kyc1781152436.png","ポルト":"https://r2.thesportsdb.com/images/media/team/badge/xu47rb1628855600.png"};
 /*CLUB_CRESTS_END*/
+/*MATCH_SCORES_START*/
+var MATCH_SCORES = {"TXyBRmgFIs4":"0-4","3jIMk43CECY":"2-2","Mr3hSU26N9c":"4-0","xulpkDJlelM":"2-3"};
+/*MATCH_SCORES_END*/
 var c;
 if(c=document.getElementById('cnt-wc')) c.textContent = 10 + EXTRA_WC.length;
 if(c=document.getElementById('cnt-jl')) c.textContent = 9 + EXTRA_JL.length;
@@ -1214,8 +1218,10 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     if(state.page>pages) state.page=pages; if(state.page<1) state.page=1;
     var items=lastList.slice((state.page-1)*PAGE, (state.page-1)*PAGE+PAGE);
     var showScore = !spoilerOn();
+    var SC = (typeof MATCH_SCORES!=='undefined') ? MATCH_SCORES : {};
     grid.innerHTML = items.length ? items.map(function(g){
-      var sb = (showScore && g.score) ? '<span class="gscore">'+g.score+'</span>' : '';
+      var gs = SC[g.id] || g.score;
+      var sb = (showScore && gs) ? '<span class="gscore">'+gs+'</span>' : '';
       return '<a class="gcard" href="match/'+g.id+'.html"><span class="gthumb"><img src="https://i.ytimg.com/vi/'+g.id+'/hqdefault.jpg" alt="" loading="lazy"><span class="gplay">▶</span>'+sb+'</span><span class="gttl">'+g.title+'</span></a>';
     }).join('') : '<p style="color:var(--muted);padding:24px 0;text-align:center;grid-column:1/-1">該当する試合がありません</p>';
     if(rc) rc.textContent = total+' 試合';
@@ -1272,7 +1278,9 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   function spoilerOn(){ try{ return localStorage.getItem('fhc_spoiler')!=='0'; }catch(e){ return true; } }
   var ST=document.getElementById('spoilerToggle');
   function paintST(){ if(!ST)return; var on=spoilerOn(); ST.setAttribute('aria-pressed', on?'true':'false'); ST.className='spoiler-toggle'+(on?' on':''); ST.textContent = on?'🟢 ネタバレ防止：ON（一覧・試合ページでスコアを隠す）':'⚪ ネタバレ防止：OFF（一覧でもスコアを表示）'; }
-  if(ST){ paintST(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); renderPage(); }); }
+  // カルーセル等の静的カードにもスコアバッジを反映（ネタバレOFF時のみ）
+  function paintCarousel(){ var show=!spoilerOn(); var SC=(typeof MATCH_SCORES!=='undefined')?MATCH_SCORES:{}; [].forEach.call(document.querySelectorAll('.pcard'), function(a){ var old=a.querySelector('.pscore'); if(old) old.parentNode.removeChild(old); if(!show) return; var hm=(a.getAttribute('href')||'').match(/match\/([^.\/]+)\.html/); var id=hm&&hm[1], sc=id&&SC[id]; if(!sc) return; var th=a.querySelector('.thumb'); if(!th) return; var s=document.createElement('span'); s.className='pscore'; s.textContent=sc; th.appendChild(s); }); }
+  if(ST){ paintST(); paintCarousel(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); renderPage(); paintCarousel(); }); }
 
   function setSearch(term){ var q=document.getElementById('q'); q.value=term; state.q=term; state.league='all'; state.player='all'; apply(); closeMenu(); document.querySelectorAll('.ac-list').forEach(function(l){l.classList.remove('open');}); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); }
 
