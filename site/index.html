@@ -44,7 +44,29 @@
     font-family:"Helvetica Neue", Helvetica, Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", sans-serif;
     line-height:1.85; -webkit-font-smoothing:antialiased; font-feature-settings:"palt" 1;}
   .name, .logo, .menu-btn{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
-  .wrap{max-width:880px; margin:0 auto; padding:24px 18px 80px}
+  .wrap{max-width:1720px; margin:0 auto; padding:16px 22px 72px}
+  /* ===== 全幅3カラム・アプリシェル（左=ナビ / 中=メイン / 右=検索+絞り込み） ===== */
+  .appgrid{display:grid; grid-template-columns:232px minmax(0,1fr) 324px; grid-template-areas:"left main right"; gap:22px; align-items:start; margin-top:14px}
+  .col-left{grid-area:left}
+  .col-main{grid-area:main; min-width:0}
+  .col-right{grid-area:right}
+  .col-left, .col-right{position:sticky; top:14px; align-self:start; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; box-shadow:0 2px 10px rgba(20,30,90,.05)}
+  .col-left{max-height:calc(100vh - 26px); overflow:auto; overscroll-behavior:contain}
+  .side-head{display:flex; align-items:center; justify-content:space-between; margin:0 0 10px}
+  .side-head b{font-size:13px; letter-spacing:.03em; color:var(--text)}
+  .side-head .menu-close{display:none; background:none; border:0; font-size:22px; line-height:1; color:var(--muted); cursor:pointer}
+  .col-right .side-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:14px 2px 7px}
+  .nav-backdrop{display:none; position:fixed; inset:0; background:rgba(8,14,40,.5); z-index:55}
+  @media(max-width:1080px){
+    .appgrid{grid-template-columns:1fr; grid-template-areas:"right" "main"; gap:14px}
+    .col-right{position:static; max-height:none; overflow:visible}
+    .col-left{position:fixed; top:0; left:0; width:min(86%,330px); height:100%; max-height:none; z-index:60; border-radius:0; transform:translateX(-100%); transition:transform .22s; padding:16px 16px 40px}
+    body.nav-open .col-left{transform:translateX(0)}
+    body.nav-open .nav-backdrop{display:block}
+    body.nav-open{overflow:hidden}
+    .side-head .menu-close{display:flex}
+    .menu-btn{display:flex}
+  }
   header.site{display:flex; align-items:center; gap:12px; padding:22px 18px; margin:2px 0 6px; border-radius:14px; background:linear-gradient(120deg,rgba(10,18,74,.82),rgba(24,38,112,.66) 55%,rgba(38,54,143,.56)), url(img/hero.jpg) center 38%/cover no-repeat; color:#fff; box-shadow:0 6px 20px rgba(16,26,86,.22)}
   .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
   header.site .home{display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; min-width:0; flex:1 1 auto}
@@ -155,6 +177,7 @@
   /* ハンバーガーメニュー */
   .menu-btn{margin-left:auto; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.28); color:#fff; width:40px; height:40px; border-radius:10px; font-size:19px; cursor:pointer; line-height:1; display:flex; align-items:center; justify-content:center; flex:0 0 auto}
   .menu-btn:hover{background:rgba(255,255,255,.26)}
+  @media(min-width:1081px){ .menu-btn{display:none} }
   .menu-overlay{position:fixed; inset:0; background:rgba(8,14,40,.55); z-index:60; display:none}
   .menu-overlay.open{display:block}
   .menu-panel{position:absolute; top:0; right:0; width:min(88%,360px); height:100%; background:var(--bg); box-shadow:-8px 0 30px rgba(10,18,60,.3); overflow-y:auto; padding:16px 16px 40px; transform:translateX(100%); transition:transform .22s}
@@ -268,18 +291,18 @@
         <small>公式ハイライトだけを、日本語で探しやすく。</small>
       </span>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="ナビを開く">☰</button>
   </header>
-  <div class="menu-overlay" id="menuOverlay">
-    <div class="menu-panel">
-      <div class="menu-top"><b>絞り込み・横断検索</b><button class="menu-close" id="menuClose" aria-label="閉じる">×</button></div>
-      <div class="ac-wrap"><input id="mq" type="search" placeholder="🔎 何でも検索（チーム・選手・大会）" autocomplete="off" style="width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--text);font-size:15px;-webkit-appearance:none"><div class="ac-list" id="mqList"></div></div>
-      <div id="menuBody"></div>
-    </div>
-  </div>
 
   <h1 class="visually-hidden">公式サッカーハイライト横断検索｜ワールドカップ26・Jリーグ・日本人所属クラブ</h1>
 
+  <div class="appgrid">
+    <aside class="col-left" id="navSidebar">
+      <div class="side-head"><b>⚽ 横断ナビ</b><button class="menu-close" id="menuClose" aria-label="閉じる">×</button></div>
+      <div id="menuBody"></div>
+    </aside>
+
+    <main class="col-main">
   <div class="pickup-h">⚡ 注目の試合（ピックアップ）<span class="bar"></span></div>
   <div class="coverflow" id="coverflow" tabindex="0" aria-label="注目の試合カルーセル（左右の矢印で切替・中央をタップで再生）">
     <div class="cf-stage" id="cfStage">
@@ -295,18 +318,21 @@
     <div class="cf-dots" id="cfDots"></div>
   </div>
 
-  <div class="filterbar">
-    <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
-    <div class="ac-wrap"><input id="q" type="search" placeholder="🔎 チーム・選手・大会で検索（例：久保、バルセロナ、ブラジル、鹿島）" autocomplete="off"><div class="ac-list" id="qList"></div></div>
-    <div class="chips-label">リーグ・大会</div>
-    <div class="chips" id="league-chips"></div>
-    <div class="chips-label">日本人選手</div>
-    <div class="chips" id="player-chips"></div>
-    <div class="result-count" id="result-count"></div>
-  </div>
-
   <div class="mgrid" id="match-grid"></div>
   <div class="gpager" id="grid-pager"></div>
+    </main>
+
+    <aside class="col-right">
+      <div class="ac-wrap"><input id="q" type="search" placeholder="🔎 チーム・選手・大会で検索（例：久保、鹿島、ブラジル）" autocomplete="off"><div class="ac-list" id="qList"></div></div>
+      <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
+      <div class="side-h">リーグ・大会で絞り込み</div>
+      <div class="chips" id="league-chips"></div>
+      <div class="side-h">日本人選手で絞り込み</div>
+      <div class="chips" id="player-chips"></div>
+      <div class="result-count" id="result-count"></div>
+    </aside>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <h3 class="kicker">今週のまとめ（ネタバレなし）</h3>
   <table class="summary">
@@ -1271,7 +1297,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), hay:(c._hay||''), score:score });
   });
   [].forEach.call(document.querySelectorAll('details.match, h2.sec, .sec-desc, table.summary, .legend, h3.kicker'), function(e){ e.style.display='none'; });
-  if(pager) pager.addEventListener('click', function(e){ var b=e.target.closest('.pg-btn'); if(!b||b.disabled)return; state.page += (+b.getAttribute('data-d')); renderPage(); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); });
+  if(pager) pager.addEventListener('click', function(e){ var b=e.target.closest('.pg-btn'); if(!b||b.disabled)return; state.page += (+b.getAttribute('data-d')); renderPage(); var fb=document.querySelector('.col-main'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); });
   if(grid) grid.addEventListener('click', function(e){ var a=e.target.closest('a.gcard'); if(!a)return; if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return; if(window.fhcGo){ e.preventDefault(); var t=a.querySelector('.gttl'); window.fhcGo(a.getAttribute('href'), t?t.textContent.trim():''); } });
 
   // ===== ネタバレ防止トグル（試合ページのスコア表示/非表示の既定を決める。localStorageに保存） =====
@@ -1282,7 +1308,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   function paintCarousel(){ var show=!spoilerOn(); var SC=(typeof MATCH_SCORES!=='undefined')?MATCH_SCORES:{}; [].forEach.call(document.querySelectorAll('.pcard'), function(a){ var old=a.querySelector('.pscore'); if(old) old.parentNode.removeChild(old); if(!show) return; var hm=(a.getAttribute('href')||'').match(/match\/([^.\/]+)\.html/); var id=hm&&hm[1], sc=id&&SC[id]; if(!sc) return; var th=a.querySelector('.thumb'); if(!th) return; var s=document.createElement('span'); s.className='pscore'; s.textContent=sc; th.appendChild(s); }); }
   if(ST){ paintST(); paintCarousel(); ST.addEventListener('click', function(){ try{ localStorage.setItem('fhc_spoiler', spoilerOn()?'0':'1'); }catch(e){} paintST(); renderPage(); paintCarousel(); }); }
 
-  function setSearch(term){ var q=document.getElementById('q'); q.value=term; state.q=term; state.league='all'; state.player='all'; apply(); closeMenu(); document.querySelectorAll('.ac-list').forEach(function(l){l.classList.remove('open');}); var fb=document.querySelector('.filterbar'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); }
+  function setSearch(term){ var q=document.getElementById('q'); q.value=term; state.q=term; state.league='all'; state.player='all'; apply(); closeMenu(); document.querySelectorAll('.ac-list').forEach(function(l){l.classList.remove('open');}); var fb=document.querySelector('.col-main'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); }
 
   // ===== オートコンプリート（全テキスト入力に付与） =====
   function buildSug(raw){
@@ -1324,11 +1350,12 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
       '<div class="menu-sec"><h4>🛡️ クラブ</h4><div class="menu-chips">'+chips(clubs)+'</div></div>';
     Array.prototype.forEach.call(mb.querySelectorAll('a[data-term]'), function(a){ a.addEventListener('click', function(){ setSearch(a.getAttribute('data-term')); }); });
   }
-  function openMenu(){ var o=document.getElementById('menuOverlay'); if(o){o.classList.add('open'); document.body.style.overflow='hidden';} }
-  function closeMenu(){ var o=document.getElementById('menuOverlay'); if(o){o.classList.remove('open'); document.body.style.overflow='';} }
+  // 左ナビ（サイドバー）：デスクトップは常時表示、モバイルはハンバーガーでドロワー開閉
+  function openMenu(){ document.body.classList.add('nav-open'); }
+  function closeMenu(){ document.body.classList.remove('nav-open'); }
   var mBtn=document.getElementById('menuBtn'); if(mBtn) mBtn.addEventListener('click', openMenu);
   var mClose=document.getElementById('menuClose'); if(mClose) mClose.addEventListener('click', closeMenu);
-  var mOv=document.getElementById('menuOverlay'); if(mOv) mOv.addEventListener('click', function(e){ if(e.target===mOv) closeMenu(); });
+  var mBack=document.getElementById('navBackdrop'); if(mBack) mBack.addEventListener('click', closeMenu);
 
   apply();
 })();
