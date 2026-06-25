@@ -406,7 +406,25 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .dazn-cta .dc-btn:hover{filter:brightness(1.05)}
 .dazn-cta .dc-pr{position:absolute;top:7px;right:10px;font-size:9.5px;font-weight:800;letter-spacing:.06em;color:#9fb0e8;border:1px solid rgba(159,176,232,.5);border-radius:4px;padding:1px 5px}
 .ent-side .dazn-cta{margin:14px 0 0;padding:14px 16px}
-.ent-side .dazn-cta .dc-btn{padding:10px 16px;font-size:13.5px}`;
+.ent-side .dazn-cta .dc-btn{padding:10px 16px;font-size:13.5px}
+/* グループページ：順位表＆日程 */
+.standings{width:100%;border-collapse:collapse;font-size:13.5px}
+.standings th{color:var(--muted);font-weight:700;text-align:center;padding:7px 4px;border-bottom:2px solid var(--line2);font-size:12px}
+.standings td{text-align:center;padding:8px 4px;border-bottom:1px solid var(--line)}
+.standings td.st-team{text-align:left;white-space:nowrap}
+.standings td.st-team a{color:var(--ink);text-decoration:none;font-weight:700}
+.standings .flag{height:13px;vertical-align:-2px;margin-right:5px;border-radius:2px}
+.note-sm{font-size:12px;color:var(--muted);margin:8px 2px 0;line-height:1.7}
+.gx-list{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.gx-row{display:grid;grid-template-columns:54px 1fr auto auto;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line2);border-radius:11px;padding:11px 14px}
+.gx-row .gx-rd{font-size:11.5px;color:var(--muted);font-weight:700}
+.gx-row .gx-tm{font-size:14.5px;font-weight:700;color:var(--ink);min-width:0}
+.gx-row .gx-tm em{font-style:normal;color:var(--soft);font-size:.85em;margin:0 4px}
+.gx-row .gx-tm .flag{height:14px;vertical-align:-2px;margin:0 3px;border-radius:2px}
+.gx-row .gx-meta{font-size:12px;color:var(--muted);white-space:nowrap}
+.gx-row .gx-link{font-size:13px;font-weight:800;color:#fff;background:var(--accent2);padding:7px 13px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.gx-row .gx-soon{font-size:12px;color:var(--soft);white-space:nowrap}
+@media(max-width:620px){.gx-row{grid-template-columns:1fr auto;gap:4px 10px}.gx-row .gx-rd{grid-column:1/-1}.gx-row .gx-meta{grid-column:1;font-size:11.5px}}`;
 
 // 広告枠（slot は AdSense 管理画面で作成した広告ユニットIDに置換する）
 const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7948789271209448" data-ad-slot="__AD_SLOT__" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script></div>`;
@@ -641,6 +659,7 @@ const GUIDES = [
       </div>
       ${jp.length?`<h2 class="lined">日本代表の試合</h2>${cardGrid(jp)}`:''}
       ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
+      ${(()=>{const ls=[...new Set(SCHEDULE.filter(s=>s.stage==='group'&&s.group).map(s=>s.group))].sort(); return ls.length?`<h2 class="lined">グループ別ページ（順位・日程・ハイライト）</h2><div class="chips">${ls.map(L=>`<a href="../group/${L.toLowerCase()}.html">グループ${L}</a>`).join('')}</div>`:'';})()}
       <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
       <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
     } },
@@ -677,6 +696,59 @@ for(const g of GUIDES){
   guideUrls.push(url);
 }
 
+// ========================= W杯 グループ個別ページ（展望・暫定順位・日程・ハイライト・国リンク） =========================
+mkdirSync('site/group', { recursive:true });
+const groupUrls = [];
+{
+  const gAll = SCHEDULE.filter(s=>s.stage==='group' && s.group);
+  const letters = [...new Set(gAll.map(s=>s.group))].sort();
+  const wcByTeams = new Map();
+  for(const m of data){ if(m.league==='wc' && m.id && m.teams.length===2) wcByTeams.set([...m.teams].sort().join('|'), m); }
+  const rOrd = {'第1節':1,'第2節':2,'第3節':3};
+  for(const L of letters){
+    const fx = gAll.filter(s=>s.group===L).sort((a,b)=>(rOrd[a.round]||9)-(rOrd[b.round]||9) || (a.koUTC||'').localeCompare(b.koUTC||''));
+    const teams = [...new Set(fx.flatMap(f=>[f.home&&f.home.ja, f.away&&f.away.ja].filter(Boolean)))];
+    const tbl={}; teams.forEach(t=>tbl[t]={p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
+    for(const f of fx){ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; if(!h||!a||!tbl[h]||!tbl[a]) continue;
+      const m=wcByTeams.get([h,a].sort().join('|')); if(!m||!m.score) continue;
+      const sc=m.score.match(/^(\d+)-(\d+)$/); if(!sc) continue;
+      const hg = m.teams[0]===h?+sc[1]:+sc[2], ag = m.teams[0]===h?+sc[2]:+sc[1];
+      tbl[h].p++; tbl[a].p++; tbl[h].gf+=hg; tbl[h].ga+=ag; tbl[a].gf+=ag; tbl[a].ga+=hg;
+      if(hg>ag){tbl[h].w++;tbl[h].pts+=3;tbl[a].l++;} else if(hg<ag){tbl[a].w++;tbl[a].pts+=3;tbl[h].l++;} else {tbl[h].d++;tbl[a].d++;tbl[h].pts++;tbl[a].pts++;}
+    }
+    const played = Object.values(tbl).reduce((s,x)=>s+x.p,0)/2;
+    const ranked = teams.slice().sort((x,y)=> tbl[y].pts-tbl[x].pts || (tbl[y].gf-tbl[y].ga)-(tbl[x].gf-tbl[x].ga) || tbl[y].gf-tbl[x].gf || x.localeCompare(y));
+    const standings = played>0 ? `<h2 class="lined">グループ${L} 順位（暫定）</h2><div class="factcard"><table class="standings"><tr><th>#</th><th>国</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得</th><th>失</th><th>差</th><th>点</th></tr>${ranked.map((t,i)=>{const r=tbl[t];const gd=r.gf-r.ga;const lk=PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`${flagImg(t)}${esc(t)}`;return `<tr><td>${i+1}</td><td class="st-team">${lk}</td><td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gf}</td><td>${r.ga}</td><td>${gd>=0?'+':''}${gd}</td><td><b>${r.pts}</b></td></tr>`;}).join('')}</table></div><p class="note-sm">※当サイト掲載分の結果から集計した暫定順位（${played}/${fx.length}試合）。公式の最終順位とは異なる場合があります。</p>` : '';
+    const fixHtml = fx.map(f=>{ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; const m=h&&a&&wcByTeams.get([h,a].sort().join('|'));
+      const d=(f.koJST||'').slice(5,16).replace('T',' ').replace('-','/');
+      const right = m ? `<a class="gx-link" href="../match/${m.id}.html">▶ ハイライト</a>` : `<span class="gx-soon">準備中</span>`;
+      return `<div class="gx-row"><span class="gx-rd">${esc(f.round||'')}</span><span class="gx-tm">${flagImg(h)}${esc(h||'')} <em>vs</em> ${flagImg(a)}${esc(a||'')}</span><span class="gx-meta">${d}${f.venue?'・'+esc(f.venue):''}</span>${right}</div>`;
+    }).join('');
+    const teamLines = teams.map(t=>{const i=COUNTRIES[t];return i?`${esc(t)}（${esc(i.peak||i.confed||'')}）`:esc(t);}).join('、');
+    const outlook = `グループ${L}は ${teams.map(esc).join('・')} の${teams.length}か国による争い。${teamLines?teamLines+'。':''}各国の展望・歴史・ゆかりの日本人選手は国ページで深掘りできます。`;
+    const countryChips = teams.map(t=>PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`<span class="chip">${flagImg(t)}${esc(t)}</span>`).join('');
+    const url = `${DOMAIN}/group/${L.toLowerCase()}.html`;
+    const title = `FIFAワールドカップ2026 グループ${L}｜順位・全試合ハイライト・日程`;
+    const desc = `W杯2026 グループ${L}（${teams.join('・')}）の暫定順位・全試合の公式ハイライト・日程会場・各国ページ。公式映像のみ・ネタバレ防止。`.slice(0,120);
+    const cg = [ {"@type":"WebPage","name":title,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'W杯26',url:`${DOMAIN}/?league=wc`},{name:`グループ${L}`,url}]) ];
+    const head = HEAD({ title:`${title} - Football Highlights Compass`, ogtitle:title, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
+    const out = head + TOPBAR + `<article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:'W杯26',href:'../?league=wc'},{label:`グループ${L}`}])}
+  <p class="kicker">⚽ FIFAワールドカップ2026</p>
+  <h1 class="headline">グループ${L}｜順位・全試合ハイライト</h1>
+  <p class="dek">${esc(outlook)}</p>
+  <h2 class="lined">対戦国</h2><div class="chips">${countryChips}</div>
+  ${standings}
+  <h2 class="lined">日程・試合ハイライト</h2><div class="gx-list">${fixHtml}</div>
+  ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
+  ${AD}
+  <p style="margin-top:8px"><a href="../?league=wc&group=${L}">▶ グループ${L}の試合をトップの一覧で見る</a></p>
+  ` + FOOTER();
+    writeFileSync(`site/group/${L.toLowerCase()}.html`, out);
+    groupUrls.push(url);
+  }
+}
+
 // ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
 {
   const map = JSON.stringify(ENTITY_PAGES);
@@ -694,6 +766,7 @@ for(const g of GUIDES){
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
