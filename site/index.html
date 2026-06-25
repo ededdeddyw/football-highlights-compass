@@ -65,6 +65,9 @@
   .nav-guides .ng-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:0 2px 7px}
   .nav-guides a{display:block; font-size:12.5px; font-weight:700; color:var(--accent); text-decoration:none; padding:6px 9px; border-radius:8px; border:1px solid var(--line); border-left:3px solid var(--accent2); background:var(--card2); margin:5px 0; line-height:1.4}
   .nav-guides a:hover{border-color:var(--accent2)}
+  #sub-filters:not(:empty){margin:8px 0 4px; padding:9px 0 4px 11px; border-left:3px solid var(--accent2); background:linear-gradient(90deg,rgba(39,70,201,.05),transparent)}
+  #sub-filters .side-h.sub{color:var(--accent2); font-weight:800; margin:8px 2px 6px}
+  #sub-filters .side-h.sub:first-child{margin-top:0}
   /* 右サイドの検索ボックス（アイコン付き・大きめ・フォーカスリング） */
   .col-right .ac-wrap input{width:100%; box-sizing:border-box; padding:13px 14px 13px 42px; border-radius:12px; border:1.5px solid var(--line); background:var(--card2) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238a93b5' stroke-width='2.2' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><line x1='20.5' y1='20.5' x2='16.6' y2='16.6'/></svg>") 14px center/18px no-repeat; color:var(--text); font-size:15px; font-weight:600; -webkit-appearance:none; appearance:none; box-shadow:0 1px 3px rgba(20,30,90,.06); transition:border-color .15s, box-shadow .15s}
   .col-right .ac-wrap input::placeholder{color:var(--muted); font-weight:500}
@@ -350,6 +353,7 @@
       <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
       <div class="side-h">リーグ・大会で絞り込み</div>
       <div class="chips" id="league-chips"></div>
+      <div id="sub-filters"></div>
       <div class="side-h">日本人選手で絞り込み</div>
       <div class="chips" id="player-chips"></div>
       <div class="result-count" id="result-count"></div>
@@ -1246,9 +1250,16 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var ps = CANON.filter(function(p){ return t.indexOf(p) >= 0; });
     c.dataset.players = '|' + ps.join('|') + '|';
     ps.forEach(function(p){ pcount[p] = (pcount[p]||0) + 1; });
+    // W杯のグループ（A-L）と対戦国を抽出（段階フィルタ用）
+    var metaT = ((c.querySelector('.meta')||{}).textContent||'');
+    var gm = metaT.match(/グループ\s*([A-La-l])/);
+    c.dataset.group = (lg[0]==='wc' && gm) ? gm[1].toUpperCase() : '';
+    var ttlT = ((c.querySelector('.ttl')||{}).textContent||'');
+    var tmsRaw = ttlT.indexOf('─')>=0 ? ttlT.split('─').slice(1).join('─') : ttlT;
+    c.dataset.teams = '|' + tmsRaw.split(/\s*vs\s*/i).map(function(s){return s.trim();}).filter(Boolean).join('|') + '|';
   });
   var order = ['wc','jl','laliga','seriea','ligue1','bundes','portugal','other'];
-  var state = { q:'', league:'all', player:'all', page:1 };
+  var state = { q:'', league:'all', player:'all', group:'all', country:'all', page:1 };
   var PAGE=20, GRID=[], lastList=[], grid, pager;
   var rc = document.getElementById('result-count');
   function apply(){
@@ -1256,6 +1267,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     lastList = GRID.filter(function(g){
       if (state.league !== 'all' && g.league !== state.league) return false;
       if (state.player !== 'all' && g.players.indexOf('|'+state.player+'|') < 0) return false;
+      if (state.league === 'wc' && state.group !== 'all' && g.group !== state.group) return false;
+      if (state.league === 'wc' && state.country !== 'all' && (g.teams||'').indexOf('|'+state.country+'|') < 0) return false;
       if (q !== '' && g.hay.indexOf(q) < 0) return false;
       return true;
     });
@@ -1277,10 +1290,24 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     pager.innerHTML = total>PAGE ? ('<button class="pg-btn" data-d="-1"'+(state.page<=1?' disabled':'')+'>‹ 前</button><span class="pg-info">'+state.page+' / '+pages+' ページ</span><button class="pg-btn" data-d="1"'+(state.page>=pages?' disabled':'')+'>次 ›</button>') : '';
   }
   function chip(label, on){ var s = document.createElement('span'); s.className = 'chip' + (on?' active':''); s.textContent = label; return s; }
+  // W杯選択時のサブフィルタ（グループA-L／国）を描画＝段階的ドリルダウン
+  function buildSub(){
+    var sf = document.getElementById('sub-filters'); if(!sf) return;
+    if(state.league!=='wc'){ sf.innerHTML=''; return; }
+    var groups={}, ctys={};
+    cards.forEach(function(c){ if(c.dataset.league!=='wc') return; if(c.dataset.group) groups[c.dataset.group]=(groups[c.dataset.group]||0)+1; (c.dataset.teams||'').split('|').filter(Boolean).forEach(function(tm){ ctys[tm]=(ctys[tm]||0)+1; }); });
+    var gk=Object.keys(groups).sort(), ck=Object.keys(ctys).sort(function(a,b){return ctys[b]-ctys[a]||a.localeCompare(b);});
+    var html='';
+    if(gk.length) html+='<div class="side-h sub">▼ グループで絞り込み</div><div class="chips" id="group-chips"></div>';
+    if(ck.length) html+='<div class="side-h sub">▼ 国で絞り込み</div><div class="chips" id="country-chips"></div>';
+    sf.innerHTML=html;
+    if(gk.length){ var gc=document.getElementById('group-chips'); var ga=chip('すべて', state.group==='all'); ga.dataset.g='all'; gc.appendChild(ga); gk.forEach(function(g){ var ch=chip('グループ'+g+'('+groups[g]+')', state.group===g); ch.dataset.g=g; gc.appendChild(ch); }); gc.addEventListener('click', function(e){ var ch=e.target.closest('.chip'); if(!ch)return; state.group=ch.dataset.g; [].forEach.call(gc.children,function(x){x.classList.toggle('active',x===ch);}); apply(); }); }
+    if(ck.length){ var cc=document.getElementById('country-chips'); var ca=chip('すべて', state.country==='all'); ca.dataset.c='all'; cc.appendChild(ca); ck.forEach(function(n){ var ch=chip(n+'('+ctys[n]+')', state.country===n); ch.dataset.c=n; cc.appendChild(ch); }); cc.addEventListener('click', function(e){ var ch=e.target.closest('.chip'); if(!ch)return; state.country=ch.dataset.c; [].forEach.call(cc.children,function(x){x.classList.toggle('active',x===ch);}); apply(); }); }
+  }
   var lc = document.getElementById('league-chips'), lchips = [];
   var la = chip('すべて', true); la.dataset.k = 'all'; lc.appendChild(la); lchips.push(la);
   order.forEach(function(k){ if(labels[k]){ var n = cards.filter(function(c){return c.dataset.league===k;}).length; var ch = chip(labels[k]+'('+n+')', false); ch.dataset.k = k; lc.appendChild(ch); lchips.push(ch); } });
-  lchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.league = ch.dataset.k; lchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
+  lchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.league = ch.dataset.k; state.group='all'; state.country='all'; lchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); buildSub(); apply(); }); });
   var pcEl = document.getElementById('player-chips'), pchips = [];
   var pa = chip('すべて', true); pa.dataset.p = 'all'; pcEl.appendChild(pa); pchips.push(pa);
   CANON.forEach(function(p){ if(pcount[p]){ var ch = chip(p+'('+pcount[p]+')', false); ch.dataset.p = p; pcEl.appendChild(ch); pchips.push(ch); } });
@@ -1289,7 +1316,9 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   // URLの ?q= で検索を初期化（schema.org SearchAction 対応）
   try{ var _q=new URLSearchParams(location.search).get('q'); if(_q){ var qi=document.getElementById('q'); if(qi){ qi.value=_q; state.q=_q; } } }catch(e){}
   // URLの ?league= でリーグ絞り込みを初期化（試合ページのパンくず「大会」リンク用）
-  try{ var _lg=new URLSearchParams(location.search).get('league'); if(_lg){ var fch=lchips.filter(function(x){return x.dataset.k===_lg;})[0]; if(fch){ state.league=_lg; lchips.forEach(function(x){ x.classList.toggle('active', x===fch); }); } } }catch(e){}
+  try{ var _lg=new URLSearchParams(location.search).get('league'); if(_lg){ var fch=lchips.filter(function(x){return x.dataset.k===_lg;})[0]; if(fch){ state.league=_lg; lchips.forEach(function(x){ x.classList.toggle('active', x===fch); }); buildSub(); } } }catch(e){}
+  // URLの ?group= でグループ初期化（グループページ→トップへの絞り込みリンク用）
+  try{ var _gp=new URLSearchParams(location.search).get('group'); if(_gp && state.league==='wc'){ state.group=_gp.toUpperCase(); buildSub(); } }catch(e){}
 
   // ===== 国旗 =====
   var ISO={'日本':'jp','チュニジア':'tn','オランダ':'nl','スペイン':'es','サウジアラビア':'sa','スウェーデン':'se','ブラジル':'br','モロッコ':'ma','ハイチ':'ht','スコットランド':'gb-sct','ベルギー':'be','イラン':'ir','メキシコ':'mx','南アフリカ':'za','韓国':'kr','チェコ':'cz','カナダ':'ca','カタール':'qa','アメリカ':'us','パラグアイ':'py','オーストラリア':'au','エクアドル':'ec','キュラソー':'cw','ニュージーランド':'nz','エジプト':'eg','ウルグアイ':'uy','コンゴ民主共和国':'cd','クロアチア':'hr','ガーナ':'gh','パナマ':'pa','ウズベキスタン':'uz','コロンビア':'co','ポルトガル':'pt','イングランド':'gb-eng','ドイツ':'de','コートジボワール':'ci','トルコ':'tr','ボスニア・ヘルツェゴビナ':'ba','スイス':'ch','カーボベルデ':'cv','ヨルダン':'jo','オーストリア':'at'};
@@ -1317,7 +1346,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     if(!id) return;
     var te=c.querySelector('.ttl');
     var scEl=c.querySelector('.score'), score=''; if(scEl){ var ns=scEl.querySelectorAll('.n'); if(ns.length>=2) score=ns[0].textContent.trim()+'-'+ns[1].textContent.trim(); }
-    GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), hay:(c._hay||''), score:score });
+    GRID.push({ id:id, title:(te?te.innerHTML:''), league:(c.dataset.league||''), players:(c.dataset.players||''), group:(c.dataset.group||''), teams:(c.dataset.teams||''), hay:(c._hay||''), score:score });
   });
   [].forEach.call(document.querySelectorAll('details.match, h2.sec, .sec-desc, table.summary, .legend, h3.kicker'), function(e){ e.style.display='none'; });
   if(pager) pager.addEventListener('click', function(e){ var b=e.target.closest('.pg-btn'); if(!b||b.disabled)return; state.page += (+b.getAttribute('data-d')); renderPage(); var fb=document.querySelector('.col-main'); if(fb) fb.scrollIntoView({behavior:'smooth',block:'start'}); });
