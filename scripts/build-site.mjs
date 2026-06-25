@@ -40,6 +40,10 @@ try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFil
 // ---------- アフィリエイト（DAZN）。data/affiliate.json の daznUrl に成果リンクを設定。空なら通常リンクにフォールバック ----------
 let AFFILIATE = {};
 try { if (existsSync('data/affiliate.json')) AFFILIATE = JSON.parse(readFileSync('data/affiliate.json','utf8')); } catch(e){ console.warn('affiliate読込失敗:', e.message); }
+
+// ---------- W杯グループ戦の公式結果（matchId→"H-A" ホーム-アウェイ順）。順位表を全72試合準拠にする。Web検証で記録 ----------
+let WCRESULTS = {};
+try { if (existsSync('data/wc-results.json')) WCRESULTS = JSON.parse(readFileSync('data/wc-results.json','utf8')); } catch(e){ console.warn('wc-results読込失敗:', e.message); }
 // DAZN訴求CTA。アフィリリンク設定時は rel="sponsored"＋「PR」表記（ステマ規制対応）。未設定時は公式リンク(nofollow)。
 function daznCta(context){
   const aff = (AFFILIATE.daznUrl||'').trim();
@@ -710,15 +714,19 @@ const groupUrls = [];
     const teams = [...new Set(fx.flatMap(f=>[f.home&&f.home.ja, f.away&&f.away.ja].filter(Boolean)))];
     const tbl={}; teams.forEach(t=>tbl[t]={p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
     for(const f of fx){ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; if(!h||!a||!tbl[h]||!tbl[a]) continue;
-      const m=wcByTeams.get([h,a].sort().join('|')); if(!m||!m.score) continue;
-      const sc=m.score.match(/^(\d+)-(\d+)$/); if(!sc) continue;
-      const hg = m.teams[0]===h?+sc[1]:+sc[2], ag = m.teams[0]===h?+sc[2]:+sc[1];
+      let hg=null, ag=null;
+      const off = WCRESULTS[f.matchId]; // 公式結果（home-away順）優先
+      if(off){ const sc=String(off).match(/^(\d+)-(\d+)$/); if(sc){ hg=+sc[1]; ag=+sc[2]; } }
+      if(hg===null){ const m=wcByTeams.get([h,a].sort().join('|')); if(m&&m.score){ const sc=m.score.match(/^(\d+)-(\d+)$/); if(sc){ hg=m.teams[0]===h?+sc[1]:+sc[2]; ag=m.teams[0]===h?+sc[2]:+sc[1]; } } }
+      if(hg===null) continue;
       tbl[h].p++; tbl[a].p++; tbl[h].gf+=hg; tbl[h].ga+=ag; tbl[a].gf+=ag; tbl[a].ga+=hg;
       if(hg>ag){tbl[h].w++;tbl[h].pts+=3;tbl[a].l++;} else if(hg<ag){tbl[a].w++;tbl[a].pts+=3;tbl[h].l++;} else {tbl[h].d++;tbl[a].d++;tbl[h].pts++;tbl[a].pts++;}
     }
     const played = Object.values(tbl).reduce((s,x)=>s+x.p,0)/2;
     const ranked = teams.slice().sort((x,y)=> tbl[y].pts-tbl[x].pts || (tbl[y].gf-tbl[y].ga)-(tbl[x].gf-tbl[x].ga) || tbl[y].gf-tbl[x].gf || x.localeCompare(y));
-    const standings = played>0 ? `<h2 class="lined">グループ${L} 順位（暫定）</h2><div class="factcard"><table class="standings"><tr><th>#</th><th>国</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得</th><th>失</th><th>差</th><th>点</th></tr>${ranked.map((t,i)=>{const r=tbl[t];const gd=r.gf-r.ga;const lk=PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`${flagImg(t)}${esc(t)}`;return `<tr><td>${i+1}</td><td class="st-team">${lk}</td><td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gf}</td><td>${r.ga}</td><td>${gd>=0?'+':''}${gd}</td><td><b>${r.pts}</b></td></tr>`;}).join('')}</table></div><p class="note-sm">※当サイト掲載分の結果から集計した暫定順位（${played}/${fx.length}試合）。公式の最終順位とは異なる場合があります。</p>` : '';
+    const allDone = played>=fx.length;
+    const noteTxt = allDone ? `全${fx.length}試合の結果に基づく最終順位です。` : `${played}/${fx.length}試合消化時点の順位です（残りは試合後に反映）。`;
+    const standings = played>0 ? `<h2 class="lined">グループ${L} 順位</h2><div class="factcard"><table class="standings"><tr><th>#</th><th>国</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得</th><th>失</th><th>差</th><th>点</th></tr>${ranked.map((t,i)=>{const r=tbl[t];const gd=r.gf-r.ga;const lk=PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`${flagImg(t)}${esc(t)}`;return `<tr><td>${i+1}</td><td class="st-team">${lk}</td><td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gf}</td><td>${r.ga}</td><td>${gd>=0?'+':''}${gd}</td><td><b>${r.pts}</b></td></tr>`;}).join('')}</table></div><p class="note-sm">${noteTxt}</p>` : '';
     const fixHtml = fx.map(f=>{ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; const m=h&&a&&wcByTeams.get([h,a].sort().join('|'));
       const d=(f.koJST||'').slice(5,16).replace('T',' ').replace('-','/');
       const right = m ? `<a class="gx-link" href="../match/${m.id}.html">▶ ハイライト</a>` : `<span class="gx-soon">準備中</span>`;
@@ -738,7 +746,7 @@ const groupUrls = [];
   <h1 class="headline">グループ${L}｜順位・全試合ハイライト</h1>
   <p class="dek">${esc(outlook)}</p>
   <h2 class="lined">対戦国</h2><div class="chips">${countryChips}</div>
-  ${standings}
+  ${standings ? `<button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで順位表を表示</button><div class="spoiler-cover">${standings}</div>` : ''}
   <h2 class="lined">日程・試合ハイライト</h2><div class="gx-list">${fixHtml}</div>
   ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
   ${AD}
