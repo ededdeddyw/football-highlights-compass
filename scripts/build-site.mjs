@@ -161,12 +161,15 @@ const HEAD = (o)=>`<!DOCTYPE html>
 <link rel="canonical" href="${o.url}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com"><link rel="dns-prefetch" href="https://i.ytimg.com">
+<link rel="preconnect" href="https://flagcdn.com"><link rel="dns-prefetch" href="https://flagcdn.com">
+<link rel="dns-prefetch" href="https://r2.thesportsdb.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta property="og:type" content="${o.ogtype||'article'}"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="${escA(o.ogtitle||o.title)}"><meta property="og:description" content="${escA(o.desc)}">
-<meta property="og:url" content="${o.url}"><meta property="og:image" content="${o.ogimg}">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA(o.ogtitle||o.title)}"><meta name="twitter:image" content="${o.ogimg}">
+<meta property="og:url" content="${o.url}"><meta property="og:image" content="${o.ogimg}"><meta property="og:image:alt" content="${escA(o.ogtitle||o.title)}">${o.ogimg.includes('ytimg')?'<meta property="og:image:width" content="480"><meta property="og:image:height" content="360">':o.ogimg.endsWith('/og.png')?'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">':''}
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA(o.ogtitle||o.title)}"><meta name="twitter:image" content="${o.ogimg}"><meta name="twitter:image:alt" content="${escA(o.ogtitle||o.title)}"><meta name="twitter:description" content="${escA(o.desc)}">
 ${o.published?`<meta property="article:published_time" content="${o.published}">`:''}${o.modified?`<meta property="article:modified_time" content="${o.modified}">`:''}
 ${o.jsonld?`<script type="application/ld+json">${JSON.stringify(ld(o.jsonld))}</script>`:''}
 <link rel="stylesheet" href="../article.css">
@@ -593,12 +596,12 @@ for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 }
 
 // ========================= sitemap =========================
-let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
+let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
-for(const s of slugs){ if(noindexSlugs.has(s)) continue; sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`; }
+for(const s of slugs){ if(noindexSlugs.has(s)) continue; const mm=matchById.get(s); const cap=mm?escA((mm.ttl||'')+'｜公式ハイライト'):''; sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><image:image><image:loc>https://i.ytimg.com/vi/${s}/hqdefault.jpg</image:loc><image:title>${cap}</image:title></image:image></url>\n`; }
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
 console.log(`試合ページ: ${slugs.length} / 国: ${nc} / クラブ: ${ncl} / sitemap URL: ${slugs.length + new Set(Object.values(ENTITY_PAGES)).size + 1}`);
