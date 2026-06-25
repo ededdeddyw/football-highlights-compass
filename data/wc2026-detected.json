@@ -1,1 +1,22 @@
-{ "_note": "検知で確定したハイライト。inject-wc.mjs がここを読んで index.html へ反映する。", "detected": [] }
+{
+  "_note": "検知で確定したハイライト。inject-wc.mjs がここを読んで index.html へ反映する。",
+  "detected": [
+    {
+      "matchId": "wc2026-gE-3-1",
+      "videoId": "XVJPlnXEwB8",
+      "title": "【FIFAワールドカップ2026】エクアドル vs ドイツ : グループE 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-25T22:55:24.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-25T22:59:25.839Z"
+    }
+  ]
+}

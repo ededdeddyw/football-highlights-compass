@@ -1,1 +1,59 @@
-{ "_note": "しきい値未満の曖昧な候補ログ（自動公開しない・人が確認する）。", "candidates": [] }
+{
+  "_note": "しきい値未満の曖昧な候補ログ（自動公開しない・人が確認する）。",
+  "candidates": [
+    {
+      "matchId": "wc2026-gE-3-1",
+      "videoId": "eoecc4-C4wg",
+      "title": "【エクアドル×ドイツ｜ハイライト｜エクアドルが奇跡の逆転勝利で決勝トーナメント進出決定】グループE第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-25T22:19:02.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-25T22:59:25.839Z"
+    },
+    {
+      "matchId": "wc2026-gE-3-2",
+      "videoId": "Dm_yLvlfbio",
+      "title": "【FIFAワールドカップ2026】キュラソー vs コートジボワール : グループE 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-25T22:39:31.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-25T22:59:25.839Z"
+    },
+    {
+      "matchId": "wc2026-gE-3-2",
+      "videoId": "2Xz0qa1aejg",
+      "title": "【キュラソー×コートジボワール｜ハイライト｜コートジボワールが初のグループステージ突破】グループE第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-25T22:39:03.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-25T22:59:25.839Z"
+    }
+  ]
+}
