@@ -37,6 +37,18 @@ try { if (existsSync('data/scores.json')) SCORES = JSON.parse(readFileSync('data
 let SECTIONS = {};
 try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFileSync('data/entity-sections.json','utf8')); } catch(e){ console.warn('sections読込失敗:', e.message); }
 
+// ---------- アフィリエイト（DAZN）。data/affiliate.json の daznUrl に成果リンクを設定。空なら通常リンクにフォールバック ----------
+let AFFILIATE = {};
+try { if (existsSync('data/affiliate.json')) AFFILIATE = JSON.parse(readFileSync('data/affiliate.json','utf8')); } catch(e){ console.warn('affiliate読込失敗:', e.message); }
+// DAZN訴求CTA。アフィリリンク設定時は rel="sponsored"＋「PR」表記（ステマ規制対応）。未設定時は公式リンク(nofollow)。
+function daznCta(context){
+  const aff = (AFFILIATE.daznUrl||'').trim();
+  const url = aff || 'https://www.dazn.com/ja-JP/';
+  const rel = aff ? 'sponsored nofollow noopener' : 'nofollow noopener';
+  const pr = aff ? '<span class="dc-pr">PR</span>' : '';
+  return `<aside class="dazn-cta">${pr}<div class="dc-txt"><b>フル・見逃し配信を観るなら</b><span>${esc(context||'ハイライトの先は、DAZNで全試合フル＆見逃し配信。')}</span></div><a class="dc-btn" href="${url}" target="_blank" rel="${rel}">▶ DAZNで観る</a></aside>`;
+}
+
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
 const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/","logo":DOMAIN+"/apple-touch-icon.png"};
 // 配列なら @graph でまとめる
@@ -379,7 +391,17 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 /* 広告枠（レスポンシブ） */
 .ad{margin:28px auto 6px;max-width:728px;text-align:center;min-height:100px}
 .ad .adlabel{display:block;font-size:10px;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
-.ad ins{display:block}`;
+.ad ins{display:block}
+/* DAZN訴求CTA */
+.dazn-cta{position:relative;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:linear-gradient(120deg,#0b1430,#16225f);color:#fff;border-radius:14px;padding:16px 20px;margin:20px 0;box-shadow:0 6px 20px rgba(12,22,87,.22)}
+.dazn-cta .dc-txt{flex:1 1 200px;min-width:0}
+.dazn-cta .dc-txt b{display:block;font-size:15.5px;font-weight:800;margin-bottom:3px}
+.dazn-cta .dc-txt span{font-size:13px;color:#c4cef2;line-height:1.6}
+.dazn-cta .dc-btn{flex:0 0 auto;background:#f8f400;color:#0b1430;font-weight:900;font-size:14.5px;text-decoration:none;padding:12px 22px;border-radius:10px;white-space:nowrap;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+.dazn-cta .dc-btn:hover{filter:brightness(1.05)}
+.dazn-cta .dc-pr{position:absolute;top:7px;right:10px;font-size:9.5px;font-weight:800;letter-spacing:.06em;color:#9fb0e8;border:1px solid rgba(159,176,232,.5);border-radius:4px;padding:1px 5px}
+.ent-side .dazn-cta{margin:14px 0 0;padding:14px 16px}
+.ent-side .dazn-cta .dc-btn{padding:10px 16px;font-size:13.5px}`;
 
 // 広告枠（slot は AdSense 管理画面で作成した広告ユニットIDに置換する）
 const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7948789271209448" data-ad-slot="__AD_SLOT__" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script></div>`;
@@ -463,6 +485,7 @@ function buildMatch(m){
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
   ${spoilerBar}
   <div class="post-body">${bodyHtml}</div>
+  ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
   ${AD}
   ${factHtml}
   ${teamHtml}
@@ -531,7 +554,7 @@ function buildCountry(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
-    <aside class="ent-side">${factHtml}${related}</aside>
+    <aside class="ent-side">${factHtml}${daznCta()}${related}</aside>
   </div>
   ${AD}
   ${list}
@@ -573,7 +596,7 @@ function buildClub(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,true)}
     </div>
-    <aside class="ent-side">${factHtml}${related}</aside>
+    <aside class="ent-side">${factHtml}${daznCta()}${related}</aside>
   </div>
   ${AD}
   ${list}
