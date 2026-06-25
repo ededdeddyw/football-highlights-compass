@@ -33,6 +33,10 @@ try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('
 let SCORES = {};
 try { if (existsSync('data/scores.json')) SCORES = JSON.parse(readFileSync('data/scores.json','utf8')); } catch(e){ console.warn('scores読込失敗:', e.message); }
 
+// ---------- エンティティ解説（name→独自の1段落。Web検証で data/entity-sections.json に記録。国・クラブの本文に追記） ----------
+let SECTIONS = {};
+try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFileSync('data/entity-sections.json','utf8')); } catch(e){ console.warn('sections読込失敗:', e.message); }
+
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
 const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":DOMAIN+"/","logo":DOMAIN+"/apple-touch-icon.png"};
 // 配列なら @graph でまとめる
@@ -524,7 +528,7 @@ function buildCountry(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="ent-grid">
     <div class="ent-main">
-      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
+      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
     <aside class="ent-side">${factHtml}${related}</aside>
@@ -566,7 +570,7 @@ function buildClub(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="ent-grid">
     <div class="ent-main">
-      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
+      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,true)}
     </div>
     <aside class="ent-side">${factHtml}${related}</aside>
