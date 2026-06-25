@@ -205,6 +205,7 @@ const FOOTER = (extra='')=>`<footer class="post-foot">
   ${extra}
   <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
   <p><a href="../">▶ トップで他の試合を探す（W杯・Jリーグ・日本人所属クラブ）</a></p>
+  <p>ガイド：<a href="../guide/world-cup-2026-how-to-watch.html">W杯26を日本から観る方法</a> ／ <a href="../guide/kubo-takefusa-highlights.html">久保建英 ハイライトまとめ</a></p>
   <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
   <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
 </footer></article>${BOOM}</body></html>`;
@@ -609,6 +610,64 @@ let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
 for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 
+// ========================= 集客記事（ガイド・コーナーストーン） =========================
+mkdirSync('site/guide', { recursive:true });
+function cardGrid(ms){ return ms.length?`<div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:''; }
+const GUIDES = [
+  { slug:'world-cup-2026-how-to-watch',
+    title:'2026 FIFAワールドカップを日本から観る方法｜公式ハイライト全試合まとめ',
+    h1:'2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ',
+    dek:'2026年北中米ワールドカップ（カナダ・メキシコ・アメリカ共催）を日本から視聴する方法と、公式ハイライトの探し方を整理しました。',
+    desc:'2026 W杯を日本から観る方法（DAZN）と公式ハイライトの探し方。日本代表・注目試合の公式ハイライトへ最短で。公式映像のみ・ネタバレ防止。',
+    body(){
+      const wc = data.filter(m=>m.league==='wc'&&m.id);
+      const jp = (byTeam['日本']||[]).filter(m=>m.id);
+      return `<div class="post-body">
+        <p>2026 FIFAワールドカップは6月から7月にかけて、カナダ・メキシコ・アメリカの3か国共催で開催されます。日本国内では <b>DAZN</b> が全試合をライブ配信し、試合後には公式ハイライト（MATCH RECAP）も公開されます。</p>
+        <p>FIFA公式YouTubeでもハイライトが公開されますが、外部サイトへの埋め込みは許可されていないため、当サイトでは公式ページへのリンクで案内しています。一方 DAZN Japan のハイライトは日本から視聴でき、当サイトではその場で再生できます。1試合につき複数の公式ソースを並べているので、見やすい方を選べます。</p>
+        <p>結果を知りたくない場合は、トップの「ネタバレ防止」をONにすると一覧・試合ページのスコアが隠れます。タイトルに結果が出ない MATCH RECAP も活用しています。</p>
+      </div>
+      ${jp.length?`<h2 class="lined">日本代表の試合</h2>${cardGrid(jp)}`:''}
+      ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
+      <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
+      <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
+    }
+  },
+  { slug:'kubo-takefusa-highlights',
+    title:'久保建英 ハイライトまとめ｜レアル・ソシエダの最新ゴール・アシスト（2025-26）',
+    h1:'久保建英 公式ハイライトまとめ（レアル・ソシエダ／2025-26）',
+    dek:'久保建英（レアル・ソシエダ）のラ・リーガ公式ハイライトを試合ごとにまとめました。',
+    desc:'久保建英（レアル・ソシエダ）のラ・リーガ公式ハイライトまとめ。ゴール・アシストの試合を一覧で。公式映像のみ・ネタバレ防止。',
+    body(){
+      const ms = (byPlayer['久保建英']||[]).filter(m=>m.id);
+      const club = PAGE_OF['ソシエダ'];
+      return `<div class="post-body">
+        <p>レアル・ソシエダで攻撃の中心を担う久保建英の出場試合について、公式ハイライト（主に DAZN Japan）を試合ごとにまとめています。各試合はネタバレ防止に対応し、スコアは任意で表示できます。</p>
+      </div>
+      <h2 class="lined">久保建英 出場試合のハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
+      ${daznCta('ソシエダ＝ラ・リーガのフル・見逃し配信はDAZNで。')}
+      ${club?`<p style="margin-top:14px"><a href="../${club}">▶ レアル・ソシエダのクラブページ（歴史・所属日本人選手）</a></p>`:''}`;
+    }
+  }
+];
+const guideUrls = [];
+for(const g of GUIDES){
+  const url = `${DOMAIN}/guide/${g.slug}.html`;
+  const cg = [ {"@type":"Article","headline":g.h1,"description":g.desc,"inLanguage":"ja","author":ORG,"publisher":ORG,"datePublished":`${TODAY}`,"dateModified":`${TODAY}`,"mainEntityOfPage":url},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド'},{name:g.h1,url}]) ];
+  const head = HEAD({ title:`${g.title} - Football Highlights Compass`, ogtitle:g.title, desc:g.desc, url, ogimg:`${DOMAIN}/og.png`, ogtype:'article', modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
+  const out = head + TOPBAR + `<article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:'ガイド'},{label:g.h1}])}
+  <p class="kicker">📘 ガイド</p>
+  <h1 class="headline">${esc(g.h1)}</h1>
+  <p class="dek">${esc(g.dek)}</p>
+  ${g.body()}
+  ${AD}
+  ` + FOOTER();
+  writeFileSync(`site/guide/${g.slug}.html`, out);
+  guideUrls.push(url);
+}
+
 // ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
 {
   const map = JSON.stringify(ENTITY_PAGES);
@@ -625,6 +684,7 @@ for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
+for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
