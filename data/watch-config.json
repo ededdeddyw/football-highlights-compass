@@ -1,6 +1,6 @@
 {
   "_note": "ハイライト検知の設定。enabled=false の間は watch-highlights.mjs が即終了する（kill switch）。スケジュールとchannelIdを入れ、動作確認後に true にする。",
-  "enabled": false,
+  "enabled": true,
   "matchDurationMin": 115,
   "detectWindow": {
     "startOffsetMin": 45,

@@ -4,8 +4,8 @@ name: Watch WC highlights
 # できたら下の schedule(cron) のコメントを外して有効化する。W杯終了後は再コメントで停止。
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: '*/10 * * * *'   # 10分間隔（Actions cronは遅延・スキップあり＝検知窓を広めに設定済み）
+  schedule:
+    - cron: '*/10 * * * *'   # 10分間隔（Actions cronは遅延・スキップあり＝検知窓を広めに設定済み）。W杯終了後はこの2行を再コメントで停止
 
 permissions:
   contents: write
