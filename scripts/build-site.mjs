@@ -390,7 +390,8 @@ function buildMatch(m){
     hook = `${m.players.join('・')}が${a||'出場'}`;
   } // 結果に触れる m.topic は dek（リード文）に出さない＝ネタバレ防止。見どころは下のfactカードに控えめ版で格納
   const dek = `${hook?hook+'。':''}${teamsTxt||m.mt}${lg?`（${lg}）`:''}の公式ハイライトです。`;
-  const desc = `${teamsTxt||m.mt}${lg?'（'+lg+'）':''}の公式ハイライト。${m.players.length?m.players.join('・')+'出場。':''}${m.topic?m.topic+'。':''}公式映像のみ・ネタバレ防止。`.slice(0,120);
+  // description（meta/og/twitter/JSON-LDに波及）には結果に触れる m.topic を入れない＝検索スニペットでのネタバレ防止
+  const desc = `${teamsTxt||m.mt}${lg?'（'+lg+'）':''}の公式ハイライト。${m.players.length?m.players.join('・')+'出場。':''}公式映像のみ・ネタバレ防止。`.slice(0,120);
   // fact card
   const facts=[];
   if(lg) facts.push(['大会', lg]);
