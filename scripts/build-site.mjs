@@ -54,9 +54,10 @@ const ORG = {"@type":"Organization","name":"Football Highlights Compass","url":D
 // 配列なら @graph でまとめる
 const ld = x => Array.isArray(x) ? {"@context":"https://schema.org","@graph":x} : x;
 // パンくず（表示用 crumb() と同じ並びから生成）。items:[{name,url?}]
-function crumbLd(items){ return {"@type":"BreadcrumbList","itemListElement":items.map((it,i)=>({"@type":"ListItem","position":i+1,"name":it.name, ...(it.url?{"item":it.url}:{})}))}; }
+// 全 ListItem に item(URL) を必須付与（Google: 末尾以外は必須／無いと「itemがありません」エラー）。url未指定はトップにフォールバック。
+function crumbLd(items){ return {"@type":"BreadcrumbList","itemListElement":items.map((it,i)=>({"@type":"ListItem","position":i+1,"name":it.name,"item":it.url||DOMAIN+'/'}))}; }
 // 試合一覧の ItemList
-function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0,30).map((mm,i)=>({"@type":"ListItem","position":i+1,"name":mm.ttl,"url":`${DOMAIN}/match/${mm.id}.html`}))}; }
+function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0,30).map((mm,i)=>({"@type":"ListItem","position":i+1,"name":mm.ttl,"item":`${DOMAIN}/match/${mm.id}.html`}))}; }
 
 const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
@@ -534,7 +535,7 @@ function buildCountry(name, info){
   const desc = `${name}代表のW杯26 公式ハイライトと歴史。${info.confed}／最高成績：${info.peak}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
   const cgraph = [
     {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
-    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）'},{name:name+'代表',url}])
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
   const head = HEAD({ title:`${name}代表｜W杯公式ハイライトと歴史 - Football Highlights Compass`, ogtitle:`${name}代表｜W杯公式ハイライトと歴史`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
@@ -577,7 +578,7 @@ function buildClub(name, info){
   const desc = `${name}（${info.league}）の公式ハイライトとクラブの歴史。${info.founded}年創設・本拠地${info.stadium}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
   const clgraph = [
     {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
-    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ'},{name:name,url}])
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
   ];
   if(ms.length) clgraph.push(itemListLd(ms));
   const head = HEAD({ title:`${name}｜公式ハイライトとクラブの歴史 - Football Highlights Compass`, ogtitle:`${name}｜公式ハイライトとクラブの歴史`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
@@ -662,7 +663,7 @@ const guideUrls = [];
 for(const g of GUIDES){
   const url = `${DOMAIN}/guide/${g.slug}.html`;
   const cg = [ {"@type":"Article","headline":g.h1,"description":g.desc,"inLanguage":"ja","author":ORG,"publisher":ORG,"datePublished":`${TODAY}`,"dateModified":`${TODAY}`,"mainEntityOfPage":url},
-    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド'},{name:g.h1,url}]) ];
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド',url:DOMAIN+'/'},{name:g.h1,url}]) ];
   const head = HEAD({ title:`${g.title} - Football Highlights Compass`, ogtitle:g.title, desc:g.desc, url, ogimg:`${DOMAIN}/og.png`, ogtype:'article', modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
   const out = head + TOPBAR + `<article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:'ガイド'},{label:g.h1}])}
