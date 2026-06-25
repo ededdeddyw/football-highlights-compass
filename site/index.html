@@ -56,6 +56,11 @@
   .side-head b{font-size:13px; letter-spacing:.03em; color:var(--text)}
   .side-head .menu-close{display:none; background:none; border:0; font-size:22px; line-height:1; color:var(--muted); cursor:pointer}
   .col-right .side-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:14px 2px 7px}
+  /* 右サイドの検索ボックス（アイコン付き・大きめ・フォーカスリング） */
+  .col-right .ac-wrap input{width:100%; box-sizing:border-box; padding:13px 14px 13px 42px; border-radius:12px; border:1.5px solid var(--line); background:var(--card2) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238a93b5' stroke-width='2.2' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><line x1='20.5' y1='20.5' x2='16.6' y2='16.6'/></svg>") 14px center/18px no-repeat; color:var(--text); font-size:15px; font-weight:600; -webkit-appearance:none; appearance:none; box-shadow:0 1px 3px rgba(20,30,90,.06); transition:border-color .15s, box-shadow .15s}
+  .col-right .ac-wrap input::placeholder{color:var(--muted); font-weight:500}
+  .col-right .ac-wrap input::-webkit-search-cancel-button{-webkit-appearance:none}
+  .col-right .ac-wrap input:focus{outline:none; border-color:var(--accent2); box-shadow:0 0 0 3px rgba(39,70,201,.15)}
   .nav-backdrop{display:none; position:fixed; inset:0; background:rgba(8,14,40,.5); z-index:55}
   @media(max-width:1080px){
     .appgrid{grid-template-columns:1fr; grid-template-areas:"right" "main"; gap:14px}
@@ -323,7 +328,8 @@
     </main>
 
     <aside class="col-right">
-      <div class="ac-wrap"><input id="q" type="search" placeholder="🔎 チーム・選手・大会で検索（例：久保、鹿島、ブラジル）" autocomplete="off"><div class="ac-list" id="qList"></div></div>
+      <div class="side-h" style="margin-top:2px">検索</div>
+      <div class="ac-wrap"><input id="q" type="search" placeholder="チーム・選手・大会名で検索" autocomplete="off"><div class="ac-list" id="qList"></div></div>
       <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
       <div class="side-h">リーグ・大会で絞り込み</div>
       <div class="chips" id="league-chips"></div>
