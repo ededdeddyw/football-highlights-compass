@@ -229,7 +229,16 @@ img{max-width:100%}
 .tback{margin-left:auto;font-size:13px;text-decoration:none;color:var(--muted);white-space:nowrap}
 .tback:hover{color:var(--accent2)}
 /* article shell */
-.post{max-width:720px;margin:0 auto;padding:18px 20px 70px}
+.post{max-width:860px;margin:0 auto;padding:18px 20px 70px}
+/* 国・クラブの個別ページは横幅を活かす：上部を2カラム（左=本文+深掘り / 右=ファクト+関連）、試合一覧は全幅 */
+.post.entity{max-width:1160px}
+.ent-grid{display:grid;grid-template-columns:minmax(0,1fr) 326px;gap:32px;align-items:start;margin:2px 0 10px}
+.ent-main{min-width:0}
+.ent-side{position:sticky;top:14px}
+.ent-side .factcard{margin:0 0 14px}
+.ent-side h2{font-size:15px;font-weight:800;margin:16px 0 8px;border:none;padding:0;color:var(--ink)}
+.ent-side .chips{margin:6px 0 0}
+@media(max-width:880px){.post.entity{max-width:860px}.ent-grid{grid-template-columns:1fr;gap:0}.ent-side{position:static;margin-top:8px}}
 .crumb{font-size:12px;color:var(--soft);margin:6px 0 18px;display:flex;flex-wrap:wrap;align-items:center;gap:2px}
 .crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--accent2)}
 .crumb i{font-style:normal;margin:0 7px;color:var(--line2)}
@@ -510,12 +519,15 @@ function buildCountry(name, info){
   <p class="kicker">${flag} ${esc(info.confed)}</p>
   <div class="ehero"><div class="ei"><span class="crest">${flag||'🌍'}</span><div><h1>${esc(name)}代表</h1><div class="esub">FIFAワールドカップ26 ／ 最高成績：${esc(info.peak)}</div></div></div></div>
   <p class="dek">${esc(dek)}</p>
-  <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
-  ${factHtml}
-  ${deepSection(name,false)}
+  <div class="ent-grid">
+    <div class="ent-main">
+      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
+      ${deepSection(name,false)}
+    </div>
+    <aside class="ent-side">${factHtml}${related}</aside>
+  </div>
   ${AD}
   ${list}
-  ${related}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
 }
@@ -549,12 +561,15 @@ function buildClub(name, info){
   <p class="kicker">${flag} ${esc(info.league)}</p>
   <div class="ehero"><div class="ei"><span class="crest">${crestHtml}</span><div><h1>${esc(name)}</h1><div class="esub">${esc(info.country)} ／ ${esc(info.league)} ／ ${esc(String(info.founded))}年創設</div></div></div></div>
   <p class="dek">${esc(dek)}</p>
-  <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
-  ${factHtml}
-  ${deepSection(name,true)}
+  <div class="ent-grid">
+    <div class="ent-main">
+      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')||''}</div>
+      ${deepSection(name,true)}
+    </div>
+    <aside class="ent-side">${factHtml}${related}</aside>
+  </div>
   ${AD}
   ${list}
-  ${related}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
 }
