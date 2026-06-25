@@ -291,6 +291,10 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .mplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:rgba(225,29,72,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 3px 12px rgba(0,0,0,.34)}
 .mscore{position:absolute;right:6px;top:6px;display:none;font-size:13px;font-weight:900;color:#fff;background:rgba(11,22,87,.92);padding:3px 9px;border-radius:8px;letter-spacing:.04em;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 html.spoiler-off .mscore{display:inline-block}
+/* ネタバレ防止中（既定）は結果に触れる要素を隠す。OFF（html.spoiler-off）または「タップで結果表示」で開示 */
+html:not(.spoiler-off) .spoiler-cover{display:none!important}
+.reveal-spoiler{display:none;align-items:center;gap:8px;font-size:14px;font-weight:800;padding:11px 16px;border-radius:10px;border:1px solid var(--line2);background:var(--card2);color:var(--accent);cursor:pointer;margin:2px 0 22px}
+html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .mttl{padding:10px 12px 4px;font-size:13px;font-weight:700;line-height:1.46}
 .mttl .flag{height:13px;border-radius:2px;vertical-align:-2px}
 .mttl em{font-style:normal;color:var(--soft);font-size:.85em;margin:0 2px}
@@ -384,7 +388,7 @@ function buildMatch(m){
     const act = (m.jpNote||'').match(/[（(]([^）)]+)[）)]/);
     const a = act ? act[1].replace(/先発|フル出場|途中出場|出場|復帰/g,'').trim() : '';
     hook = `${m.players.join('・')}が${a||'出場'}`;
-  } else if (m.topic) hook = m.topic;
+  } // 結果に触れる m.topic は dek（リード文）に出さない＝ネタバレ防止。見どころは下のfactカードに控えめ版で格納
   const dek = `${hook?hook+'。':''}${teamsTxt||m.mt}${lg?`（${lg}）`:''}の公式ハイライトです。`;
   const desc = `${teamsTxt||m.mt}${lg?'（'+lg+'）':''}の公式ハイライト。${m.players.length?m.players.join('・')+'出場。':''}${m.topic?m.topic+'。':''}公式映像のみ・ネタバレ防止。`.slice(0,120);
   // fact card
@@ -396,7 +400,7 @@ function buildMatch(m){
   if(sched?.koJST) facts.push(['キックオフ', sched.koJST.replace('T',' ').replace(/:00\+09:00$/,'（日本時間）')]);
   if(m.players.length) facts.push(['日本人選手', m.jpNote||m.players.join('・')]);
   if(m.topic) facts.push(['見どころ', m.topic]);
-  const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}</table></div>`;
+  const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr${f[0]==='見どころ'?' class="spoiler-cover"':''}><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}</table></div>`;
   // チーム/国のハブページへの内部リンク
   const teamLinks = m.teams.map(t=> PAGE_OF[t] ? `<a href="../${PAGE_OF[t]}">${m.league==='wc'?flagImg(t):''}${esc(t)}</a>` : '').filter(Boolean);
   const teamHtml = teamLinks.length ? `<h2>チーム・${m.league==='wc'?'国':'クラブ'}を深掘り</h2><div class="chips">${teamLinks.join('')}</div>` : '';
@@ -421,6 +425,13 @@ function buildMatch(m){
     if(sched.away?.ja) ev.awayTeam={"@type":"SportsTeam","name":sched.away.ja};
     graph.push(ev, {"@type":"BroadcastEvent","name":evName+"｜ハイライト配信","isLiveBroadcast":false,"broadcastOfEvent":{"@type":"SportsEvent","name":evName},"publishedOn":{"@type":"BroadcastService","name":sched.broadcaster||"DAZN Japan"}});
   }
+  // ネタバレ防止中（html:not(.spoiler-off)）は結果に触れる要素を隠す。本文の .score / 得点 / トピック に spoiler-cover を付与
+  const bodyHtml = m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')
+    .replace(/<div class="score">/g,'<div class="score spoiler-cover">')
+    .replace(/<li>(<b>得点：<\/b>)/g,'<li class="spoiler-cover">$1')
+    .replace(/<li>(<b>トピック：<\/b>)/g,'<li class="spoiler-cover">$1');
+  const hasSpoiler = /spoiler-cover/.test(bodyHtml) || !!m.topic;
+  const spoilerBar = hasSpoiler ? `<button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで結果（スコア・得点者・見どころ）を表示</button>` : '';
   const head = HEAD({
     title:`${m.ttl}｜公式ハイライト${lg?'・'+lg:''} - Football Highlights Compass`,
     ogtitle:`${m.ttl}｜公式ハイライト`, desc, url, ogimg, ogtype:'video.other',
@@ -433,13 +444,12 @@ function buildMatch(m){
   <h1 class="headline">${titleWithFlags(m)}</h1>
   <p class="dek">${esc(dek)}</p>
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
-  <div class="warn-strip"><span>⚠️</span><div>このページは試合結果・スコアを含みます。ネタバレを避けたい方はご注意ください。</div></div>
-  <div class="post-body">${m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')}</div>
+  ${spoilerBar}
+  <div class="post-body">${bodyHtml}</div>
   ${AD}
   ${factHtml}
   ${teamHtml}
   ${relHtml}
-  <script>(function(){var sc=document.querySelector('.post-body .score');if(!sc)return;var hide=true;try{hide=localStorage.getItem('fhc_spoiler')!=='0';}catch(e){}if(!hide)return;var v=sc.innerHTML;sc.innerHTML='<button class="reveal-score" type="button">🟢 ネタバレ防止中：タップでスコアを表示</button>';sc.querySelector('.reveal-score').onclick=function(){sc.innerHTML=v;};}())</script>
   ` + FOOTER(`<p>${m.lineup?'出場選手データ：Jリーグ公式。':''}</p>`);
   writeFileSync(`site/match/${m.id}.html`, out);
 }
