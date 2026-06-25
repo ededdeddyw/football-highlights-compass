@@ -258,6 +258,9 @@ img{max-width:100%}
 .ent-side .factcard{margin:0 0 14px}
 .ent-side h2{font-size:15px;font-weight:800;margin:16px 0 8px;border:none;padding:0;color:var(--ink)}
 .ent-side .chips{margin:6px 0 0}
+.side-guides{margin:14px 0 0}
+.side-guides .guide-link{display:block;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;background:var(--paper);border:1px solid var(--line2);border-left:3px solid var(--accent2);border-radius:9px;padding:9px 12px;margin:6px 0;line-height:1.45}
+.side-guides .guide-link:hover{background:var(--card2)}
 @media(max-width:880px){.post.entity{max-width:860px}.ent-grid{grid-template-columns:1fr;gap:0}.ent-side{position:static;margin-top:8px}}
 .crumb{font-size:12px;color:var(--soft);margin:6px 0 18px;display:flex;flex-wrap:wrap;align-items:center;gap:2px}
 .crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--accent2)}
@@ -555,7 +558,7 @@ function buildCountry(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
-    <aside class="ent-side">${factHtml}${daznCta()}${related}</aside>
+    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}</aside>
   </div>
   ${AD}
   ${list}
@@ -597,7 +600,7 @@ function buildClub(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,true)}
     </div>
-    <aside class="ent-side">${factHtml}${daznCta()}${related}</aside>
+    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}</aside>
   </div>
   ${AD}
   ${list}
@@ -606,22 +609,30 @@ function buildClub(name, info){
 }
 function flagImg2(iso){ return iso?`<img class="flag" src="https://flagcdn.com/w40/${iso}.png" srcset="https://flagcdn.com/w80/${iso}.png 2x" alt="" loading="lazy">`:''; }
 
-let nc=0, ncl=0;
-for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
-for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
-
-// ========================= 集客記事（ガイド・コーナーストーン） =========================
-mkdirSync('site/guide', { recursive:true });
+// ========================= 集客記事（ガイド）の定義（エンティティ生成より前に。関連ガイドの文脈リンク用） =========================
 function cardGrid(ms){ return ms.length?`<div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:''; }
+function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
+  return { slug, entities:[clubKey],
+    title:`${player} ハイライトまとめ｜${clubLabel}の最新ゴール・アシスト（2025-26）`,
+    h1:`${player} 公式ハイライトまとめ（${clubLabel}／2025-26）`,
+    dek:`${player}（${clubLabel}）の${leagueLabel}公式ハイライトを試合ごとにまとめました。`,
+    desc:`${player}（${clubLabel}）の${leagueLabel}公式ハイライトまとめ。ゴール・アシストの試合を一覧で。公式映像のみ・ネタバレ防止。`,
+    body(){
+      const ms=(byPlayer[player]||[]).filter(m=>m.id); const club=PAGE_OF[clubKey];
+      return `<div class="post-body"><p>${clubLabel}で${role}${player}の出場試合について、公式ハイライト（主に DAZN Japan）を試合ごとにまとめています。各試合はネタバレ防止に対応し、スコアは任意で表示できます。</p></div>
+      <h2 class="lined">${player} 出場試合のハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
+      ${daznCta(`${clubLabel}＝${leagueLabel}のフル・見逃し配信はDAZNで。`)}
+      ${club?`<p style="margin-top:14px"><a href="../${club}">▶ ${clubLabel}のクラブページ（歴史・所属日本人選手）</a></p>`:''}`;
+    } };
+}
 const GUIDES = [
-  { slug:'world-cup-2026-how-to-watch',
+  { slug:'world-cup-2026-how-to-watch', entities:['日本'],
     title:'2026 FIFAワールドカップを日本から観る方法｜公式ハイライト全試合まとめ',
     h1:'2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ',
     dek:'2026年北中米ワールドカップ（カナダ・メキシコ・アメリカ共催）を日本から視聴する方法と、公式ハイライトの探し方を整理しました。',
     desc:'2026 W杯を日本から観る方法（DAZN）と公式ハイライトの探し方。日本代表・注目試合の公式ハイライトへ最短で。公式映像のみ・ネタバレ防止。',
     body(){
-      const wc = data.filter(m=>m.league==='wc'&&m.id);
-      const jp = (byTeam['日本']||[]).filter(m=>m.id);
+      const wc = data.filter(m=>m.league==='wc'&&m.id); const jp = (byTeam['日本']||[]).filter(m=>m.id);
       return `<div class="post-body">
         <p>2026 FIFAワールドカップは6月から7月にかけて、カナダ・メキシコ・アメリカの3か国共催で開催されます。日本国内では <b>DAZN</b> が全試合をライブ配信し、試合後には公式ハイライト（MATCH RECAP）も公開されます。</p>
         <p>FIFA公式YouTubeでもハイライトが公開されますが、外部サイトへの埋め込みは許可されていないため、当サイトでは公式ページへのリンクで案内しています。一方 DAZN Japan のハイライトは日本から視聴でき、当サイトではその場で再生できます。1試合につき複数の公式ソースを並べているので、見やすい方を選べます。</p>
@@ -631,25 +642,22 @@ const GUIDES = [
       ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
       <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
       <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
-    }
-  },
-  { slug:'kubo-takefusa-highlights',
-    title:'久保建英 ハイライトまとめ｜レアル・ソシエダの最新ゴール・アシスト（2025-26）',
-    h1:'久保建英 公式ハイライトまとめ（レアル・ソシエダ／2025-26）',
-    dek:'久保建英（レアル・ソシエダ）のラ・リーガ公式ハイライトを試合ごとにまとめました。',
-    desc:'久保建英（レアル・ソシエダ）のラ・リーガ公式ハイライトまとめ。ゴール・アシストの試合を一覧で。公式映像のみ・ネタバレ防止。',
-    body(){
-      const ms = (byPlayer['久保建英']||[]).filter(m=>m.id);
-      const club = PAGE_OF['ソシエダ'];
-      return `<div class="post-body">
-        <p>レアル・ソシエダで攻撃の中心を担う久保建英の出場試合について、公式ハイライト（主に DAZN Japan）を試合ごとにまとめています。各試合はネタバレ防止に対応し、スコアは任意で表示できます。</p>
-      </div>
-      <h2 class="lined">久保建英 出場試合のハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
-      ${daznCta('ソシエダ＝ラ・リーガのフル・見逃し配信はDAZNで。')}
-      ${club?`<p style="margin-top:14px"><a href="../${club}">▶ レアル・ソシエダのクラブページ（歴史・所属日本人選手）</a></p>`:''}`;
-    }
-  }
+    } },
+  playerGuide('kubo-takefusa-highlights','久保建英','ソシエダ','レアル・ソシエダ','ラ・リーガ','攻撃の中心を担う'),
+  playerGuide('suzuki-zion-highlights','鈴木彩艶','パルマ','パルマ','セリエA','守護神を務める'),
+  playerGuide('minamino-takumi-highlights','南野拓実','モナコ','ASモナコ','リーグアン','攻撃陣の一角を担う'),
+  playerGuide('doan-ritsu-highlights','堂安律','フランクフルト','フランクフルト','ブンデスリーガ','攻撃を牽引する'),
 ];
+const guidesByEntity = {};
+for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
+function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.length?`<div class="side-guides"><div class="side-h">関連ガイド</div>${gs.map(x=>`<a class="guide-link" href="../guide/${x.slug}.html">📘 ${esc(x.h1)}</a>`).join('')}</div>`:''; }
+
+let nc=0, ncl=0;
+for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
+for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
+
+// ========================= 集客記事（ガイド）の生成 =========================
+mkdirSync('site/guide', { recursive:true });
 const guideUrls = [];
 for(const g of GUIDES){
   const url = `${DOMAIN}/guide/${g.slug}.html`;

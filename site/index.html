@@ -61,6 +61,10 @@
   .side-head b{font-size:13px; letter-spacing:.03em; color:var(--text)}
   .side-head .menu-close{display:none; background:none; border:0; font-size:22px; line-height:1; color:var(--muted); cursor:pointer}
   .col-right .side-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:14px 2px 7px}
+  .nav-guides{margin:0 0 14px; padding:0 0 12px; border-bottom:1px solid var(--line)}
+  .nav-guides .ng-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:0 2px 7px}
+  .nav-guides a{display:block; font-size:12.5px; font-weight:700; color:var(--accent); text-decoration:none; padding:6px 9px; border-radius:8px; border:1px solid var(--line); border-left:3px solid var(--accent2); background:var(--card2); margin:5px 0; line-height:1.4}
+  .nav-guides a:hover{border-color:var(--accent2)}
   /* 右サイドの検索ボックス（アイコン付き・大きめ・フォーカスリング） */
   .col-right .ac-wrap input{width:100%; box-sizing:border-box; padding:13px 14px 13px 42px; border-radius:12px; border:1.5px solid var(--line); background:var(--card2) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238a93b5' stroke-width='2.2' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><line x1='20.5' y1='20.5' x2='16.6' y2='16.6'/></svg>") 14px center/18px no-repeat; color:var(--text); font-size:15px; font-weight:600; -webkit-appearance:none; appearance:none; box-shadow:0 1px 3px rgba(20,30,90,.06); transition:border-color .15s, box-shadow .15s}
   .col-right .ac-wrap input::placeholder{color:var(--muted); font-weight:500}
@@ -309,6 +313,14 @@
   <div class="appgrid">
     <aside class="col-left" id="navSidebar">
       <div class="side-head"><b>⚽ 横断ナビ</b><button class="menu-close" id="menuClose" aria-label="閉じる">×</button></div>
+      <nav class="nav-guides" aria-label="ガイド">
+        <div class="ng-h">📘 ガイド</div>
+        <a href="guide/world-cup-2026-how-to-watch.html">W杯26を日本から観る方法</a>
+        <a href="guide/kubo-takefusa-highlights.html">久保建英 ハイライトまとめ</a>
+        <a href="guide/suzuki-zion-highlights.html">鈴木彩艶 ハイライトまとめ</a>
+        <a href="guide/minamino-takumi-highlights.html">南野拓実 ハイライトまとめ</a>
+        <a href="guide/doan-ritsu-highlights.html">堂安律 ハイライトまとめ</a>
+      </nav>
       <div id="menuBody"></div>
     </aside>
 
