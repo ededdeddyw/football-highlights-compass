@@ -73,6 +73,8 @@
   .col-right .ac-wrap input::placeholder{color:var(--muted); font-weight:500}
   .col-right .ac-wrap input::-webkit-search-cancel-button{-webkit-appearance:none}
   .col-right .ac-wrap input:focus{outline:none; border-color:var(--accent2); box-shadow:0 0 0 3px rgba(39,70,201,.15)}
+  .sort-sel{width:100%; box-sizing:border-box; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:var(--card2); color:var(--text); font-size:14px; font-weight:700; cursor:pointer; -webkit-appearance:none; appearance:none; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a93b5' stroke-width='2.5' stroke-linecap='round'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat:no-repeat; background-position:right 12px center}
+  .sort-sel:focus{outline:none; border-color:var(--accent2)}
   .nav-backdrop{display:none; position:fixed; inset:0; background:rgba(8,14,40,.5); z-index:55}
   @media(max-width:1080px){
     .appgrid{grid-template-columns:1fr; grid-template-areas:"right" "main"; gap:14px}
@@ -351,6 +353,8 @@
       <div class="side-h" style="margin-top:2px">検索</div>
       <div class="ac-wrap"><input id="q" type="search" placeholder="チーム・選手・大会名で検索" autocomplete="off"><div class="ac-list" id="qList"></div></div>
       <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
+      <div class="side-h">並び順</div>
+      <select id="sortSel" class="sort-sel" aria-label="並び順"><option value="new">新着順（新しい→古い）</option><option value="old">古い順（古い→新しい）</option></select>
       <div class="side-h">リーグ・大会で絞り込み</div>
       <div class="chips" id="league-chips"></div>
       <div id="sub-filters"></div>
@@ -1224,6 +1228,9 @@ var CLUB_CRESTS = {"ソシエダ":"https://r2.thesportsdb.com/images/media/team/
 /*MATCH_SCORES_START*/
 var MATCH_SCORES = {"TXyBRmgFIs4":"0-4","3jIMk43CECY":"2-2","Mr3hSU26N9c":"4-0","rqvRbGTw2zc":"0-1","v1TbRkKaXTA":"1-0","O1PmiWBYId8":"0-1","Ht804w5UO0E":"2-0","1kc2lD5KzKU":"2-1","v7SmkAqQwzM":"1-0","oH_QKjqMTrg":"6-0","jpOLXF6Mpxs":"4-1","D9lZubMQlT4":"0-1","wie62X1Ysbc":"2-0","hpPVZkcAvD4":"0-0","T7psPCftyBs":"5-1","j7UpL1CqtIs":"1-3","YXsTSlSME_8":"2-2","IuuGXDtpUA4":"1-1","DFZ2eSfvmKc":"4-1","_hpIHERSBEs":"7-1","mov67UkdezM":"1-0","FG9wyPcgDeI":"2-1","uLDT0VAJLUk":"1-1","H5z7hqgQLxg":"2-2","dLSN7kUHG1E":"0-0","854ROSvN6hU":"1-1","pl0lsvDnT6E":"3-1","qoZo2NqdrGc":"1-1","icl8cAJpcvg":"1-2","stJyA4EIA5M":"1-1","zcUAhveRtYY":"2-6","ASTz49Z4z9k":"1-0","7ZRHcCkxONY":"4-2","Oh4TDhi1Gkw":"0-4","aLk-j32VqYE":"0-1","QN0cc9TlrM4":"0-3","CIPHXD2v2_Q":"1-1","g9Bi6lB2Nos":"2-3","CjW8ztH3Wv8":"2-3","EApWO_dAnlg":"6-1","1qh-O2woTcc":"3-0","JRZcacj5S3c":"2-2","Hb778fnNM0g":"1-2","xpHB3HBD_Sg":"1-2","FauYcbxZRfo":"2-2","RBasLKNTaW0":"1-2","IXHUVUdFo2E":"1-0","A7KsvI_GaGE":"2-0","8YHuuly9e7s":"0-3","oOVYwrU7rcE":"0-3","6PvnpB8-X5c":"2-2","AC4anpltQxU":"2-0","XvtGCzLm1P8":"1-0","qnpdSdJiIAs":"1-1","zBqe98qHhq8":"1-1","bqzyopPeUQs":"0-1","N8OMNhxL-6s":"2-0","L8xroqVK76I":"1-3","tVmKL3DDW-Q":"3-0","WXfJ03GrVfk":"3-2","5t-qoeUgH0A":"1-1","FM_aM1lc8dY":"1-0","fjKiMxCXoy0":"2-0","B_YE64muVkw":"2-1","rVnFw1AS0h0":"0-2","cyxjxM-mISg":"2-1","G2O7uHfXtQ4":"0-1","RYzfnPpdLVI":"1-1","cwX8WzVhAVQ":"1-0","o4uM_39SEB4":"1-3","e4Zgqf9r_Wg":"4-2","XKHmghnLSG4":"3-2","_U1j-UBNvW0":"1-0","KpdT4xzXT2o":"2-2","hY-m8gFQW8c":"0-0","Mc2CSkkc-qc":"2-2","-xHYZ1ZpqOk":"2-2","3OpZbyBaaXI":"5-2","0HwJmeOvrk8":"0-2","ojbyRYuZ8Ns":"1-2","TKe0WWMg_Eo":"0-3","idV1cQH8T4U":"2-0","15UvrUgxL1U":"2-0","dO0f-a5AegE":"2-1","1Kc5K1b6_W8":"0-1","s5J9vjbZ4Rw":"0-0","_0rsXm4nmO4":"2-1","sDymGcVyp_0":"2-2","koDXLdnqZFs":"1-3","weOjjWJ34TQ":"1-2","7x1m7TPjJoc":"2-1","bgx5jImEAb8":"2-1","JvsTwIDJNII":"2-0","PMp_wnN69gA":"2-0","R8icQkG34eE":"1-1","gFuVafmYxjE":"3-0","rWnokOMQjWA":"3-2","MpE5HHeOT_8":"1-1","z1r-31b_ujE":"1-1","uinHot5JOyE":"2-2","xIEjKY9yRgs":"3-1","VP23JivLM7Y":"1-1","o7_pcIlOXKk":"0-1","8PQCST-0egg":"1-4","KFB86H6v6TQ":"1-1","5l8HRA2kvrQ":"1-0","-tJEpiivAxU":"2-2","LhSpj15rfhM":"5-0","2xtg1LlTUf0":"2-0","T3vWsOunplI":"2-1","okI94E9cIXg":"1-2","GBJtLUR4aaU":"0-3","YPYI18fg6A0":"1-1","-K9e11mlPRM":"1-2","11psscbd7xE":"3-3","dSUBFm_5SIA":"0-0","4br30NH0Aik":"0-1","-kDlbgkRY9c":"1-1","0gyqS4_Ma1A":"5-1","_hixtTGG45g":"4-0","WY_NcU4mGG0":"2-1","tRJPo5X8i38":"0-2","wF7mSeQxMIk":"2-2","OzARSrC3Xdw":"0-1","7JNt2J_Hmt4":"1-1","xulpkDJlelM":"2-3","do4mdgHs2bg":"1-3","0bMvj-9bDTY":"3-2","d_xQ4ruO5nI":"1-2","lO0Nzq6v3Zw":"1-0","Kf6Wtoz61B0":"1-1","xY5vLBC1Gmk":"2-1","ixWdJzvORbg":"1-0","ydFoO8j2AW4":"1-1","OBsGcorT4Dk":"0-0","9Mc86D_V17s":"1-3","I2D_GFwJKYw":"0-2","j45PkuzjtI4":"2-2","qpO65eFp240":"1-0","mboApyqPqjY":"1-1","Xy7znt4rxB8":"1-1","l0pd4Ff0IWQ":"3-5","G1hMNzyYHJA":"5-2","u50Q3k_p_tM":"3-0","4dZMoJcjxJU":"1-1","ok8DMoroA_s":"2-2","tJ8w0I1TGzs":"0-3","0-zugQtxY48":"2-2","eTFaQiGr6JI":"1-0","WLu5wfNEq7M":"2-0","VzWMyjs-NO0":"1-1","24Xum8BKgZA":"4-2","EF-t5VcbNh4":"1-4","8z677lfFJHQ":"1-1","_Xjq698qvJ8":"1-0","9zSgulHWDgg":"3-0","AtQbzjq173E":"3-0","3qZnugDzCP4":"1-2","Mx7pDwk934M":"1-4","pKWnFYZ3NgY":"3-4","NRey8uTcL8I":"0-0","CI9K1sQIF7s":"2-0","TnSY33rP8mE":"0-2","UlEMwz1j-G0":"0-1","zvGlkMqjVHM":"1-2","1Z4ppSGXILM":"4-0","X-LVmJTfqoA":"1-3","D5VxUeFfZb8":"1-2","5B2ut8vVKn0":"2-2","4epALsFs2Nc":"2-1","cWwnzplU89Q":"0-3","qo_pVSuH02I":"1-0","0Lpb-RohwVk":"1-1","_ujWOdYjiOw":"2-2","OLXnEWOqXlM":"3-1","MMhb_3qScwM":"2-1","4k1wewR8D9Y":"1-1","o5Wrbg4lJr8":"0-1","JdeaGgxIFJE":"1-1","4iKzi3YkAas":"2-0","VVgG7WPi0Lk":"2-3","-VykCyLVGdU":"1-0","Ycw01mUexyY":"3-2","w9ugkpSOtN8":"3-1","MmkBkrXia-c":"2-2","IdNLwvkww28":"1-0","tjt_vWdtylA":"3-5"};
 /*MATCH_SCORES_END*/
+/*MATCH_DATES_START*/
+var MATCH_DATES = {"TXyBRmgFIs4":"2026-06-21","3jIMk43CECY":"2026-06-14","Mr3hSU26N9c":"2026-06-21","l6bkoYyr-c4":"2026-06-15","0-5qfsxThHg":"2026-06-13","dEEPG2lpQdk":"2026-06-20","BYyZDXKv0hQ":"2026-06-17","lPRpAlZIeZI":"2026-06-17","ucu6WdoGg-0":"2026-06-19","kj6zFsFGuXI":"2026-06-21","O1PmiWBYId8":"2026-06-14","p9OJdAh-3uU":"2026-06-17","HAcVdmkBdIY":"2026-06-18","Ht804w5UO0E":"2026-06-11","1kc2lD5KzKU":"2026-06-12","v7SmkAqQwzM":"2026-06-19","oH_QKjqMTrg":"2026-06-18","jpOLXF6Mpxs":"2026-06-13","D9lZubMQlT4":"2026-06-20","wie62X1Ysbc":"2026-06-19","hpPVZkcAvD4":"2026-06-21","T7psPCftyBs":"2026-06-20","j7UpL1CqtIs":"2026-06-22","YXsTSlSME_8":"2026-06-21","IuuGXDtpUA4":"2026-06-13","fA-D5X94BhQ":"2026-06-12","DFZ2eSfvmKc":"2026-06-18","O5j0ZWm2K88":"2026-06-14","_hpIHERSBEs":"2026-06-14","mov67UkdezM":"2026-06-14","FG9wyPcgDeI":"2026-06-20","uLDT0VAJLUk":"2026-06-15","H5z7hqgQLxg":"2026-06-16","dLSN7kUHG1E":"2026-06-15","854ROSvN6hU":"2026-06-15","pl0lsvDnT6E":"2026-06-17","qoZo2NqdrGc":"2026-06-18"};
+/*MATCH_DATES_END*/
 var c;
 if(c=document.getElementById('cnt-wc')) c.textContent = 10 + EXTRA_WC.length;
 if(c=document.getElementById('cnt-jl')) c.textContent = 9 + EXTRA_JL.length;
@@ -1259,7 +1266,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     c.dataset.teams = '|' + tmsRaw.split(/\s*vs\s*/i).map(function(s){return s.trim();}).filter(Boolean).join('|') + '|';
   });
   var order = ['wc','jl','laliga','seriea','ligue1','bundes','portugal','other'];
-  var state = { q:'', league:'all', player:'all', group:'all', country:'all', page:1 };
+  var state = { q:'', league:'all', player:'all', group:'all', country:'all', sort:'new', page:1 };
   var PAGE=20, GRID=[], lastList=[], grid, pager;
   var rc = document.getElementById('result-count');
   function apply(){
@@ -1272,6 +1279,12 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
       if (q !== '' && g.hay.indexOf(q) < 0) return false;
       return true;
     });
+    // 並び順: 新着順(new)＝日付降順 / 古い順(old)＝昇順。日付不明(クラブ/J等)は元の並びを維持して末尾へ（安定ソート）
+    var SD = (typeof MATCH_DATES!=='undefined') ? MATCH_DATES : {};
+    lastList = lastList.map(function(g,i){return {g:g,i:i,d:SD[g.id]||''};}).sort(function(a,b){
+      if(a.d&&b.d){ return state.sort==='old' ? (a.d<b.d?-1:a.d>b.d?1:0) : (a.d>b.d?-1:a.d<b.d?1:0); }
+      if(a.d&&!b.d) return -1; if(!a.d&&b.d) return 1; return a.i-b.i;
+    }).map(function(x){return x.g;});
     state.page = 1; renderPage();
   }
   function renderPage(){
@@ -1313,6 +1326,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   CANON.forEach(function(p){ if(pcount[p]){ var ch = chip(p+'('+pcount[p]+')', false); ch.dataset.p = p; pcEl.appendChild(ch); pchips.push(ch); } });
   pchips.forEach(function(ch){ ch.addEventListener('click', function(){ state.player = ch.dataset.p; pchips.forEach(function(x){ x.classList.toggle('active', x===ch); }); apply(); }); });
   document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; apply(); });
+  var sortSel=document.getElementById('sortSel'); if(sortSel) sortSel.addEventListener('change', function(e){ state.sort=e.target.value; apply(); });
   // URLの ?q= で検索を初期化（schema.org SearchAction 対応）
   try{ var _q=new URLSearchParams(location.search).get('q'); if(_q){ var qi=document.getElementById('q'); if(qi){ qi.value=_q; state.q=_q; } } }catch(e){}
   // URLの ?league= でリーグ絞り込みを初期化（試合ページのパンくず「大会」リンク用）

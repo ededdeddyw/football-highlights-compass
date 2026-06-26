@@ -800,9 +800,13 @@ const groupUrls = [];
   for(const [name,info] of Object.entries(CLUBS)) if(CREST[info.slug]) crestMap[name]=CREST[info.slug];
   const scoreMap = {};
   for(const m of data){ if(m.id && m.score) scoreMap[m.id]=m.score; }
+  // 新着順ソート用の日付（videoId→"YYYY-MM-DD"）。W杯はスケジュール日付、それ以外は日付不明（空）
+  const dateMap = {};
+  for(const m of data){ if(!m.id) continue; const s=schedFor(m); const d=(s&&(s.koUTC||s.dateLocal)||'').slice(0,10); if(d) dateMap[m.id]=d; }
   let next = html.replace(/\/\*ENTITY_PAGES_START\*\/[\s\S]*?\/\*ENTITY_PAGES_END\*\//, `/*ENTITY_PAGES_START*/\nvar ENTITY_PAGES = ${map};\n/*ENTITY_PAGES_END*/`);
   next = next.replace(/\/\*CLUB_CRESTS_START\*\/[\s\S]*?\/\*CLUB_CRESTS_END\*\//, `/*CLUB_CRESTS_START*/\nvar CLUB_CRESTS = ${JSON.stringify(crestMap)};\n/*CLUB_CRESTS_END*/`);
   next = next.replace(/\/\*MATCH_SCORES_START\*\/[\s\S]*?\/\*MATCH_SCORES_END\*\//, `/*MATCH_SCORES_START*/\nvar MATCH_SCORES = ${JSON.stringify(scoreMap)};\n/*MATCH_SCORES_END*/`);
+  next = next.replace(/\/\*MATCH_DATES_START\*\/[\s\S]*?\/\*MATCH_DATES_END\*\//, `/*MATCH_DATES_START*/\nvar MATCH_DATES = ${JSON.stringify(dateMap)};\n/*MATCH_DATES_END*/`);
   writeFileSync('site/index.html', next);
 }
 
