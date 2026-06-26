@@ -54,6 +54,42 @@
       },
       "why": "published_outside_window",
       "loggedAt": "2026-06-25T22:59:25.839Z"
+    },
+    {
+      "matchId": "wc2026-gF-3-1",
+      "videoId": "Tqbf_8KYw8k",
+      "title": "【日本が2位通過!!】スウェーデンと1-1のドロー!! ラウンド32で王国🇧🇷ブラジルとの大一番へ!!  #FIFAワールドカップ#本気で楽しむならDAZN",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T01:25:00.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gF-3-2",
+      "videoId": "FnMuWpfUlbM",
+      "title": "【チュニジア×オランダ｜ハイライト｜オランダが3発快勝】グループF第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T01:29:30.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-26T02:05:28.756Z"
     }
   ]
 }

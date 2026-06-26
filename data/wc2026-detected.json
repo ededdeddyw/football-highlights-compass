@@ -17,6 +17,40 @@
         "hl": true
       },
       "detectedAt": "2026-06-25T22:59:25.839Z"
+    },
+    {
+      "matchId": "wc2026-gF-3-1",
+      "videoId": "BvmWDhzkbe4",
+      "title": "【日本×スウェーデン｜ハイライト｜日本代表はグループ2位で決勝トーナメント進出決定！】グループF第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T01:59:20.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gF-3-2",
+      "videoId": "P9cHnz6zPCA",
+      "title": "【FIFAワールドカップ2026】チュニジア vs オランダ : グループF 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T02:00:31.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T02:05:28.756Z"
     }
   ]
 }
