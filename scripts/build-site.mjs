@@ -419,6 +419,8 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .standings td.st-team a{color:var(--ink);text-decoration:none;font-weight:700}
 .standings .flag{height:13px;vertical-align:-2px;margin-right:5px;border-radius:2px}
 .note-sm{font-size:12px;color:var(--muted);margin:8px 2px 0;line-height:1.7}
+.standings td.tbd{color:var(--soft);font-style:italic;text-align:center}
+.ko-qual td.st-team a{font-weight:700}
 .gx-list{display:flex;flex-direction:column;gap:8px;margin:12px 0}
 .gx-row{display:grid;grid-template-columns:54px 1fr auto auto;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line2);border-radius:11px;padding:11px 14px}
 .gx-row .gx-rd{font-size:11.5px;color:var(--muted);font-weight:700}
@@ -663,7 +665,7 @@ const GUIDES = [
       </div>
       ${jp.length?`<h2 class="lined">日本代表の試合</h2>${cardGrid(jp)}`:''}
       ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
-      ${(()=>{const ls=[...new Set(SCHEDULE.filter(s=>s.stage==='group'&&s.group).map(s=>s.group))].sort(); return ls.length?`<h2 class="lined">グループ別ページ（順位・日程・ハイライト）</h2><div class="chips">${ls.map(L=>`<a href="../group/${L.toLowerCase()}.html">グループ${L}</a>`).join('')}</div>`:'';})()}
+      ${(()=>{const ls=[...new Set(SCHEDULE.filter(s=>s.stage==='group'&&s.group).map(s=>s.group))].sort(); return ls.length?`<h2 class="lined">グループ別ページ・決勝トーナメント（順位・日程・ハイライト）</h2><div class="chips">${ls.map(L=>`<a href="../group/${L.toLowerCase()}.html">グループ${L}</a>`).join('')}<a href="../group/knockout.html">🏆 決勝トーナメント</a></div>`:'';})()}
       <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
       <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
     } },
@@ -709,13 +711,13 @@ const groupUrls = [];
   const wcByTeams = new Map();
   for(const m of data){ if(m.league==='wc' && m.id && m.teams.length===2) wcByTeams.set([...m.teams].sort().join('|'), m); }
   const rOrd = {'第1節':1,'第2節':2,'第3節':3};
-  for(const L of letters){
+  // グループ順位の集計（公式結果優先・掲載ハイライトで補完）。グループページと決勝Tページで共用
+  function tableFor(L){
     const fx = gAll.filter(s=>s.group===L).sort((a,b)=>(rOrd[a.round]||9)-(rOrd[b.round]||9) || (a.koUTC||'').localeCompare(b.koUTC||''));
     const teams = [...new Set(fx.flatMap(f=>[f.home&&f.home.ja, f.away&&f.away.ja].filter(Boolean)))];
     const tbl={}; teams.forEach(t=>tbl[t]={p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
     for(const f of fx){ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; if(!h||!a||!tbl[h]||!tbl[a]) continue;
-      let hg=null, ag=null;
-      const off = WCRESULTS[f.matchId]; // 公式結果（home-away順）優先
+      let hg=null, ag=null; const off = WCRESULTS[f.matchId];
       if(off){ const sc=String(off).match(/^(\d+)-(\d+)$/); if(sc){ hg=+sc[1]; ag=+sc[2]; } }
       if(hg===null){ const m=wcByTeams.get([h,a].sort().join('|')); if(m&&m.score){ const sc=m.score.match(/^(\d+)-(\d+)$/); if(sc){ hg=m.teams[0]===h?+sc[1]:+sc[2]; ag=m.teams[0]===h?+sc[2]:+sc[1]; } } }
       if(hg===null) continue;
@@ -724,6 +726,10 @@ const groupUrls = [];
     }
     const played = Object.values(tbl).reduce((s,x)=>s+x.p,0)/2;
     const ranked = teams.slice().sort((x,y)=> tbl[y].pts-tbl[x].pts || (tbl[y].gf-tbl[y].ga)-(tbl[x].gf-tbl[x].ga) || tbl[y].gf-tbl[x].gf || x.localeCompare(y));
+    return { fx, teams, tbl, played, ranked };
+  }
+  for(const L of letters){
+    const { fx, teams, tbl, played, ranked } = tableFor(L);
     const allDone = played>=fx.length;
     const noteTxt = allDone ? `全${fx.length}試合の結果に基づく最終順位です。` : `${played}/${fx.length}試合消化時点の順位です（残りは試合後に反映）。`;
     const standings = played>0 ? `<h2 class="lined">グループ${L} 順位</h2><div class="factcard"><table class="standings"><tr><th>#</th><th>国</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得</th><th>失</th><th>差</th><th>点</th></tr>${ranked.map((t,i)=>{const r=tbl[t];const gd=r.gf-r.ga;const lk=PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`${flagImg(t)}${esc(t)}`;return `<tr><td>${i+1}</td><td class="st-team">${lk}</td><td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gf}</td><td>${r.ga}</td><td>${gd>=0?'+':''}${gd}</td><td><b>${r.pts}</b></td></tr>`;}).join('')}</table></div><p class="note-sm">${noteTxt}</p>` : '';
@@ -753,6 +759,36 @@ const groupUrls = [];
   <p style="margin-top:8px"><a href="../?league=wc&group=${L}">▶ グループ${L}の試合をトップの一覧で見る</a></p>
   ` + FOOTER();
     writeFileSync(`site/group/${L.toLowerCase()}.html`, out);
+    groupUrls.push(url);
+  }
+  // ===== 決勝トーナメント（日程＋各組の進出国。対戦カード/ハイライトはグループ最終確定後に順次反映） =====
+  {
+    const teamCell = t=> t ? (PAGE_OF[t]?`<a href="../${PAGE_OF[t]}">${flagImg(t)}${esc(t)}</a>`:`${flagImg(t)}${esc(t)}`) : '-';
+    const qrows = letters.map(L=>{ const t=tableFor(L); const done=t.played>=t.fx.length;
+      const cells = done ? `<td class="st-team">${teamCell(t.ranked[0])}</td><td class="st-team">${teamCell(t.ranked[1])}</td><td class="st-team">${teamCell(t.ranked[2])}</td>` : `<td colspan="3" class="tbd">グループ終了後に確定</td>`;
+      return `<tr><td><b>${L}</b></td>${cells}</tr>`;
+    }).join('');
+    const doneN = letters.filter(L=>{const t=tableFor(L);return t.played>=t.fx.length;}).length;
+    const qualTable = `<div class="factcard"><table class="standings ko-qual"><tr><th>組</th><th>1位</th><th>2位</th><th>3位</th></tr>${qrows}</table></div><p class="note-sm">各組1位・2位が決勝トーナメント進出。さらに各組3位のうち上位8チームも進出します。結果が確定したグループから順に反映（${doneN}/${letters.length}組 確定）。</p>`;
+    const schedule = `<div class="factcard"><table><tr><th>ラウンド32</th><td>6/28〜7/3（16試合・北中米各地）</td></tr><tr><th>ベスト16</th><td>7/4〜7/7（8試合）</td></tr><tr><th>準々決勝</th><td>7/9〜7/11（4試合）</td></tr><tr><th>準決勝</th><td>7/14・7/15（2試合）</td></tr><tr><th>3位決定戦</th><td>7/18</td></tr><tr><th>決勝</th><td>7/19・メットライフ・スタジアム（ニュージャージー）</td></tr></table></div>`;
+    const url=`${DOMAIN}/group/knockout.html`;
+    const title='FIFAワールドカップ2026 決勝トーナメント｜日程・進出国・ハイライト';
+    const desc='W杯2026 決勝トーナメント（ラウンド32〜決勝）の日程・会場と各組の進出国。各試合の公式ハイライトへ。公式映像のみ・ネタバレ防止。'.slice(0,120);
+    const cg=[{"@type":"WebPage","name":title,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'W杯26',url:`${DOMAIN}/?league=wc`},{name:'決勝トーナメント',url}])];
+    const head=HEAD({ title:`${title} - Football Highlights Compass`, ogtitle:title, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
+    const out = head + TOPBAR + `<article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:'W杯26',href:'../?league=wc'},{label:'決勝トーナメント'}])}
+  <p class="kicker">⚽ FIFAワールドカップ2026</p>
+  <h1 class="headline">決勝トーナメント｜日程・進出国・ハイライト</h1>
+  <p class="dek">48チーム・12組の上位32チームによる決勝トーナメント（ラウンド32〜決勝）。日程・会場と、確定した進出国をまとめています。対戦カードと各試合の公式ハイライトは、グループ最終結果の確定後・試合消化に合わせて順次反映します。</p>
+  <h2 class="lined">日程</h2>${schedule}
+  <button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで進出国を表示</button>
+  <div class="spoiler-cover"><h2 class="lined">グループ別 進出国</h2>${qualTable}</div>
+  ${daznCta('W杯26 決勝トーナメントのフル・見逃し配信はDAZNで。')}
+  ${AD}
+  <p style="margin-top:8px"><a href="../guide/world-cup-2026-how-to-watch.html">▶ W杯26を日本から観る方法・全試合ハイライト</a> ／ <a href="../?league=wc">▶ W杯26の全試合を一覧で見る</a></p>
+  ` + FOOTER();
+    writeFileSync('site/group/knockout.html', out);
     groupUrls.push(url);
   }
 }
