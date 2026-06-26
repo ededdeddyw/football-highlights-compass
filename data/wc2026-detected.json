@@ -51,6 +51,40 @@
         "hl": true
       },
       "detectedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gI-3-1",
+      "videoId": "iZUeyV7HgQQ",
+      "title": "【ノルウェー×フランス｜ハイライト｜デンベレが大活躍】グループI第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T21:50:22.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T22:05:17.813Z"
+    },
+    {
+      "matchId": "wc2026-gI-3-2",
+      "videoId": "_uAsT0T3sgI",
+      "title": "【セネガル×イラク｜ハイライト｜セネガルが5発快勝でGS突破へ望みをつなぐ】グループI第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T21:41:25.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T22:05:17.813Z"
     }
   ]
 }
