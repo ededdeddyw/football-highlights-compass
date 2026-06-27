@@ -90,6 +90,24 @@
       },
       "why": "published_outside_window",
       "loggedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gH-3-2",
+      "videoId": "c8O-dWumyM8",
+      "title": "【ウルグアイ×スペイン｜ハイライト｜スペインが無敗の首位通過で決勝トーナメント進出決定】グループH第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T02:31:16.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-27T03:20:11.473Z"
     }
   ]
 }
