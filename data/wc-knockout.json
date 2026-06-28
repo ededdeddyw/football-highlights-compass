@@ -1,0 +1,21 @@
+{
+  "_note": "W杯2026 決勝トーナメントの対戦カード。home/away はソース表記順（中立地のため便宜上）。result は実施後に 'H-A'（ホーム-アウェイ順）でWeb検証して記録（空＝未消化）。videoId はハイライト検出後に設定すると試合ページへリンクされる。R32対戦カードはSI.com・Sky Sportsで相互検証済み（2026-06-28）。",
+  "r32": [
+    { "home": "南アフリカ", "away": "カナダ", "result": "", "videoId": "" },
+    { "home": "ブラジル", "away": "日本", "result": "", "videoId": "" },
+    { "home": "ドイツ", "away": "パラグアイ", "result": "", "videoId": "" },
+    { "home": "オランダ", "away": "モロッコ", "result": "", "videoId": "" },
+    { "home": "コートジボワール", "away": "ノルウェー", "result": "", "videoId": "" },
+    { "home": "フランス", "away": "スウェーデン", "result": "", "videoId": "" },
+    { "home": "メキシコ", "away": "エクアドル", "result": "", "videoId": "" },
+    { "home": "イングランド", "away": "コンゴ民主共和国", "result": "", "videoId": "" },
+    { "home": "ベルギー", "away": "セネガル", "result": "", "videoId": "" },
+    { "home": "アメリカ", "away": "ボスニア・ヘルツェゴビナ", "result": "", "videoId": "" },
+    { "home": "スペイン", "away": "オーストリア", "result": "", "videoId": "" },
+    { "home": "ポルトガル", "away": "クロアチア", "result": "", "videoId": "" },
+    { "home": "スイス", "away": "アルジェリア", "result": "", "videoId": "" },
+    { "home": "オーストラリア", "away": "エジプト", "result": "", "videoId": "" },
+    { "home": "アルゼンチン", "away": "カーボベルデ", "result": "", "videoId": "" },
+    { "home": "コロンビア", "away": "ガーナ", "result": "", "videoId": "" }
+  ]
+}
