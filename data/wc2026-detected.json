@@ -153,6 +153,40 @@
         "hl": true
       },
       "detectedAt": "2026-06-27T06:04:09.559Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-1",
+      "videoId": "_FXrOkWXAwg",
+      "title": "【FIFAワールドカップ2026】パナマ vs イングランド : グループ L 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:56:47.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-2",
+      "videoId": "BMSL-4Eg-x4",
+      "title": "【FIFAワールドカップ2026】クロアチア vs ガーナ : グループL 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:48:59.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T00:04:04.444Z"
     }
   ]
 }

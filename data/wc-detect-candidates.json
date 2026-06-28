@@ -108,6 +108,42 @@
       },
       "why": "published_outside_window",
       "loggedAt": "2026-06-27T03:20:11.473Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-1",
+      "videoId": "uJI4Wzl1-KA",
+      "title": "【パナマ×イングランド｜ハイライト｜ハリー・ケインがイングランド人最多のワールドカップ通算11ゴールを達成】グループL第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:36:09.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-2",
+      "videoId": "wpQRGMvzL_I",
+      "title": "【クロアチア×ガーナ｜ハイライト｜クロアチアが勝利し、GS２位通過！】グループL第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:33:47.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T00:04:04.444Z"
     }
   ]
 }
