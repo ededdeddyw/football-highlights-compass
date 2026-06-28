@@ -1,0 +1,5 @@
+{
+  "_note": "Google AdSense 広告ユニット設定。AdSense管理画面で広告ユニットを作成して発行される『広告スロットID』（数字10桁程度）を adSlot に入れる。空の間は data-ad-slot=__AD_SLOT__ のままになり、各ページの広告枠は自動で非表示（空枠ガード）。adSlot を設定して `npm run build` すると、トップ＋全生成ページの広告が一斉に有効化される。",
+  "adClient": "ca-pub-7948789271209448",
+  "adSlot": ""
+}

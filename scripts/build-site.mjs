@@ -41,6 +41,12 @@ try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFil
 let AFFILIATE = {};
 try { if (existsSync('data/affiliate.json')) AFFILIATE = JSON.parse(readFileSync('data/affiliate.json','utf8')); } catch(e){ console.warn('affiliate読込失敗:', e.message); }
 
+// ---------- 広告（Google AdSense）。data/ads.json の adSlot に広告ユニットIDを設定。空なら __AD_SLOT__ のまま＝空枠ガードで非表示 ----------
+let ADS = {};
+try { if (existsSync('data/ads.json')) ADS = JSON.parse(readFileSync('data/ads.json','utf8')); } catch(e){ console.warn('ads読込失敗:', e.message); }
+const AD_CLIENT = (ADS.adClient||'ca-pub-7948789271209448').trim();
+const AD_SLOT = (ADS.adSlot||'').trim() || '__AD_SLOT__';   // 空なら placeholder のまま（スクリプトが枠を自動非表示）
+
 // ---------- W杯グループ戦の公式結果（matchId→"H-A" ホーム-アウェイ順）。順位表を全72試合準拠にする。Web検証で記録 ----------
 let WCRESULTS = {};
 try { if (existsSync('data/wc-results.json')) WCRESULTS = JSON.parse(readFileSync('data/wc-results.json','utf8')); } catch(e){ console.warn('wc-results読込失敗:', e.message); }
@@ -435,7 +441,7 @@ html.spoiler-off .gx-row .gx-vs{display:none}
 @media(max-width:620px){.gx-row{grid-template-columns:1fr auto;gap:4px 10px}.gx-row .gx-rd{grid-column:1/-1}.gx-row .gx-meta{grid-column:1;font-size:11.5px}}`;
 
 // 広告枠（slot は AdSense 管理画面で作成した広告ユニットIDに置換する）
-const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7948789271209448" data-ad-slot="__AD_SLOT__" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script></div>`;
+const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsbygoogle" style="display:block" data-ad-client="${AD_CLIENT}" data-ad-slot="${AD_SLOT}" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(function(){var i=document.currentScript.previousElementSibling;if(i&&i.getAttribute('data-ad-slot')==='__AD_SLOT__'){var b=i.closest('.ad');if(b)b.style.display='none';}else{(adsbygoogle=window.adsbygoogle||[]).push({});}})();</script></div>`;
 
 mkdirSync('site/match', { recursive:true });
 mkdirSync('site/country', { recursive:true });
@@ -845,6 +851,8 @@ const PICKUP_HTML = (()=>{
   next = next.replace(/\/\*MATCH_SCORES_START\*\/[\s\S]*?\/\*MATCH_SCORES_END\*\//, `/*MATCH_SCORES_START*/\nvar MATCH_SCORES = ${JSON.stringify(scoreMap)};\n/*MATCH_SCORES_END*/`);
   next = next.replace(/\/\*MATCH_DATES_START\*\/[\s\S]*?\/\*MATCH_DATES_END\*\//, `/*MATCH_DATES_START*/\nvar MATCH_DATES = ${JSON.stringify(dateMap)};\n/*MATCH_DATES_END*/`);
   next = next.replace(/<!--PICKUP_START-->[\s\S]*?<!--PICKUP_END-->/, `<!--PICKUP_START-->\n      ${PICKUP_HTML}\n      <!--PICKUP_END-->`);
+  // 広告ユニット（トップ）も AD 定義から注入し、スロットIDを一元管理（data/ads.json）
+  next = next.replace(/<!--AD_UNIT_START-->[\s\S]*?<!--AD_UNIT_END-->/, `<!--AD_UNIT_START-->\n  ${AD}\n  <!--AD_UNIT_END-->`);
   writeFileSync('site/index.html', next);
 }
 
