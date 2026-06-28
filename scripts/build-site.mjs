@@ -883,6 +883,13 @@ const PICKUP_HTML = (()=>{
   // GA4（トップ）：data/analytics.json の測定IDから注入。空なら出力なし
   next = next.replace(/<!--GA_START-->[\s\S]*?<!--GA_END-->/, `<!--GA_START-->${GA}<!--GA_END-->`);
   writeFileSync('site/index.html', next);
+  // 静的ページ（about/contact/privacy）にも GA を注入（GAマーカーがある場合のみ・一元管理）
+  for(const sp of ['about.html','contact.html','privacy.html']){
+    const fp = `site/${sp}`;
+    if(!existsSync(fp)) continue;
+    let h = readFileSync(fp,'utf8');
+    if(/<!--GA_START-->/.test(h)){ writeFileSync(fp, h.replace(/<!--GA_START-->[\s\S]*?<!--GA_END-->/, `<!--GA_START-->${GA}<!--GA_END-->`)); }
+  }
 }
 
 // ========================= sitemap =========================

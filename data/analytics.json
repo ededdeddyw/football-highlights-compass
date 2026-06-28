@@ -1,4 +1,4 @@
 {
   "_note": "Google Analytics 4 設定。GA4プロパティの『測定ID』（G-XXXXXXXXXX 形式）を ga4MeasurementId に入れると、トップ＋全生成ページの<head>にgtagが挿入される。空の間は一切出力されない（計測なし）。設定後は `npm run build` で全ページ一斉に有効化。",
-  "ga4MeasurementId": ""
+  "ga4MeasurementId": "G-4RVGB3EZDB"
 }
