@@ -65,6 +65,10 @@
   .nav-guides .ng-h{font-size:11px; color:var(--muted); letter-spacing:.04em; margin:0 2px 7px}
   .nav-guides a{display:block; font-size:12.5px; font-weight:700; color:var(--accent); text-decoration:none; padding:6px 9px; border-radius:8px; border:1px solid var(--line); border-left:3px solid var(--accent2); background:var(--card2); margin:5px 0; line-height:1.4}
   .nav-guides a:hover{border-color:var(--accent2)}
+  .nav-wc .wc-ko{border-left-color:var(--red)}
+  .nav-wc .wc-groups{display:grid; grid-template-columns:repeat(6,1fr); gap:5px; margin:7px 2px 2px}
+  .nav-wc .wc-groups a{display:block; text-align:center; font-size:12.5px; font-weight:800; padding:7px 0; margin:0; border:1px solid var(--line); border-left:1px solid var(--line); border-radius:8px; background:var(--card2); color:var(--accent)}
+  .nav-wc .wc-groups a:hover{border-color:var(--accent2); color:var(--accent2)}
   #sub-filters:not(:empty){margin:8px 0 4px; padding:9px 0 4px 11px; border-left:3px solid var(--accent2); background:linear-gradient(90deg,rgba(39,70,201,.05),transparent)}
   #sub-filters .side-h.sub{color:var(--accent2); font-weight:800; margin:8px 2px 6px}
   #sub-filters .side-h.sub:first-child{margin-top:0}
@@ -329,6 +333,12 @@
         <a href="guide/suzuki-zion-highlights.html">鈴木彩艶 ハイライトまとめ</a>
         <a href="guide/minamino-takumi-highlights.html">南野拓実 ハイライトまとめ</a>
         <a href="guide/doan-ritsu-highlights.html">堂安律 ハイライトまとめ</a>
+      </nav>
+      <nav class="nav-guides nav-wc" aria-label="ワールドカップ26">
+        <div class="ng-h">⚽ ワールドカップ26</div>
+        <!--WCHUB_START-->
+        <a class="wc-ko" href="group/knockout.html">🏆 決勝トーナメント（進出国・日程）</a><div class="wc-groups"><a href="group/a.html" title="グループAのハイライト・順位">A</a><a href="group/b.html" title="グループBのハイライト・順位">B</a><a href="group/c.html" title="グループCのハイライト・順位">C</a><a href="group/d.html" title="グループDのハイライト・順位">D</a><a href="group/e.html" title="グループEのハイライト・順位">E</a><a href="group/f.html" title="グループFのハイライト・順位">F</a><a href="group/g.html" title="グループGのハイライト・順位">G</a><a href="group/h.html" title="グループHのハイライト・順位">H</a><a href="group/i.html" title="グループIのハイライト・順位">I</a><a href="group/j.html" title="グループJのハイライト・順位">J</a><a href="group/k.html" title="グループKのハイライト・順位">K</a><a href="group/l.html" title="グループLのハイライト・順位">L</a></div>
+        <!--WCHUB_END-->
       </nav>
       <div id="menuBody"></div>
     </aside>

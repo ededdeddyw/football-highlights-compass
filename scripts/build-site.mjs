@@ -713,9 +713,12 @@ for(const g of GUIDES){
 // ========================= W杯 グループ個別ページ（展望・暫定順位・日程・ハイライト・国リンク） =========================
 mkdirSync('site/group', { recursive:true });
 const groupUrls = [];
+let WCHUB_HTML = '';   // トップ左ナビ「W杯26ハブ」（決勝T＋全組リンク）。index.html の WCHUB マーカーへ注入
 {
   const gAll = SCHEDULE.filter(s=>s.stage==='group' && s.group);
   const letters = [...new Set(gAll.map(s=>s.group))].sort();
+  WCHUB_HTML = `<a class="wc-ko" href="group/knockout.html">🏆 決勝トーナメント（進出国・日程）</a>`
+    + `<div class="wc-groups">` + letters.map(L=>`<a href="group/${L.toLowerCase()}.html" title="グループ${L}のハイライト・順位">${L}</a>`).join('') + `</div>`;
   const wcByTeams = new Map();
   for(const m of data){ if(m.league==='wc' && m.id && m.teams.length===2) wcByTeams.set([...m.teams].sort().join('|'), m); }
   const rOrd = {'第1節':1,'第2節':2,'第3節':3};
@@ -853,6 +856,8 @@ const PICKUP_HTML = (()=>{
   next = next.replace(/<!--PICKUP_START-->[\s\S]*?<!--PICKUP_END-->/, `<!--PICKUP_START-->\n      ${PICKUP_HTML}\n      <!--PICKUP_END-->`);
   // 広告ユニット（トップ）も AD 定義から注入し、スロットIDを一元管理（data/ads.json）
   next = next.replace(/<!--AD_UNIT_START-->[\s\S]*?<!--AD_UNIT_END-->/, `<!--AD_UNIT_START-->\n  ${AD}\n  <!--AD_UNIT_END-->`);
+  // W杯ハブ（左ナビ）：決勝T＋全組リンク。group/knockout への内部リンク導線（クローラビリティ）
+  next = next.replace(/<!--WCHUB_START-->[\s\S]*?<!--WCHUB_END-->/, `<!--WCHUB_START-->\n        ${WCHUB_HTML}\n        <!--WCHUB_END-->`);
   writeFileSync('site/index.html', next);
 }
 
