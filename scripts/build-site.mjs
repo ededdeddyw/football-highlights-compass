@@ -47,6 +47,12 @@ try { if (existsSync('data/ads.json')) ADS = JSON.parse(readFileSync('data/ads.j
 const AD_CLIENT = (ADS.adClient||'ca-pub-7948789271209448').trim();
 const AD_SLOT = (ADS.adSlot||'').trim() || '__AD_SLOT__';   // 空なら placeholder のまま（スクリプトが枠を自動非表示）
 
+// ---------- アクセス解析（Google Analytics 4）。data/analytics.json の ga4MeasurementId に G-XXXX を設定。空なら出力なし ----------
+let ANALYTICS = {};
+try { if (existsSync('data/analytics.json')) ANALYTICS = JSON.parse(readFileSync('data/analytics.json','utf8')); } catch(e){ console.warn('analytics読込失敗:', e.message); }
+const GA4_ID = (ANALYTICS.ga4MeasurementId||'').trim();
+const GA = GA4_ID ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');</script>` : '';
+
 // ---------- W杯グループ戦の公式結果（matchId→"H-A" ホーム-アウェイ順）。順位表を全72試合準拠にする。Web検証で記録 ----------
 let WCRESULTS = {};
 try { if (existsSync('data/wc-results.json')) WCRESULTS = JSON.parse(readFileSync('data/wc-results.json','utf8')); } catch(e){ console.warn('wc-results読込失敗:', e.message); }
@@ -186,7 +192,7 @@ const HEAD = (o)=>`<!DOCTYPE html>
 <meta name="description" content="${escA(o.desc)}">
 <meta name="robots" content="${o.robots||'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0c1657">
 <link rel="canonical" href="${o.url}">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
+${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7948789271209448" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com"><link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="preconnect" href="https://flagcdn.com"><link rel="dns-prefetch" href="https://flagcdn.com">
@@ -858,6 +864,8 @@ const PICKUP_HTML = (()=>{
   next = next.replace(/<!--AD_UNIT_START-->[\s\S]*?<!--AD_UNIT_END-->/, `<!--AD_UNIT_START-->\n  ${AD}\n  <!--AD_UNIT_END-->`);
   // W杯ハブ（左ナビ）：決勝T＋全組リンク。group/knockout への内部リンク導線（クローラビリティ）
   next = next.replace(/<!--WCHUB_START-->[\s\S]*?<!--WCHUB_END-->/, `<!--WCHUB_START-->\n        ${WCHUB_HTML}\n        <!--WCHUB_END-->`);
+  // GA4（トップ）：data/analytics.json の測定IDから注入。空なら出力なし
+  next = next.replace(/<!--GA_START-->[\s\S]*?<!--GA_END-->/, `<!--GA_START-->${GA}<!--GA_END-->`);
   writeFileSync('site/index.html', next);
 }
 
