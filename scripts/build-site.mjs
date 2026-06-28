@@ -430,6 +430,8 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .gx-row .gx-meta{font-size:12px;color:var(--muted);white-space:nowrap}
 .gx-row .gx-link{font-size:13px;font-weight:800;color:#fff;background:var(--accent2);padding:7px 13px;border-radius:8px;text-decoration:none;white-space:nowrap}
 .gx-row .gx-soon{font-size:12px;color:var(--soft);white-space:nowrap}
+.gx-row .gx-score{font-weight:800;color:var(--ink);margin:0 4px;font-variant-numeric:tabular-nums}
+html.spoiler-off .gx-row .gx-vs{display:none}
 @media(max-width:620px){.gx-row{grid-template-columns:1fr auto;gap:4px 10px}.gx-row .gx-rd{grid-column:1/-1}.gx-row .gx-meta{grid-column:1;font-size:11.5px}}`;
 
 // 広告枠（slot は AdSense 管理画面で作成した広告ユニットIDに置換する）
@@ -736,7 +738,11 @@ const groupUrls = [];
     const fixHtml = fx.map(f=>{ const h=f.home&&f.home.ja, a=f.away&&f.away.ja; const m=h&&a&&wcByTeams.get([h,a].sort().join('|'));
       const d=(f.koJST||'').slice(5,16).replace('T',' ').replace('-','/');
       const right = m ? `<a class="gx-link" href="../match/${m.id}.html">▶ ハイライト</a>` : `<span class="gx-soon">準備中</span>`;
-      return `<div class="gx-row"><span class="gx-rd">${esc(f.round||'')}</span><span class="gx-tm">${flagImg(h)}${esc(h||'')} <em>vs</em> ${flagImg(a)}${esc(a||'')}</span><span class="gx-meta">${d}${f.venue?'・'+esc(f.venue):''}</span>${right}</div>`;
+      // スコア（公式結果・ホーム-アウェイ順）。既定は隠し、「スコアを表示」ボタンで開示（.spoiler-cover）
+      const off = WCRESULTS[f.matchId];
+      const sc = (off && /^\d+-\d+$/.test(String(off))) ? String(off) : '';
+      const vs = sc ? `<em class="gx-vs">vs</em><span class="gx-score spoiler-cover">${esc(sc)}</span>` : `<em>vs</em>`;
+      return `<div class="gx-row"><span class="gx-rd">${esc(f.round||'')}</span><span class="gx-tm">${flagImg(h)}${esc(h||'')} ${vs} ${flagImg(a)}${esc(a||'')}</span><span class="gx-meta">${d}${f.venue?'・'+esc(f.venue):''}</span>${right}</div>`;
     }).join('');
     const teamLines = teams.map(t=>{const i=COUNTRIES[t];return i?`${esc(t)}（${esc(i.peak||i.confed||'')}）`:esc(t);}).join('、');
     const outlook = `グループ${L}は ${teams.map(esc).join('・')} の${teams.length}か国による争い。${teamLines?teamLines+'。':''}各国の展望・歴史・ゆかりの日本人選手は国ページで深掘りできます。`;
@@ -752,7 +758,7 @@ const groupUrls = [];
   <h1 class="headline">グループ${L}｜順位・全試合ハイライト</h1>
   <p class="dek">${esc(outlook)}</p>
   <h2 class="lined">対戦国</h2><div class="chips">${countryChips}</div>
-  ${standings ? `<button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで順位表を表示</button><div class="spoiler-cover">${standings}</div>` : ''}
+  ${standings ? `<button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで順位表・スコアを表示</button><div class="spoiler-cover">${standings}</div>` : ''}
   <h2 class="lined">日程・試合ハイライト</h2><div class="gx-list">${fixHtml}</div>
   ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
   ${AD}
@@ -793,6 +799,37 @@ const groupUrls = [];
   }
 }
 
+// ========================= おすすめ動画（注目の試合カルーセル）自動生成 =========================
+// 「今」を反映：日本代表戦 → W杯の注目カード → 直近の主役級クラブ戦 の優先で最大8枚。
+// 掲載データ（data）から毎ビルド再生成するので、新しい試合が入れば自動で入れ替わる。
+function pickupDate(m){ const s=schedFor(m); return (s&&(s.koUTC||s.dateLocal)||'').slice(0,10) || ''; }
+const PICKUP_HTML = (()=>{
+  const NOTABLE = new Set(['スペイン','ブラジル','アルゼンチン','フランス','イングランド','ポルトガル','ドイツ','オランダ','イタリア','ベルギー','クロアチア','アメリカ','メキシコ','ウルグアイ','コロンビア','モロッコ']);
+  const withId = data.filter(m=>m.id);
+  const byDateDesc = (a,b)=> pickupDate(b).localeCompare(pickupDate(a));
+  const japan   = withId.filter(m=>m.teams.includes('日本')).sort(byDateDesc);
+  const wcHot   = withId.filter(m=>m.league==='wc' && !m.teams.includes('日本') && m.teams.some(t=>NOTABLE.has(t))).sort(byDateDesc);
+  const starClub= withId.filter(m=>m.league!=='wc' && (m.prefix||m.players.length)).sort(byDateDesc);
+  const seen=new Set(), pick=[];
+  const add=m=>{ if(m && !seen.has(m.id)){ seen.add(m.id); pick.push(m); } };
+  japan.slice(0,3).forEach(add);     // 日本代表戦（直近）
+  wcHot.slice(0,4).forEach(add);     // W杯の注目カード（強豪国・直近）
+  starClub.slice(0,3).forEach(add);  // 端境期フォールバック（W杯/日本戦が少ない時期の変化用）
+  const PICK = pick.slice(0,8);
+  const badge = m =>
+    m.teams.includes('日本') ? '🇯🇵 日本代表'
+    : m.league==='wc' ? '🔥 W杯注目'
+    : m.prefix ? '⚽ '+m.prefix
+    : m.players.length ? '⚽ '+m.players[0]
+    : m.league==='jl' ? '🏆 Jリーグ'
+    : '⚡ PICK';
+  const matchLine = m => (m.league==='wc' && m.teams.length===2)
+    ? `${flagImg(m.teams[0])} ${esc(m.teams[0])} vs ${flagImg(m.teams[1])} ${esc(m.teams[1])}`
+    : (m.prefix?`<span class="ppre">${esc(m.prefix)}</span>`:'') + esc(m.mt || m.teams.join(' vs '));
+  const altOf = m => m.teams.length===2 ? m.teams.join(' vs ') : (m.mt||m.ttl);
+  return PICK.map(m=>`<a class="pcard cf-card" href="match/${m.id}.html"><div class="thumb"><span class="pbadge">${badge(m)}</span><img src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="${escA(altOf(m))}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(m.meta || LG[m.league] || '')}</span><span class="pmatch">${matchLine(m)}</span></div></a>`).join('\n      ');
+})();
+
 // ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
 {
   const map = JSON.stringify(ENTITY_PAGES);
@@ -807,6 +844,7 @@ const groupUrls = [];
   next = next.replace(/\/\*CLUB_CRESTS_START\*\/[\s\S]*?\/\*CLUB_CRESTS_END\*\//, `/*CLUB_CRESTS_START*/\nvar CLUB_CRESTS = ${JSON.stringify(crestMap)};\n/*CLUB_CRESTS_END*/`);
   next = next.replace(/\/\*MATCH_SCORES_START\*\/[\s\S]*?\/\*MATCH_SCORES_END\*\//, `/*MATCH_SCORES_START*/\nvar MATCH_SCORES = ${JSON.stringify(scoreMap)};\n/*MATCH_SCORES_END*/`);
   next = next.replace(/\/\*MATCH_DATES_START\*\/[\s\S]*?\/\*MATCH_DATES_END\*\//, `/*MATCH_DATES_START*/\nvar MATCH_DATES = ${JSON.stringify(dateMap)};\n/*MATCH_DATES_END*/`);
+  next = next.replace(/<!--PICKUP_START-->[\s\S]*?<!--PICKUP_END-->/, `<!--PICKUP_START-->\n      ${PICKUP_HTML}\n      <!--PICKUP_END-->`);
   writeFileSync('site/index.html', next);
 }
 
