@@ -165,6 +165,18 @@ function norm(m){
   // スコア：data/scores.json 優先、無ければ静的 details.match の .score（<span class="n">）から抽出
   let score = SCORES[id] || '';
   if(!score){ const sm = body.match(/<div class="score">([\s\S]*?)<\/div>/); if(sm){ const ns = (sm[1].match(/<span class="n">([^<]*)<\/span>/g)||[]).map(x=>x.replace(/<[^>]+>/g,'').trim()); if(ns.length>=2) score = ns[0]+'-'+ns[1]; } }
+  // W杯の試合動画は wc-results.json から自動補完（scores.json 未登録でも必ず出す）。カードのチーム表示順に合わせて向き補正
+  if(!score && id){
+    let s = SCHED_BY_VID.get(id);
+    if(!s && league==='wc' && teams.length===2){ const k=[...teams].sort().join('|'); s = SCHED_BY_TEAMS.get(k); }
+    if(s && s.matchId && WCRESULTS[s.matchId]){
+      const r = String(WCRESULTS[s.matchId]).match(/^(\d+)-(\d+)$/);
+      if(r){ const h=s.home&&s.home.ja, a=s.away&&s.away.ja;
+        if(teams[0]===a && teams[1]===h) score = r[2]+'-'+r[1];            // タイトルがアウェイ先
+        else { if(teams[0]!==h) console.warn('WCスコア向き不明・H-A既定:', id, m.ttl); score = r[1]+'-'+r[2]; }
+      }
+    }
+  }
   return { id, ttl:m.ttl, mt, prefix, meta:m.meta, league, teams, players, jpNote, topic, dual, lineup, body, score };
 }
 
