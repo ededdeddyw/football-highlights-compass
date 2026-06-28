@@ -144,6 +144,42 @@
       },
       "why": "published_outside_window",
       "loggedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "videoId": "eVpkKGCRQvU",
+      "title": "【コロンビア×ポルトガル｜ハイライト｜スコアレスドローの結果コロンビアが首位通過】グループK第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T02:02:30.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T03:30:58.563Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "videoId": "syqCPaCSB1I",
+      "title": "【VARの威力】🇨🇴の先制点かと思われたがわずかにオフサイド｜🏆️FIFAワールドカップ2026 グループK コロンビア×ポルトガル",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T01:47:42.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T03:30:58.563Z"
     }
   ]
 }
