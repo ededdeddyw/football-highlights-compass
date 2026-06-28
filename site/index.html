@@ -118,6 +118,13 @@
   .home-about h2{font-size:17px; margin:0 0 8px; font-weight:900; border:none; padding:0}
   .home-about p{margin:0; font-size:14px; color:var(--text); line-height:1.9}
   .home-about a{color:var(--accent2); text-decoration:none; font-weight:700; white-space:nowrap}
+  .faq{margin:26px 0 8px}
+  .faq>h2{font-size:17px; font-weight:900; margin:0 0 12px}
+  .faq dl{margin:0}
+  .faq dt{font-size:14.5px; font-weight:800; color:var(--text); margin:14px 0 5px; padding-left:22px; position:relative}
+  .faq dt::before{content:"Q"; position:absolute; left:0; top:-1px; color:var(--accent2); font-weight:900}
+  .faq dd{margin:0 0 4px; padding-left:22px; font-size:13.5px; color:var(--text); line-height:1.85}
+  .faq dd a{color:var(--accent2); text-decoration:none; font-weight:700}
   h2.sec{font-size:18px; margin:38px 0 4px; padding-top:18px; border-top:1px solid var(--line)}
   .sec-desc{color:var(--muted); font-size:13.5px; margin:0 0 14px}
   h3.kicker{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin:26px 0 12px; font-weight:700}
@@ -994,6 +1001,25 @@
       <div class="notice warn"><span class="i">🔎</span><div><b>埋め込み可否は実機で検証済み：</b> <b>FIFA（W杯）は埋め込み禁止</b>のため公式リンクで案内。<b>DAZN（Jリーグ・日本人所属クラブ）は埋め込みOK</b>なので、その場で再生できます。米国放送局（FOX等）の動画は日本から視聴不可のため非掲載。</div></div>
     </div>
   </details>
+
+  <section class="faq" aria-label="よくある質問">
+    <h2>よくある質問</h2>
+    <dl>
+      <dt>このサイトは無料で使えますか？</dt>
+      <dd>はい、無料です。FIFAワールドカップ26・Jリーグ・日本人選手の所属クラブについて、公式・権利元が公開しているハイライトを日本語で探しやすくまとめた「発見サイト」です。チーム・選手・大会でしぼり込めます。</dd>
+      <dt>動画はどこで再生されますか？</dt>
+      <dd>各権利元（DAZN Japan の公式YouTube など）の公式プレイヤーでそのまま再生されます。無断転載・切り抜き・再アップロードは一切扱いません。プレイヤー内の広告や公式表記も改変していません。</dd>
+      <dt>ワールドカップの試合が「公式リンク案内」なのはなぜ？</dt>
+      <dd>FIFA（W杯）は動画の埋め込みを許可していないため、当サイト内では再生せず公式ページへリンクで案内しています。一方、DAZN（Jリーグ・日本人所属クラブ）は埋め込みOKなので、その場で再生できます。埋め込み可否はすべて実機で検証しています。</dd>
+      <dt>結果を知らずにハイライトを探せますか？</dt>
+      <dd>はい。<b>ネタバレ防止モード</b>が既定でオンです。スコアや結果に触れる要素は最初は隠れており、見出しや「スコアを表示」ボタンを押したときだけ表示されます。一部の試合は結果の出ない「ネタバレ控えめ版（RECAP）」も並べています。</dd>
+      <dt>DAZNの契約は必要ですか？</dt>
+      <dd>埋め込みで表示されるハイライトは、このサイト上で無料で視聴できます。フル試合や見逃し配信を観たい場合は DAZN の契約が必要です。</dd>
+      <dt>どの大会・チームに対応していますか？</dt>
+      <dd>FIFAワールドカップ2026、Jリーグ2026、および日本人選手が所属する海外クラブ（久保建英・鈴木彩艶・南野拓実・堂安律ほか）が中心です。<a href="about.html">掲載方針をくわしく見る →</a></dd>
+    </dl>
+  </section>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"このサイトは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、無料です。FIFAワールドカップ26・Jリーグ・日本人選手の所属クラブについて、公式・権利元が公開しているハイライトを日本語で探しやすくまとめた発見サイトです。"}},{"@type":"Question","name":"動画はどこで再生されますか？","acceptedAnswer":{"@type":"Answer","text":"各権利元（DAZN Japan の公式YouTube など）の公式プレイヤーで再生されます。無断転載・切り抜き・再アップロードは扱いません。"}},{"@type":"Question","name":"ワールドカップの試合が公式リンク案内なのはなぜ？","acceptedAnswer":{"@type":"Answer","text":"FIFA（W杯）は動画の埋め込みを許可していないため、当サイト内では再生せず公式ページへリンクで案内しています。DAZNは埋め込みOKのためその場で再生できます。"}},{"@type":"Question","name":"結果を知らずにハイライトを探せますか？","acceptedAnswer":{"@type":"Answer","text":"はい。ネタバレ防止モードが既定でオンで、スコアや結果は押したときだけ表示されます。結果の出ないRECAP版も一部用意しています。"}},{"@type":"Question","name":"DAZNの契約は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"埋め込みで表示されるハイライトは無料で視聴できます。フル試合や見逃し配信を観るにはDAZNの契約が必要です。"}},{"@type":"Question","name":"どの大会・チームに対応していますか？","acceptedAnswer":{"@type":"Answer","text":"FIFAワールドカップ2026、Jリーグ2026、日本人選手が所属する海外クラブ（久保建英・鈴木彩艶・南野拓実・堂安律ほか）が中心です。"}}]}</script>
 
   <footer>
     <p><b>このページについて</b></p>
