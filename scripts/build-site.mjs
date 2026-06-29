@@ -243,6 +243,37 @@ const FOOTER = (extra='')=>`<footer class="post-foot">
   <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
 </footer></article>${BOOM}</body></html>`;
 
+// 試合ページ用：メニューボタン付きトップバー
+const TOPBAR_NAV = `<nav class="topbar"><div class="tinner">
+  <button class="menu-btn" id="menuBtn" aria-label="ナビを開く">☰</button>
+  <a class="brand" href="../"><img src="../favicon.svg" alt="" width="26" height="26"><span>Football Highlights Compass</span></a>
+  <a class="tback" href="../">← トップ</a>
+</div></nav>`;
+
+// 試合ページ用：左の横断ナビ（トップと同内容を ../ プレフィックスで）
+function subSideNav(){
+  const ls = [...new Set(SCHEDULE.filter(s=>s.stage==='group' && s.group).map(s=>s.group))].sort();
+  const groups = ls.map(L=>`<a href="../group/${L.toLowerCase()}.html" title="グループ${L}のハイライト・順位">${L}</a>`).join('');
+  return `<div class="side-head"><b>⚽ 横断ナビ</b><button class="menu-close" id="menuClose" aria-label="閉じる">×</button></div>
+  <nav class="nav-guides" aria-label="ガイド">
+    <div class="ng-h">📘 ガイド</div>
+    <a href="../guide/world-cup-2026-how-to-watch.html">W杯26を日本から観る方法</a>
+    <a href="../guide/kubo-takefusa-highlights.html">久保建英 ハイライトまとめ</a>
+    <a href="../guide/suzuki-zion-highlights.html">鈴木彩艶 ハイライトまとめ</a>
+    <a href="../guide/minamino-takumi-highlights.html">南野拓実 ハイライトまとめ</a>
+    <a href="../guide/doan-ritsu-highlights.html">堂安律 ハイライトまとめ</a>
+  </nav>
+  <nav class="nav-guides nav-wc" aria-label="ワールドカップ26">
+    <div class="ng-h">⚽ ワールドカップ26</div>
+    <a class="wc-ko" href="../group/knockout.html">🏆 決勝トーナメント（進出国・日程）</a>
+    <div class="wc-groups">${groups}</div>
+  </nav>`;
+}
+
+// 試合ページ用：モバイルメニュー開閉＋ネタバレ防止ON/OFFトグル（localStorage連動・ページに即反映）
+const NAVJS = `<div class="nav-backdrop" id="navBackdrop"></div>
+<script>(function(){var mb=document.getElementById('menuBtn'),mc=document.getElementById('menuClose'),bd=document.getElementById('navBackdrop');function o(){document.body.classList.add('nav-open');}function c(){document.body.classList.remove('nav-open');}mb&&mb.addEventListener('click',o);mc&&mc.addEventListener('click',c);bd&&bd.addEventListener('click',c);function sOn(){try{return localStorage.getItem('fhc_spoiler')!=='0';}catch(e){return true;}}var ST=document.getElementById('spoilerToggle');function paint(){if(!ST)return;var on=sOn();ST.className='spoiler-toggle'+(on?' on':'');ST.setAttribute('aria-pressed',on?'true':'false');ST.textContent=on?'🟢 ネタバレ防止：ON':'⚪ ネタバレ防止：OFF';}if(ST){paint();ST.addEventListener('click',function(){try{localStorage.setItem('fhc_spoiler',sOn()?'0':'1');}catch(e){}document.documentElement.classList.toggle('spoiler-off',!sOn());paint();});}})();</script>`;
+
 function crumb(items){ return `<nav class="crumb">${items.map((it,i)=> it.href?`<a href="${it.href}">${esc(it.label)}</a>`:`<span>${esc(it.label)}</span>`).join('<i>›</i>')}</nav>`; }
 
 // 試合カード（関連・一覧用）
@@ -281,6 +312,40 @@ img{max-width:100%}
 .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tback{margin-left:auto;font-size:13px;text-decoration:none;color:var(--muted);white-space:nowrap}
 .tback:hover{color:var(--accent2)}
+.topbar .menu-btn{display:none;background:none;border:1px solid var(--line2);color:var(--accent);width:34px;height:34px;border-radius:8px;font-size:17px;line-height:1;cursor:pointer;align-items:center;justify-content:center;flex:0 0 auto}
+/* ===== 試合ページ等の3カラムシェル（左ナビ／本文／右サイド） ===== */
+.appgrid{max-width:1240px;margin:14px auto 0;padding:0 18px;display:grid;grid-template-columns:230px minmax(0,1fr) 300px;grid-template-areas:"left main right";gap:22px;align-items:start}
+.col-left{grid-area:left}.col-main{grid-area:main;min-width:0}.col-right{grid-area:right}
+.col-left,.col-right{position:sticky;top:64px;align-self:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 2px 10px rgba(20,30,90,.05)}
+.col-left{max-height:calc(100vh - 78px);overflow:auto;overscroll-behavior:contain}
+.col-main .post{max-width:none;margin:0;padding:6px 0 60px}
+.side-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 10px}
+.side-head b{font-size:13px;letter-spacing:.03em;color:var(--ink)}
+.side-head .menu-close{display:none;background:none;border:0;font-size:22px;line-height:1;color:var(--muted);cursor:pointer}
+.col-right .side-h{font-size:11px;color:var(--muted);letter-spacing:.04em;margin:14px 2px 7px;font-weight:700}
+.nav-guides{margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.nav-guides:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.nav-guides .ng-h{font-size:11px;color:var(--muted);letter-spacing:.04em;margin:0 2px 7px}
+.nav-guides a{display:block;font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none;padding:6px 9px;border-radius:8px;border:1px solid var(--line);border-left:3px solid var(--accent2);background:var(--card2);margin:5px 0;line-height:1.4}
+.nav-guides a:hover{border-color:var(--accent2)}
+.nav-wc .wc-ko{border-left-color:var(--red)}
+.nav-wc .wc-groups{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:7px 2px 2px}
+.nav-wc .wc-groups a{display:block;text-align:center;font-size:12.5px;font-weight:800;padding:7px 0;margin:0;border:1px solid var(--line);border-left:1px solid var(--line);border-radius:8px;background:var(--card2);color:var(--accent)}
+.nav-wc .wc-groups a:hover{border-color:var(--accent2);color:var(--accent2)}
+.spoiler-toggle{width:100%;margin:0 0 12px;padding:13px 12px;border-radius:11px;border:1px solid var(--line2);background:var(--card2);color:var(--ink);font-size:14px;font-weight:800;cursor:pointer;text-align:center;letter-spacing:.02em;line-height:1.4}
+.spoiler-toggle.on{background:rgba(16,185,129,.13);border-color:rgba(16,185,129,.42);color:#047857}
+.spoiler-toggle:hover{border-color:var(--accent2)}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(8,14,40,.5);z-index:55}
+@media(max-width:1080px){
+  .appgrid{grid-template-columns:1fr;grid-template-areas:"right" "main";gap:14px}
+  .col-right{position:static;max-height:none;overflow:visible}
+  .col-left{position:fixed;top:0;left:0;width:min(86%,330px);height:100%;max-height:none;z-index:60;border-radius:0;transform:translateX(-100%);transition:transform .22s;padding:16px 16px 40px}
+  body.nav-open .col-left{transform:translateX(0)}
+  body.nav-open .nav-backdrop{display:block}
+  body.nav-open{overflow:hidden}
+  .side-head .menu-close{display:flex}
+  .topbar .menu-btn{display:flex}
+}
 /* article shell */
 .post{max-width:860px;margin:0 auto;padding:18px 20px 70px}
 /* 国・クラブの個別ページは横幅を活かす：上部を2カラム（左=本文+深掘り / 右=ファクト+関連）、試合一覧は全幅 */
@@ -536,7 +601,23 @@ function buildMatch(m){
     robots: thin?'noindex,follow':undefined,
     published:upDate, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph
   });
-  const out = head + TOPBAR + `<article class="post">
+  const rightBar = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
+    <div class="side-h">この試合</div>
+    <nav class="nav-guides">
+      <a href="../?league=${m.league}">▶ ${esc(lg||'試合')}の一覧</a>
+      <a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a>
+      <a href="../">▶ トップで他の試合を探す</a>
+    </nav>`;
+  const footerInner = `<footer class="post-foot">
+    ${m.lineup?'<p>出場選手データ：Jリーグ公式。</p>':''}
+    <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
+    <p><a href="../">▶ トップで他の試合を探す（W杯・Jリーグ・日本人所属クラブ）</a></p>
+    <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
+    <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
+  </footer>`;
+  const out = head + TOPBAR_NAV + `<div class="appgrid">
+  <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
+  <main class="col-main"><article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:catLabel,href:`../?league=${m.league}`},{label:m.mt}])}
   <p class="kicker">${m.league==='wc'&&m.teams.length===2?flagImg(m.teams[0])+flagImg(m.teams[1]):'⚽'} ${esc(lg||'公式ハイライト')}</p>
   <h1 class="headline">${titleWithFlags(m)}</h1>
@@ -549,7 +630,10 @@ function buildMatch(m){
   ${factHtml}
   ${teamHtml}
   ${relHtml}
-  ` + FOOTER(`<p>${m.lineup?'出場選手データ：Jリーグ公式。':''}</p>`);
+  ${footerInner}
+  </article></main>
+  <aside class="col-right">${rightBar}</aside>
+</div>` + NAVJS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
