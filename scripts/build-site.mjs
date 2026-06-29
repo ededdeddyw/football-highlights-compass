@@ -259,6 +259,11 @@ const TOPBAR = `<nav class="topbar"><div class="tinner">
 const BOOM = `<div class="boom" id="boom" aria-hidden="true"><div class="boom-bg"></div><div class="boom-center"><div class="boom-load">Loading…</div><div class="boom-stamp"><b>Go!</b></div><div class="boom-sub"></div></div></div>
 <script>(function(){var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;var b=document.getElementById('boom');if(!b)return;var s=b.querySelector('.boom-sub');function go(h,l){if(rm){location.href=h;return;}s.textContent=l||'';b.className='boom go phase-load';void b.offsetWidth;setTimeout(function(){b.classList.remove('phase-load');b.classList.add('phase-go');},420);setTimeout(function(){b.classList.add('leaving');},760);setTimeout(function(){location.href=h;},860);}document.addEventListener('click',function(e){var a=e.target.closest('a.mcard');if(!a)return;if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return;e.preventDefault();var t=a.querySelector('.mttl');go(a.getAttribute('href'),t?t.textContent.trim():'');});window.addEventListener('pageshow',function(){b.className='boom';});}())</script>`;
 
+// モバイルでは details.m-collapse の open を外して既定で折りたたむ（PC・no-JSは展開のまま＝SEO/アクセシビリティ維持）
+const COLLAPSE_JS = `<script>(function(){try{var w=window.innerWidth||document.documentElement.clientWidth||0;if(w&&w<=700){document.querySelectorAll('details.m-collapse[open]').forEach(function(d){d.removeAttribute('open');});}}catch(e){}})();</script>`;
+// 長い一覧をモバイルで折りたためるセクション。title はプレーンテキスト見出し
+function collapsible(title, content){ return `<details class="m-collapse" open><summary>${title}<span class="mc-ico"></span></summary>${content}</details>`; }
+
 const FOOTER = (extra='')=>`<footer class="post-foot">
   ${extra}
   <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
@@ -266,7 +271,7 @@ const FOOTER = (extra='')=>`<footer class="post-foot">
   <p>ガイド：<a href="../guide/world-cup-2026-how-to-watch.html">W杯26を日本から観る方法</a> ／ <a href="../guide/kubo-takefusa-highlights.html">久保建英 ハイライトまとめ</a></p>
   <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
   <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
-</footer></article>${BOOM}</body></html>`;
+</footer></article>${COLLAPSE_JS}${BOOM}</body></html>`;
 
 // 試合ページ用：メニューボタン付きトップバー
 const TOPBAR_NAV = `<nav class="topbar"><div class="tinner">
@@ -440,6 +445,21 @@ a.golink .go{margin-left:auto;color:var(--accent2);font-size:12.5px;white-space:
 .factcard tr+tr th,.factcard tr+tr td{border-top:1px solid var(--line)}
 /* related cards */
 .mcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:13px;margin:14px 0 6px}
+/* モバイルで過剰スクロールを抑える折りたたみ（PCは常時オープン、スマホは既定で閉じる：JSが open を外す） */
+.m-collapse{margin:18px 0 6px}
+.m-collapse>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:1.18em;font-weight:800;color:var(--ink);padding-top:14px;border-top:2px solid var(--ink)}
+.m-collapse>summary::-webkit-details-marker{display:none}
+.m-collapse>summary .mc-ico{margin-left:auto;font-size:12px;font-weight:800;color:var(--accent2);border:1px solid var(--line2);border-radius:8px;padding:4px 10px;white-space:nowrap;display:none}
+@media(max-width:700px){
+  .m-collapse>summary .mc-ico{display:inline-block}
+  .m-collapse:not([open])>summary .mc-ico::before{content:'タップで開く ▾'}
+  .m-collapse[open]>summary .mc-ico::before{content:'閉じる ▴'}
+}
+/* 紋章つきクラブチップ（リーグハブを華やかに） */
+.clubchips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+.clubchip{display:inline-flex;align-items:center;gap:7px;font-size:13px;text-decoration:none;padding:6px 13px 6px 8px;border-radius:999px;border:1px solid var(--line2);background:var(--paper);color:var(--ink)}
+.clubchip:hover{border-color:var(--accent);color:var(--accent)}
+.clubchip img{width:20px;height:20px;object-fit:contain;border-radius:4px}
 .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--paper);border:1px solid var(--line2);border-radius:13px;overflow:hidden;box-shadow:0 2px 9px rgba(20,30,90,.06);transition:transform .09s,box-shadow .15s}
 .mcard:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(20,30,90,.15)}
 .mthumb{position:relative;aspect-ratio:16/9;background:#0b1430;display:block}
@@ -595,7 +615,7 @@ function buildMatch(m){
   const teamHtml = teamLinks.length ? `<h2>チーム・${m.league==='wc'?'国':'クラブ'}を深掘り</h2><div class="chips">${teamLinks.join('')}</div>` : '';
   // related
   const rel = relatedMatches(m);
-  const relHtml = rel.length ? `<h2 class="lined">関連する試合</h2><div class="mcards">${rel.map(r=>matchCard(r.m, r.why)).join('')}</div>` : '';
+  const relHtml = rel.length ? collapsible('関連する試合', `<div class="mcards">${rel.map(r=>matchCard(r.m, r.why)).join('')}</div>`) : '';
   const ogimg = m.id?`https://i.ytimg.com/vi/${m.id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const url = `${DOMAIN}/match/${m.id}.html`;
   const catLabel = lg||'試合';
@@ -659,7 +679,7 @@ function buildMatch(m){
   ${footerInner}
   </article></main>
   <aside class="col-right">${rightBar}</aside>
-</div>` + NAVJS + BOOM + `</body></html>`;
+</div>` + NAVJS + COLLAPSE_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
@@ -709,7 +729,7 @@ function buildCountry(name, info){
     <tr><th>W杯最高成績</th><td>${esc(info.peak)}</td></tr>
     ${info.talent?`<tr><th>主なタレント</th><td>${esc(info.talent)}</td></tr>`:''}
   </table></div>`;
-  const list = ms.length?`<h2 class="lined">${esc(name)}の公式ハイライト（${ms.length}試合）</h2><div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:'';
+  const list = ms.length?collapsible(`${esc(name)}の公式ハイライト（${ms.length}試合）`, `<div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`):'';
   // 関連：同連盟の他国
   const sameConfed = Object.entries(COUNTRIES).filter(([n,i])=>n!==name && i.confed===info.confed && entityMatches(n).length>0).slice(0,12);
   const related = sameConfed.length?`<h2>同じ連盟の国</h2><div class="chips">${sameConfed.map(([n,i])=>`<a href="../country/${i.slug}.html">${flagImg(n)}${esc(n)}</a>`).join('')}</div>`:'';
@@ -752,7 +772,7 @@ function buildClub(name, info){
     <tr><th>本拠地</th><td>${esc(info.stadium)}</td></tr>
     ${info.honors?`<tr><th>主なタイトル</th><td>${esc(info.honors)}</td></tr>`:''}
   </table></div>`;
-  const list = ms.length?`<h2 class="lined">${esc(name)}の公式ハイライト（${ms.length}試合）</h2><div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:'';
+  const list = ms.length?collapsible(`${esc(name)}の公式ハイライト（${ms.length}試合）`, `<div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`):'';
   const sameLeague = Object.entries(CLUBS).filter(([n,i])=>n!==name && i.league===info.league).slice(0,12);
   const leagueHub = LEAGUE_LIST.find(h=>h.clubLabel===info.league);
   const leagueLink = leagueHub?`<p style="margin:2px 0 10px"><a href="../league/${leagueHub.slug}.html"><b>🇪🇺 ${esc(leagueHub.name)} の試合一覧へ →</b></a></p>`:'';
@@ -787,7 +807,7 @@ function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
     body(){
       const ms=(byPlayer[player]||[]).filter(m=>m.id); const club=PAGE_OF[clubKey];
       return `<div class="post-body"><p>${clubLabel}で${role}${player}の出場試合について、公式ハイライト（主に DAZN Japan）を試合ごとにまとめています。各試合はネタバレ防止に対応し、スコアは任意で表示できます。</p></div>
-      <h2 class="lined">${player} 出場試合のハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
+      ${collapsible(`${player} 出場試合のハイライト（${ms.length}試合）`, cardGrid(ms))}
       ${daznCta(`${clubLabel}＝${leagueLabel}のフル・見逃し配信はDAZNで。`)}
       ${club?`<p style="margin-top:14px"><a href="../${club}">▶ ${clubLabel}のクラブページ（歴史・所属日本人選手）</a></p>`:''}`;
     } };
@@ -831,7 +851,7 @@ function buildLeague(h){
   const { clubsIn, ms } = leagueMatches(h.clubLabel);
   if(!ms.length) return;
   const path=`league/${h.slug}.html`, url=`${DOMAIN}/${path}`;
-  const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>`<a href="../club/${CLUBS[c].slug}.html">${esc(c)}</a>`).join('');
+  const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>{ const cr=CREST[CLUBS[c].slug]; return `<a class="clubchip" href="../club/${CLUBS[c].slug}.html">${cr?`<img src="${cr}" alt="" loading="lazy">`:'🛡️'}${esc(c)}</a>`; }).join('');
   const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
   const cross = others.length?`<h2 class="lined">他の欧州リーグ</h2><div class="chips">${others.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('')}</div>`:'';
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
@@ -844,10 +864,10 @@ function buildLeague(h){
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。</p>
-  ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="chips">${clubChips}</div>`:''}
+  ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
   ${AD}
-  <h2 class="lined">${esc(h.name)}の公式ハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
+  ${collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms))}
   ${cross}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
