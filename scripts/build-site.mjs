@@ -190,9 +190,16 @@ const byTeam={}, byPlayer={};
 data.forEach(m=>{ m.teams.forEach(t=>{ (byTeam[t]=byTeam[t]||[]).push(m); }); m.players.forEach(p=>{ (byPlayer[p]=byPlayer[p]||[]).push(m); }); });
 function relatedMatches(m){
   const seen=new Set([m.id]); const rel=[];
-  m.players.forEach(p=> (byPlayer[p]||[]).forEach(x=>{ if(x.id&&!seen.has(x.id)){seen.add(x.id);rel.push({m:x,why:p})} }));
-  m.teams.forEach(t=> (byTeam[t]||[]).forEach(x=>{ if(x.id&&!seen.has(x.id)){seen.add(x.id);rel.push({m:x,why:t})} }));
-  return rel.slice(0,8);
+  const add=(x,why)=>{ if(x&&x.id&&!seen.has(x.id)){ seen.add(x.id); rel.push({m:x,why}); } };
+  // ① 同じ日本人選手 ② 同じ国・クラブ（最も関連が強い）
+  m.players.forEach(p=> (byPlayer[p]||[]).forEach(x=>add(x,p)));
+  m.teams.forEach(t=> (byTeam[t]||[]).forEach(x=>add(x,t)));
+  // ③ W杯は同じグループの試合で補完
+  if(m.league==='wc'){ const g=(schedFor(m)||{}).group; if(g){ data.forEach(x=>{ if(x.league==='wc' && (schedFor(x)||{}).group===g) add(x,`グループ${g}`); }); } }
+  // ④ それでも少なければ同じ大会・リーグの試合で補完
+  const lgName = LG[m.league]||'同じ大会';
+  if(rel.length<12) data.forEach(x=>{ if(x.league===m.league) add(x,lgName); });
+  return rel.slice(0,12);
 }
 function entityMatches(name){ return (byTeam[name]||[]).filter(m=>m.id); }
 // 個別ページの有無（試合ページ→ハブページの内部リンク用に先に確定）
