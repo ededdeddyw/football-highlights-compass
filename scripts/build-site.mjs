@@ -81,6 +81,14 @@ function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0
 
 const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
+// 欧州リーグのハブページ定義（clubLabel は entities.mjs の CLUBS[].league 表記に一致させる）
+const LEAGUE_HUBS = [
+  { name:'ラ・リーガ', slug:'laliga', clubLabel:'ラ・リーガ', country:'スペイン', blurb:'スペイン1部リーグ。世界屈指の技術レベルで知られ、日本人選手も活躍しています。' },
+  { name:'セリエA', slug:'serie-a', clubLabel:'セリエA', country:'イタリア', blurb:'イタリア1部リーグ。堅守と戦術の伝統で知られます。' },
+  { name:'ブンデスリーガ', slug:'bundesliga', clubLabel:'ブンデスリーガ', country:'ドイツ', blurb:'ドイツ1部リーグ。多くの日本人選手が在籍してきたリーグです。' },
+  { name:'リーグアン', slug:'ligue-1', clubLabel:'リーグアン', country:'フランス', blurb:'フランス1部リーグ。' },
+  { name:'プリメイラ・リーガ', slug:'primeira-liga', clubLabel:'プリメイラ・リーガ', country:'ポルトガル', blurb:'ポルトガル1部リーグ。' },
+];
 const esc = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const escA = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');
 
@@ -188,6 +196,16 @@ for(const m of all){ const key=m.id||m.ttl; if(seenId.has(key))continue; seenId.
 // 関連（チーム別・選手別）
 const byTeam={}, byPlayer={};
 data.forEach(m=>{ m.teams.forEach(t=>{ (byTeam[t]=byTeam[t]||[]).push(m); }); m.players.forEach(p=>{ (byPlayer[p]=byPlayer[p]||[]).push(m); }); });
+
+// 欧州リーグハブ：所属クラブ（CLUBS）の試合を集約。試合があるリーグだけ採用（薄いページ回避）
+function leagueMatches(clubLabel){
+  const clubsIn = Object.entries(CLUBS).filter(([,i])=>i.league===clubLabel).map(([n])=>n);
+  const seen=new Set(), ms=[];
+  clubsIn.forEach(c=> (byTeam[c]||[]).forEach(m=>{ if(m.id&&!seen.has(m.id)){ seen.add(m.id); ms.push(m); } }));
+  return { clubsIn, ms };
+}
+const LEAGUE_LIST = LEAGUE_HUBS.filter(h=> leagueMatches(h.clubLabel).ms.length>0);
+function leagueNavHtml(prefix){ return LEAGUE_LIST.length ? `<nav class="nav-guides nav-eu" aria-label="欧州リーグ"><div class="ng-h">🇪🇺 欧州リーグ</div>${LEAGUE_LIST.map(h=>`<a href="${prefix}league/${h.slug}.html">${esc(h.name)}</a>`).join('')}</nav>` : ''; }
 function relatedMatches(m){
   const seen=new Set([m.id]); const rel=[];
   const add=(x,why)=>{ if(x&&x.id&&!seen.has(x.id)){ seen.add(x.id); rel.push({m:x,why}); } };
@@ -274,7 +292,8 @@ function subSideNav(){
     <div class="ng-h">⚽ ワールドカップ26</div>
     <a class="wc-ko" href="../group/knockout.html">🏆 決勝トーナメント（進出国・日程）</a>
     <div class="wc-groups">${groups}</div>
-  </nav>`;
+  </nav>
+  ${leagueNavHtml('../')}`;
 }
 
 // 試合ページ用：モバイルメニュー開閉＋ネタバレ防止ON/OFFトグル（localStorage連動・ページに即反映）
@@ -735,7 +754,9 @@ function buildClub(name, info){
   </table></div>`;
   const list = ms.length?`<h2 class="lined">${esc(name)}の公式ハイライト（${ms.length}試合）</h2><div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:'';
   const sameLeague = Object.entries(CLUBS).filter(([n,i])=>n!==name && i.league===info.league).slice(0,12);
-  const related = sameLeague.length?`<h2>同じリーグのクラブ</h2><div class="chips">${sameLeague.map(([n,i])=>`<a href="../club/${i.slug}.html">${esc(n)}</a>`).join('')}</div>`:'';
+  const leagueHub = LEAGUE_LIST.find(h=>h.clubLabel===info.league);
+  const leagueLink = leagueHub?`<p style="margin:2px 0 10px"><a href="../league/${leagueHub.slug}.html"><b>🇪🇺 ${esc(leagueHub.name)} の試合一覧へ →</b></a></p>`:'';
+  const related = (leagueLink?leagueLink:'') + (sameLeague.length?`<h2>同じリーグのクラブ</h2><div class="chips">${sameLeague.map(([n,i])=>`<a href="../club/${i.slug}.html">${esc(n)}</a>`).join('')}</div>`:'');
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'クラブ'},{label:name}])}
   <p class="kicker">${flag} ${esc(info.league)}</p>
@@ -802,6 +823,37 @@ function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.lengt
 let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
 for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
+
+// ========================= 欧州リーグ ハブページ =========================
+mkdirSync('site/league', { recursive:true });
+const leagueUrls = [];
+function buildLeague(h){
+  const { clubsIn, ms } = leagueMatches(h.clubLabel);
+  if(!ms.length) return;
+  const path=`league/${h.slug}.html`, url=`${DOMAIN}/${path}`;
+  const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>`<a href="../club/${CLUBS[c].slug}.html">${esc(c)}</a>`).join('');
+  const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
+  const cross = others.length?`<h2 class="lined">他の欧州リーグ</h2><div class="chips">${others.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('')}</div>`:'';
+  const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
+  const desc = `${h.name}（${h.country}）の公式ハイライト。公式・権利元が公開する映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
+  const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}])];
+  graph.push(itemListLd(ms));
+  const head=HEAD({ title:`${h.name}｜公式ハイライト・試合一覧 - Football Highlights Compass`, ogtitle:`${h.name}｜公式ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+  const out = head + TOPBAR + `<article class="post entity">
+  ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
+  <p class="kicker">⚽ 欧州サッカー</p>
+  <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
+  <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。</p>
+  ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="chips">${clubChips}</div>`:''}
+  ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
+  ${AD}
+  <h2 class="lined">${esc(h.name)}の公式ハイライト（${ms.length}試合）</h2>${cardGrid(ms)}
+  ${cross}
+  ` + FOOTER();
+  writeFileSync(`site/${path}`, out);
+  leagueUrls.push(url);
+}
+for(const h of LEAGUE_LIST) buildLeague(h);
 
 // ========================= 集客記事（ガイド）の生成 =========================
 mkdirSync('site/guide', { recursive:true });
@@ -983,6 +1035,8 @@ const PICKUP_HTML = (()=>{
   next = next.replace(/<!--AD_UNIT_START-->[\s\S]*?<!--AD_UNIT_END-->/, `<!--AD_UNIT_START-->\n  ${AD}\n  <!--AD_UNIT_END-->`);
   // W杯ハブ（左ナビ）：決勝T＋全組リンク。group/knockout への内部リンク導線（クローラビリティ）
   next = next.replace(/<!--WCHUB_START-->[\s\S]*?<!--WCHUB_END-->/, `<!--WCHUB_START-->\n        ${WCHUB_HTML}\n        <!--WCHUB_END-->`);
+  // 欧州リーグ ハブの左ナビ（トップ）。group同様マーカー注入
+  next = next.replace(/<!--EUROHUB_START-->[\s\S]*?<!--EUROHUB_END-->/, `<!--EUROHUB_START-->${leagueNavHtml('')}<!--EUROHUB_END-->`);
   // GA4（トップ）：data/analytics.json の測定IDから注入。空なら出力なし
   next = next.replace(/<!--GA_START-->[\s\S]*?<!--GA_END-->/, `<!--GA_START-->${GA}<!--GA_END-->`);
   writeFileSync('site/index.html', next);
@@ -1000,6 +1054,7 @@ let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.site
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
 for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
+for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
