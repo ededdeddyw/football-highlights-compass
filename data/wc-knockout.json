@@ -10,14 +10,15 @@
     {
       "home": "ブラジル",
       "away": "日本",
-      "result": "",
+      "result": "2-1",
       "videoId": ""
     },
     {
       "home": "ドイツ",
       "away": "パラグアイ",
-      "result": "",
-      "videoId": ""
+      "result": "1-1",
+      "videoId": "",
+      "pk": "3-4"
     },
     {
       "home": "オランダ",
