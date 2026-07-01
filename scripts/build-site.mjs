@@ -60,6 +60,9 @@ try { if (existsSync('data/wc-results.json')) WCRESULTS = JSON.parse(readFileSyn
 // ---------- W杯 決勝トーナメントの対戦カード（data/wc-knockout.json）。r32等の home/away/result/videoId。結果はネタバレ防止で既定隠し ----------
 let WCKO = {};
 try { if (existsSync('data/wc-knockout.json')) WCKO = JSON.parse(readFileSync('data/wc-knockout.json','utf8')); } catch(e){ console.warn('wc-knockout読込失敗:', e.message); }
+// 決勝T videoId→{home,away,result} マップ（試合カードのスコアを wc-knockout.json から自動導出。scores.json 手動記録は不要）
+const KO_BY_VID = new Map();
+for (const k of Object.keys(WCKO)){ if(!Array.isArray(WCKO[k])) continue; for (const f of WCKO[k]){ if(f && f.videoId && f.result) KO_BY_VID.set(f.videoId, { home:f.home, away:f.away, result:f.result }); } }
 // DAZN訴求CTA。アフィリリンク設定時は rel="sponsored"＋「PR」表記（ステマ規制対応）。未設定時は公式リンク(nofollow)。
 function daznCta(context){
   const aff = (AFFILIATE.daznUrl||'').trim();
@@ -121,9 +124,9 @@ const SPOILER_ALT = {};
 // EXTRA arrays
 const parseObjs = s => (s.match(/\{[^{}]*\}/g)||[]).map(o=>({ ttl:(o.match(/ttl:"([^"]*)"/)||[])[1]||'', meta:(o.match(/meta:"([^"]*)"/)||[])[1]||'', jp:(o.match(/jp:"([^"]*)"/)||[])[1]||'', id:(o.match(/id:"([^"]*)"/)||[])[1]||'' }));
 function extra(name){ return parseObjs(slice('const '+name+' = [', '\n];')); }
-// 自動検知ぶん（inject-wc.mjs が /*WC_AUTO*/ マーカーに注入する EXTRA_WC_AUTO）も合流
-function extraAuto(){ const m = html.match(/EXTRA_WC_AUTO\s*=\s*(\[[\s\S]*?\]);/); return m ? parseObjs(m[1]) : []; }
-const EXTRA_WC = [...extra('EXTRA_WC'), ...extraAuto()], EXTRA_JL = extra('EXTRA_JL'), EXTRA_CLUB = extra('EXTRA_CLUB');
+// 自動検知ぶん（inject-wc.mjs → EXTRA_WC_AUTO／watch-knockout.mjs → EXTRA_WC_KO_AUTO）も合流
+function extraAutoVar(name){ const m = html.match(new RegExp(name+'\\s*=\\s*(\\[[\\s\\S]*?\\]);')); return m ? parseObjs(m[1]) : []; }
+const EXTRA_WC = [...extra('EXTRA_WC'), ...extraAutoVar('EXTRA_WC_AUTO'), ...extraAutoVar('EXTRA_WC_KO_AUTO')], EXTRA_JL = extra('EXTRA_JL'), EXTRA_CLUB = extra('EXTRA_CLUB');
 
 // mkMatch / emb 移植（EXTRA の body 再構築用）
 function escJ(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');}
@@ -170,8 +173,12 @@ function norm(m){
   let topic=''; const tm = m.meta.match(/[・/]\s*([^・/]*(?:弾|ゴール|アシスト|勝|敗|ドロー|無失点|セーブ|MOM|優勝|首位|ダービー|決定|突破|快勝|大勝|初[^・/]*)[^・/]*)\s*$/); if (tm) topic=tm[1].trim();
   const dual = /class="dualnote"/.test(body);
   const lineup = /class="lineup"/.test(body);
-  // スコア：data/scores.json 優先、無ければ静的 details.match の .score（<span class="n">）から抽出
+  // スコア：data/scores.json 優先、次に決勝T（wc-knockout.json）から自動導出（カードのチーム表示順に合わせて向き補正）
   let score = SCORES[id] || '';
+  if(!score && id && KO_BY_VID.has(id)){
+    const ko = KO_BY_VID.get(id); const r = String(ko.result).match(/^(\d+)-(\d+)$/);
+    if(r){ if(teams.length===2 && teams[0]===ko.away && teams[1]===ko.home) score = r[2]+'-'+r[1]; else score = r[1]+'-'+r[2]; }
+  }
   if(!score){ const sm = body.match(/<div class="score">([\s\S]*?)<\/div>/); if(sm){ const ns = (sm[1].match(/<span class="n">([^<]*)<\/span>/g)||[]).map(x=>x.replace(/<[^>]+>/g,'').trim()); if(ns.length>=2) score = ns[0]+'-'+ns[1]; } }
   // W杯の試合動画は wc-results.json から自動補完（scores.json 未登録でも必ず出す）。カードのチーム表示順に合わせて向き補正
   if(!score && id){
