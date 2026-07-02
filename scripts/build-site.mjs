@@ -644,11 +644,28 @@ function buildMatch(m){
   ];
   if (sched){
     const evName = `${sched.home?.ja||m.teams[0]||''} vs ${sched.away?.ja||m.teams[1]||''}`.trim();
-    const ev = {"@type":"SportsEvent","name":evName,"sport":"Soccer","startDate":sched.koUTC||sched.dateLocal,"eventStatus":"https://schema.org/EventScheduled","superEvent":{"@type":"SportsEvent","name":"FIFA World Cup 2026"}};
-    if(sched.venue) ev.location={"@type":"Place","name":sched.venue,"address":{"@type":"PostalAddress","addressLocality":sched.city||'',"addressCountry":sched.country||''}};
+    const start = sched.koUTC || sched.dateLocal || upDate;
+    // endDate（開始+2時間・startが解釈できる時のみ）
+    let endDate; try { const d = new Date(start); if(!isNaN(d.getTime())) endDate = new Date(d.getTime() + 2*3600*1000).toISOString(); } catch {}
+    // 入れ子Event(superEvent/BroadcastEvent)は必須項目(startDate/location)を欠きGSCエラー源のため排除。
+    // メインの SportsEvent を必須(startDate/location)＋推奨(endDate/description/image/organizer)完備の妥当な1件にする。
+    const ev = {
+      "@type":"SportsEvent","name":evName,"sport":"Soccer",
+      "startDate":start,
+      ...(endDate?{endDate}:{}),
+      "eventStatus":"https://schema.org/EventScheduled",
+      "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+      "description":desc,
+      "image":[ogimg],
+      "organizer":{"@type":"Organization","name":"FIFA","url":"https://www.fifa.com/"},
+      // location は必須。venueがあれば会場、無ければ開催国（カナダ・メキシコ・アメリカ）にフォールバック
+      "location": sched.venue
+        ? {"@type":"Place","name":sched.venue,"address":{"@type":"PostalAddress","addressLocality":sched.city||'',"addressCountry":sched.country||''}}
+        : {"@type":"Place","name":"FIFAワールドカップ2026 開催地","address":{"@type":"PostalAddress","addressCountry":["CA","MX","US"]}}
+    };
     if(sched.home?.ja) ev.homeTeam={"@type":"SportsTeam","name":sched.home.ja};
     if(sched.away?.ja) ev.awayTeam={"@type":"SportsTeam","name":sched.away.ja};
-    graph.push(ev, {"@type":"BroadcastEvent","name":evName+"｜ハイライト配信","isLiveBroadcast":false,"broadcastOfEvent":{"@type":"SportsEvent","name":evName},"publishedOn":{"@type":"BroadcastService","name":sched.broadcaster||"DAZN Japan"}});
+    graph.push(ev);
   }
   // ネタバレ防止中（html:not(.spoiler-off)）は結果に触れる要素を隠す。本文の .score / 得点 / トピック に spoiler-cover を付与
   const bodyHtml = m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')
