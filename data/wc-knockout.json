@@ -60,14 +60,14 @@
     {
       "home": "アメリカ",
       "away": "ボスニア・ヘルツェゴビナ",
-      "result": "",
-      "videoId": ""
+      "result": "2-0",
+      "videoId": "BEpOPoLd4mk"
     },
     {
       "home": "スペイン",
       "away": "オーストリア",
-      "result": "",
-      "videoId": ""
+      "result": "3-0",
+      "videoId": "AVruzJG-piU"
     },
     {
       "home": "ポルトガル",
@@ -96,6 +96,38 @@
     {
       "home": "コロンビア",
       "away": "ガーナ",
+      "result": "",
+      "videoId": ""
+    }
+  ],
+  "r16": [
+    {
+      "home": "カナダ",
+      "away": "モロッコ",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "パラグアイ",
+      "away": "フランス",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "ブラジル",
+      "away": "ノルウェー",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "メキシコ",
+      "away": "イングランド",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "アメリカ",
+      "away": "ベルギー",
       "result": "",
       "videoId": ""
     }
