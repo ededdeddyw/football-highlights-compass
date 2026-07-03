@@ -51,6 +51,210 @@
         "hl": true
       },
       "detectedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gI-3-1",
+      "videoId": "iZUeyV7HgQQ",
+      "title": "【ノルウェー×フランス｜ハイライト｜デンベレが大活躍】グループI第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T21:50:22.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T22:05:17.813Z"
+    },
+    {
+      "matchId": "wc2026-gI-3-2",
+      "videoId": "_uAsT0T3sgI",
+      "title": "【セネガル×イラク｜ハイライト｜セネガルが5発快勝でGS突破へ望みをつなぐ】グループI第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-26T21:41:25.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-26T22:05:17.813Z"
+    },
+    {
+      "matchId": "wc2026-gH-3-1",
+      "videoId": "FzImMEFALG0",
+      "title": "【FIFAワールドカップ2026】カーボベルデ vs サウジアラビア : グループH 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T03:00:07.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-27T03:20:11.473Z"
+    },
+    {
+      "matchId": "wc2026-gH-3-2",
+      "videoId": "FQNk7Ar1uNc",
+      "title": "【FIFAワールドカップ2026】ウルグアイ vs スペイン : グループH 第3節  │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T03:08:52.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-27T03:20:11.473Z"
+    },
+    {
+      "matchId": "wc2026-gG-3-1",
+      "videoId": "X3mtIZ_Ju0E",
+      "title": "【エジプト×イラン｜ハイライト｜エジプトはGS突破、イランは他会場の結果を待つ】グループG第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T05:40:43.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-27T06:04:09.559Z"
+    },
+    {
+      "matchId": "wc2026-gG-3-2",
+      "videoId": "GzsAIgnhx5I",
+      "title": "【ニュージーランド×ベルギー｜ハイライト｜ベルギー代表が5発のシュートで快勝】グループG第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T05:41:14.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-27T06:04:09.559Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-1",
+      "videoId": "_FXrOkWXAwg",
+      "title": "【FIFAワールドカップ2026】パナマ vs イングランド : グループ L 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:56:47.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-2",
+      "videoId": "BMSL-4Eg-x4",
+      "title": "【FIFAワールドカップ2026】クロアチア vs ガーナ : グループL 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:48:59.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "videoId": "kmHkjjAImAc",
+      "title": "【FIFAワールドカップ2026】コロンビア vs ポルトガル : グループK 第3節  │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T02:51:23.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T03:30:58.563Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-2",
+      "videoId": "qX0wTPond5A",
+      "title": "【FIFAワールドカップ2026】コンゴ民主共和国 vs ウズベキスタン : グループK 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T02:39:54.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T03:30:58.563Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "videoId": "vRr78Sme4Uw",
+      "title": "【アルジェリア×オーストリア｜ハイライト｜グループリーグ最終戦は後半ATまで攻めあう死闘に...】グループJ第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T04:51:31.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T05:07:35.609Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-2",
+      "videoId": "bw8iNWeLMYE",
+      "title": "【FIFAワールドカップ2026】ヨルダン vs アルゼンチン : グループJ 第3節 │ MATCH RECAP【全104試合DAZNライブ配信】",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T04:57:53.000Z",
+      "score": 10,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": true,
+        "tourn": true,
+        "hl": true
+      },
+      "detectedAt": "2026-06-28T05:07:35.609Z"
     }
   ]
 }

@@ -90,6 +90,186 @@
       },
       "why": "published_outside_window",
       "loggedAt": "2026-06-26T02:05:28.756Z"
+    },
+    {
+      "matchId": "wc2026-gH-3-2",
+      "videoId": "c8O-dWumyM8",
+      "title": "【ウルグアイ×スペイン｜ハイライト｜スペインが無敗の首位通過で決勝トーナメント進出決定】グループH第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T02:31:16.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-27T03:20:11.473Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-1",
+      "videoId": "uJI4Wzl1-KA",
+      "title": "【パナマ×イングランド｜ハイライト｜ハリー・ケインがイングランド人最多のワールドカップ通算11ゴールを達成】グループL第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:36:09.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gL-3-2",
+      "videoId": "wpQRGMvzL_I",
+      "title": "【クロアチア×ガーナ｜ハイライト｜クロアチアが勝利し、GS２位通過！】グループL第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-27T23:33:47.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T00:04:04.444Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "videoId": "eVpkKGCRQvU",
+      "title": "【コロンビア×ポルトガル｜ハイライト｜スコアレスドローの結果コロンビアが首位通過】グループK第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T02:02:30.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T03:30:58.563Z"
+    },
+    {
+      "matchId": "wc2026-gK-3-1",
+      "videoId": "syqCPaCSB1I",
+      "title": "【VARの威力】🇨🇴の先制点かと思われたがわずかにオフサイド｜🏆️FIFAワールドカップ2026 グループK コロンビア×ポルトガル",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T01:47:42.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T03:30:58.563Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "videoId": "igJaYTu7Q64",
+      "title": "【フェニックス】🇦🇹カライジッチが劇的同点弾　このままなら敗退のチームを救った｜🏆️FIFAワールドカップ2026 グループJ アルジェリア×オーストリア",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T04:23:10.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T05:07:35.609Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "videoId": "XGHjDpgz1ZI",
+      "title": "【一刺し】🇩🇿マフレズが本日2ゴール目　最終ラインでのボール回しから一転｜🏆️FIFAワールドカップ2026 グループJ アルジェリア×オーストリア",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T04:22:22.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T05:07:35.609Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "videoId": "0iVlB10xtus",
+      "title": "【これは止められない】🇦🇹ザービッツァがダイレクトで強烈シュート｜🏆️FIFAワールドカップ2026 グループJ アルジェリア×オーストリア",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T03:37:41.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T05:07:35.609Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-1",
+      "videoId": "8X4QTzjFTWw",
+      "title": "【熱い打ち合い】左サイドから崩して最後は🇩🇿マフレズが同点弾｜🏆️FIFAワールドカップ2026 グループJ アルジェリア×オーストリア",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T03:36:44.000Z",
+      "score": 6,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": false
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T05:07:35.609Z"
+    },
+    {
+      "matchId": "wc2026-gJ-3-2",
+      "videoId": "LA-C3e0eIfU",
+      "title": "【ヨルダン×アルゼンチン｜ハイライト｜メッシがワールドカップ7試合連続ゴールの金字塔】グループJ第3節｜FIFAワールドカップ2026",
+      "channel": "DAZN Japan",
+      "channelId": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+      "publishedUTC": "2026-06-28T04:27:05.000Z",
+      "score": 8,
+      "reasons": {
+        "homeHit": true,
+        "awayHit": true,
+        "inWindow": false,
+        "tourn": true,
+        "hl": true
+      },
+      "why": "published_outside_window",
+      "loggedAt": "2026-06-28T05:07:35.609Z"
     }
   ]
 }
