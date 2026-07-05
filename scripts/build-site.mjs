@@ -125,18 +125,19 @@ function koBracket(){
   R32.forEach((_,i)=>{ if(!order.includes(i)) order.push(i); });   // 供給先未定のR32は末尾へ
   const teamLink=(name)=> name ? (PAGE_OF[name]?`<a href="../${PAGE_OF[name]}">${flagImg(name)}${esc(name)}</a>`:`${flagImg(name)}${esc(name)}`) : `<span class="br-tbd">未定</span>`;
   const scOf=(m)=>(m&&/^\d+-\d+$/.test(String(m.result||'')))?String(m.result):'';
-  const pkOf=(m)=>(m&&/^\d+-\d+$/.test(String(m.pk||'')))?` <small>(PK ${esc(m.pk)})</small>`:'';
-  // スコア＋ハイライトを1つの右上クラスタに。結果に触れるため既定は伏せる（spoiler-cover）
-  const metaOf=(m)=>{ const sc=scOf(m); const hl=(m&&m.videoId)?`<a class="br-hl" href="../match/${m.videoId}.html" title="ハイライト">▶</a>`:''; if(!sc&&!hl) return '';
-    return `<span class="br-meta spoiler-cover">${sc?`<span class="br-sc">${esc(sc)}${pkOf(m)}</span>`:''}${hl}</span>`; };
-  // R32：対戦カード（＝抽選）は表示。スコア/勝者ハイライトのみ伏せる
-  const cell32=(m)=>{ const w=koWin(m);
-    const row=(name)=>`<span class="br-team${w&&w===name?' br-win':''}">${teamLink(name)}</span>`;
-    return `<div class="br-cell"><div class="br-match">${row(m.home)}${row(m.away)}${metaOf(m)}</div></div>`; };
+  const goalsOf=(m)=>{ const sc=scOf(m); if(!sc) return [null,null]; return sc.split('-'); };
+  const pkSideWin=(m)=>{ const p=String(m&&m.pk||'').match(/^(\d+)-(\d+)$/); if(!p) return null; return (+p[1])>(+p[2])?'home':'away'; };
+  const hlOf=(m)=>(m&&m.videoId)?`<a class="br-hl spoiler-cover" href="../match/${m.videoId}.html" title="ハイライトを見る" aria-label="ハイライトを見る">▶</a>`:'';
+  // 1チーム行：名前＋（PK勝ち印）＋得点。得点/勝者強調・PK印は spoiler-cover（既定は伏せる）
+  const trow=(m,side,covered)=>{ const name=m?m[side]:null; const w=m?koWin(m):null; const win=!!(w&&name&&w===name);
+    const g=goalsOf(m)[side==='home'?0:1];
+    const pk=(pkSideWin(m)===side)?`<span class="br-pk spoiler-cover" title="PK戦で勝利">PK</span>`:'';
+    const nm=covered?`<span class="br-ph">？</span><span class="br-real spoiler-cover">${teamLink(name)}</span>`:teamLink(name);
+    return `<span class="br-team${win?' br-win':''}"><span class="br-nm">${nm}</span>${pk}${g!=null?`<span class="br-g spoiler-cover">${esc(g)}</span>`:''}</span>`; };
+  // R32：対戦カード（＝抽選）は表示。得点/勝者強調のみ伏せる
+  const cell32=(m)=>`<div class="br-cell"><div class="br-match"><div class="br-rows">${trow(m,'home',false)}${trow(m,'away',false)}</div>${hlOf(m)}</div></div>`;
   // R16以降：勝ち上がり自体がネタバレ → 既定は「？」、開示で対戦カード
-  const cellAdv=(m)=>{ const w=m?koWin(m):null; const home=m?m.home:null, away=m?m.away:null;
-    const row=(name)=>`<span class="br-team${w&&w===name?' br-win':''}"><span class="br-ph">？</span><span class="br-real spoiler-cover">${teamLink(name)}</span></span>`;
-    return `<div class="br-cell"><div class="br-match br-adv">${row(home)}${row(away)}${metaOf(m)}</div></div>`; };
+  const cellAdv=(m)=>`<div class="br-cell"><div class="br-match br-adv"><div class="br-rows">${trow(m,'home',true)}${trow(m,'away',true)}</div>${hlOf(m)}</div></div>`;
   const pad=(arr,n,fn)=>{ const out=arr.map(fn); while(out.length<n) out.push(fn(undefined)); return out; };
   const col=(title,cells)=>`<div class="br-round"><h4 class="br-h">${title}</h4><div class="br-body">${cells.join('')}</div></div>`;
   return `<div class="bracket-wrap"><div class="bracket">${
@@ -618,27 +619,30 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .ko-qual td.st-team a{font-weight:700}
 /* ===== トーナメント表（ブラケット） ===== */
 .bracket-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px -6px 4px;padding:2px 6px 6px}
-.bracket{display:flex;align-items:stretch;min-width:660px}
-.br-round{display:flex;flex-direction:column;flex:1 1 132px;min-width:132px;padding-right:22px}
+.bracket{display:flex;align-items:stretch;min-width:750px}
+.br-round{display:flex;flex-direction:column;flex:1 1 150px;min-width:150px;padding-right:22px}
 .br-round:last-child{padding-right:0}
 .br-h{flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.03em;color:var(--muted);text-align:center;margin:0 0 6px;padding-bottom:5px;border-bottom:1px solid var(--line)}
 .br-body{flex:1 1 auto;display:flex;flex-direction:column}
 .br-cell{flex:1 1 0;display:flex;align-items:center;position:relative;min-height:48px;padding:4px 0}
-.br-match{width:100%;background:var(--paper);border:1px solid var(--line2);border-radius:9px;padding:5px 8px;position:relative;z-index:1}
-.br-team{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--ink2);line-height:1.3;padding:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.br-match{width:100%;background:var(--paper);border:1px solid var(--line2);border-radius:9px;padding:4px 7px;position:relative;z-index:1;display:flex;align-items:center;gap:6px}
+.br-rows{flex:1 1 auto;min-width:0}
+.br-team{display:flex;align-items:center;font-size:12.5px;font-weight:700;color:var(--ink2);line-height:1.3;padding:2px 0}
 .br-team+.br-team{border-top:1px dashed var(--line)}
-.br-team .flag{height:12px;width:auto;border-radius:2px;flex:0 0 auto}
+.br-nm{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.br-nm .flag{height:12px;width:auto;border-radius:2px;margin-right:4px;vertical-align:-1px}
 .br-team a{color:inherit;text-decoration:none}
 .br-team a:hover{color:var(--accent2)}
-.br-team.br-win{color:var(--accent);font-weight:900}
-html:not(.spoiler-off) .br-team.br-win{color:var(--ink2);font-weight:700}
+.br-g{flex:0 0 auto;margin-left:7px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.br-team.br-win .br-nm{color:var(--accent);font-weight:900}
+.br-team.br-win .br-g{color:var(--accent)}
+html:not(.spoiler-off) .br-team.br-win .br-nm{color:var(--ink2);font-weight:700}
+.br-pk{flex:0 0 auto;margin-left:6px;font-size:8.5px;font-weight:800;color:#fff;background:var(--warn);padding:1px 4px;border-radius:6px}
 .br-tbd{color:var(--soft);font-weight:600}
 .br-ph{color:var(--soft);font-weight:800}
 html.spoiler-off .br-ph{display:none}
-.br-meta{position:absolute;top:-9px;right:8px;display:inline-flex;align-items:center;gap:5px;z-index:2}
-.br-sc{background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;padding:1px 6px;border-radius:8px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.br-sc small{font-weight:700;opacity:.9}
-.br-hl{background:var(--accent2);color:#fff;font-size:10px;font-weight:800;width:19px;height:19px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 1px 3px rgba(20,30,60,.25)}
+.br-hl{flex:0 0 auto;background:var(--accent2);color:#fff;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 1px 2px rgba(20,30,60,.2)}
+.br-hl:hover{background:var(--accent)}
 .br-round:not(:last-child) .br-cell::after{content:"";position:absolute;left:100%;top:50%;width:22px;height:2px;background:var(--line2)}
 .br-round:not(:last-child) .br-cell:nth-child(odd)::before{content:"";position:absolute;left:calc(100% + 22px);top:50%;width:2px;height:100%;background:var(--line2)}
 .br-legend{font-size:12px;color:var(--muted);margin:2px 2px 0;line-height:1.7}
