@@ -10,6 +10,9 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { COUNTRIES, CLUBS, DEEP } from './entities.mjs';
 
 const DOMAIN = 'https://highlight-compass.com';
+// GitHub Pages ミラー(ededdeddyw.github.io)に来た人・クローラーを本番ドメインへ集約。
+// 本番(highlight-compass.com)では発火しない。AdSense/GAより前に置き、ミラー側で広告を読ませない。
+const CANON_REDIRECT = `<script>(function(){try{if(location.hostname==='ededdeddyw.github.io'){var p=location.pathname.replace(/^\\/football-highlights-compass/,'')||'/';location.replace('https://highlight-compass.com'+p+location.search+location.hash);}}catch(e){}})();</script>\n`;
 const TODAY = new Date().toISOString().slice(0,10);   // ビルド実行日（動的）
 const html = readFileSync('site/index.html', 'utf8');
 
@@ -243,7 +246,7 @@ for(const [n] of Object.entries(CLUBS)) PAGE_OF[n]=`club/${CLUBS[n].slug}.html`;
 const HEAD = (o)=>`<!DOCTYPE html>
 <html lang="ja"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${esc(o.title)}</title>
+${CANON_REDIRECT}<title>${esc(o.title)}</title>
 <meta name="description" content="${escA(o.desc)}">
 <meta name="robots" content="${o.robots||'index,follow,max-image-preview:large'}"><meta name="theme-color" content="#0c1657">
 <link rel="canonical" href="${o.url}">
