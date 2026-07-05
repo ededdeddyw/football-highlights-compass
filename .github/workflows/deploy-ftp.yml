@@ -1,0 +1,36 @@
+name: Manual FTP deploy (本番 highlight-compass.com)
+
+# コード変更（テンプレ/CSS/静的ページ等）を本番 highlight-compass.com に即時反映するための手動デプロイ。
+# 通常の自動デプロイ(watch.yml / wc-knockout.yml)は「新規検知があった時だけ」FTP配信するため、
+# データ変更を伴わないコード変更はこのワークフローを手動実行して反映する。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: サイト生成（生成物はgitignoreのためCIで生成）
+        run: node scripts/build-site.mjs
+
+      - name: FTP デプロイ（本番 highlight-compass.com）
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_DIR:  ${{ secrets.FTP_DIR }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          npm install basic-ftp --no-save --no-package-lock --no-audit --no-fund
+          node scripts/deploy.mjs
