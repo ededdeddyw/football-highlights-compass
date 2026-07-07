@@ -69,8 +69,9 @@ for (const key of Object.keys(ROUNDS)) {
   const R = ROUNDS[key];
   for (const f of arr) {
     if (f.videoId) continue;              // 既に連携済み
-    if (!f.result) continue;              // 結果未確定（未消化/未検証）はスキップ
-    if (!f.home || !f.away) continue;
+    if (!f.home || !f.away) continue;     // 両チーム未確定はスキップ
+    // 結果(result)は不問：公式RECAPは試合後にしか存在しないため、動画が見つかった＝試合済み。
+    //   結果検証(APIキー)を待たずに動画を即掲載＝鮮度優先。スコアは既定で隠れる（ネタバレ防止）ので後追いでOK。
     const hv = variants(f.home), av = variants(f.away);
     const ids = await searchIds(`${f.home} ${f.away} ${R.q} MATCH RECAP`);
     let hit = null;

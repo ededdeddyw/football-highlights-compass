@@ -2,8 +2,15 @@
 // deploy.env（gitignore済）に FTP_HOST/FTP_USER/FTP_PASS/FTP_DIR/SITE_URL を記載して実行
 // 注意: このサーバは転送完了の間際に制御接続を切る（ECONNRESET）ことがあるため、
 //  ①本体アップを数回リトライ ②末尾の主要ファイルは別接続で個別に上げ直す、の二段構え。
-import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import * as ftp from 'basic-ftp';
+
+// 差分アップロード用マニフェスト（相対パス→md5）。前回と同じ内容のファイルは飛ばす＝配信を数分→数秒に。
+// DEPLOY_FULL=1 で全アップロード（マニフェスト無視）。マニフェストは data/ 配下（site/外なのでFTPには上がらない）。
+const MANIFEST = 'data/deploy-manifest.json';
+const md5 = (p) => createHash('md5').update(readFileSync(p)).digest('hex');
+const loadManifest = () => { try { return JSON.parse(readFileSync(MANIFEST, 'utf8')); } catch { return {}; } };
 
 // 認証情報は ①環境変数（GitHub Actions の Secrets）優先 ②無ければ deploy.env から読む
 const env = {};
@@ -40,11 +47,18 @@ function listFiles(dir, base = '') {
   return out;
 }
 
-// 1ファイルずつアップロード。制御接続が切れたら再接続して続行（このサーバ対策）
+// 1ファイルずつアップロード。制御接続が切れたら再接続して続行（このサーバ対策）。前回と同一ハッシュは飛ばす（差分）。
 async function uploadAll() {
   const files = listFiles('site');
   const rootClean = (env.FTP_DIR || '/').replace(/\/+$/, '');   // "/" の場合は ""
-  console.log('アップロード先:', env.FTP_DIR, '／対象', files.length, 'ファイル');
+  const FULL = process.env.DEPLOY_FULL === '1';
+  const man = FULL ? {} : loadManifest();
+  const hashes = {}; const targets = [];
+  for (const rel of files) { const h = md5('site/' + rel); hashes[rel] = h; if (man[rel] !== h) targets.push(rel); }
+  changedTail = new Set(targets.filter(r => TAIL.includes(r)));   // tail保証は「今回変わったtailファイル」だけ
+  console.log(`アップロード先: ${env.FTP_DIR} ／ 全${files.length}中 ${targets.length}ファイルが変更（差分）${FULL ? ' [FULL]' : ''}`);
+  if (!targets.length) { writeFileSync(MANIFEST, JSON.stringify(hashes)); return { total: files.length, done: 0, failed: [], skipped: files.length }; }
+  const newMan = { ...man };
   let c = await connect();
   let curDir = null;
   const ensure = async (dir) => {
@@ -52,7 +66,7 @@ async function uploadAll() {
     if (curDir !== abs) { await c.ensureDir(abs); curDir = abs; }
   };
   let done = 0; const failed = [];
-  for (const rel of files) {
+  for (const rel of targets) {
     const i = rel.lastIndexOf('/');
     const dir = i < 0 ? '.' : rel.slice(0, i);
     const baseName = i < 0 ? rel : rel.slice(i + 1);
@@ -60,7 +74,7 @@ async function uploadAll() {
       try {
         await ensure(dir);
         await c.uploadFrom('site/' + rel, baseName);
-        done++; process.stdout.write(`  ↑ ${rel} (${done}/${files.length})\r`);
+        done++; newMan[rel] = hashes[rel]; process.stdout.write(`  ↑ ${rel} (${done}/${targets.length})\r`);
         break;
       } catch (e) {
         if (attempt > 4) { failed.push(rel); console.error(`\n  失敗 ${rel}: ${e.message}`); break; }
@@ -71,11 +85,15 @@ async function uploadAll() {
     }
   }
   c.close();
-  return { total: files.length, done, failed };
+  writeFileSync(MANIFEST, JSON.stringify(newMan));   // 成功分だけ反映。失敗ファイルは旧ハッシュのまま＝次回再試行
+  return { total: files.length, done, failed, skipped: files.length - targets.length };
 }
+let changedTail = new Set();
 async function uploadTail() {
+  const tails = TAIL.filter(f => changedTail.has(f) && existsSync('site/' + f));   // 今回変わった主要ファイルだけ別接続で念押し
+  if (!tails.length) return;
   const c = await connect();
-  try { for (const f of TAIL) { try { await c.uploadFrom('site/' + f, f); console.log('  ↑(tail) ' + f); } catch (e) { console.error('  tail失敗 ' + f + ':', e.message); } } }
+  try { for (const f of tails) { try { await c.uploadFrom('site/' + f, f); console.log('  ↑(tail) ' + f); } catch (e) { console.error('  tail失敗 ' + f + ':', e.message); } } }
   finally { c.close(); }
 }
 
