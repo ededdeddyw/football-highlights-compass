@@ -633,15 +633,16 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .standings td.tbd{color:var(--soft);font-style:italic;text-align:center}
 .ko-qual td.st-team a{font-weight:700}
 /* ===== トーナメント表（ブラケット・左右対称／中央収束） ===== */
-.bracket-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -6px 4px;padding:2px 8px 10px;--g:18px;--brline:#d7b13a}
-.bracket2{display:flex;align-items:stretch;min-width:1120px}
-.br-side{display:flex;align-items:stretch;flex:1 1 auto}
-.br-round{display:flex;flex-direction:column;flex:0 0 130px;min-width:130px}
+/* 記事幅(860px)を飛び出して画面いっぱいに使う（フルブリード）。狭い画面では横スクロール */
+.bracket-wrap{width:100vw;margin-left:calc(50% - 50vw);padding:2px 24px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;--g:16px;--brline:#d7b13a}
+.bracket2{display:flex;align-items:stretch;width:100%;max-width:1560px;min-width:1040px;margin:0 auto}
+.br-side{display:flex;align-items:stretch;flex:1 1 0;min-width:0}
+.br-round{display:flex;flex-direction:column;flex:1 1 0;min-width:118px}
 .br-left .br-round{padding-right:var(--g)}
 .br-right .br-round{padding-left:var(--g)}
 .br-h{flex:0 0 auto;font-size:10.5px;font-weight:800;letter-spacing:.04em;color:var(--muted);text-align:center;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
 .br-body{flex:1 1 auto;display:flex;flex-direction:column}
-.br-cell{flex:1 1 0;display:flex;align-items:center;position:relative;min-height:62px;padding:5px 0}
+.br-cell{flex:1 1 0;display:flex;align-items:center;position:relative;min-height:80px;padding:5px 0}
 .br-match{width:100%;background:var(--paper);border:1px solid var(--line2);border-radius:9px;padding:5px 8px;position:relative;z-index:1;display:flex;align-items:center;gap:6px;box-shadow:0 1px 2px rgba(20,30,60,.05)}
 .br-rows{flex:1 1 auto;min-width:0}
 .br-team{display:flex;align-items:center;font-size:12.5px;font-weight:700;color:var(--ink2);line-height:1.3;padding:2.5px 0}
