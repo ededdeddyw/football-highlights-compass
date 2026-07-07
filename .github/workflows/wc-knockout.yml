@@ -1,12 +1,13 @@
 name: Watch WC knockout
 
-# 決勝トーナメントの結果検証＋ハイライト自動連携を GitHub のサーバーで 24/7 実行（PC不要）。
-# 手順: ①結果をWeb検証(Claude API)→ wc-knockout.json ②公式RECAP動画を検知(watch-knockout) ③差分あれば build→deploy→commit
-# 注: ANTHROPIC_API_KEY 未登録の間は①がスキップされ、②③（動画検知・記事化・デプロイ）だけが動く。
+# 決勝トーナメントのハイライト自動連携を GitHub のサーバーで 24/7 実行（PC不要）。鮮度優先の分離型。
+# ①公式RECAP動画を検知(watch-knockout・結果不問・毎回・無料) ②結果をWeb検証(Claude API・毎時1回にthrottle)
+# ③差分あれば build→deploy→commit
+# 注: 動画は ANTHROPIC_API_KEY 無しでも出る（①は結果に依存しない）。②はキー設定時のみスコア/勝ち上がりを埋める。
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */3 * * *'   # 3時間ごと（Actions cronは遅延・スキップあり）。W杯終了後はこの2行を再コメントで停止
+    - cron: '*/15 * * * *'   # 15分ごと（動画検知は毎回／結果検証は毎時1回にthrottle）。W杯終了後はこの2行を再コメントで停止
 
 permissions:
   contents: write
@@ -23,13 +24,19 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
 
-      - name: 結果をWeb検証（Claude API・確定分のみ／キー未設定ならスキップ）
+      # 動画検知は毎回（無料・結果に依存しない）＝鮮度の要
+      - name: 公式RECAP動画を検知（結果不問・確定タイトル一致のみ）
+        run: node scripts/watch-knockout.mjs
+
+      # 結果検証(API)は毎時1回だけ（分<15の回＝毎時:00の回のみ）。キー未設定なら即スキップ（無害）
+      - name: 現在の分を取得（throttle用）
+        id: clk
+        run: echo "m=$(date -u +%-M)" >> "$GITHUB_OUTPUT"
+      - name: 結果をWeb検証（Claude API・毎時1回・キー未設定ならスキップ）
+        if: ${{ github.event_name == 'workflow_dispatch' || fromJSON(steps.clk.outputs.m) < 15 }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/verify-results.mjs
-
-      - name: 公式RECAP動画を検知（結果確定済みの試合）
-        run: node scripts/watch-knockout.mjs
 
       - name: 差分の判定（結果 or 動画が変わったか）
         id: diff
