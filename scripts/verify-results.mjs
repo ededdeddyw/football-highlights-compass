@@ -8,7 +8,9 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 const DRY = process.argv.includes('--dry-run');
 const KO_FILE = 'data/wc-knockout.json';
 const API_KEY = process.env.ANTHROPIC_API_KEY;
-const MODEL = process.env.ANTHROPIC_MODEL || 'claude-opus-4-8';
+// 既定は Sonnet（スコアのWeb照合＝事実確認用途に十分・毎時実行でも低コスト）。
+// リポジトリ変数 ANTHROPIC_MODEL で上書き可（例: claude-opus-4-8=最高精度 / claude-haiku-4-5-20251001=最安）。
+const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 
 if (!API_KEY) { console.log('verify-results: ANTHROPIC_API_KEY 未設定のためスキップ。'); process.exit(0); }
 if (!existsSync(KO_FILE)) { console.log('verify-results: wc-knockout.json なし。終了。'); process.exit(0); }
