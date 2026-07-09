@@ -38,7 +38,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # 任意: リポジトリ Variables に ANTHROPIC_MODEL を設定するとモデル上書き（未設定なら既定=Sonnet）
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
-        run: node scripts/verify-results.mjs
+        run: |
+          npm install undici --no-save --no-package-lock --no-audit --no-fund
+          node scripts/verify-results.mjs
 
       - name: 差分の判定（結果 or 動画が変わったか）
         id: diff
