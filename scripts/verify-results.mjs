@@ -99,5 +99,7 @@ for (const r of arr) {
 
 console.log(`verify-results: 対象 ${pending.length}件 / 確定反映 ${applied.length}件`);
 applied.forEach(a => console.log('  ✓ ' + a));
+// 反映0件のときだけモデルの生応答を出す（原因診断用。ノイズ抑制のため成功時は出さない）
+if (!applied.length) console.log('verify-results: [診断] モデル生応答(先頭1500字):\n' + String(text).slice(0, 1500));
 if (DRY) { console.log('verify-results: --dry-run のため書き込みなし。'); process.exit(0); }
 if (applied.length) writeFileSync(KO_FILE, JSON.stringify(WCKO, null, 2) + '\n');
