@@ -72,31 +72,32 @@
     {
       "home": "ポルトガル",
       "away": "クロアチア",
-      "result": "",
+      "result": "2-1",
       "videoId": ""
     },
     {
       "home": "スイス",
       "away": "アルジェリア",
-      "result": "",
+      "result": "2-0",
       "videoId": ""
     },
     {
       "home": "オーストラリア",
       "away": "エジプト",
-      "result": "",
-      "videoId": ""
+      "result": "1-1",
+      "videoId": "",
+      "pk": "2-4"
     },
     {
       "home": "アルゼンチン",
       "away": "カーボベルデ",
-      "result": "",
+      "result": "3-2",
       "videoId": ""
     },
     {
       "home": "コロンビア",
       "away": "ガーナ",
-      "result": "",
+      "result": "1-0",
       "videoId": ""
     }
   ],
@@ -104,13 +105,13 @@
     {
       "home": "カナダ",
       "away": "モロッコ",
-      "result": "",
+      "result": "0-3",
       "videoId": ""
     },
     {
       "home": "パラグアイ",
       "away": "フランス",
-      "result": "",
+      "result": "0-1",
       "videoId": ""
     },
     {
