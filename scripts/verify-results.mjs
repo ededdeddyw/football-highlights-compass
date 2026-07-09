@@ -15,6 +15,13 @@ const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 if (!API_KEY) { console.log('verify-results: ANTHROPIC_API_KEY 未設定のためスキップ。'); process.exit(0); }
 if (!existsSync(KO_FILE)) { console.log('verify-results: wc-knockout.json なし。終了。'); process.exit(0); }
 
+// web検索付きリクエストは数分かかり、node(fetch/undici)の既定5分タイムアウトで落ちる。
+// グローバルディスパッチャのタイムアウトを10分に延長（undici未導入なら既定のまま・try/catchで無害）。
+try {
+  const u = await import('undici');
+  u.setGlobalDispatcher(new u.Agent({ headersTimeout: 600000, bodyTimeout: 600000, connectTimeout: 30000 }));
+} catch (e) { console.warn('verify-results: undici未導入のため既定タイムアウトのまま:', e.message); }
+
 const WCKO = JSON.parse(readFileSync(KO_FILE, 'utf8'));
 const ROUND_LABEL = { r32: 'ラウンド32', r16: 'ベスト16', qf: '準々決勝', sf: '準決勝', third: '3位決定戦', final: '決勝' };
 
@@ -50,13 +57,16 @@ async function callClaude() {
   let messages = [{ role: 'user', content: prompt }];
   const tools = [{ type: 'web_search_20260209', name: 'web_search', max_uses: 12 }];
   for (let turn = 0; turn < 6; turn++) {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-      body: JSON.stringify({ model: MODEL, max_tokens: 4000, thinking: { type: 'adaptive' }, tools, messages })
-    });
-    if (!res.ok) { console.warn('verify-results: API', res.status, (await res.text()).slice(0, 300)); return null; }
-    const data = await res.json();
+    let data;
+    try {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+        body: JSON.stringify({ model: MODEL, max_tokens: 4000, thinking: { type: 'adaptive' }, tools, messages })
+      });
+      if (!res.ok) { console.warn('verify-results: API', res.status, (await res.text()).slice(0, 300)); return null; }
+      data = await res.json();
+    } catch (e) { console.warn('verify-results: 通信エラー（今回はスキップ・次回再試行）:', e.message); return null; }
     if (data.stop_reason === 'pause_turn') { messages = [messages[0], { role: 'assistant', content: data.content }]; continue; }
     const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('\n');
     return text;
