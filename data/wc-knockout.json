@@ -117,18 +117,63 @@
     {
       "home": "ブラジル",
       "away": "ノルウェー",
-      "result": "",
+      "result": "1-2",
       "videoId": ""
     },
     {
       "home": "メキシコ",
       "away": "イングランド",
-      "result": "",
+      "result": "2-3",
       "videoId": ""
     },
     {
       "home": "アメリカ",
       "away": "ベルギー",
+      "result": "1-4",
+      "videoId": ""
+    },
+    {
+      "home": "スペイン",
+      "away": "ポルトガル",
+      "result": "1-0",
+      "videoId": ""
+    },
+    {
+      "home": "アルゼンチン",
+      "away": "エジプト",
+      "result": "3-2",
+      "videoId": ""
+    },
+    {
+      "home": "スイス",
+      "away": "コロンビア",
+      "result": "0-0",
+      "videoId": "",
+      "pk": "4-3"
+    }
+  ],
+  "qf": [
+    {
+      "home": "フランス",
+      "away": "モロッコ",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "スペイン",
+      "away": "ベルギー",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "ノルウェー",
+      "away": "イングランド",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "アルゼンチン",
+      "away": "スイス",
       "result": "",
       "videoId": ""
     }

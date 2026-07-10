@@ -68,9 +68,12 @@ jobs:
         if: steps.diff.outputs.changed == '1'
         run: node scripts/build-site.mjs
 
+      # FTP失敗（タイムアウト/コネクション拒否）でもジョブを止めない＝後続のcommitで検証済みデータを必ず永続化する。
+      # 失敗ファイルはmanifestに「未アップ」として残り、次にデータが変わった回の再デプロイで再送される（自己修復）。
       - name: FTP デプロイ（本番 highlight-compass.com）
         if: steps.diff.outputs.changed == '1'
-        timeout-minutes: 8   # FTPサーバ側でハングしてもここで打ち切る（今回6h占有の再発防止）。失敗時は次回再デプロイ
+        continue-on-error: true   # デプロイ失敗をcommitに波及させない（データ永続化 > 即時配信）
+        timeout-minutes: 8   # FTPサーバ側でハングしてもここで打ち切る（6h占有の再発防止）
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -81,8 +84,9 @@ jobs:
           npm install basic-ftp --no-save --no-package-lock --no-audit --no-fund
           node scripts/deploy.mjs
 
+      # always() で「デプロイ失敗でも」commitを実行＝Web検証で確定したスコア/対戦カードを取りこぼさない。
       - name: コミット＆push
-        if: steps.diff.outputs.changed == '1'
+        if: ${{ always() && steps.diff.outputs.changed == '1' }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
