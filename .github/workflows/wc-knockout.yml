@@ -19,6 +19,7 @@ concurrency:
 jobs:
   knockout:
     runs-on: ubuntu-latest
+    timeout-minutes: 25   # 万一どこか（特にFTP）でハングしても6h占有せず自己終了。concurrency詰まり防止
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,6 +48,7 @@ jobs:
       # ③ 結果検証(API)は毎時1回だけ。キー未設定なら即スキップ（無害）
       - name: 結果をWeb検証（Claude API・毎時1回・キー未設定ならスキップ）
         if: ${{ github.event_name == 'workflow_dispatch' || fromJSON(steps.clk.outputs.m) < 15 }}
+        timeout-minutes: 12   # web検索付きAPIは長い。ハング時は打ち切って後続へ（次回再試行・無害）
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # 任意: リポジトリ Variables に ANTHROPIC_MODEL を設定するとモデル上書き（未設定なら既定=Sonnet）
@@ -68,6 +70,7 @@ jobs:
 
       - name: FTP デプロイ（本番 highlight-compass.com）
         if: steps.diff.outputs.changed == '1'
+        timeout-minutes: 8   # FTPサーバ側でハングしてもここで打ち切る（今回6h占有の再発防止）。失敗時は次回再デプロイ
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
