@@ -162,7 +162,7 @@
     {
       "home": "スペイン",
       "away": "ベルギー",
-      "result": "",
+      "result": "2-1",
       "videoId": ""
     },
     {
@@ -177,5 +177,15 @@
       "result": "",
       "videoId": ""
     }
-  ]
+  ],
+  "sf": [
+    {
+      "home": "フランス",
+      "away": "スペイン",
+      "result": "",
+      "videoId": ""
+    }
+  ],
+  "third": [],
+  "final": []
 }
