@@ -46,12 +46,20 @@ let PREVIEWS = {};
 try { if (existsSync('data/match-previews.json')) PREVIEWS = JSON.parse(readFileSync('data/match-previews.json','utf8')); } catch(e){ console.warn('previews読込失敗:', e.message); }
 // 記事の有無（新形式=points配列 / 旧形式=text いずれも可）
 const hasPreview = id => { const p=PREVIEWS[id]; return !!(p && ((Array.isArray(p.points)&&p.points.length) || (typeof p.text==='string'&&p.text.trim()))); };
-// 記事HTML：新形式は「見どころ」見出し＋各ポイント(小見出し＋説明)。旧形式(text)は段落描画にフォールバック。
+// 注目ポイントのアイコン。生成側は下記キーだけを使う。キー→絵柄はここで一元管理（後でSVGへ差し替えも容易）。
+const POINT_ICONS = {
+  speed:'🏃', goal:'🎯', shield:'🛡️', playmaker:'🧠', keeper:'🧤', duel:'⚔️',
+  history:'🏆', nation:'🌍', tactics:'📋', star:'⭐', stakes:'🔥', pace:'⚡',
+  key:'🗝️', bond:'🤝', transfer:'✈️', ticket:'🎫', venue:'🏟️', rising:'📈',
+  set_piece:'🚩', header:'🎽', wall:'🧱', clock:'⏱️',
+};
+const pointIcon = k => POINT_ICONS[String(k||'').trim()] || '⚽';
+// 記事HTML：新形式は「見どころ」見出し＋各ポイント(アイコン＋小見出し＋説明)。旧形式(text)は段落描画にフォールバック。
 function renderPreview(id){
   const p = PREVIEWS[id]; if(!p) return '';
   if (Array.isArray(p.points) && p.points.length){
     const lead = (typeof p.lead==='string' && p.lead.trim()) ? `<p class="read-lead">${esc(p.lead.trim())}</p>` : '';
-    const items = p.points.map(pt=>`<div class="read-pt"><h3 class="read-h">${esc(String(pt.title||'').trim())}</h3><p>${esc(String(pt.body||'').trim())}</p></div>`).join('');
+    const items = p.points.map(pt=>`<div class="read-pt"><span class="read-ic" aria-hidden="true">${pointIcon(pt.icon)}</span><div class="read-tx"><h3 class="read-h">${esc(String(pt.title||'').trim())}</h3><p>${esc(String(pt.body||'').trim())}</p></div></div>`).join('');
     return `<section class="match-read"><h2 class="lined">試合の見どころ</h2>${lead}<div class="read-pts">${items}</div></section>`;
   }
   if (typeof p.text==='string' && p.text.trim()){
@@ -504,7 +512,9 @@ img{max-width:100%}
 .match-read{margin:22px 0 8px}
 .read-lead{font-size:16px;line-height:1.9;color:var(--ink2);margin:0 0 14px}
 .read-pts{display:flex;flex-direction:column;gap:12px}
-.read-pt{background:var(--card2);border:1px solid var(--line2);border-left:3px solid var(--accent2);border-radius:10px;padding:12px 16px}
+.read-pt{display:flex;gap:12px;align-items:flex-start;background:var(--card2);border:1px solid var(--line2);border-left:3px solid var(--accent2);border-radius:10px;padding:12px 16px}
+.read-ic{flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1;background:var(--paper);border:1px solid var(--line2);border-radius:9px}
+.read-tx{min-width:0;flex:1 1 auto}
 .read-pt .read-h{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 5px;line-height:1.5}
 .read-pt p{font-size:15px;line-height:1.85;color:var(--ink2);margin:0}
 .post-body h2{font-size:21px;font-weight:900;letter-spacing:.01em;margin:34px 0 12px;padding-top:6px}
