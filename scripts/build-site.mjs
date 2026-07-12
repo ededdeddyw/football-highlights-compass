@@ -41,6 +41,11 @@ try { if (existsSync('data/scores.json')) SCORES = JSON.parse(readFileSync('data
 let SECTIONS = {};
 try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFileSync('data/entity-sections.json','utf8')); } catch(e){ console.warn('sections読込失敗:', e.message); }
 
+// ---------- 試合ページの独自記事（ネタバレなしの前フリ）。data/match-previews.json は {id:{text,...}}。scripts/enrich-matches.mjs が生成 ----------
+let PREVIEWS = {};
+try { if (existsSync('data/match-previews.json')) PREVIEWS = JSON.parse(readFileSync('data/match-previews.json','utf8')); } catch(e){ console.warn('previews読込失敗:', e.message); }
+const previewText = id => (PREVIEWS[id] && typeof PREVIEWS[id].text === 'string') ? PREVIEWS[id].text.trim() : '';
+
 // ---------- アフィリエイト（DAZN）。data/affiliate.json の daznUrl に成果リンクを設定。空なら通常リンクにフォールバック ----------
 let AFFILIATE = {};
 try { if (existsSync('data/affiliate.json')) AFFILIATE = JSON.parse(readFileSync('data/affiliate.json','utf8')); } catch(e){ console.warn('affiliate読込失敗:', e.message); }
@@ -726,8 +731,10 @@ function buildMatch(m){
   // タイトル/メタ専用ラベル（検索語「2026」に寄せる。本文/ナビの「26」表記は温存）
   const lgSeo = m.league==='wc' ? 'FIFAワールドカップ2026' : lg;
   const sched = schedFor(m);
-  // 内容の薄いページ（W杯以外で日本人選手・見どころ・出場選手いずれも無い＝定型のみ）はnoindex（scaled content対策）
-  const thin = m.league!=='wc' && !m.players.length && !m.topic && !m.lineup;
+  // 独自記事（前フリ）を持つ試合は「充実ページ」として扱う（thin判定から除外）。
+  const hasPreview = !!previewText(m.id);
+  // 内容の薄いページ（独自記事が無く、W杯以外で日本人選手・見どころ・出場選手いずれも無い＝定型のみ）はnoindex（scaled content対策）
+  const thin = !hasPreview && m.league!=='wc' && !m.players.length && !m.topic && !m.lineup;
   if(thin) noindexSlugs.add(m.id);
   // dek（統一フォーマットのリード文）：[任意の見どころ。][対戦（大会）の公式ハイライトです。]
   let hook = '';
@@ -827,6 +834,7 @@ function buildMatch(m){
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
   ${spoilerBar}
   <div class="post-body">${bodyHtml}</div>
+  ${(()=>{ const t=previewText(m.id); if(!t) return ''; const ps=t.split(/\n\n+/).map(x=>x.trim()).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join(''); return `<section class="match-read"><h2 class="lined">試合の見どころと背景</h2>${ps}</section>`; })()}
   ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
   ${AD}
   ${factHtml}
@@ -839,6 +847,16 @@ function buildMatch(m){
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
+
+// scripts/enrich-matches.mjs（独自記事生成）用の機械可読な試合インデックスを書き出す。
+// 生成側はこの一覧を入力に、記事未生成の試合だけをClaudeで前フリ記事化する。
+try {
+  const idx = data.filter(m=>m.id).map(m=>({
+    id:m.id, teams:m.teams||[], league:m.league||'', leagueName:LG[m.league]||'',
+    meta:m.meta||'', players:m.players||[], hasPreview: !!previewText(m.id)
+  }));
+  writeFileSync('data/matches-index.json', JSON.stringify(idx,null,2)+'\n');
+} catch(e){ console.warn('matches-index書込失敗:', e.message); }
 
 // ========================= 国・クラブ個別ページ =========================
 const ENTITY_PAGES = PAGE_OF; // name -> "country/slug.html"|"club/slug.html"
