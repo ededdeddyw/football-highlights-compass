@@ -68,10 +68,17 @@ ${metaLine}${jp}
 {
   "lead": "1〜2文の短い導入（この試合が何で、大会の中でどんな一戦かが分かる程度）",
   "points": [
-    {"title": "見どころの短い見出し（12〜18字程度）", "body": "1〜2文の説明（60〜110字程度）"}
+    {"icon": "アイコンキー（下の一覧から1つ）", "title": "見どころの短い見出し（12〜18字程度）", "body": "1〜2文の説明（60〜110字程度）"}
   ]
 }
 \`\`\`
+
+icon は次のキーから、そのポイントの内容に最も合うものを1つ選んでください（内容と合わない場合は使わない）:
+- speed=スピード/快足, pace=運動量/球際の速さ, goal=得点力/決定力, playmaker=司令塔/組み立て,
+  keeper=GK/守護神, shield=守備/堅守, duel=因縁/対立/激突, star=注目のスター選手,
+  tactics=戦術/かみ合わせ, history=歴史/伝統/実績, nation=国や地域の対比, bond=選手同士の関係/師弟,
+  transfer=移籍/所属クラブの話題, stakes=大一番/懸かっているもの, ticket=勝ち上がり/進出争い,
+  venue=会場/開催地, rising=成長株/上り調子, set_piece=セットプレー, header=空中戦/高さ, key=試合の鍵
 
 要件:
 - points は **2〜5個**。見どころの多い注目カードなら5個まで。無理に数を増やさず、確かに書ける見どころだけを挙げる。
@@ -98,7 +105,7 @@ function parsePreview(text) {
   if (!obj || !Array.isArray(obj.points)) return null;
   const points = obj.points
     .filter(p => p && typeof p.title === 'string' && typeof p.body === 'string' && p.title.trim() && p.body.trim())
-    .map(p => ({ title: p.title.trim(), body: p.body.trim() }))
+    .map(p => ({ icon: (typeof p.icon === 'string' ? p.icon.trim() : ''), title: p.title.trim(), body: p.body.trim() }))
     .slice(0, 5);
   if (points.length < 2) return null;
   const lead = typeof obj.lead === 'string' ? obj.lead.trim() : '';
