@@ -53,13 +53,38 @@ const POINT_ICONS = {
   key:'🗝️', bond:'🤝', transfer:'✈️', ticket:'🎫', venue:'🏟️', rising:'📈',
   set_piece:'🚩', header:'🎽', wall:'🧱', clock:'⏱️',
 };
-const pointIcon = k => POINT_ICONS[String(k||'').trim()] || '⚽';
+// アイコン決定：生成側のキーを優先。未指定/不明なら見出し・本文のキーワードから推定し、最後は ⚽。
+const ICON_KW = [
+  [/スピード|快足|俊足|速さ|ドリブル突破|快速/, 'speed'],
+  [/決定力|得点力|ゴール|フィニッシュ|点取り|エースストライカー/, 'goal'],
+  [/司令塔|組み立て|ゲームメイク|中盤の要|パスワーク/, 'playmaker'],
+  [/守護神|キーパー|GK/, 'keeper'],
+  [/守備|堅守|守り|ブロック|粘り強い守/, 'shield'],
+  [/因縁|遺恨|ライバル|激突|対立/, 'duel'],
+  [/歴史|前回|過去|伝統|実績|常連|旋風/, 'history'],
+  [/対比|スタイル|かみ合わせ|戦術/, 'tactics'],
+  [/北欧|アフリカ|南米|欧州|両国|国や地域/, 'nation'],
+  [/突破|進出|勝ち上がり|懸か|大一番|節目|星取り|初戦|一発勝負/, 'stakes'],
+  [/移籍|所属クラブ/, 'transfer'],
+  [/会場|開催|スタジアム|環境|大舞台/, 'venue'],
+  [/セットプレー|コーナー|FK|フリーキック/, 'set_piece'],
+  [/空中戦|高さ|ヘディング/, 'header'],
+  [/スター|注目のスター|看板/, 'star'],
+  [/鍵|カギ|要となる/, 'key'],
+];
+function iconFor(pt){
+  const k = String(pt.icon||'').trim();
+  if (POINT_ICONS[k]) return POINT_ICONS[k];
+  const t = (pt.title||'') + ' ' + (pt.body||'');
+  for (const [re,key] of ICON_KW) if (re.test(t)) return POINT_ICONS[key];
+  return '⚽';
+}
 // 記事HTML：新形式は「見どころ」見出し＋各ポイント(アイコン＋小見出し＋説明)。旧形式(text)は段落描画にフォールバック。
 function renderPreview(id){
   const p = PREVIEWS[id]; if(!p) return '';
   if (Array.isArray(p.points) && p.points.length){
     const lead = (typeof p.lead==='string' && p.lead.trim()) ? `<p class="read-lead">${esc(p.lead.trim())}</p>` : '';
-    const items = p.points.map(pt=>`<div class="read-pt"><span class="read-ic" aria-hidden="true">${pointIcon(pt.icon)}</span><div class="read-tx"><h3 class="read-h">${esc(String(pt.title||'').trim())}</h3><p>${esc(String(pt.body||'').trim())}</p></div></div>`).join('');
+    const items = p.points.map(pt=>`<div class="read-pt"><span class="read-ic" aria-hidden="true">${iconFor(pt)}</span><div class="read-tx"><h3 class="read-h">${esc(String(pt.title||'').trim())}</h3><p>${esc(String(pt.body||'').trim())}</p></div></div>`).join('');
     return `<section class="match-read"><h2 class="lined">試合の見どころ</h2>${lead}<div class="read-pts">${items}</div></section>`;
   }
   if (typeof p.text==='string' && p.text.trim()){
