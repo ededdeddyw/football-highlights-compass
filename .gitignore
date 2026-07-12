@@ -30,3 +30,7 @@ site/country/
 site/club/
 site/style.css
 site/article.css
+
+# Python
+__pycache__/
+*.pyc

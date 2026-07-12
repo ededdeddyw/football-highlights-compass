@@ -3,6 +3,8 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'   # SEO日次レポート等のdocs変更ではミラーを再ビルドしない（無駄なデプロイ抑制）
   workflow_dispatch:
 
 permissions:
