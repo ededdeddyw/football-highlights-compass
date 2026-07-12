@@ -642,8 +642,11 @@ html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
 .br-round{scroll-snap-align:start}
 /* モバイルのスクロール誘導（PCでは非表示） */
 .br-hint{display:none}
-@media(max-width:760px){.br-hint{display:block;font-size:11.5px;color:var(--muted);margin:2px 2px 6px;font-weight:700}
-  .bracket2{min-width:920px}.br-round{flex-basis:104px;min-width:104px}.br-team{font-size:11.5px}.br-seed{font-size:8.5px}.br-cell{min-height:74px}}
+@media(max-width:760px){.br-hint{display:block;font-size:12px;color:var(--accent2);background:rgba(39,70,201,.06);border-radius:7px;text-align:center;margin:2px 2px 8px;padding:5px 8px;font-weight:800}
+  .bracket2{min-width:988px}.br-round{flex-basis:116px;min-width:116px}.br-team{font-size:11.5px}.br-seed{font-size:8.5px}.br-cell{min-height:76px}
+  /* モバイルは列幅が狭いので国名は省略記号で切らず最大2行で折り返す（セルはflexで等高＝ブラケットの整列は保たれる）。
+     .bracket2 前置で基底 .br-nm{white-space:nowrap} より詳細度を上げる（後方定義の基底に負けないため） */
+  .bracket2 .br-nm{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.2}}
 .br-side{display:flex;align-items:stretch;flex:1 1 0;min-width:0}
 .br-round{display:flex;flex-direction:column;flex:1 1 0;min-width:118px}
 .br-left .br-round{padding-right:var(--g)}
