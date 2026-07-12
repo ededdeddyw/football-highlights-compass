@@ -1,0 +1,58 @@
+name: Enrich matches (独自記事の生成)
+
+# 試合ページの独自記事（ネタバレなしの前フリ）をClaudeで生成し data/match-previews.json に反映する。
+# 手動実行のみ。limit で一度に生成する件数を絞る（サンプル確認→段階展開のため）。
+# 生成物(site/)はCIで作られるため、ここでは build→enrich→build→データのみコミット。本番反映は deploy-ftp を別途実行。
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '一度に生成する件数（記事未生成の試合から）'
+        required: false
+        default: '4'
+      ids:
+        description: '対象を特定IDに限定する場合（カンマ区切り・任意）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: enrich-matches
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: 依存導入（undici=タイムアウト延長用）
+        run: npm install undici --no-save --no-package-lock --no-audit --no-fund
+
+      - name: 試合インデックスを生成（build）
+        run: node scripts/build-site.mjs
+
+      - name: 独自記事を生成（enrich）
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          RUN_DATE: ${{ github.run_id }}
+        run: node scripts/enrich-matches.mjs --limit=${{ github.event.inputs.limit }} ${{ github.event.inputs.ids && format('--ids={0}', github.event.inputs.ids) || '' }}
+
+      - name: 記事をページに反映（再build）
+        run: node scripts/build-site.mjs
+
+      - name: データをコミット（match-previews.json 等）
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/match-previews.json data/matches-index.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "content: 試合ページの独自記事を生成（enrich-matches）"
+          git pull --rebase --autostash || true
+          git push
