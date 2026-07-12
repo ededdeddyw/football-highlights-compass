@@ -91,9 +91,10 @@ ${styleDirective}`;
 // 応答からJSON（{lead, points[]}）を取り出す。```json ブロック優先、無ければ最初の { … } を試す。
 function parsePreview(text) {
   if (!text) return null;
-  const m = text.match(/```json\s*([\s\S]*?)```/) || text.match(/(\{[\s\S]*\})/);
-  if (!m) return null;
-  let obj; try { obj = JSON.parse(m[1]); } catch { return null; }
+  const m = text.match(/```json\s*([\s\S]*?)```/) || text.match(/```\s*([\s\S]*?)```/) || text.match(/(\{[\s\S]*\})/);
+  let raw = m ? m[1] : text;
+  raw = raw.trim().replace(/,\s*([}\]])/g, '$1');   // 末尾カンマを除去（JSON.parse失敗の定番要因）
+  let obj; try { obj = JSON.parse(raw); } catch { return null; }
   if (!obj || !Array.isArray(obj.points)) return null;
   const points = obj.points
     .filter(p => p && typeof p.title === 'string' && typeof p.body === 'string' && p.title.trim() && p.body.trim())
@@ -110,7 +111,7 @@ async function callClaude(prompt) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-      body: JSON.stringify({ model: MODEL, max_tokens: 1200, messages })
+      body: JSON.stringify({ model: MODEL, max_tokens: 2000, messages })
     });
     if (!res.ok) { console.warn('enrich-matches: API', res.status, (await res.text()).slice(0, 200)); return null; }
     const data = await res.json();
@@ -129,10 +130,14 @@ function looksSpoilery(text) {
 
 const added = [];
 for (const m of pending) {
-  const raw = await callClaude(buildPrompt(m));
-  await new Promise(r => setTimeout(r, 600));   // レート制限回避の間隔
-  if (!raw) continue;
-  const pv = parsePreview(raw);
+  const prompt = buildPrompt(m);
+  // JSON解析に失敗しても最大2回まで試す（応答揺れ・稀な整形崩れの救済）。
+  let pv = null;
+  for (let attempt = 0; attempt < 2 && !pv; attempt++) {
+    const raw = await callClaude(prompt);
+    await new Promise(r => setTimeout(r, 600));   // レート制限回避の間隔
+    if (raw) pv = parsePreview(raw);
+  }
   if (!pv) { console.log(`  ✗ スキップ（JSON不正/ポイント不足） ${m.id} ${m.teams.join(' vs ')}`); continue; }
   const combined = [pv.lead, ...pv.points.map(p => p.title + ' ' + p.body)].join(' ');
   if (looksSpoilery(combined)) { console.log(`  ✗ スキップ（ネタバレ疑い） ${m.id} ${m.teams.join(' vs ')}`); continue; }
