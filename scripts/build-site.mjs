@@ -872,13 +872,13 @@ function buildCountry(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const dek = info.blurb[0]||'';
-  const desc = `${name}代表のFIFAワールドカップ2026 ハイライト動画まとめ。${info.confed}／最高成績：${info.peak}。DAZN公式映像でネタバレ防止、全${ms.length}試合を掲載。`.slice(0,120);
+  const desc = `${name}代表のW杯2026 全${ms.length}試合ハイライトと歴代成績・試合日程。最高成績は${info.peak}。公式映像のみ・ネタバレ防止で、結果を隠して安全に視聴できます。`.slice(0,120);
   const cgraph = [
     {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
-  const head = HEAD({ title:`${name}代表 ハイライト動画まとめ｜FIFAワールドカップ2026 - Football Highlights Compass`, ogtitle:`${name}代表 ハイライト動画まとめ｜FIFAワールドカップ2026`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
+  const head = HEAD({ title:`${name}代表｜W杯2026 ハイライト・試合日程・歴代成績 - Football Highlights Compass`, ogtitle:`${name}代表｜W杯2026 ハイライト・試合日程・歴代成績`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
   const blurbHtml = info.blurb.map(p=>`<p>${esc(p)}</p>`).join('');
   const factHtml = `<div class="factcard"><table>
     <tr><th>所属連盟</th><td>${esc(info.confed)}</td></tr>
@@ -896,7 +896,7 @@ function buildCountry(name, info){
   <p class="dek">${esc(dek)}</p>
   <div class="ent-grid">
     <div class="ent-main">
-      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
+      <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<h2 class="lined">${esc(name)}代表の歴史とW杯の歩み</h2><p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
     <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}</aside>
