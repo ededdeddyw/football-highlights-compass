@@ -68,7 +68,7 @@ jobs:
       - name: Commit report if changed
         if: steps.gate.outputs.enabled == 'true'
         run: |
-          git config user.name  "hc-seo-bot"
+          git config user.name  "football-seo-bot"
           git config user.email "seo-bot@users.noreply.github.com"
           git add docs/seo_daily_report.md docs/seo_metrics_history.csv
           if git diff --cached --quiet; then

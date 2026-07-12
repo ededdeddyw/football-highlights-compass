@@ -17,15 +17,15 @@
 ## ステップ1：サービスアカウントと鍵を作る（Google Cloud）
 
 1. `https://console.cloud.google.com/` を開く（GAと同じGoogleアカウントで）。
-2. 上部でプロジェクトを選択（無ければ「プロジェクトを作成」→ 名前 `hc-seo` 等）。
+2. 上部でプロジェクトを選択（無ければ「プロジェクトを作成」→ 名前 `football-seo` 等）。
 3. **API を有効化**（2つ）:
    - 検索窓に「Search Console API」→ 開く →「有効にする」
    - 検索窓に「Google Analytics Data API」→ 開く →「有効にする」
 4. 左メニュー **「IAM と管理」→「サービス アカウント」→「サービス アカウントを作成」**
-   - 名前 `hc-seo-bot` → 作成して続行 → 役割は付けずに「完了」でOK
+   - 名前 `football-seo-bot` → 作成して続行 → 役割は付けずに「完了」でOK
 5. 作ったサービスアカウントをクリック →「**キー**」タブ →「鍵を追加」→「新しい鍵を作成」→ **JSON** → 作成
    - → JSON ファイルがダウンロードされる（これが鍵。**中身をあとで GitHub に貼る**）
-6. そのサービスアカウントの **メールアドレス**をコピー（`hc-seo-bot@xxxx.iam.gserviceaccount.com` の形）。
+6. そのサービスアカウントの **メールアドレス**をコピー（`football-seo-bot@xxxx.iam.gserviceaccount.com` の形）。
 
 **うまくいった確認**: JSON がダウンロードされ、SAのメールアドレスが分かる。
 
