@@ -10,7 +10,7 @@
 - 平均順位(7日): **11.0** →（数字が小さいほど上位）
 - CTR(7日): **0.8%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **84** / セッション 98
+- GA ユーザー(28日): **88** / セッション 103
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -53,27 +53,27 @@
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 58 | 13 | 110 |
-| Organic Search | 32 | 12 | 43 |
+| Direct | 61 | 13 | 105 |
+| Organic Search | 33 | 12 | 43 |
 | Unassigned | 6 | 2 | 28 |
-| Referral | 3 | 1 | 1 |
+| Referral | 4 | 1 | 1 |
 | AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 79 | 56 | 481 |
+| / | 81 | 58 | 506 |
 | /group/knockout.html | 8 | 3 | 41 |
 | /country/england.html | 7 | 6 | 55 |
 | /match/3jIMk43CECY.html | 7 | 3 | 2 |
 | /league/laliga.html | 6 | 1 | 0 |
+| /match/TXyBRmgFIs4.html | 5 | 3 | 52 |
 | /country/mexico.html | 3 | 2 | 23 |
 | /country/morocco.html | 3 | 3 | 9 |
 | /guide/world-cup-2026-how-to-watch.html | 3 | 2 | 11 |
+| /league/serie-a.html | 3 | 2 | 1 |
 | /country/dr-congo.html | 2 | 2 | 3 |
-| /league/serie-a.html | 2 | 1 | 0 |
 | /match/BvmWDhzkbe4.html | 2 | 2 | 8 |
-| /match/TXyBRmgFIs4.html | 2 | 2 | 9 |
 | /match/XVJPlnXEwB8.html | 2 | 2 | 80 |
 | /match/_FXrOkWXAwg.html | 2 | 2 | 2 |
 | /match/oH_QKjqMTrg.html | 2 | 2 | 12 |
@@ -83,4 +83,5 @@
 |---|---:|---:|---:|---:|---:|
 | 2026-07-12 | 13 | 1582 | 11.0 | 0 |  |
 | 2026-07-12 | 13 | 1582 | 11.0 | 0 | 84 |
+| 2026-07-12 | 13 | 1582 | 11.0 | 0 | 88 |
 
