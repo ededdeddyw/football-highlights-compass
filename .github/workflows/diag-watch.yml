@@ -1,0 +1,23 @@
+name: Diag watch-knockout (診断・書き込みなし)
+
+# ハイライト動画マッチャーの原因切り分け用。手動実行のみ。
+# WATCH_DIAG=1 + --dry-run で、動画が見つからない試合の候補タイトル/投稿者/棄却理由を出力する。
+# データもindex.htmlも一切変更しない（安全）。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: watch-knockout を診断モードで実行（dry-run）
+        env:
+          WATCH_DIAG: '1'
+        run: node scripts/watch-knockout.mjs --dry-run

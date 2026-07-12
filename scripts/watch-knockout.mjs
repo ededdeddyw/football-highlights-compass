@@ -9,6 +9,9 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const DRY = process.argv.includes('--dry-run');
+// 診断モード: 動画が見つからない試合について、候補タイトル/投稿者/棄却理由を出力（原因切り分け用）。
+// 環境変数 WATCH_DIAG=1 でも有効。既定OFF（通常運用のログを汚さない）。
+const DIAG = process.argv.includes('--diag') || process.env.WATCH_DIAG === '1';
 const readJson = (p, d) => { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d; } catch { return d; } };
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -74,21 +77,26 @@ for (const key of Object.keys(ROUNDS)) {
     //   結果検証(APIキー)を待たずに動画を即掲載＝鮮度優先。スコアは既定で隠れる（ネタバレ防止）ので後追いでOK。
     const hv = variants(f.home), av = variants(f.away);
     const ids = await searchIds(`${f.home} ${f.away} ${R.q} MATCH RECAP`);
-    let hit = null;
+    let hit = null; const rejects = [];
     for (const id of ids) {
-      if (knownIds.has(id)) continue;
+      if (knownIds.has(id)) { rejects.push(`既出id ${id}`); continue; }
       const mt = await meta(id); await sleep(120);
-      if (!mt) continue;
+      if (!mt) { rejects.push(`meta取得失敗 ${id}`); continue; }
       const t = norm(mt.title);
       const homeHit = hv.some(v => v && t.includes(v));
       const awayHit = av.some(v => v && t.includes(v));
-      if (!homeHit || !awayHit) continue;                 // 両チーム名は必須
-      if (!R.match(mt.title)) continue;                   // ラウンド一致は必須
-      if (!/recap/i.test(mt.title)) continue;             // 公式RECAP版のみ（ネタバレ防止）
-      if (CHANNEL_NAMES.size && !CHANNEL_NAMES.has(mt.author)) continue;   // 許可チャンネルのみ
+      // 各ゲートの合否を記録（診断用）。棄却理由が一目で分かるようにする。
+      const gate = !homeHit ? 'homeチーム名なし' : !awayHit ? 'awayチーム名なし'
+        : !R.match(mt.title) ? 'ラウンド語なし' : !/recap/i.test(mt.title) ? 'recap語なし'
+        : (CHANNEL_NAMES.size && !CHANNEL_NAMES.has(mt.author)) ? `非許可ch(${mt.author})` : 'OK';
+      if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
       hit = { id, title: mt.title, author: mt.author }; break;
     }
     if (hit) { f.videoId = hit.id; knownIds.add(hit.id); confirmed.push({ key, home: f.home, away: f.away, ...hit }); }
+    else if (DIAG) {
+      console.log(`  [診断] ${key} ${f.home} vs ${f.away}: 候補${ids.length}件・不採用`);
+      rejects.slice(0, 6).forEach(r => console.log('      ' + r));
+    }
   }
 }
 
