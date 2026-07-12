@@ -69,6 +69,7 @@ async function meta(id) {
 
 const esc = s => (s || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 const confirmed = [];
+let searched = 0;   // 実施した検索回数（レート制限回避のインターバル制御用）
 
 for (const key of Object.keys(ROUNDS)) {
   const arr = WCKO[key]; if (!Array.isArray(arr)) continue;
@@ -79,6 +80,8 @@ for (const key of Object.keys(ROUNDS)) {
     // 結果(result)は不問：公式RECAPは試合後にしか存在しないため、動画が見つかった＝試合済み。
     //   結果検証(APIキー)を待たずに動画を即掲載＝鮮度優先。スコアは既定で隠れる（ネタバレ防止）ので後追いでOK。
     const hv = variants(f.home), av = variants(f.away);
+    // YouTube検索の連打はレート制限(fetch failed)を招くため、検索間に間隔を空ける（対象が多い回でも取りこぼしを減らす）。
+    if (searched++) await sleep(900);
     const ids = await searchIds(`${f.home} ${f.away} ${R.q} MATCH RECAP`);
     let hit = null; const rejects = [];
     for (const id of ids) {
