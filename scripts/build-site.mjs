@@ -44,7 +44,22 @@ try { if (existsSync('data/entity-sections.json')) SECTIONS = JSON.parse(readFil
 // ---------- 試合ページの独自記事（ネタバレなしの前フリ）。data/match-previews.json は {id:{text,...}}。scripts/enrich-matches.mjs が生成 ----------
 let PREVIEWS = {};
 try { if (existsSync('data/match-previews.json')) PREVIEWS = JSON.parse(readFileSync('data/match-previews.json','utf8')); } catch(e){ console.warn('previews読込失敗:', e.message); }
-const previewText = id => (PREVIEWS[id] && typeof PREVIEWS[id].text === 'string') ? PREVIEWS[id].text.trim() : '';
+// 記事の有無（新形式=points配列 / 旧形式=text いずれも可）
+const hasPreview = id => { const p=PREVIEWS[id]; return !!(p && ((Array.isArray(p.points)&&p.points.length) || (typeof p.text==='string'&&p.text.trim()))); };
+// 記事HTML：新形式は「見どころ」見出し＋各ポイント(小見出し＋説明)。旧形式(text)は段落描画にフォールバック。
+function renderPreview(id){
+  const p = PREVIEWS[id]; if(!p) return '';
+  if (Array.isArray(p.points) && p.points.length){
+    const lead = (typeof p.lead==='string' && p.lead.trim()) ? `<p class="read-lead">${esc(p.lead.trim())}</p>` : '';
+    const items = p.points.map(pt=>`<div class="read-pt"><h3 class="read-h">${esc(String(pt.title||'').trim())}</h3><p>${esc(String(pt.body||'').trim())}</p></div>`).join('');
+    return `<section class="match-read"><h2 class="lined">試合の見どころ</h2>${lead}<div class="read-pts">${items}</div></section>`;
+  }
+  if (typeof p.text==='string' && p.text.trim()){
+    const ps = p.text.trim().split(/\n\n+/).map(x=>x.trim()).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join('');
+    return `<section class="match-read"><h2 class="lined">試合の見どころと背景</h2>${ps}</section>`;
+  }
+  return '';
+}
 
 // ---------- アフィリエイト（DAZN）。data/affiliate.json の daznUrl に成果リンクを設定。空なら通常リンクにフォールバック ----------
 let AFFILIATE = {};
@@ -485,6 +500,13 @@ img{max-width:100%}
 /* body prose */
 .post-body{font-size:16.5px;line-height:1.95}
 .post-body p{margin:0 0 18px}
+/* 試合の見どころ（注目ポイント集）：小見出し＋短い説明のカード列 */
+.match-read{margin:22px 0 8px}
+.read-lead{font-size:16px;line-height:1.9;color:var(--ink2);margin:0 0 14px}
+.read-pts{display:flex;flex-direction:column;gap:12px}
+.read-pt{background:var(--card2);border:1px solid var(--line2);border-left:3px solid var(--accent2);border-radius:10px;padding:12px 16px}
+.read-pt .read-h{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 5px;line-height:1.5}
+.read-pt p{font-size:15px;line-height:1.85;color:var(--ink2);margin:0}
 .post-body h2{font-size:21px;font-weight:900;letter-spacing:.01em;margin:34px 0 12px;padding-top:6px}
 .post-body h2.lined{border-top:2px solid var(--ink);padding-top:14px}
 .warn-strip{display:flex;gap:10px;align-items:flex-start;background:#fff8ec;border:1px solid #f0dcb4;border-left:3px solid var(--warn);border-radius:10px;padding:11px 13px;font-size:13.5px;color:#7a5410;margin:0 0 22px}
@@ -732,9 +754,9 @@ function buildMatch(m){
   const lgSeo = m.league==='wc' ? 'FIFAワールドカップ2026' : lg;
   const sched = schedFor(m);
   // 独自記事（前フリ）を持つ試合は「充実ページ」として扱う（thin判定から除外）。
-  const hasPreview = !!previewText(m.id);
+  const enriched = hasPreview(m.id);
   // 内容の薄いページ（独自記事が無く、W杯以外で日本人選手・見どころ・出場選手いずれも無い＝定型のみ）はnoindex（scaled content対策）
-  const thin = !hasPreview && m.league!=='wc' && !m.players.length && !m.topic && !m.lineup;
+  const thin = !enriched && m.league!=='wc' && !m.players.length && !m.topic && !m.lineup;
   if(thin) noindexSlugs.add(m.id);
   // dek（統一フォーマットのリード文）：[任意の見どころ。][対戦（大会）の公式ハイライトです。]
   let hook = '';
@@ -834,7 +856,7 @@ function buildMatch(m){
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
   ${spoilerBar}
   <div class="post-body">${bodyHtml}</div>
-  ${(()=>{ const t=previewText(m.id); if(!t) return ''; const ps=t.split(/\n\n+/).map(x=>x.trim()).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join(''); return `<section class="match-read"><h2 class="lined">試合の見どころと背景</h2>${ps}</section>`; })()}
+  ${renderPreview(m.id)}
   ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
   ${AD}
   ${factHtml}
@@ -853,7 +875,7 @@ data.forEach(buildMatch);
 try {
   const idx = data.filter(m=>m.id).map(m=>({
     id:m.id, teams:m.teams||[], league:m.league||'', leagueName:LG[m.league]||'',
-    meta:m.meta||'', players:m.players||[], hasPreview: !!previewText(m.id)
+    meta:m.meta||'', players:m.players||[], hasPreview: hasPreview(m.id)
   }));
   writeFileSync('data/matches-index.json', JSON.stringify(idx,null,2)+'\n');
 } catch(e){ console.warn('matches-index書込失敗:', e.message); }
