@@ -4,14 +4,13 @@
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
 > 最終更新: 2026-07-12
 
-**⚠️ 取得エラー**: GA4: 403 User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.
-
 ## 📌 ハイライト（前回比）
-- クリック(7日): **13** 
-- 表示(7日): **1582** 
-- 平均順位(7日): **11.0** （数字が小さいほど上位）
+- クリック(7日): **13** →
+- 表示(7日): **1582** →
+- 平均順位(7日): **11.0** →（数字が小さいほど上位）
 - CTR(7日): **0.8%**
-- サイトマップ indexed: **0** / submitted 575 
+- サイトマップ indexed: **0** / submitted 575 →
+- GA ユーザー(28日): **84** / セッション 98
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -52,13 +51,36 @@
 | /about.html | 0 | 13 | 6.5 |
 
 ## 🚪 流入チャネル（GA・28日）
-（データなし・GA未接続なら設定を確認）
+| チャネル | セッション | エンゲージ | 平均滞在(秒) |
+|---|---:|---:|---:|
+| Direct | 58 | 13 | 110 |
+| Organic Search | 32 | 12 | 43 |
+| Unassigned | 6 | 2 | 28 |
+| Referral | 3 | 1 | 1 |
+| AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
-（データなし）
+| ページ | 表示 | ユーザー | 合計滞在(秒) |
+|---|---:|---:|---:|
+| / | 79 | 56 | 481 |
+| /group/knockout.html | 8 | 3 | 41 |
+| /country/england.html | 7 | 6 | 55 |
+| /match/3jIMk43CECY.html | 7 | 3 | 2 |
+| /league/laliga.html | 6 | 1 | 0 |
+| /country/mexico.html | 3 | 2 | 23 |
+| /country/morocco.html | 3 | 3 | 9 |
+| /guide/world-cup-2026-how-to-watch.html | 3 | 2 | 11 |
+| /country/dr-congo.html | 2 | 2 | 3 |
+| /league/serie-a.html | 2 | 1 | 0 |
+| /match/BvmWDhzkbe4.html | 2 | 2 | 8 |
+| /match/TXyBRmgFIs4.html | 2 | 2 | 9 |
+| /match/XVJPlnXEwB8.html | 2 | 2 | 80 |
+| /match/_FXrOkWXAwg.html | 2 | 2 | 2 |
+| /match/oH_QKjqMTrg.html | 2 | 2 | 12 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
 | 2026-07-12 | 13 | 1582 | 11.0 | 0 |  |
+| 2026-07-12 | 13 | 1582 | 11.0 | 0 | 84 |
 
