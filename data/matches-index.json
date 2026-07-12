@@ -1,0 +1,3325 @@
+[
+  {
+    "id": "TXyBRmgFIs4",
+    "teams": [
+      "日本",
+      "チュニジア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第2節 / 6/21・モントレー",
+    "players": [
+      "鎌田大地",
+      "上田綺世",
+      "伊東純也"
+    ],
+    "hasPreview": true
+  },
+  {
+    "id": "3jIMk43CECY",
+    "teams": [
+      "オランダ",
+      "日本"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第1節 / 6/14・ダラス（AT&Tスタジアム）",
+    "players": [
+      "鎌田大地"
+    ],
+    "hasPreview": true
+  },
+  {
+    "id": "Mr3hSU26N9c",
+    "teams": [
+      "スペイン",
+      "サウジアラビア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第2節 / 6/21",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "l6bkoYyr-c4",
+    "teams": [
+      "スウェーデン",
+      "チュニジア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第1節（日本と同組）",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "0-5qfsxThHg",
+    "teams": [
+      "ブラジル",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループC・第1節",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "dEEPG2lpQdk",
+    "teams": [
+      "ブラジル",
+      "ハイチ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループC・第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "BYyZDXKv0hQ",
+    "teams": [
+      "イングランド",
+      "クロアチア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループL・第1節・撃ち合い",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "lPRpAlZIeZI",
+    "teams": [
+      "ポルトガル",
+      "コンゴ民主共和国"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループK・第1節・C・ロナウド6大会連続出場",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ucu6WdoGg-0",
+    "teams": [
+      "スコットランド",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループC・第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "kj6zFsFGuXI",
+    "teams": [
+      "ベルギー",
+      "イラン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "WpjPq5ZMMdI",
+    "teams": [
+      "鹿島アントラーズ",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・公式ハイライト",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Bzaf-Ze7cA0",
+    "teams": [
+      "浦和レッズ",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "B1kg0E4awQo",
+    "teams": [
+      "川崎フロンターレ",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nzocyS4-GeM",
+    "teams": [
+      "浦和レッズ",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "VHzzi-UUoZg",
+    "teams": [
+      "水戸ホーリーホック",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_3U7OSj0Occ",
+    "teams": [
+      "FC東京",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第16節（東京ダービー）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "1O3ccdnGHQM",
+    "teams": [
+      "ヴィッセル神戸",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 1-2位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "QH4F85TiD0M",
+    "teams": [
+      "ヴィッセル神戸",
+      "京都サンガF.C."
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "h__TwuTBbVc",
+    "teams": [
+      "水戸ホーリーホック",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・第18節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "rqvRbGTw2zc",
+    "teams": [
+      "ソシエダ",
+      "ラージョ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第8節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "jfG6X7SW4_o",
+    "teams": [
+      "ジェノア",
+      "パルマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第7節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "LOL10LZNTHc",
+    "teams": [
+      "ヘタフェ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第19節 / 2025-26・劇的決勝弾アシスト",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "OWUC97ci0Wo",
+    "teams": [
+      "ソシエダ",
+      "アトレティコ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第18節 / 2025-26・アシスト",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "MACbJ7UcTlI",
+    "teams": [
+      "パルマ",
+      "トリノ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第5節 / 2025-26・先発出場",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "v1TbRkKaXTA",
+    "teams": [
+      "モナコ",
+      "PSG"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第14節 / 2025-26・王者相手に決勝弾",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "TLDF6uzkhi0",
+    "teams": [
+      "マルセイユ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第16節 / 2025-26・先発",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "THvY90wwxag",
+    "teams": [
+      "オセール",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第4節 / 2025-26・2戦連発",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "uPdJUTn5ljg",
+    "teams": [
+      "スポルティング",
+      "ベンフィカ"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第30節 / 2025-26・リスボンダービー初得点",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "d0FN8OzbEZ8",
+    "teams": [
+      "スポルティング",
+      "ギマランイス"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第32節 / 2025-26・今季4アシスト目",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "-vFmvKfs9zU",
+    "teams": [
+      "フランクフルト",
+      "アウクスブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第14節 / 2025-26・決勝ゴール",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "uzCiKEliU3I",
+    "teams": [
+      "アウクスブルク",
+      "フランクフルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第31節 / 2025-26・同点ゴール",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "VdyjoOpJXJs",
+    "teams": [
+      "ブレーメン",
+      "フランクフルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第18節 / 2025-26",
+    "players": [
+      "堂安律",
+      "菅原由勢"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "L9QqzxzkFXc",
+    "teams": [
+      "バイエルン",
+      "シュトゥットガルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第30節 / 2025-26・優勝決定試合",
+    "players": [
+      "伊藤洋輝"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "O1PmiWBYId8",
+    "teams": [
+      "ハイチ",
+      "スコットランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループC・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "p9OJdAh-3uU",
+    "teams": [
+      "ガーナ",
+      "パナマ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループL・第1節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "HAcVdmkBdIY",
+    "teams": [
+      "ウズベキスタン",
+      "コロンビア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループK・第1節・ウズベキW杯初ゴール",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Ht804w5UO0E",
+    "teams": [
+      "メキシコ",
+      "南アフリカ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループA・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "1kc2lD5KzKU",
+    "teams": [
+      "韓国",
+      "チェコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループA・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "v7SmkAqQwzM",
+    "teams": [
+      "メキシコ",
+      "韓国"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループA・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "oH_QKjqMTrg",
+    "teams": [
+      "カナダ",
+      "カタール"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループB・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "jpOLXF6Mpxs",
+    "teams": [
+      "アメリカ",
+      "パラグアイ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループD・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "D9lZubMQlT4",
+    "teams": [
+      "トルコ",
+      "パラグアイ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループD・第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "wie62X1Ysbc",
+    "teams": [
+      "アメリカ",
+      "オーストラリア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループD・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "hpPVZkcAvD4",
+    "teams": [
+      "エクアドル",
+      "キュラソー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループE・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "T7psPCftyBs",
+    "teams": [
+      "オランダ",
+      "スウェーデン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第2節（日本と同組）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "j7UpL1CqtIs",
+    "teams": [
+      "ニュージーランド",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "YXsTSlSME_8",
+    "teams": [
+      "ウルグアイ",
+      "カーボベルデ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "IuuGXDtpUA4",
+    "teams": [
+      "カタール",
+      "スイス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループB・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "fA-D5X94BhQ",
+    "teams": [
+      "カナダ",
+      "ボスニア・ヘルツェゴビナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループB・第1節・開催国ドロー",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "DFZ2eSfvmKc",
+    "teams": [
+      "スイス",
+      "ボスニア・ヘルツェゴビナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループB・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "O5j0ZWm2K88",
+    "teams": [
+      "オーストラリア",
+      "トルコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループD・第1節・豪の堅守速攻",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_hpIHERSBEs",
+    "teams": [
+      "ドイツ",
+      "キュラソー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループE・第1節・ドイツ大勝発進",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "mov67UkdezM",
+    "teams": [
+      "コートジボワール",
+      "エクアドル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループE・第1節・劇的勝利",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FG9wyPcgDeI",
+    "teams": [
+      "ドイツ",
+      "コートジボワール"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループE・第2節・劇的逆転で突破",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "uLDT0VAJLUk",
+    "teams": [
+      "ベルギー",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "H5z7hqgQLxg",
+    "teams": [
+      "イラン",
+      "ニュージーランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第1節・大激闘ドロー",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "dLSN7kUHG1E",
+    "teams": [
+      "スペイン",
+      "カーボベルデ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "854ROSvN6hU",
+    "teams": [
+      "サウジアラビア",
+      "ウルグアイ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第1節・守護神奮闘",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl0lsvDnT6E",
+    "teams": [
+      "オーストリア",
+      "ヨルダン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループJ・第1節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "qoZo2NqdrGc",
+    "teams": [
+      "チェコ",
+      "南アフリカ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループA・第2節（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "XVJPlnXEwB8",
+    "teams": [
+      "エクアドル",
+      "ドイツ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループE・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "BvmWDhzkbe4",
+    "teams": [
+      "日本",
+      "スウェーデン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "P9cHnz6zPCA",
+    "teams": [
+      "チュニジア",
+      "オランダ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループF・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "iZUeyV7HgQQ",
+    "teams": [
+      "ノルウェー",
+      "フランス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループI・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_uAsT0T3sgI",
+    "teams": [
+      "セネガル",
+      "イラク"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループI・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FzImMEFALG0",
+    "teams": [
+      "カーボベルデ",
+      "サウジアラビア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FQNk7Ar1uNc",
+    "teams": [
+      "ウルグアイ",
+      "スペイン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループH・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "X3mtIZ_Ju0E",
+    "teams": [
+      "エジプト",
+      "イラン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "GzsAIgnhx5I",
+    "teams": [
+      "ニュージーランド",
+      "ベルギー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループG・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_FXrOkWXAwg",
+    "teams": [
+      "パナマ",
+      "イングランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループL・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "BMSL-4Eg-x4",
+    "teams": [
+      "クロアチア",
+      "ガーナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループL・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "kmHkjjAImAc",
+    "teams": [
+      "コロンビア",
+      "ポルトガル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループK・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "qX0wTPond5A",
+    "teams": [
+      "コンゴ民主共和国",
+      "ウズベキスタン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループK・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "vRr78Sme4Uw",
+    "teams": [
+      "アルジェリア",
+      "オーストリア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループJ・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bw8iNWeLMYE",
+    "teams": [
+      "ヨルダン",
+      "アルゼンチン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "グループJ・第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ED28CZxLiIQ",
+    "teams": [
+      "南アフリカ",
+      "カナダ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "I4Vh8qt2QvM",
+    "teams": [
+      "ブラジル",
+      "日本"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "2raR8K6S8uQ",
+    "teams": [
+      "ドイツ",
+      "パラグアイ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "s2OyDJ5O3ZY",
+    "teams": [
+      "オランダ",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "TgOnn0seQNw",
+    "teams": [
+      "コートジボワール",
+      "ノルウェー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "CFGq7F35Ljc",
+    "teams": [
+      "フランス",
+      "スウェーデン"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Dz48qBKuNLY",
+    "teams": [
+      "メキシコ",
+      "エクアドル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "p7ABTzVxN78",
+    "teams": [
+      "イングランド",
+      "コンゴ民主共和国"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "3p2_rfINk5w",
+    "teams": [
+      "ベルギー",
+      "セネガル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "BEpOPoLd4mk",
+    "teams": [
+      "アメリカ",
+      "ボスニア・ヘルツェゴビナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "AVruzJG-piU",
+    "teams": [
+      "スペイン",
+      "オーストリア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "J9yS7PsoEck",
+    "teams": [
+      "ポルトガル",
+      "クロアチア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bSZEbYXssBI",
+    "teams": [
+      "スイス",
+      "アルジェリア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ACWOG7t8Plk",
+    "teams": [
+      "オーストラリア",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "EC2jOKluGRI",
+    "teams": [
+      "アルゼンチン",
+      "カーボベルデ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "9TJRhuQOJuE",
+    "teams": [
+      "コロンビア",
+      "ガーナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "QLFucR6SGr4",
+    "teams": [
+      "カナダ",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "2ANrnnZEE6c",
+    "teams": [
+      "パラグアイ",
+      "フランス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "vpcukTVSD8Q",
+    "teams": [
+      "ブラジル",
+      "ノルウェー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "n7cA4k6TJbs",
+    "teams": [
+      "メキシコ",
+      "イングランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "QL3kCTgeVKA",
+    "teams": [
+      "アメリカ",
+      "ベルギー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Bm1C3VnN2xQ",
+    "teams": [
+      "スペイン",
+      "ポルトガル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "XO3x8vm0Ijc",
+    "teams": [
+      "アルゼンチン",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_uEzppRKcd0",
+    "teams": [
+      "スイス",
+      "コロンビア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "J_1iFnRsHG0",
+    "teams": [
+      "フランス",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "jqG_pZGkLcc",
+    "teams": [
+      "スペイン",
+      "ベルギー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "dVWBrxpPVuY",
+    "teams": [
+      "ノルウェー",
+      "イングランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FGhW41kIpgQ",
+    "teams": [
+      "アルゼンチン",
+      "スイス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "icl8cAJpcvg",
+    "teams": [
+      "清水エスパルス",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第18節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "stJyA4EIA5M",
+    "teams": [
+      "ファジアーノ岡山",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 11-12位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "zcUAhveRtYY",
+    "teams": [
+      "京都サンガF.C.",
+      "柏レイソル"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 15-16位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ASTz49Z4z9k",
+    "teams": [
+      "鹿島アントラーズ",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "7ZRHcCkxONY",
+    "teams": [
+      "サンフレッチェ広島",
+      "名古屋グランパス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第18節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Oh4TDhi1Gkw",
+    "teams": [
+      "京都サンガF.C.",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "aLk-j32VqYE",
+    "teams": [
+      "川崎フロンターレ",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 7-8位決定戦 第2戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "QN0cc9TlrM4",
+    "teams": [
+      "FC東京",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "CIPHXD2v2_Q",
+    "teams": [
+      "横浜F・マリノス",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "g9Bi6lB2Nos",
+    "teams": [
+      "浦和レッズ",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第4節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "CjW8ztH3Wv8",
+    "teams": [
+      "浦和レッズ",
+      "横浜F・マリノス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "EApWO_dAnlg",
+    "teams": [
+      "セレッソ大阪",
+      "名古屋グランパス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "1qh-O2woTcc",
+    "teams": [
+      "名古屋グランパス",
+      "セレッソ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "JRZcacj5S3c",
+    "teams": [
+      "アビスパ福岡",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 19-20位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Hb778fnNM0g",
+    "teams": [
+      "ガンバ大阪",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "xpHB3HBD_Sg",
+    "teams": [
+      "ジェフユナイテッド千葉",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 19-20位決定戦 第2戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FauYcbxZRfo",
+    "teams": [
+      "アビスパ福岡",
+      "名古屋グランパス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "RBasLKNTaW0",
+    "teams": [
+      "川崎フロンターレ",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "IXHUVUdFo2E",
+    "teams": [
+      "川崎フロンターレ",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "A7KsvI_GaGE",
+    "teams": [
+      "FC東京",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "8YHuuly9e7s",
+    "teams": [
+      "FC町田ゼルビア",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "yyjw98gvKpc",
+    "teams": [
+      "アルビレックス新潟",
+      "湘南ベルマーレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-A 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "oOVYwrU7rcE",
+    "teams": [
+      "カマタマーレ讃岐",
+      "アルビレックス新潟"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-A 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "6PvnpB8-X5c",
+    "teams": [
+      "オールスター J1 EAST",
+      "J1 WEST"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "JリーグオールスターDAZNカップ 3-4位決定戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "AC4anpltQxU",
+    "teams": [
+      "オールスター J2・J3 EAST-A",
+      "EAST-B"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "JリーグオールスターDAZNカップ 1回戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "XvtGCzLm1P8",
+    "teams": [
+      "オールスター J2・J3 WEST-B",
+      "J1 WEST"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "JリーグオールスターDAZNカップ 準決勝",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "qnpdSdJiIAs",
+    "teams": [
+      "FC東京",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "zBqe98qHhq8",
+    "teams": [
+      "浦和レッズ",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bqzyopPeUQs",
+    "teams": [
+      "柏レイソル",
+      "浦和レッズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "N8OMNhxL-6s",
+    "teams": [
+      "浦和レッズ",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "L8xroqVK76I",
+    "teams": [
+      "横浜F・マリノス",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "tVmKL3DDW-Q",
+    "teams": [
+      "FC東京",
+      "横浜F・マリノス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "WXfJ03GrVfk",
+    "teams": [
+      "横浜F・マリノス",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第4節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "5t-qoeUgH0A",
+    "teams": [
+      "清水エスパルス",
+      "横浜F・マリノス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 13-14位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "FM_aM1lc8dY",
+    "teams": [
+      "鹿島アントラーズ",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "fjKiMxCXoy0",
+    "teams": [
+      "鹿島アントラーズ",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "B_YE64muVkw",
+    "teams": [
+      "東京ヴェルディ",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "rVnFw1AS0h0",
+    "teams": [
+      "川崎フロンターレ",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "cyxjxM-mISg",
+    "teams": [
+      "鹿島アントラーズ",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "G2O7uHfXtQ4",
+    "teams": [
+      "柏レイソル",
+      "鹿島アントラーズ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "RYzfnPpdLVI",
+    "teams": [
+      "鹿島アントラーズ",
+      "FC町田ゼルビア"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "cwX8WzVhAVQ",
+    "teams": [
+      "柏レイソル",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "o4uM_39SEB4",
+    "teams": [
+      "柏レイソル",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "e4Zgqf9r_Wg",
+    "teams": [
+      "柏レイソル",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第18節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "XKHmghnLSG4",
+    "teams": [
+      "ジェフユナイテッド千葉",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_U1j-UBNvW0",
+    "teams": [
+      "東京ヴェルディ",
+      "ジェフユナイテッド千葉"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "KpdT4xzXT2o",
+    "teams": [
+      "東京ヴェルディ",
+      "FC町田ゼルビア"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "hY-m8gFQW8c",
+    "teams": [
+      "FC町田ゼルビア",
+      "東京ヴェルディ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Mc2CSkkc-qc",
+    "teams": [
+      "水戸ホーリーホック",
+      "FC町田ゼルビア"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "-xHYZ1ZpqOk",
+    "teams": [
+      "FC町田ゼルビア",
+      "水戸ホーリーホック"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "3OpZbyBaaXI",
+    "teams": [
+      "FC東京",
+      "水戸ホーリーホック"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・EAST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "0HwJmeOvrk8",
+    "teams": [
+      "湘南ベルマーレ",
+      "ベガルタ仙台"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-A 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ojbyRYuZ8Ns",
+    "teams": [
+      "湘南ベルマーレ",
+      "いわきFC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 プレーオフ 9-12位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "TKe0WWMg_Eo",
+    "teams": [
+      "ヴィッセル神戸",
+      "ファジアーノ岡山"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "idV1cQH8T4U",
+    "teams": [
+      "ヴィッセル神戸",
+      "清水エスパルス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "15UvrUgxL1U",
+    "teams": [
+      "鹿島アントラーズ",
+      "ヴィッセル神戸"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 1-2位決定戦 第2戦・神戸が王者",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "dO0f-a5AegE",
+    "teams": [
+      "ヴィッセル神戸",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第4節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "1Kc5K1b6_W8",
+    "teams": [
+      "ガンバ大阪",
+      "セレッソ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第10節・大阪ダービー",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "s5J9vjbZ4Rw",
+    "teams": [
+      "セレッソ大阪",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第1節・大阪ダービー",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_0rsXm4nmO4",
+    "teams": [
+      "名古屋グランパス",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "sDymGcVyp_0",
+    "teams": [
+      "セレッソ大阪",
+      "FC東京"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 3-4位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "koDXLdnqZFs",
+    "teams": [
+      "FC東京",
+      "セレッソ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 3-4位決定戦 第2戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "weOjjWJ34TQ",
+    "teams": [
+      "セレッソ大阪",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "7x1m7TPjJoc",
+    "teams": [
+      "名古屋グランパス",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bgx5jImEAb8",
+    "teams": [
+      "サンフレッチェ広島",
+      "川崎フロンターレ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・プレーオフ 7-8位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "JvsTwIDJNII",
+    "teams": [
+      "京都サンガF.C.",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "PMp_wnN69gA",
+    "teams": [
+      "ファジアーノ岡山",
+      "清水エスパルス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "R8icQkG34eE",
+    "teams": [
+      "清水エスパルス",
+      "セレッソ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "gFuVafmYxjE",
+    "teams": [
+      "名古屋グランパス",
+      "京都サンガF.C."
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "rWnokOMQjWA",
+    "teams": [
+      "ヴィッセル神戸",
+      "名古屋グランパス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "MpE5HHeOT_8",
+    "teams": [
+      "清水エスパルス",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第16節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "z1r-31b_ujE",
+    "teams": [
+      "アビスパ福岡",
+      "清水エスパルス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "uinHot5JOyE",
+    "teams": [
+      "アビスパ福岡",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "xIEjKY9yRgs",
+    "teams": [
+      "清水エスパルス",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "VP23JivLM7Y",
+    "teams": [
+      "サンフレッチェ広島",
+      "清水エスパルス"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "o7_pcIlOXKk",
+    "teams": [
+      "サンフレッチェ広島",
+      "アビスパ福岡"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "8PQCST-0egg",
+    "teams": [
+      "ファジアーノ岡山",
+      "ヴィッセル神戸"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "KFB86H6v6TQ",
+    "teams": [
+      "サンフレッチェ広島",
+      "ファジアーノ岡山"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第2節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "5l8HRA2kvrQ",
+    "teams": [
+      "ファジアーノ岡山",
+      "サンフレッチェ広島"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "-tJEpiivAxU",
+    "teams": [
+      "ヴィッセル神戸",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "LhSpj15rfhM",
+    "teams": [
+      "ガンバ大阪",
+      "ヴィッセル神戸"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "2xtg1LlTUf0",
+    "teams": [
+      "サンフレッチェ広島",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "T3vWsOunplI",
+    "teams": [
+      "サンフレッチェ広島",
+      "セレッソ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第12節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "okI94E9cIXg",
+    "teams": [
+      "ファジアーノ岡山",
+      "ガンバ大阪"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・WEST 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "GBJtLUR4aaU",
+    "teams": [
+      "ジュビロ磐田",
+      "藤枝MYFC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第17節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "YPYI18fg6A0",
+    "teams": [
+      "松本山雅FC",
+      "ジュビロ磐田"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第13節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "-K9e11mlPRM",
+    "teams": [
+      "ジュビロ磐田",
+      "松本山雅FC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "11psscbd7xE",
+    "teams": [
+      "栃木シティ",
+      "ジュビロ磐田"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 プレーオフ 29-32位決定戦 第1戦",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "dSUBFm_5SIA",
+    "teams": [
+      "ジュビロ磐田",
+      "福島ユナイテッドFC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第4節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "4br30NH0Aik",
+    "teams": [
+      "ジュビロ磐田",
+      "北海道コンサドーレ札幌"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "-kDlbgkRY9c",
+    "teams": [
+      "ジュビロ磐田",
+      "いわきFC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-B 第14節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "0gyqS4_Ma1A",
+    "teams": [
+      "横浜FC",
+      "栃木シティ"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 EAST-A 第3節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "_hixtTGG45g",
+    "teams": [
+      "サガン鳥栖",
+      "ガイナーレ鳥取"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-B 第15節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "WY_NcU4mGG0",
+    "teams": [
+      "アルビレックス新潟",
+      "愛媛FC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-A 第18節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "tRJPo5X8i38",
+    "teams": [
+      "FC今治",
+      "アルビレックス新潟"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-A 第4節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "wF7mSeQxMIk",
+    "teams": [
+      "アルビレックス新潟",
+      "高知ユナイテッドSC"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-B 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "OzARSrC3Xdw",
+    "teams": [
+      "愛媛FC",
+      "アルビレックス新潟"
+    ],
+    "league": "jl",
+    "leagueName": "Jリーグ2026",
+    "meta": "Jリーグ 2026・J2・J3 WEST-A 第1節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "7JNt2J_Hmt4",
+    "teams": [
+      "ジローナ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第36節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "xulpkDJlelM",
+    "teams": [
+      "ソシエダ",
+      "ビジャレアル"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第14節 / 2025-26・今季初アシスト",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "do4mdgHs2bg",
+    "teams": [
+      "オサスナ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第13節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "0bMvj-9bDTY",
+    "teams": [
+      "ソシエダ",
+      "アスレティック・クルブ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第11節 / 2025-26・バスクダービー",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "d_xQ4ruO5nI",
+    "teams": [
+      "ソシエダ",
+      "ジローナ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第16節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "lO0Nzq6v3Zw",
+    "teams": [
+      "アラベス",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第33節 / 2024-25",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "Kf6Wtoz61B0",
+    "teams": [
+      "レバンテ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第17節 / 2025-26・今季2ゴール目",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "xY5vLBC1Gmk",
+    "teams": [
+      "ローマ",
+      "パルマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第9節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "ixWdJzvORbg",
+    "teams": [
+      "コモ",
+      "パルマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第37節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "ydFoO8j2AW4",
+    "teams": [
+      "ラツィオ",
+      "パルマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第31節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "OBsGcorT4Dk",
+    "teams": [
+      "パルマ",
+      "コモ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第8節 / 2025-26・2試合連続無失点",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "9Mc86D_V17s",
+    "teams": [
+      "パルマ",
+      "ボローニャ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第10節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "I2D_GFwJKYw",
+    "teams": [
+      "パルマ",
+      "クレモネーゼ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第30節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "j45PkuzjtI4",
+    "teams": [
+      "パルマ",
+      "ミラン"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第11節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "qpO65eFp240",
+    "teams": [
+      "パルマ",
+      "ピサ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第34節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "mboApyqPqjY",
+    "teams": [
+      "パルマ",
+      "ナポリ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第32節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "Xy7znt4rxB8",
+    "teams": [
+      "アンジェ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第8節 / 2025-26・アシスト",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "l0pd4Ff0IWQ",
+    "teams": [
+      "ナント",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第10節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "G1hMNzyYHJA",
+    "teams": [
+      "モナコ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第5節 / 2025-26・同点弾アシスト",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "u50Q3k_p_tM",
+    "teams": [
+      "モナコ",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第29節 / 2024-25・先制ゴール",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "4dZMoJcjxJU",
+    "teams": [
+      "フランクフルト",
+      "ヴォルフスブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第12節 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "ok8DMoroA_s",
+    "teams": [
+      "フランクフルト",
+      "シュトゥットガルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第34節 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "tJ8w0I1TGzs",
+    "teams": [
+      "フランクフルト",
+      "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第6節 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "0-zugQtxY48",
+    "teams": [
+      "フランクフルト",
+      "ケルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第28節 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "eTFaQiGr6JI",
+    "teams": [
+      "フランクフルト",
+      "ハイデンハイム"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第26節 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "WLu5wfNEq7M",
+    "teams": [
+      "フランクフルト",
+      "ザンクト・パウリ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第8節 / 2025-26",
+    "players": [
+      "堂安律",
+      "藤田譲瑠チマ"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "VzWMyjs-NO0",
+    "teams": [
+      "フランクフルト",
+      "ドルトムント"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "DFBポカール ラウンド32 / 2025-26",
+    "players": [
+      "堂安律"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "24Xum8BKgZA",
+    "teams": [
+      "スポルティング",
+      "サンタ・クララ"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第28節 / 2025-26・アシスト",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "EF-t5VcbNh4",
+    "teams": [
+      "リオ・アヴェ",
+      "スポルティング"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第33節 / 2025-26",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "8z677lfFJHQ",
+    "teams": [
+      "ポルト",
+      "スポルティング"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第21節 / 2025-26・上位対決",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "_Xjq698qvJ8",
+    "teams": [
+      "スポルティング",
+      "ファマリカン"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第22節 / 2025-26",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "9zSgulHWDgg",
+    "teams": [
+      "スポルティング",
+      "カーザ・ピア"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第18節 / 2025-26",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "AtQbzjq173E",
+    "teams": [
+      "スポルティング",
+      "エストリル"
+    ],
+    "league": "portugal",
+    "leagueName": "ポルトガルリーグ",
+    "meta": "ポルトガルリーグ 第24節 / 2025-26",
+    "players": [
+      "守田英正"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "3qZnugDzCP4",
+    "teams": [
+      "ライプツィヒ",
+      "マインツ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第20節 / 2025-26",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "Mx7pDwk934M",
+    "teams": [
+      "アウクスブルク",
+      "マインツ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第3節 / 2025-26・1ゴール1アシスト",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "pKWnFYZ3NgY",
+    "teams": [
+      "マインツ",
+      "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第31節 / 2025-26",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "NRey8uTcL8I",
+    "teams": [
+      "マインツ",
+      "ザンクト・パウリ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第15節 / 2025-26",
+    "players": [
+      "佐野海舟",
+      "藤田譲瑠チマ"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "CI9K1sQIF7s",
+    "teams": [
+      "マインツ",
+      "アウクスブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第21節 / 2025-26",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "TnSY33rP8mE",
+    "teams": [
+      "マインツ",
+      "ドルトムント"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第5節 / 2025-26",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "UlEMwz1j-G0",
+    "teams": [
+      "マインツ",
+      "フライブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第28節 / 2025-26",
+    "players": [
+      "佐野海舟",
+      "川﨑颯太"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "zvGlkMqjVHM",
+    "teams": [
+      "ホッフェンハイム",
+      "マインツ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第28節 / 2025-26",
+    "players": [
+      "佐野海舟"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "1Z4ppSGXILM",
+    "teams": [
+      "バイエルン",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第27節 / 2025-26・代表復帰",
+    "players": [
+      "伊藤洋輝"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "X-LVmJTfqoA",
+    "teams": [
+      "ケルン",
+      "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第17節 / 2025-26・今季2アシスト目",
+    "players": [
+      "伊藤洋輝"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "D5VxUeFfZb8",
+    "teams": [
+      "バイエルン",
+      "アウクスブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第19節 / 2025-26・今季初ゴール",
+    "players": [
+      "伊藤洋輝"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "5B2ut8vVKn0",
+    "teams": [
+      "バイエルン",
+      "マインツ"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第14節 / 2025-26",
+    "players": [
+      "佐野海舟",
+      "伊藤洋輝",
+      "川﨑颯太"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "4epALsFs2Nc",
+    "teams": [
+      "ブレーメン",
+      "ヴォルフスブルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第10節 / 2025-26・逆転アシスト",
+    "players": [
+      "菅原由勢"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "cWwnzplU89Q",
+    "teams": [
+      "ブレーメン",
+      "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第22節 / 2025-26",
+    "players": [
+      "菅原由勢",
+      "長田澪"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "qo_pVSuH02I",
+    "teams": [
+      "ホッフェンハイム",
+      "ブレーメン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第33節 / 2025-26",
+    "players": [
+      "菅原由勢"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "0Lpb-RohwVk",
+    "teams": [
+      "バレンシア",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第1節 / 2025-26・開幕弾",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "_ujWOdYjiOw",
+    "teams": [
+      "ソシエダ",
+      "エスパニョール"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第2節 / 2025-26・2ゴールの起点",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "OLXnEWOqXlM",
+    "teams": [
+      "ベティス",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第5節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "MMhb_3qScwM",
+    "teams": [
+      "バルセロナ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第7節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "4k1wewR8D9Y",
+    "teams": [
+      "エルチェ",
+      "ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第12節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "o5Wrbg4lJr8",
+    "teams": [
+      "ソシエダ",
+      "ヘタフェ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第33節 / 2025-26",
+    "players": [
+      "久保建英"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "JdeaGgxIFJE",
+    "teams": [
+      "パルマ",
+      "アタランタ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第2節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "4iKzi3YkAas",
+    "teams": [
+      "カリアリ",
+      "パルマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第3節 / 2025-26",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "VVgG7WPi0Lk",
+    "teams": [
+      "パルマ",
+      "ローマ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第36節 / 2025-26・2本のビッグセーブ",
+    "players": [
+      "鈴木彩艶"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "-VykCyLVGdU",
+    "teams": [
+      "リール",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第2節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "Ycw01mUexyY",
+    "teams": [
+      "モナコ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第3節 / 2025-26・劇的ヘディング弾",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "w9ugkpSOtN8",
+    "teams": [
+      "ロリアン",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第6節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "MmkBkrXia-c",
+    "teams": [
+      "モナコ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第7節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "IdNLwvkww28",
+    "teams": [
+      "モナコ",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第9節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  },
+  {
+    "id": "tjt_vWdtylA",
+    "teams": [
+      "ナント",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第11節 / 2025-26",
+    "players": [
+      "南野拓実"
+    ],
+    "hasPreview": false
+  }
+]
