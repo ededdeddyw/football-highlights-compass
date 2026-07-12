@@ -1,0 +1,82 @@
+name: SEO daily report (GSC + GA4)
+
+# 毎朝 GSC/GA を API 取得して docs/seo_daily_report.md を更新・コミットする。
+# docs/ のみ変更するため本番FTPデプロイ（wc-knockout/watch/deploy-ftp）は起動しない。
+# （push で動くのは GitHub Pages ミラーのみ。pages.yml は docs/** を無視する設定にしてある）
+#
+# 事前設定（docs/seo_automation_setup.md 参照）:
+#   Secrets: GOOGLE_SA_KEY（サービスアカウントJSONの中身をそのまま貼る）
+#   Variables: GSC_SITE_URL（例 https://highlight-compass.com/）, GA4_PROPERTY_ID（例 123456789）,
+#              SEO_REPORT_ENABLED = true（設定完了後にのみ true）
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 22:00 UTC = 07:00 JST 毎日
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Skip if not configured
+        id: gate
+        run: |
+          if [ "${{ vars.SEO_REPORT_ENABLED }}" != "true" ]; then
+            echo "SEO_REPORT_ENABLED != true — skipping"
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.gate.outputs.enabled == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        if: steps.gate.outputs.enabled == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        if: steps.gate.outputs.enabled == 'true'
+        run: pip install --quiet google-api-python-client google-auth google-analytics-data
+
+      - name: Write service account key
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: |
+          printf '%s' "$SA_KEY" > "$RUNNER_TEMP/sa.json"
+
+      - name: Fetch metrics + build report
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+        run: python scripts/fetch_seo_metrics.py
+
+      - name: Commit report if changed
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name  "hc-seo-bot"
+          git config user.email "seo-bot@users.noreply.github.com"
+          git add docs/seo_daily_report.md docs/seo_metrics_history.csv
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "chore(seo): daily GSC/GA report $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            echo "retry push ($i)"; sleep 5
+          done
