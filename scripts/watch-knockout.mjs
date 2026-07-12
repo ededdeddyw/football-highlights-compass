@@ -2,8 +2,9 @@
 // 使い方: node scripts/watch-knockout.mjs [--dry-run]
 //  - data/wc-knockout.json の「結果は確定済み・videoId未設定」の試合だけを対象にする
 //    （結果は毎朝タスクがWeb検証で先に埋める前提。未消化/未検証はスキップ）
-//  - DAZN Japan公式チャンネルを YouTube検索で照合し、公式「MATCH RECAP」動画を厳格マッチング
-//    （タイトルに結果が出ないRECAP版のみ採用＝ネタバレ防止方針に合致）
+//  - 許可した公式チャンネル（FOX Sports / DAZN Japan / FIFA 等）を YouTube検索で照合し、
+//    公式ハイライト/RECAP動画を厳格マッチング（両チーム名＋ラウンド語＋ハイライト系＋許可ch）
+//    （ネタバレ防止＝タイトルにスコアを含む動画は採用しない。FOXの "X vs Y Highlights | Round of 16" 等はスコア非表示でOK）
 //  - 確定 → wc-knockout.json の videoId を更新 ＋ index.html の /*WC_KO_AUTO*/ ブロックを再生成
 //  - スコアは build-site.mjs が wc-knockout.json から自動導出（scores.json 手動記録は不要）
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -39,7 +40,9 @@ const knownIds = new Set([...idxHtml.matchAll(/id:"([A-Za-z0-9_-]{6,})"/g)].map(
 for (const k of Object.keys(WCKO)) if (Array.isArray(WCKO[k])) for (const f of WCKO[k]) if (f.videoId) knownIds.add(f.videoId);
 
 const norm = s => (s || '').toLowerCase().replace(/\s+/g, '');
-const variants = ja => { const t = TEAMS[ja] || {}; return [ja, t.en].filter(Boolean).map(norm); };
+// 日本語名・英語名・別名(alt)すべてで照合（例: アメリカ=USA/United States、モロッコ=Morocco/Maroc）。
+// FOX等の英語タイトルは "United States" 表記なので alt を含めないと取りこぼす。
+const variants = ja => { const t = TEAMS[ja] || {}; return [ja, t.en, ...(t.alt || [])].filter(Boolean).map(norm); };
 
 // YouTube検索（HTMLの ytInitialData から videoId を抽出・APIキー不要）
 async function searchIds(query) {
@@ -85,9 +88,15 @@ for (const key of Object.keys(ROUNDS)) {
       const t = norm(mt.title);
       const homeHit = hv.some(v => v && t.includes(v));
       const awayHit = av.some(v => v && t.includes(v));
+      // ネタバレ防止の本質＝「タイトルにスコアを含まない」こと（例: FIFAの "Canada 0-3 Morocco" は除外）。
+      //   公式RECAP/Highlights はタイトルにスコアを出さない（FOX "X vs Y Highlights | Round of 16" 等）。
+      //   → "recap" 限定をやめ、recap/highlights/ハイライト を許可しつつ、スコア表記があれば棄却する。
+      const isType = /recap|highlights|ハイライト/i.test(mt.title);       // ハイライト系動画か
+      const hasScore = /\d+\s*[-–—]\s*\d+/.test(mt.title);              // スコア(例 2-1)を含む＝ネタバレ
       // 各ゲートの合否を記録（診断用）。棄却理由が一目で分かるようにする。
       const gate = !homeHit ? 'homeチーム名なし' : !awayHit ? 'awayチーム名なし'
-        : !R.match(mt.title) ? 'ラウンド語なし' : !/recap/i.test(mt.title) ? 'recap語なし'
+        : !R.match(mt.title) ? 'ラウンド語なし' : !isType ? 'ハイライト/recap語なし'
+        : hasScore ? 'スコア含む(ネタバレ)'
         : (CHANNEL_NAMES.size && !CHANNEL_NAMES.has(mt.author)) ? `非許可ch(${mt.author})` : 'OK';
       if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
       hit = { id, title: mt.title, author: mt.author }; break;
