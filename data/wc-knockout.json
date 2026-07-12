@@ -73,32 +73,32 @@
       "home": "ポルトガル",
       "away": "クロアチア",
       "result": "2-1",
-      "videoId": ""
+      "videoId": "J9yS7PsoEck"
     },
     {
       "home": "スイス",
       "away": "アルジェリア",
       "result": "2-0",
-      "videoId": ""
+      "videoId": "bSZEbYXssBI"
     },
     {
       "home": "オーストラリア",
       "away": "エジプト",
       "result": "1-1",
-      "videoId": "",
+      "videoId": "ACWOG7t8Plk",
       "pk": "2-4"
     },
     {
       "home": "アルゼンチン",
       "away": "カーボベルデ",
       "result": "3-2",
-      "videoId": ""
+      "videoId": "EC2jOKluGRI"
     },
     {
       "home": "コロンビア",
       "away": "ガーナ",
       "result": "1-0",
-      "videoId": ""
+      "videoId": "9TJRhuQOJuE"
     }
   ],
   "r16": [
@@ -106,49 +106,49 @@
       "home": "カナダ",
       "away": "モロッコ",
       "result": "0-3",
-      "videoId": ""
+      "videoId": "QLFucR6SGr4"
     },
     {
       "home": "パラグアイ",
       "away": "フランス",
       "result": "0-1",
-      "videoId": ""
+      "videoId": "2ANrnnZEE6c"
     },
     {
       "home": "ブラジル",
       "away": "ノルウェー",
       "result": "1-2",
-      "videoId": ""
+      "videoId": "vpcukTVSD8Q"
     },
     {
       "home": "メキシコ",
       "away": "イングランド",
       "result": "2-3",
-      "videoId": ""
+      "videoId": "n7cA4k6TJbs"
     },
     {
       "home": "アメリカ",
       "away": "ベルギー",
       "result": "1-4",
-      "videoId": ""
+      "videoId": "QL3kCTgeVKA"
     },
     {
       "home": "スペイン",
       "away": "ポルトガル",
       "result": "1-0",
-      "videoId": ""
+      "videoId": "Bm1C3VnN2xQ"
     },
     {
       "home": "アルゼンチン",
       "away": "エジプト",
       "result": "3-2",
-      "videoId": ""
+      "videoId": "XO3x8vm0Ijc"
     },
     {
       "home": "スイス",
       "away": "コロンビア",
       "result": "0-0",
-      "videoId": "",
+      "videoId": "_uEzppRKcd0",
       "pk": "4-3"
     }
   ],
@@ -157,24 +157,24 @@
       "home": "フランス",
       "away": "モロッコ",
       "result": "2-0",
-      "videoId": ""
+      "videoId": "J_1iFnRsHG0"
     },
     {
       "home": "スペイン",
       "away": "ベルギー",
       "result": "2-1",
-      "videoId": ""
+      "videoId": "jqG_pZGkLcc"
     },
     {
       "home": "ノルウェー",
       "away": "イングランド",
       "result": "1-2",
-      "videoId": ""
+      "videoId": "dVWBrxpPVuY"
     },
     {
       "home": "アルゼンチン",
       "away": "スイス",
-      "result": "",
+      "result": "3-1",
       "videoId": ""
     }
   ],
@@ -182,6 +182,12 @@
     {
       "home": "フランス",
       "away": "スペイン",
+      "result": "",
+      "videoId": ""
+    },
+    {
+      "home": "イングランド",
+      "away": "アルゼンチン",
       "result": "",
       "videoId": ""
     }
