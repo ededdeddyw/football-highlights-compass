@@ -57,26 +57,51 @@ function buildPrompt(m) {
   const comp = m.leagueName || (m.league === 'wc' ? 'FIFAワールドカップ2026' : '');
   const jp = (m.players && m.players.length) ? `この試合に関係する日本人選手: ${m.players.join('・')}。` : '';
   const metaLine = m.meta ? `節・ラウンド情報: ${m.meta}。` : '';
-  return `あなたは日本語のサッカーメディアの編集者です。次の試合について、読者が試合をより楽しめる「前フリの解説記事」を書いてください。
+  return `あなたは日本語のサッカーメディアの編集者です。次の試合について、読者がざっと読んで見どころをつかめる「注目ポイント集」を作ってください。長い文章の羅列ではなく、見出し付きで手短にまとめます。
 
 対戦: ${teams}
 大会: ${comp}
 ${metaLine}${jp}
 
-記事の要件:
-- 日本語で、360〜480文字程度。段落は2〜3個（段落は空行で区切る）。
-- 内容は「両チーム・両国の背景」「この大会・ラウンドでの位置づけや見どころ」「注目される選手や特徴」を中心に、読者が試合の背景を理解できるようにする。
-- **この試合が大会の中でどんな一戦か（位置づけと懸かっているもの）を必ず盛り込む**。ただし前の試合の結果や現在の順位・勝ち点など、結果が分かる情報は書かない（ネタバレ防止）。勝敗の両方のシナリオを一般論として示し、どちらの状況かは断定しない。ラウンド別の書き分けは次のとおり:
-  - グループステージ第1節（初戦）: 大会の入り口として、勢いをつけたい重要な一戦であること。
-  - グループステージ第2節・第3節: 「勝てば決勝トーナメント進出に近づき、取りこぼせば苦しくなる」という、勝敗によって明暗が分かれる節目であること（第3節ならグループ突破が懸かる大一番になりうること）。
-  - 決勝トーナメント（ラウンド16・準々決勝・準決勝・決勝など）: 敗れれば終わりの一発勝負であり、勝ち上がりを懸けた緊張感の高い試合であること。
-- **結果には一切触れない**（スコア、勝敗、どちらが勝ったか、得点者、PKの行方などを書かない）。試合前の紹介として書く。ネタバレ防止がこのサイトの約束です。
-- 一般に知られている確かな文脈だけを書く。具体的な数字・日付・スタメン・発言・その大会での個々の試合結果など、確証のない情報は創作しない。分からないことは書かない。
-- 宣伝文句や誇張を避け、落ち着いた紹介の筆致にする。同じ文末（「注目が集まります」等）を繰り返さず、表現に変化をつける。
+出力は次のJSONだけを \`\`\`json コードブロックで返してください（前置き・説明・マークダウンの見出しは付けない）:
+\`\`\`json
+{
+  "lead": "1〜2文の短い導入（この試合が何で、大会の中でどんな一戦かが分かる程度）",
+  "points": [
+    {"title": "見どころの短い見出し（12〜18字程度）", "body": "1〜2文の説明（60〜110字程度）"}
+  ]
+}
+\`\`\`
 
-${styleDirective}
+要件:
+- points は **2〜5個**。見どころの多い注目カードなら5個まで。無理に数を増やさず、確かに書ける見どころだけを挙げる。
+- 拾ってよい観点の例（当てはまり、かつ確かな情報がある場合のみ・全部入れる必要はない）:
+  - この大会・ラウンドでのこの試合の位置づけや懸かっているもの（グループ第2/3節なら決勝トーナメント進出争い、決勝トーナメントなら敗れれば終わりの一発勝負。勝敗の両シナリオを一般論として示す）
+  - 注目選手とその役割・持ち味
+  - 両国／両クラブの対戦の歴史や因縁、スタイルの対比
+  - 選手の所属クラブや移籍の背景、選手同士の関係・因縁
+  - 戦術やプレースタイルの見どころ
+- **この試合そのものの結果には触れない**（スコア・勝敗・得点者・PKの行方を書かない）。ただし前の試合や過去の対戦、移籍などの話題は書いてよい。
+- 確証のない情報（曖昧な数字・日付・移籍先・発言など）は創作しない。知らないことは書かず、分かる範囲で書く。
+- 落ち着いた紹介の筆致にし、誇張しない。
 
-出力は記事本文のみ（見出しや前置き、マークダウン記法は付けない）。`;
+${styleDirective}`;
+}
+
+// 応答からJSON（{lead, points[]}）を取り出す。```json ブロック優先、無ければ最初の { … } を試す。
+function parsePreview(text) {
+  if (!text) return null;
+  const m = text.match(/```json\s*([\s\S]*?)```/) || text.match(/(\{[\s\S]*\})/);
+  if (!m) return null;
+  let obj; try { obj = JSON.parse(m[1]); } catch { return null; }
+  if (!obj || !Array.isArray(obj.points)) return null;
+  const points = obj.points
+    .filter(p => p && typeof p.title === 'string' && typeof p.body === 'string' && p.title.trim() && p.body.trim())
+    .map(p => ({ title: p.title.trim(), body: p.body.trim() }))
+    .slice(0, 5);
+  if (points.length < 2) return null;
+  const lead = typeof obj.lead === 'string' ? obj.lead.trim() : '';
+  return { lead, points };
 }
 
 async function callClaude(prompt) {
@@ -104,13 +129,15 @@ function looksSpoilery(text) {
 
 const added = [];
 for (const m of pending) {
-  const text = await callClaude(buildPrompt(m));
+  const raw = await callClaude(buildPrompt(m));
   await new Promise(r => setTimeout(r, 600));   // レート制限回避の間隔
-  if (!text) continue;
-  if (looksSpoilery(text)) { console.log(`  ✗ スキップ（ネタバレ疑い） ${m.id} ${m.teams.join(' vs ')}`); continue; }
-  if (text.length < 120) { console.log(`  ✗ スキップ（短すぎ） ${m.id}`); continue; }
-  PREVIEWS[m.id] = { text, teams: m.teams, ts: process.env.RUN_DATE || '' };
-  added.push(`${m.id}  ${m.teams.join(' vs ')}（${text.length}字）`);
+  if (!raw) continue;
+  const pv = parsePreview(raw);
+  if (!pv) { console.log(`  ✗ スキップ（JSON不正/ポイント不足） ${m.id} ${m.teams.join(' vs ')}`); continue; }
+  const combined = [pv.lead, ...pv.points.map(p => p.title + ' ' + p.body)].join(' ');
+  if (looksSpoilery(combined)) { console.log(`  ✗ スキップ（ネタバレ疑い） ${m.id} ${m.teams.join(' vs ')}`); continue; }
+  PREVIEWS[m.id] = { lead: pv.lead, points: pv.points, teams: m.teams, ts: process.env.RUN_DATE || '' };
+  added.push(`${m.id}  ${m.teams.join(' vs ')}（ポイント${pv.points.length}個）`);
 }
 
 console.log(`enrich-matches: 対象 ${pending.length}件 / 生成 ${added.length}件`);
