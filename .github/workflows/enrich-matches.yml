@@ -25,7 +25,7 @@ concurrency:
 jobs:
   enrich:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,7 +39,7 @@ jobs:
 
       # 生成ステップは16分で打ち切る（ジョブ全体20分より短く）。打ち切られても後続で生成済み分を必ずコミットする。
       - name: 独自記事を生成（enrich）
-        timeout-minutes: 16
+        timeout-minutes: 45
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
