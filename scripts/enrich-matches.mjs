@@ -151,6 +151,8 @@ for (const m of pending) {
   if (looksSpoilery(combined)) { console.log(`  ✗ スキップ（ネタバレ疑い） ${m.id} ${m.teams.join(' vs ')}`); continue; }
   PREVIEWS[m.id] = { lead: pv.lead, points: pv.points, teams: m.teams, ts: process.env.RUN_DATE || '' };
   added.push(`${m.id}  ${m.teams.join(' vs ')}（ポイント${pv.points.length}個）`);
+  // 途中経過を随時保存（ジョブがタイムアウトで打ち切られても生成済み分は失わない）。
+  if (!DRY && added.length % 5 === 0) writeFileSync(OUT_FILE, JSON.stringify(PREVIEWS, null, 2) + '\n');
 }
 
 console.log(`enrich-matches: 対象 ${pending.length}件 / 生成 ${added.length}件`);
