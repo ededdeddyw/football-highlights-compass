@@ -473,7 +473,7 @@ img{max-width:100%}
 /* ===== 試合ページ等の3カラムシェル（左ナビ／本文／右サイド） ===== */
 .appgrid{max-width:1240px;margin:14px auto 0;padding:0 18px;display:grid;grid-template-columns:230px minmax(0,1fr) 300px;grid-template-areas:"left main right";gap:22px;align-items:start}
 /* 試合ページ：画面幅を目いっぱい使い、右カラムに見どころを置く（ハイライトを見ながら読める） */
-.appgrid-match{max-width:1500px;grid-template-columns:210px minmax(0,1fr) 400px}
+.appgrid-match{max-width:1520px;grid-template-columns:200px minmax(0,1fr) 460px}
 /* ネタバレON/OFFはトップバー(高さ45px)の下に固定してスクロール追従 */
 .spoilerbar{position:sticky;top:45px;z-index:38;background:var(--bg);border-bottom:1px solid var(--line)}
 .spoilerbar-in{max-width:1500px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -484,8 +484,8 @@ img{max-width:100%}
 .match-tags .mt-h{font-size:12px;color:var(--muted);font-weight:700;margin-right:2px}
 .match-tags a{font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none;padding:5px 12px;border-radius:999px;border:1px solid var(--line);border-left:3px solid var(--accent2);background:var(--card2)}
 .match-tags a:hover{border-color:var(--accent2)}
-/* 右カラムの見どころ：上部固定気味に（スクロール追従・長ければ内部スクロール） */
-.appgrid-match .col-right{top:104px;max-height:calc(100vh - 118px);overflow:auto;overscroll-behavior:contain}
+/* 右カラムの見どころ：上部に追従。内部スクロールは付けない（ページと一緒にスクロール） */
+.appgrid-match .col-right{top:104px}
 .col-read{padding:14px 16px}
 .col-read .match-read{margin:0}
 .col-read .match-read>h2.lined{margin-top:0}
@@ -557,8 +557,8 @@ img{max-width:100%}
 .read-pt{display:flex;gap:12px;align-items:flex-start;background:var(--card2);border:1px solid var(--line2);border-left:3px solid var(--accent2);border-radius:10px;padding:12px 16px}
 .read-ic{flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1;background:var(--paper);border:1px solid var(--line2);border-radius:9px}
 .read-tx{min-width:0;flex:1 1 auto}
-.read-pt .read-h{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 5px;line-height:1.5}
-.read-pt p{font-size:15px;line-height:1.85;color:var(--ink2);margin:0}
+.read-pt .read-h{font-size:15.5px;font-weight:800;color:var(--ink);margin:0 0 4px;line-height:1.45}
+.read-pt p{font-size:14px;line-height:1.7;color:var(--ink2);margin:0}
 .post-body h2{font-size:21px;font-weight:900;letter-spacing:.01em;margin:34px 0 12px;padding-top:6px}
 .post-body h2.lined{border-top:2px solid var(--ink);padding-top:14px}
 .warn-strip{display:flex;gap:10px;align-items:flex-start;background:#fff8ec;border:1px solid #f0dcb4;border-left:3px solid var(--warn);border-radius:10px;padding:11px 13px;font-size:13.5px;color:#7a5410;margin:0 0 22px}
