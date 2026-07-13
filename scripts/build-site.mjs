@@ -79,6 +79,10 @@ function iconFor(pt){
   for (const [re,key] of ICON_KW) if (re.test(t)) return POINT_ICONS[key];
   return '⚽';
 }
+// 動画ラベル（span.lbl）に含まれるスコア表記（例 0-4）をネタバレとして隠す（spoiler-cover＝既定display:none・タップで表示）。
+// 例:「Highlights | Tunisia 0-4 Japan | …」→ 0-4 を隠す。サイト全体でネタバレ防止方針を一貫させる。
+const maskLblScores = h => String(h||'').replace(/(<span class="lbl">)([^<]*)/g,
+  (mm,a,txt)=> a + txt.replace(/(\d+\s*[-–]\s*\d+)/g,'<span class="spoiler-cover">$1</span>'));
 // 記事HTML：新形式は「見どころ」見出し＋各ポイント(アイコン＋小見出し＋説明)。旧形式(text)は段落描画にフォールバック。
 function renderPreview(id){
   const p = PREVIEWS[id]; if(!p) return '';
@@ -872,10 +876,10 @@ function buildMatch(m){
     graph.push(ev);
   }
   // ネタバレ防止中（html:not(.spoiler-off)）は結果に触れる要素を隠す。本文の .score / 得点 / トピック に spoiler-cover を付与
-  const bodyHtml = m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')
+  const bodyHtml = maskLblScores(m.body.replace(/^<div class="body"[^>]*>/,'').replace(/<\/div>\s*$/,'')
     .replace(/<div class="score">/g,'<div class="score spoiler-cover">')
     .replace(/<li>(<b>得点：<\/b>)/g,'<li class="spoiler-cover">$1')
-    .replace(/<li>(<b>トピック：<\/b>)/g,'<li class="spoiler-cover">$1');
+    .replace(/<li>(<b>トピック：<\/b>)/g,'<li class="spoiler-cover">$1'));
   const hasSpoiler = /spoiler-cover/.test(bodyHtml) || !!m.topic;
   const spoilerBar = hasSpoiler ? `<button class="reveal-spoiler" type="button" onclick="document.documentElement.classList.add('spoiler-off')">🟢 ネタバレ防止中：タップで結果（スコア・得点者・見どころ）を表示</button>` : '';
   const head = HEAD({
@@ -1332,7 +1336,7 @@ const PICKUP_HTML = (()=>{
   next = next.replace(/<!--EUROHUB_START-->[\s\S]*?<!--EUROHUB_END-->/, `<!--EUROHUB_START-->${leagueNavHtml('')}<!--EUROHUB_END-->`);
   // GA4（トップ）：data/analytics.json の測定IDから注入。空なら出力なし
   next = next.replace(/<!--GA_START-->[\s\S]*?<!--GA_END-->/, `<!--GA_START-->${GA}<!--GA_END-->`);
-  writeFileSync('site/index.html', next);
+  writeFileSync('site/index.html', maskLblScores(next));
   // 静的ページ（about/contact/privacy）にも GA を注入（GAマーカーがある場合のみ・一元管理）
   for(const sp of ['about.html','contact.html','privacy.html']){
     const fp = `site/${sp}`;

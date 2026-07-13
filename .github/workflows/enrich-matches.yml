@@ -37,7 +37,9 @@ jobs:
       - name: 試合インデックスを生成（build）
         run: node scripts/build-site.mjs
 
+      # 生成ステップは16分で打ち切る（ジョブ全体20分より短く）。打ち切られても後続で生成済み分を必ずコミットする。
       - name: 独自記事を生成（enrich）
+        timeout-minutes: 16
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
@@ -45,9 +47,11 @@ jobs:
         run: node scripts/enrich-matches.mjs --limit=${{ github.event.inputs.limit }} ${{ github.event.inputs.ids && format('--ids={0}', github.event.inputs.ids) || '' }}
 
       - name: 記事をページに反映（再build）
+        if: always()
         run: node scripts/build-site.mjs
 
       - name: データをコミット（match-previews.json 等）
+        if: always()
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
