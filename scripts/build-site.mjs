@@ -472,6 +472,23 @@ img{max-width:100%}
 .topbar .menu-btn{display:none;background:none;border:1px solid var(--line2);color:var(--accent);width:34px;height:34px;border-radius:8px;font-size:17px;line-height:1;cursor:pointer;align-items:center;justify-content:center;flex:0 0 auto}
 /* ===== 試合ページ等の3カラムシェル（左ナビ／本文／右サイド） ===== */
 .appgrid{max-width:1240px;margin:14px auto 0;padding:0 18px;display:grid;grid-template-columns:230px minmax(0,1fr) 300px;grid-template-areas:"left main right";gap:22px;align-items:start}
+/* 試合ページ：画面幅を目いっぱい使い、右カラムに見どころを置く（ハイライトを見ながら読める） */
+.appgrid-match{max-width:1500px;grid-template-columns:210px minmax(0,1fr) 400px}
+/* ネタバレON/OFFはトップバー(高さ45px)の下に固定してスクロール追従 */
+.spoilerbar{position:sticky;top:45px;z-index:38;background:var(--bg);border-bottom:1px solid var(--line)}
+.spoilerbar-in{max-width:1500px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.spoilerbar .spoiler-toggle{width:auto;margin:0;padding:8px 16px;font-size:13px}
+.sb-note{font-size:12px;color:var(--muted)}
+/* 「この試合」タグ（動画の上） */
+.match-tags{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 14px}
+.match-tags .mt-h{font-size:12px;color:var(--muted);font-weight:700;margin-right:2px}
+.match-tags a{font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none;padding:5px 12px;border-radius:999px;border:1px solid var(--line);border-left:3px solid var(--accent2);background:var(--card2)}
+.match-tags a:hover{border-color:var(--accent2)}
+/* 右カラムの見どころ：上部固定気味に（スクロール追従・長ければ内部スクロール） */
+.appgrid-match .col-right{top:104px;max-height:calc(100vh - 118px);overflow:auto;overscroll-behavior:contain}
+.col-read{padding:14px 16px}
+.col-read .match-read{margin:0}
+.col-read .match-read>h2.lined{margin-top:0}
 .col-left{grid-area:left}.col-main{grid-area:main;min-width:0}.col-right{grid-area:right}
 .col-left,.col-right{position:sticky;top:64px;align-self:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 2px 10px rgba(20,30,90,.05)}
 .col-left{max-height:calc(100vh - 78px);overflow:auto;overscroll-behavior:contain}
@@ -867,13 +884,12 @@ function buildMatch(m){
     robots: thin?'noindex,follow':undefined,
     published:upDate, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph
   });
-  const rightBar = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
-    <div class="side-h">この試合</div>
-    <nav class="nav-guides">
-      <a href="../?league=${m.league}">▶ ${esc(lg||'試合')}の一覧</a>
-      <a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a>
-      <a href="../">▶ トップで他の試合を探す</a>
-    </nav>`;
+  // ネタバレON/OFFはページ上部に固定（スクロール追従）。「この試合」タグは動画の上へ。見どころは右カラムへ。
+  const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span><a href="../?league=${m.league}">${esc(lg||'試合')}の一覧</a><a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a><a href="../">他の試合を探す</a></div>`;
+  const sideRead = renderPreview(m.id);                 // 右カラムに置く見どころ（あれば）
+  const sideContent = sideRead || relHtml || '';        // 見どころが無い試合は関連試合を右に
+  const bottomRel = sideRead ? relHtml : '';            // 見どころがある試合は関連を下に残す
   const footerInner = `<footer class="post-foot">
     ${m.lineup?'<p>出場選手データ：Jリーグ公式。</p>':''}
     <p>掲載は公式・権利元が公開している映像のみ。無断転載・切り抜きは扱いません。動画は各権利元の公式プレイヤーで再生されます。</p>
@@ -881,7 +897,9 @@ function buildMatch(m){
     <p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p>
     <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
   </footer>`;
-  const out = head + TOPBAR_NAV + `<div class="appgrid">
+  const out = head + TOPBAR_NAV
+  + `<div class="spoilerbar"><div class="spoilerbar-in">${spoilerToggleBtn}<span class="sb-note">タップで結果（スコア・得点者・見どころ）の表示を切り替えます。</span></div></div>`
+  + `<div class="appgrid appgrid-match">
   <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
   <main class="col-main"><article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:catLabel,href:`../?league=${m.league}`},{label:m.mt}])}
@@ -889,17 +907,16 @@ function buildMatch(m){
   <h1 class="headline">${titleWithFlags(m)}</h1>
   <p class="dek">${esc(dek)}</p>
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
-  ${spoilerBar}
+  ${matchTags}
   <div class="post-body">${bodyHtml}</div>
-  ${renderPreview(m.id)}
   ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
   ${AD}
   ${factHtml}
   ${teamHtml}
-  ${relHtml}
+  ${bottomRel}
   ${footerInner}
   </article></main>
-  <aside class="col-right">${rightBar}</aside>
+  <aside class="col-right col-read">${sideContent}</aside>
 </div>` + NAVJS + COLLAPSE_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
