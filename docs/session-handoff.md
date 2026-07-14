@@ -80,3 +80,4 @@
 - 2026-07-14 初版。決勝T動画のDAZN貼り直し中（検索修正済み・diag確認待ち）。
 - 2026-07-14 追記。diag run 29304220662 で真因確定（グローバル検索にDAZN個別RECAPが出ない／FIFAはラウンド語なし＆スコア入り）。対策として `watch-knockout.mjs` に DAZN channelId 内の直接検索（`searchChannelIds`）を追加。次はこのブランチで diag-watch を回して検証。
 - 2026-07-14 再追記。channel-scoped検索（diag run 29304639181）でも個別RECAPは発見不可と判明（旧動画・まとめ動画しか返らない）。probe（29304761368）で両IDがDAZN Japanの準々決勝RECAP＝理想ソースと確定。→ **スクレイピング検索は個別RECAPの発見に不適。videoIdの手動シードが確実**と結論。確定2本をqfにシード。残りはユーザーからURLをもらってシードする方針。
+- 2026-07-14 デプロイ完了（PR #35 → wc-knockout.yml run 29307163194 成功／FTP成功）。**決勝T動画15本が本番反映**（qf 4・r16 7・r32 4）。保留2枠（カナダvsモロッコ／アルゼンチンvsカーボベルデ）は空のまま維持。cron自動マッチが保留枠をネタバレ動画で埋めないよう、`wc-knockout.json` に `_blocklist`（`sAYjtcpoaf0`＝FIFAスコア入り／`RnuN64r7xhM`＝カーボベルデ勝者バレ／`1M1lVp8b7wY`＝ポルクロ勝者バレ）を追加し、`watch-knockout.mjs` が読むよう対応。**残タスク：ユーザーがカナダvsモロッコ／アルゼンチンvsカーボベルデのクリーンなDAZN RECAP URLを提供→シード。sfは試合後にシード。**

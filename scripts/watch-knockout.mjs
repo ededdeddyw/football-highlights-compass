@@ -41,6 +41,9 @@ const ROUNDS = {
 const idxHtml = existsSync(IDX_FILE) ? readFileSync(IDX_FILE, 'utf8') : '';
 const knownIds = new Set([...idxHtml.matchAll(/id:"([A-Za-z0-9_-]{6,})"/g)].map(m => m[1]));
 for (const k of Object.keys(WCKO)) if (Array.isArray(WCKO[k])) for (const f of WCKO[k]) if (f.videoId) knownIds.add(f.videoId);
+// ネタバレ除外リスト：タイトルに結果/スコア/勝者が入る等で採用したくない動画IDを knownIds に加え常に棄却する。
+// （例: FIFAの "Canada 0-3 Morocco"、DAZNでもタイトルに勝者が出るハイライト）。wc-knockout.json の _blocklist に記載。
+for (const id of (WCKO._blocklist || [])) knownIds.add(id);
 
 const norm = s => (s || '').toLowerCase().replace(/\s+/g, '');
 // 日本語名・英語名・別名(alt)すべてで照合（例: アメリカ=USA/United States、モロッコ=Morocco/Maroc）。
