@@ -397,6 +397,16 @@ const COLLAPSE_JS = `<script>(function(){try{var w=window.innerWidth||document.d
 // 埋め込み再生の失敗（DAZN等のシンジケーション不可）を YouTube IFrame API のonErrorで検知し、
 // .embedwrap.failed を付けて「YouTubeで見る」カードへ差し替える。JS/API不達でも .ytalt が常時あるので詰まない。
 const YTFB = `<script>(function(){var fr=[].slice.call(document.querySelectorAll('.embedwrap iframe[id^="ytf_"]'));if(!fr.length)return;function fail(f){var w=f.closest('.embedwrap');if(w)w.classList.add('failed');}window.onYouTubeIframeAPIReady=function(){fr.forEach(function(f){try{new YT.Player(f.id,{events:{onError:function(){fail(f);}}});}catch(e){}});};var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';(document.head||document.body).appendChild(s);})();</script>`;
+// 見どころドロワー（モバイル）：FABタップで body.read-open→右カラムがスライドイン。背景/✕/リンクタップで閉じる。
+const READ_DRAWER_JS = `<script>(function(){var f=document.getElementById('readFab'),b=document.getElementById('readBackdrop');if(!f)return;function op(){document.body.classList.add('read-open');}function cl(){document.body.classList.remove('read-open');}f.addEventListener('click',op);if(b)b.addEventListener('click',cl);document.addEventListener('click',function(e){if(e.target.closest('.read-close'))cl();if(e.target.closest('.col-read a[href]'))cl();});}());</script>`;
+// 右カラム(見どころ)をドロワー化：中身があればヘッダ(✕)付きaside＋FAB＋backdropを返す。空なら従来の空aside。
+function readDrawer(content){
+  if(!content) return { aside:'<aside class="col-right col-read"></aside>', fab:'' };
+  return {
+    aside:`<aside class="col-right col-read"><div class="read-drawer-head"><span>👀 見どころ</span><button class="read-close" type="button" aria-label="閉じる">✕</button></div>${content}</aside>`,
+    fab:`<button class="read-fab" id="readFab" type="button">👀 見どころを見る</button><div class="read-backdrop" id="readBackdrop"></div>`
+  };
+}
 // 長い一覧をモバイルで折りたためるセクション。title はプレーンテキスト見出し
 function collapsible(title, content){ return `<details class="m-collapse" open><summary>${title}<span class="mc-ico"></span></summary>${content}</details>`; }
 
@@ -520,6 +530,25 @@ img{max-width:100%}
 .spoiler-toggle.on{background:rgba(16,185,129,.13);border-color:rgba(16,185,129,.42);color:#047857}
 .spoiler-toggle:hover{border-color:var(--accent2)}
 .nav-backdrop{display:none;position:fixed;inset:0;background:rgba(8,14,40,.5);z-index:55}
+/* 見どころ＝モバイルは右スライドドロワー（タップで開閉）。デスクトップは従来どおり右カラム常時表示 */
+.read-fab{display:none}
+.read-backdrop{display:none;position:fixed;inset:0;background:rgba(8,14,40,.5);z-index:55}
+.read-drawer-head{display:none}
+@media(max-width:1080px){
+  .appgrid-match .col-right{position:fixed;top:0;right:0;width:min(88%,360px);height:100%;max-height:none;overflow:auto;z-index:60;border-radius:0;transform:translateX(100%);transition:transform .22s;box-shadow:-8px 0 26px rgba(20,30,90,.2)}
+  body.read-open .appgrid-match .col-right{transform:translateX(0)}
+  body.read-open .read-backdrop{display:block}
+  body.read-open{overflow:hidden}
+  .appgrid-match .read-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 12px;font-weight:900;font-size:16px}
+  .read-close{border:1px solid var(--line2);background:var(--card2);border-radius:9px;width:36px;height:36px;font-size:16px;cursor:pointer;flex:none}
+  .read-fab{display:inline-flex;align-items:center;gap:7px;position:fixed;right:14px;bottom:16px;z-index:50;background:#2746c9;color:#fff;border:0;border-radius:999px;padding:13px 20px;font-size:15px;font-weight:900;box-shadow:0 8px 20px rgba(20,30,90,.3);cursor:pointer}
+}
+/* ネタバレ防止バー：モバイルは横幅いっぱい＋大きく目立たせる */
+@media(max-width:700px){
+  .spoilerbar-in{padding:8px 10px}
+  .spoilerbar .sb-note{display:none}
+  .spoilerbar .spoiler-toggle{width:100%;font-size:16.5px;padding:15px 12px;font-weight:900;border-radius:12px}
+}
 @media(max-width:1080px){
   .appgrid{grid-template-columns:1fr;grid-template-areas:"right" "main";gap:14px}
   .col-right{position:static;max-height:none;overflow:visible}
@@ -935,8 +964,8 @@ function buildMatch(m){
   ${bottomRel}
   ${footerInner}
   </article></main>
-  <aside class="col-right col-read">${sideContent}</aside>
-</div>` + NAVJS + COLLAPSE_JS + YTFB + BOOM + `</body></html>`;
+  ${readDrawer(sideContent).aside}
+</div>${readDrawer(sideContent).fab}` + NAVJS + COLLAPSE_JS + YTFB + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
@@ -949,10 +978,12 @@ const LEAGUE_META = { bl: { jp: 'ブンデスリーガ', hub: 'bundesliga.html' 
 const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
 let leagueCount = 0;
+const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
 function buildLeagueMatch(mt, L, seasonLbl){
   if (mt.matchday == null || !mt.home || !mt.away) return;
   const slug = `${L.code}-2526-md${mt.matchday}-${teamSlug(mt.home)}-${teamSlug(mt.away)}`;
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
+  LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`第${mt.matchday}節 / ${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
   noindexSlugs.add(slug);                                  // 記事/動画が揃うまではnoindex（Phase3/4で解除）
   const teamsTxt = `${mt.home} vs ${mt.away}`;
   const nara = `第${mt.matchday}節`;
@@ -999,8 +1030,8 @@ function buildLeagueMatch(mt, L, seasonLbl){
   ${factHtml}
   ${footer1()}
   </article></main>
-  <aside class="col-right col-read">${sideRead||''}</aside>
-</div>` + NAVJS + COLLAPSE_JS + YTFB + BOOM + `</body></html>`;
+  ${readDrawer(sideRead||'').aside}
+</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + YTFB + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${slug}.html`, out);
 }
 function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
@@ -1020,7 +1051,7 @@ try {
   const idx = data.filter(m=>m.id).map(m=>({
     id:m.id, teams:m.teams||[], league:m.league||'', leagueName:LG[m.league]||'',
     meta:m.meta||'', players:m.players||[], hasPreview: hasPreview(m.id)
-  }));
+  })).concat(LEAGUE_IDX);   // W杯/クラブ＋五大リーグ全試合
   writeFileSync('data/matches-index.json', JSON.stringify(idx,null,2)+'\n');
 } catch(e){ console.warn('matches-index書込失敗:', e.message); }
 
