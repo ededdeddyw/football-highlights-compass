@@ -256,7 +256,10 @@ function escJ(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');}
 function mkBody(m){
   const jp = m.jp ? '<b>日本人選手：</b>'+m.jp+'。' : '';
   const lu = (JL_PLAYERS[m.id] && JL_PLAYERS[m.id].length) ? '<div class="lineup"><b>出場選手：</b>'+JL_PLAYERS[m.id].join('・')+'<span class="src2">／データ：Jリーグ公式</span></div>' : '';
-  const emb = (id,cls,txt,geo)=> '<div class="source"><div class="source-head"><span class="tag '+cls+'">'+txt+'</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">'+geo+'</span></div><div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'" loading="lazy" title="'+escJ(m.ttl)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
+  // 埋め込み再生が禁止（DAZN等のライセンス動画はシンジケーション不可＝YouTube上では再生できるが外部iframeでは不可）の場合、
+  // JS(iframe API)がonErrorを検知して .embedwrap.failed にし、ネタバレなしの「YouTubeで見る」カードへ自動で差し替える。
+  // JS/APIが効かない環境でも詰まないよう、常時表示の小さなフォールバックリンク(.ytalt)も併置する。サムネは出さない（ネタバレ防止）。
+  const emb = (id,cls,txt,geo)=> '<div class="source"><div class="source-head"><span class="tag '+cls+'">'+txt+'</span><span class="name">DAZN Japan（YouTube）</span><span class="geo">'+geo+'</span></div><div class="embedwrap"><iframe id="ytf_'+id+'" src="https://www.youtube-nocookie.com/embed/'+id+'?enablejsapi=1" loading="lazy" title="'+escJ(m.ttl)+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>DAZN Japan 公式・日本で再生できます</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る（日本で再生可）</a></div>';
   const sp = SPOILER_ALT[m.id]; let sources, note='';
   if (sp){
     note = '<div class="dualnote">🟢 ネタバレ控えめ版 と ⚠️ ネタバレあり版、両方あります。お好みでどうぞ。</div>';
@@ -391,6 +394,9 @@ const BOOM = `<div class="boom" id="boom" aria-hidden="true"><div class="boom-bg
 
 // モバイルでは details.m-collapse の open を外して既定で折りたたむ（PC・no-JSは展開のまま＝SEO/アクセシビリティ維持）
 const COLLAPSE_JS = `<script>(function(){try{var w=window.innerWidth||document.documentElement.clientWidth||0;if(w&&w<=700){document.querySelectorAll('details.m-collapse[open]').forEach(function(d){d.removeAttribute('open');});}}catch(e){}})();</script>`;
+// 埋め込み再生の失敗（DAZN等のシンジケーション不可）を YouTube IFrame API のonErrorで検知し、
+// .embedwrap.failed を付けて「YouTubeで見る」カードへ差し替える。JS/API不達でも .ytalt が常時あるので詰まない。
+const YTFB = `<script>(function(){var fr=[].slice.call(document.querySelectorAll('.embedwrap iframe[id^="ytf_"]'));if(!fr.length)return;function fail(f){var w=f.closest('.embedwrap');if(w)w.classList.add('failed');}window.onYouTubeIframeAPIReady=function(){fr.forEach(function(f){try{new YT.Player(f.id,{events:{onError:function(){fail(f);}}});}catch(e){}});};var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';(document.head||document.body).appendChild(s);})();</script>`;
 // 長い一覧をモバイルで折りたためるセクション。title はプレーンテキスト見出し
 function collapsible(title, content){ return `<details class="m-collapse" open><summary>${title}<span class="mc-ico"></span></summary>${content}</details>`; }
 
@@ -584,6 +590,15 @@ ul.facts li{margin:5px 0}
 .dualnote{font-size:13px;color:var(--accent);margin:4px 0 10px;font-weight:700}
 .embedwrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-top:1px solid var(--line)}
 .embedwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* 埋め込み再生不可時のフォールバック（.failedはJSが付与）。ネタバレ防止のためサムネは出さない */
+.embedwrap .ytfb{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;background:#0b0b0b;color:#fff;text-decoration:none;padding:16px}
+.embedwrap.failed iframe{display:none}
+.embedwrap.failed .ytfb{display:flex}
+.ytfb-ic{width:54px;height:54px;border-radius:50%;background:#f00;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;padding-left:3px}
+.ytfb-tx{font-weight:700;font-size:15px;line-height:1.5}
+.ytfb-tx small{display:block;font-weight:400;font-size:12px;opacity:.8;margin-top:3px}
+.ytalt{display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:7px 10px;border-top:1px solid var(--line);background:var(--card)}
+.ytalt:hover{color:var(--accent);text-decoration:underline}
 a.golink{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;padding:14px;border-top:1px solid var(--line)}
 a.golink:hover{background:var(--card2)}
 a.golink .play{flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-size:15px}
@@ -921,7 +936,7 @@ function buildMatch(m){
   ${footerInner}
   </article></main>
   <aside class="col-right col-read">${sideContent}</aside>
-</div>` + NAVJS + COLLAPSE_JS + BOOM + `</body></html>`;
+</div>` + NAVJS + COLLAPSE_JS + YTFB + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
