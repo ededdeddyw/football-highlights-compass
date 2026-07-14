@@ -1067,7 +1067,7 @@
     "hasPreview": true
   },
   {
-    "id": "1M1lVp8b7wY",
+    "id": "P16goOZz_nM",
     "teams": [
       "ポルトガル",
       "クロアチア"
@@ -1075,6 +1075,174 @@
     "league": "wc",
     "leagueName": "FIFAワールドカップ26",
     "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "svHrjVxBfdA",
+    "teams": [
+      "スイス",
+      "アルジェリア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "sxtDY3LsJHM",
+    "teams": [
+      "オーストラリア",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "GQaQsR4BU64",
+    "teams": [
+      "コロンビア",
+      "ガーナ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "a4QJewbgwb8",
+    "teams": [
+      "パラグアイ",
+      "フランス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "5gGqLfOd5vI",
+    "teams": [
+      "ブラジル",
+      "ノルウェー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "yf0nHCLcEY4",
+    "teams": [
+      "メキシコ",
+      "イングランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "aqqoX52X12w",
+    "teams": [
+      "アメリカ",
+      "ベルギー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "fs3UTcdj1OE",
+    "teams": [
+      "スペイン",
+      "ポルトガル"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "zhUzjs3kkDk",
+    "teams": [
+      "アルゼンチン",
+      "エジプト"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "t273-64bkn4",
+    "teams": [
+      "スイス",
+      "コロンビア"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16・PK戦決着（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "vtQ2C6xwe-U",
+    "teams": [
+      "フランス",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "yQWSB6cYPIQ",
+    "teams": [
+      "スペイン",
+      "ベルギー"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "qtVROGuxhw0",
+    "teams": [
+      "ノルウェー",
+      "イングランド"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "-zyPZH9Gung",
+    "teams": [
+      "アルゼンチン",
+      "スイス"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント 準々決勝（MATCH RECAP）",
     "players": [],
     "hasPreview": false
   },
