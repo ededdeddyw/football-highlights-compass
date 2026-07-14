@@ -91,15 +91,14 @@ for (const key of Object.keys(ROUNDS)) {
       const t = norm(mt.title);
       const homeHit = hv.some(v => v && t.includes(v));
       const awayHit = av.some(v => v && t.includes(v));
-      // ネタバレ防止の本質＝「タイトルにスコアを含まない」こと（例: FIFAの "Canada 0-3 Morocco" は除外）。
-      //   公式RECAP/Highlights はタイトルにスコアを出さない（FOX "X vs Y Highlights | Round of 16" 等）。
-      //   → "recap" 限定をやめ、recap/highlights/ハイライト を許可しつつ、スコア表記があれば棄却する。
+      // 表示は独自ラベル「◯◯ vs ◯◯」＋スコアマスクなので、動画タイトルにスコアが入っていても
+      // ページ上にスコアは出ない。日本で再生できる公式ソース（FIFA=全世界再生可）を優先するため、
+      // スコア表記を理由に棄却しない（＝FIFAの "… | Canada 0-3 Morocco" も対象にする。地域制限のFOXは無効化）。
+      // ※プレイヤーのタイトル表示に結果が出る残留リスクはあるが、再生可否（日本の視聴者が観られること）を優先する。
       const isType = /recap|highlights|ハイライト/i.test(mt.title);       // ハイライト系動画か
-      const hasScore = /\d+\s*[-–—]\s*\d+/.test(mt.title);              // スコア(例 2-1)を含む＝ネタバレ
       // 各ゲートの合否を記録（診断用）。棄却理由が一目で分かるようにする。
       const gate = !homeHit ? 'homeチーム名なし' : !awayHit ? 'awayチーム名なし'
         : !R.match(mt.title) ? 'ラウンド語なし' : !isType ? 'ハイライト/recap語なし'
-        : hasScore ? 'スコア含む(ネタバレ)'
         : (CHANNEL_NAMES.size && !CHANNEL_NAMES.has(mt.author)) ? `非許可ch(${mt.author})` : 'OK';
       if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
       hit = { id, title: mt.title, author: mt.author }; break;
