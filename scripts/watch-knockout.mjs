@@ -23,6 +23,9 @@ const TEAMS = readJson('data/team-names.json', {});
 // 許可チャンネル（DAZN Japan等）。author_name 一致でも二重に担保
 const CHANNELS = (readJson('data/wc2026-channels.json', { channels: [] }).channels || []).filter(c => c.enabled);
 const CHANNEL_NAMES = new Set(CHANNELS.map(c => c.name).filter(Boolean));
+// 実機確認済みの channelId（DAZN Japan 等）。グローバル検索はデータセンターIPだと英語/FIFA寄りになり、
+// DAZN Japan の「個別試合RECAP」が上位に出ない。channelId 内を直接検索して確実に拾うために使う。
+const CHANNEL_IDS = CHANNELS.map(c => c.channelId).filter(Boolean);
 
 // ラウンド定義：meta表示ラベル・検索クエリ語・タイトル判定キーワード
 const ROUNDS = {
@@ -57,6 +60,22 @@ async function searchIds(query) {
     return ids.slice(0, 25);   // 候補を広めに取り、DAZN公式RECAPが上位圏外でも拾えるようにする
   } catch (e) { console.warn(`検索失敗 [${query}]: ${e.message}`); return []; }
 }
+// 特定チャンネル内だけを検索する（そのチャンネルのアップロードに限定できる）。
+// DAZN Japan の channelId 内を「◯◯ ◯◯ ラウンド語」で直接検索し、日本語の公式RECAP
+// （例「【FIFAワールドカップ2026】アルゼンチン vs スイス : 準々決勝 │ MATCH RECAP」＝スコア非表示・ラウンド語あり）
+// を確実に上位で拾う。グローバル検索がFIFA(英語・スコア入り)に埋もれて取りこぼす問題への対策。
+async function searchChannelIds(channelId, query) {
+  try {
+    const url = `https://www.youtube.com/channel/${channelId}/search?query=${encodeURIComponent(query)}`;
+    const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'accept-language': 'ja' } });
+    if (!r.ok) return [];
+    const html = await r.text();
+    const seg = html.slice(Math.max(0, html.indexOf('ytInitialData')));
+    const ids = []; const seen = new Set();
+    for (const m of seg.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g)) { if (!seen.has(m[1])) { seen.add(m[1]); ids.push(m[1]); } }
+    return ids.slice(0, 15);
+  } catch (e) { console.warn(`チャンネル内検索失敗 [${channelId} / ${query}]: ${e.message}`); return []; }
+}
 // oEmbed でタイトル・投稿者を確定
 async function meta(id) {
   try {
@@ -82,9 +101,16 @@ for (const key of Object.keys(ROUNDS)) {
     const hv = variants(f.home), av = variants(f.away);
     // YouTube検索の連打はレート制限(fetch failed)を招くため、検索間に間隔を空ける（対象が多い回でも取りこぼしを減らす）。
     if (searched++) await sleep(900);
-    // DAZN Japan公式RECAPのタイトル形式（例「【FIFAワールドカップ2026】◯◯ vs ◯◯ : 準々決勝 │ MATCH RECAP」）
-    // に寄せて検索し、DAZN動画が上位に来るようにする。ラウンドは検索語では絞らず、下のゲート(R.match)で確認する。
-    const ids = await searchIds(`${f.home} ${f.away} FIFAワールドカップ2026 MATCH RECAP DAZN`);
+    // ① まず許可チャンネル内（DAZN Japan等）を「◯◯ ◯◯ ラウンド語」で直接検索 → 公式RECAPを最優先で拾う。
+    // ② 取りこぼし対策にグローバル検索も併用（FIFA公式など全世界再生可のフォールバック）。
+    // ラウンドは検索語では絞らず、下のゲート(R.match)で最終確認する。
+    const ids = [];
+    const pushUniq = arr => { for (const id of arr) if (!ids.includes(id)) ids.push(id); };
+    for (const cid of CHANNEL_IDS) {
+      pushUniq(await searchChannelIds(cid, `${f.home} ${f.away} ${R.q}`));
+      await sleep(600);
+    }
+    pushUniq(await searchIds(`${f.home} ${f.away} FIFAワールドカップ2026 MATCH RECAP DAZN`));
     let hit = null; const rejects = [];
     for (const id of ids) {
       if (knownIds.has(id)) { rejects.push(`既出id ${id}`); continue; }
