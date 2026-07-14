@@ -1103,6 +1103,18 @@
     "hasPreview": false
   },
   {
+    "id": "FCkYoQcTExM",
+    "teams": [
+      "アルゼンチン",
+      "カーボベルデ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "GQaQsR4BU64",
     "teams": [
       "コロンビア",
@@ -1111,6 +1123,18 @@
     "league": "wc",
     "leagueName": "FIFAワールドカップ26",
     "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド32（MATCH RECAP）",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "vMRBvRT1V30",
+    "teams": [
+      "カナダ",
+      "モロッコ"
+    ],
+    "league": "wc",
+    "leagueName": "FIFAワールドカップ26",
+    "meta": "FIFAワールドカップ26｜決勝トーナメント ラウンド16（MATCH RECAP）",
     "players": [],
     "hasPreview": false
   },
