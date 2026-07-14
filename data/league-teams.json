@@ -1,0 +1,21 @@
+{
+  "_note": "リーグ所属クラブの de/en 名 → 日本語表記の対応表。fetch-league.mjs が使う。未登録はドイツ語のまま出力＋警告されるので、ログを見て追記する。",
+  "FC Bayern München": "バイエルン",
+  "Bayer 04 Leverkusen": "レバークーゼン",
+  "Eintracht Frankfurt": "フランクフルト",
+  "Borussia Dortmund": "ドルトムント",
+  "RB Leipzig": "ライプツィヒ",
+  "VfB Stuttgart": "シュツットガルト",
+  "SC Freiburg": "フライブルク",
+  "Borussia Mönchengladbach": "ボルシアMG",
+  "VfL Wolfsburg": "ウォルフスブルク",
+  "1. FSV Mainz 05": "マインツ",
+  "FC Augsburg": "アウクスブルク",
+  "SV Werder Bremen": "ブレーメン",
+  "TSG 1899 Hoffenheim": "ホッフェンハイム",
+  "1. FC Union Berlin": "ウニオン・ベルリン",
+  "1. FC Heidenheim 1846": "ハイデンハイム",
+  "FC St. Pauli": "ザンクトパウリ",
+  "1. FC Köln": "ケルン",
+  "Hamburger SV": "ハンブルガーSV"
+}
