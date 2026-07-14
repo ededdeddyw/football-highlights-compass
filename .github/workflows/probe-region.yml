@@ -1,0 +1,19 @@
+name: Probe region (地域制限/埋め込み診断)
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: '動画ID（カンマ区切り）'
+        required: true
+        default: ''
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: node scripts/probe-region.mjs "${{ github.event.inputs.ids }}"
