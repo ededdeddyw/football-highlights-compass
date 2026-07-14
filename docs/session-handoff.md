@@ -14,11 +14,21 @@
 - `scripts/watch-knockout.mjs` に **`searchChannelIds(channelId, query)`（チャンネル内検索）を追加**。各試合でまず **DAZN Japan の channelId 内を「◯◯ ◯◯ ラウンド語」で検索**して候補の先頭に入れ、その後グローバル検索を続ける（FIFA等のフォールバック）。ゲートは従来どおり（DAZN RECAPはラウンド語入り・スコア無しなので全ゲート通過）。
 - 直前の main 反映分（#33 probe / #34 検索語変更）はそのまま活きている。FOXは `data/wc2026-channels.json` で無効のまま。`data/wc-knockout.json` は FOX由来17件クリア済み（日本再生可の既存11件は保持）。
 
+### 追加で判明したこと（diag run 29304639181 = channel-scoped版・2026-07-14）
+- **channel-scoped 検索でもDAZNの「個別試合RECAP」は取れない。** DAZN Japan の channelId 内を検索すると候補は増える（22〜31件）が、返るのは**過去のJリーグ/DFB/UEFA等の旧動画**と**W杯まとめ動画（準々決勝ゴール集）**ばかり。ユーザー提示の個別RECAP（`-zyPZH9Gung`＝アルゼンチンvsスイス準々決勝、`qtVROGuxhw0`＝ノルウェーvsイングランド準々決勝）は**グローバル検索でもchannel内検索でも一切ヒットしない**。
+- probe（run 29304761368）で両IDの実体を確定：どちらも **DAZN Japan** の「【FIFAワールドカップ2026】◯◯ vs ◯◯ : 準々決勝 │ MATCH RECAP」＝**日本再生可・タイトルにスコア無し（ネタバレ安全）・ラウンド語あり**。全ゲートを通る“理想の”ソース。**問題は判定ではなく「発見（スクレイピング検索で上位に出ない）」だけ。**
+- 結論：**未認証スクレイピング検索では DAZN個別RECAPは安定的に発見できない。確実なのは videoId の手動シード（`data/wc-knockout.json` に直接記入）。**
+
+### いま取った対応（このブランチ）
+- 確定済みの2本を **`data/wc-knockout.json` の qf に直接シード**：ノルウェーvsイングランド=`qtVROGuxhw0`、アルゼンチンvsスイス=`-zyPZH9Gung`。
+- **シードは必ず main に入れること**（15分毎の `wc-knockout.yml` cron は main の index.html を再生成してデプロイするため、seedがmainに無いと次のcronで2本が消える）。
+
 ### 次にやること（順番）
-1. **diag-watch をこのブランチで実行して channel-scoped 検索を検証**：`mcp__github__actions_run_trigger`（workflow=`diag-watch.yml`, ref=`claude/new-session-w7tl20`）→ ログで DAZN の個別RECAP（`-zyPZH9Gung` 等）が **`確定 N件` に入るか**を確認。
-2. マッチが取れていれば **本番検知を実行**：`wc-knockout.yml` を手動実行（advance→watch→verify→build→deploy→commit）。→ `data/wc-knockout.json` の videoId が DAZN で埋まり、`site/index.html` の `/*WC_KO_AUTO*/` も再生成。
-3. **deploy-ftp.yml を手動実行**して本番反映。→ ユーザーに `https://highlight-compass.com/match/<id>.html` で**日本から再生できるか**確認してもらう。
-4. まだ拾えない試合は `scripts/probe-videos.mjs`（`probe-videos.yml`・ID指定）で実タイトル/チャンネルを見て、検索語やゲートを再調整。ダメなら**ユーザーからDAZNのURLをもらって手動シード**も可（`data/wc-knockout.json` の該当試合に `videoId` を直接記入）。
+1. このブランチを **main へ squash マージ**（seed を main に載せる）。
+2. `wc-knockout.yml` を**手動実行**（watch がindex.htmlのKOブロックをseed込みで再生成→build-siteが `/match/-zyPZH9Gung.html`・`/match/qtVROGuxhw0.html` を生成→FTPデプロイ→commit）。
+3. ユーザーに `https://highlight-compass.com/match/-zyPZH9Gung.html`（アルゼンチンvsスイス）等で**日本から再生できるか**確認してもらう。
+4. **残りの決勝T各試合はユーザーからDAZN RECAPのURLをもらって同様にシード**するのが最短で確実。もらったら `data/wc-knockout.json` の該当スロットに `videoId` を記入→main→wc-knockout.yml。
+5. （将来の自動化案）DAZNの**アップロードRSS**（`https://www.youtube.com/feeds/videos.xml?channel_id=UCoFLB_Gw_AoxUuuzKjXrc_Q`）を watch-knockout から読んでタイトル一致でRECAPを拾えば、**試合直後に投稿された回はcronで自動取得**できる可能性大（過去分は埋もれるので手動シード併用）。スクレイピング検索より堅い。未実装。
 
 ## 完了済みの大きな成果（このセッション）
 - **①ハイライト動画復活**：R16/QF が0本だったのを回復（当時FOXで。→ 今DAZNへ移行中）。
@@ -60,3 +70,4 @@
 ### 更新履歴
 - 2026-07-14 初版。決勝T動画のDAZN貼り直し中（検索修正済み・diag確認待ち）。
 - 2026-07-14 追記。diag run 29304220662 で真因確定（グローバル検索にDAZN個別RECAPが出ない／FIFAはラウンド語なし＆スコア入り）。対策として `watch-knockout.mjs` に DAZN channelId 内の直接検索（`searchChannelIds`）を追加。次はこのブランチで diag-watch を回して検証。
+- 2026-07-14 再追記。channel-scoped検索（diag run 29304639181）でも個別RECAPは発見不可と判明（旧動画・まとめ動画しか返らない）。probe（29304761368）で両IDがDAZN Japanの準々決勝RECAP＝理想ソースと確定。→ **スクレイピング検索は個別RECAPの発見に不適。videoIdの手動シードが確実**と結論。確定2本をqfにシード。残りはユーザーからURLをもらってシードする方針。
