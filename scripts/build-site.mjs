@@ -6,7 +6,7 @@
 //  - site/sitemap.xml
 //  - index.html 内 ENTITY_PAGES マップを注入
 // を生成する。
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { COUNTRIES, CLUBS, DEEP } from './entities.mjs';
 
@@ -940,6 +940,79 @@ function buildMatch(m){
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 data.forEach(buildMatch);
+
+// ========================= 五大リーグ 全試合ページ（Phase2） =========================
+// data/league-<code>-<season>.json（fetch-league.mjs 生成）から、動画の有無に関わらず全試合ページを作る。
+// 安定スラッグ（bl-2526-mdN-home-away）でURL固定＝後で動画/記事が付いてもURLが変わらない。
+// 現状は記事/動画が揃うまで noindex（薄コンテンツのindex回避＝AdSense対策）。結果はマスクしてネタバレ防止。
+const LEAGUE_META = { bl: { jp: 'ブンデスリーガ', hub: 'bundesliga.html' } };
+const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
+const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
+let leagueCount = 0;
+function buildLeagueMatch(mt, L, seasonLbl){
+  if (mt.matchday == null || !mt.home || !mt.away) return;
+  const slug = `${L.code}-2526-md${mt.matchday}-${teamSlug(mt.home)}-${teamSlug(mt.away)}`;
+  if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
+  noindexSlugs.add(slug);                                  // 記事/動画が揃うまではnoindex（Phase3/4で解除）
+  const teamsTxt = `${mt.home} vs ${mt.away}`;
+  const nara = `第${mt.matchday}節`;
+  const url = `${DOMAIN}/match/${slug}.html`;
+  const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
+  const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
+  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）のハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
+  // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
+  let videoBlock;
+  if (mt.videoId){
+    videoBlock = `<div class="source"><div class="source-head"><span class="tag embed">▶ 公式ハイライト</span><span class="name">YouTube</span><span class="geo">日本で再生可</span></div><div class="embedwrap"><iframe id="ytf_${mt.videoId}" src="https://www.youtube-nocookie.com/embed/${mt.videoId}?enablejsapi=1" loading="lazy" title="${escA(teamsTxt)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>公式ハイライト</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
+  } else {
+    const q = encodeURIComponent(`${mt.home} ${mt.away} ハイライト ${L.jp}`);
+    videoBlock = `<div class="source"><div class="source-head"><span class="tag link">🔎 動画準備中</span><span class="name">公式ハイライト</span></div><a class="ytalt" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">公式ハイライトが公開され次第ここに掲載します。今すぐ探す ▶ YouTubeで検索</a></div>`;
+  }
+  const dateTxt = mt.dateUTC ? mt.dateUTC.slice(0,10) : '';
+  const facts = [['大会', L.jp], ['対戦', teamsTxt], ['節', `${nara}・${seasonLbl}`]];
+  if (dateTxt) facts.push(['開催日', dateTxt]);
+  const resultRow = (mt.finished && mt.score) ? `<tr class="spoiler-cover"><th>結果</th><td>${esc(mt.home)} ${esc(mt.score.replace('-','−'))} ${esc(mt.away)}</td></tr>` : '';
+  const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}${resultRow}</table></div>`;
+  const hubHref = L.hub ? `<a href="../${L.hub}">${esc(L.jp)}の一覧</a>` : '';
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${hubHref}<a href="../">他の試合を探す</a></div>`;
+  const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
+  const sideRead = renderPreview(slug);
+  const head = HEAD({
+    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} 2025-26 - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
+    robots:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
+    jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]) ]
+  });
+  const out = head + TOPBAR_NAV
+  + `<div class="spoilerbar"><div class="spoilerbar-in">${spoilerToggleBtn}<span class="sb-note">タップで結果（スコア）の表示を切り替えます。</span></div></div>`
+  + `<div class="appgrid appgrid-match">
+  <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
+  <main class="col-main"><article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:L.jp,href:L.hub?`../${L.hub}`:'../'},{label:teamsTxt}])}
+  <p class="kicker">⚽ ${esc(L.jp)} ${esc(nara)}</p>
+  <h1 class="headline">${esc(teamsTxt)}</h1>
+  <p class="dek">${esc(dek)}</p>
+  ${matchTags}
+  <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
+  ${daznCta('見逃し配信・フルマッチはDAZNで。')}
+  ${AD}
+  ${factHtml}
+  ${footer1()}
+  </article></main>
+  <aside class="col-right col-read">${sideRead||''}</aside>
+</div>` + NAVJS + COLLAPSE_JS + YTFB + BOOM + `</body></html>`;
+  writeFileSync(`site/match/${slug}.html`, out);
+}
+function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
+try {
+  for (const f of readdirSync('data').filter(n=>/^league-[a-z]+-\d{4}\.json$/.test(n))){
+    const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
+    const L = { code:j.code, jp:(LEAGUE_META[j.code]||{}).jp||j.jp||j.code, hub:(LEAGUE_META[j.code]||{}).hub };
+    const seasonLbl = j.season==='2025'?'2025-26':j.season;
+    (j.matches||[]).forEach(mt=>buildLeagueMatch(mt, L, seasonLbl));
+  }
+  if (leagueCount) console.log(`リーグ試合ページ: ${leagueCount}`);
+} catch(e){ console.warn('リーグページ生成でエラー:', e.message); }
 
 // scripts/enrich-matches.mjs（独自記事生成）用の機械可読な試合インデックスを書き出す。
 // 生成側はこの一覧を入力に、記事未生成の試合だけをClaudeで前フリ記事化する。
