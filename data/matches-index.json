@@ -3321,5 +3321,3677 @@
       "南野拓実"
     ],
     "hasPreview": true
+  },
+  {
+    "id": "bl-2526-md1-bayern-leipzig",
+    "teams": [
+      "バイエルン",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "bl-2526-md1-leverkusen-hoffenheim",
+    "teams": [
+      "レバークーゼン",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-frankfurt-bremen",
+    "teams": [
+      "フランクフルト",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-freiburg-augsburg",
+    "teams": [
+      "フライブルク",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-union-berlin-stuttgart",
+    "teams": [
+      "ウニオン・ベルリン",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-heidenheim-wolfsburg",
+    "teams": [
+      "ハイデンハイム",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-st-pauli-dortmund",
+    "teams": [
+      "ザンクトパウリ",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-mainz-koln",
+    "teams": [
+      "マインツ",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md1-gladbach-hamburg",
+    "teams": [
+      "ボルシアMG",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-hamburg-st-pauli",
+    "teams": [
+      "ハンブルガーSV",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-leipzig-heidenheim",
+    "teams": [
+      "ライプツィヒ",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-bremen-leverkusen",
+    "teams": [
+      "ブレーメン",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-stuttgart-gladbach",
+    "teams": [
+      "シュツットガルト",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-hoffenheim-frankfurt",
+    "teams": [
+      "ホッフェンハイム",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-augsburg-bayern",
+    "teams": [
+      "アウクスブルク",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-wolfsburg-mainz",
+    "teams": [
+      "ウォルフスブルク",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-dortmund-union-berlin",
+    "teams": [
+      "ドルトムント",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md2-koln-freiburg",
+    "teams": [
+      "ケルン",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-leverkusen-frankfurt",
+    "teams": [
+      "レバークーゼン",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-freiburg-stuttgart",
+    "teams": [
+      "フライブルク",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-mainz-leipzig",
+    "teams": [
+      "マインツ",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-wolfsburg-koln",
+    "teams": [
+      "ウォルフスブルク",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-union-berlin-hoffenheim",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-heidenheim-dortmund",
+    "teams": [
+      "ハイデンハイム",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-bayern-hamburg",
+    "teams": [
+      "バイエルン",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-st-pauli-augsburg",
+    "teams": [
+      "ザンクトパウリ",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md3-gladbach-bremen",
+    "teams": [
+      "ボルシアMG",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-stuttgart-st-pauli",
+    "teams": [
+      "シュツットガルト",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-bremen-freiburg",
+    "teams": [
+      "ブレーメン",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-augsburg-mainz",
+    "teams": [
+      "アウクスブルク",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-hoffenheim-bayern",
+    "teams": [
+      "ホッフェンハイム",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-hamburg-heidenheim",
+    "teams": [
+      "ハンブルガーSV",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-leipzig-koln",
+    "teams": [
+      "ライプツィヒ",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-frankfurt-union-berlin",
+    "teams": [
+      "フランクフルト",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-leverkusen-gladbach",
+    "teams": [
+      "レバークーゼン",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md4-dortmund-wolfsburg",
+    "teams": [
+      "ドルトムント",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-bayern-bremen",
+    "teams": [
+      "バイエルン",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-mainz-dortmund",
+    "teams": [
+      "マインツ",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-wolfsburg-leipzig",
+    "teams": [
+      "ウォルフスブルク",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-st-pauli-leverkusen",
+    "teams": [
+      "ザンクトパウリ",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-heidenheim-augsburg",
+    "teams": [
+      "ハイデンハイム",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-gladbach-frankfurt",
+    "teams": [
+      "ボルシアMG",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-freiburg-hoffenheim",
+    "teams": [
+      "フライブルク",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-koln-stuttgart",
+    "teams": [
+      "ケルン",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md5-union-berlin-hamburg",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-hoffenheim-koln",
+    "teams": [
+      "ホッフェンハイム",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-leverkusen-union-berlin",
+    "teams": [
+      "レバークーゼン",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-dortmund-leipzig",
+    "teams": [
+      "ドルトムント",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-bremen-st-pauli",
+    "teams": [
+      "ブレーメン",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-augsburg-wolfsburg",
+    "teams": [
+      "アウクスブルク",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-frankfurt-bayern",
+    "teams": [
+      "フランクフルト",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-stuttgart-heidenheim",
+    "teams": [
+      "シュツットガルト",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-hamburg-mainz",
+    "teams": [
+      "ハンブルガーSV",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md6-gladbach-freiburg",
+    "teams": [
+      "ボルシアMG",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-union-berlin-gladbach",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-mainz-leverkusen",
+    "teams": [
+      "マインツ",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-leipzig-hamburg",
+    "teams": [
+      "ライプツィヒ",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-wolfsburg-stuttgart",
+    "teams": [
+      "ウォルフスブルク",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-heidenheim-bremen",
+    "teams": [
+      "ハイデンハイム",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-koln-augsburg",
+    "teams": [
+      "ケルン",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-bayern-dortmund",
+    "teams": [
+      "バイエルン",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-freiburg-frankfurt",
+    "teams": [
+      "フライブルク",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md7-st-pauli-hoffenheim",
+    "teams": [
+      "ザンクトパウリ",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-bremen-union-berlin",
+    "teams": [
+      "ブレーメン",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-frankfurt-st-pauli",
+    "teams": [
+      "フランクフルト",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-gladbach-bayern",
+    "teams": [
+      "ボルシアMG",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-augsburg-leipzig",
+    "teams": [
+      "アウクスブルク",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-hoffenheim-heidenheim",
+    "teams": [
+      "ホッフェンハイム",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-hamburg-wolfsburg",
+    "teams": [
+      "ハンブルガーSV",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-dortmund-koln",
+    "teams": [
+      "ドルトムント",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-leverkusen-freiburg",
+    "teams": [
+      "レバークーゼン",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md8-stuttgart-mainz",
+    "teams": [
+      "シュツットガルト",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-augsburg-dortmund",
+    "teams": [
+      "アウクスブルク",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-mainz-bremen",
+    "teams": [
+      "マインツ",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-leipzig-stuttgart",
+    "teams": [
+      "ライプツィヒ",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-union-berlin-freiburg",
+    "teams": [
+      "ウニオン・ベルリン",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-st-pauli-gladbach",
+    "teams": [
+      "ザンクトパウリ",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-heidenheim-frankfurt",
+    "teams": [
+      "ハイデンハイム",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-bayern-leverkusen",
+    "teams": [
+      "バイエルン",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-koln-hamburg",
+    "teams": [
+      "ケルン",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md9-wolfsburg-hoffenheim",
+    "teams": [
+      "ウォルフスブルク",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-bremen-wolfsburg",
+    "teams": [
+      "ブレーメン",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-leverkusen-heidenheim",
+    "teams": [
+      "レバークーゼン",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-union-berlin-bayern",
+    "teams": [
+      "ウニオン・ベルリン",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-hoffenheim-leipzig",
+    "teams": [
+      "ホッフェンハイム",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-hamburg-dortmund",
+    "teams": [
+      "ハンブルガーSV",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-gladbach-koln",
+    "teams": [
+      "ボルシアMG",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-freiburg-st-pauli",
+    "teams": [
+      "フライブルク",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-stuttgart-augsburg",
+    "teams": [
+      "シュツットガルト",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md10-frankfurt-mainz",
+    "teams": [
+      "フランクフルト",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-mainz-hoffenheim",
+    "teams": [
+      "マインツ",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-bayern-freiburg",
+    "teams": [
+      "バイエルン",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-dortmund-stuttgart",
+    "teams": [
+      "ドルトムント",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-wolfsburg-leverkusen",
+    "teams": [
+      "ウォルフスブルク",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-augsburg-hamburg",
+    "teams": [
+      "アウクスブルク",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-heidenheim-gladbach",
+    "teams": [
+      "ハイデンハイム",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-koln-frankfurt",
+    "teams": [
+      "ケルン",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-leipzig-bremen",
+    "teams": [
+      "ライプツィヒ",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md11-st-pauli-union-berlin",
+    "teams": [
+      "ザンクトパウリ",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-gladbach-leipzig",
+    "teams": [
+      "ボルシアMG",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-bayern-st-pauli",
+    "teams": [
+      "バイエルン",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-bremen-koln",
+    "teams": [
+      "ブレーメン",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-union-berlin-heidenheim",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-hoffenheim-augsburg",
+    "teams": [
+      "ホッフェンハイム",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-leverkusen-dortmund",
+    "teams": [
+      "レバークーゼン",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-hamburg-stuttgart",
+    "teams": [
+      "ハンブルガーSV",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-frankfurt-wolfsburg",
+    "teams": [
+      "フランクフルト",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md12-freiburg-mainz",
+    "teams": [
+      "フライブルク",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-mainz-gladbach",
+    "teams": [
+      "マインツ",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-stuttgart-bayern",
+    "teams": [
+      "シュツットガルト",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-wolfsburg-union-berlin",
+    "teams": [
+      "ウォルフスブルク",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-augsburg-leverkusen",
+    "teams": [
+      "アウクスブルク",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-heidenheim-freiburg",
+    "teams": [
+      "ハイデンハイム",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-koln-st-pauli",
+    "teams": [
+      "ケルン",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-leipzig-frankfurt",
+    "teams": [
+      "ライプツィヒ",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-hamburg-bremen",
+    "teams": [
+      "ハンブルガーSV",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md13-dortmund-hoffenheim",
+    "teams": [
+      "ドルトムント",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-union-berlin-leipzig",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-frankfurt-augsburg",
+    "teams": [
+      "フランクフルト",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-gladbach-wolfsburg",
+    "teams": [
+      "ボルシアMG",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-st-pauli-heidenheim",
+    "teams": [
+      "ザンクトパウリ",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-hoffenheim-hamburg",
+    "teams": [
+      "ホッフェンハイム",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-leverkusen-koln",
+    "teams": [
+      "レバークーゼン",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-freiburg-dortmund",
+    "teams": [
+      "フライブルク",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-bayern-mainz",
+    "teams": [
+      "バイエルン",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md14-bremen-stuttgart",
+    "teams": [
+      "ブレーメン",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-dortmund-gladbach",
+    "teams": [
+      "ドルトムント",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-stuttgart-hoffenheim",
+    "teams": [
+      "シュツットガルト",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-wolfsburg-freiburg",
+    "teams": [
+      "ウォルフスブルク",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-augsburg-bremen",
+    "teams": [
+      "アウクスブルク",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-koln-union-berlin",
+    "teams": [
+      "ケルン",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-hamburg-frankfurt",
+    "teams": [
+      "ハンブルガーSV",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-leipzig-leverkusen",
+    "teams": [
+      "ライプツィヒ",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-mainz-st-pauli",
+    "teams": [
+      "マインツ",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md15-heidenheim-bayern",
+    "teams": [
+      "ハイデンハイム",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-frankfurt-dortmund",
+    "teams": [
+      "フランクフルト",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-freiburg-hamburg",
+    "teams": [
+      "フライブルク",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-union-berlin-mainz",
+    "teams": [
+      "ウニオン・ベルリン",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-heidenheim-koln",
+    "teams": [
+      "ハイデンハイム",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-leverkusen-stuttgart",
+    "teams": [
+      "レバークーゼン",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-gladbach-augsburg",
+    "teams": [
+      "ボルシアMG",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-bayern-wolfsburg",
+    "teams": [
+      "バイエルン",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-bremen-hoffenheim",
+    "teams": [
+      "ブレーメン",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md16-st-pauli-leipzig",
+    "teams": [
+      "ザンクトパウリ",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-stuttgart-frankfurt",
+    "teams": [
+      "シュツットガルト",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-dortmund-bremen",
+    "teams": [
+      "ドルトムント",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-mainz-heidenheim",
+    "teams": [
+      "マインツ",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-wolfsburg-st-pauli",
+    "teams": [
+      "ウォルフスブルク",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-leipzig-freiburg",
+    "teams": [
+      "ライプツィヒ",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-hoffenheim-gladbach",
+    "teams": [
+      "ホッフェンハイム",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-koln-bayern",
+    "teams": [
+      "ケルン",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-augsburg-union-berlin",
+    "teams": [
+      "アウクスブルク",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md17-hamburg-leverkusen",
+    "teams": [
+      "ハンブルガーSV",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-bremen-frankfurt",
+    "teams": [
+      "ブレーメン",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-dortmund-st-pauli",
+    "teams": [
+      "ドルトムント",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-wolfsburg-heidenheim",
+    "teams": [
+      "ウォルフスブルク",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-hoffenheim-leverkusen",
+    "teams": [
+      "ホッフェンハイム",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-koln-mainz",
+    "teams": [
+      "ケルン",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-hamburg-gladbach",
+    "teams": [
+      "ハンブルガーSV",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-leipzig-bayern",
+    "teams": [
+      "ライプツィヒ",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-stuttgart-union-berlin",
+    "teams": [
+      "シュツットガルト",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md18-augsburg-freiburg",
+    "teams": [
+      "アウクスブルク",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-st-pauli-hamburg",
+    "teams": [
+      "ザンクトパウリ",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-bayern-augsburg",
+    "teams": [
+      "バイエルン",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-leverkusen-bremen",
+    "teams": [
+      "レバークーゼン",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-frankfurt-hoffenheim",
+    "teams": [
+      "フランクフルト",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-mainz-wolfsburg",
+    "teams": [
+      "マインツ",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-heidenheim-leipzig",
+    "teams": [
+      "ハイデンハイム",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-union-berlin-dortmund",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-gladbach-stuttgart",
+    "teams": [
+      "ボルシアMG",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md19-freiburg-koln",
+    "teams": [
+      "フライブルク",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-koln-wolfsburg",
+    "teams": [
+      "ケルン",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-frankfurt-leverkusen",
+    "teams": [
+      "フランクフルト",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-leipzig-mainz",
+    "teams": [
+      "ライプツィヒ",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-bremen-gladbach",
+    "teams": [
+      "ブレーメン",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-augsburg-st-pauli",
+    "teams": [
+      "アウクスブルク",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-hoffenheim-union-berlin",
+    "teams": [
+      "ホッフェンハイム",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-hamburg-bayern",
+    "teams": [
+      "ハンブルガーSV",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-stuttgart-freiburg",
+    "teams": [
+      "シュツットガルト",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md20-dortmund-heidenheim",
+    "teams": [
+      "ドルトムント",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-union-berlin-frankfurt",
+    "teams": [
+      "ウニオン・ベルリン",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-freiburg-bremen",
+    "teams": [
+      "フライブルク",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-mainz-augsburg",
+    "teams": [
+      "マインツ",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-wolfsburg-dortmund",
+    "teams": [
+      "ウォルフスブルク",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-st-pauli-stuttgart",
+    "teams": [
+      "ザンクトパウリ",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-heidenheim-hamburg",
+    "teams": [
+      "ハイデンハイム",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-gladbach-leverkusen",
+    "teams": [
+      "ボルシアMG",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-koln-leipzig",
+    "teams": [
+      "ケルン",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md21-bayern-hoffenheim",
+    "teams": [
+      "バイエルン",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-dortmund-mainz",
+    "teams": [
+      "ドルトムント",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-leverkusen-st-pauli",
+    "teams": [
+      "レバークーゼン",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-frankfurt-gladbach",
+    "teams": [
+      "フランクフルト",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-bremen-bayern",
+    "teams": [
+      "ブレーメン",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-hoffenheim-freiburg",
+    "teams": [
+      "ホッフェンハイム",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-hamburg-union-berlin",
+    "teams": [
+      "ハンブルガーSV",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-stuttgart-koln",
+    "teams": [
+      "シュツットガルト",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-augsburg-heidenheim",
+    "teams": [
+      "アウクスブルク",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md22-leipzig-wolfsburg",
+    "teams": [
+      "ライプツィヒ",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-mainz-hamburg",
+    "teams": [
+      "マインツ",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-bayern-frankfurt",
+    "teams": [
+      "バイエルン",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-wolfsburg-augsburg",
+    "teams": [
+      "ウォルフスブルク",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-union-berlin-leverkusen",
+    "teams": [
+      "ウニオン・ベルリン",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-koln-hoffenheim",
+    "teams": [
+      "ケルン",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-leipzig-dortmund",
+    "teams": [
+      "ライプツィヒ",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-freiburg-gladbach",
+    "teams": [
+      "フライブルク",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-st-pauli-bremen",
+    "teams": [
+      "ザンクトパウリ",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md23-heidenheim-stuttgart",
+    "teams": [
+      "ハイデンハイム",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-augsburg-koln",
+    "teams": [
+      "アウクスブルク",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-leverkusen-mainz",
+    "teams": [
+      "レバークーゼン",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-bremen-heidenheim",
+    "teams": [
+      "ブレーメン",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-gladbach-union-berlin",
+    "teams": [
+      "ボルシアMG",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-hoffenheim-st-pauli",
+    "teams": [
+      "ホッフェンハイム",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-dortmund-bayern",
+    "teams": [
+      "ドルトムント",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-stuttgart-wolfsburg",
+    "teams": [
+      "シュツットガルト",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-frankfurt-freiburg",
+    "teams": [
+      "フランクフルト",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md24-hamburg-leipzig",
+    "teams": [
+      "ハンブルガーSV",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-bayern-gladbach",
+    "teams": [
+      "バイエルン",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-freiburg-leverkusen",
+    "teams": [
+      "フライブルク",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-mainz-stuttgart",
+    "teams": [
+      "マインツ",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-leipzig-augsburg",
+    "teams": [
+      "ライプツィヒ",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-wolfsburg-hamburg",
+    "teams": [
+      "ウォルフスブルク",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-heidenheim-hoffenheim",
+    "teams": [
+      "ハイデンハイム",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-koln-dortmund",
+    "teams": [
+      "ケルン",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-st-pauli-frankfurt",
+    "teams": [
+      "ザンクトパウリ",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md25-union-berlin-bremen",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-gladbach-st-pauli",
+    "teams": [
+      "ボルシアMG",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-leverkusen-bayern",
+    "teams": [
+      "レバークーゼン",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-frankfurt-heidenheim",
+    "teams": [
+      "フランクフルト",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-dortmund-augsburg",
+    "teams": [
+      "ドルトムント",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-hoffenheim-wolfsburg",
+    "teams": [
+      "ホッフェンハイム",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-hamburg-koln",
+    "teams": [
+      "ハンブルガーSV",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-bremen-mainz",
+    "teams": [
+      "ブレーメン",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-freiburg-union-berlin",
+    "teams": [
+      "フライブルク",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md26-stuttgart-leipzig",
+    "teams": [
+      "シュツットガルト",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-leipzig-hoffenheim",
+    "teams": [
+      "ライプツィヒ",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-bayern-union-berlin",
+    "teams": [
+      "バイエルン",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-wolfsburg-bremen",
+    "teams": [
+      "ウォルフスブルク",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-heidenheim-leverkusen",
+    "teams": [
+      "ハイデンハイム",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-koln-gladbach",
+    "teams": [
+      "ケルン",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-dortmund-hamburg",
+    "teams": [
+      "ドルトムント",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-mainz-frankfurt",
+    "teams": [
+      "マインツ",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-st-pauli-freiburg",
+    "teams": [
+      "ザンクトパウリ",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md27-augsburg-stuttgart",
+    "teams": [
+      "アウクスブルク",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-leverkusen-wolfsburg",
+    "teams": [
+      "レバークーゼン",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-freiburg-bayern",
+    "teams": [
+      "フライブルク",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-bremen-leipzig",
+    "teams": [
+      "ブレーメン",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-gladbach-heidenheim",
+    "teams": [
+      "ボルシアMG",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-hoffenheim-mainz",
+    "teams": [
+      "ホッフェンハイム",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-hamburg-augsburg",
+    "teams": [
+      "ハンブルガーSV",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-stuttgart-dortmund",
+    "teams": [
+      "シュツットガルト",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-union-berlin-st-pauli",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md28-frankfurt-koln",
+    "teams": [
+      "フランクフルト",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-augsburg-hoffenheim",
+    "teams": [
+      "アウクスブルク",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-dortmund-leverkusen",
+    "teams": [
+      "ドルトムント",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-leipzig-gladbach",
+    "teams": [
+      "ライプツィヒ",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-wolfsburg-frankfurt",
+    "teams": [
+      "ウォルフスブルク",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-heidenheim-union-berlin",
+    "teams": [
+      "ハイデンハイム",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-st-pauli-bayern",
+    "teams": [
+      "ザンクトパウリ",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-koln-bremen",
+    "teams": [
+      "ケルン",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-stuttgart-hamburg",
+    "teams": [
+      "シュツットガルト",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md29-mainz-freiburg",
+    "teams": [
+      "マインツ",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-st-pauli-koln",
+    "teams": [
+      "ザンクトパウリ",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-leverkusen-augsburg",
+    "teams": [
+      "レバークーゼン",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-bremen-hamburg",
+    "teams": [
+      "ブレーメン",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-union-berlin-wolfsburg",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-hoffenheim-dortmund",
+    "teams": [
+      "ホッフェンハイム",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-frankfurt-leipzig",
+    "teams": [
+      "フランクフルト",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-freiburg-heidenheim",
+    "teams": [
+      "フライブルク",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-bayern-stuttgart",
+    "teams": [
+      "バイエルン",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md30-gladbach-mainz",
+    "teams": [
+      "ボルシアMG",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-leipzig-union-berlin",
+    "teams": [
+      "ライプツィヒ",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-mainz-bayern",
+    "teams": [
+      "マインツ",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-wolfsburg-gladbach",
+    "teams": [
+      "ウォルフスブルク",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-augsburg-frankfurt",
+    "teams": [
+      "アウクスブルク",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-heidenheim-st-pauli",
+    "teams": [
+      "ハイデンハイム",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-koln-leverkusen",
+    "teams": [
+      "ケルン",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-hamburg-hoffenheim",
+    "teams": [
+      "ハンブルガーSV",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-stuttgart-bremen",
+    "teams": [
+      "シュツットガルト",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md31-dortmund-freiburg",
+    "teams": [
+      "ドルトムント",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-bayern-heidenheim",
+    "teams": [
+      "バイエルン",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-frankfurt-hamburg",
+    "teams": [
+      "フランクフルト",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-bremen-augsburg",
+    "teams": [
+      "ブレーメン",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-union-berlin-koln",
+    "teams": [
+      "ウニオン・ベルリン",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-hoffenheim-stuttgart",
+    "teams": [
+      "ホッフェンハイム",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-leverkusen-leipzig",
+    "teams": [
+      "レバークーゼン",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-st-pauli-mainz",
+    "teams": [
+      "ザンクトパウリ",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-gladbach-dortmund",
+    "teams": [
+      "ボルシアMG",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md32-freiburg-wolfsburg",
+    "teams": [
+      "フライブルク",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-dortmund-frankfurt",
+    "teams": [
+      "ドルトムント",
+      "フランクフルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-leipzig-st-pauli",
+    "teams": [
+      "ライプツィヒ",
+      "ザンクトパウリ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-stuttgart-leverkusen",
+    "teams": [
+      "シュツットガルト",
+      "レバークーゼン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-augsburg-gladbach",
+    "teams": [
+      "アウクスブルク",
+      "ボルシアMG"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-hoffenheim-bremen",
+    "teams": [
+      "ホッフェンハイム",
+      "ブレーメン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-wolfsburg-bayern",
+    "teams": [
+      "ウォルフスブルク",
+      "バイエルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-hamburg-freiburg",
+    "teams": [
+      "ハンブルガーSV",
+      "フライブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-koln-heidenheim",
+    "teams": [
+      "ケルン",
+      "ハイデンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md33-mainz-union-berlin",
+    "teams": [
+      "マインツ",
+      "ウニオン・ベルリン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-bayern-koln",
+    "teams": [
+      "バイエルン",
+      "ケルン"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-leverkusen-hamburg",
+    "teams": [
+      "レバークーゼン",
+      "ハンブルガーSV"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-frankfurt-stuttgart",
+    "teams": [
+      "フランクフルト",
+      "シュツットガルト"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-freiburg-leipzig",
+    "teams": [
+      "フライブルク",
+      "ライプツィヒ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-bremen-dortmund",
+    "teams": [
+      "ブレーメン",
+      "ドルトムント"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-gladbach-hoffenheim",
+    "teams": [
+      "ボルシアMG",
+      "ホッフェンハイム"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-union-berlin-augsburg",
+    "teams": [
+      "ウニオン・ベルリン",
+      "アウクスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-st-pauli-wolfsburg",
+    "teams": [
+      "ザンクトパウリ",
+      "ウォルフスブルク"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bl-2526-md34-heidenheim-mainz",
+    "teams": [
+      "ハイデンハイム",
+      "マインツ"
+    ],
+    "league": "bl",
+    "leagueName": "ブンデスリーガ",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
   }
 ]
