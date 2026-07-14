@@ -20,8 +20,17 @@
 - 結論：**未認証スクレイピング検索では DAZN個別RECAPは安定的に発見できない。確実なのは videoId の手動シード（`data/wc-knockout.json` に直接記入）。**
 
 ### いま取った対応（このブランチ）
-- 確定済みの2本を **`data/wc-knockout.json` の qf に直接シード**：ノルウェーvsイングランド=`qtVROGuxhw0`、アルゼンチンvsスイス=`-zyPZH9Gung`。
-- **シードは必ず main に入れること**（15分毎の `wc-knockout.yml` cron は main の index.html を再生成してデプロイするため、seedがmainに無いと次のcronで2本が消える）。
+- ユーザー提供のDAZN URL計17本を **probe（oEmbedで実タイトル/チャンネル確認）してから** `data/wc-knockout.json` に直接シード。**probeは必須**だった（URLのpp検索ヒントは当てにならず、実タイトルで判定）。
+- **シード済み（15本・全てDAZN公式・タイトルにスコア無し＝ネタバレ安全）**：
+  - qf: アルゼンチンvsスイス=`-zyPZH9Gung`／ノルウェーvsイングランド=`qtVROGuxhw0`／フランスvsモロッコ=`vtQ2C6xwe-U`／スペインvsベルギー=`yQWSB6cYPIQ`
+  - r16: パラグアイvsフランス=`a4QJewbgwb8`／ブラジルvsノルウェー=`5gGqLfOd5vI`／メキシコvsイングランド=`yf0nHCLcEY4`／アメリカvsベルギー=`aqqoX52X12w`／スペインvsポルトガル=`fs3UTcdj1OE`／アルゼンチンvsエジプト=`zhUzjs3kkDk`／スイスvsコロンビア=`t273-64bkn4`
+  - r32: ポルトガルvsクロアチア=`P16goOZz_nM`／スイスvsアルジェリア=`svHrjVxBfdA`／オーストラリアvsエジプト=`sxtDY3LsJHM`／コロンビアvsガーナ=`GQaQsR4BU64`
+- **保留（ネタバレのためシードせず・ユーザーにクリーンなDAZN RECAPのURLを要求中）2件**：
+  - r16 カナダvsモロッコ：提供URL `sAYjtcpoaf0` は**FIFAの動画でタイトルに「Canada 0-3 Morocco」＝スコア入り**。DAZNの「MATCH RECAP」版URLを別途もらう。
+  - r32 アルゼンチンvsカーボベルデ：提供URL `RnuN64r7xhM` はDAZNだがタイトルが「延長120分の激闘を制したのは、前回王者アルゼンチン！」＝結果が読める。クリーンなRECAP版を別途もらう。
+- **未実施（試合前）**：sf フランスvsスペイン／イングランドvsアルゼンチン（result空）。試合後にRECAPが出たらシード。
+- **シードは必ず main に入れること**（15分毎の `wc-knockout.yml` cron は main の index.html を再生成してデプロイするため、seedがmainに無いと次のcronで消える）。
+- **probeで判明した重要な学び**：ユーザーのYouTube URLの `pp=` パラメータは「検索語」であって動画の中身とは限らない（例: pp=「アメリカvsベルギー」でも実体はスペインvsベルギー準々決勝）。**必ずoEmbedの実タイトルで試合と照合する。またタイトルにスコア/結果が入る動画はネタバレなので採用しない。**
 
 ### 次にやること（順番）
 1. このブランチを **main へ squash マージ**（seed を main に載せる）。
