@@ -54,7 +54,7 @@ async function searchIds(query) {
     const seg = html.slice(Math.max(0, html.indexOf('ytInitialData')));
     const ids = []; const seen = new Set();
     for (const m of seg.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g)) { if (!seen.has(m[1])) { seen.add(m[1]); ids.push(m[1]); } }
-    return ids.slice(0, 15);
+    return ids.slice(0, 25);   // 候補を広めに取り、DAZN公式RECAPが上位圏外でも拾えるようにする
   } catch (e) { console.warn(`検索失敗 [${query}]: ${e.message}`); return []; }
 }
 // oEmbed でタイトル・投稿者を確定
@@ -82,7 +82,9 @@ for (const key of Object.keys(ROUNDS)) {
     const hv = variants(f.home), av = variants(f.away);
     // YouTube検索の連打はレート制限(fetch failed)を招くため、検索間に間隔を空ける（対象が多い回でも取りこぼしを減らす）。
     if (searched++) await sleep(900);
-    const ids = await searchIds(`${f.home} ${f.away} ${R.q} MATCH RECAP`);
+    // DAZN Japan公式RECAPのタイトル形式（例「【FIFAワールドカップ2026】◯◯ vs ◯◯ : 準々決勝 │ MATCH RECAP」）
+    // に寄せて検索し、DAZN動画が上位に来るようにする。ラウンドは検索語では絞らず、下のゲート(R.match)で確認する。
+    const ids = await searchIds(`${f.home} ${f.away} FIFAワールドカップ2026 MATCH RECAP DAZN`);
     let hit = null; const rejects = [];
     for (const id of ids) {
       if (knownIds.has(id)) { rejects.push(`既出id ${id}`); continue; }
