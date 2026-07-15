@@ -75,6 +75,7 @@ async function uploadAll() {
         await ensure(dir);
         await c.uploadFrom('site/' + rel, baseName);
         done++; newMan[rel] = hashes[rel]; process.stdout.write(`  ↑ ${rel} (${done}/${targets.length})\r`);
+        if (done % 20 === 0) { try { writeFileSync(MANIFEST, JSON.stringify(newMan)); } catch {} }   // 途中保存＝タイムアウトで打ち切られても進捗を残し次回再開できる
         break;
       } catch (e) {
         if (attempt > 4) { failed.push(rel); console.error(`\n  失敗 ${rel}: ${e.message}`); break; }
