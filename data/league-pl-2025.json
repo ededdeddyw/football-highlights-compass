@@ -1,0 +1,63 @@
+{
+  "code": "pl",
+  "jp": "プレミアリーグ",
+  "season": "2025",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "2025-08-15T19:00:00",
+      "home": "Liverpool",
+      "away": "Bournemouth",
+      "homeSlug": "liverpool",
+      "awaySlug": "bournemouth",
+      "finished": true,
+      "score": "4-2",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2025-08-16T11:30:00",
+      "home": "Aston Villa",
+      "away": "Newcastle United",
+      "homeSlug": "aston-villa",
+      "awaySlug": "newcastle-united",
+      "finished": true,
+      "score": "0-0",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2025-08-16T14:00:00",
+      "home": "Brighton and Hove Albion",
+      "away": "Fulham",
+      "homeSlug": "brighton-and-hove-albion",
+      "awaySlug": "fulham",
+      "finished": true,
+      "score": "1-1",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2025-08-16T14:00:00",
+      "home": "Sunderland",
+      "away": "West Ham United",
+      "homeSlug": "sunderland",
+      "awaySlug": "west-ham-united",
+      "finished": true,
+      "score": "3-0",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2025-08-16T14:00:00",
+      "home": "Tottenham Hotspur",
+      "away": "Burnley",
+      "homeSlug": "tottenham-hotspur",
+      "awaySlug": "burnley",
+      "finished": true,
+      "score": "3-0",
+      "videoId": ""
+    }
+  ]
+}
