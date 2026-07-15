@@ -541,7 +541,8 @@ img{max-width:100%}
   body.read-open{overflow:hidden}
   .appgrid-match .read-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 12px;font-weight:900;font-size:16px}
   .read-close{border:1px solid var(--line2);background:var(--card2);border-radius:9px;width:36px;height:36px;font-size:16px;cursor:pointer;flex:none}
-  .read-fab{display:inline-flex;align-items:center;gap:7px;position:fixed;right:14px;bottom:16px;z-index:50;background:#2746c9;color:#fff;border:0;border-radius:999px;padding:13px 20px;font-size:15px;font-weight:900;box-shadow:0 8px 20px rgba(20,30,90,.3);cursor:pointer}
+  /* 右上に固定＝スクロールしても常に追従（右端に貼り付くタブ形） */
+  .read-fab{display:inline-flex;align-items:center;gap:6px;position:fixed;right:0;top:118px;z-index:52;background:#2746c9;color:#fff;border:0;border-radius:999px 0 0 999px;padding:11px 15px 11px 17px;font-size:14px;font-weight:900;box-shadow:-4px 6px 18px rgba(20,30,90,.32);cursor:pointer}
 }
 /* ネタバレ防止バー：モバイルは横幅いっぱい＋大きく目立たせる */
 @media(max-width:700px){
