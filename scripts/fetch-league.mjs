@@ -41,13 +41,28 @@ async function fetchOpenLiga() {
   });
 }
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function fetchSportsDB() {
-  const url = `https://www.thesportsdb.com/api/v1/json/3/eventsseason.php?id=${L.sdb}&s=${SEASON}-${+SEASON + 1}`;
-  const r = await fetch(url, { headers: { accept: 'application/json' } });
-  if (!r.ok) throw new Error(`TheSportsDB HTTP ${r.status}`);
-  const j = await r.json();
-  const events = j.events || [];
-  if (!events.length) throw new Error('TheSportsDB: events空（シーズン表記やIDを確認）');
+  // 無料公開キーの eventsseason は件数が絞られる（1リーグ5件など）。ラウンド別 eventsround を1節ずつ回して全試合を集める。
+  const season = `${SEASON}-${+SEASON + 1}`;
+  const events = [];
+  let emptyStreak = 0;
+  for (let round = 1; round <= 46; round++) {
+    let evs = null;
+    for (let attempt = 1; attempt <= 4 && evs === null; attempt++) {
+      try {
+        const r = await fetch(`https://www.thesportsdb.com/api/v1/json/3/eventsround.php?id=${L.sdb}&r=${round}&s=${season}`, { headers: { accept: 'application/json' } });
+        if (r.ok) { const j = await r.json(); evs = j.events || []; }
+        else if (r.status === 429) { await sleep(3000); }
+        else evs = [];
+      } catch { await sleep(1500); }
+    }
+    if (evs === null) evs = [];
+    if (!evs.length) { emptyStreak++; if (emptyStreak >= 3 && round > 5) break; await sleep(400); continue; }   // 連続3節空で終了（節数はリーグで異なる／一時的な空を許容）
+    emptyStreak = 0; events.push(...evs);
+    await sleep(350);   // 無料枠のレート制限回避
+  }
+  if (!events.length) throw new Error('TheSportsDB: events空（IDやシーズン表記を確認）');
   return events.map(e => {
     const hs = num(e.intHomeScore), as = num(e.intAwayScore);
     const finished = /finished/i.test(e.strStatus || '') || (hs !== null && as !== null);
