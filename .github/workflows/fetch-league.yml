@@ -30,6 +30,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - name: 取得
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: node scripts/fetch-league.mjs "${{ github.event.inputs.code }}" "${{ github.event.inputs.season }}"
       - name: データをコミット
         run: |
