@@ -12,12 +12,14 @@ const CODE = (codeArg || 'bl').toLowerCase();
 const SEASON = seasonArg || '2025';
 const readJson = (p, d) => { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d; } catch { return d; } };
 
+// src の優先: football-data.org のトークンがあればそれ（全試合を1回で取得）、無ければ TheSportsDB（無料枠は1レスポンス5件上限で不完全）。
+const FD_TOKEN = process.env.FOOTBALL_DATA_TOKEN || '';
 const LEAGUES = {
-  bl:     { jp: 'ブンデスリーガ', src: 'openliga', openliga: 'bl1' },
-  pl:     { jp: 'プレミアリーグ', src: 'sportsdb', sdb: '4328' },
-  sa:     { jp: 'セリエA',       src: 'sportsdb', sdb: '4332' },
-  laliga: { jp: 'ラ・リーガ',     src: 'sportsdb', sdb: '4335' },
-  ligue1: { jp: 'リーグアン',     src: 'sportsdb', sdb: '4334' },
+  bl:     { jp: 'ブンデスリーガ', src: 'openliga', openliga: 'bl1', fd: 'BL1', sdb: '4331' },
+  pl:     { jp: 'プレミアリーグ', src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'PL',  sdb: '4328' },
+  sa:     { jp: 'セリエA',       src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'SA',  sdb: '4332' },
+  laliga: { jp: 'ラ・リーガ',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'PD',  sdb: '4335' },
+  ligue1: { jp: 'リーグアン',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'FL1', sdb: '4334' },
 };
 const L = LEAGUES[CODE];
 if (!L) { console.error(`未対応リーグ: ${CODE}（対応: ${Object.keys(LEAGUES).join(', ')}）`); process.exit(1); }
@@ -70,7 +72,24 @@ async function fetchSportsDB() {
   });
 }
 
-let out = L.src === 'openliga' ? await fetchOpenLiga() : await fetchSportsDB();
+// football-data.org（無料トークン・1リクエストで全試合）
+async function fetchFootballData() {
+  const r = await fetch(`https://api.football-data.org/v4/competitions/${L.fd}/matches?season=${SEASON}`, { headers: { 'X-Auth-Token': FD_TOKEN } });
+  if (!r.ok) throw new Error(`football-data HTTP ${r.status}（トークン/プランを確認）`);
+  const j = await r.json();
+  const ms = j.matches || [];
+  if (!ms.length) throw new Error('football-data: matches空');
+  return ms.map(m => {
+    const finished = (m.status === 'FINISHED');
+    const ft = m.score?.fullTime || {};
+    const score = (finished && ft.home != null && ft.away != null) ? `${ft.home}-${ft.away}` : '';
+    const hn = m.homeTeam?.name || '', an = m.awayTeam?.name || '';
+    const hslug = slugify(m.homeTeam?.shortName || m.homeTeam?.tla || hn), aslug = slugify(m.awayTeam?.shortName || m.awayTeam?.tla || an);
+    return { matchday: m.matchday ?? null, dateUTC: m.utcDate || '', home: ja(hn), away: ja(an), homeSlug: hslug, awaySlug: aslug, finished, score, videoId: '' };
+  });
+}
+
+let out = L.src === 'openliga' ? await fetchOpenLiga() : L.src === 'fd' ? await fetchFootballData() : await fetchSportsDB();
 out = out.filter(m => m.matchday != null && m.home && m.away)
          .sort((a, b) => (a.matchday - b.matchday) || String(a.dateUTC).localeCompare(String(b.dateUTC)));
 
