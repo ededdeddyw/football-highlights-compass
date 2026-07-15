@@ -975,14 +975,21 @@ data.forEach(buildMatch);
 // data/league-<code>-<season>.json（fetch-league.mjs 生成）から、動画の有無に関わらず全試合ページを作る。
 // 安定スラッグ（bl-2526-mdN-home-away）でURL固定＝後で動画/記事が付いてもURLが変わらない。
 // 現状は記事/動画が揃うまで noindex（薄コンテンツのindex回避＝AdSense対策）。結果はマスクしてネタバレ防止。
-const LEAGUE_META = { bl: { jp: 'ブンデスリーガ', hub: 'bundesliga.html' } };
+const LEAGUE_META = {
+  bl:     { jp: 'ブンデスリーガ', hub: 'league/bundesliga.html' },
+  pl:     { jp: 'プレミアリーグ', hub: '' },
+  sa:     { jp: 'セリエA',       hub: 'league/serie-a.html' },
+  laliga: { jp: 'ラ・リーガ',     hub: 'league/laliga.html' },
+  ligue1: { jp: 'リーグアン',     hub: 'league/ligue-1.html' },
+};
 const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
 let leagueCount = 0;
 const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
 function buildLeagueMatch(mt, L, seasonLbl){
   if (mt.matchday == null || !mt.home || !mt.away) return;
-  const slug = `${L.code}-2526-md${mt.matchday}-${teamSlug(mt.home)}-${teamSlug(mt.away)}`;
+  const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away);
+  const slug = `${L.code}-2526-md${mt.matchday}-${hs}-${as}`;
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
   LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`第${mt.matchday}節 / ${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
   noindexSlugs.add(slug);                                  // 記事/動画が揃うまではnoindex（Phase3/4で解除）

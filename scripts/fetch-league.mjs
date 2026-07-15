@@ -1,10 +1,10 @@
-// 五大リーグの日程・結果を取得して data/league-<code>.json に正規化保存する。
-// フェーズ1（ブンデス）は OpenLigaDB（無料・APIキー不要）を使用。将来 football-data.org 等に拡張可。
-// 使い方: node scripts/fetch-league.mjs bl 2025     （bl=ブンデス, 2025=2025-26シーズン）
-// 出力: data/league-bl-2025.json  … [{matchday, dateUTC, homeDe, awayDe, home, away, finished, score, videoId}]
-//   - home/away は data/league-teams.json の de→ja 対応表で日本語化（未登録はドイツ語のまま＋警告）。
-//   - score は完了試合のみ "H-A"（未完了は ""）。ネタバレはページ側でマスクするのでデータには持つ。
-//   - videoId は空で作り、後段（watch-league）が公式ハイライトを紐付ける。
+// 五大リーグの日程・結果を取得して data/league-<code>-<season>.json に正規化保存する。
+//  - bl（ブンデス）: OpenLigaDB（無料・キー不要）
+//  - pl/sa/laliga/ligue1: TheSportsDB（無料・公開テストキー"3"・キー登録不要）
+// 使い方: node scripts/fetch-league.mjs <code> <seasonStartYear>   例: node scripts/fetch-league.mjs pl 2025
+// 出力: data/league-<code>-<season>.json … [{matchday, dateUTC, home, away, finished, score, videoId}]
+//   - home/away は data/league-teams.json（原名→日本語）で日本語化（未登録は原名のまま＋警告ログ）。
+//   - score は完了試合のみ "H-A"。videoId は空（後段 watch が公式ハイライトを紐付け）。
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const [,, codeArg, seasonArg] = process.argv;
@@ -12,50 +12,55 @@ const CODE = (codeArg || 'bl').toLowerCase();
 const SEASON = seasonArg || '2025';
 const readJson = (p, d) => { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d; } catch { return d; } };
 
-// リーグ定義：OpenLigaDBのshortcut等。まずはブンデスのみ。
 const LEAGUES = {
-  bl: { openliga: 'bl1', jp: 'ブンデスリーガ' },
+  bl:     { jp: 'ブンデスリーガ', src: 'openliga', openliga: 'bl1' },
+  pl:     { jp: 'プレミアリーグ', src: 'sportsdb', sdb: '4328' },
+  sa:     { jp: 'セリエA',       src: 'sportsdb', sdb: '4332' },
+  laliga: { jp: 'ラ・リーガ',     src: 'sportsdb', sdb: '4335' },
+  ligue1: { jp: 'リーグアン',     src: 'sportsdb', sdb: '4334' },
 };
 const L = LEAGUES[CODE];
-if (!L) { console.error(`未対応リーグ: ${CODE}`); process.exit(1); }
+if (!L) { console.error(`未対応リーグ: ${CODE}（対応: ${Object.keys(LEAGUES).join(', ')}）`); process.exit(1); }
 
-const TEAMS = readJson('data/league-teams.json', {});   // { "FC Bayern München": "バイエルン", ... }
-const ja = de => TEAMS[de] || null;
+const TEAMS = readJson('data/league-teams.json', {});
+const unknown = new Set();
+const ja = name => { const v = TEAMS[name]; if (!v) unknown.add(name); return v || name; };
+const num = v => (v === null || v === undefined || v === '') ? null : Number(v);
+// 英語原名から安定したASCIIスラッグを作る（URL固定用）。日本語名の対応が未整備でもURLは変わらない。
+const slugify = s => String(s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'x';
 
 async function fetchOpenLiga() {
-  const url = `https://api.openligadb.de/getmatchdata/${L.openliga}/${SEASON}`;
-  const r = await fetch(url, { headers: { 'accept': 'application/json' } });
+  const r = await fetch(`https://api.openligadb.de/getmatchdata/${L.openliga}/${SEASON}`, { headers: { accept: 'application/json' } });
   if (!r.ok) throw new Error(`OpenLigaDB HTTP ${r.status}`);
   const arr = await r.json();
-  const out = []; const unknown = new Set();
-  for (const m of arr) {
-    const homeDe = m.team1?.teamName || '';
-    const awayDe = m.team2?.teamName || '';
-    const md = m.group?.groupOrderID ?? null;                 // 節（数値）
-    const dateUTC = m.matchDateTimeUTC || m.matchDateTime || '';
+  return arr.map(m => {
     const finished = !!m.matchIsFinished;
-    // 最終結果（resultTypeID===2 = Endergebnis）を優先、無ければ最後の要素
     let score = '';
-    if (finished) {
-      const rs = Array.isArray(m.matchResults) ? m.matchResults : [];
-      const fin = rs.find(x => x.resultTypeID === 2) || rs[rs.length - 1];
-      if (fin && fin.pointsTeam1 != null && fin.pointsTeam2 != null) score = `${fin.pointsTeam1}-${fin.pointsTeam2}`;
-    }
-    const hj = ja(homeDe), aj = ja(awayDe);
-    if (!hj) unknown.add(homeDe);
-    if (!aj) unknown.add(awayDe);
-    out.push({ matchday: md, dateUTC, homeDe, awayDe, home: hj || homeDe, away: aj || awayDe, finished, score, videoId: '' });
-  }
-  out.sort((a, b) => (a.matchday - b.matchday) || String(a.dateUTC).localeCompare(String(b.dateUTC)));
-  return { out, unknown: [...unknown] };
+    if (finished) { const rs = Array.isArray(m.matchResults) ? m.matchResults : []; const f = rs.find(x => x.resultTypeID === 2) || rs[rs.length - 1]; if (f && f.pointsTeam1 != null && f.pointsTeam2 != null) score = `${f.pointsTeam1}-${f.pointsTeam2}`; }
+    return { matchday: m.group?.groupOrderID ?? null, dateUTC: m.matchDateTimeUTC || m.matchDateTime || '', home: ja(m.team1?.teamName || ''), away: ja(m.team2?.teamName || ''), finished, score, videoId: '' };
+  });
 }
 
-const { out, unknown } = await fetchOpenLiga();
+async function fetchSportsDB() {
+  const url = `https://www.thesportsdb.com/api/v1/json/3/eventsseason.php?id=${L.sdb}&s=${SEASON}-${+SEASON + 1}`;
+  const r = await fetch(url, { headers: { accept: 'application/json' } });
+  if (!r.ok) throw new Error(`TheSportsDB HTTP ${r.status}`);
+  const j = await r.json();
+  const events = j.events || [];
+  if (!events.length) throw new Error('TheSportsDB: events空（シーズン表記やIDを確認）');
+  return events.map(e => {
+    const hs = num(e.intHomeScore), as = num(e.intAwayScore);
+    const finished = /finished/i.test(e.strStatus || '') || (hs !== null && as !== null);
+    return { matchday: num(e.intRound), dateUTC: e.strTimestamp || (e.dateEvent ? e.dateEvent + 'T00:00:00Z' : ''), home: ja(e.strHomeTeam || ''), away: ja(e.strAwayTeam || ''), homeSlug: slugify(e.strHomeTeam), awaySlug: slugify(e.strAwayTeam), finished, score: (finished && hs !== null && as !== null) ? `${hs}-${as}` : '', videoId: '' };
+  });
+}
+
+let out = L.src === 'openliga' ? await fetchOpenLiga() : await fetchSportsDB();
+out = out.filter(m => m.matchday != null && m.home && m.away)
+         .sort((a, b) => (a.matchday - b.matchday) || String(a.dateUTC).localeCompare(String(b.dateUTC)));
+
 const OUT = `data/league-${CODE}-${SEASON}.json`;
 writeFileSync(OUT, JSON.stringify({ code: CODE, jp: L.jp, season: SEASON, updated: '', matches: out }, null, 2) + '\n');
 const fin = out.filter(m => m.finished).length;
 console.log(`fetch-league ${CODE} ${SEASON}: ${out.length}試合（完了 ${fin} / 未消化 ${out.length - fin}）→ ${OUT}`);
-if (unknown.length) {
-  console.log(`⚠ 日本語名 未登録 ${unknown.length}件（data/league-teams.json に追記してください）:`);
-  unknown.forEach(t => console.log(`    "${t}": "",`));
-}
+if (unknown.size) { console.log(`⚠ 日本語名 未登録 ${unknown.size}件（data/league-teams.json に追記）:`); [...unknown].forEach(t => console.log(`    "${t}": "",`)); }
