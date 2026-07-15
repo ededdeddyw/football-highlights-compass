@@ -25,7 +25,7 @@ jobs:
         run: node scripts/build-site.mjs
 
       - name: FTP 差分デプロイ（変更ファイルのみ）
-        timeout-minutes: 10
+        timeout-minutes: 18
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
