@@ -1,0 +1,19 @@
+name: Diag league video (公式動画の発見・地域制限 診断)
+on:
+  workflow_dispatch:
+    inputs:
+      q:
+        description: '検索クエリ'
+        required: true
+        default: 'Bayern Leipzig Bundesliga highlights 2025'
+permissions:
+  contents: read
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: node scripts/diag-league-video.mjs "${{ github.event.inputs.q }}"
