@@ -1,0 +1,48 @@
+name: Diff FTP deploy (差分のみ・高速)
+
+# コード/CSSの小さな変更を本番へ「差分だけ」高速アップロードする。
+# deploy-ftp.yml（全アップロード）は648ページで時間がかかり、FTPのタイムアウトで固まりやすい。
+# こちらは data/deploy-manifest.json と比較して変わったファイルだけ上げ、更新後のマニフェストをコミットする。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: サイト生成
+        run: node scripts/build-site.mjs
+
+      - name: FTP 差分デプロイ（変更ファイルのみ）
+        timeout-minutes: 10
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_DIR:  ${{ secrets.FTP_DIR }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          npm install basic-ftp --no-save --no-package-lock --no-audit --no-fund
+          node scripts/deploy.mjs
+
+      - name: マニフェストをコミット（次回の差分判定用）
+        if: always()
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/deploy-manifest.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "chore(deploy): デプロイ差分マニフェスト更新"
+          git pull --rebase --autostash || true
+          git push
