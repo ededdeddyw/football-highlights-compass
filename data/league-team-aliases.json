@@ -1,0 +1,21 @@
+{
+  "_note": "YouTube公式ハイライトのタイトル照合用。日本語表記 → タイトルに現れうる別名（英/独/略称）。watch-league.mjs が使う。",
+  "バイエルン": ["Bayern", "FC Bayern", "Bayern Munich", "Bayern München", "Bayern Muenchen", "FCB"],
+  "レバークーゼン": ["Leverkusen", "Bayer Leverkusen", "Bayer 04", "B04"],
+  "フランクフルト": ["Frankfurt", "Eintracht Frankfurt", "Eintracht", "SGE"],
+  "ドルトムント": ["Dortmund", "Borussia Dortmund", "BVB"],
+  "ライプツィヒ": ["Leipzig", "RB Leipzig", "RBL"],
+  "シュツットガルト": ["Stuttgart", "VfB Stuttgart", "VfB"],
+  "フライブルク": ["Freiburg", "SC Freiburg"],
+  "ボルシアMG": ["Gladbach", "Mönchengladbach", "Moenchengladbach", "Monchengladbach", "Borussia Mönchengladbach", "M'gladbach", "BMG"],
+  "ウォルフスブルク": ["Wolfsburg", "VfL Wolfsburg"],
+  "マインツ": ["Mainz", "Mainz 05", "FSV Mainz", "1. FSV Mainz"],
+  "アウクスブルク": ["Augsburg", "FC Augsburg", "FCA"],
+  "ブレーメン": ["Werder Bremen", "Werder", "SV Werder", "Bremen"],
+  "ホッフェンハイム": ["Hoffenheim", "TSG Hoffenheim", "TSG 1899"],
+  "ウニオン・ベルリン": ["Union Berlin", "1. FC Union", "Union"],
+  "ハイデンハイム": ["Heidenheim", "1. FC Heidenheim", "FC Heidenheim"],
+  "ザンクトパウリ": ["St. Pauli", "St Pauli", "FC St. Pauli", "Sankt Pauli"],
+  "ケルン": ["1. FC Köln", "FC Köln", "Köln", "Koeln", "Cologne"],
+  "ハンブルガーSV": ["Hamburger SV", "Hamburg", "HSV"]
+}
