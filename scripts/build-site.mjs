@@ -986,17 +986,19 @@ const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkus
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
 let leagueCount = 0;
 const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
+const LEAGUE_SITEMAP = new Map();   // sitemap用：slug → {videoId, date, title}
 function buildLeagueMatch(mt, L, seasonLbl){
   if (mt.matchday == null || !mt.home || !mt.away) return;
   const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away);
   const slug = `${L.code}-2526-md${mt.matchday}-${hs}-${as}`;
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
   LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`第${mt.matchday}節 / ${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
-  noindexSlugs.add(slug);                                  // 記事/動画が揃うまではnoindex（Phase3/4で解除）
+  if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex。記事or動画があれば充実ページとして指数化
   const teamsTxt = `${mt.home} vs ${mt.away}`;
   const nara = `第${mt.matchday}節`;
   const url = `${DOMAIN}/match/${slug}.html`;
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
+  LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId || '', date: (mt.dateUTC || '').slice(0, 10) || TODAY, title: `${teamsTxt}｜${L.jp} ${nara}` });
   const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
   const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）のハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
@@ -1019,7 +1021,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const head = HEAD({
     title:`${teamsTxt} ハイライト｜${L.jp} ${nara} 2025-26 - Football Highlights Compass`,
     ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
-    robots:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
+    robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]) ]
   });
   const out = head + TOPBAR_NAV
@@ -1482,7 +1484,18 @@ for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastm
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
-for(const s of slugs){ if(noindexSlugs.has(s)) continue; const mm=matchById.get(s); const cap=mm?escA((mm.ttl||'')+'｜公式ハイライト'):''; sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><image:image><image:loc>https://i.ytimg.com/vi/${s}/hqdefault.jpg</image:loc><image:title>${cap}</image:title></image:image></url>\n`; }
+for(const s of slugs){
+  if(noindexSlugs.has(s)) continue;
+  const mm=matchById.get(s);
+  if(mm){ // W杯・クラブ（slug＝videoId）
+    const cap=escA((mm.ttl||'')+'｜公式ハイライト');
+    sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lastmodOf(s)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><image:image><image:loc>https://i.ytimg.com/vi/${s}/hqdefault.jpg</image:loc><image:title>${cap}</image:title></image:image></url>\n`;
+  } else { // 五大リーグ（合成slug）：動画があればそのサムネ、無ければ画像なし
+    const lm=LEAGUE_SITEMAP.get(s)||{};
+    const img = lm.videoId ? `<image:image><image:loc>https://i.ytimg.com/vi/${lm.videoId}/hqdefault.jpg</image:loc><image:title>${escA(lm.title||'')}</image:title></image:image>` : '';
+    sm += `  <url><loc>${DOMAIN}/match/${s}.html</loc><lastmod>${lm.date||TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority>${img}</url>\n`;
+  }
+}
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
 console.log(`試合ページ: ${slugs.length} / 国: ${nc} / クラブ: ${ncl} / sitemap URL: ${slugs.length + new Set(Object.values(ENTITY_PAGES)).size + 1}`);
