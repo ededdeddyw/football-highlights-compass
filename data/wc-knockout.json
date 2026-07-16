@@ -193,10 +193,24 @@
     {
       "home": "イングランド",
       "away": "アルゼンチン",
+      "result": "1-2",
+      "videoId": ""
+    }
+  ],
+  "third": [
+    {
+      "home": "フランス",
+      "away": "イングランド",
       "result": "",
       "videoId": ""
     }
   ],
-  "third": [],
-  "final": []
+  "final": [
+    {
+      "home": "スペイン",
+      "away": "アルゼンチン",
+      "result": "",
+      "videoId": ""
+    }
+  ]
 }
