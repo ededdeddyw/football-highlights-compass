@@ -71,7 +71,10 @@ for (const f of files) {
       if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
       hit = { id, title: mt.title, author: mt.author }; break;
     }
-    if (hit) { m.videoId = hit.id; known.add(hit.id); confirmed.push({ home: m.home, away: m.away, md: m.matchday, ...hit }); }
+    if (hit) {
+      m.videoId = hit.id; known.add(hit.id); confirmed.push({ home: m.home, away: m.away, md: m.matchday, ...hit });
+      if (!DRY && confirmed.length % 8 === 0) writeFileSync(path, JSON.stringify(data, null, 2) + '\n');   // 途中保存：タイムアウトで打ち切られても進捗を残す（次回は videoId 済みをスキップして再開）
+    }
     else if (DIAG) { console.log(`  [診断] ${code} md${m.matchday} ${m.home} vs ${m.away}: 候補${ids.length}件・不採用`); rejects.slice(0, 5).forEach(r => console.log('      ' + r)); }
   }
   confirmedTotal += confirmed.length;

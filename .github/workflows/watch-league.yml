@@ -28,7 +28,7 @@ concurrency:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,7 +36,7 @@ jobs:
       - name: 検知
         run: node scripts/watch-league.mjs ${{ github.event.inputs.code && format('--code={0}', github.event.inputs.code) || '' }} --limit=${{ github.event.inputs.limit }} ${{ github.event.inputs.diag == '1' && '--diag --dry-run' || '' }}
       - name: データをコミット
-        if: ${{ github.event.inputs.diag != '1' }}
+        if: ${{ always() && github.event.inputs.diag != '1' }}   # 検知ステップがタイムアウトで打ち切られても途中保存分を必ずコミット
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
