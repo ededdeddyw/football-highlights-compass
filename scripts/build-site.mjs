@@ -672,6 +672,13 @@ html.spoiler-off .mscore{display:inline-block}
 html:not(.spoiler-off) .spoiler-cover{display:none!important}
 .reveal-spoiler{display:none;align-items:center;gap:8px;font-size:14px;font-weight:800;padding:11px 16px;border-radius:10px;border:1px solid var(--line2);background:var(--card2);color:var(--accent);cursor:pointer;margin:2px 0 22px}
 html:not(.spoiler-off) .reveal-spoiler{display:inline-flex}
+/* 動画ベール：ネタバレ防止ON（既定）のとき動画の代わりに出す「タップで表示」カード。OFFで消えて動画が出る */
+.video-veil{display:none;width:100%;text-align:left;align-items:center;gap:12px;padding:18px 16px;border-radius:12px;border:1px dashed var(--line2);background:var(--card2);color:var(--ink);cursor:pointer;line-height:1.55}
+html:not(.spoiler-off) .video-veil{display:flex}
+.video-veil .vv-ic{font-size:22px;flex:none}
+.video-veil .vv-tx{font-weight:800;font-size:14.5px}
+.video-veil .vv-tx small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:3px}
+.video-veil:hover{border-color:var(--accent2);background:var(--paper)}
 .mttl{padding:10px 12px 4px;font-size:13px;font-weight:700;line-height:1.46}
 .mttl .flag{height:13px;border-radius:2px;vertical-align:-2px}
 .mttl em{font-style:normal;color:var(--soft);font-size:.85em;margin:0 2px}
@@ -1004,7 +1011,10 @@ function buildLeagueMatch(mt, L, seasonLbl){
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
   let videoBlock;
   if (mt.videoId){
-    videoBlock = `<div class="source"><div class="source-head"><span class="tag embed">▶ 公式ハイライト</span><span class="name">YouTube</span><span class="geo">日本で再生可</span></div><div class="embedwrap"><iframe id="ytf_${mt.videoId}" src="https://www.youtube-nocookie.com/embed/${mt.videoId}?enablejsapi=1" loading="lazy" title="${escA(teamsTxt)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>公式ハイライト</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
+    // 公式ハイライトはタイトル/サムネに結果が映る場合があるため、既定は隠す（ネタバレ防止）。
+    // 上部トグルまたは下のベールをタップすると表示（ユーザーが自分で開く）。
+    const emb = `<div class="source"><div class="source-head"><span class="tag embed">▶ 公式ハイライト</span><span class="name">YouTube</span><span class="geo">日本で再生可</span></div><div class="embedwrap"><iframe id="ytf_${mt.videoId}" src="https://www.youtube-nocookie.com/embed/${mt.videoId}?enablejsapi=1" loading="lazy" title="${escA(teamsTxt)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>公式ハイライト</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
+    videoBlock = `<button class="video-veil" type="button" onclick="try{localStorage.setItem('fhc_spoiler','0')}catch(e){};document.documentElement.classList.add('spoiler-off');this.blur();"><span class="vv-ic">🙈▶</span><span class="vv-tx">ハイライト動画はネタバレ防止で隠しています<small>タップで表示（結果が映る場合があります）</small></span></button><div class="spoiler-cover">${emb}</div>`;
   } else {
     const q = encodeURIComponent(`${mt.home} ${mt.away} ハイライト ${L.jp}`);
     videoBlock = `<div class="source"><div class="source-head"><span class="tag link">🔎 動画準備中</span><span class="name">公式ハイライト</span></div><a class="ytalt" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">公式ハイライトが公開され次第ここに掲載します。今すぐ探す ▶ YouTubeで検索</a></div>`;
