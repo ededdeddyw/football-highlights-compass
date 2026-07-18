@@ -2,15 +2,15 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-07-17
+> 最終更新: 2026-07-18
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **10** ↓1
-- 表示(7日): **777** ↓148
-- 平均順位(7日): **14.5** ↑1.1（数字が小さいほど上位）
-- CTR(7日): **1.3%**
+- クリック(7日): **6** ↓4
+- 表示(7日): **725** ↓52
+- 平均順位(7日): **16.5** ↑2（数字が小さいほど上位）
+- CTR(7日): **0.8%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **107** / セッション 131
+- GA ユーザー(28日): **110** / セッション 134
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -29,40 +29,40 @@
 | rb ライプツィヒ | 0 | 4 | 46.5 |
 | rbライプツィヒ | 0 | 16 | 40.2 |
 | rbライプツィヒ 試合 | 0 | 1 | 36.0 |
-| sl ベンフィカ | 0 | 2 | 42.5 |
+| sl ベンフィカ | 0 | 3 | 40.7 |
 
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /country/morocco.html | 5 | 1125 | 10.5 |
+| /country/morocco.html | 5 | 1140 | 10.7 |
 | / | 4 | 66 | 8.1 |
-| /country/england.html | 4 | 310 | 7.7 |
-| /country/spain.html | 3 | 125 | 8.6 |
+| /country/england.html | 4 | 311 | 7.7 |
+| /country/spain.html | 3 | 127 | 8.6 |
 | /group/knockout.html | 3 | 41 | 11.3 |
 | /country/mexico.html | 2 | 142 | 8.9 |
-| /guide/world-cup-2026-how-to-watch.html | 2 | 23 | 8.0 |
-| /club/gamba-osaka.html | 1 | 32 | 17.2 |
-| /club/mainz-05.html | 1 | 21 | 23.9 |
-| /club/tokyo-verdy.html | 1 | 44 | 14.5 |
+| /guide/world-cup-2026-how-to-watch.html | 2 | 24 | 8.1 |
+| /club/gamba-osaka.html | 1 | 33 | 16.9 |
+| /club/mainz-05.html | 1 | 24 | 24.0 |
+| /club/tokyo-verdy.html | 1 | 52 | 13.9 |
 | /country/belgium.html | 1 | 65 | 8.0 |
 | /country/dr-congo.html | 1 | 157 | 10.0 |
-| /country/uruguay.html | 1 | 21 | 11.7 |
-| /league/ligue-1.html | 1 | 40 | 17.4 |
+| /country/uruguay.html | 1 | 26 | 14.4 |
+| /league/ligue-1.html | 1 | 41 | 17.7 |
 | /about.html | 0 | 17 | 6.6 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 82 | 21 | 127 |
-| Organic Search | 39 | 18 | 43 |
+| Direct | 83 | 21 | 125 |
+| Organic Search | 40 | 18 | 44 |
 | Referral | 5 | 1 | 1 |
-| Unassigned | 3 | 2 | 34 |
+| Unassigned | 4 | 2 | 71 |
 | AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 103 | 71 | 605 |
+| / | 104 | 73 | 610 |
 | /match/TXyBRmgFIs4.html | 11 | 5 | 120 |
 | /country/england.html | 8 | 6 | 55 |
 | /group/knockout.html | 8 | 3 | 41 |
@@ -75,8 +75,8 @@
 | /league/serie-a.html | 3 | 2 | 1 |
 | /match/J_1iFnRsHG0.html | 3 | 2 | 7 |
 | /match/bl-2526-md1-bayern-leipzig.html | 3 | 1 | 35 |
+| /match/s2OyDJ5O3ZY.html | 3 | 3 | 3 |
 | /country/dr-congo.html | 2 | 2 | 3 |
-| /match/-zyPZH9Gung.html | 2 | 2 | 4 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
@@ -89,4 +89,5 @@
 | 2026-07-15 | 9 | 1040 | 12.9 | 0 | 102 |
 | 2026-07-16 | 11 | 925 | 13.4 | 0 | 106 |
 | 2026-07-17 | 10 | 777 | 14.5 | 0 | 107 |
+| 2026-07-18 | 6 | 725 | 16.5 | 0 | 110 |
 
