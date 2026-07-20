@@ -1,6 +1,36 @@
-# セッション引き継ぎメモ（2026-07-14 時点）
+# セッション引き継ぎメモ（2026-07-14 → 07-20 更新）
 
 次のセッションがそのまま作業を再開できるようにまとめる。**最初にこのファイルと `docs/product-vision.md`・`docs/monetization-strategy.md`・`docs/japanese-style-rules.md` を読むこと。**
+
+---
+## 🆕 最新状況（2026-07-20・五大リーグ展開中）＝ここが最優先の再開ポイント
+
+**サイトを「W杯専用」から「五大リーグ2025-26 全試合の羅針盤」へ拡張中。** ユーザーは翌朝また来る。
+
+### 完了済み
+- **五大リーグ 全試合データ化（計1752試合）**：`data/league-<code>-<season>.json`。bl=ブンデス306(OpenLigaDB)、pl=プレミア380/sa=セリエA380/laliga=ラ・リーガ380/ligue1=リーグアン306（football-data.org、`FOOTBALL_DATA_TOKEN`登録済み）。取得は `fetch-league.mjs`＋`fetch-league.yml`。
+- **78クラブの日本語名**を `data/league-teams.json` に整備。URLスラッグはクラブごと一意（英語正式名から導出、`homeSlug/awaySlug`）。
+- **全試合ページ生成**（`build-site.mjs` の `buildLeagueMatch`）：安定スラッグ `bl-2526-mdN-home-away`、結果マスク、モバイル見どころドロワー、大きいネタバレバー。**見どころ記事 or 動画があるページはindex化、無ければnoindex**。
+- **ブンデス見どころ 299/306・動画 191/306（本番反映済み）**。動画は**既定で隠し「🙈タップで表示」**（ユーザー選択の1案・`.video-veil`＋`.spoiler-cover`）。
+- **動画自動検知** `watch-league.mjs`＋`watch-league.yml`（公式ch＋両チーム名別名`league-team-aliases.json`＋節ゲート＋スコア非表示）。**limit=80程度で回すこと**（306一括は30分timeoutで落ちる。途中保存＋always-commitはあるが小分け推奨）。ブンデスは191で頭打ち（残りは公式にハイライト無し等）。
+- **差分デプロイ** `deploy-diff.yml`（変更ファイルのみ・途中保存で再開可）。全アップロードの `deploy-ftp.yml` は648p超で固まりやすいので**基本 deploy-diff を使う**。
+
+### いま自動で進んでいること（07-20夜〜）
+- **`enrich-matches.yml` に30分ごとの schedule を追加**＝夜間に新4リーグの見どころ(1446件)を自動生成。対象が無くなれば即終了。**バックログが片付いたら schedule 2行を消して頻度を落とすこと**。
+- 生成が進んだら **`deploy-diff.yml` を実行して本番反映**（翌朝ユーザー復帰時 or 生成が大方済んだら）。まだ新4リーグは未デプロイ（空/生成途中ページを重いFTPで先に上げない方針）。
+
+### 次にやること（翌朝〜）
+1. 見どころ生成の進捗確認（`data/match-previews.json` の `pl-/sa-/laliga-/ligue1-` 件数）→ 溜まったら **deploy-diff** で反映。
+2. **動画紐付けを新4リーグへ**：`league-team-aliases.json` に各リーグのクラブ別名（英/現地/略称）を追加 → `watch-league.yml`（code指定・limit80で複数回）。**プレミアはYouTube公式フルハイライトが無い**ので動画は限定的（記事＋案内で対応）。セリエA/ラ・リーガ/リーグアンは公式chあり（geo/embedは埋め込みフォールバックで吸収）。
+3. ホームページ（index.html）への五大リーグ導線・一覧の追加（未着手）。
+4. ユーザー保留：**AdSense再審査リクエスト**（記事激増で今が出しどき）。
+
+### 注意（五大リーグ特有）
+- 見どころ生成の歩留まりは、プロンプトで「過去スコア/勝敗断定語を書かない」よう調整済み（`enrich-matches.mjs`）。
+- `build-site.mjs` は古い `site/match/*` を消さない（gitignore）。ローカルに旧スラッグの残骸が出るがCIは新規チェックアウトなので無害。
+- W杯は決勝まで完了（スペイン優勝）。cron `wc-knockout.yml` が15分ごとに稼働継続中。
+
+---
 
 ## いま何をしていたか（＝最優先の再開ポイント）
 **W杯決勝トーナメント動画のソースを「FOX(米国限定・日本で再生不可)」→「DAZN Japan(日本再生可)」へ貼り直す作業の途中。**

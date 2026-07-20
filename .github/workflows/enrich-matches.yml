@@ -14,6 +14,10 @@ on:
         description: '対象を特定IDに限定する場合（カンマ区切り・任意）'
         required: false
         default: ''
+  # 夜間の見どころ生成キャッチアップ用：30分ごとに未生成分を自動生成（対象が無くなれば即終了＝無駄打ちなし）。
+  # バックログが片付いたら、この schedule 2行を削除/コメントアウトして頻度を落とすこと。
+  schedule:
+    - cron: '*/30 * * * *'
 
 permissions:
   contents: write
@@ -44,7 +48,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
           RUN_DATE: ${{ github.run_id }}
-        run: node scripts/enrich-matches.mjs --limit=${{ github.event.inputs.limit }} ${{ github.event.inputs.ids && format('--ids={0}', github.event.inputs.ids) || '' }}
+        run: node scripts/enrich-matches.mjs --limit=${{ github.event.inputs.limit || '80' }} ${{ github.event.inputs.ids && format('--ids={0}', github.event.inputs.ids) || '' }}
 
       - name: 記事をページに反映（再build）
         if: always()
