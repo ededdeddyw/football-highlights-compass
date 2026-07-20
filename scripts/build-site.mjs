@@ -1056,7 +1056,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
 }
 function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
 try {
-  for (const f of readdirSync('data').filter(n=>/^league-[a-z]+-\d{4}\.json$/.test(n))){
+  for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
     const L = { code:j.code, jp:(LEAGUE_META[j.code]||{}).jp||j.jp||j.code, hub:(LEAGUE_META[j.code]||{}).hub };
     const seasonLbl = j.season==='2025'?'2025-26':j.season;
