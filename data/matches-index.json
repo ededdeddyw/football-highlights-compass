@@ -1340,7 +1340,7 @@
     "leagueName": "Jリーグ2026",
     "meta": "Jリーグ 2026・プレーオフ 11-12位決定戦 第1戦",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "zcUAhveRtYY",
@@ -11601,6 +11601,3678 @@
     "meta": "第38節 / 2025-26",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md1-stade-rennais-olympique-marseille",
+    "teams": [
+      "レンヌ",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-racing-lens-olympique-lyonnais",
+    "teams": [
+      "ランス",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-monaco-le-havre",
+    "teams": [
+      "モナコ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md1-nice-toulouse",
+    "teams": [
+      "ニース",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md1-stade-brestois-lille",
+    "teams": [
+      "ブレスト",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-auxerre-lorient",
+    "teams": [
+      "オセール",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-metz-strasbourg-alsace",
+    "teams": [
+      "メス",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-angers-paris",
+    "teams": [
+      "アンジェ",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md1-nantes-paris-saint-germain",
+    "teams": [
+      "ナント",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第1節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md2-paris-saint-germain-angers",
+    "teams": [
+      "パリ・サンジェルマン",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-olympique-marseille-paris",
+    "teams": [
+      "マルセイユ",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-nice-auxerre",
+    "teams": [
+      "ニース",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-olympique-lyonnais-metz",
+    "teams": [
+      "リヨン",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-lorient-stade-rennais",
+    "teams": [
+      "ロリアン",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-le-havre-racing-lens",
+    "teams": [
+      "ルアーブル",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-toulouse-stade-brestois",
+    "teams": [
+      "トゥールーズ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-strasbourg-alsace-nantes",
+    "teams": [
+      "ストラスブール",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md2-lille-monaco",
+    "teams": [
+      "リール",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第2節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-racing-lens-stade-brestois",
+    "teams": [
+      "ランス",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-lorient-lille",
+    "teams": [
+      "ロリアン",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-nantes-auxerre",
+    "teams": [
+      "ナント",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-toulouse-paris-saint-germain",
+    "teams": [
+      "トゥールーズ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-angers-stade-rennais",
+    "teams": [
+      "アンジェ",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-le-havre-nice",
+    "teams": [
+      "ルアーブル",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-monaco-strasbourg-alsace",
+    "teams": [
+      "モナコ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-paris-metz",
+    "teams": [
+      "パリFC",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md3-olympique-lyonnais-olympique-marseille",
+    "teams": [
+      "リヨン",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第3節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-olympique-marseille-lorient",
+    "teams": [
+      "マルセイユ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-nice-nantes",
+    "teams": [
+      "ニース",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-auxerre-monaco",
+    "teams": [
+      "オセール",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-lille-toulouse",
+    "teams": [
+      "リール",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-metz-angers",
+    "teams": [
+      "メス",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-paris-saint-germain-racing-lens",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-strasbourg-alsace-le-havre",
+    "teams": [
+      "ストラスブール",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-stade-brestois-paris",
+    "teams": [
+      "ブレスト",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md4-stade-rennais-olympique-lyonnais",
+    "teams": [
+      "レンヌ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第4節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-olympique-lyonnais-angers",
+    "teams": [
+      "リヨン",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-nantes-stade-rennais",
+    "teams": [
+      "ナント",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-stade-brestois-nice",
+    "teams": [
+      "ブレスト",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-racing-lens-lille",
+    "teams": [
+      "ランス",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-paris-strasbourg-alsace",
+    "teams": [
+      "パリFC",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-le-havre-lorient",
+    "teams": [
+      "ルアーブル",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-auxerre-toulouse",
+    "teams": [
+      "オセール",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md5-monaco-metz",
+    "teams": [
+      "モナコ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md5-olympique-marseille-paris-saint-germain",
+    "teams": [
+      "マルセイユ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第5節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-strasbourg-alsace-olympique-marseille",
+    "teams": [
+      "ストラスブール",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-lorient-monaco",
+    "teams": [
+      "ロリアン",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-toulouse-nantes",
+    "teams": [
+      "トゥールーズ",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-paris-saint-germain-auxerre",
+    "teams": [
+      "パリ・サンジェルマン",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-nice-paris",
+    "teams": [
+      "ニース",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-metz-le-havre",
+    "teams": [
+      "メス",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-lille-olympique-lyonnais",
+    "teams": [
+      "リール",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-angers-stade-brestois",
+    "teams": [
+      "アンジェ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md6-stade-rennais-racing-lens",
+    "teams": [
+      "レンヌ",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第6節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-paris-lorient",
+    "teams": [
+      "パリFC",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-metz-olympique-marseille",
+    "teams": [
+      "メス",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-stade-brestois-nantes",
+    "teams": [
+      "ブレスト",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-auxerre-racing-lens",
+    "teams": [
+      "オセール",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-olympique-lyonnais-toulouse",
+    "teams": [
+      "リヨン",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md7-strasbourg-alsace-angers",
+    "teams": [
+      "ストラスブール",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-le-havre-stade-rennais",
+    "teams": [
+      "ルアーブル",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-monaco-nice",
+    "teams": [
+      "モナコ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md7-lille-paris-saint-germain",
+    "teams": [
+      "リール",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第7節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-paris-saint-germain-strasbourg-alsace",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-nice-olympique-lyonnais",
+    "teams": [
+      "ニース",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-angers-monaco",
+    "teams": [
+      "アンジェ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-olympique-marseille-le-havre",
+    "teams": [
+      "マルセイユ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-racing-lens-paris",
+    "teams": [
+      "ランス",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-lorient-stade-brestois",
+    "teams": [
+      "ロリアン",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-toulouse-metz",
+    "teams": [
+      "トゥールーズ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-stade-rennais-auxerre",
+    "teams": [
+      "レンヌ",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md8-nantes-lille",
+    "teams": [
+      "ナント",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-paris-nantes",
+    "teams": [
+      "パリFC",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-stade-brestois-paris-saint-germain",
+    "teams": [
+      "ブレスト",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-monaco-toulouse",
+    "teams": [
+      "モナコ",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-racing-lens-olympique-marseille",
+    "teams": [
+      "ランス",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-lille-metz",
+    "teams": [
+      "リール",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-auxerre-le-havre",
+    "teams": [
+      "オセール",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-angers-lorient",
+    "teams": [
+      "アンジェ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-stade-rennais-nice",
+    "teams": [
+      "レンヌ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md9-olympique-lyonnais-strasbourg-alsace",
+    "teams": [
+      "リヨン",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第9節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-le-havre-stade-brestois",
+    "teams": [
+      "ルアーブル",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-lorient-paris-saint-germain",
+    "teams": [
+      "ロリアン",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-metz-racing-lens",
+    "teams": [
+      "メス",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-nice-lille",
+    "teams": [
+      "ニース",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-nantes-monaco",
+    "teams": [
+      "ナント",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-paris-olympique-lyonnais",
+    "teams": [
+      "パリFC",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-toulouse-stade-rennais",
+    "teams": [
+      "トゥールーズ",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-olympique-marseille-angers",
+    "teams": [
+      "マルセイユ",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md10-strasbourg-alsace-auxerre",
+    "teams": [
+      "ストラスブール",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第10節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-paris-saint-germain-nice",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-monaco-paris",
+    "teams": [
+      "モナコ",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-auxerre-olympique-marseille",
+    "teams": [
+      "オセール",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-stade-rennais-strasbourg-alsace",
+    "teams": [
+      "レンヌ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-nantes-metz",
+    "teams": [
+      "ナント",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-toulouse-le-havre",
+    "teams": [
+      "トゥールーズ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-lille-angers",
+    "teams": [
+      "リール",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-racing-lens-lorient",
+    "teams": [
+      "ランス",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md11-stade-brestois-olympique-lyonnais",
+    "teams": [
+      "ブレスト",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第11節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-paris-stade-rennais",
+    "teams": [
+      "パリFC",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-olympique-marseille-stade-brestois",
+    "teams": [
+      "マルセイユ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-le-havre-nantes",
+    "teams": [
+      "ルアーブル",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-monaco-racing-lens",
+    "teams": [
+      "モナコ",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-lorient-toulouse",
+    "teams": [
+      "ロリアン",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-metz-nice",
+    "teams": [
+      "メス",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-strasbourg-alsace-lille",
+    "teams": [
+      "ストラスブール",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-angers-auxerre",
+    "teams": [
+      "アンジェ",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md12-olympique-lyonnais-paris-saint-germain",
+    "teams": [
+      "リヨン",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第12節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-nice-olympique-marseille",
+    "teams": [
+      "ニース",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-racing-lens-strasbourg-alsace",
+    "teams": [
+      "ランス",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-stade-rennais-monaco",
+    "teams": [
+      "レンヌ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-paris-saint-germain-le-havre",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-auxerre-olympique-lyonnais",
+    "teams": [
+      "オセール",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-nantes-lorient",
+    "teams": [
+      "ナント",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-toulouse-angers",
+    "teams": [
+      "トゥールーズ",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-stade-brestois-metz",
+    "teams": [
+      "ブレスト",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md13-lille-paris",
+    "teams": [
+      "リール",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-metz-stade-rennais",
+    "teams": [
+      "メス",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-monaco-paris-saint-germain",
+    "teams": [
+      "モナコ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-paris-auxerre",
+    "teams": [
+      "パリFC",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-olympique-marseille-toulouse",
+    "teams": [
+      "マルセイユ",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-strasbourg-alsace-stade-brestois",
+    "teams": [
+      "ストラスブール",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-le-havre-lille",
+    "teams": [
+      "ルアーブル",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-lorient-nice",
+    "teams": [
+      "ロリアン",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-angers-racing-lens",
+    "teams": [
+      "アンジェ",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md14-olympique-lyonnais-nantes",
+    "teams": [
+      "リヨン",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-stade-brestois-monaco",
+    "teams": [
+      "ブレスト",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-lille-olympique-marseille",
+    "teams": [
+      "リール",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-nantes-racing-lens",
+    "teams": [
+      "ナント",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-toulouse-strasbourg-alsace",
+    "teams": [
+      "トゥールーズ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-paris-saint-germain-stade-rennais",
+    "teams": [
+      "パリ・サンジェルマン",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-nice-angers",
+    "teams": [
+      "ニース",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-le-havre-paris",
+    "teams": [
+      "ルアーブル",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md15-auxerre-metz",
+    "teams": [
+      "オセール",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md15-lorient-olympique-lyonnais",
+    "teams": [
+      "ロリアン",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-angers-nantes",
+    "teams": [
+      "アンジェ",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-stade-rennais-stade-brestois",
+    "teams": [
+      "レンヌ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-metz-paris-saint-germain",
+    "teams": [
+      "メス",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-paris-toulouse",
+    "teams": [
+      "パリFC",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-olympique-lyonnais-le-havre",
+    "teams": [
+      "リヨン",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-auxerre-lille",
+    "teams": [
+      "オセール",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-strasbourg-alsace-lorient",
+    "teams": [
+      "ストラスブール",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-racing-lens-nice",
+    "teams": [
+      "ランス",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md16-olympique-marseille-monaco",
+    "teams": [
+      "マルセイユ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-toulouse-racing-lens",
+    "teams": [
+      "トゥールーズ",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-monaco-olympique-lyonnais",
+    "teams": [
+      "モナコ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-nice-strasbourg-alsace",
+    "teams": [
+      "ニース",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-lille-stade-rennais",
+    "teams": [
+      "リール",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-olympique-marseille-nantes",
+    "teams": [
+      "マルセイユ",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-le-havre-angers",
+    "teams": [
+      "ルアーブル",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-lorient-metz",
+    "teams": [
+      "ロリアン",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-stade-brestois-auxerre",
+    "teams": [
+      "ブレスト",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md17-paris-saint-germain-paris",
+    "teams": [
+      "パリ・サンジェルマン",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第17節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-monaco-lorient",
+    "teams": [
+      "モナコ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-paris-saint-germain-lille",
+    "teams": [
+      "パリ・サンジェルマン",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-racing-lens-auxerre",
+    "teams": [
+      "ランス",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-toulouse-nice",
+    "teams": [
+      "トゥールーズ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-angers-olympique-marseille",
+    "teams": [
+      "アンジェ",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-strasbourg-alsace-metz",
+    "teams": [
+      "ストラスブール",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-nantes-paris",
+    "teams": [
+      "ナント",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-stade-rennais-le-havre",
+    "teams": [
+      "レンヌ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md18-olympique-lyonnais-stade-brestois",
+    "teams": [
+      "リヨン",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-auxerre-paris-saint-germain",
+    "teams": [
+      "オセール",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-stade-rennais-lorient",
+    "teams": [
+      "レンヌ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-le-havre-monaco",
+    "teams": [
+      "ルアーブル",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-olympique-marseille-racing-lens",
+    "teams": [
+      "マルセイユ",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-nantes-nice",
+    "teams": [
+      "ナント",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-metz-olympique-lyonnais",
+    "teams": [
+      "メス",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-paris-angers",
+    "teams": [
+      "パリFC",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md19-stade-brestois-toulouse",
+    "teams": [
+      "ブレスト",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md19-lille-strasbourg-alsace",
+    "teams": [
+      "リール",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第19節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-racing-lens-le-havre",
+    "teams": [
+      "ランス",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-paris-olympique-marseille",
+    "teams": [
+      "パリFC",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-lorient-nantes",
+    "teams": [
+      "ロリアン",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-monaco-stade-rennais",
+    "teams": [
+      "モナコ",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-olympique-lyonnais-lille",
+    "teams": [
+      "リヨン",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-toulouse-auxerre",
+    "teams": [
+      "トゥールーズ",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-nice-stade-brestois",
+    "teams": [
+      "ニース",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-angers-metz",
+    "teams": [
+      "アンジェ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md20-strasbourg-alsace-paris-saint-germain",
+    "teams": [
+      "ストラスブール",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第20節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md21-metz-lille",
+    "teams": [
+      "メス",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "ligue1-2526-md21-racing-lens-stade-rennais",
+    "teams": [
+      "ランス",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-stade-brestois-lorient",
+    "teams": [
+      "ブレスト",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-nantes-olympique-lyonnais",
+    "teams": [
+      "ナント",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-nice-monaco",
+    "teams": [
+      "ニース",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-le-havre-strasbourg-alsace",
+    "teams": [
+      "ルアーブル",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-auxerre-paris",
+    "teams": [
+      "オセール",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-angers-toulouse",
+    "teams": [
+      "アンジェ",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md21-paris-saint-germain-olympique-marseille",
+    "teams": [
+      "パリ・サンジェルマン",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第21節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-stade-rennais-paris-saint-germain",
+    "teams": [
+      "レンヌ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-monaco-nantes",
+    "teams": [
+      "モナコ",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-olympique-marseille-strasbourg-alsace",
+    "teams": [
+      "マルセイユ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-lille-stade-brestois",
+    "teams": [
+      "リール",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-paris-racing-lens",
+    "teams": [
+      "パリFC",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-le-havre-toulouse",
+    "teams": [
+      "ルアーブル",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-lorient-angers",
+    "teams": [
+      "ロリアン",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-metz-auxerre",
+    "teams": [
+      "メス",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md22-olympique-lyonnais-nice",
+    "teams": [
+      "リヨン",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第22節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-stade-brestois-olympique-marseille",
+    "teams": [
+      "ブレスト",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-racing-lens-monaco",
+    "teams": [
+      "ランス",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-toulouse-paris",
+    "teams": [
+      "トゥールーズ",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-paris-saint-germain-metz",
+    "teams": [
+      "パリ・サンジェルマン",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-auxerre-stade-rennais",
+    "teams": [
+      "オセール",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-nantes-le-havre",
+    "teams": [
+      "ナント",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-nice-lorient",
+    "teams": [
+      "ニース",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-angers-lille",
+    "teams": [
+      "アンジェ",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md23-strasbourg-alsace-olympique-lyonnais",
+    "teams": [
+      "ストラスブール",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第23節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-strasbourg-alsace-racing-lens",
+    "teams": [
+      "ストラスブール",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-stade-rennais-toulouse",
+    "teams": [
+      "レンヌ",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-monaco-angers",
+    "teams": [
+      "モナコ",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-le-havre-paris-saint-germain",
+    "teams": [
+      "ルアーブル",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-paris-nice",
+    "teams": [
+      "パリFC",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-lorient-auxerre",
+    "teams": [
+      "ロリアン",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-metz-stade-brestois",
+    "teams": [
+      "メス",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-lille-nantes",
+    "teams": [
+      "リール",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md24-olympique-marseille-olympique-lyonnais",
+    "teams": [
+      "マルセイユ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第24節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-paris-saint-germain-monaco",
+    "teams": [
+      "パリ・サンジェルマン",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-nantes-angers",
+    "teams": [
+      "ナント",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-auxerre-strasbourg-alsace",
+    "teams": [
+      "オセール",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-toulouse-olympique-marseille",
+    "teams": [
+      "トゥールーズ",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-racing-lens-metz",
+    "teams": [
+      "ランス",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-nice-stade-rennais",
+    "teams": [
+      "ニース",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-lille-lorient",
+    "teams": [
+      "リール",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-stade-brestois-le-havre",
+    "teams": [
+      "ブレスト",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md25-olympique-lyonnais-paris",
+    "teams": [
+      "リヨン",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第25節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-olympique-marseille-auxerre",
+    "teams": [
+      "マルセイユ",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-lorient-racing-lens",
+    "teams": [
+      "ロリアン",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-angers-nice",
+    "teams": [
+      "アンジェ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-monaco-stade-brestois",
+    "teams": [
+      "モナコ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-strasbourg-alsace-paris",
+    "teams": [
+      "ストラスブール",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-le-havre-olympique-lyonnais",
+    "teams": [
+      "ルアーブル",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-metz-toulouse",
+    "teams": [
+      "メス",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-stade-rennais-lille",
+    "teams": [
+      "レンヌ",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md26-paris-saint-germain-nantes",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第26節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-racing-lens-angers",
+    "teams": [
+      "ランス",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-toulouse-lorient",
+    "teams": [
+      "トゥールーズ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-auxerre-stade-brestois",
+    "teams": [
+      "オセール",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-nice-paris-saint-germain",
+    "teams": [
+      "ニース",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-olympique-lyonnais-monaco",
+    "teams": [
+      "リヨン",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-paris-le-havre",
+    "teams": [
+      "パリFC",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-olympique-marseille-lille",
+    "teams": [
+      "マルセイユ",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-stade-rennais-metz",
+    "teams": [
+      "レンヌ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md27-nantes-strasbourg-alsace",
+    "teams": [
+      "ナント",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第27節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-paris-saint-germain-toulouse",
+    "teams": [
+      "パリ・サンジェルマン",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-strasbourg-alsace-nice",
+    "teams": [
+      "ストラスブール",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-stade-brestois-stade-rennais",
+    "teams": [
+      "ブレスト",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-lille-racing-lens",
+    "teams": [
+      "リール",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-angers-olympique-lyonnais",
+    "teams": [
+      "アンジェ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-le-havre-auxerre",
+    "teams": [
+      "ルアーブル",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-lorient-paris",
+    "teams": [
+      "ロリアン",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-metz-nantes",
+    "teams": [
+      "メス",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md28-monaco-olympique-marseille",
+    "teams": [
+      "モナコ",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第28節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-paris-monaco",
+    "teams": [
+      "パリFC",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-olympique-marseille-metz",
+    "teams": [
+      "マルセイユ",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-auxerre-nantes",
+    "teams": [
+      "オセール",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-stade-rennais-angers",
+    "teams": [
+      "レンヌ",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-toulouse-lille",
+    "teams": [
+      "トゥールーズ",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-nice-le-havre",
+    "teams": [
+      "ニース",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-olympique-lyonnais-lorient",
+    "teams": [
+      "リヨン",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-stade-brestois-strasbourg-alsace",
+    "teams": [
+      "ブレスト",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md29-racing-lens-paris-saint-germain",
+    "teams": [
+      "ランス",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第29節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-racing-lens-toulouse",
+    "teams": [
+      "ランス",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-lorient-olympique-marseille",
+    "teams": [
+      "ロリアン",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-angers-le-havre",
+    "teams": [
+      "アンジェ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-lille-nice",
+    "teams": [
+      "リール",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-monaco-auxerre",
+    "teams": [
+      "モナコ",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-metz-paris",
+    "teams": [
+      "メス",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-nantes-stade-brestois",
+    "teams": [
+      "ナント",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-strasbourg-alsace-stade-rennais",
+    "teams": [
+      "ストラスブール",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md30-paris-saint-germain-olympique-lyonnais",
+    "teams": [
+      "パリ・サンジェルマン",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第30節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-stade-brestois-racing-lens",
+    "teams": [
+      "ブレスト",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-olympique-lyonnais-auxerre",
+    "teams": [
+      "リヨン",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-angers-paris-saint-germain",
+    "teams": [
+      "アンジェ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-toulouse-monaco",
+    "teams": [
+      "トゥールーズ",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-lorient-strasbourg-alsace",
+    "teams": [
+      "ロリアン",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-le-havre-metz",
+    "teams": [
+      "ルアーブル",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-paris-lille",
+    "teams": [
+      "パリFC",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-stade-rennais-nantes",
+    "teams": [
+      "レンヌ",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md31-olympique-marseille-nice",
+    "teams": [
+      "マルセイユ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第31節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-nantes-olympique-marseille",
+    "teams": [
+      "ナント",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-paris-saint-germain-lorient",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-metz-monaco",
+    "teams": [
+      "メス",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-nice-racing-lens",
+    "teams": [
+      "ニース",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-lille-le-havre",
+    "teams": [
+      "リール",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-auxerre-angers",
+    "teams": [
+      "オセール",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-paris-stade-brestois",
+    "teams": [
+      "パリFC",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-strasbourg-alsace-toulouse",
+    "teams": [
+      "ストラスブール",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md32-olympique-lyonnais-stade-rennais",
+    "teams": [
+      "リヨン",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第32節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-racing-lens-nantes",
+    "teams": [
+      "ランス",
+      "ナント"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-le-havre-olympique-marseille",
+    "teams": [
+      "ルアーブル",
+      "マルセイユ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-auxerre-nice",
+    "teams": [
+      "オセール",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-monaco-lille",
+    "teams": [
+      "モナコ",
+      "リール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-metz-lorient",
+    "teams": [
+      "メス",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-toulouse-olympique-lyonnais",
+    "teams": [
+      "トゥールーズ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-paris-saint-germain-stade-brestois",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-angers-strasbourg-alsace",
+    "teams": [
+      "アンジェ",
+      "ストラスブール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md33-stade-rennais-paris",
+    "teams": [
+      "レンヌ",
+      "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第33節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-lorient-le-havre",
+    "teams": [
+      "ロリアン",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-nantes-toulouse",
+    "teams": [
+      "ナント",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-paris-paris-saint-germain",
+    "teams": [
+      "パリFC",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-nice-metz",
+    "teams": [
+      "ニース",
+      "メス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-olympique-lyonnais-racing-lens",
+    "teams": [
+      "リヨン",
+      "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-olympique-marseille-stade-rennais",
+    "teams": [
+      "マルセイユ",
+      "レンヌ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-lille-auxerre",
+    "teams": [
+      "リール",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-strasbourg-alsace-monaco",
+    "teams": [
+      "ストラスブール",
+      "モナコ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md34-stade-brestois-angers",
+    "teams": [
+      "ブレスト",
+      "アンジェ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第34節 / 2025-26",
+    "players": [],
+    "hasPreview": false
   },
   {
     "id": "pl-2526-md1-liverpool-bournemouth",
