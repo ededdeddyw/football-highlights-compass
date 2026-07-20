@@ -19352,7 +19352,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-torino-lazio",
@@ -20024,7 +20024,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-udinese-parma",
@@ -20660,7 +20660,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-milan-cagliari",
@@ -20696,7 +20696,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-lecce-genoa",
