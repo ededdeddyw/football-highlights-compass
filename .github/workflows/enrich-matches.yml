@@ -14,10 +14,6 @@ on:
         description: '対象を特定IDに限定する場合（カンマ区切り・任意）'
         required: false
         default: ''
-  # 夜間の見どころ生成キャッチアップ用：30分ごとに未生成分を自動生成（対象が無くなれば即終了＝無駄打ちなし）。
-  # バックログが片付いたら、この schedule 2行を削除/コメントアウトして頻度を落とすこと。
-  schedule:
-    - cron: '*/30 * * * *'
 
 permissions:
   contents: write
