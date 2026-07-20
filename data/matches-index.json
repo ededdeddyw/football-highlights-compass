@@ -3404,7 +3404,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第1節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-freiburg-augsburg",
@@ -16088,7 +16088,7 @@
     "leagueName": "プレミアリーグ",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "pl-2526-md38-fulham-newcastle-united",
@@ -16316,7 +16316,7 @@
     "leagueName": "セリエA",
     "meta": "第2節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md2-parma-atalanta",
@@ -17456,7 +17456,7 @@
     "leagueName": "セリエA",
     "meta": "第11節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md11-roma-udinese",
@@ -19304,7 +19304,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-hellas-verona-napoli",
@@ -19316,7 +19316,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-internazionale-milano-genoa",
@@ -19328,7 +19328,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-cremonese-milan",
@@ -19340,7 +19340,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-sassuolo-atalanta",
@@ -19364,7 +19364,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-roma-juventus",
@@ -19376,7 +19376,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-pisa-bologna",
@@ -19388,7 +19388,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md27-udinese-acf-fiorentina",
@@ -19400,7 +19400,7 @@
     "leagueName": "セリエA",
     "meta": "第27節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-napoli-torino",
@@ -19412,7 +19412,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-cagliari-como",
@@ -19424,7 +19424,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-atalanta-udinese",
@@ -19436,7 +19436,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-juventus-pisa",
@@ -19448,7 +19448,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-lecce-cremonese",
@@ -19460,7 +19460,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-bologna-hellas-verona",
@@ -19472,7 +19472,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-acf-fiorentina-parma",
@@ -19484,7 +19484,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-genoa-roma",
@@ -19496,7 +19496,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-milan-internazionale-milano",
@@ -19508,7 +19508,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md28-lazio-sassuolo",
@@ -19520,7 +19520,7 @@
     "leagueName": "セリエA",
     "meta": "第28節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-torino-parma",
@@ -19532,7 +19532,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-internazionale-milano-atalanta",
@@ -19544,7 +19544,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-napoli-lecce",
@@ -19556,7 +19556,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-udinese-juventus",
@@ -19568,7 +19568,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-hellas-verona-genoa",
@@ -19580,7 +19580,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-pisa-cagliari",
@@ -19592,7 +19592,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-sassuolo-bologna",
@@ -19604,7 +19604,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-como-roma",
@@ -19616,7 +19616,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-lazio-milan",
@@ -19628,7 +19628,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md29-cremonese-acf-fiorentina",
@@ -19640,7 +19640,7 @@
     "leagueName": "セリエA",
     "meta": "第29節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-cagliari-napoli",
@@ -19652,7 +19652,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-genoa-udinese",
@@ -19664,7 +19664,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-parma-cremonese",
@@ -19676,7 +19676,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-milan-torino",
@@ -19688,7 +19688,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-juventus-sassuolo",
@@ -19700,7 +19700,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-como-pisa",
@@ -19712,7 +19712,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-atalanta-hellas-verona",
@@ -19724,7 +19724,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-bologna-lazio",
@@ -19736,7 +19736,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-roma-lecce",
@@ -19748,7 +19748,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md30-acf-fiorentina-internazionale-milano",
@@ -19760,7 +19760,7 @@
     "leagueName": "セリエA",
     "meta": "第30節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-sassuolo-cagliari",
@@ -19772,7 +19772,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-hellas-verona-acf-fiorentina",
@@ -19784,7 +19784,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-lazio-parma",
@@ -19796,7 +19796,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-cremonese-bologna",
@@ -19808,7 +19808,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-pisa-torino",
@@ -19820,7 +19820,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-internazionale-milano-roma",
@@ -19832,7 +19832,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-udinese-como",
@@ -19844,7 +19844,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-lecce-atalanta",
@@ -19856,7 +19856,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-juventus-genoa",
@@ -19868,7 +19868,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md31-napoli-milan",
@@ -19880,7 +19880,7 @@
     "leagueName": "セリエA",
     "meta": "第31節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-roma-pisa",
@@ -19892,7 +19892,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-cagliari-cremonese",
@@ -19904,7 +19904,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-torino-hellas-verona",
@@ -19916,7 +19916,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-milan-udinese",
@@ -19928,7 +19928,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-atalanta-juventus",
@@ -19940,7 +19940,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-genoa-sassuolo",
@@ -19952,7 +19952,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-parma-napoli",
@@ -19964,7 +19964,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-bologna-lecce",
@@ -19976,7 +19976,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-como-internazionale-milano",
@@ -19988,7 +19988,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md32-acf-fiorentina-lazio",
@@ -20000,7 +20000,7 @@
     "leagueName": "セリエA",
     "meta": "第32節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-sassuolo-como",
@@ -20012,7 +20012,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-internazionale-milano-cagliari",
@@ -20036,7 +20036,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-napoli-lazio",
@@ -20048,7 +20048,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-roma-atalanta",
@@ -20060,7 +20060,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-cremonese-torino",
@@ -20072,7 +20072,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-hellas-verona-milan",
@@ -20084,7 +20084,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-pisa-genoa",
@@ -20096,7 +20096,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-juventus-bologna",
@@ -20108,7 +20108,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md33-lecce-acf-fiorentina",
@@ -20120,7 +20120,7 @@
     "leagueName": "セリエA",
     "meta": "第33節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-napoli-cremonese",
@@ -20132,7 +20132,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-parma-pisa",
@@ -20144,7 +20144,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-bologna-roma",
@@ -20156,7 +20156,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-hellas-verona-lecce",
@@ -20168,7 +20168,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-acf-fiorentina-sassuolo",
@@ -20180,7 +20180,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-genoa-como",
@@ -20192,7 +20192,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-torino-internazionale-milano",
@@ -20204,7 +20204,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-milan-juventus",
@@ -20216,7 +20216,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-cagliari-atalanta",
@@ -20228,7 +20228,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md34-lazio-udinese",
@@ -20240,7 +20240,7 @@
     "leagueName": "セリエA",
     "meta": "第34節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-pisa-lecce",
@@ -20252,7 +20252,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-udinese-torino",
@@ -20264,7 +20264,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-como-napoli",
@@ -20276,7 +20276,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-atalanta-genoa",
@@ -20288,7 +20288,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-bologna-cagliari",
@@ -20300,7 +20300,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-sassuolo-milan",
@@ -20312,7 +20312,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-juventus-hellas-verona",
@@ -20324,7 +20324,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-internazionale-milano-parma",
@@ -20336,7 +20336,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-cremonese-lazio",
@@ -20348,7 +20348,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md35-roma-acf-fiorentina",
@@ -20360,7 +20360,7 @@
     "leagueName": "セリエA",
     "meta": "第35節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-torino-sassuolo",
@@ -20372,7 +20372,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-cagliari-udinese",
@@ -20384,7 +20384,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-lazio-internazionale-milano",
@@ -20396,7 +20396,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-lecce-juventus",
@@ -20408,7 +20408,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-hellas-verona-como",
@@ -20420,7 +20420,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-acf-fiorentina-genoa",
@@ -20432,7 +20432,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-cremonese-pisa",
@@ -20444,7 +20444,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-parma-roma",
@@ -20456,7 +20456,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-milan-atalanta",
@@ -20468,7 +20468,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md36-napoli-bologna",
@@ -20480,7 +20480,7 @@
     "leagueName": "セリエA",
     "meta": "第36節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-roma-lazio",
@@ -20492,7 +20492,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-genoa-milan",
@@ -20504,7 +20504,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-como-parma",
@@ -20516,7 +20516,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-juventus-acf-fiorentina",
@@ -20528,7 +20528,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-pisa-napoli",
@@ -20540,7 +20540,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-internazionale-milano-hellas-verona",
@@ -20552,7 +20552,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-atalanta-bologna",
@@ -20564,7 +20564,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-cagliari-torino",
@@ -20576,7 +20576,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-sassuolo-lecce",
@@ -20588,7 +20588,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md37-udinese-cremonese",
@@ -20600,7 +20600,7 @@
     "leagueName": "セリエA",
     "meta": "第37節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-acf-fiorentina-atalanta",
@@ -20612,7 +20612,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-bologna-internazionale-milano",
@@ -20624,7 +20624,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-lazio-pisa",
@@ -20636,7 +20636,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-parma-sassuolo",
@@ -20672,7 +20672,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-hellas-verona-roma",
@@ -20684,7 +20684,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-cremonese-como",
@@ -20708,7 +20708,7 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "sa-2526-md38-torino-juventus",
@@ -20720,6 +20720,6 @@
     "leagueName": "セリエA",
     "meta": "第38節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   }
 ]
