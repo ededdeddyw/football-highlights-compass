@@ -32,6 +32,10 @@ const LEAGUE = {
 // コンパイル/まとめ動画を弾く保険（公式chでもシーズン総集編・週間まとめ等がある）。
 const NEG = /top\s*\d|best .*goals|goals of the|all goals|every goal|\bskills\b|preview|line-?ups?\b|simulation|predict|\bsquad|how old|efootball|fc mobile|\bshorts\b|\bpics\b|week\s*\d|results\s*&|round-?up|season review|best of/i;
 
+// シーズン取り違え防止：同じ対戦は毎年あるため、別シーズン表記があれば弾く（現行=2025/26）。
+const CUR_SEASON = /(2025\s*[\/-]\s*26|(^|\D)25\s*[\/-]\s*26(\D|$))/;
+const OTHER_SEASON = /(20(1\d|2[0-4]|2[6-9])\s*[\/-]\s*\d{2})|((^|\D)(1\d|2[0-4]|2[6-9])\s*[\/-]\s*\d{2}(\D|$))/;
+
 // アクセント除去＋小文字化。タイトルはアクセント無し表記が多い（Atlético→atletico）ので両側で畳む。
 const fold = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const norm = s => fold(s).toLowerCase();
@@ -40,11 +44,13 @@ const nsp = s => norm(s).replace(/\s+/g, '');
 const variants = ja => (ALIASES[ja] || [ja]).map(nsp).filter(v => v.length >= 3);
 const firstAlias = ja => (ALIASES[ja] || [ja])[0];
 const nameHit = (ja, titleNsp) => variants(ja).some(v => titleNsp.includes(v));
-// タイトル内で最初に現れる位置（見つからなければ -1）
-const firstIdx = (ja, titleNsp) => {
-  let best = -1;
-  for (const v of variants(ja)) { const i = titleNsp.indexOf(v); if (i >= 0 && (best < 0 || i < best)) best = i; }
-  return best;
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// ホーム→アウェイの「隣接」判定：<home>〔スコア/記号〕<away> が近接して現れるか（先頭の編集見出しに騙されないため）。
+// 例: "sassuolo-napoli0-2" / "villarrealcf2-0realoviedo" は home→away 隣接、"bologna-roma"（Romaがhome指定でも）は不一致。
+const orderAdjacent = (home, away, titleNsp) => {
+  const hAlt = variants(home).map(reEsc).join('|'), aAlt = variants(away).map(reEsc).join('|');
+  if (!hAlt || !aAlt) return false;
+  return new RegExp(`(?:${hAlt}).{0,12}(?:${aAlt})`).test(titleNsp);
 };
 
 async function searchIds(query) {
@@ -85,14 +91,14 @@ for (const f of files) {
       const mt = await meta(id); await sleep(120);
       if (!mt) { rejects.push(`meta失敗 ${id}`); continue; }
       const tN = nsp(mt.title);
-      const hi = firstIdx(m.home, tN), ai = firstIdx(m.away, tN);
       const gate = !chOk(mt.author) ? `非公式ch(${mt.author})`
-        : hi < 0 ? 'homeなし'
-        : ai < 0 ? 'awayなし'
-        : (cfg.order && !(hi < ai)) ? 'ホーム/アウェイ順が逆（別レグ）'
+        : !nameHit(m.home, tN) ? 'homeなし'
+        : !nameHit(m.away, tN) ? 'awayなし'
+        : (cfg.order && !orderAdjacent(m.home, m.away, tN)) ? 'ホーム→アウェイ隣接なし（別レグ/編集見出し）'
         : (cfg.kw && !cfg.kw.test(mt.title)) ? 'キーワード無し'
         : (cfg.matchday && !mdRe.test(mt.title)) ? `節不一致(md${m.matchday})`
         : (!cfg.allowScore && /\d+\s*[-–—]\s*\d+/.test(mt.title)) ? 'スコア入り(ネタバレ)'
+        : (OTHER_SEASON.test(mt.title) && !CUR_SEASON.test(mt.title)) ? '別シーズン'
         : NEG.test(mt.title) ? 'まとめ/総集編'
         : 'OK';
       if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
