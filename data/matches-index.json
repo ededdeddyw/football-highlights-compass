@@ -207,7 +207,7 @@
     "leagueName": "Jリーグ2026",
     "meta": "Jリーグ 2026・プレーオフ 1-2位決定戦 第1戦",
     "players": [],
-    "hasPreview": true
+    "hasPreview": false
   },
   {
     "id": "QH4F85TiD0M",
@@ -1988,7 +1988,7 @@
     "leagueName": "Jリーグ2026",
     "meta": "Jリーグ 2026・プレーオフ 1-2位決定戦 第2戦・神戸が王者",
     "players": [],
-    "hasPreview": true
+    "hasPreview": false
   },
   {
     "id": "dO0f-a5AegE",
@@ -2971,7 +2971,7 @@
     "players": [
       "佐野海舟"
     ],
-    "hasPreview": true
+    "hasPreview": false
   },
   {
     "id": "pKWnFYZ3NgY",
@@ -11648,7 +11648,7 @@
     "leagueName": "リーグアン",
     "meta": "第1節 / 2025-26",
     "players": [],
-    "hasPreview": true
+    "hasPreview": false
   },
   {
     "id": "ligue1-2526-md1-stade-brestois-lille",
@@ -21128,7 +21128,7 @@
     "leagueName": "セリエA",
     "meta": "第11節 / 2025-26",
     "players": [],
-    "hasPreview": true
+    "hasPreview": false
   },
   {
     "id": "sa-2526-md11-roma-udinese",
