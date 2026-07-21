@@ -2,29 +2,29 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-07-20
+> 最終更新: 2026-07-21
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **6** ↑1
-- 表示(7日): **578** ↓33
-- 平均順位(7日): **19.8** ↑1（数字が小さいほど上位）
-- CTR(7日): **1.0%**
+- クリック(7日): **6** →
+- 表示(7日): **540** ↓38
+- 平均順位(7日): **19.3** ↓0.5（数字が小さいほど上位）
+- CTR(7日): **1.1%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **116** / セッション 142
+- GA ユーザー(28日): **117** / セッション 144
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
 | モロッコ ワールドカップ 歴代 | 2 | 76 | 5.6 |
 | スペイン ハイライト | 1 | 18 | 8.1 |
-| ブレーメン ブンデスリーガ | 1 | 13 | 10.5 |
+| ブレーメン ブンデスリーガ | 1 | 17 | 16.8 |
 | メキシコ ワールドカップ 歴代 | 1 | 13 | 7.7 |
 | モロッコ サッカー 歴史 | 1 | 27 | 10.0 |
 | モロッコ ワールドカップ | 1 | 9 | 37.7 |
 | 2026 fifaワールドカップ youtube ハイライト 公式 日本語 | 0 | 1 | 10.0 |
 | asモナコ 対 psg スタメン | 0 | 1 | 29.0 |
 | dazn 結果表示 消す | 0 | 1 | 1.0 |
-| fc 東京 本拠地 | 0 | 14 | 33.9 |
+| fc 東京 本拠地 | 0 | 19 | 34.3 |
 | j-1 豊田本町 | 0 | 1 | 43.0 |
 | rb leipzig | 0 | 5 | 28.2 |
 | rb ライプツィヒ | 0 | 4 | 46.5 |
@@ -34,54 +34,53 @@
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /country/morocco.html | 5 | 1151 | 10.7 |
-| / | 4 | 71 | 8.0 |
-| /country/england.html | 4 | 317 | 7.7 |
-| /country/spain.html | 3 | 132 | 8.6 |
-| /group/knockout.html | 3 | 42 | 12.0 |
+| /country/morocco.html | 5 | 1155 | 10.7 |
+| / | 4 | 72 | 8.0 |
+| /country/england.html | 4 | 318 | 7.7 |
+| /country/spain.html | 3 | 138 | 8.7 |
+| /group/knockout.html | 3 | 45 | 12.9 |
 | /country/mexico.html | 2 | 142 | 8.9 |
-| /guide/world-cup-2026-how-to-watch.html | 2 | 26 | 8.2 |
-| /club/gamba-osaka.html | 1 | 43 | 14.8 |
-| /club/mainz-05.html | 1 | 26 | 23.0 |
-| /club/tokyo-verdy.html | 1 | 68 | 13.6 |
-| /club/werder-bremen.html | 1 | 137 | 12.6 |
+| /guide/world-cup-2026-how-to-watch.html | 2 | 29 | 8.3 |
+| /club/borussia-dortmund.html | 1 | 36 | 31.6 |
+| /club/gamba-osaka.html | 1 | 45 | 14.6 |
+| /club/mainz-05.html | 1 | 27 | 24.1 |
+| /club/tokyo-verdy.html | 1 | 69 | 13.8 |
+| /club/werder-bremen.html | 1 | 150 | 13.2 |
 | /country/belgium.html | 1 | 65 | 8.0 |
 | /country/dr-congo.html | 1 | 157 | 10.0 |
-| /country/uruguay.html | 1 | 32 | 13.5 |
-| /league/ligue-1.html | 1 | 43 | 17.6 |
+| /country/uruguay.html | 1 | 39 | 12.8 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 87 | 22 | 120 |
-| Organic Search | 45 | 22 | 122 |
+| Direct | 88 | 22 | 145 |
+| Organic Search | 46 | 24 | 120 |
 | Referral | 5 | 1 | 1 |
-| Unassigned | 3 | 2 | 34 |
+| Unassigned | 5 | 2 | 27 |
 | AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 108 | 76 | 740 |
-| /match/TXyBRmgFIs4.html | 11 | 5 | 120 |
+| / | 115 | 77 | 765 |
+| /match/TXyBRmgFIs4.html | 12 | 5 | 122 |
 | /group/knockout.html | 10 | 4 | 43 |
 | /country/england.html | 8 | 6 | 55 |
 | /match/3jIMk43CECY.html | 7 | 3 | 2 |
 | /league/laliga.html | 6 | 1 | 0 |
 | /guide/world-cup-2026-how-to-watch.html | 5 | 4 | 15 |
+| /league/serie-a.html | 4 | 3 | 6 |
 | /country/mexico.html | 3 | 2 | 23 |
 | /country/morocco.html | 3 | 3 | 9 |
 | /country/spain.html | 3 | 3 | 142 |
-| /league/serie-a.html | 3 | 2 | 1 |
 | /match/J_1iFnRsHG0.html | 3 | 2 | 7 |
 | /match/bl-2526-md1-bayern-leipzig.html | 3 | 1 | 35 |
 | /match/s2OyDJ5O3ZY.html | 3 | 3 | 3 |
-| /country/dr-congo.html | 2 | 2 | 3 |
+| /match/s9MoErtoO44.html | 3 | 2 | 5 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-07-12 | 13 | 1582 | 11.0 | 0 | 84 |
 | 2026-07-12 | 13 | 1582 | 11.0 | 0 | 88 |
 | 2026-07-13 | 11 | 1503 | 11.1 | 0 | 92 |
 | 2026-07-14 | 11 | 1319 | 11.7 | 0 | 98 |
@@ -91,4 +90,5 @@
 | 2026-07-18 | 6 | 725 | 16.5 | 0 | 110 |
 | 2026-07-19 | 5 | 611 | 18.8 | 0 | 113 |
 | 2026-07-20 | 6 | 578 | 19.8 | 0 | 116 |
+| 2026-07-21 | 6 | 540 | 19.3 | 0 | 117 |
 
