@@ -21,12 +21,13 @@ const ALIASES = readJson('data/league-team-aliases.json', {});
 // リーグごとの照合設定。channels は公式チャンネル名（正規化して厳密一致）。
 //  kw: タイトルに要求するキーワード（null なら要求しない）。matchday: 節番号ゲートを使うか。
 //  order: ホーム→アウェイの登場順で判定するか。allowScore: スコア入りタイトルを許可するか。
+// league: タイトルにこのリーグ名が入っていることを必須化（同じ公式chが出すカップ戦=コッパ/コパ/クープ等を除外）。
 const LEAGUE = {
-  bl:     { q: 'Bundesliga',     channels: ['Bundesliga'],                                              kw: /highlights|ハイライト/i,                    matchday: true,  order: false, allowScore: false },
-  pl:     { q: 'Premier League', channels: ['Premier League'],                                          kw: /highlights|ハイライト/i,                    matchday: true,  order: true,  allowScore: false },
-  sa:     { q: 'Serie A',        channels: ['Serie A', 'Lega Serie A'],                                 kw: /highlights|ハイライト/i,                    matchday: false, order: true,  allowScore: true },
-  laliga: { q: 'LaLiga',         channels: ['LALIGA EA SPORTS', 'LaLiga', 'LALIGA'],                    kw: /highlights|ハイライト|resumen/i,            matchday: false, order: true,  allowScore: true },
-  ligue1: { q: 'Ligue 1',        channels: ["Ligue 1 McDonald's", 'Ligue 1 McDonald’s', 'Ligue 1'],    kw: null,                                        matchday: false, order: true,  allowScore: true },
+  bl:     { q: 'Bundesliga',     channels: ['Bundesliga'],                                              kw: /highlights|ハイライト/i,          league: /bundesliga/i,     matchday: true,  order: false, allowScore: false },
+  pl:     { q: 'Premier League', channels: ['Premier League'],                                          kw: /highlights|ハイライト/i,          league: /premier\s*league/i, matchday: true,  order: true,  allowScore: false },
+  sa:     { q: 'Serie A',        channels: ['Serie A', 'Lega Serie A'],                                 kw: /highlights|ハイライト/i,          league: /serie\s*a/i,      matchday: false, order: true,  allowScore: true },
+  laliga: { q: 'LaLiga',         channels: ['LALIGA EA SPORTS', 'LaLiga', 'LALIGA'],                    kw: /highlights|ハイライト|resumen/i,  league: /la\s*liga/i,      matchday: false, order: true,  allowScore: true },
+  ligue1: { q: 'Ligue 1',        channels: ["Ligue 1 McDonald's", 'Ligue 1 McDonald’s', 'Ligue 1'],    kw: null,                              league: /ligue\s*1/i,      matchday: false, order: true,  allowScore: true },
 };
 
 // コンパイル/まとめ動画を弾く保険（公式chでもシーズン総集編・週間まとめ等がある）。
@@ -96,6 +97,7 @@ for (const f of files) {
         : !nameHit(m.away, tN) ? 'awayなし'
         : (cfg.order && !orderAdjacent(m.home, m.away, tN)) ? 'ホーム→アウェイ隣接なし（別レグ/編集見出し）'
         : (cfg.kw && !cfg.kw.test(mt.title)) ? 'キーワード無し'
+        : (cfg.league && !cfg.league.test(mt.title)) ? '別大会（リーグ名なし）'
         : (cfg.matchday && !mdRe.test(mt.title)) ? `節不一致(md${m.matchday})`
         : (!cfg.allowScore && /\d+\s*[-–—]\s*\d+/.test(mt.title)) ? 'スコア入り(ネタバレ)'
         : (OTHER_SEASON.test(mt.title) && !CUR_SEASON.test(mt.title)) ? '別シーズン'
