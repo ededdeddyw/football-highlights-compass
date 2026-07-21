@@ -1,21 +1,311 @@
 {
   "_note": "YouTube公式ハイライトのタイトル照合用。日本語表記 → タイトルに現れうる別名（英/独/略称）。watch-league.mjs が使う。",
-  "バイエルン": ["Bayern", "FC Bayern", "Bayern Munich", "Bayern München", "Bayern Muenchen", "FCB"],
-  "レバークーゼン": ["Leverkusen", "Bayer Leverkusen", "Bayer 04", "B04"],
-  "フランクフルト": ["Frankfurt", "Eintracht Frankfurt", "Eintracht", "SGE"],
-  "ドルトムント": ["Dortmund", "Borussia Dortmund", "BVB"],
-  "ライプツィヒ": ["Leipzig", "RB Leipzig", "RBL"],
-  "シュツットガルト": ["Stuttgart", "VfB Stuttgart", "VfB"],
-  "フライブルク": ["Freiburg", "SC Freiburg"],
-  "ボルシアMG": ["Gladbach", "Mönchengladbach", "Moenchengladbach", "Monchengladbach", "Borussia Mönchengladbach", "M'gladbach", "BMG"],
-  "ウォルフスブルク": ["Wolfsburg", "VfL Wolfsburg"],
-  "マインツ": ["Mainz", "Mainz 05", "FSV Mainz", "1. FSV Mainz"],
-  "アウクスブルク": ["Augsburg", "FC Augsburg", "FCA"],
-  "ブレーメン": ["Werder Bremen", "Werder", "SV Werder", "Bremen"],
-  "ホッフェンハイム": ["Hoffenheim", "TSG Hoffenheim", "TSG 1899"],
-  "ウニオン・ベルリン": ["Union Berlin", "1. FC Union", "Union"],
-  "ハイデンハイム": ["Heidenheim", "1. FC Heidenheim", "FC Heidenheim"],
-  "ザンクトパウリ": ["St. Pauli", "St Pauli", "FC St. Pauli", "Sankt Pauli"],
-  "ケルン": ["1. FC Köln", "FC Köln", "Köln", "Koeln", "Cologne"],
-  "ハンブルガーSV": ["Hamburger SV", "Hamburg", "HSV"]
+  "バイエルン": [
+    "Bayern",
+    "FC Bayern",
+    "Bayern Munich",
+    "Bayern München",
+    "Bayern Muenchen",
+    "FCB"
+  ],
+  "レバークーゼン": [
+    "Leverkusen",
+    "Bayer Leverkusen",
+    "Bayer 04",
+    "B04"
+  ],
+  "フランクフルト": [
+    "Frankfurt",
+    "Eintracht Frankfurt",
+    "Eintracht",
+    "SGE"
+  ],
+  "ドルトムント": [
+    "Dortmund",
+    "Borussia Dortmund",
+    "BVB"
+  ],
+  "ライプツィヒ": [
+    "Leipzig",
+    "RB Leipzig",
+    "RBL"
+  ],
+  "シュツットガルト": [
+    "Stuttgart",
+    "VfB Stuttgart",
+    "VfB"
+  ],
+  "フライブルク": [
+    "Freiburg",
+    "SC Freiburg"
+  ],
+  "ボルシアMG": [
+    "Gladbach",
+    "Mönchengladbach",
+    "Moenchengladbach",
+    "Monchengladbach",
+    "Borussia Mönchengladbach",
+    "M'gladbach",
+    "BMG"
+  ],
+  "ウォルフスブルク": [
+    "Wolfsburg",
+    "VfL Wolfsburg"
+  ],
+  "マインツ": [
+    "Mainz",
+    "Mainz 05",
+    "FSV Mainz",
+    "1. FSV Mainz"
+  ],
+  "アウクスブルク": [
+    "Augsburg",
+    "FC Augsburg",
+    "FCA"
+  ],
+  "ブレーメン": [
+    "Werder Bremen",
+    "Werder",
+    "SV Werder",
+    "Bremen"
+  ],
+  "ホッフェンハイム": [
+    "Hoffenheim",
+    "TSG Hoffenheim",
+    "TSG 1899"
+  ],
+  "ウニオン・ベルリン": [
+    "Union Berlin",
+    "1. FC Union",
+    "Union"
+  ],
+  "ハイデンハイム": [
+    "Heidenheim",
+    "1. FC Heidenheim",
+    "FC Heidenheim"
+  ],
+  "ザンクトパウリ": [
+    "St. Pauli",
+    "St Pauli",
+    "FC St. Pauli",
+    "Sankt Pauli"
+  ],
+  "ケルン": [
+    "1. FC Köln",
+    "FC Köln",
+    "Köln",
+    "Koeln",
+    "Cologne"
+  ],
+  "ハンブルガーSV": [
+    "Hamburger SV",
+    "Hamburg",
+    "HSV"
+  ],
+  "アタランタ": [
+    "Atalanta"
+  ],
+  "インテル": [
+    "Inter",
+    "Internazionale",
+    "Inter Milan"
+  ],
+  "ウディネーゼ": [
+    "Udinese"
+  ],
+  "カリアリ": [
+    "Cagliari"
+  ],
+  "クレモネーゼ": [
+    "Cremonese"
+  ],
+  "コモ": [
+    "Como"
+  ],
+  "サッスオーロ": [
+    "Sassuolo"
+  ],
+  "ジェノア": [
+    "Genoa"
+  ],
+  "トリノ": [
+    "Torino"
+  ],
+  "ナポリ": [
+    "Napoli"
+  ],
+  "パルマ": [
+    "Parma"
+  ],
+  "ピサ": [
+    "Pisa"
+  ],
+  "フィオレンティーナ": [
+    "Fiorentina"
+  ],
+  "ボローニャ": [
+    "Bologna"
+  ],
+  "ミラン": [
+    "AC Milan",
+    "Milan"
+  ],
+  "ユベントス": [
+    "Juventus",
+    "Juve"
+  ],
+  "ラツィオ": [
+    "Lazio"
+  ],
+  "レッチェ": [
+    "Lecce"
+  ],
+  "ローマ": [
+    "AS Roma",
+    "Roma"
+  ],
+  "ヴェローナ": [
+    "Hellas Verona",
+    "Verona"
+  ],
+  "アスレティック・ビルバオ": [
+    "Athletic Club",
+    "Athletic Bilbao",
+    "Athletic"
+  ],
+  "アトレティコ・マドリード": [
+    "Atletico Madrid",
+    "Atletico de Madrid",
+    "Atleti",
+    "Atletico"
+  ],
+  "アラベス": [
+    "Alaves",
+    "Deportivo Alaves"
+  ],
+  "エスパニョール": [
+    "Espanyol"
+  ],
+  "エルチェ": [
+    "Elche"
+  ],
+  "オサスナ": [
+    "Osasuna"
+  ],
+  "オビエド": [
+    "Real Oviedo",
+    "Oviedo"
+  ],
+  "ジローナ": [
+    "Girona"
+  ],
+  "セビージャ": [
+    "Sevilla"
+  ],
+  "セルタ": [
+    "Celta Vigo",
+    "Celta"
+  ],
+  "バルセロナ": [
+    "Barcelona",
+    "Barca",
+    "FC Barcelona"
+  ],
+  "バレンシア": [
+    "Valencia"
+  ],
+  "ビジャレアル": [
+    "Villarreal"
+  ],
+  "ヘタフェ": [
+    "Getafe"
+  ],
+  "ベティス": [
+    "Real Betis",
+    "Betis"
+  ],
+  "マヨルカ": [
+    "Mallorca",
+    "RCD Mallorca"
+  ],
+  "ラーヨ・バジェカーノ": [
+    "Rayo Vallecano",
+    "Rayo"
+  ],
+  "レアル・ソシエダ": [
+    "Real Sociedad",
+    "Sociedad"
+  ],
+  "レアル・マドリード": [
+    "Real Madrid",
+    "Real Madrid CF"
+  ],
+  "レバンテ": [
+    "Levante"
+  ],
+  "アンジェ": [
+    "Angers"
+  ],
+  "オセール": [
+    "Auxerre"
+  ],
+  "ストラスブール": [
+    "Strasbourg"
+  ],
+  "トゥールーズ": [
+    "Toulouse"
+  ],
+  "ナント": [
+    "Nantes"
+  ],
+  "ニース": [
+    "Nice",
+    "OGC Nice"
+  ],
+  "パリFC": [
+    "Paris FC"
+  ],
+  "パリ・サンジェルマン": [
+    "PSG",
+    "Paris Saint-Germain",
+    "Paris SG"
+  ],
+  "ブレスト": [
+    "Brest",
+    "Stade Brestois"
+  ],
+  "マルセイユ": [
+    "Marseille",
+    "Olympique de Marseille"
+  ],
+  "メス": [
+    "Metz"
+  ],
+  "モナコ": [
+    "AS Monaco",
+    "Monaco"
+  ],
+  "ランス": [
+    "RC Lens",
+    "Lens"
+  ],
+  "リヨン": [
+    "Olympique Lyonnais",
+    "Lyon"
+  ],
+  "リール": [
+    "Lille",
+    "LOSC"
+  ],
+  "ルアーブル": [
+    "Le Havre",
+    "Havre"
+  ],
+  "レンヌ": [
+    "Stade Rennais",
+    "Rennes"
+  ],
+  "ロリアン": [
+    "Lorient"
+  ]
 }
