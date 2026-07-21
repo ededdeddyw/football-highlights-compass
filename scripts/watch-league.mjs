@@ -38,7 +38,7 @@ async function meta(id) {
   try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
 }
 
-const files = readdirSync('data').filter(n => /^league-([a-z]+)-\d{4}\.json$/.test(n)).filter(n => !CODE || n.startsWith(`league-${CODE}-`));
+const files = readdirSync('data').filter(n => /^league-([a-z0-9]+)-\d{4}\.json$/.test(n)).filter(n => !CODE || n.startsWith(`league-${CODE}-`));
 let searched = 0, confirmedTotal = 0;
 
 for (const f of files) {
