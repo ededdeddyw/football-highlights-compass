@@ -2,15 +2,15 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-07-21
+> 最終更新: 2026-07-22
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **6** →
-- 表示(7日): **540** ↓38
-- 平均順位(7日): **19.3** ↓0.5（数字が小さいほど上位）
-- CTR(7日): **1.1%**
+- クリック(7日): **3** ↓3
+- 表示(7日): **450** ↓90
+- 平均順位(7日): **21.0** ↑1.7（数字が小さいほど上位）
+- CTR(7日): **0.7%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **117** / セッション 144
+- GA ユーザー(28日): **119** / セッション 147
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -23,46 +23,46 @@
 | モロッコ ワールドカップ | 1 | 9 | 37.7 |
 | 2026 fifaワールドカップ youtube ハイライト 公式 日本語 | 0 | 1 | 10.0 |
 | asモナコ 対 psg スタメン | 0 | 1 | 29.0 |
+| benfica | 0 | 1 | 46.0 |
 | dazn 結果表示 消す | 0 | 1 | 1.0 |
-| fc 東京 本拠地 | 0 | 19 | 34.3 |
+| fc 東京 本拠地 | 0 | 20 | 35.0 |
 | j-1 豊田本町 | 0 | 1 | 43.0 |
 | rb leipzig | 0 | 5 | 28.2 |
 | rb ライプツィヒ | 0 | 4 | 46.5 |
 | rbライプツィヒ | 0 | 17 | 40.5 |
-| rbライプツィヒ 試合 | 0 | 1 | 36.0 |
 
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /country/morocco.html | 5 | 1155 | 10.7 |
-| / | 4 | 72 | 8.0 |
-| /country/england.html | 4 | 318 | 7.7 |
+| /country/morocco.html | 5 | 1157 | 10.7 |
+| / | 4 | 73 | 8.2 |
+| /country/england.html | 4 | 319 | 7.7 |
 | /country/spain.html | 3 | 138 | 8.7 |
-| /group/knockout.html | 3 | 45 | 12.9 |
+| /group/knockout.html | 3 | 46 | 14.2 |
 | /country/mexico.html | 2 | 142 | 8.9 |
 | /guide/world-cup-2026-how-to-watch.html | 2 | 29 | 8.3 |
-| /club/borussia-dortmund.html | 1 | 36 | 31.6 |
-| /club/gamba-osaka.html | 1 | 45 | 14.6 |
+| /club/borussia-dortmund.html | 1 | 38 | 31.6 |
+| /club/gamba-osaka.html | 1 | 46 | 14.5 |
 | /club/mainz-05.html | 1 | 27 | 24.1 |
 | /club/tokyo-verdy.html | 1 | 69 | 13.8 |
-| /club/werder-bremen.html | 1 | 150 | 13.2 |
+| /club/werder-bremen.html | 1 | 152 | 13.1 |
 | /country/belgium.html | 1 | 65 | 8.0 |
 | /country/dr-congo.html | 1 | 157 | 10.0 |
-| /country/uruguay.html | 1 | 39 | 12.8 |
+| /country/uruguay.html | 1 | 41 | 12.7 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 88 | 22 | 145 |
-| Organic Search | 46 | 24 | 120 |
+| Direct | 90 | 23 | 125 |
+| Organic Search | 47 | 24 | 117 |
 | Referral | 5 | 1 | 1 |
-| Unassigned | 5 | 2 | 27 |
+| Unassigned | 5 | 2 | 20 |
 | AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 115 | 77 | 765 |
+| / | 117 | 79 | 768 |
 | /match/TXyBRmgFIs4.html | 12 | 5 | 122 |
 | /group/knockout.html | 10 | 4 | 43 |
 | /country/england.html | 8 | 6 | 55 |
@@ -70,18 +70,17 @@
 | /league/laliga.html | 6 | 1 | 0 |
 | /guide/world-cup-2026-how-to-watch.html | 5 | 4 | 15 |
 | /league/serie-a.html | 4 | 3 | 6 |
+| /match/s2OyDJ5O3ZY.html | 4 | 3 | 5 |
 | /country/mexico.html | 3 | 2 | 23 |
 | /country/morocco.html | 3 | 3 | 9 |
 | /country/spain.html | 3 | 3 | 142 |
 | /match/J_1iFnRsHG0.html | 3 | 2 | 7 |
 | /match/bl-2526-md1-bayern-leipzig.html | 3 | 1 | 35 |
-| /match/s2OyDJ5O3ZY.html | 3 | 3 | 3 |
 | /match/s9MoErtoO44.html | 3 | 2 | 5 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-07-12 | 13 | 1582 | 11.0 | 0 | 88 |
 | 2026-07-13 | 11 | 1503 | 11.1 | 0 | 92 |
 | 2026-07-14 | 11 | 1319 | 11.7 | 0 | 98 |
 | 2026-07-15 | 9 | 1040 | 12.9 | 0 | 102 |
@@ -91,4 +90,5 @@
 | 2026-07-19 | 5 | 611 | 18.8 | 0 | 113 |
 | 2026-07-20 | 6 | 578 | 19.8 | 0 | 116 |
 | 2026-07-21 | 6 | 540 | 19.3 | 0 | 117 |
+| 2026-07-22 | 3 | 450 | 21.0 | 0 | 119 |
 
