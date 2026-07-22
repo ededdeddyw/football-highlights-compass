@@ -1,0 +1,168 @@
+<!--CLUB slug=borussia-dortmund name=ボルシア・ドルトムント league=ブンデスリーガ-->
+<!--VIDEO id=uQrt63Z4Ues title=Heja BVB／You'll Never Walk Alone（応援歌）-->
+<!--DESC ボルシア・ドルトムント（ブンデスリーガ）のクラブ紹介。黄色い壁、ルール工業地帯の歴史、レヴィアダービー、育成の伝統を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#16150f; --cl-yellow:#f5d200; --cl-yellow-hi:#ffe64d; --cl-rust:#b25e37; --cl-steel:#8a8472;
+    --cl-paper:var(--bg,#f7f3e7); --cl-text:var(--fg,#211f16); --cl-muted:#6f6a56; --cl-line:#d8d1ba; --cl-card:#fffdf5;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#efe9d6; --cl-muted:#a49d86; --cl-line:#332f24; --cl-card:#1c1b15; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#efe9d6; --cl-muted:#a49d86; --cl-line:#332f24; --cl-card:#1c1b15; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#211f16; --cl-muted:#6f6a56; --cl-line:#d8d1ba; --cl-card:#fffdf5; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(16,15,10,.92) 30%,rgba(16,15,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0f0e0a;background:var(--cl-yellow);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-yellow-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e9e4d4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(-45deg,#0f0e0a 0 15px,var(--cl-yellow) 15px 30px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(245,210,0,.35)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#0f0e0a;background:var(--cl-yellow);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(245,210,0,.4);font-weight:700}
+  .cl-mine{color:var(--cl-rust);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c7c1ae;background:#100f0a;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-yellow);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ルール工業地帯の巻上げ櫓と煙突、黄色い壁を描いたイラスト">
+        <defs>
+          <radialGradient id="clglow" cx="62%" cy="34%" r="55%"><stop offset="0%" stop-color="#f5d200" stop-opacity=".28"/><stop offset="45%" stop-color="#c9932b" stop-opacity=".10"/><stop offset="100%" stop-color="#16150f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="clsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#201d14"/><stop offset="100%" stop-color="#100f0a"/></linearGradient>
+          <pattern id="clwall" width="15" height="11" patternUnits="userSpaceOnUse"><rect width="15" height="11" fill="#100f0a"/><rect x="1" y="1" width="12" height="8" rx="1.5" fill="#f5d200"/></pattern>
+        </defs>
+        <rect width="1200" height="470" fill="url(#clsky)"/>
+        <rect width="1200" height="470" fill="url(#clglow)"/>
+        <g fill="#2a2619" opacity=".55"><ellipse cx="330" cy="150" rx="120" ry="34"/><ellipse cx="250" cy="120" rx="80" ry="26"/><ellipse cx="900" cy="120" rx="150" ry="30"/></g>
+        <rect x="0" y="372" width="1200" height="98" fill="#0d0c08"/>
+        <g fill="#171510" stroke="#2b2718" stroke-width="2"><rect x="820" y="232" width="150" height="140" rx="10"/><line x1="820" y1="268" x2="970" y2="268"/><line x1="820" y1="312" x2="970" y2="312"/><rect x="838" y="214" width="114" height="20" rx="6"/></g>
+        <g fill="#141209"><rect x="1010" y="150" width="26" height="222"/><rect x="1052" y="196" width="20" height="176"/></g>
+        <g fill="#f5d200" opacity=".85"><rect x="1010" y="150" width="26" height="10"/><rect x="1052" y="196" width="20" height="9"/></g>
+        <g fill="#171510"><polygon points="250,372 286,372 350,150 330,150"/><polygon points="470,372 434,372 350,150 372,150"/><rect x="330" y="120" width="60" height="252"/></g>
+        <g stroke="#2c2718" stroke-width="4"><line x1="330" y1="180" x2="390" y2="230"/><line x1="390" y1="180" x2="330" y2="230"/><line x1="330" y1="250" x2="390" y2="300"/><line x1="390" y1="250" x2="330" y2="300"/><line x1="286" y1="330" x2="434" y2="330"/></g>
+        <g fill="none" stroke="#f5d200" stroke-width="7"><circle cx="360" cy="120" r="40"/></g>
+        <g stroke="#c9a413" stroke-width="4"><line x1="360" y1="82" x2="360" y2="158"/><line x1="322" y1="120" x2="398" y2="120"/><line x1="333" y1="93" x2="387" y2="147"/><line x1="387" y1="93" x2="333" y2="147"/></g>
+        <circle cx="360" cy="120" r="7" fill="#f5d200"/>
+        <g transform="translate(70,300) skewX(-12)"><rect x="0" y="0" width="250" height="72" fill="url(#clwall)"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ボルシア・ドルトムント<span class="cl-en">Borussia Dortmund · 1909</span></h1>
+        <p class="cl-sub">黄色い壁が揺れる、ルール工業地帯の魂。爆発的な攻撃と若手育成で世界を沸かせる、黒と黄色のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ西部・ルール地方の工業都市ドルトムントを本拠とするクラブです。<b>石炭と鉄鋼の街</b>で育まれ、いまも労働者の街の誇りとともに、地域のアイデンティティそのものとして愛されています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ジグナル・イドゥナ・パルク — 8万人の黄色い壁</h2>
+      <p>かつての名は<strong>ヴェストファーレンシュタディオン</strong>。約8万人を収容する、ドイツ最大のスタジアムです。とりわけ南側スタンド「ジュートトリビューネ」は、立ち見の大観衆が一面の黄色に染まることから <span class="cl-hl">「黄色い壁（Yellow Wall）」</span> と呼ばれます。ヨーロッパでも屈指の迫力を誇る、応援の名所です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黄色い旗とスカーフを掲げる観客で埋まった、傾いたスタンドのイラスト">
+          <rect width="600" height="190" fill="#100f0a"/>
+          <defs><pattern id="clcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#100f0a"/><circle cx="8.5" cy="7" r="5" fill="#f5d200"/></pattern></defs>
+          <polygon points="0,190 600,190 600,86 0,150" fill="url(#clcrowd)"/>
+          <polygon points="0,150 600,86 600,74 0,138" fill="#c9a413" opacity=".5"/>
+          <g stroke="#f5d200" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M60 60 q28 -22 56 0"/><path d="M210 44 q28 -22 56 0"/><path d="M360 52 q28 -22 56 0"/><path d="M470 40 q28 -22 56 0"/></g>
+          <g><rect x="150" y="26" width="4" height="60" fill="#6b6656"/><polygon points="154,26 196,36 154,50" fill="#f5d200"/><rect x="410" y="20" width="4" height="66" fill="#6b6656"/><polygon points="414,20 456,32 414,46" fill="#f5d200"/></g>
+        </svg>
+        <figcaption>黄色い壁 — 南スタンドを埋める、旗とスカーフの海。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ルール地方の誇りを背負って</h2>
+      <p>ドルトムントは、かつて<span class="cl-mine">石炭と鉄鋼</span>で栄えたルール工業地帯の中心都市のひとつ。坑道の巻上げ櫓（やぐら）や煙突が立ち並ぶ労働者の街で、クラブは人々の暮らしとともに歩んできました。華やかさよりも、粘り強さと熱量。その気質が、いまのチームの色にもにじんでいます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="炭鉱の巻上げ櫓と煙突が並ぶルール工業地帯の夕景シルエット">
+          <defs><linearGradient id="cldusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2413"/><stop offset="100%" stop-color="#100f0a"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#cldusk)"/>
+          <circle cx="470" cy="66" r="40" fill="#f5d200" opacity=".22"/>
+          <rect x="0" y="140" width="600" height="30" fill="#0c0b07"/>
+          <g fill="#171510"><polygon points="70,140 92,140 128,40 114,40"/><polygon points="186,140 164,140 128,40 142,40"/><rect x="114" y="24" width="28" height="116"/></g>
+          <g fill="none" stroke="#f5d200" stroke-width="4"><circle cx="128" cy="26" r="17"/></g>
+          <g fill="#141209"><rect x="300" y="54" width="16" height="86"/><rect x="330" y="74" width="12" height="66"/><rect x="400" y="86" width="70" height="54" rx="6"/></g>
+          <g fill="#f5d200" opacity=".8"><rect x="300" y="54" width="16" height="6"/><rect x="330" y="74" width="12" height="6"/></g>
+          <g fill="#2a2619" opacity=".6"><ellipse cx="308" cy="46" rx="26" ry="8"/><ellipse cx="336" cy="66" rx="20" ry="7"/></g>
+        </svg>
+        <figcaption>巻上げ櫓と煙突 — 石炭と鉄鋼が街を動かした時代の面影。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> ライバル</div>
+      <h2>レヴィアダービー — 街の誇りがぶつかる日</h2>
+      <p>同じルール地方に本拠を置く<strong>シャルケ</strong>との対戦は <span class="cl-hl">「レヴィアダービー」</span> と呼ばれ、ドイツで最も熱いダービーのひとつに数えられます。順位や調子とは別の次元で、負けられない——そんな地域の意地がぶつかり合う一戦です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="黒黄と青、二本のスカーフが交差してぶつかり合うイラスト">
+          <rect width="600" height="180" fill="#100f0a"/>
+          <g transform="translate(300,90)"><g stroke="#ffe64d" stroke-width="3" stroke-linecap="round" opacity=".85"><line x1="0" y1="-46" x2="0" y2="-30"/><line x1="0" y1="46" x2="0" y2="30"/><line x1="-46" y1="0" x2="-30" y2="0"/><line x1="46" y1="0" x2="30" y2="0"/><line x1="-33" y1="-33" x2="-22" y2="-22"/><line x1="33" y1="33" x2="22" y2="22"/><line x1="33" y1="-33" x2="22" y2="-22"/><line x1="-33" y1="33" x2="-22" y2="22"/></g></g>
+          <g transform="translate(300,90) rotate(-26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#f5d200"/><g fill="#100f0a"><rect x="-250" y="-16" width="14" height="32"/><rect x="-228" y="-16" width="14" height="32"/><rect x="236" y="-16" width="14" height="32"/><rect x="214" y="-16" width="14" height="32"/></g></g>
+          <g transform="translate(300,90) rotate(26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#12539c"/><g fill="#eef3fb"><rect x="-250" y="-16" width="14" height="32"/><rect x="-228" y="-16" width="14" height="32"/><rect x="236" y="-16" width="14" height="32"/><rect x="214" y="-16" width="14" height="32"/></g></g>
+        </svg>
+        <figcaption>レヴィアダービー — 黒黄（ドルトムント）と青（シャルケ）、譲れない街のスカーフ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>黒と黄色、そして次のスターを生む土壌</h2>
+      <p>黒と黄色のクラブカラーから、<strong>「ディ・シュヴァルツゲルベン（黒黄軍団）」</strong>の愛称で親しまれます。前への圧力を強めた攻撃的なサッカーと、<span class="cl-hl">若い才能を見出して伸ばす育成</span>に定評があり、この地で頭角を現した多くの選手が、やがて世界へ羽ばたいていきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="小さな点が段階的に大きくなり、最後に黄色い星へと駆け上がっていくイラスト">
+          <rect width="600" height="150" fill="#100f0a"/>
+          <path d="M60 120 C 200 118, 280 96, 420 52" fill="none" stroke="#6b6656" stroke-width="2.5" stroke-dasharray="3 8" stroke-linecap="round"/>
+          <circle cx="60" cy="120" r="6" fill="#c9a413"/><circle cx="200" cy="108" r="9" fill="#e6c221"/><circle cx="320" cy="82" r="13" fill="#f5d200"/>
+          <g transform="translate(470,40)"><path d="M0,-30 L8.8,-9.3 L31,-9.3 L13,4 L20,26 L0,13 L-20,26 L-13,4 L-31,-9.3 L-8.8,-9.3 Z" fill="#ffe64d"/><g stroke="#ffe64d" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="38" y1="-30" x2="48" y2="-36"/><line x1="42" y1="-8" x2="54" y2="-8"/><line x1="34" y1="16" x2="44" y2="24"/></g></g>
+          <text x="60" y="145" fill="#8a8472" font-size="12">育成の原石</text><text x="486" y="120" fill="#c7c1ae" font-size="12">世界へ</text>
+        </svg>
+        <figcaption>若手育成 — 原石を見出し、磨き、スターとして送り出す土壌。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1909年</dd>
+          <dt>本拠地</dt><dd>ドルトムント（ルール地方）</dd>
+          <dt>スタジアム</dt><dd>ジグナル・イドゥナ・パルク（約81,000人）</dd>
+          <dt>愛称</dt><dd>Die Schwarzgelben（黒黄軍団）</dd>
+          <dt>カラー</dt><dd>ブラック ＆ イエロー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
