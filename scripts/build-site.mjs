@@ -1168,6 +1168,37 @@ function buildClub(name, info){
   const leagueHub = LEAGUE_LIST.find(h=>h.clubLabel===info.league);
   const leagueLink = leagueHub?`<p style="margin:2px 0 10px"><a href="../league/${leagueHub.slug}.html"><b>🇪🇺 ${esc(leagueHub.name)} の試合一覧へ →</b></a></p>`:'';
   const related = (leagueLink?leagueLink:'') + (sameLeague.length?`<h2>同じリーグのクラブ</h2><div class="chips">${sameLeague.map(([n,i])=>`<a href="../club/${i.slug}.html">${esc(n)}</a>`).join('')}</div>`:'');
+
+  // 作り込み済みクラブ（data/clubs/<slug>.html）はリッチ版で出す：ヒーロー＋動画（ページ上部）＋文中イラスト＋既存の試合一覧/関連。
+  const richFile = `data/clubs/${slug}.html`;
+  if (existsSync(richFile)) {
+    const rich = readFileSync(richFile, 'utf8');
+    const vm = rich.match(/<!--VIDEO id=(\S+) title=(.*?)-->/);
+    let embed = '';
+    if (vm) {
+      const vid = vm[1];
+      embed = `<div class="source"><div class="source-head"><span class="tag embed">▶ 応援歌・雰囲気</span><span class="name">YouTube</span></div><div class="embedwrap"><iframe id="ytf_${vid}" src="https://www.youtube-nocookie.com/embed/${vid}?enablejsapi=1" loading="lazy" title="${escA(name)} 応援歌" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">YouTubeで見る<small>雰囲気動画</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
+    }
+    const dm = rich.match(/<!--DESC ([\s\S]*?)-->/);
+    const rDesc = dm ? dm[1].trim().slice(0,120) : desc;
+    const richBody = rich
+      .replace(/<!--CLUB[\s\S]*?-->\s*/, '')
+      .replace(/<!--VIDEO id=[\s\S]*?-->\s*/, '')
+      .replace(/<!--DESC[\s\S]*?-->\s*/, '')
+      .replace('<!--VIDEO-->', embed);
+    const rHead = HEAD({ title:`${name}｜クラブ図鑑（歴史・本拠地・スタイル） - Football Highlights Compass`, ogtitle:`${name}｜クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+    const rOut = rHead + TOPBAR + `<article class="post entity">
+  ${crumb([{label:'トップ',href:'../'},{label:'クラブ'},{label:name}])}
+  ${richBody}
+  ${AD}
+  ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
+  ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
+  ${YTFB}
+  ` + FOOTER();
+    writeFileSync(`site/${path}`, rOut);
+    return;
+  }
+
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'クラブ'},{label:name}])}
   <p class="kicker">${flag} ${esc(info.league)}</p>
