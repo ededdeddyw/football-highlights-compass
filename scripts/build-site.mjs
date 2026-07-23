@@ -397,6 +397,39 @@ const COLLAPSE_JS = `<script>(function(){try{var w=window.innerWidth||document.d
 // 埋め込み再生の失敗（DAZN等のシンジケーション不可）を YouTube IFrame API のonErrorで検知し、
 // .embedwrap.failed を付けて「YouTubeで見る」カードへ差し替える。JS/API不達でも .ytalt が常時あるので詰まない。
 const YTFB = `<script>(function(){var fr=[].slice.call(document.querySelectorAll('.embedwrap iframe[id^="ytf_"]'));if(!fr.length)return;function fail(f){var w=f.closest('.embedwrap');if(w)w.classList.add('failed');}window.onYouTubeIframeAPIReady=function(){fr.forEach(function(f){try{new YT.Player(f.id,{events:{onError:function(){fail(f);}}});}catch(e){}});};var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';(document.head||document.body).appendChild(s);})();</script>`;
+// 連続再生（ビンジ）トグル：ONにすると動画が終わるたびに data-binge-next の次ページへ自動遷移し、到着後に自動再生。
+const BINGE_TOGGLE = `<button id="bingeToggle" class="binge-toggle" type="button" aria-pressed="false">🔁 連続再生：OFF</button>`;
+// 動画プレイヤー統合スクリプト（YTFBのフォールバック＋連続再生）。ハイライトを持つ試合ページで YTFB の代わりに使う。
+const PLAYER_JS = `<script>(function(){
+  var KEY='fhc_binge';
+  function on(){try{return localStorage.getItem(KEY)==='1'}catch(e){return false}}
+  function setOn(v){try{localStorage.setItem(KEY,v?'1':'0')}catch(e){}}
+  var bar=document.querySelector('.spoilerbar');
+  var nextHref=bar?(bar.getAttribute('data-binge-next')||''):'';
+  var btn=document.getElementById('bingeToggle');
+  var players=[];
+  if(nextHref){ var fl=document.createElement('div'); fl.className='binge-flag'; fl.textContent='🔁 連続再生中 — 動画が終わると次の試合へ'; document.body.appendChild(fl); }
+  function reveal(){document.documentElement.classList.add('spoiler-off');}
+  function goNext(){ if(on()&&nextHref){ location.href=nextHref; } }
+  function playAll(){ reveal(); players.forEach(function(p){ try{p.playVideo();}catch(e){} }); }
+  function reflect(){ if(btn){ var o=on(); btn.setAttribute('aria-pressed',o?'true':'false'); btn.textContent=o?'🔁 連続再生：ON':'🔁 連続再生：OFF'; btn.classList.toggle('is-on',o);} document.body.classList.toggle('binge-on',on()); }
+  if(btn){ btn.addEventListener('click',function(){ var o=!on(); setOn(o); reflect(); if(o) playAll(); }); }
+  reflect();
+  var frames=[].slice.call(document.querySelectorAll('.embedwrap iframe[id^="ytf_"]'));
+  if(!frames.length) return;
+  function fail(f){ var w=f.closest('.embedwrap'); if(w)w.classList.add('failed'); }
+  window.onYouTubeIframeAPIReady=function(){
+    frames.forEach(function(f){ try{
+      var p=new YT.Player(f.id,{events:{
+        onReady:function(e){ if(on()){ reveal(); try{e.target.playVideo();}catch(x){} } },
+        onError:function(){ fail(f); if(on()) goNext(); },
+        onStateChange:function(e){ if(e.data===0 && on()) goNext(); }
+      }});
+      players.push(p);
+    }catch(e){} });
+  };
+  var s=document.createElement('script'); s.src='https://www.youtube.com/iframe_api'; (document.head||document.body).appendChild(s);
+})();</script>`;
 // 見どころドロワー（モバイル）：FABタップで body.read-open→右カラムがスライドイン。背景/✕/リンクタップで閉じる。
 const READ_DRAWER_JS = `<script>(function(){var f=document.getElementById('readFab'),b=document.getElementById('readBackdrop');if(!f)return;function op(){document.body.classList.add('read-open');}function cl(){document.body.classList.remove('read-open');}f.addEventListener('click',op);if(b)b.addEventListener('click',cl);document.addEventListener('click',function(e){if(e.target.closest('.read-close'))cl();if(e.target.closest('.col-read a[href]'))cl();});}());</script>`;
 // 右カラム(見どころ)をドロワー化：中身があればヘッダ(✕)付きaside＋FAB＋backdropを返す。空なら従来の空aside。
@@ -529,6 +562,15 @@ img{max-width:100%}
 .spoiler-toggle{width:100%;margin:0 0 12px;padding:13px 12px;border-radius:11px;border:1px solid var(--line2);background:var(--card2);color:var(--ink);font-size:14px;font-weight:800;cursor:pointer;text-align:center;letter-spacing:.02em;line-height:1.4}
 .spoiler-toggle.on{background:rgba(16,185,129,.13);border-color:rgba(16,185,129,.42);color:#047857}
 .spoiler-toggle:hover{border-color:var(--accent2)}
+/* 連続再生（ビンジ）トグル＋ONインジケータ */
+.binge-toggle{width:auto;margin:0;padding:8px 16px;border-radius:11px;border:1px solid var(--line2);background:var(--card2);color:var(--ink);font-size:13px;font-weight:800;cursor:pointer;letter-spacing:.02em;line-height:1.4}
+.binge-toggle:hover{border-color:var(--accent2)}
+.binge-toggle.is-on{background:rgba(59,130,246,.14);border-color:rgba(59,130,246,.45);color:#1d4ed8}
+body.binge-on .embedwrap{outline:3px solid rgba(59,130,246,.55);outline-offset:2px;border-radius:8px}
+body.binge-on .video-veil{display:none!important}
+.binge-flag{display:none}
+body.binge-on .binge-flag{display:flex;align-items:center;gap:8px;position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;background:#1d4ed8;color:#fff;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:800;box-shadow:0 6px 20px rgba(29,78,216,.4)}
+@media (max-width:700px){ .binge-toggle{width:100%;font-size:16.5px;padding:15px 12px;font-weight:900;border-radius:12px} }
 .nav-backdrop{display:none;position:fixed;inset:0;background:rgba(8,14,40,.5);z-index:55}
 /* 見どころ＝モバイルは右スライドドロワー（タップで開閉）。デスクトップは従来どおり右カラム常時表示 */
 .read-fab{display:none}
@@ -942,6 +984,7 @@ function buildMatch(m){
   });
   // ネタバレON/OFFはページ上部に固定（スクロール追従）。「この試合」タグは動画の上へ。見どころは右カラムへ。
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
+  const bingeNext = NEXT[m.id] || '';
   const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span><a href="../?league=${m.league}">${esc(lg||'試合')}の一覧</a><a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a><a href="../">他の試合を探す</a></div>`;
   const sideRead = renderPreview(m.id);                 // 右カラムに置く見どころ（あれば）
   const sideContent = sideRead || relHtml || '';        // 見どころが無い試合は関連試合を右に
@@ -954,7 +997,7 @@ function buildMatch(m){
     <p class="cc">© 2026 Football Highlights Compass — 公式映像の発見サイト</p>
   </footer>`;
   const out = head + TOPBAR_NAV
-  + `<div class="spoilerbar"><div class="spoilerbar-in">${spoilerToggleBtn}<span class="sb-note">タップで結果（スコア・得点者・見どころ）の表示を切り替えます。</span></div></div>`
+  + `<div class="spoilerbar" data-binge-next="${bingeNext}"><div class="spoilerbar-in">${spoilerToggleBtn}${bingeNext?BINGE_TOGGLE:''}<span class="sb-note">タップで結果（スコア・得点者・見どころ）の表示を切り替えます。</span></div></div>`
   + `<div class="appgrid appgrid-match">
   <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
   <main class="col-main"><article class="post">
@@ -973,9 +1016,16 @@ function buildMatch(m){
   ${footerInner}
   </article></main>
   ${readDrawer(sideContent).aside}
-</div>${readDrawer(sideContent).fab}` + NAVJS + COLLAPSE_JS + YTFB + READ_DRAWER_JS + BOOM + `</body></html>`;
+</div>${readDrawer(sideContent).fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
+// 連続再生（ビンジ）の「次の動画」チェーン。同じ大会（m.league）内でループする。league版は各リーグ生成時に追記。
+const NEXT = {};
+(function(){
+  const byLg = {};
+  for (const m of data) { if (!m.id) continue; (byLg[m.league] = byLg[m.league] || []).push(m.id); }
+  for (const lg in byLg) { const c = byLg[lg]; if (c.length < 2) continue; c.forEach((id, i) => { NEXT[id] = c[(i + 1) % c.length] + '.html'; }); }
+})();
 data.forEach(buildMatch);
 
 // ========================= 五大リーグ 全試合ページ（Phase2） =========================
@@ -994,10 +1044,11 @@ const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0
 let leagueCount = 0;
 const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
 const LEAGUE_SITEMAP = new Map();   // sitemap用：slug → {videoId, date, title}
+function leagueSlug(mt, L){ const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away); return `${L.code}-2526-md${mt.matchday}-${hs}-${as}`; }
 function buildLeagueMatch(mt, L, seasonLbl){
   if (mt.matchday == null || !mt.home || !mt.away) return;
-  const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away);
-  const slug = `${L.code}-2526-md${mt.matchday}-${hs}-${as}`;
+  const slug = leagueSlug(mt, L);
+  const bingeNext = NEXT[slug] || '';
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
   LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`第${mt.matchday}節 / ${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
   if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex。記事or動画があれば充実ページとして指数化
@@ -1035,7 +1086,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
     jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]) ]
   });
   const out = head + TOPBAR_NAV
-  + `<div class="spoilerbar"><div class="spoilerbar-in">${spoilerToggleBtn}<span class="sb-note">タップで結果（スコア）の表示を切り替えます。</span></div></div>`
+  + `<div class="spoilerbar" data-binge-next="${bingeNext}"><div class="spoilerbar-in">${spoilerToggleBtn}${bingeNext?BINGE_TOGGLE:''}<span class="sb-note">タップで結果（スコア）の表示を切り替えます。</span></div></div>`
   + `<div class="appgrid appgrid-match">
   <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
   <main class="col-main"><article class="post">
@@ -1051,7 +1102,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
   ${footer1()}
   </article></main>
   ${readDrawer(sideRead||'').aside}
-</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + YTFB + READ_DRAWER_JS + BOOM + `</body></html>`;
+</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${slug}.html`, out);
 }
 function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
@@ -1060,6 +1111,9 @@ try {
     const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
     const L = { code:j.code, jp:(LEAGUE_META[j.code]||{}).jp||j.jp||j.code, hub:(LEAGUE_META[j.code]||{}).hub };
     const seasonLbl = j.season==='2025'?'2025-26':j.season;
+    // このリーグの「動画あり試合」を並び順でチェーン化（連続再生の次ページ）。
+    { const c = (j.matches||[]).filter(mt=>mt.videoId && mt.matchday!=null && mt.home && mt.away).map(mt=>leagueSlug(mt, L));
+      if (c.length >= 2) c.forEach((s, i) => { NEXT[s] = c[(i + 1) % c.length] + '.html'; }); }
     (j.matches||[]).forEach(mt=>buildLeagueMatch(mt, L, seasonLbl));
   }
   if (leagueCount) console.log(`リーグ試合ページ: ${leagueCount}`);
