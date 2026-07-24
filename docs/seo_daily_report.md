@@ -2,15 +2,15 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-07-23
+> 最終更新: 2026-07-24
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **2** ↓1
-- 表示(7日): **422** ↓28
-- 平均順位(7日): **22.5** ↑1.5（数字が小さいほど上位）
+- クリック(7日): **2** →
+- 表示(7日): **391** ↓31
+- 平均順位(7日): **21.7** ↓0.8（数字が小さいほど上位）
 - CTR(7日): **0.5%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **123** / セッション 152
+- GA ユーザー(28日): **125** / セッション 154
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -25,44 +25,44 @@
 | asモナコ 対 psg スタメン | 0 | 1 | 29.0 |
 | benfica | 0 | 1 | 46.0 |
 | dazn 結果表示 消す | 0 | 1 | 1.0 |
-| fc 東京 本拠地 | 0 | 21 | 35.5 |
+| fc 東京 本拠地 | 0 | 22 | 35.8 |
+| fifa ワールドカップ 2026 決勝トーナメント表 | 0 | 1 | 85.0 |
 | j-1 豊田本町 | 0 | 1 | 43.0 |
 | rb leipzig | 0 | 5 | 28.2 |
 | rb ライプツィヒ | 0 | 4 | 46.5 |
-| rbライプツィヒ | 0 | 18 | 40.9 |
 
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /country/morocco.html | 5 | 1161 | 10.8 |
-| /country/england.html | 4 | 321 | 7.8 |
-| / | 3 | 72 | 8.3 |
-| /country/spain.html | 3 | 139 | 8.8 |
-| /group/knockout.html | 3 | 46 | 14.2 |
+| /country/morocco.html | 5 | 1163 | 10.7 |
+| /country/england.html | 4 | 322 | 7.8 |
+| / | 3 | 68 | 8.5 |
+| /country/spain.html | 3 | 141 | 8.9 |
+| /group/knockout.html | 3 | 47 | 15.7 |
 | /country/mexico.html | 2 | 142 | 8.9 |
 | /guide/world-cup-2026-how-to-watch.html | 2 | 29 | 8.3 |
 | /club/borussia-dortmund.html | 1 | 41 | 31.2 |
 | /club/gamba-osaka.html | 1 | 47 | 14.3 |
 | /club/mainz-05.html | 1 | 27 | 24.1 |
-| /club/tokyo-verdy.html | 1 | 69 | 13.8 |
-| /club/werder-bremen.html | 1 | 161 | 13.2 |
+| /club/tokyo-verdy.html | 1 | 70 | 14.3 |
+| /club/werder-bremen.html | 1 | 162 | 13.2 |
 | /country/belgium.html | 1 | 65 | 8.0 |
-| /country/dr-congo.html | 1 | 157 | 10.0 |
-| /country/uruguay.html | 1 | 53 | 12.1 |
+| /country/dr-congo.html | 1 | 155 | 10.0 |
+| /country/uruguay.html | 1 | 56 | 12.9 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 94 | 23 | 119 |
-| Organic Search | 47 | 24 | 117 |
+| Direct | 95 | 23 | 118 |
+| Organic Search | 48 | 24 | 132 |
 | Referral | 6 | 1 | 1 |
-| Unassigned | 4 | 2 | 26 |
+| Unassigned | 4 | 2 | 1689 |
 | AI Assistant | 2 | 2 | 65 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 122 | 83 | 775 |
+| / | 123 | 84 | 775 |
 | /match/TXyBRmgFIs4.html | 12 | 5 | 122 |
 | /group/knockout.html | 10 | 4 | 43 |
 | /country/england.html | 8 | 6 | 55 |
@@ -75,13 +75,12 @@
 | /country/morocco.html | 3 | 3 | 9 |
 | /country/spain.html | 3 | 3 | 142 |
 | /match/J_1iFnRsHG0.html | 3 | 2 | 7 |
+| /match/XVJPlnXEwB8.html | 3 | 3 | 84 |
 | /match/bl-2526-md1-bayern-leipzig.html | 3 | 1 | 35 |
-| /match/s9MoErtoO44.html | 3 | 2 | 5 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-07-14 | 11 | 1319 | 11.7 | 0 | 98 |
 | 2026-07-15 | 9 | 1040 | 12.9 | 0 | 102 |
 | 2026-07-16 | 11 | 925 | 13.4 | 0 | 106 |
 | 2026-07-17 | 10 | 777 | 14.5 | 0 | 107 |
@@ -91,4 +90,5 @@
 | 2026-07-21 | 6 | 540 | 19.3 | 0 | 117 |
 | 2026-07-22 | 3 | 450 | 21.0 | 0 | 119 |
 | 2026-07-23 | 2 | 422 | 22.5 | 0 | 123 |
+| 2026-07-24 | 2 | 391 | 21.7 | 0 | 125 |
 
