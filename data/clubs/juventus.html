@@ -1,0 +1,173 @@
+<!--CLUB slug=juventus name=ユベントス league=セリエA-->
+<!--VIDEO id=pUhTfi-rtEo title=Storia Di Un Grande Amore／ユヴェントス公式アンセム-->
+<!--DESC ユヴェントス（セリエA）のクラブ紹介。アルプスの麓トリノ、白黒の縦縞、老貴婦人（Vecchia Signora）、勝者のメンタリティ、ダービー・ダ・イタリアを、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a0a0b; --cl-white:#ffffff; --cl-silver:#c7ccd4; --cl-alpine:#7fa4cc; --cl-gold:#cba14e;
+    --cl-paper:var(--bg,#f5f6f8); --cl-text:var(--fg,#16181c); --cl-muted:#5f6772; --cl-line:#d5d9df; --cl-card:#fbfcfd;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e9ebef; --cl-muted:#9aa2ad; --cl-line:#282a2f; --cl-card:#141518; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e9ebef; --cl-muted:#9aa2ad; --cl-line:#282a2f; --cl-card:#141518; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#16181c; --cl-muted:#5f6772; --cl-line:#d5d9df; --cl-card:#fbfcfd; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,8,9,.94) 32%,rgba(8,8,9,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0a0a0b;background:#fff;padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-silver);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dcdfe4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:10px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,#0a0a0b 0 16px,#ffffff 16px 32px);border:1px solid var(--cl-line)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(127,164,204,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:#0a0a0b;font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(127,164,204,.3);font-weight:700}
+  .cl-gold{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b9bec7;background:#0a0a0b;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid #0a0a0b;border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="アルプスの麓に建つトリノの街並みと、モーレ・アントネッリアーナの尖塔を描いたイラスト">
+        <defs>
+          <linearGradient id="jvsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a2330"/><stop offset="55%" stop-color="#10151d"/><stop offset="100%" stop-color="#0a0a0b"/></linearGradient>
+          <radialGradient id="jvglow" cx="50%" cy="26%" r="52%"><stop offset="0%" stop-color="#7fa4cc" stop-opacity=".26"/><stop offset="55%" stop-color="#7fa4cc" stop-opacity=".06"/><stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#jvsky)"/>
+        <rect width="1200" height="470" fill="url(#jvglow)"/>
+        <circle cx="980" cy="96" r="40" fill="#eef3f9" opacity=".9"/>
+        <circle cx="964" cy="88" r="40" fill="#10151d" opacity=".5"/>
+        <!-- アルプスの雪嶺 -->
+        <polygon points="0,250 180,120 320,210 470,90 640,220 820,120 980,230 1120,140 1200,210 1200,300 0,300" fill="#243244"/>
+        <polygon points="180,120 232,168 148,168" fill="#e8eef6" opacity=".92"/>
+        <polygon points="470,90 536,150 404,150" fill="#e8eef6" opacity=".92"/>
+        <polygon points="820,120 876,172 764,172" fill="#e8eef6" opacity=".9"/>
+        <polygon points="0,250 180,120 320,210 470,90 640,220 820,120 980,230 1120,140 1200,210 1200,300 0,300" fill="#0e131b" opacity=".35"/>
+        <!-- 街並みシルエット -->
+        <rect x="0" y="300" width="1200" height="170" fill="#0b0c0e"/>
+        <g fill="#14161a"><rect x="60" y="262" width="30" height="48"/><rect x="96" y="246" width="22" height="64"/><rect x="124" y="272" width="34" height="38"/><rect x="600" y="266" width="26" height="44"/><rect x="632" y="252" width="20" height="58"/><rect x="720" y="270" width="40" height="40"/><rect x="880" y="260" width="24" height="50"/><rect x="912" y="274" width="34" height="36"/><rect x="1040" y="256" width="20" height="54"/><rect x="1066" y="272" width="40" height="38"/></g>
+        <g fill="#cba14e" opacity=".7"><rect x="104" y="256" width="4" height="5"/><rect x="638" y="262" width="4" height="5"/><rect x="888" y="270" width="4" height="5"/><rect x="1048" y="266" width="4" height="5"/></g>
+        <!-- モーレ・アントネッリアーナ（トリノの象徴） -->
+        <g fill="#1a1d22" stroke="#2c3038" stroke-width="1.5"><rect x="352" y="196" width="96" height="114"/><polygon points="352,196 400,150 448,196"/><rect x="384" y="120" width="32" height="34"/><polygon points="384,120 400,96 416,120"/><rect x="392" y="60" width="16" height="60"/></g>
+        <polygon points="400,34 405,56 396,56" fill="#cba14e"/>
+        <line x1="400" y1="34" x2="400" y2="60" stroke="#cba14e" stroke-width="2"/>
+        <!-- 白黒の縦縞バンド -->
+        <g transform="translate(70,314)"><rect x="0" y="0" width="220" height="60" fill="#fff"/><g fill="#0a0a0b"><rect x="0" y="0" width="27.5" height="60"/><rect x="55" y="0" width="27.5" height="60"/><rect x="110" y="0" width="27.5" height="60"/><rect x="165" y="0" width="27.5" height="60"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>ユヴェントス<span class="cl-en">Juventus · 1897</span></h1>
+        <p class="cl-sub">アルプスの麓トリノの名門。白と黒の縦縞をまとう「老貴婦人」は、勝利への執念とエレガンスでイタリアを牽引します。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北西部・ピエモンテ州の州都<b>トリノ</b>を本拠とするクラブです。アルプスを望む工業都市で、自動車メーカー・フィアットを率いたアニェッリ家とともに歩み、イタリア最多のリーグ優勝を積み重ねてきた、国内随一の名門です。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>アリアンツ・スタジアム — ピッチが近い、勝利の城</h2>
+      <p>2011年に開場した、イタリアでは数少ない<span class="cl-hl">クラブ所有のスタジアム</span>です。収容は約4万1千人と大きすぎず、陸上トラックのない設計でスタンドがピッチに迫り、observers の熱気がダイレクトに伝わります。近代的で機能美にあふれた、勝利を積み上げるための舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="白黒の縦縞に染まった、ピッチに迫る近代的なスタンドのイラスト">
+          <rect width="600" height="190" fill="#0a0a0b"/>
+          <ellipse cx="300" cy="150" rx="230" ry="40" fill="#12151a"/>
+          <ellipse cx="300" cy="150" rx="150" ry="24" fill="#1c8a4b" opacity=".5"/>
+          <path d="M40,150 Q300,40 560,150 L560,120 Q300,20 40,120 Z" fill="#151821"/>
+          <g fill="#fff"><rect x="70" y="60" width="12" height="74" transform="skewX(-6)"/><rect x="130" y="46" width="12" height="86" transform="skewX(-4)"/><rect x="300" y="34" width="12" height="94"/><rect x="450" y="46" width="12" height="86" transform="skewX(4)"/><rect x="512" y="60" width="12" height="74" transform="skewX(6)"/></g>
+          <g fill="#0a0a0b" opacity=".55"><rect x="100" y="52" width="12" height="80" transform="skewX(-5)"/><rect x="230" y="38" width="12" height="92"/><rect x="380" y="40" width="12" height="90" transform="skewX(3)"/></g>
+        </svg>
+        <figcaption>アリアンツ・スタジアム — ピッチに迫る、白黒のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>アルプスの麓、産業とエレガンスの街トリノ</h2>
+      <p>トリノは、<span class="cl-gold">アルプスの山並み</span>を背にした洗練された古都。かつてイタリア王国の最初の首都であり、自動車産業フィアットの本拠として栄えました。街のシンボル<strong>モーレ・アントネッリアーナ</strong>の尖塔が象徴するように、重厚さと気品が同居する土地柄が、クラブの佇まいにも重なります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="雪をいただくアルプスを背に、モーレ・アントネッリアーナの尖塔がそびえるトリノの夕景">
+          <defs><linearGradient id="jvdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26313f"/><stop offset="100%" stop-color="#0a0a0b"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#jvdusk)"/>
+          <polygon points="0,120 120,58 220,104 340,46 460,110 560,60 600,96 600,140 0,140" fill="#1a2330"/>
+          <polygon points="340,46 372,82 308,82" fill="#e8eef6" opacity=".9"/>
+          <polygon points="120,58 150,90 90,90" fill="#e8eef6" opacity=".85"/>
+          <rect x="0" y="140" width="600" height="30" fill="#0a0a0b"/>
+          <g fill="#12151a" stroke="#232833" stroke-width="1"><rect x="276" y="76" width="52" height="64"/><polygon points="276,76 302,52 328,76"/><rect x="294" y="34" width="16" height="20"/><rect x="299" y="8" width="6" height="26"/></g>
+          <polygon points="302,2 305,12 299,12" fill="#cba14e"/>
+          <g fill="#12151a"><rect x="70" y="108" width="16" height="32"/><rect x="92" y="98" width="12" height="42"/><rect x="470" y="102" width="14" height="38"/><rect x="490" y="112" width="20" height="28"/></g>
+        </svg>
+        <figcaption>トリノ — アルプスを背にした、モーレの尖塔が見守る古都。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> ライバル</div>
+      <h2>ダービー・ダ・イタリア、そしてモーレ・ダービー</h2>
+      <p>ミラノの<strong>インテル</strong>との対戦は <span class="cl-hl">「ダービー・ダ・イタリア」</span> と呼ばれ、同じ街ではないのに国全体を二分する因縁の一戦です。さらに、同じトリノを本拠とする<strong>トリノFC</strong>との<span class="cl-hl">「モーレ・ダービー」</span>は、街の誇りを懸けた古典的なダービー。どちらも順位を超えた意地がぶつかります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="白黒と青黒、二本のスカーフが交差してぶつかり合うイラスト">
+          <rect width="600" height="180" fill="#0a0a0b"/>
+          <g transform="translate(300,90)"><g stroke="#c7ccd4" stroke-width="3" stroke-linecap="round" opacity=".8"><line x1="0" y1="-46" x2="0" y2="-30"/><line x1="0" y1="46" x2="0" y2="30"/><line x1="-46" y1="0" x2="-30" y2="0"/><line x1="46" y1="0" x2="30" y2="0"/><line x1="-33" y1="-33" x2="-22" y2="-22"/><line x1="33" y1="33" x2="22" y2="22"/><line x1="33" y1="-33" x2="22" y2="-22"/><line x1="-33" y1="33" x2="-22" y2="22"/></g></g>
+          <g transform="translate(300,90) rotate(-26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#fff"/><g fill="#0a0a0b"><rect x="-250" y="-16" width="16" height="32"/><rect x="-224" y="-16" width="16" height="32"/><rect x="208" y="-16" width="16" height="32"/><rect x="234" y="-16" width="16" height="32"/></g></g>
+          <g transform="translate(300,90) rotate(26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#0a3fa0"/><g fill="#0a0a0b"><rect x="-250" y="-16" width="24" height="32"/><rect x="-214" y="-16" width="24" height="32"/><rect x="190" y="-16" width="24" height="32"/><rect x="226" y="-16" width="24" height="32"/></g></g>
+        </svg>
+        <figcaption>ダービー・ダ・イタリア — 白黒（ユーヴェ）と青黒（インテル）、譲れないスカーフ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>白と黒の縦縞、老貴婦人の矜持</h2>
+      <p>白と黒の縦縞から <strong>「ビアンコネーリ（白黒軍団）」</strong>、その風格から <span class="cl-hl">「老貴婦人（Vecchia Signora）」</span> の愛称で呼ばれます。派手さより結果を重んじる<span class="cl-gold">勝者のメンタリティ</span>が伝統で、堅い守備を土台に、確実に勝ち星を積み上げるスタイルがクラブの背骨となってきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="白黒の縦縞の上に、いくつもの星（優勝の証）が並ぶイラスト">
+          <rect width="600" height="150" fill="#fff"/>
+          <g fill="#0a0a0b"><rect x="60" y="0" width="60" height="150"/><rect x="180" y="0" width="60" height="150"/><rect x="300" y="0" width="60" height="150"/><rect x="420" y="0" width="60" height="150"/><rect x="540" y="0" width="60" height="150"/></g>
+          <g transform="translate(300,58)"><g fill="#cba14e"><path d="M-120,0 l7,15 l16,2 l-12,11 l4,16 l-15,-8 l-15,8 l4,-16 l-12,-11 l16,-2 z"/><path d="M0,0 l7,15 l16,2 l-12,11 l4,16 l-15,-8 l-15,8 l4,-16 l-12,-11 l16,-2 z"/><path d="M120,0 l7,15 l16,2 l-12,11 l4,16 l-15,-8 l-15,8 l4,-16 l-12,-11 l16,-2 z"/></g></g>
+          <text x="300" y="128" fill="#6b7280" font-size="13" text-anchor="middle" font-weight="700">積み上げた栄冠の証</text>
+        </svg>
+        <figcaption>白黒の縦縞と星 — 勝ち続けてきたクラブの矜持。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1897年</dd>
+          <dt>本拠地</dt><dd>トリノ（ピエモンテ州）</dd>
+          <dt>スタジアム</dt><dd>アリアンツ・スタジアム（約41,500人）</dd>
+          <dt>愛称</dt><dd>La Vecchia Signora／Bianconeri（老貴婦人／白黒軍団）</dd>
+          <dt>カラー</dt><dd>ブラック ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
