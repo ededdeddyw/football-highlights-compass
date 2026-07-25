@@ -1161,7 +1161,7 @@ function buildCountry(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const dek = info.blurb[0]||'';
-  const desc = `${name}代表のW杯2026 全${ms.length}試合ハイライトと歴代成績・試合日程。最高成績は${info.peak}。公式映像のみ・ネタバレ防止で、結果を隠して安全に視聴できます。`.slice(0,120);
+  const desc = `${name}代表のW杯歴代成績（最高${info.peak}）と2026年全${ms.length}試合の公式ハイライト・試合日程。公式映像のみ・ネタバレ防止で、結果を隠したまま安全に視聴できます。`.slice(0,120);
   const cgraph = [
     {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
