@@ -24,9 +24,14 @@
     "confirmed": false
   },
   "mainz-05": {
-    "idTeam": "147772",
-    "strTeam": "Mainz 05 Women",
-    "confirmed": false
+    "idTeam": null,
+    "candidates": [
+      {
+        "idTeam": "147772",
+        "strTeam": "Mainz 05 Women",
+        "note": "誤爆・女子チーム。除外"
+      }
+    ]
   },
   "werder-bremen": {
     "idTeam": "133662",

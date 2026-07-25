@@ -4,7 +4,12 @@ name: Resolve club TheSportsDB IDs (プレシーズン取得の下準備)
 # 手動実行。結果はコミットするが、要確認(候補複数/該当なし)が残る場合は手動で見直してから
 # fetch-preseason.mjs を使うこと。
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '解決済みのクラブも再解決する（通常はfalseのまま。未解決分だけ再試行）'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -16,13 +21,13 @@ concurrency:
 jobs:
   resolve:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - name: 解決
-        run: node scripts/resolve-team-ids.mjs
+        run: node scripts/resolve-team-ids.mjs ${{ github.event.inputs.force == 'true' && '--force' || '' }}
       - name: データをコミット
         run: |
           git config user.name  "Claude"
