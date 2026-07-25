@@ -23,44 +23,55 @@ async function searchIds(query) {
     return ids;
   } catch { return []; }
 }
-async function oembed(id) {
-  try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
-}
-// サイトが実際に使う youtube-nocookie の embed エンドポイントで再生可否を診断する。
-// watch ページは近年データセンターIPに LOGIN_REQUIRED を返すため、埋め込み経路を直接見るのが確実。
-//   playabilityStatus.status: OK=埋め込み再生可 / UNPLAYABLE・ERROR=不可（reason に理由） / LOGIN_REQUIRED=判定不可。
-// availableCountries が取れた場合のみ日本(JP)可否も返す（取れなければ「不明」）。
-async function embedProbe(id) {
+// YouTube InnerTube プレイヤーAPI（WEB_EMBEDDED_PLAYER クライアント＋gl=JP）で、
+// 「日本での埋め込み再生可否」を1回で判定する。サイトが実際に行う埋め込み再生と同じ経路。
+//   playabilityStatus.status:
+//     OK          → 日本で埋め込み再生できる（そのまま採用可）
+//     UNPLAYABLE  → 不可（reason 例: 別サイト埋め込み禁止／お住まいの国では公開されていません）
+//     LOGIN_REQUIRED / AGE_CHECK_REQUIRED → 年齢制限など（サイトで再生不可）
+//   videoDetails からタイトル/チャンネルも取得（oEmbed不要）。availableCountries があれば件数も表示。
+const YT_KEY = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'; // 公開Web鍵（InnerTubeの標準キー）
+async function playerProbe(id) {
   try {
-    const r = await fetch(`https://www.youtube-nocookie.com/embed/${id}`, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'accept-language': 'ja', 'referer': 'https://highlight-compass.com/' } });
-    const html = await r.text();
-    const status = pick(html, /"playabilityStatus":\{"status":"([A-Z_]+)"/) || pick(html, /"status":"([A-Z_]+)"/);
-    const reason = pick(html, /"reason":\{"simpleText":"([^"]+)"/) || pick(html, /"reason":"([^"]+)"/);
-    const embed = /"playableInEmbed":true/.test(html) ? true : /"playableInEmbed":false/.test(html) ? false : null;
-    const ac = pick(html, /"availableCountries":\[([^\]]*)\]/);
-    const countries = ac ? ac.replace(/"/g, '').split(',').filter(Boolean) : null;
-    const jp = countries ? countries.includes('JP') : null;
-    return { jp, embed, status, reason, countries: countries ? countries.length : null };
-  } catch { return { jp: null, embed: null, status: null, reason: null, countries: null }; }
+    const body = {
+      videoId: id,
+      context: {
+        client: { clientName: 'WEB_EMBEDDED_PLAYER', clientVersion: '1.20240101.00.00', hl: 'ja', gl: 'JP' },
+        thirdParty: { embedUrl: 'https://highlight-compass.com/' },
+      },
+    };
+    const r = await fetch(`https://www.youtube.com/youtubei/v1/player?key=${YT_KEY}&prettyPrint=false`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'origin': 'https://www.youtube.com' },
+      body: JSON.stringify(body),
+    });
+    if (!r.ok) return { status: `HTTP_${r.status}`, reason: '', jp: null, countries: null, title: '', author: '' };
+    const j = await r.json();
+    const ps = j.playabilityStatus || {};
+    const vd = j.videoDetails || {};
+    const mf = (j.microformat && j.microformat.playerMicroformatRenderer) || {};
+    const countries = Array.isArray(mf.availableCountries) ? mf.availableCountries : null;
+    const jp = countries ? countries.includes('JP') : (ps.status === 'OK' ? true : ps.status === 'UNPLAYABLE' ? false : null);
+    const reason = ps.reason || (ps.errorScreen && ps.errorScreen.playerErrorMessageRenderer && ps.errorScreen.playerErrorMessageRenderer.reason && ps.errorScreen.playerErrorMessageRenderer.reason.simpleText) || '';
+    return { status: ps.status || '不明', reason, jp, countries: countries ? countries.length : null, title: vd.title || '', author: vd.author || '' };
+  } catch (e) { return { status: 'ERR', reason: e.message, jp: null, countries: null, title: '', author: '' }; }
 }
 
 const ids = await searchIds(QUERY);
-console.log(`検索: "${QUERY}"${CHANNEL ? `  チャンネル絞り込み: "${CHANNEL}"` : ''}\n候補 ${ids.length} 件を診断します…\n`);
+console.log(`検索: "${QUERY}"${CHANNEL ? `  チャンネル絞り込み: "${CHANNEL}"` : ''}\n候補 ${ids.length} 件を診断します（日本での埋め込み再生可否を InnerTube で判定）…\n`);
 const chN = norm(CHANNEL);
 let shown = 0;
 for (const id of ids) {
   if (shown >= N) break;
-  const mt = await oembed(id); await sleep(150);
-  if (!mt) { continue; }
-  if (chN && !norm(mt.author).includes(chN)) continue;
-  const rg = await embedProbe(id); await sleep(250);
+  const rg = await playerProbe(id); await sleep(300);
+  if (!rg.title && rg.status === '不明') continue; // 取得失敗はスキップ
+  if (chN && !norm(rg.author).includes(chN)) continue;
   const jpTxt = rg.jp === null ? '不明' : rg.jp ? '○ 視聴可' : '× 除外';
-  const emTxt = rg.embed === false ? '× 不可' : rg.embed === true ? '○ 可' : (rg.status === 'OK' ? '○ 可(推定)' : '不明');
-  const ok = (rg.status === 'OK') && (rg.jp !== false) && (rg.embed !== false);
-  console.log(`${ok ? '✅' : '⚠️'} ${id}  [${mt.author}]`);
-  console.log(`    ${mt.title}`);
-  console.log(`    埋め込み再生=${rg.status || '不明'}${rg.reason ? '（' + rg.reason + '）' : ''}  playableInEmbed=${emTxt}  JP=${jpTxt}`);
+  const ok = rg.status === 'OK';
+  console.log(`${ok ? '✅' : '⚠️'} ${id}  [${rg.author || '?'}]`);
+  console.log(`    ${rg.title || '(タイトル取得不可)'}`);
+  console.log(`    日本での埋め込み再生=${rg.status}${rg.reason ? '（' + rg.reason + '）' : ''}  JP=${jpTxt}${rg.countries != null ? '  許可国=' + rg.countries : ''}`);
   console.log(`    → https://youtu.be/${id}\n`);
   shown++;
 }
-console.log(shown ? '✅=そのまま採用可（JP視聴可＋埋め込み可）／⚠️=要確認。' : '該当なし。クエリやチャンネル絞り込みを変えて再実行してください。');
+console.log(shown ? '✅=日本で埋め込み再生OK（そのまま採用可）／⚠️=不可・要確認（reason参照）。' : '該当なし。クエリやチャンネル絞り込みを変えて再実行してください。');
