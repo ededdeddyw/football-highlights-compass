@@ -1,0 +1,31 @@
+name: Find club video (図鑑用・雰囲気動画の候補診断)
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: '検索クエリ（例: napoli un giorno all improvviso stadium）'
+        required: true
+        default: ''
+      channel:
+        description: 'チャンネル名で絞り込み（任意・部分一致）'
+        required: false
+        default: ''
+      n:
+        description: '表示件数'
+        required: false
+        default: '8'
+permissions:
+  contents: read
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - env:
+          FIND_QUERY: ${{ github.event.inputs.query }}
+          FIND_CHANNEL: ${{ github.event.inputs.channel }}
+          FIND_N: ${{ github.event.inputs.n }}
+        run: node scripts/find-club-video.mjs
