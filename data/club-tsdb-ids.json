@@ -165,9 +165,17 @@
     "confirmed": false
   },
   "psg": {
-    "idTeam": "153855",
-    "strTeam": "Torcy",
-    "confirmed": false
+    "idTeam": null,
+    "candidates": [
+      {
+        "note": "誤爆(無関係の小クラブTorcy)。除外して再解決対象に戻す",
+        "prev": {
+          "idTeam": "153855",
+          "strTeam": "Torcy",
+          "confirmed": false
+        }
+      }
+    ]
   },
   "marseille": {
     "idTeam": "133707",
