@@ -26,18 +26,22 @@ async function searchIds(query) {
 async function oembed(id) {
   try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
 }
-async function region(id) {
+// サイトが実際に使う youtube-nocookie の embed エンドポイントで再生可否を診断する。
+// watch ページは近年データセンターIPに LOGIN_REQUIRED を返すため、埋め込み経路を直接見るのが確実。
+//   playabilityStatus.status: OK=埋め込み再生可 / UNPLAYABLE・ERROR=不可（reason に理由） / LOGIN_REQUIRED=判定不可。
+// availableCountries が取れた場合のみ日本(JP)可否も返す（取れなければ「不明」）。
+async function embedProbe(id) {
   try {
-    const r = await fetch(`https://www.youtube.com/watch?v=${id}&hl=ja&gl=US`, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'accept-language': 'ja' } });
-    const html = await r.text(); const i = html.indexOf('ytInitialPlayerResponse');
-    const seg = i >= 0 ? html.slice(i, i + 200000) : html;
-    const ac = pick(seg, /"availableCountries":\[([^\]]*)\]/);
+    const r = await fetch(`https://www.youtube-nocookie.com/embed/${id}`, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'accept-language': 'ja', 'referer': 'https://highlight-compass.com/' } });
+    const html = await r.text();
+    const status = pick(html, /"playabilityStatus":\{"status":"([A-Z_]+)"/) || pick(html, /"status":"([A-Z_]+)"/);
+    const reason = pick(html, /"reason":\{"simpleText":"([^"]+)"/) || pick(html, /"reason":"([^"]+)"/);
+    const embed = /"playableInEmbed":true/.test(html) ? true : /"playableInEmbed":false/.test(html) ? false : null;
+    const ac = pick(html, /"availableCountries":\[([^\]]*)\]/);
     const countries = ac ? ac.replace(/"/g, '').split(',').filter(Boolean) : null;
     const jp = countries ? countries.includes('JP') : null;
-    const embed = /"playableInEmbed":true/.test(seg) ? true : /"playableInEmbed":false/.test(seg) ? false : null;
-    const status = pick(seg, /"status":"([A-Z_]+)"/);
-    return { jp, embed, status, countries: countries ? countries.length : null };
-  } catch { return { jp: null, embed: null, status: null, countries: null }; }
+    return { jp, embed, status, reason, countries: countries ? countries.length : null };
+  } catch { return { jp: null, embed: null, status: null, reason: null, countries: null }; }
 }
 
 const ids = await searchIds(QUERY);
@@ -49,13 +53,13 @@ for (const id of ids) {
   const mt = await oembed(id); await sleep(150);
   if (!mt) { continue; }
   if (chN && !norm(mt.author).includes(chN)) continue;
-  const rg = await region(id); await sleep(250);
-  const jpTxt = rg.jp === null ? '不明(全世界許可?)' : rg.jp ? '○ 視聴可' : '× 除外';
-  const emTxt = rg.embed === null ? '不明' : rg.embed ? '○ 可' : '× 不可';
-  const ok = (rg.jp !== false) && (rg.embed !== false) && (rg.status === 'OK' || rg.status === null);
+  const rg = await embedProbe(id); await sleep(250);
+  const jpTxt = rg.jp === null ? '不明' : rg.jp ? '○ 視聴可' : '× 除外';
+  const emTxt = rg.embed === false ? '× 不可' : rg.embed === true ? '○ 可' : (rg.status === 'OK' ? '○ 可(推定)' : '不明');
+  const ok = (rg.status === 'OK') && (rg.jp !== false) && (rg.embed !== false);
   console.log(`${ok ? '✅' : '⚠️'} ${id}  [${mt.author}]`);
   console.log(`    ${mt.title}`);
-  console.log(`    JP=${jpTxt}  埋め込み=${emTxt}  status=${rg.status || '不明'}  許可国=${rg.countries ?? '記載なし'}`);
+  console.log(`    埋め込み再生=${rg.status || '不明'}${rg.reason ? '（' + rg.reason + '）' : ''}  playableInEmbed=${emTxt}  JP=${jpTxt}`);
   console.log(`    → https://youtu.be/${id}\n`);
   shown++;
 }
