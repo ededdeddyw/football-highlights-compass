@@ -32,6 +32,7 @@ jobs:
       - name: 取得
         run: node scripts/fetch-preseason.mjs "${{ github.event.inputs.season }}" ${{ github.event.inputs.force == 'true' && '--force' || '' }}
       - name: データをコミット
+        if: always()
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"

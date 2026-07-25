@@ -71,11 +71,19 @@ function normalizeEvent(e, ownSlug, ownJa) {
   };
 }
 
+function save(fetchedSlugs, byEvent) {
+  const out = [...byEvent.values()].sort((a, b) => (a.dateUTC || '').localeCompare(b.dateUTC || ''));
+  writeFileSync(`data/preseason-${SEASON}.json`, JSON.stringify({ season: SEASON, fetchedSlugs: [...fetchedSlugs], matches: out }, null, 2));
+  return out;
+}
+
 async function main() {
   const prev = readJson(`data/preseason-${SEASON}.json`, {});
   const fetchedSlugs = new Set(FORCE ? [] : (prev.fetchedSlugs || []));
   const byEvent = new Map((prev.matches || []).map(m => [m.idEvent, m]));
 
+  // タイムアウトで打ち切られても進捗が残るよう、クラブ1件ごとにファイルへ保存する
+  // （ワークフロー側は if: always() でコミットするので、これで再開可能になる）。
   let newlyFetched = 0, limitedOut = 0;
   for (const [slug, rec] of Object.entries(IDS)) {
     if (!rec.idTeam) continue;
@@ -96,10 +104,10 @@ async function main() {
     console.log(`${ja} (#${rec.idTeam}) → 親善試合 ${kept}件（next${next.json?.events?.length || 0}/last${last.json?.results?.length || 0}件中）`);
     fetchedSlugs.add(slug);
     newlyFetched++;
+    save(fetchedSlugs, byEvent);
     await sleep(600);
   }
-  const out = [...byEvent.values()].sort((a, b) => (a.dateUTC || '').localeCompare(b.dateUTC || ''));
-  writeFileSync(`data/preseason-${SEASON}.json`, JSON.stringify({ season: SEASON, fetchedSlugs: [...fetchedSlugs], matches: out }, null, 2));
+  const out = save(fetchedSlugs, byEvent);
   const totalClubs = Object.values(IDS).filter(r => r.idTeam).length;
   console.log(`\n新規取得クラブ: ${newlyFetched} / レート制限で断念: ${limitedOut} / 取得済み合計: ${fetchedSlugs.size}/${totalClubs} / 親善試合ユニーク件数: ${out.length}`);
   if (fetchedSlugs.size < totalClubs) console.log('未取得クラブが残っています。再実行してください。');
