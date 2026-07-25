@@ -165,8 +165,11 @@
     "confirmed": false
   },
   "psg": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133714",
+    "strTeam": "Paris Saint-Germain",
+    "strCountry": "France",
+    "strLeague": "French Ligue 1",
+    "confirmed": false
   },
   "marseille": {
     "idTeam": "133707",
