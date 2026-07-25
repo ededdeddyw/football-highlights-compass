@@ -10,8 +10,9 @@
     "confirmed": false
   },
   "as-monaco": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133823",
+    "strTeam": "Monaco",
+    "confirmed": false
   },
   "sporting-cp": {
     "idTeam": "135708",
@@ -24,14 +25,9 @@
     "confirmed": false
   },
   "mainz-05": {
-    "idTeam": null,
-    "candidates": [
-      {
-        "idTeam": "147772",
-        "strTeam": "Mainz 05 Women",
-        "note": "誤爆・女子チーム。除外"
-      }
-    ]
+    "idTeam": "133665",
+    "strTeam": "Mainz",
+    "confirmed": false
   },
   "werder-bremen": {
     "idTeam": "133662",
@@ -154,35 +150,42 @@
     "confirmed": false
   },
   "ac-milan": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "147946",
+    "strTeam": "Milan Youth",
+    "confirmed": false
   },
   "juventus": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133676",
+    "strTeam": "Juventus",
+    "confirmed": false
   },
   "inter": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133681",
+    "strTeam": "Inter Milan",
+    "confirmed": false
   },
   "psg": {
     "idTeam": null,
     "candidates": []
   },
   "marseille": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133707",
+    "strTeam": "Marseille",
+    "confirmed": false
   },
   "borussia-dortmund": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "133650",
+    "strTeam": "Borussia Dortmund",
+    "confirmed": false
   },
   "benfica": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "134108",
+    "strTeam": "Benfica",
+    "confirmed": false
   },
   "fc-porto": {
-    "idTeam": null,
-    "candidates": []
+    "idTeam": "147944",
+    "strTeam": "FC Porto Juniors",
+    "confirmed": false
   }
 }
