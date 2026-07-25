@@ -1210,7 +1210,7 @@ function buildClub(name, info){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
   ];
   if(ms.length) clgraph.push(itemListLd(ms));
-  const head = HEAD({ title:`${name} ハイライト動画・試合一覧｜クラブ情報 - Football Highlights Compass`, ogtitle:`${name} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+  const head = HEAD({ title:`${name}｜${info.league} ハイライト動画・試合一覧 - Football Highlights Compass`, ogtitle:`${name}｜${info.league} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
   const factHtml = `<div class="factcard"><table>
     <tr><th>国・リーグ</th><td>${flag} ${esc(info.country)}／${esc(info.league)}</td></tr>
     <tr><th>創設</th><td>${esc(String(info.founded))}年</td></tr>
