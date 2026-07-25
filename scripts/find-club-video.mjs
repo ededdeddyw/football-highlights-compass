@@ -23,55 +23,53 @@ async function searchIds(query) {
     return ids;
   } catch { return []; }
 }
-// YouTube InnerTube プレイヤーAPI（WEB_EMBEDDED_PLAYER クライアント＋gl=JP）で、
-// 「日本での埋め込み再生可否」を1回で判定する。サイトが実際に行う埋め込み再生と同じ経路。
-//   playabilityStatus.status:
-//     OK          → 日本で埋め込み再生できる（そのまま採用可）
-//     UNPLAYABLE  → 不可（reason 例: 別サイト埋め込み禁止／お住まいの国では公開されていません）
-//     LOGIN_REQUIRED / AGE_CHECK_REQUIRED → 年齢制限など（サイトで再生不可）
-//   videoDetails からタイトル/チャンネルも取得（oEmbed不要）。availableCountries があれば件数も表示。
-const YT_KEY = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'; // 公開Web鍵（InnerTubeの標準キー）
+// oEmbed：動画が公開状態か（＝非公開/削除でないか）とタイトル/チャンネルを取得。bot対策の影響を受けにくく最も安定。
+async function oembed(id) {
+  try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
+}
+// InnerTube ANDROID クライアント（gl=JP）で日本での再生可否を best-effort 判定。
+// WEB系は poToken 必須化で ERROR を返すため、まだ無認証で通りやすい ANDROID を使う。
+//   status: OK=日本で再生可 / UNPLAYABLE・LOGIN_REQUIRED=不可 / それ以外=判定不可（不明）。
+//   埋め込み禁止(embed-disable)は ANDROID では判別できないが、サイト側は onError で「YouTubeで見る」に自動フォールバックする。
+const YT_KEY = 'AIzaSyA8eiZmM1FaDVjRy-df2KTyQ_vz_yYM39w'; // ANDROID クライアントの公開InnerTubeキー
 async function playerProbe(id) {
   try {
     const body = {
       videoId: id,
-      context: {
-        client: { clientName: 'WEB_EMBEDDED_PLAYER', clientVersion: '1.20240101.00.00', hl: 'ja', gl: 'JP' },
-        thirdParty: { embedUrl: 'https://highlight-compass.com/' },
-      },
+      context: { client: { clientName: 'ANDROID', clientVersion: '19.09.37', androidSdkVersion: 30, hl: 'ja', gl: 'JP', userAgent: 'com.google.android.youtube/19.09.37 (Linux; U; Android 11) gzip' } },
     };
     const r = await fetch(`https://www.youtube.com/youtubei/v1/player?key=${YT_KEY}&prettyPrint=false`, {
       method: 'POST',
-      headers: { 'content-type': 'application/json', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Safari/537.36', 'origin': 'https://www.youtube.com' },
+      headers: { 'content-type': 'application/json', 'user-agent': 'com.google.android.youtube/19.09.37 (Linux; U; Android 11) gzip', 'x-goog-api-format-version': '2' },
       body: JSON.stringify(body),
     });
-    if (!r.ok) return { status: `HTTP_${r.status}`, reason: '', jp: null, countries: null, title: '', author: '' };
+    if (!r.ok) return { status: `HTTP_${r.status}`, reason: '', jp: null, countries: null };
     const j = await r.json();
     const ps = j.playabilityStatus || {};
-    const vd = j.videoDetails || {};
     const mf = (j.microformat && j.microformat.playerMicroformatRenderer) || {};
     const countries = Array.isArray(mf.availableCountries) ? mf.availableCountries : null;
     const jp = countries ? countries.includes('JP') : (ps.status === 'OK' ? true : ps.status === 'UNPLAYABLE' ? false : null);
     const reason = ps.reason || (ps.errorScreen && ps.errorScreen.playerErrorMessageRenderer && ps.errorScreen.playerErrorMessageRenderer.reason && ps.errorScreen.playerErrorMessageRenderer.reason.simpleText) || '';
-    return { status: ps.status || '不明', reason, jp, countries: countries ? countries.length : null, title: vd.title || '', author: vd.author || '' };
-  } catch (e) { return { status: 'ERR', reason: e.message, jp: null, countries: null, title: '', author: '' }; }
+    return { status: ps.status || '不明', reason, jp, countries: countries ? countries.length : null };
+  } catch (e) { return { status: 'ERR', reason: e.message, jp: null, countries: null }; }
 }
 
 const ids = await searchIds(QUERY);
-console.log(`検索: "${QUERY}"${CHANNEL ? `  チャンネル絞り込み: "${CHANNEL}"` : ''}\n候補 ${ids.length} 件を診断します（日本での埋め込み再生可否を InnerTube で判定）…\n`);
+console.log(`検索: "${QUERY}"${CHANNEL ? `  チャンネル絞り込み: "${CHANNEL}"` : ''}\n候補 ${ids.length} 件を診断します（oEmbedで公開確認＋ANDROIDクライアントで日本再生可否）…\n`);
 const chN = norm(CHANNEL);
 let shown = 0;
 for (const id of ids) {
   if (shown >= N) break;
-  const rg = await playerProbe(id); await sleep(300);
-  if (!rg.title && rg.status === '不明') continue; // 取得失敗はスキップ
-  if (chN && !norm(rg.author).includes(chN)) continue;
+  const mt = await oembed(id); await sleep(150);
+  if (!mt) continue; // 非公開/削除はスキップ
+  if (chN && !norm(mt.author).includes(chN)) continue;
+  const rg = await playerProbe(id); await sleep(250);
   const jpTxt = rg.jp === null ? '不明' : rg.jp ? '○ 視聴可' : '× 除外';
-  const ok = rg.status === 'OK';
-  console.log(`${ok ? '✅' : '⚠️'} ${id}  [${rg.author || '?'}]`);
-  console.log(`    ${rg.title || '(タイトル取得不可)'}`);
-  console.log(`    日本での埋め込み再生=${rg.status}${rg.reason ? '（' + rg.reason + '）' : ''}  JP=${jpTxt}${rg.countries != null ? '  許可国=' + rg.countries : ''}`);
+  const ok = rg.status === 'OK' && rg.jp !== false;
+  console.log(`${ok ? '✅' : '⚠️'} ${id}  [${mt.author || '?'}]`);
+  console.log(`    ${mt.title || '(タイトル取得不可)'}`);
+  console.log(`    日本再生=${rg.status}${rg.reason ? '（' + rg.reason + '）' : ''}  JP=${jpTxt}${rg.countries != null ? '  許可国=' + rg.countries : ''}`);
   console.log(`    → https://youtu.be/${id}\n`);
   shown++;
 }
-console.log(shown ? '✅=日本で埋め込み再生OK（そのまま採用可）／⚠️=不可・要確認（reason参照）。' : '該当なし。クエリやチャンネル絞り込みを変えて再実行してください。');
+console.log(shown ? '✅=公開済み＋日本で再生OK（採用可。埋め込み禁止は onError で YouTube 導線に自動フォールバック）／⚠️=要確認（reason参照）。' : '該当なし。クエリを変えて再実行してください。');
