@@ -37,7 +37,7 @@ const OVERRIDES = {
   'ac-milan': 'AC Milan',
   'mainz-05': 'FSV Mainz 05',
   'fc-porto': 'Porto',
-  'psg': 'Paris Saint-Germain',
+  'psg': 'Paris Saint Germain',
 };
 const titleCase = slug => OVERRIDES[slug] || slug.split('-').map(w => /^\d+$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)).join(' ');
 // トップチーム以外（女子/育成/リザーブ/フットサル等）を除外
