@@ -7,6 +7,10 @@
 // strTeamBadge を突き合わせ、一致すれば confirmed:true として自動確定。一致しない/複数候補の場合は
 // candidates を列挙するので、data/club-tsdb-ids.json を手動で見直してから fetch-preseason.mjs を使う。
 // 女子/育成/リザーブ扱いのチームは（1件しかヒットしなくても）自動採用しない。
+// 注意: 「候補1件」の自動採用も無条件には信用できないことが分かっている
+// （実例：マインツ→女子チーム、ACミラン→育成、ポルト→育成、PSG→無関係の
+// 小クラブ Torcy を誤採用）。strCountry/strLeague を必ず出力するので、
+// 特に強豪クラブは目視で確認してから fetch-preseason.mjs に進むこと。
 //
 // 無料公開キーの searchteams.php は1実行あたり ~30件でレート制限にかかることがある。
 // 既に解決済みのクラブはスキップして再実行で続きから進められる（--force で再解決）。
@@ -33,7 +37,7 @@ const OVERRIDES = {
   'ac-milan': 'AC Milan',
   'mainz-05': 'FSV Mainz 05',
   'fc-porto': 'Porto',
-  'psg': 'Paris SG',
+  'psg': 'Paris Saint-Germain',
 };
 const titleCase = slug => OVERRIDES[slug] || slug.split('-').map(w => /^\d+$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)).join(' ');
 // トップチーム以外（女子/育成/リザーブ/フットサル等）を除外
@@ -68,9 +72,9 @@ async function main() {
     const exact = soccer.find(t => t.strTeamBadge && crest && t.strTeamBadge === crest);
     const pick = exact || (soccer.length === 1 ? soccer[0] : null);
     if (pick) {
-      out[info.slug] = { idTeam: pick.idTeam, strTeam: pick.strTeam, confirmed: !!exact };
+      out[info.slug] = { idTeam: pick.idTeam, strTeam: pick.strTeam, strCountry: pick.strCountry || '', strLeague: pick.strLeague || '', confirmed: !!exact };
       ok++;
-      console.log(`${ja} (${q}) → ${pick.strTeam} #${pick.idTeam}${exact ? ' [crest一致=確定]' : ' [単一候補]'}`);
+      console.log(`${ja} (${q}) → ${pick.strTeam} #${pick.idTeam} [${pick.strCountry || '?'}/${pick.strLeague || '?'}]${exact ? ' [crest一致=確定]' : ' [単一候補・要目視確認]'}`);
     } else {
       out[info.slug] = { idTeam: null, candidates: soccer.map(t => ({ idTeam: t.idTeam, strTeam: t.strTeam, strCountry: t.strCountry, strLeague: t.strLeague })) };
       if (soccer.length) ambiguous++; else notfound++;
