@@ -24393,5 +24393,521 @@
     "meta": "第38節 / 2025-26",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "preseason-2026-kashima-antlers-vegalta-sendai-20260715",
+    "teams": [
+      "鹿島アントラーズ",
+      "Vegalta Sendai"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-cerezo-osaka-tochigi-city-20260715",
+    "teams": [
+      "セレッソ大阪",
+      "Tochigi City"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-kawasaki-frontale-vanraure-hachinohe-20260716",
+    "teams": [
+      "川崎フロンターレ",
+      "Vanraure Hachinohe"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-sanfrecce-hiroshima-paks-20260716",
+    "teams": [
+      "サンフレッチェ広島",
+      "Paks"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-kyoto-sanga-shonan-bellmare-20260717",
+    "teams": [
+      "京都サンガF.C.",
+      "Shonan Bellmare"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-mainz-05-kaiserslautern-20260717",
+    "teams": [
+      "マインツ",
+      "Kaiserslautern"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-as-monaco-saint-priest-20260718",
+    "teams": [
+      "モナコ",
+      "Saint-Priest"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-real-sociedad-racing-de-santander-20260718",
+    "teams": [
+      "ソシエダ",
+      "Racing de Santander"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-yokohama-f-marinos-roasso-kumamoto-20260719",
+    "teams": [
+      "横浜F・マリノス",
+      "Roasso Kumamoto"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-sporting-cp-strasbourg-20260720",
+    "teams": [
+      "スポルティング",
+      "Strasbourg"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-fc-tokyo-nagoya-grampus-20260721",
+    "teams": [
+      "FC東京",
+      "名古屋グランパス"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-vissel-kobe-fc-imabari-20260722",
+    "teams": [
+      "ヴィッセル神戸",
+      "FC Imabari"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-werder-bremen-fagiano-okayama-20260722",
+    "teams": [
+      "ブレーメン",
+      "Fagiano Okayama"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-napoli-arezzo-20260722",
+    "teams": [
+      "ナポリ",
+      "Arezzo"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-valencia-eldense-20260722",
+    "teams": [
+      "バレンシア",
+      "Eldense"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-benfica-os-belenenses-20260724",
+    "teams": [
+      "ベンフィカ",
+      "Os Belenenses"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-fc-barcelona-ce-europa-20260724",
+    "teams": [
+      "バルセロナ",
+      "CE Europa"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-hokkaido-consadole-sapporo-nagoya-grampus-20260725",
+    "teams": [
+      "Hokkaido Consadole Sapporo",
+      "名古屋グランパス"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-rb-leipzig-ingolstadt-20260725",
+    "teams": [
+      "ライプツィヒ",
+      "Ingolstadt"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-werder-bremen-bochum-20260725",
+    "teams": [
+      "ブレーメン",
+      "Bochum"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-fortuna-dusseldorf-borussia-dortmund-20260725",
+    "teams": [
+      "Fortuna Düsseldorf",
+      "ドルトムント"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-mainz-05-holstein-kiel-20260725",
+    "teams": [
+      "マインツ",
+      "Holstein Kiel"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-wehen-wiesbaden-bayern-munich-20260725",
+    "teams": [
+      "Wehen Wiesbaden",
+      "バイエルン"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-celtic-ac-milan-20260725",
+    "teams": [
+      "Celtic",
+      "ミラン"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-wolverhampton-wanderers-real-sociedad-20260725",
+    "teams": [
+      "Wolverhampton Wanderers",
+      "ソシエダ"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-valencia-castellon-20260725",
+    "teams": [
+      "バレンシア",
+      "Castellón"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-standard-liege-juventus-20260725",
+    "teams": [
+      "Standard Liège",
+      "ユベントス"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-sporting-cp-as-monaco-20260725",
+    "teams": [
+      "スポルティング",
+      "モナコ"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-fc-porto-aston-villa-20260725",
+    "teams": [
+      "ポルト",
+      "Aston Villa"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-albirex-niigata-montedio-yamagata-20260726",
+    "teams": [
+      "アルビレックス新潟",
+      "Montedio Yamagata"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-karlsruhe-inter-20260726",
+    "teams": [
+      "Karlsruhe",
+      "インテル"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-napoli-carrarese-20260726",
+    "teams": [
+      "ナポリ",
+      "Carrarese"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-as-roma-cannes-20260726",
+    "teams": [
+      "ローマ",
+      "Cannes"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-sanfrecce-hiroshima-verspah-oita-20260728",
+    "teams": [
+      "サンフレッチェ広島",
+      "Verspah Oita"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-cerezo-osaka-borussia-dortmund-20260729",
+    "teams": [
+      "セレッソ大阪",
+      "ドルトムント"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-parma-arezzo-20260730",
+    "teams": [
+      "パルマ",
+      "Arezzo"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-birmingham-city-fc-barcelona-20260731",
+    "teams": [
+      "Birmingham City",
+      "バルセロナ"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-urawa-reds-rb-omiya-ardija-20260801",
+    "teams": [
+      "浦和レッズ",
+      "RB Omiya Ardija"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-fc-tokyo-borussia-dortmund-20260801",
+    "teams": [
+      "FC東京",
+      "ドルトムント"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-jef-united-chiba-kashiwa-reysol-20260801",
+    "teams": [
+      "JEF United Chiba",
+      "柏レイソル"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-atletico-madrid-manchester-united-20260801",
+    "teams": [
+      "アトレティコ",
+      "Manchester United"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-waldhof-mannheim-eintracht-frankfurt-20260801",
+    "teams": [
+      "Waldhof Mannheim",
+      "フランクフルト"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "preseason-2026-mallorca-psg-20260805",
+    "teams": [
+      "Mallorca",
+      "PSG"
+    ],
+    "league": "preseason",
+    "leagueName": "プレシーズン",
+    "meta": "親善試合",
+    "players": [],
+    "hasPreview": false
   }
 ]
