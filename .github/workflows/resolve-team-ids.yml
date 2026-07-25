@@ -1,0 +1,34 @@
+name: Resolve club TheSportsDB IDs (プレシーズン取得の下準備)
+
+# 既存クラブ(entities.mjs)をTheSportsDBのチームIDに解決してdata/club-tsdb-ids.jsonへ保存する。
+# 手動実行。結果はコミットするが、要確認(候補複数/該当なし)が残る場合は手動で見直してから
+# fetch-preseason.mjs を使うこと。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-team-ids
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: 解決
+        run: node scripts/resolve-team-ids.mjs
+      - name: データをコミット
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/club-tsdb-ids.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "data: クラブのTheSportsDBチームIDを解決（resolve-team-ids）"
+          git pull --rebase --autostash || true
+          git push
