@@ -150,9 +150,17 @@
     "confirmed": false
   },
   "ac-milan": {
-    "idTeam": "147946",
-    "strTeam": "Milan Youth",
-    "confirmed": false
+    "idTeam": null,
+    "candidates": [
+      {
+        "note": "誤爆(youth/juniors)。除外して再解決対象に戻す",
+        "prev": {
+          "idTeam": "147946",
+          "strTeam": "Milan Youth",
+          "confirmed": false
+        }
+      }
+    ]
   },
   "juventus": {
     "idTeam": "133676",
@@ -184,8 +192,16 @@
     "confirmed": false
   },
   "fc-porto": {
-    "idTeam": "147944",
-    "strTeam": "FC Porto Juniors",
-    "confirmed": false
+    "idTeam": null,
+    "candidates": [
+      {
+        "note": "誤爆(youth/juniors)。除外して再解決対象に戻す",
+        "prev": {
+          "idTeam": "147944",
+          "strTeam": "FC Porto Juniors",
+          "confirmed": false
+        }
+      }
+    ]
   }
 }
