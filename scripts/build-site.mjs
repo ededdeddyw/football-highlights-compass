@@ -1106,6 +1106,71 @@ function buildLeagueMatch(mt, L, seasonLbl){
   writeFileSync(`site/match/${slug}.html`, out);
 }
 function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
+
+// ========================= プレシーズン（親善試合）試合ページ =========================
+// data/preseason-<season>.json（fetch-preseason.mjs 生成）から親善試合のページを作る。
+// 安定スラッグ（preseason-<season>-home-away-YYYYMMDD）でURL固定。
+// 五大リーグ試合ページと同じく、見どころ記事/動画が揃うまでnoindex・結果はネタバレマスク。
+let preseasonCount = 0;
+function preseasonSlug(mt, season){ const d=(mt.dateUTC||'').slice(0,10).replace(/-/g,'') || TODAY.replace(/-/g,''); return `preseason-${season}-${mt.homeSlug}-${mt.awaySlug}-${d}`; }
+function buildPreseasonMatch(mt, season){
+  if(!mt.home || !mt.away) return;
+  const slug = preseasonSlug(mt, season);
+  if (slugs.includes(slug)) return; slugs.push(slug); preseasonCount++;
+  LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:'preseason', leagueName:'プレシーズン', meta:'親善試合', players:[], hasPreview:hasPreview(slug) });
+  if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex
+  const teamsTxt = `${mt.home} vs ${mt.away}`;
+  const url = `${DOMAIN}/match/${slug}.html`;
+  const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
+  LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId||'', date:(mt.dateUTC||'').slice(0,10)||TODAY, title:`${teamsTxt}｜プレシーズン親善試合` });
+  const dateTxt = mt.dateUTC ? mt.dateUTC.slice(0,10) : '';
+  const dek = `${teamsTxt}（プレシーズン親善試合）の公式ハイライト。結果はネタバレ防止で隠しています。`;
+  const desc = `${teamsTxt}のプレシーズン親善試合ハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
+  let videoBlock;
+  if (mt.videoId){
+    const emb = `<div class="source"><div class="source-head"><span class="tag embed">▶ 公式ハイライト</span><span class="name">YouTube</span><span class="geo">日本で再生可</span></div><div class="embedwrap"><iframe id="ytf_${mt.videoId}" src="https://www.youtube-nocookie.com/embed/${mt.videoId}?enablejsapi=1" loading="lazy" title="${escA(teamsTxt)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>公式ハイライト</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
+    videoBlock = `<button class="video-veil" type="button" onclick="try{localStorage.setItem('fhc_spoiler','0')}catch(e){};document.documentElement.classList.add('spoiler-off');this.blur();"><span class="vv-ic">🙈▶</span><span class="vv-tx">ハイライト動画はネタバレ防止で隠しています<small>タップで表示（結果が映る場合があります）</small></span></button><div class="spoiler-cover">${emb}</div>`;
+  } else {
+    const q = encodeURIComponent(`${mt.home} ${mt.away} ハイライト`);
+    videoBlock = `<div class="source"><div class="source-head"><span class="tag link">🔎 動画準備中</span><span class="name">公式ハイライト</span></div><a class="ytalt" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">公式ハイライトが公開され次第ここに掲載します。今すぐ探す ▶ YouTubeで検索</a></div>`;
+  }
+  const facts = [['大会','プレシーズン親善試合'], ['対戦', teamsTxt]];
+  if (dateTxt) facts.push(['開催日', dateTxt]);
+  if (mt.venue) facts.push(['会場', mt.venue]);
+  const resultRow = (mt.finished && mt.score) ? `<tr class="spoiler-cover"><th>結果</th><td>${esc(mt.home)} ${esc(mt.score.replace('-','−'))} ${esc(mt.away)}</td></tr>` : '';
+  const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}${resultRow}</table></div>`;
+  // 追跡中クラブなら関連クラブページへのリンク
+  const clubLinks = [mt.home, mt.away].filter(n=>CLUBS[n]).map(n=>`<a href="../club/${CLUBS[n].slug}.html">${esc(n)}のクラブページ</a>`).join(' ／ ');
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${clubLinks?`<span>${clubLinks}</span>`:''}<a href="../">他の試合を探す</a></div>`;
+  const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
+  const sideRead = renderPreview(slug);
+  const head = HEAD({
+    title:`${teamsTxt} ハイライト｜プレシーズン親善試合 - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} ハイライト｜プレシーズン親善試合`, desc, url, ogimg, ogtype:'video.other',
+    robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
+    jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:teamsTxt,url}]) ]
+  });
+  const out = head + TOPBAR_NAV
+  + `<div class="spoilerbar"><div class="spoilerbar-in">${spoilerToggleBtn}<span class="sb-note">タップで結果（スコア）の表示を切り替えます。</span></div></div>`
+  + `<div class="appgrid appgrid-match">
+  <aside class="col-left" id="navSidebar">${subSideNav()}</aside>
+  <main class="col-main"><article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:teamsTxt}])}
+  <p class="kicker">⚽ プレシーズン親善試合</p>
+  <h1 class="headline">${esc(teamsTxt)}</h1>
+  <p class="dek">${esc(dek)}</p>
+  ${matchTags}
+  <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
+  ${daznCta('シーズン開幕後のフルマッチ・見逃し配信もDAZNで。')}
+  ${AD}
+  ${factHtml}
+  ${footer1()}
+  </article></main>
+  ${readDrawer(sideRead||'').aside}
+</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
+  writeFileSync(`site/match/${slug}.html`, out);
+}
+
 try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
@@ -1118,6 +1183,14 @@ try {
   }
   if (leagueCount) console.log(`リーグ試合ページ: ${leagueCount}`);
 } catch(e){ console.warn('リーグページ生成でエラー:', e.message); }
+
+try {
+  for (const f of readdirSync('data').filter(n=>/^preseason-\d{4}\.json$/.test(n))){
+    const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
+    (j.matches||[]).forEach(mt=>buildPreseasonMatch(mt, j.season || '2026'));
+  }
+  if (preseasonCount) console.log(`プレシーズン試合ページ: ${preseasonCount}`);
+} catch(e){ console.warn('プレシーズンページ生成でエラー:', e.message); }
 
 // scripts/enrich-matches.mjs（独自記事生成）用の機械可読な試合インデックスを書き出す。
 // 生成側はこの一覧を入力に、記事未生成の試合だけをClaudeで前フリ記事化する。
