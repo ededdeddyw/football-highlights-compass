@@ -22,7 +22,6 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // slug → TheSportsDB検索語。基本は slug をタイトルケース化するが、略称・愛称ずれのあるものは上書き。
 const OVERRIDES = {
-  'psg': 'Paris Saint-Germain',
   'bayern-munich': 'Bayern Munich',
   'marseille': 'Marseille',
   'benfica': 'Benfica',
@@ -31,12 +30,14 @@ const OVERRIDES = {
   'fc-barcelona': 'Barcelona',
   'atletico-madrid': 'Atletico Madrid',
   'as-monaco': 'Monaco',
-  'ac-milan': 'Milan',
+  'ac-milan': 'AC Milan',
   'mainz-05': 'FSV Mainz 05',
+  'fc-porto': 'Porto',
+  'psg': 'Paris SG',
 };
 const titleCase = slug => OVERRIDES[slug] || slug.split('-').map(w => /^\d+$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)).join(' ');
 // トップチーム以外（女子/育成/リザーブ/フットサル等）を除外
-const NOT_TOP_TEAM = /\bwomen'?s?\b|\bladies\b|\bfemin/i;
+const NOT_TOP_TEAM = /\bwomen'?s?\b|\bladies\b|\bfemin|\byouth\b|\bjuniors?\b|\breserves?\b|\bacademy\b|\bU-?\d{2}\b/i;
 
 async function searchTeam(name) {
   for (let attempt = 1; attempt <= 3; attempt++) {
