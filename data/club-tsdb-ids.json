@@ -1,0 +1,183 @@
+{
+  "real-sociedad": {
+    "idTeam": "133724",
+    "strTeam": "Real Sociedad",
+    "confirmed": false
+  },
+  "parma": {
+    "idTeam": "135728",
+    "strTeam": "Parma",
+    "confirmed": false
+  },
+  "as-monaco": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "sporting-cp": {
+    "idTeam": "135708",
+    "strTeam": "Sporting CP",
+    "confirmed": false
+  },
+  "eintracht-frankfurt": {
+    "idTeam": "133814",
+    "strTeam": "Eintracht Frankfurt",
+    "confirmed": false
+  },
+  "mainz-05": {
+    "idTeam": "147772",
+    "strTeam": "Mainz 05 Women",
+    "confirmed": false
+  },
+  "werder-bremen": {
+    "idTeam": "133662",
+    "strTeam": "Werder Bremen",
+    "confirmed": false
+  },
+  "bayern-munich": {
+    "idTeam": "133664",
+    "strTeam": "Bayern Munich",
+    "confirmed": false
+  },
+  "rb-leipzig": {
+    "idTeam": "134695",
+    "strTeam": "RB Leipzig",
+    "confirmed": false
+  },
+  "kashima-antlers": {
+    "idTeam": "137707",
+    "strTeam": "Kashima Antlers",
+    "confirmed": false
+  },
+  "urawa-reds": {
+    "idTeam": "137716",
+    "strTeam": "Urawa Red Diamonds",
+    "confirmed": false
+  },
+  "kawasaki-frontale": {
+    "idTeam": "137709",
+    "strTeam": "Kawasaki Frontale",
+    "confirmed": false
+  },
+  "fc-tokyo": {
+    "idTeam": "137704",
+    "strTeam": "FC Tokyo",
+    "confirmed": false
+  },
+  "tokyo-verdy": {
+    "idTeam": "139901",
+    "strTeam": "Tokyo Verdy",
+    "confirmed": false
+  },
+  "yokohama-f-marinos": {
+    "idTeam": "137719",
+    "strTeam": "Yokohama F Marinos",
+    "confirmed": false
+  },
+  "vissel-kobe": {
+    "idTeam": "137717",
+    "strTeam": "Vissel Kobe",
+    "confirmed": false
+  },
+  "kyoto-sanga": {
+    "idTeam": "139888",
+    "strTeam": "Kyoto Sanga",
+    "confirmed": false
+  },
+  "gamba-osaka": {
+    "idTeam": "137705",
+    "strTeam": "Gamba Osaka",
+    "confirmed": false
+  },
+  "cerezo-osaka": {
+    "idTeam": "137703",
+    "strTeam": "Cerezo Osaka",
+    "confirmed": false
+  },
+  "sanfrecce-hiroshima": {
+    "idTeam": "137713",
+    "strTeam": "Sanfrecce Hiroshima",
+    "confirmed": false
+  },
+  "nagoya-grampus": {
+    "idTeam": "137710",
+    "strTeam": "Nagoya Grampus",
+    "confirmed": false
+  },
+  "kashiwa-reysol": {
+    "idTeam": "137708",
+    "strTeam": "Kashiwa Reysol",
+    "confirmed": false
+  },
+  "shimizu-s-pulse": {
+    "idTeam": "137714",
+    "strTeam": "Shimizu S-Pulse",
+    "confirmed": false
+  },
+  "albirex-niigata": {
+    "idTeam": "139881",
+    "strTeam": "Albirex Niigata",
+    "confirmed": false
+  },
+  "jubilo-iwata": {
+    "idTeam": "139887",
+    "strTeam": "Júbilo Iwata",
+    "confirmed": false
+  },
+  "fc-barcelona": {
+    "idTeam": "133739",
+    "strTeam": "Barcelona",
+    "confirmed": false
+  },
+  "atletico-madrid": {
+    "idTeam": "133729",
+    "strTeam": "Atlético Madrid",
+    "confirmed": false
+  },
+  "valencia": {
+    "idTeam": "133725",
+    "strTeam": "Valencia",
+    "confirmed": false
+  },
+  "napoli": {
+    "idTeam": "133670",
+    "strTeam": "Napoli",
+    "confirmed": false
+  },
+  "as-roma": {
+    "idTeam": "133682",
+    "strTeam": "Roma",
+    "confirmed": false
+  },
+  "ac-milan": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "juventus": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "inter": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "psg": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "marseille": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "borussia-dortmund": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "benfica": {
+    "idTeam": null,
+    "candidates": []
+  },
+  "fc-porto": {
+    "idTeam": null,
+    "candidates": []
+  }
+}
