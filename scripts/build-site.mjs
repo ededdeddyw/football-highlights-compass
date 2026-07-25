@@ -1240,7 +1240,15 @@ function buildCountry(name, info){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
-  const head = HEAD({ title:`${name}代表｜W杯2026 ハイライト・試合日程・歴代成績 - Football Highlights Compass`, ogtitle:`${name}代表｜W杯2026 ハイライト・試合日程・歴代成績`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
+  // 「国名 ワールドカップ 歴代」系クエリのCTR改善：peakが短く収まる国は具体的な戦績をtitleに出す（長すぎる国は従来のまま）
+  const peakInTitle = info.peak.length<=18 ? info.peak : null;
+  const cTitle = peakInTitle
+    ? `${name}代表｜歴代最高${peakInTitle}・W杯2026日程とハイライト - Football Highlights Compass`
+    : `${name}代表｜W杯2026 ハイライト・試合日程・歴代成績 - Football Highlights Compass`;
+  const cOgTitle = peakInTitle
+    ? `${name}代表｜歴代最高${peakInTitle}・W杯2026日程とハイライト`
+    : `${name}代表｜W杯2026 ハイライト・試合日程・歴代成績`;
+  const head = HEAD({ title:cTitle, ogtitle:cOgTitle, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
   const blurbHtml = info.blurb.map(p=>`<p>${esc(p)}</p>`).join('');
   const factHtml = `<div class="factcard"><table>
     <tr><th>所属連盟</th><td>${esc(info.confed)}</td></tr>
