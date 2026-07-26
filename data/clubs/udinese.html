@@ -1,0 +1,199 @@
+<!--CLUB slug=udinese name=ウディネーゼ league=セリエA-->
+<!--VIDEO id=2rVGr-re044 title=Udinese alè vogliamo vincere（クルヴァ・ノルドの応援歌）-->
+<!--DESC ウディネーゼ（セリエA）のクラブ紹介。北東イタリア・フリウリ地方の街ウディネ、丘の上のウディネ城、世界にはりめぐらせたスカウト網と若手育成、白黒（ビアンコネーリ）のスタイルを、応援動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a0a0b; --cl-black:#141416; --cl-white:#f2f2f0; --cl-gold:#b08a3a; --cl-gold-hi:#d8b25e; --cl-silver:#c9ccd2;
+    --cl-paper:var(--bg,#f5f5f6); --cl-text:var(--fg,#17171a); --cl-muted:#6b6b70; --cl-line:#d8d8dc; --cl-card:#fafafa;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#eaeaec; --cl-muted:#9a9aa0; --cl-line:#26262a; --cl-card:#131315; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#eaeaec; --cl-muted:#9a9aa0; --cl-line:#26262a; --cl-card:#131315; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#17171a; --cl-muted:#6b6b70; --cl-line:#d8d8dc; --cl-card:#fafafa; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,10,11,.94) 32%,rgba(10,10,11,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0a0a0b;background:var(--cl-gold);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e6e6e2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,#141416 0 22%,var(--cl-gold) 22% 50%,#f2f2f0 50% 72%,var(--cl-gold) 72% 100%)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(176,138,58,.3)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#0a0a0b;background:var(--cl-gold);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(176,138,58,.34);font-weight:700}
+  .cl-gold{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c7c7c2;background:#080809;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-gold);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="フリウリ地方の夕景と、丘の上に建つウディネ城のシルエットを描いたイラスト">
+        <defs>
+          <linearGradient id="udsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2622"/><stop offset="52%" stop-color="#16130f"/><stop offset="100%" stop-color="#0a0a0b"/></linearGradient>
+          <radialGradient id="udglow" cx="50%" cy="34%" r="52%"><stop offset="0%" stop-color="#d8b25e" stop-opacity=".26"/><stop offset="48%" stop-color="#b08a3a" stop-opacity=".11"/><stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#udsky)"/>
+        <rect width="1200" height="470" fill="url(#udglow)"/>
+        <circle cx="252" cy="104" r="40" fill="#f2f2f0" opacity=".85"/>
+        <circle cx="236" cy="96" r="40" fill="#16130f" opacity=".5"/>
+        <g fill="#d8b25e" opacity=".45"><circle cx="470" cy="80" r="2.4"/><circle cx="560" cy="58" r="2"/><circle cx="700" cy="96" r="2.4"/><circle cx="820" cy="62" r="2"/><circle cx="380" cy="120" r="2"/></g>
+        <!-- 遠景のアルプス（フリウリの北） -->
+        <path d="M0 300 L120 214 L210 268 L320 190 L430 262 L540 208 L660 280 L780 214 L900 276 L1030 220 L1130 274 L1200 236 L1200 300 Z" fill="#1c1a17"/>
+        <path d="M0 300 L120 214 L210 268 L320 190 L430 262 L540 208 L660 280 L780 214 L900 276 L1030 220 L1130 274 L1200 236 L1200 300 Z" fill="none" stroke="#b08a3a" stroke-width="1.5" opacity=".3"/>
+        <!-- 丘（コッレ・デル・カステッロ） -->
+        <path d="M470 470 Q680 250 900 470 Z" fill="#100f0d"/>
+        <path d="M470 470 Q680 250 900 470" fill="none" stroke="#3a352c" stroke-width="2"/>
+        <!-- ウディネ城（丘の上の宮殿） -->
+        <g transform="translate(600,262)">
+          <rect x="0" y="0" width="188" height="64" fill="#161512" stroke="#4a4437" stroke-width="2"/>
+          <rect x="70" y="-24" width="48" height="24" fill="#161512" stroke="#4a4437" stroke-width="2"/>
+          <polygon points="70,-24 94,-42 118,-24" fill="#141210" stroke="#4a4437" stroke-width="2"/>
+          <!-- 小塔（時計塔） -->
+          <rect x="160" y="-40" width="18" height="40" fill="#161512" stroke="#4a4437" stroke-width="2"/>
+          <polygon points="160,-40 169,-56 178,-40" fill="#141210"/>
+          <!-- 窓の灯り -->
+          <g fill="#d8b25e" opacity=".9"><rect x="16" y="18" width="7" height="12"/><rect x="40" y="18" width="7" height="12"/><rect x="64" y="18" width="7" height="12"/><rect x="118" y="18" width="7" height="12"/><rect x="142" y="18" width="7" height="12"/><rect x="166" y="18" width="7" height="12"/><rect x="86" y="-16" width="6" height="9"/><rect x="98" y="-16" width="6" height="9"/></g>
+        </g>
+        <!-- 前景のフリウリ平野（ぶどう畑の畝） -->
+        <g stroke="#1a1815" stroke-width="10" opacity=".9"><line x1="-20" y1="420" x2="1220" y2="452"/><line x1="-20" y1="446" x2="1220" y2="470"/></g>
+        <g stroke="#b08a3a" stroke-width="2" opacity=".25"><line x1="120" y1="430" x2="120" y2="470"/><line x1="300" y1="436" x2="300" y2="470"/><line x1="900" y1="438" x2="900" y2="470"/><line x1="1080" y1="444" x2="1080" y2="470"/></g>
+        <!-- 白黒＋金のバンド -->
+        <g transform="translate(70,360)"><rect x="0" y="0" width="44" height="58" fill="#141416"/><rect x="44" y="0" width="44" height="58" fill="#f2f2f0"/><rect x="88" y="0" width="44" height="58" fill="#141416"/><rect x="132" y="0" width="44" height="58" fill="#f2f2f0"/><rect x="0" y="58" width="176" height="6" fill="#b08a3a"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>ウディネーゼ<span class="cl-en">Udinese Calcio · 1896</span></h1>
+        <p class="cl-sub">北東イタリア・フリウリ地方の街ウディネ。丘の上の古城を望むこのクラブは、白と黒をまとい、世界から才能を見出す「育成の名門」として知られます。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北東部、<b>フリウリ＝ヴェネツィア・ジュリア州</b>の街ウディネを本拠とするクラブです。1896年創設の古い歴史を持ち、白と黒（ビアンコネーリ）をまとって、<b>世界にはりめぐらせたスカウト網</b>と若手育成で名を知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ブルーエナジー・スタジアム（旧スタディオ・フリウリ）</h2>
+      <p>大きくうねる屋根が特徴の、約2万5千人収容のモダンなスタジアムです。長く<strong>スタディオ・フリウリ</strong>の名で親しまれ、近年に全面改修されました。ゴール裏の<span class="cl-hl">クルヴァ・ノルド</span>に集うサポーターが、白と黒の旗と歌で、フリウリの誇りをスタンドに響かせます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="白と黒のスカーフを掲げる観客で埋まった、クルヴァ・ノルドのイラスト">
+          <rect width="600" height="190" fill="#080809"/>
+          <defs><pattern id="udcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#080809"/><circle cx="8.5" cy="7" r="5" fill="#c9ccd2"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#udcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#141416" opacity=".85"/>
+          <g stroke="#f2f2f0" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/></g>
+          <g stroke="#141416" stroke-width="8" stroke-linecap="round" opacity=".95" fill="none"><path d="M220 48 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#6a6a6f"/><polygon points="164,30 206,40 164,54" fill="#f2f2f0"/><rect x="420" y="24" width="4" height="64" fill="#6a6a6f"/><polygon points="424,24 466,36 424,50" fill="#b08a3a"/></g>
+        </svg>
+        <figcaption>クルヴァ・ノルド — 白と黒に染まる、フリウリのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>フリウリの都ウディネと、丘の上の古城</h2>
+      <p>ウディネは、アルプスとアドリア海のあいだに広がる<span class="cl-gold">フリウリ地方</span>の中心都市。街の真ん中には緑の丘がそびえ、その頂に<strong>ウディネ城（カステッロ）</strong>が建ちます。ヴェネツィア共和国の面影を残す広場やロッジア、なだらかなぶどう畑の風景——静かで気高い北東イタリアの土地柄が、このクラブの背景にあります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景の丘の上に建つウディネ城と、フリウリの平野のシルエット">
+          <defs><linearGradient id="uddusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2622"/><stop offset="100%" stop-color="#080809"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#uddusk)"/>
+          <circle cx="120" cy="48" r="26" fill="#d8b25e" opacity=".8"/>
+          <path d="M0 120 L90 78 L170 112 L260 70 L360 108 L470 72 L560 110 L600 88 L600 120 Z" fill="#17150f" opacity=".7"/>
+          <path d="M180 150 Q300 66 420 150 Z" fill="#100f0d"/>
+          <g transform="translate(268,86)">
+            <rect x="0" y="0" width="96" height="34" fill="#161512" stroke="#4a4437" stroke-width="1.5"/>
+            <rect x="36" y="-13" width="24" height="13" fill="#161512" stroke="#4a4437" stroke-width="1.5"/>
+            <rect x="82" y="-22" width="11" height="22" fill="#161512" stroke="#4a4437" stroke-width="1.5"/>
+            <polygon points="82,-22 87.5,-31 93,-22" fill="#141210"/>
+            <g fill="#d8b25e" opacity=".9"><rect x="10" y="10" width="5" height="9"/><rect x="26" y="10" width="5" height="9"/><rect x="64" y="10" width="5" height="9"/><rect x="80" y="10" width="5" height="9"/></g>
+          </g>
+          <g stroke="#3a352c" stroke-width="6" opacity=".8"><line x1="-20" y1="156" x2="620" y2="168"/></g>
+        </svg>
+        <figcaption>ウディネ城 — 街を見下ろす丘の上に、静かにたたずむ古城。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>世界から才能を見出す、育成の名門</h2>
+      <p>ウディネーゼの代名詞は、<strong>世界規模のスカウト網</strong>です。ヨーロッパはもちろん、南米やアフリカの若い才能をいち早く見つけ出し、フリウリの地で育て上げて、大舞台へと送り出してきました。<span class="cl-hl">「才能を発掘し、伸ばし、羽ばたかせる」</span>——地方の街のクラブが世界と渡り合うための、確かな哲学が息づいています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="世界地図を思わせる球体から、才能をウディネへ集めるネットワークを描いたイラスト">
+          <rect width="600" height="180" fill="#080809"/>
+          <g transform="translate(300,92)">
+            <circle r="58" fill="none" stroke="#b08a3a" stroke-width="2" opacity=".7"/>
+            <g stroke="#4a4437" stroke-width="1.2" opacity=".8" fill="none"><ellipse rx="58" ry="22"/><ellipse rx="34" ry="58"/><line x1="-58" y1="0" x2="58" y2="0"/></g>
+          </g>
+          <g fill="#c9ccd2"><circle cx="120" cy="52" r="4"/><circle cx="80" cy="120" r="4"/><circle cx="200" cy="150" r="4"/><circle cx="470" cy="46" r="4"/><circle cx="520" cy="118" r="4"/><circle cx="410" cy="150" r="4"/></g>
+          <g stroke="#d8b25e" stroke-width="1.6" stroke-dasharray="4 5" opacity=".75" fill="none"><path d="M120 52 Q220 30 300 92"/><path d="M80 120 Q180 120 300 92"/><path d="M200 150 Q250 120 300 92"/><path d="M470 46 Q380 30 300 92"/><path d="M520 118 Q420 120 300 92"/><path d="M410 150 Q350 120 300 92"/></g>
+          <g transform="translate(300,92)"><path d="M0,-16 L4.7,-4.9 L16,-4.9 L6.6,2.6 L10.5,14 L0,7 L-10.5,14 L-6.6,2.6 L-16,-4.9 L-4.7,-4.9 Z" fill="#d8b25e"/></g>
+        </svg>
+        <figcaption>世界を結ぶスカウト網 — 各地の才能を、フリウリへ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ビアンコネーロ、フリウリの白と黒</h2>
+      <p>白と黒の縦縞から、<strong>「ビアンコネーリ（白黒の者たち）」「レ・ゼブレッテ（子ゼブラ）」</strong>の愛称で親しまれます。派手さよりも堅実さ。<span class="cl-hl">組織された守備と、育て上げた若手の躍動</span>を武器に、フリウリの小さな街のクラブは長くセリエAの舞台に立ち続けてきました。落ち着いた白黒に、この土地の金色（フリウリの実り）がよく映えます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="白と黒の縦縞のユニフォームに、フリウリの金の縁取りが輝くイラスト">
+          <rect width="600" height="150" fill="#080809"/>
+          <g>
+            <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f2f2f0"/>
+            <g fill="#141416"><rect x="234" y="24" width="20" height="114"/><rect x="270" y="21" width="20" height="119"/><rect x="310" y="21" width="20" height="119"/><rect x="346" y="24" width="20" height="114"/></g>
+            <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#b08a3a"/>
+          </g>
+          <g transform="translate(300,84)"><path d="M0,-22 L20,-16 L20,4 Q20,20 0,26 Q-20,20 -20,4 L-20,-16 Z" fill="#141416" stroke="#b08a3a" stroke-width="2"/><path d="M0,-11 L3.3,-3.4 L11,-3.4 L4.6,1.8 L7.4,10 L0,5 L-7.4,10 L-4.6,1.8 L-11,-3.4 L-3.3,-3.4 Z" fill="#d8b25e"/></g>
+          <g stroke="#d8b25e" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ビアンコネーロ — 白と黒の縦縞に、フリウリの金の輝き。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1896年</dd>
+          <dt>本拠地</dt><dd>ウディネ（フリウリ＝ヴェネツィア・ジュリア州）</dd>
+          <dt>スタジアム</dt><dd>ブルーエナジー・スタジアム／旧フリウリ（約25,000人）</dd>
+          <dt>愛称</dt><dd>I Bianconeri／Le Zebrette（ビアンコネーリ／子ゼブラ）</dd>
+          <dt>カラー</dt><dd>ブラック ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

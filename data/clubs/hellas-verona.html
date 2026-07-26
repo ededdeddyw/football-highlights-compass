@@ -1,0 +1,191 @@
+<!--CLUB slug=hellas-verona name=ヴェローナ league=セリエA-->
+<!--VIDEO id=VR791aUu2k8 title=Abbiamo un sogno nel cuore（クルヴァ・スッドの応援歌）-->
+<!--DESC ヘラス・ヴェローナ（セリエA）のクラブ紹介。ロミオとジュリエットの街とローマ時代の円形闘技場アレーナ、黄と青のジャッロブルー、1985年の奇跡のスクデット、マスティフ犬の誇りを、応援動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0b1526; --cl-yellow:#f4c020; --cl-yellow-hi:#ffdd63; --cl-blue:#123f8f; --cl-blue-hi:#5a86d8;
+    --cl-paper:var(--bg,#f3f6fb); --cl-text:var(--fg,#131b2a); --cl-muted:#5e6a7e; --cl-line:#cdd7e6; --cl-card:#f8fbff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e6edf7; --cl-muted:#92a1b7; --cl-line:#1c2b45; --cl-card:#0e1b30; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e6edf7; --cl-muted:#92a1b7; --cl-line:#1c2b45; --cl-card:#0e1b30; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#131b2a; --cl-muted:#5e6a7e; --cl-line:#cdd7e6; --cl-card:#f8fbff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(11,21,38,.94) 32%,rgba(11,21,38,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0b1526;background:var(--cl-yellow);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-yellow-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dbe4f2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-yellow) 0 16px,var(--cl-blue) 16px 32px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(244,192,32,.3)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#0b1526;background:var(--cl-yellow);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(244,192,32,.36);font-weight:700}
+  .cl-blue{color:var(--cl-blue-hi);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c3d0e6;background:#0b1526;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blue);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ヴェローナのローマ時代の円形闘技場アレーナと夜景を描いたイラスト">
+        <defs>
+          <linearGradient id="hvsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1c3468"/><stop offset="52%" stop-color="#122748"/><stop offset="100%" stop-color="#0b1526"/></linearGradient>
+          <radialGradient id="hvglow" cx="50%" cy="28%" r="52%"><stop offset="0%" stop-color="#f4c020" stop-opacity=".26"/><stop offset="48%" stop-color="#123f8f" stop-opacity=".12"/><stop offset="100%" stop-color="#0b1526" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#hvsky)"/>
+        <rect width="1200" height="470" fill="url(#hvglow)"/>
+        <circle cx="250" cy="108" r="42" fill="#f3e9c4" opacity=".85"/>
+        <circle cx="234" cy="100" r="42" fill="#122748" opacity=".5"/>
+        <g fill="#5a86d8" opacity=".22"><circle cx="470" cy="96" r="2.5"/><circle cx="560" cy="70" r="2"/><circle cx="1040" cy="90" r="2.5"/><circle cx="1120" cy="60" r="2"/><circle cx="380" cy="150" r="2"/></g>
+        <rect x="0" y="372" width="1200" height="98" fill="#0a1220"/>
+        <!-- 円形闘技場アレーナ（楕円の外周） -->
+        <g transform="translate(720,300)">
+          <ellipse cx="0" cy="0" rx="380" ry="150" fill="#152744"/>
+          <ellipse cx="0" cy="0" rx="380" ry="150" fill="none" stroke="#f4c020" stroke-width="2.5" opacity=".4"/>
+          <ellipse cx="0" cy="-10" rx="300" ry="112" fill="#0b1526"/>
+          <!-- 上段アーチ列 -->
+          <g fill="#0b1526" stroke="#2a3f66" stroke-width="1.5">
+            <rect x="-360" y="-70" width="22" height="46" rx="10"/><rect x="-312" y="-90" width="22" height="52" rx="10"/><rect x="-258" y="-104" width="22" height="56" rx="10"/><rect x="-198" y="-114" width="22" height="60" rx="10"/><rect x="-134" y="-120" width="22" height="62" rx="10"/><rect x="-66" y="-122" width="22" height="64" rx="10"/><rect x="2" y="-122" width="22" height="64" rx="10"/><rect x="70" y="-120" width="22" height="62" rx="10"/><rect x="136" y="-114" width="22" height="60" rx="10"/><rect x="196" y="-104" width="22" height="56" rx="10"/><rect x="250" y="-90" width="22" height="52" rx="10"/><rect x="298" y="-70" width="22" height="46" rx="10"/><rect x="338" y="-70" width="22" height="46" rx="10"/>
+          </g>
+          <!-- 下段アーチ列 -->
+          <g fill="#0b1526" stroke="#2a3f66" stroke-width="1.5">
+            <rect x="-330" y="-8" width="22" height="42" rx="10"/><rect x="-278" y="-16" width="22" height="46" rx="10"/><rect x="-214" y="-24" width="22" height="50" rx="10"/><rect x="-146" y="-28" width="22" height="52" rx="10"/><rect x="-76" y="-30" width="22" height="54" rx="10"/><rect x="-6" y="-30" width="22" height="54" rx="10"/><rect x="62" y="-28" width="22" height="52" rx="10"/><rect x="130" y="-24" width="22" height="50" rx="10"/><rect x="194" y="-16" width="22" height="46" rx="10"/><rect x="246" y="-8" width="22" height="42" rx="10"/>
+          </g>
+          <g fill="#f4c020" opacity=".35"><rect x="-134" y="-120" width="22" height="12" rx="6"/><rect x="-66" y="-122" width="22" height="12" rx="6"/><rect x="2" y="-122" width="22" height="12" rx="6"/><rect x="70" y="-120" width="22" height="12" rx="6"/></g>
+        </g>
+        <!-- 黄青のバンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="120" height="54" fill="#f4c020"/><rect x="120" y="0" width="120" height="54" fill="#123f8f"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>ヴェローナ<span class="cl-en">Hellas Verona · 1903</span></h1>
+        <p class="cl-sub">ロミオとジュリエットの街、円形闘技場が今も残る古都。黄と青をまとうジャッロブルーは、マスティフ犬の誇りを胸に戦います。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北部・ヴェネト州の古都<b>ヴェローナ</b>を本拠とするクラブです。<b>ロミオとジュリエット</b>の舞台として知られ、ローマ時代の円形闘技場が今も息づく街で、黄（ジャッロ）と青（ブルー）をまとって戦う、伝統あるクラブです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタディオ・マルカントニオ・ベンテゴディ</h2>
+      <p>ヴェローナの<strong>スタディオ・ベンテゴディ</strong>は、同じ街のキエーヴォとも共有してきた由緒あるスタジアムです。ヴェローナのサポーターは<span class="cl-hl">クルヴァ・スッド</span>に陣取り、黄と青の旗を振りながら熱く声を張り上げます。イタリア屈指の熱量を持つと評される、情熱的なファンの本拠地です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黄と青の旗を掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#0b1526"/>
+          <defs><pattern id="hvcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0b1526"/><circle cx="8.5" cy="7" r="5" fill="#123f8f"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#hvcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#f4c020" opacity=".6"/>
+          <g stroke="#5a86d8" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6485"/><polygon points="164,30 206,40 164,54" fill="#123f8f"/><rect x="420" y="24" width="4" height="64" fill="#4f6485"/><polygon points="424,24 466,36 424,50" fill="#f4c020"/></g>
+        </svg>
+        <figcaption>クルヴァ・スッド — 黄と青に揺れる、ベンテゴディの南スタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>アレーナと、ロミオとジュリエットの街</h2>
+      <p>ヴェローナの中心に立つのは、二千年近い歴史を持つローマ時代の<span class="cl-blue">円形闘技場アレーナ</span>。今なお夏には大規模なオペラ公演の舞台となり、街の象徴として生き続けています。さらにこの街は<strong>シェイクスピア『ロミオとジュリエット』</strong>の舞台としても世界に知られ、ジュリエットの家のバルコニーには多くの人が訪れます。歴史と物語が重なる、ロマンティックな古都です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="円形闘技場アレーナのアーチ列と、バルコニーのシルエットを描いたイラスト">
+          <defs><linearGradient id="hvdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1b3162"/><stop offset="100%" stop-color="#0b1526"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#hvdusk)"/>
+          <circle cx="486" cy="50" r="30" fill="#f4c020" opacity=".7"/>
+          <rect x="0" y="142" width="600" height="28" fill="#0a1220"/>
+          <!-- アレーナのアーチ列 -->
+          <path d="M60 142 L60 62 Q210 38 360 62 L360 142 Z" fill="#152744" stroke="#2a3f66" stroke-width="1.5"/>
+          <g fill="#0b1526"><rect x="86" y="74" width="16" height="26" rx="7"/><rect x="122" y="70" width="16" height="28" rx="7"/><rect x="158" y="66" width="16" height="30" rx="7"/><rect x="196" y="64" width="16" height="30" rx="7"/><rect x="234" y="64" width="16" height="30" rx="7"/><rect x="272" y="66" width="16" height="30" rx="7"/><rect x="310" y="70" width="16" height="28" rx="7"/></g>
+          <g fill="#0b1526"><rect x="96" y="108" width="16" height="24" rx="7"/><rect x="140" y="106" width="16" height="24" rx="7"/><rect x="184" y="104" width="16" height="24" rx="7"/><rect x="228" y="104" width="16" height="24" rx="7"/><rect x="272" y="106" width="16" height="24" rx="7"/><rect x="316" y="108" width="16" height="24" rx="7"/></g>
+          <g fill="#f4c020" opacity=".32"><rect x="196" y="64" width="16" height="8" rx="4"/><rect x="234" y="64" width="16" height="8" rx="4"/></g>
+          <!-- ジュリエットのバルコニー -->
+          <g transform="translate(470,96)"><rect x="-6" y="0" width="60" height="60" fill="#152744" stroke="#2a3f66" stroke-width="1.5"/><rect x="-16" y="30" width="80" height="10" fill="#123f8f"/><g stroke="#5a86d8" stroke-width="2"><line x1="-14" y1="30" x2="-14" y2="40"/><line x1="-2" y1="30" x2="-2" y2="40"/><line x1="10" y1="30" x2="10" y2="40"/><line x1="22" y1="30" x2="22" y2="40"/><line x1="34" y1="30" x2="34" y2="40"/><line x1="46" y1="30" x2="46" y2="40"/></g><rect x="14" y="6" width="18" height="24" rx="9" fill="#0b1526"/></g>
+        </svg>
+        <figcaption>アレーナとバルコニー — 古代の石と、恋物語の街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>1985年 — 奇跡のスクデット</h2>
+      <p>ヴェローナの歴史に燦然と輝くのが、<strong>1984-85シーズンのリーグ制覇（スクデット）</strong>。潤沢な資金を持つ大都市のクラブが優勝を争うのが常のセリエAで、地方都市のクラブが頂点に立ったこの快挙は、<span class="cl-hl">「奇跡のスクデット」</span>としてイタリアサッカー史に語り継がれています。堅い守備と結束したチーム力で成し遂げた、忘れられない一年でした。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="イタリア王者の証スクデット（三色の盾）と、輝きを描いたイラスト">
+          <rect width="600" height="180" fill="#0b1526"/>
+          <text x="300" y="150" fill="#123f8f" font-size="130" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif" opacity=".85">85</text>
+          <text x="300" y="150" fill="none" stroke="#5a86d8" stroke-width="1.5" font-size="130" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">85</text>
+          <g transform="translate(300,78)"><path d="M0,-44 L38,-33 L38,12 Q38,40 0,52 Q-38,40 -38,12 L-38,-33 Z" fill="#152744" stroke="#f4c020" stroke-width="2.5"/><path d="M-28,-24 L28,-24 L28,-12 L-28,-12 Z" fill="#1f9d55"/><path d="M-28,-12 L28,-12 L28,0 L-28,0 Z" fill="#eef3fb"/><path d="M-28,0 L28,0 L28,12 L-28,12 Z" fill="#e2453f"/></g>
+          <g stroke="#f4c020" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="150" y1="40" x2="164" y2="30"/><line x1="450" y1="40" x2="436" y2="30"/><line x1="120" y1="96" x2="104" y2="96"/><line x1="480" y1="96" x2="496" y2="96"/></g>
+        </svg>
+        <figcaption>1985年の奇跡 — 地方都市がつかんだ、王者の証。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーと象徴</div>
+      <h2>ジャッロブルー、そしてマスティフ犬</h2>
+      <p>黄（ジャッロ）と青（ブルー）をまとうことから、<strong>「ジャッロブルー」</strong>の愛称で親しまれます。エンブレムに描かれるのは、街を治めた名門スカラ家（スカリジェリ）にちなむ<span class="cl-hl">マスティフ犬（マスティーノ）</span>。忠実で勇猛なこの犬は、クラブの闘志の象徴として、サポーターに深く愛されています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="黄と青のユニフォームと、マスティフ犬の横顔を描いたイラスト">
+          <rect width="600" height="150" fill="#0b1526"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#123f8f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f4c020" opacity=".85"/>
+          <!-- マスティフ犬の横顔 -->
+          <g transform="translate(300,84)" fill="#f4c020">
+            <path d="M-34,-22 C-30,-34 -10,-36 2,-30 C10,-26 24,-28 34,-20 C40,-14 40,-6 34,-2 L34,10 C34,20 24,26 12,26 C10,30 4,32 0,30 C-4,32 -10,30 -12,26 L-14,26 C-26,26 -36,16 -36,4 C-40,0 -40,-14 -34,-22 Z"/>
+            <path d="M-34,-22 C-42,-26 -46,-18 -40,-10 Z" fill="#f4c020"/>
+          </g>
+          <circle cx="316" cy="70" r="2.6" fill="#0b1526"/>
+          <g stroke="#5a86d8" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ジャッロブルーとマスティフ — 黄と青の胸に宿る、忠勇の犬。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1903年</dd>
+          <dt>本拠地</dt><dd>ヴェローナ（ヴェネト州）</dd>
+          <dt>スタジアム</dt><dd>マルカントニオ・ベンテゴディ（約39,000人）</dd>
+          <dt>愛称</dt><dd>I Mastini／Gli Scaligeri（マスティフ／スカリジェリ）</dd>
+          <dt>カラー</dt><dd>イエロー ＆ ブルー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

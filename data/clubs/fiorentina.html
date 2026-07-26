@@ -1,0 +1,216 @@
+<!--CLUB slug=fiorentina name=フィオレンティーナ league=セリエA-->
+<!--VIDEO id=QMGuWvb5uEo title=Col giglio cucito sul cuore／クルヴァ・フィエゾレの応援歌-->
+<!--DESC フィオレンティーナ（セリエA）のクラブ紹介。ルネサンスの都フィレンツェ、大聖堂ドゥオーモのクーポラ、街の紋章ジリオ（百合）、紫のヴィオラをまとうクラブの本拠地と象徴を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#1c1020; --cl-viola:#7b2d8e; --cl-viola-hi:#b978cd; --cl-gold:#cfa94e; --cl-lily:#efe4f4;
+    --cl-paper:var(--bg,#f7f4f9); --cl-text:var(--fg,#241a2b); --cl-muted:#6d5f76; --cl-line:#e2d5e8; --cl-card:#faf7fc;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#efe6f4; --cl-muted:#a493ad; --cl-line:#352340; --cl-card:#190f21; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#efe6f4; --cl-muted:#a493ad; --cl-line:#352340; --cl-card:#190f21; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#241a2b; --cl-muted:#6d5f76; --cl-line:#e2d5e8; --cl-card:#faf7fc; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(28,16,32,.94) 32%,rgba(28,16,32,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-viola);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-viola-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#ecdff2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-viola),var(--cl-viola-hi) 55%,var(--cl-lily))}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(123,45,142,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-viola);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(123,45,142,.3);font-weight:700}
+  .cl-gold{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#d7c4e0;background:#150b1b;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-viola);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="フィレンツェの大聖堂ドゥオーモのクーポラと鐘楼、街の紋章ジリオ（百合）を描いた紫基調のイラスト">
+        <defs>
+          <linearGradient id="flsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1a4a"/><stop offset="55%" stop-color="#281433"/><stop offset="100%" stop-color="#1c1020"/></linearGradient>
+          <radialGradient id="flglow" cx="60%" cy="26%" r="50%"><stop offset="0%" stop-color="#cfa94e" stop-opacity=".24"/><stop offset="48%" stop-color="#7b2d8e" stop-opacity=".14"/><stop offset="100%" stop-color="#1c1020" stop-opacity="0"/></radialGradient>
+          <linearGradient id="flriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7b2d8e" stop-opacity=".5"/><stop offset="100%" stop-color="#1c1020" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#flsky)"/>
+        <rect width="1200" height="470" fill="url(#flglow)"/>
+        <circle cx="980" cy="104" r="40" fill="#f3e7f8" opacity=".92"/>
+        <circle cx="964" cy="96" r="40" fill="#281433" opacity=".5"/>
+        <g fill="#b978cd" opacity=".28"><circle cx="430" cy="90" r="2.5"/><circle cx="520" cy="64" r="2"/><circle cx="700" cy="80" r="2.5"/><circle cx="800" cy="58" r="2"/><circle cx="360" cy="140" r="2"/><circle cx="1080" cy="150" r="2.5"/></g>
+        <!-- ジリオ（フィレンツェの百合の紋章） -->
+        <g transform="translate(250,150)" fill="#b978cd" stroke="#cfa94e" stroke-width="2.5">
+          <path d="M0,-52 C -12,-32 -12,-8 0,2 C 12,-8 12,-32 0,-52 Z"/>
+          <path d="M-3,-8 C -30,-28 -46,-4 -24,16 C -28,3 -15,-3 -3,-8 Z"/>
+          <path d="M3,-8 C 30,-28 46,-4 24,16 C 28,3 15,-3 3,-8 Z"/>
+          <path d="M0,2 C -5,22 -5,34 0,46 C 5,34 5,22 0,2 Z"/>
+          <rect x="-22" y="2" width="44" height="11" rx="5" fill="#cfa94e" stroke="none"/>
+          <circle cx="-12" cy="-18" r="3.4" fill="#cfa94e" stroke="none"/>
+          <circle cx="12" cy="-18" r="3.4" fill="#cfa94e" stroke="none"/>
+        </g>
+        <!-- 街並みシルエット -->
+        <rect x="0" y="316" width="1200" height="154" fill="#150b1b"/>
+        <g fill="#241433"><rect x="40" y="272" width="30" height="48"/><rect x="76" y="256" width="22" height="64"/><rect x="104" y="280" width="34" height="40"/><rect x="360" y="276" width="26" height="44"/><rect x="392" y="262" width="20" height="58"/><rect x="900" y="270" width="40" height="50"/><rect x="948" y="258" width="24" height="62"/><rect x="1000" y="276" width="34" height="44"/><rect x="1120" y="266" width="20" height="54"/></g>
+        <g fill="#cfa94e" opacity=".7"><rect x="84" y="266" width="4" height="5"/><rect x="398" y="272" width="4" height="5"/><rect x="956" y="268" width="4" height="5"/><rect x="1126" y="276" width="4" height="5"/></g>
+        <!-- ジョットの鐘楼（カンパニーレ） -->
+        <g fill="#1f1229" stroke="#3a2247" stroke-width="1.5"><rect x="470" y="176" width="40" height="144"/></g>
+        <g fill="#cfa94e" opacity=".55"><rect x="470" y="210" width="40" height="3"/><rect x="470" y="244" width="40" height="3"/><rect x="470" y="278" width="40" height="3"/></g>
+        <g fill="#7b2d8e" opacity=".5"><rect x="480" y="190" width="8" height="14" rx="3"/><rect x="492" y="190" width="8" height="14" rx="3"/></g>
+        <rect x="466" y="168" width="48" height="10" fill="#241433"/>
+        <!-- ドゥオーモ（ブルネレスキのクーポラ） -->
+        <rect x="560" y="256" width="150" height="64" fill="#1f1229"/>
+        <path d="M560,258 Q560,192 635,150 Q710,192 710,258 Z" fill="#241433" stroke="#cfa94e" stroke-width="2.5" opacity="1"/>
+        <g stroke="#cfa94e" stroke-width="2" opacity=".5" fill="none"><path d="M635,150 L575,256"/><path d="M635,150 L605,256"/><path d="M635,150 L635,256"/><path d="M635,150 L665,256"/><path d="M635,150 L695,256"/></g>
+        <rect x="626" y="126" width="18" height="26" fill="#241433" stroke="#cfa94e" stroke-width="1.5"/>
+        <path d="M624,126 Q635,108 646,126 Z" fill="#7b2d8e"/>
+        <circle cx="635" cy="104" r="5" fill="#cfa94e"/>
+        <!-- アルノ川 -->
+        <rect x="0" y="320" width="1200" height="150" fill="url(#flriver)"/>
+        <g stroke="#b978cd" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="120" y1="356" x2="260" y2="356"/><line x1="360" y1="380" x2="520" y2="380"/><line x1="640" y1="362" x2="780" y2="362"/><line x1="860" y1="396" x2="1020" y2="396"/><line x1="300" y1="420" x2="480" y2="420"/></g>
+        <g stroke="#cfa94e" stroke-width="3" opacity=".3"><line x1="635" y1="330" x2="635" y2="420"/></g>
+        <!-- 紫の縞バンド -->
+        <g transform="translate(70,330)"><rect x="0" y="0" width="210" height="54" fill="#7b2d8e"/><rect x="0" y="0" width="210" height="54" fill="none" stroke="#cfa94e" stroke-width="2"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>フィオレンティーナ<span class="cl-en">ACF Fiorentina · 1926</span></h1>
+        <p class="cl-sub">ルネサンスの都フィレンツェのクラブ。街の紋章ジリオ（百合）と紫（ヴィオラ）をまとい、アルノ川のほとりで美しさと誇りを歌います。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア中部・トスカーナ州の州都<b>フィレンツェ</b>を本拠とするクラブです。花の都と呼ばれる芸術の街で、人々は紫のヴィオラに深い愛着を注ぎ、街の紋章である<b>ジリオ（百合）</b>を胸に、勝敗を超えた誇りとともにチームを支えています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタディオ・アルテミオ・フランキ — 響くクルヴァ・フィエゾレ</h2>
+      <p>建築家ピエル・ルイジ・ネルヴィが手がけた、らせん階段や片持ち屋根で知られる歴史的なスタジアムです。ゴール裏の<span class="cl-hl">クルヴァ・フィエゾレ</span>は熱心なサポーターの拠点で、キックオフ前に街の讃歌が響きわたると、スタンド全体が紫のうねりとなります。近年は大規模な改修計画も進められています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="紫のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#150b1b"/>
+          <defs><pattern id="flcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#150b1b"/><circle cx="8.5" cy="7" r="5" fill="#7b2d8e"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#flcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#b978cd" opacity=".55"/>
+          <g stroke="#b978cd" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a4466"/><polygon points="164,30 206,40 164,54" fill="#cfa94e"/><rect x="420" y="24" width="4" height="64" fill="#5a4466"/><polygon points="424,24 466,36 424,50" fill="#cfa94e"/></g>
+        </svg>
+        <figcaption>クルヴァ・フィエゾレ — キックオフ前に揺れる、紫のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ルネサンスの都、ドゥオーモを望む街</h2>
+      <p>フィレンツェは、ルネサンス文化が花開いた芸術の都。街の中心には、<span class="cl-gold">ブルネレスキ</span>が架けた大聖堂ドゥオーモの巨大なクーポラ（円蓋）がそびえ、ジョットの鐘楼と並んで街並みを見下ろします。石畳とアルノ川、名画と彫刻に囲まれたこの土地の誇りが、そのままクラブの気品ある佇まいへと重なっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景のフィレンツェに浮かぶドゥオーモのクーポラと鐘楼のシルエット">
+          <defs><linearGradient id="fldusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1f4c"/><stop offset="100%" stop-color="#150b1b"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#fldusk)"/>
+          <circle cx="110" cy="50" r="28" fill="#cfa94e" opacity=".8"/>
+          <rect x="0" y="132" width="600" height="38" fill="#120a17"/>
+          <g fill="#1f1229"><rect x="40" y="104" width="18" height="30"/><rect x="62" y="94" width="14" height="40"/><rect x="500" y="100" width="16" height="34"/><rect x="520" y="110" width="22" height="24"/></g>
+          <!-- 鐘楼 -->
+          <rect x="250" y="66" width="30" height="68" fill="#241433"/>
+          <g fill="#cfa94e" opacity=".5"><rect x="250" y="88" width="30" height="2.5"/><rect x="250" y="110" width="30" height="2.5"/></g>
+          <!-- クーポラ -->
+          <rect x="312" y="96" width="96" height="38" fill="#241433"/>
+          <path d="M312,98 Q312,52 360,30 Q408,52 408,98 Z" fill="#2c1938" stroke="#cfa94e" stroke-width="2"/>
+          <g stroke="#cfa94e" stroke-width="1.5" opacity=".5" fill="none"><path d="M360,30 L326,98"/><path d="M360,30 L360,98"/><path d="M360,30 L394,98"/></g>
+          <rect x="353" y="16" width="14" height="16" fill="#241433" stroke="#cfa94e" stroke-width="1.2"/>
+          <circle cx="360" cy="10" r="4" fill="#cfa94e"/>
+        </svg>
+        <figcaption>ドゥオーモのクーポラ — ルネサンスの都を見下ろす、街の背骨。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>ジリオ — 胸に縫いつけた百合</h2>
+      <p>クラブの胸に輝くのは、フィレンツェの街を象徴する<strong>ジリオ（赤い百合の紋章）</strong>。中世からこの街のシンボルとして受け継がれてきた意匠で、サポーターにとっては単なるエンブレムではなく、生まれ育った土地そのものを表す誇りの印です。<span class="cl-hl">「胸に百合を縫いつけて」</span>——応援歌にも歌われる、街とクラブを結ぶ結び目です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="紫の地に金で縁取られた、フィレンツェの百合ジリオの紋章のイラスト">
+          <rect width="600" height="180" fill="#150b1b"/>
+          <rect x="210" y="22" width="180" height="136" rx="10" fill="#241433" stroke="#7b2d8e" stroke-width="2"/>
+          <g transform="translate(300,96)" fill="#b978cd" stroke="#cfa94e" stroke-width="2.5">
+            <path d="M0,-58 C -13,-36 -13,-9 0,2 C 13,-9 13,-36 0,-58 Z"/>
+            <path d="M-3,-9 C -33,-31 -51,-4 -27,18 C -31,3 -16,-3 -3,-9 Z"/>
+            <path d="M3,-9 C 33,-31 51,-4 27,18 C 31,3 16,-3 3,-9 Z"/>
+            <path d="M0,2 C -6,24 -6,38 0,52 C 6,38 6,24 0,2 Z"/>
+            <rect x="-24" y="2" width="48" height="12" rx="6" fill="#cfa94e" stroke="none"/>
+            <circle cx="-13" cy="-20" r="3.6" fill="#cfa94e" stroke="none"/>
+            <circle cx="13" cy="-20" r="3.6" fill="#cfa94e" stroke="none"/>
+          </g>
+        </svg>
+        <figcaption>ジリオの紋章 — 街の印を、紫の胸に。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ヴィオラ — 紫をまとう唯一の存在</h2>
+      <p>紫（ヴィオラ）のユニフォームから、クラブもサポーターも<strong>「ヴィオラ」</strong>と呼ばれます。イタリアでこの色を主色とするビッグクラブは珍しく、街の個性そのもの。攻撃的で見て楽しいサッカーを志向する伝統があり、<span class="cl-hl">コッパ・イタリア</span>をはじめとするタイトルや、数々の名選手の記憶とともに、独特の華やぎをまとうクラブです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="紫のユニフォームの胸に、金で縁取られた百合の紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#150b1b"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#7b2d8e"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f3e7f8" opacity=".8"/>
+          <g transform="translate(300,82) scale(0.72)" fill="#efe4f4" stroke="#cfa94e" stroke-width="3">
+            <path d="M0,-52 C -12,-32 -12,-8 0,2 C 12,-8 12,-32 0,-52 Z"/>
+            <path d="M-3,-8 C -30,-28 -46,-4 -24,16 C -28,3 -15,-3 -3,-8 Z"/>
+            <path d="M3,-8 C 30,-28 46,-4 24,16 C 28,3 15,-3 3,-8 Z"/>
+            <path d="M0,2 C -5,22 -5,34 0,46 C 5,34 5,22 0,2 Z"/>
+            <rect x="-22" y="2" width="44" height="11" rx="5" fill="#cfa94e" stroke="none"/>
+          </g>
+          <g stroke="#cfa94e" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ヴィオラと百合 — 紫の胸に、金で縁どられたジリオ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1926年</dd>
+          <dt>本拠地</dt><dd>フィレンツェ（トスカーナ州）</dd>
+          <dt>スタジアム</dt><dd>アルテミオ・フランキ（クルヴァ・フィエゾレ）</dd>
+          <dt>愛称</dt><dd>La Viola／I Gigliati（ヴィオラ／百合の軍団）</dd>
+          <dt>カラー</dt><dd>ヴィオラ（紫）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
