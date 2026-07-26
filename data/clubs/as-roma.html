@@ -1,0 +1,184 @@
+<!--CLUB slug=as-roma name=ローマ league=セリエA-->
+<!--VIDEO id=kQwMpd5Cb54 title=AS Roma official anthem（応援歌）Stadio Olimpico-->
+<!--DESC ASローマ（セリエA）のクラブ紹介。永遠の都ローマ、コロッセオと狼（ルーパ）、黄と赤のジャッロロッシ、トッティの一途な愛、ローマ・ダービーを、応援動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#170b0d; --cl-red:#8e1a2b; --cl-red-hi:#c0384a; --cl-gold:#efb42a; --cl-gold-hi:#ffd45e;
+    --cl-paper:var(--bg,#f7f3f3); --cl-text:var(--fg,#1c1416); --cl-muted:#6f6266; --cl-line:#dccfd0; --cl-card:#fffdfc;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#efe6e4; --cl-muted:#a99a9c; --cl-line:#2c2022; --cl-card:#17110f; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#efe6e4; --cl-muted:#a99a9c; --cl-line:#2c2022; --cl-card:#17110f; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1c1416; --cl-muted:#6f6266; --cl-line:#dccfd0; --cl-card:#fffdfc; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,10,12,.94) 32%,rgba(20,10,12,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#170b0d;background:var(--cl-gold);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#ecdedd;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-gold) 0 16px,var(--cl-red) 16px 32px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(239,180,42,.3)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#170b0d;background:var(--cl-gold);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(239,180,42,.34);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#d3c3c2;background:#170b0d;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="コロッセオのシルエットと、ローマ建国神話の牝狼を描いたイラスト">
+        <defs>
+          <linearGradient id="rmsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1418"/><stop offset="55%" stop-color="#240f12"/><stop offset="100%" stop-color="#170b0d"/></linearGradient>
+          <radialGradient id="rmglow" cx="50%" cy="26%" r="54%"><stop offset="0%" stop-color="#efb42a" stop-opacity=".26"/><stop offset="50%" stop-color="#8e1a2b" stop-opacity=".12"/><stop offset="100%" stop-color="#170b0d" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#rmsky)"/>
+        <rect width="1200" height="470" fill="url(#rmglow)"/>
+        <circle cx="250" cy="108" r="42" fill="#f3e6c4" opacity=".85"/>
+        <circle cx="234" cy="100" r="42" fill="#240f12" opacity=".5"/>
+        <rect x="0" y="372" width="1200" height="98" fill="#140a0c"/>
+        <!-- コロッセオ -->
+        <g fill="#241215" stroke="#3a1c20" stroke-width="1.5">
+          <path d="M700 372 L700 210 Q900 168 1100 210 L1100 372 Z"/>
+        </g>
+        <g fill="#170b0d"><!-- アーチ列 -->
+          <g>
+            <rect x="726" y="230" width="20" height="34" rx="9"/><rect x="762" y="222" width="20" height="38" rx="9"/><rect x="800" y="216" width="20" height="40" rx="9"/><rect x="840" y="212" width="20" height="42" rx="9"/><rect x="882" y="210" width="20" height="42" rx="9"/><rect x="924" y="210" width="20" height="42" rx="9"/><rect x="966" y="212" width="20" height="42" rx="9"/><rect x="1006" y="216" width="20" height="40" rx="9"/><rect x="1044" y="222" width="20" height="38" rx="9"/><rect x="1080" y="230" width="20" height="34" rx="9"/>
+          </g>
+          <g>
+            <rect x="726" y="286" width="20" height="30" rx="9"/><rect x="766" y="284" width="20" height="30" rx="9"/><rect x="808" y="282" width="20" height="30" rx="9"/><rect x="850" y="280" width="20" height="30" rx="9"/><rect x="892" y="280" width="20" height="30" rx="9"/><rect x="934" y="280" width="20" height="30" rx="9"/><rect x="976" y="282" width="20" height="30" rx="9"/><rect x="1016" y="284" width="20" height="30" rx="9"/><rect x="1056" y="286" width="20" height="30" rx="9"/>
+          </g>
+        </g>
+        <g fill="#efb42a" opacity=".35"><rect x="800" y="216" width="20" height="10" rx="6"/><rect x="882" y="210" width="20" height="10" rx="6"/><rect x="966" y="212" width="20" height="10" rx="6"/></g>
+        <!-- 牝狼（ルーパ）シルエット -->
+        <g transform="translate(300,300)" fill="#efb42a">
+          <path d="M0,0 C6,-42 40,-52 70,-50 C86,-49 96,-58 104,-70 C104,-54 100,-44 112,-40 C138,-32 150,-8 150,10 L138,10 L134,-8 C128,4 120,10 108,10 L106,22 L96,22 L96,10 L44,10 L44,26 L34,26 L32,10 C14,10 4,6 0,0 Z"/>
+          <circle cx="108" cy="-56" r="2.4" fill="#170b0d"/>
+        </g>
+        <g transform="translate(300,300)" fill="none" stroke="#8e1a2b" stroke-width="2" opacity=".5"><circle cx="120" cy="18" r="3"/><circle cx="140" cy="18" r="3"/></g>
+        <!-- 黄赤のバンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="120" height="54" fill="#efb42a"/><rect x="120" y="0" width="120" height="54" fill="#8e1a2b"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>ASローマ<span class="cl-en">AS Roma · 1927</span></h1>
+        <p class="cl-sub">永遠の都ローマの魂。黄と赤をまとうジャッロロッシは、狼のエンブレムと一途なサポーターの愛で結ばれています。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリアの首都<b>ローマ</b>を本拠とするクラブです。<b>永遠の都</b>と呼ばれる歴史の街で、黄（ジャッロ）と赤（ロッソ）をまとい、街の労働者から愛されてきました。ローマ建国神話の牝狼をエンブレムに掲げる、首都を象徴するクラブです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタディオ・オリンピコ — クルヴァ・スッドの熱狂</h2>
+      <p>約7万人を収容する、ローマ市の<strong>スタディオ・オリンピコ</strong>。1960年ローマ五輪の舞台にもなった由緒ある競技場です。ローマのサポーターは南側スタンド<span class="cl-hl">「クルヴァ・スッド」</span>に集い、旗と歌でスタンドを黄と赤に染めます。同じ街のラツィオと共有する、首都のサッカーの中心地です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黄と赤の旗で埋め尽くされた、クルヴァ・スッドのスタンドのイラスト">
+          <rect width="600" height="190" fill="#170b0d"/>
+          <defs><pattern id="rmcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#170b0d"/><circle cx="8.5" cy="7" r="5" fill="#efb42a"/></pattern></defs>
+          <polygon points="0,190 600,190 600,86 0,150" fill="url(#rmcrowd)"/>
+          <polygon points="0,150 600,86 600,74 0,138" fill="#8e1a2b" opacity=".6"/>
+          <g stroke="#c0384a" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M60 60 q28 -22 56 0"/><path d="M210 44 q28 -22 56 0"/><path d="M360 52 q28 -22 56 0"/><path d="M470 40 q28 -22 56 0"/></g>
+          <g><rect x="150" y="26" width="4" height="60" fill="#7a5a2a"/><polygon points="154,26 196,36 154,50" fill="#8e1a2b"/><rect x="410" y="20" width="4" height="66" fill="#7a5a2a"/><polygon points="414,20 456,32 414,46" fill="#efb42a"/></g>
+        </svg>
+        <figcaption>クルヴァ・スッド — 黄と赤に染まる、ローマの南スタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>永遠の都と、建国神話の牝狼</h2>
+      <p>ローマは、<span class="cl-red">コロッセオ</span>やフォロ・ロマーノが今も残る、二千年以上の歴史を刻む街。クラブのエンブレムに描かれるのは、双子の建国者ロムルスとレムスに乳を与えたとされる<strong>牝狼（ルーパ）</strong>です。神話と歴史がそのまま街の誇りとなり、クラブのアイデンティティに息づいています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景に浮かぶコロッセオのアーチ列のシルエット">
+          <defs><linearGradient id="rmdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1418"/><stop offset="100%" stop-color="#170b0d"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#rmdusk)"/>
+          <circle cx="470" cy="54" r="32" fill="#efb42a" opacity=".2"/>
+          <rect x="0" y="140" width="600" height="30" fill="#170b0d"/>
+          <path d="M120 140 L120 60 Q300 34 480 60 L480 140 Z" fill="#241215" stroke="#3a1c20" stroke-width="1.5"/>
+          <g fill="#170b0d"><rect x="150" y="74" width="16" height="26" rx="7"/><rect x="188" y="70" width="16" height="28" rx="7"/><rect x="226" y="66" width="16" height="30" rx="7"/><rect x="264" y="64" width="16" height="30" rx="7"/><rect x="302" y="64" width="16" height="30" rx="7"/><rect x="340" y="64" width="16" height="30" rx="7"/><rect x="378" y="66" width="16" height="30" rx="7"/><rect x="416" y="70" width="16" height="28" rx="7"/><rect x="454" y="74" width="16" height="26" rx="7"/></g>
+          <g fill="#170b0d"><rect x="160" y="108" width="16" height="24" rx="7"/><rect x="204" y="106" width="16" height="24" rx="7"/><rect x="248" y="104" width="16" height="24" rx="7"/><rect x="292" y="104" width="16" height="24" rx="7"/><rect x="336" y="104" width="16" height="24" rx="7"/><rect x="380" y="106" width="16" height="24" rx="7"/><rect x="424" y="108" width="16" height="24" rx="7"/></g>
+          <g fill="#efb42a" opacity=".3"><rect x="264" y="64" width="16" height="8" rx="4"/><rect x="340" y="64" width="16" height="8" rx="4"/></g>
+        </svg>
+        <figcaption>コロッセオ — 永遠の都に立ち続ける、街の記憶。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 伝説</div>
+      <h2>フランチェスコ・トッティ — 生涯ローマの10番</h2>
+      <p>ローマに生まれ、ローマひとすじでキャリアを終えた<strong>フランチェスコ・トッティ</strong>は、このクラブの魂そのものです。移籍全盛の時代に、生まれ故郷のクラブに<span class="cl-hl">生涯を捧げた</span>その姿は「ローマの王子」と讃えられ、背番号10とともにサポーターの心に永遠に刻まれています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="キャプテンマークと大きな背番号10が描かれたイラスト">
+          <rect width="600" height="180" fill="#170b0d"/>
+          <rect x="196" y="26" width="208" height="128" rx="8" fill="#241215" stroke="#efb42a" stroke-width="2"/>
+          <text x="300" y="128" fill="#efb42a" font-size="98" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">10</text>
+          <g transform="translate(300,44)"><rect x="-54" y="-8" width="108" height="18" rx="9" fill="none" stroke="#c0384a" stroke-width="6"/><text x="0" y="6" fill="#c0384a" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="2">CAPITANO</text></g>
+        </svg>
+        <figcaption>生涯ローマの10番 — 街を体現したキャプテン。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> ライバル</div>
+      <h2>ローマ・ダービー — 首都を二分する日</h2>
+      <p>同じスタディオ・オリンピコを本拠とする<strong>ラツィオ</strong>との <span class="cl-hl">「ローマ・ダービー（ダービー・デッラ・カピターレ）」</span> は、首都ローマを二分する激しい一戦です。黄赤（ローマ）と水色（ラツィオ）——街の中で家族も友人も色で分かれる、順位を超えて負けられない誇りの対決です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="黄赤と水色、二本のスカーフが交差してぶつかり合うイラスト">
+          <rect width="600" height="180" fill="#170b0d"/>
+          <g transform="translate(300,90)"><g stroke="#efb42a" stroke-width="3" stroke-linecap="round" opacity=".7"><line x1="0" y1="-46" x2="0" y2="-30"/><line x1="0" y1="46" x2="0" y2="30"/><line x1="-46" y1="0" x2="-30" y2="0"/><line x1="46" y1="0" x2="30" y2="0"/></g></g>
+          <g transform="translate(300,90) rotate(-26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#8e1a2b"/><g fill="#efb42a"><rect x="-250" y="-16" width="500" height="7"/><rect x="-250" y="9" width="500" height="7"/></g></g>
+          <g transform="translate(300,90) rotate(26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#8fccea"/><g fill="#fff"><rect x="-250" y="-16" width="22" height="32"/><rect x="-220" y="-16" width="22" height="32"/><rect x="198" y="-16" width="22" height="32"/><rect x="228" y="-16" width="22" height="32"/></g></g>
+        </svg>
+        <figcaption>ローマ・ダービー — 黄赤（ローマ）と水色（ラツィオ）、首都の誇り。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1927年</dd>
+          <dt>本拠地</dt><dd>ローマ（ラツィオ州）</dd>
+          <dt>スタジアム</dt><dd>スタディオ・オリンピコ（約70,000人）</dd>
+          <dt>愛称</dt><dd>I Giallorossi／La Lupa（黄赤／牝狼）</dd>
+          <dt>カラー</dt><dd>ダークレッド ＆ ゴールド</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

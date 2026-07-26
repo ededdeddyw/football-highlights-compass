@@ -1,0 +1,164 @@
+<!--CLUB slug=atalanta name=アタランタ league=セリエA-->
+<!--VIDEO id=5WcIp398rxM title=Coro ultras Atalanta（応援歌）Curva Nord Bergamo-->
+<!--DESC アタランタ（セリエA）のクラブ紹介。城壁の丘の街ベルガモ、黒と青のネラッズーラ、女神ラ・デア、全員攻撃と育成、2024年ヨーロッパリーグ制覇を、応援動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#090f18; --cl-blue:#1f6fc0; --cl-blue-hi:#5aa0e6; --cl-gold:#cba24c; --cl-steel:#7c8794;
+    --cl-paper:var(--bg,#f2f6fb); --cl-text:var(--fg,#121a26); --cl-muted:#5d6672; --cl-line:#cfd9e6; --cl-card:#f9fbfe;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e6ecf5; --cl-muted:#93a0af; --cl-line:#1f2b3a; --cl-card:#0f1622; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e6ecf5; --cl-muted:#93a0af; --cl-line:#1f2b3a; --cl-card:#0f1622; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#121a26; --cl-muted:#5d6672; --cl-line:#cfd9e6; --cl-card:#f9fbfe; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(7,11,18,.94) 32%,rgba(7,11,18,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-blue);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dbe4f0;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-blue) 0 16px,#090f18 16px 32px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(31,111,192,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-blue);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(31,111,192,.32);font-weight:700}
+  .cl-gold{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bccadb;background:#090f18;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blue);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="城壁に囲まれた丘の街ベルガモの旧市街と、鐘楼を描いた夜景のイラスト">
+        <defs>
+          <linearGradient id="atsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123256"/><stop offset="55%" stop-color="#0b1c33"/><stop offset="100%" stop-color="#090f18"/></linearGradient>
+          <radialGradient id="atglow" cx="50%" cy="28%" r="52%"><stop offset="0%" stop-color="#1f6fc0" stop-opacity=".3"/><stop offset="55%" stop-color="#1f6fc0" stop-opacity=".08"/><stop offset="100%" stop-color="#090f18" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#atsky)"/>
+        <rect width="1200" height="470" fill="url(#atglow)"/>
+        <circle cx="960" cy="98" r="38" fill="#e7eefa" opacity=".85"/>
+        <circle cx="946" cy="90" r="38" fill="#0b1c33" opacity=".5"/>
+        <rect x="0" y="372" width="1200" height="98" fill="#070b12"/>
+        <!-- 丘 -->
+        <path d="M0,372 Q300,250 600,250 Q900,250 1200,372 Z" fill="#0c1a2c"/>
+        <!-- 城壁 -->
+        <path d="M120,372 L120,300 Q600,236 1080,300 L1080,372 Z" fill="#101f34" stroke="#1a3050" stroke-width="1.5"/>
+        <g fill="#101f34"><!-- 城壁の凸凹（銃眼） -->
+          <rect x="140" y="292" width="20" height="16"/><rect x="200" y="284" width="20" height="16"/><rect x="260" y="278" width="20" height="16"/><rect x="320" y="272" width="20" height="16"/><rect x="860" y="272" width="20" height="16"/><rect x="920" y="278" width="20" height="16"/><rect x="980" y="284" width="20" height="16"/><rect x="1040" y="292" width="20" height="16"/></g>
+        <!-- 旧市街の建物 -->
+        <g fill="#0d1c30"><rect x="420" y="230" width="60" height="80"/><rect x="500" y="210" width="46" height="100"/><rect x="700" y="222" width="54" height="88"/><rect x="770" y="240" width="44" height="70"/></g>
+        <!-- カンパノーネ（鐘楼） -->
+        <g fill="#0f2136" stroke="#1c3454" stroke-width="1.5"><rect x="580" y="120" width="40" height="190"/><rect x="574" y="112" width="52" height="14"/><rect x="588" y="150" width="24" height="30" rx="4" fill="#1f6fc0" opacity=".35"/></g>
+        <polygon points="574,112 600,84 626,112" fill="#0f2136" stroke="#1c3454" stroke-width="1.5"/>
+        <g fill="#cba24c" opacity=".4"><rect x="516" y="220" width="4" height="6"/><rect x="720" y="234" width="4" height="6"/><rect x="440" y="244" width="4" height="6"/></g>
+        <!-- 黒青のバンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="180" height="54" fill="#090f18"/><g fill="#1f6fc0"><rect x="0" y="0" width="22.5" height="54"/><rect x="45" y="0" width="22.5" height="54"/><rect x="90" y="0" width="22.5" height="54"/><rect x="135" y="0" width="22.5" height="54"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>アタランタ<span class="cl-en">Atalanta BC · 1907</span></h1>
+        <p class="cl-sub">城壁の丘の街ベルガモの誇り。黒と青の「女神」は、全員攻撃のサッカーで欧州の頂点にまで駆け上がりました。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北部・ロンバルディア州の街<b>ベルガモ</b>を本拠とするクラブです。城壁に囲まれた丘の上の旧市街で知られるこの地方都市から、<b>黒と青</b>をまとって全員攻撃の魅力的なサッカーを掲げ、近年ヨーロッパを驚かせ続けています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ゲウィス・スタジアム — クルヴァ・ノルドの一体感</h2>
+      <p>ベルガモ市街に建つ<strong>ゲウィス・スタジアム</strong>は、約2万4千人と大きくはないぶん、ピッチとの距離が近く一体感は屈指。サポーターは<span class="cl-hl">「クルヴァ・ノルド・ベルガモ」</span>に集い、街ぐるみの熱気でチームを後押しします。地方都市の誇りが凝縮された、密度の高い本拠地です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黒と青の旗で埋め尽くされた、クルヴァ・ノルドのスタンドのイラスト">
+          <rect width="600" height="190" fill="#070b12"/>
+          <defs><pattern id="atcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#070b12"/><circle cx="8.5" cy="7" r="5" fill="#1f6fc0"/></pattern></defs>
+          <polygon points="0,190 600,190 600,86 0,150" fill="url(#atcrowd)"/>
+          <polygon points="0,150 600,86 600,74 0,138" fill="#5aa0e6" opacity=".5"/>
+          <g stroke="#5aa0e6" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M60 60 q28 -22 56 0"/><path d="M210 44 q28 -22 56 0"/><path d="M360 52 q28 -22 56 0"/><path d="M470 40 q28 -22 56 0"/></g>
+          <g><rect x="150" y="26" width="4" height="60" fill="#5a6475"/><polygon points="154,26 196,36 154,50" fill="#1f6fc0"/><rect x="410" y="20" width="4" height="66" fill="#5a6475"/><polygon points="414,20 456,32 414,46" fill="#090f18"/></g>
+        </svg>
+        <figcaption>クルヴァ・ノルド・ベルガモ — 黒と青が密集する、熱気のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>城壁の丘、ベルガモ・アルタ</h2>
+      <p>ベルガモは、平地の新市街と、<span class="cl-gold">城壁に囲まれた丘の上の旧市街（チッタ・アルタ）</span>からなる街。ヴェネツィア共和国時代に築かれた城壁は世界遺産にも登録され、鐘楼カンパノーネが今も時を告げます。歴史と気品を湛えたこの街の誇りが、クラブの背中を押しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="城壁に囲まれた丘の上の旧市街と、鐘楼のシルエット">
+          <defs><linearGradient id="atdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123256"/><stop offset="100%" stop-color="#070b12"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#atdusk)"/>
+          <circle cx="120" cy="50" r="30" fill="#e7eefa" opacity=".2"/>
+          <path d="M0,170 Q300,86 600,170 Z" fill="#0c1a2c"/>
+          <path d="M80,170 L80,110 Q300,70 520,110 L520,170 Z" fill="#101f34" stroke="#1a3050" stroke-width="1.5"/>
+          <g fill="#101f34"><rect x="100" y="104" width="14" height="10"/><rect x="150" y="98" width="14" height="10"/><rect x="440" y="98" width="14" height="10"/><rect x="490" y="104" width="14" height="10"/></g>
+          <g fill="#0d1c30"><rect x="230" y="72" width="40" height="46"/><rect x="330" y="66" width="34" height="52"/></g>
+          <g fill="#0f2136" stroke="#1c3454" stroke-width="1.2"><rect x="286" y="40" width="26" height="78"/></g>
+          <polygon points="282,40 299,22 316,40" fill="#0f2136" stroke="#1c3454" stroke-width="1.2"/>
+          <rect x="292" y="58" width="14" height="16" rx="3" fill="#1f6fc0" opacity=".35"/>
+        </svg>
+        <figcaption>ベルガモ・アルタ — 城壁と鐘楼が見守る、丘の上の旧市街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイルと栄光</div>
+      <h2>全員攻撃の女神、欧州の頂へ</h2>
+      <p>ギリシャ神話の俊足の女神にちなみ <strong>「ラ・デア（女神）」</strong> と呼ばれます。育成と<span class="cl-hl">全員が攻め上がる大胆なサッカー</span>で強豪をなぎ倒し、地方クラブながら欧州の舞台へ。そして<span class="cl-gold">2024年にはヨーロッパリーグを制覇</span>——ベルガモの街から大陸の頂点に立つという、近年最大の物語を成し遂げました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="黒青の縦縞を背に、欧州制覇のトロフィーが輝くイラスト">
+          <rect width="600" height="150" fill="#070b12"/>
+          <g fill="#1f6fc0"><rect x="60" y="0" width="60" height="150"/><rect x="180" y="0" width="60" height="150"/><rect x="300" y="0" width="60" height="150"/><rect x="420" y="0" width="60" height="150"/><rect x="540" y="0" width="60" height="150"/></g>
+          <g transform="translate(300,72)"><path d="M-30,-40 h60 l-5,34 h-50 z" fill="#cba24c"/><path d="M-30,-36 q-22,3 -22,-18 M30,-36 q22,3 22,-18" fill="none" stroke="#cba24c" stroke-width="5"/><rect x="-9" y="-6" width="18" height="24" fill="#cba24c"/><rect x="-24" y="18" width="48" height="10" fill="#cba24c"/><path d="M-8,-2 l5,11 l12,2 l-9,9 l3,12 l-11,-6 l-11,6 l3,-12 l-9,-9 l12,-2 z" fill="#070b12"/></g>
+          <text x="300" y="134" fill="#aeb8c6" font-size="13" text-anchor="middle" font-weight="800">2024 — Europa League</text>
+        </svg>
+        <figcaption>欧州制覇 — 地方都市から大陸の頂点へ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1907年</dd>
+          <dt>本拠地</dt><dd>ベルガモ（ロンバルディア州）</dd>
+          <dt>スタジアム</dt><dd>ゲウィス・スタジアム（約24,000人）</dd>
+          <dt>愛称</dt><dd>La Dea／I Nerazzurri（女神／黒青）</dd>
+          <dt>カラー</dt><dd>ブラック ＆ ブルー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
