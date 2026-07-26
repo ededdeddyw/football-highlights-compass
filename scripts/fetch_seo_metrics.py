@@ -26,6 +26,9 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parents[1]
 REPORT = BASE / "docs" / "seo_daily_report.md"
 HISTORY = BASE / "docs" / "seo_metrics_history.csv"
+# W杯終了後、クラブ/リーグの通年コンテンツへ集客の比重が移っていくかを追う専用の履歴。
+# 既存の seo_metrics_history.csv はフォーマット互換のため触らず、別ファイルに追記する。
+CATEGORY_HISTORY = BASE / "docs" / "seo_category_history.csv"
 
 SITE = os.environ.get("GSC_SITE_URL", "").strip()
 GA4 = os.environ.get("GA4_PROPERTY_ID", "").strip()
@@ -50,15 +53,19 @@ def _gsc_service():
     return build("searchconsole", "v1", credentials=_sa_credentials([GSC_SCOPE]), cache_discovery=False)
 
 
-def _gsc_query(service, start, end, dimensions=None, row_limit=1):
+def _gsc_query(service, start, end, dimensions=None, row_limit=1, page_contains=None):
     body = {"startDate": start, "endDate": end, "rowLimit": row_limit}
     if dimensions:
         body["dimensions"] = dimensions
+    if page_contains:
+        body["dimensionFilterGroups"] = [
+            {"filters": [{"dimension": "page", "operator": "contains", "expression": page_contains}]}
+        ]
     return service.searchanalytics().query(siteUrl=SITE, body=body).execute()
 
 
-def _gsc_totals(service, start, end):
-    r = _gsc_query(service, start, end, dimensions=None, row_limit=1)
+def _gsc_totals(service, start, end, page_contains=None):
+    r = _gsc_query(service, start, end, dimensions=None, row_limit=1, page_contains=page_contains)
     rows = r.get("rows", [])
     if not rows:
         return {"clicks": 0, "impressions": 0, "ctr": 0.0, "position": 0.0}
@@ -151,6 +158,24 @@ def _append_history(row):
         w.writerow({k: row.get(k, "") for k in fields})
 
 
+def _load_category_history():
+    if not CATEGORY_HISTORY.exists():
+        return []
+    with CATEGORY_HISTORY.open(encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def _append_category_history(row):
+    fields = ["date", "club_league_impr7", "club_league_clicks7", "wc_country_impr7", "wc_country_clicks7"]
+    exists = CATEGORY_HISTORY.exists()
+    CATEGORY_HISTORY.parent.mkdir(parents=True, exist_ok=True)
+    with CATEGORY_HISTORY.open("a", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        if not exists:
+            w.writeheader()
+        w.writerow({k: row.get(k, "") for k in fields})
+
+
 def _delta(cur, prev):
     if prev in ("", None):
         return ""
@@ -170,10 +195,11 @@ def main():
     d28 = (today - datetime.timedelta(days=28)).isoformat()
 
     errors = []
-    gsc = {"t7": None, "t28": None, "queries": [], "pages": [], "index": None}
+    gsc = {"t7": None, "t28": None, "queries": [], "pages": [], "index": None, "cat": None}
     ga = {"channels": [], "pages": [], "totals": None}
 
     # GSC
+    svc = None
     try:
         svc = _gsc_service()
         gsc["t7"] = _gsc_totals(svc, d7, end)
@@ -184,6 +210,23 @@ def main():
     except Exception as e:  # noqa: BLE001
         errors.append("GSC: " + str(e))
         traceback.print_exc()
+
+    # GSC カテゴリ別（クラブ/リーグの通年ページ vs W杯国別ページ）
+    # W杯終了後、通年コンテンツへ集客の比重が移っていくかを追う。取得失敗時も他セクションは維持する。
+    if svc is not None:
+        try:
+            club = _gsc_totals(svc, d7, end, page_contains="/club/")
+            league = _gsc_totals(svc, d7, end, page_contains="/league/")
+            country = _gsc_totals(svc, d7, end, page_contains="/country/")
+            gsc["cat"] = {
+                "club_league_clicks": club["clicks"] + league["clicks"],
+                "club_league_impr": club["impressions"] + league["impressions"],
+                "wc_country_clicks": country["clicks"],
+                "wc_country_impr": country["impressions"],
+            }
+        except Exception as e:  # noqa: BLE001
+            errors.append("GSC(カテゴリ別): " + str(e))
+            traceback.print_exc()
 
     # GA4
     try:
@@ -218,6 +261,17 @@ def main():
     prev_row = prev[-1] if prev else {}
     _append_history(hist_row)
     history = _load_history()
+
+    cat = gsc.get("cat")
+    if cat:
+        _append_category_history({
+            "date": end,
+            "club_league_impr7": cat["club_league_impr"],
+            "club_league_clicks7": cat["club_league_clicks"],
+            "wc_country_impr7": cat["wc_country_impr"],
+            "wc_country_clicks7": cat["wc_country_clicks"],
+        })
+    cat_history = _load_category_history()
 
     # レポート Markdown
     lines = []
@@ -298,6 +352,25 @@ def main():
     lines.append("|---|---:|---:|---:|---:|---:|")
     for h in history[-10:]:
         lines.append(f"| {h.get('date','')} | {h.get('clicks7','')} | {h.get('impr7','')} | {h.get('pos7','')} | {h.get('indexed','')} | {h.get('ga_users28','')} |")
+    lines.append("")
+
+    # クラブ/リーグ（通年）vs W杯国別ページ（W杯閉幕後、通年コンテンツへ比重が移るかを追う）
+    lines.append("## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）")
+    if cat:
+        lines.append("| カテゴリ | 表示 | クリック | CTR |")
+        lines.append("|---|---:|---:|---:|")
+        cl_ctr = cat["club_league_clicks"] / cat["club_league_impr"] if cat["club_league_impr"] else 0.0
+        wc_ctr = cat["wc_country_clicks"] / cat["wc_country_impr"] if cat["wc_country_impr"] else 0.0
+        lines.append(f"| クラブ/リーグ（/club/・/league/） | {cat['club_league_impr']} | {cat['club_league_clicks']} | {_fmt_pct(cl_ctr)} |")
+        lines.append(f"| W杯国別（/country/） | {cat['wc_country_impr']} | {cat['wc_country_clicks']} | {_fmt_pct(wc_ctr)} |")
+        lines.append("")
+        if cat_history:
+            lines.append("| 日付 | クラブ/リーグ表示7 | W杯国別表示7 |")
+            lines.append("|---|---:|---:|")
+            for h in cat_history[-10:]:
+                lines.append(f"| {h.get('date','')} | {h.get('club_league_impr7','')} | {h.get('wc_country_impr7','')} |")
+    else:
+        lines.append("（データなし・GSC取得に失敗した可能性）")
     lines.append("")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
