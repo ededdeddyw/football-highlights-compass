@@ -1,0 +1,191 @@
+<!--CLUB slug=real-sociedad name=レアル・ソシエダ league=ラ・リーガ-->
+<!--VIDEO id=lTUpjO0UR6Y title=Himno de la Real Sociedad en el Reale Arena（応援歌）-->
+<!--DESC レアル・ソシエダ（ラ・リーガ）のクラブ紹介。バスクの美食都市サン・セバスティアン、ラ・コンチャ湾、青白の縞のチュリ・ウルディン、レアレ・アレーナ、そしてスビエタの育成哲学を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08192b; --cl-blue:#0067b1; --cl-blue-hi:#5fb0e6; --cl-gold:#e0b64a; --cl-gold-hi:#ffd25e;
+    --cl-paper:var(--bg,#f1f6fb); --cl-text:var(--fg,#132231); --cl-muted:#5e6f7f; --cl-line:#cfdeeb; --cl-card:#fafdff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e3edf6; --cl-muted:#8fa2b4; --cl-line:#173046; --cl-card:#0d1f2e; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e3edf6; --cl-muted:#8fa2b4; --cl-line:#173046; --cl-card:#0d1f2e; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#132231; --cl-muted:#5e6f7f; --cl-line:#cfdeeb; --cl-card:#fafdff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,25,43,.94) 32%,rgba(8,25,43,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-blue);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dbe8f4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-blue) 0 15px,#f4f4f4 15px 30px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,103,177,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-blue);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,103,177,.3);font-weight:700}
+  .cl-blue{color:var(--cl-blue);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c4d7e6;background:#08192b;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blue);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="サン・セバスティアンのラ・コンチャ湾と、丘に抱かれた夜の海を描いたイラスト">
+        <defs>
+          <linearGradient id="rssky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a5c"/><stop offset="55%" stop-color="#0b2740"/><stop offset="100%" stop-color="#08192b"/></linearGradient>
+          <radialGradient id="rsglow" cx="50%" cy="28%" r="52%"><stop offset="0%" stop-color="#0067b1" stop-opacity=".34"/><stop offset="50%" stop-color="#5fb0e6" stop-opacity=".12"/><stop offset="100%" stop-color="#08192b" stop-opacity="0"/></radialGradient>
+          <linearGradient id="rssea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0067b1" stop-opacity=".5"/><stop offset="100%" stop-color="#0b2740" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#rssky)"/>
+        <rect width="1200" height="470" fill="url(#rsglow)"/>
+        <circle cx="250" cy="104" r="40" fill="#eaf4ff" opacity=".85"/>
+        <circle cx="234" cy="96" r="40" fill="#0b2740" opacity=".5"/>
+        <g fill="#5fb0e6" opacity=".22"><circle cx="470" cy="90" r="2.5"/><circle cx="560" cy="64" r="2"/><circle cx="700" cy="110" r="2.5"/><circle cx="820" cy="58" r="2"/><circle cx="380" cy="140" r="2"/></g>
+        <!-- ラ・コンチャ湾を抱く二つの丘（イゲルド／ウルグル） -->
+        <path d="M0 300 Q80 200 200 214 Q300 226 340 300 Z" fill="#0c2a44"/>
+        <path d="M1200 296 Q1120 196 1000 212 Q900 226 860 300 Z" fill="#0c2a44"/>
+        <path d="M0 300 Q80 200 200 214 Q300 226 340 300" fill="none" stroke="#2f6da0" stroke-width="2" opacity=".5"/>
+        <path d="M1200 296 Q1120 196 1000 212 Q900 226 860 300" fill="none" stroke="#2f6da0" stroke-width="2" opacity=".5"/>
+        <!-- イゲルドの丘の灯 -->
+        <g fill="#e0b64a" opacity=".8"><circle cx="150" cy="214" r="3"/><circle cx="1040" cy="214" r="3"/></g>
+        <!-- 湾の中央の小島サンタ・クララ -->
+        <path d="M560 300 Q600 262 640 300 Z" fill="#0c2a44"/>
+        <path d="M560 300 Q600 262 640 300" fill="none" stroke="#2f6da0" stroke-width="1.5" opacity=".6"/>
+        <!-- 三日月形の砂浜（コンチャ＝貝殻） -->
+        <path d="M300 300 Q600 344 900 300 L900 316 Q600 360 300 316 Z" fill="#dfe9c0" opacity=".55"/>
+        <!-- 湾の海 -->
+        <rect x="0" y="316" width="1200" height="154" fill="url(#rssea)"/>
+        <g stroke="#7fc0ea" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="140" y1="350" x2="300" y2="350"/><line x1="420" y1="374" x2="600" y2="374"/><line x1="700" y1="356" x2="860" y2="356"/><line x1="900" y1="392" x2="1080" y2="392"/><line x1="340" y1="418" x2="520" y2="418"/><line x1="720" y1="426" x2="920" y2="426"/></g>
+        <!-- 遊歩道の街灯 -->
+        <g fill="#e0b64a" opacity=".7"><circle cx="360" cy="330" r="2.5"/><circle cx="440" cy="326" r="2.5"/><circle cx="760" cy="326" r="2.5"/><circle cx="840" cy="330" r="2.5"/></g>
+        <!-- 青白の縞バンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="24" height="54" fill="#0067b1"/><rect x="24" y="0" width="24" height="54" fill="#f4f4f4"/><rect x="48" y="0" width="24" height="54" fill="#0067b1"/><rect x="72" y="0" width="24" height="54" fill="#f4f4f4"/><rect x="96" y="0" width="24" height="54" fill="#0067b1"/><rect x="120" y="0" width="24" height="54" fill="#f4f4f4"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>レアル・ソシエダ<span class="cl-en">Real Sociedad · 1909</span></h1>
+        <p class="cl-sub">ラ・コンチャ湾を望む美食の都サン・セバスティアン。青と白をまとうチュリ・ウルディンが、自前の才能で戦うバスクのクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北部、<b>バスク地方</b>の美食の都サン・セバスティアン（ドノスティア）を本拠とするクラブです。青と白の縞のユニフォームをまとい、<b>ラ・コンチャ湾</b>を望む美しい街とともに歩んできました。自前の育成組織から才能を育てる哲学で知られる、バスクの誇り高きクラブです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>レアレ・アレーナ — アノエタの城</h2>
+      <p>約4万人を収容する<strong>レアレ・アレーナ</strong>は、地区名から長く<span class="cl-hl">「アノエタ」</span>の名で親しまれてきたスタジアムです。近年の大改修でピッチと客席が近づき、より一体感のある舞台へと生まれ変わりました。青と白に染まるスタンドと、選手を後押しするバスクの歌声が、ホームの夜を彩ります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="青白のマフラーを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#08192b"/>
+          <defs><pattern id="rscrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#08192b"/><circle cx="8.5" cy="7" r="5" fill="#0067b1"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#rscrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#f4f4f4" opacity=".5"/>
+          <g stroke="#5fb0e6" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 66 q28 -20 56 0"/><path d="M220 54 q28 -20 56 0"/><path d="M360 58 q28 -20 56 0"/><path d="M480 52 q28 -20 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="56" fill="#3f556a"/><polygon points="164,30 206,40 164,54" fill="#0067b1"/><rect x="420" y="26" width="4" height="60" fill="#3f556a"/><polygon points="424,26 466,38 424,52" fill="#f4f4f4"/></g>
+        </svg>
+        <figcaption>アノエタの夜 — 青白に染まる、バスクの城。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ラ・コンチャ湾と、美食の都</h2>
+      <p>サン・セバスティアンは、貝殻のように弧を描く<span class="cl-blue">ラ・コンチャ湾</span>で知られる、ヨーロッパ屈指の美しい海辺の街。人口あたりの星付きレストランの数が世界有数という<strong>美食の都</strong>としても名高く、バル巡りの文化が根づいています。洗練された街の気質は、クラブの落ち着いたたたずまいにも通じています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="三日月形のラ・コンチャ湾と、両側の丘のシルエット">
+          <defs><linearGradient id="rsbay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a5c"/><stop offset="100%" stop-color="#08192b"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#rsbay)"/>
+          <circle cx="470" cy="46" r="26" fill="#e0b64a" opacity=".8"/>
+          <path d="M0 96 Q60 46 140 56 Q200 64 220 100 Z" fill="#0c2a44"/>
+          <path d="M600 94 Q540 44 460 56 Q400 64 380 100 Z" fill="#0c2a44"/>
+          <path d="M280 100 Q300 76 320 100 Z" fill="#0c2a44"/>
+          <path d="M150 100 Q300 128 450 100 L450 112 Q300 140 150 112 Z" fill="#dfe9c0" opacity=".5"/>
+          <rect x="0" y="112" width="600" height="58" fill="#0b2740" opacity=".92"/>
+          <g stroke="#7fc0ea" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="80" y1="130" x2="220" y2="130"/><line x1="330" y1="138" x2="470" y2="138"/><line x1="180" y1="152" x2="360" y2="152"/></g>
+          <g fill="#e0b64a" opacity=".7"><circle cx="140" cy="56" r="2.5"/><circle cx="460" cy="56" r="2.5"/></g>
+        </svg>
+        <figcaption>ラ・コンチャ — 貝殻の形に弧を描く、街の宝。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 哲学</div>
+      <h2>スビエタ — 才能を育てるクラブ</h2>
+      <p>レアル・ソシエダの土台にあるのは、育成組織<strong>スビエタ</strong>から次々と才能を送り出す伝統です。バスク地方の若手を丁寧に育て、トップチームへと引き上げる——その<span class="cl-hl">自前の才能で戦う姿勢</span>は、同じバスクのアスレティックと並んで高く評価されています。育てた選手が青白のユニフォームで輝く姿は、地元の大きな誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="芽吹く若木と青白の盾を配した育成の象徴のイラスト">
+          <rect width="600" height="180" fill="#08192b"/>
+          <g transform="translate(300,96)">
+            <path d="M0,-58 L52,-46 L52,18 Q52,52 0,68 Q-52,52 -52,18 L-52,-46 Z" fill="#0c2a44" stroke="#f4f4f4" stroke-width="2.5"/>
+            <g><rect x="-52" y="-46" width="26" height="114" fill="#0067b1"/><rect x="0" y="-52" width="26" height="120" fill="#0067b1"/></g>
+            <path d="M0,-58 L52,-46 L52,18 Q52,52 0,68 Q-52,52 -52,18 L-52,-46 Z" fill="none" stroke="#f4f4f4" stroke-width="2.5"/>
+            <g stroke="#5fb0e6" stroke-width="3" fill="none" stroke-linecap="round"><path d="M0,32 L0,-4"/><path d="M0,4 Q-16,-6 -22,-22"/><path d="M0,-4 Q16,-14 22,-30"/></g>
+            <g fill="#8fd0a0"><path d="M-22,-22 q-10,-2 -12,-14 q12,2 12,14 z"/><path d="M22,-30 q10,-2 12,-14 q-12,2 -12,14 z"/></g>
+          </g>
+          <g stroke="#e0b64a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="420" y1="58" x2="436" y2="52"/><line x1="430" y1="86" x2="448" y2="86"/><line x1="420" y1="114" x2="436" y2="120"/></g>
+        </svg>
+        <figcaption>スビエタ — 青白の盾から芽吹く、地元の才能。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>青と白、「チュリ・ウルディン」</h2>
+      <p>青と白の縦縞のユニフォームから、バスク語で<strong>「チュリ・ウルディン（白青）」</strong>の愛称で親しまれます。ボールをつなぐ攻撃的で洗練されたサッカーを志向し、育てた選手たちが躍動する姿が魅力です。<span class="cl-hl">スペイン・カップ（コパ・デル・レイ）の歓喜</span>など、街に忘れられない記憶を刻んできた、バスクを代表するクラブです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="青白の縦縞のユニフォームのイラスト">
+          <rect width="600" height="150" fill="#08192b"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f4f4f4"/>
+          <g><rect x="228" y="24" width="18" height="114" fill="#0067b1"/><rect x="264" y="22" width="18" height="118" fill="#0067b1"/><rect x="300" y="22" width="18" height="118" fill="#0067b1"/><rect x="336" y="24" width="18" height="114" fill="#0067b1"/></g>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#0c2a44" opacity=".6"/>
+          <g stroke="#e0b64a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>チュリ・ウルディン — 青白の縦縞をまとうバスクの雄。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1909年</dd>
+          <dt>本拠地</dt><dd>サン・セバスティアン（バスク州）</dd>
+          <dt>スタジアム</dt><dd>レアレ・アレーナ（アノエタ／約40,000人）</dd>
+          <dt>愛称</dt><dd>La Real／Txuri-urdin（ラ・レアル／チュリ・ウルディン）</dd>
+          <dt>カラー</dt><dd>ブルー ＆ ホワイト（縦縞）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

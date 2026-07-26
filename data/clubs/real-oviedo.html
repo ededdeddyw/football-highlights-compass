@@ -1,0 +1,181 @@
+<!--CLUB slug=real-oviedo name=オビエド league=ラ・リーガ-->
+<!--VIDEO id=75ukoqZRtwg title=Himno del Real Oviedo（バンダ・デ・ガイタスによるクラブ賛歌）-->
+<!--DESC オビエド（ラ・リーガ）のクラブ紹介。緑のアストゥリアスの山に抱かれた古都、青のユニフォーム、カルロス・タルティエレの熱気、長い雌伏を経た復活を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1526; --cl-azul:#0b4ea2; --cl-azul-hi:#5f9fe0; --cl-verde:#2f8f52; --cl-gold:#d9b44a;
+    --cl-paper:var(--bg,#f2f6fc); --cl-text:var(--fg,#122234); --cl-muted:#5c6f82; --cl-line:#cfdcee; --cl-card:#f6f9fe;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2ecf8; --cl-muted:#889eb2; --cl-line:#1a2c42; --cl-card:#0f1c30; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2ecf8; --cl-muted:#889eb2; --cl-line:#1a2c42; --cl-card:#0f1c30; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#122234; --cl-muted:#5c6f82; --cl-line:#cfdcee; --cl-card:#f6f9fe; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(7,16,30,.94) 32%,rgba(7,16,30,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-azul);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-azul-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9e6f4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-azul),var(--cl-azul-hi) 55%,#eaf3fd)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(11,78,162,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-azul);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(11,78,162,.32);font-weight:700}
+  .cl-verde{color:var(--cl-verde);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b6cfe8;background:#06121f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-azul);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="緑のアストゥリアスの山々と古都オビエドの街並み、青いグローを描いた夜景イラスト">
+        <defs>
+          <linearGradient id="ovsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0e3663"/><stop offset="55%" stop-color="#0a2140"/><stop offset="100%" stop-color="#0a1526"/></linearGradient>
+          <radialGradient id="ovglow" cx="72%" cy="28%" r="48%"><stop offset="0%" stop-color="#0b4ea2" stop-opacity=".4"/><stop offset="55%" stop-color="#5f9fe0" stop-opacity=".1"/><stop offset="100%" stop-color="#0a1526" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#ovsky)"/>
+        <rect width="1200" height="470" fill="url(#ovglow)"/>
+        <circle cx="900" cy="112" r="44" fill="#eaf3ff" opacity=".9"/>
+        <circle cx="886" cy="102" r="44" fill="#0a2140" opacity=".5"/>
+        <g fill="#5f9fe0" opacity=".22"><circle cx="300" cy="88" r="2.5"/><circle cx="420" cy="66" r="2"/><circle cx="520" cy="110" r="2.5"/><circle cx="200" cy="130" r="2"/></g>
+        <!-- アストゥリアスの緑の山々 -->
+        <polygon points="0,240 200,120 380,210 560,110 760,220 960,140 1200,220 1200,300 0,300" fill="#17452c"/>
+        <polygon points="0,240 200,120 380,210 560,110 760,220 960,140 1200,220 1200,300 0,300" fill="#0c2a1a" opacity=".4"/>
+        <polygon points="560,110 612,168 508,168" fill="#3a7a52" opacity=".6"/>
+        <polygon points="200,120 250,170 150,170" fill="#3a7a52" opacity=".5"/>
+        <!-- 街並みシルエット -->
+        <rect x="0" y="300" width="1200" height="170" fill="#0a1424"/>
+        <g fill="#0e1e34"><rect x="60" y="258" width="30" height="52"/><rect x="96" y="244" width="22" height="66"/><rect x="126" y="272" width="34" height="38"/><rect x="700" y="256" width="24" height="54"/><rect x="732" y="272" width="34" height="38"/><rect x="1040" y="250" width="20" height="60"/><rect x="1066" y="270" width="40" height="40"/></g>
+        <!-- オビエド大聖堂の塔（サン・サルバドール） -->
+        <g fill="#12243e" stroke="#1f4064" stroke-width="1.5"><rect x="470" y="196" width="66" height="114"/><rect x="482" y="150" width="42" height="46"/><polygon points="482,150 503,112 524,150"/><rect x="497" y="92" width="12" height="20"/></g>
+        <polygon points="503,74 508,94 498,94" fill="#d9b44a"/>
+        <g fill="#d9b44a" opacity=".75"><rect x="104" y="252" width="4" height="5"/><rect x="706" y="258" width="4" height="5"/><rect x="1046" y="262" width="4" height="5"/></g>
+        <!-- 青の帯バンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="220" height="58" fill="#eaf3fd"/><rect x="0" y="18" width="220" height="24" fill="#0b4ea2"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>オビエド<span class="cl-en">Real Oviedo · 1926</span></h1>
+        <p class="cl-sub">緑の山々に抱かれたアストゥリアスの古都。青のユニフォームをまとい、長い雌伏を経て頂点へと戻ってきた名門です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北部、緑ゆたかなアストゥリアス地方の古都<b>オビエド</b>を本拠とするクラブです。カンタブリア山脈のふもとに広がるこの街で、青のユニフォームをまとうクラブは、長い浮き沈みをともに乗り越えてきた地域の誇りです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディオ・カルロス・タルティエレ</h2>
+      <p>市内に建つ、約3万人を収容するスタジアムです。クラブ発展の礎を築いた会長<strong>カルロス・タルティエレ</strong>の名を受け継ぎ、地元では単に<span class="cl-hl">タルティエレ</span>と呼ばれ親しまれています。バグパイプ（ガイタ）の音色とともにクラブ賛歌が響くスタンドは、アストゥリアスならではの独特の雰囲気に包まれます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="青いスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#06121f"/>
+          <defs><pattern id="ovcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06121f"/><circle cx="8.5" cy="7" r="5" fill="#0b4ea2"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#ovcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5f9fe0" opacity=".55"/>
+          <g stroke="#eaf3fd" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6575"/><polygon points="164,30 206,40 164,54" fill="#0b4ea2"/><rect x="420" y="24" width="4" height="64" fill="#4f6575"/><polygon points="424,24 466,36 424,50" fill="#0b4ea2"/></g>
+        </svg>
+        <figcaption>青の一体感 — ガイタの音色に包まれる、タルティエレのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>アストゥリアスの古都、緑の山あいの街</h2>
+      <p>オビエドは、レコンキスタゆかりの<span class="cl-hl">アストゥリアス王国の古都</span>。前ロマネスク建築の教会群がユネスコ世界遺産に登録され、街の中心にはサン・サルバドール大聖堂がそびえます。周囲を<span class="cl-verde">緑の山々</span>に囲まれた温暖湿潤な土地で、シードル（リンゴ酒）とバグパイプの文化に彩られたこの街に、クラブは深く根ざしています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="緑の山を背にしたオビエド大聖堂と街並み、夕景のシルエット">
+          <defs><linearGradient id="ovdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a58"/><stop offset="100%" stop-color="#06121f"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#ovdusk)"/>
+          <circle cx="470" cy="50" r="28" fill="#d9b44a" opacity=".82"/>
+          <polygon points="0,120 140,64 300,110 460,60 600,110 600,170 0,170" fill="#17452c"/>
+          <polygon points="140,64 178,104 102,104" fill="#3a7a52" opacity=".55"/>
+          <g fill="#12243e" stroke="#1f4064" stroke-width="1.5"><rect x="240" y="70" width="46" height="62"/><rect x="248" y="46" width="30" height="24"/><polygon points="248,46 263,26 278,46"/></g>
+          <polygon points="263,16 268,30 258,30" fill="#d9b44a"/>
+          <g fill="#0e2038"><rect x="40" y="106" width="18" height="26"/><rect x="64" y="96" width="14" height="36"/><rect x="500" y="102" width="16" height="30"/><rect x="522" y="112" width="24" height="20"/></g>
+          <rect x="0" y="132" width="600" height="38" fill="#0a1c30" opacity=".9"/>
+        </svg>
+        <figcaption>サン・サルバドール — 緑の山に抱かれた、アストゥリアスの古都。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 歴史</div>
+      <h2>雌伏の年月を越えて、頂点へ</h2>
+      <p>オビエドは、かつてトップリーグの常連として名を馳せた古豪です。しかし経営難などから下部リーグへと沈み、消滅の危機さえ経験しました。そのとき、<span class="cl-hl">世界中のファンからの支援</span>がクラブを救い、街とともに一歩ずつ這い上がってきました。長い雌伏の年月を越えて再びトップの舞台へ戻った歩みは、多くの人の胸を打つ物語です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="谷底から頂へと駆け上がる青い上昇線と、山の頂に掲げられた旗のイラスト">
+          <rect width="600" height="170" fill="#06121f"/>
+          <polyline points="40,140 140,132 240,110 340,96 440,60 540,28" fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linecap="round"/>
+          <polyline points="40,140 140,132 240,110 340,96 440,60 540,28" fill="none" stroke="#5f9fe0" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+          <g fill="#5f9fe0"><circle cx="140" cy="132" r="4"/><circle cx="240" cy="110" r="4"/><circle cx="340" cy="96" r="4"/><circle cx="440" cy="60" r="4"/></g>
+          <g><rect x="540" y="28" width="3.5" height="46" fill="#8aa2b6"/><polygon points="543,28 580,38 543,50" fill="#0b4ea2"/></g>
+          <path d="M0,150 L600,150 L600,170 L0,170 Z" fill="#0a1c30"/>
+        </svg>
+        <figcaption>雌伏からの上昇 — ファンに支えられ、頂へと戻る歩み。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>アストゥリアスの青</h2>
+      <p>ユニフォームの基調は、澄んだ<strong>青（アスール）</strong>。この色から、チームもサポーターも<span class="cl-hl">「アスレス（青の者たち）」</span>と呼ばれ、地元の樫の木にちなむ「カルバジョネス」の愛称でも親しまれます。派手さよりも粘り強さと地域への誇りを大切にする姿勢は、緑と青のアストゥリアスの風土そのものです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="青いユニフォームの胸元を描いたイラスト">
+          <rect width="600" height="150" fill="#06121f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#0b4ea2"/>
+          <path d="M300 20 C 284 20, 272 24, 272 24 L286 40 Q300 46 314 40 L328 24 C 328 24, 316 20, 300 20 Z" fill="#eaf3fd"/>
+          <path d="M214 30 L214 40 Q300 30 386 40 L386 30 Q300 20 214 30 Z" fill="#eaf3fd" opacity=".55"/>
+          <g stroke="#d9b44a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>アスール — 緑の大地に映える、アストゥリアスの青。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1926年</dd>
+          <dt>本拠地</dt><dd>オビエド（アストゥリアス州）</dd>
+          <dt>スタジアム</dt><dd>カルロス・タルティエレ（約30,000人）</dd>
+          <dt>愛称</dt><dd>Los Azules／Carbayones（アスレス／カルバジョネス）</dd>
+          <dt>カラー</dt><dd>ブルー ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

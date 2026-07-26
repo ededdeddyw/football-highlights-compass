@@ -1,0 +1,192 @@
+<!--CLUB slug=celta-vigo name=セルタ league=ラ・リーガ-->
+<!--VIDEO id=0gJU7CcAtJA title=Oliveira Dos Cen Anos／RCセルタ公式・センテナリオ（100周年）アンセム-->
+<!--DESC セルタ・デ・ビーゴ（ラ・リーガ）のクラブ紹介。大西洋に面したガリシアの港町ビーゴ、空色（セレステ）のユニフォーム、灯台と海の風景、技巧的なサッカーを、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1826; --cl-celeste:#8ac3ee; --cl-celeste-hi:#bfe0f7; --cl-red:#c8323c; --cl-gold:#d8b24a;
+    --cl-paper:var(--bg,#f2f8fd); --cl-text:var(--fg,#0f2434); --cl-muted:#5c7385; --cl-line:#cbe0ee; --cl-card:#f7fcff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2eef7; --cl-muted:#89a2b4; --cl-line:#1d3346; --cl-card:#0f2130; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2eef7; --cl-muted:#89a2b4; --cl-line:#1d3346; --cl-card:#0f2130; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0f2434; --cl-muted:#5c7385; --cl-line:#cbe0ee; --cl-card:#f7fcff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,24,38,.94) 32%,rgba(10,24,38,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#08202f;background:var(--cl-celeste);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-celeste-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9e9f5;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-celeste),var(--cl-celeste-hi) 60%,#eaf6ff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(138,195,238,.4)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#08202f;background:var(--cl-celeste);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(138,195,238,.45);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bcd6e8;background:#07131f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-celeste);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="大西洋の港町ビーゴの夜景。灯台の光と海、空色に染まる街を描いたイラスト">
+        <defs>
+          <linearGradient id="cesky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#12466e"/><stop offset="55%" stop-color="#0d2c46"/><stop offset="100%" stop-color="#0a1826"/></linearGradient>
+          <radialGradient id="ceglow" cx="82%" cy="26%" r="48%"><stop offset="0%" stop-color="#8ac3ee" stop-opacity=".4"/><stop offset="45%" stop-color="#bfe0f7" stop-opacity=".14"/><stop offset="100%" stop-color="#0a1826" stop-opacity="0"/></radialGradient>
+          <linearGradient id="cesea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8ac3ee" stop-opacity=".5"/><stop offset="100%" stop-color="#0d2c46" stop-opacity=".95"/></linearGradient>
+          <linearGradient id="cebeam" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eaf6ff" stop-opacity=".55"/><stop offset="100%" stop-color="#eaf6ff" stop-opacity="0"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#cesky)"/>
+        <rect width="1200" height="470" fill="url(#ceglow)"/>
+        <circle cx="250" cy="102" r="44" fill="#eaf6ff" opacity=".9"/>
+        <circle cx="234" cy="92" r="44" fill="#0d2c46" opacity=".5"/>
+        <g fill="#bfe0f7" opacity=".25"><circle cx="440" cy="80" r="2.5"/><circle cx="560" cy="60" r="2"/><circle cx="640" cy="110" r="2.5"/><circle cx="380" cy="140" r="2"/></g>
+        <!-- 丘の上に広がる港町の街並み（ビーゴは丘の街） -->
+        <path d="M0 300 L0 240 Q200 200 420 234 Q640 268 900 226 Q1050 202 1200 236 L1200 300 Z" fill="#0c2438" opacity=".95"/>
+        <g fill="#12466e" opacity=".9"><rect x="60" y="238" width="20" height="46"/><rect x="90" y="224" width="16" height="60"/><rect x="116" y="248" width="24" height="36"/><rect x="150" y="234" width="16" height="50"/><rect x="176" y="252" width="28" height="32"/><rect x="220" y="240" width="18" height="44"/><rect x="250" y="250" width="26" height="34"/><rect x="620" y="236" width="18" height="48"/><rect x="648" y="248" width="26" height="36"/><rect x="686" y="230" width="16" height="54"/><rect x="712" y="250" width="30" height="34"/></g>
+        <g fill="#bfe0f7" opacity=".7"><rect x="96" y="232" width="4" height="5"/><rect x="156" y="242" width="4" height="5"/><rect x="228" y="248" width="4" height="5"/><rect x="654" y="256" width="4" height="5"/><rect x="692" y="238" width="4" height="5"/></g>
+        <!-- 灯台 -->
+        <g transform="translate(1040,150)">
+          <path d="M-18 150 L-11 0 L11 0 L18 150 Z" fill="#e9f2f8"/>
+          <g fill="#c8323c"><path d="M-15 30 L15 30 L14 52 L-14 52 Z"/><path d="M-12 78 L12 78 L11 100 L-11 100 Z"/></g>
+          <rect x="-14" y="-22" width="28" height="24" rx="3" fill="#0d2c46" stroke="#8ac3ee" stroke-width="2"/>
+          <circle cx="0" cy="-10" r="6" fill="#eaf6ff"/>
+        </g>
+        <polygon points="1040,140 1200,60 1200,240" fill="url(#cebeam)"/>
+        <!-- 大西洋 -->
+        <rect x="0" y="300" width="1200" height="170" fill="url(#cesea)"/>
+        <g stroke="#bfe0f7" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="120" y1="336" x2="260" y2="336"/><line x1="360" y1="362" x2="540" y2="362"/><line x1="640" y1="344" x2="780" y2="344"/><line x1="860" y1="382" x2="1040" y2="382"/><line x1="280" y1="412" x2="470" y2="412"/><line x1="700" y1="420" x2="900" y2="420"/></g>
+        <g stroke="#eaf6ff" stroke-width="2" opacity=".4"><line x1="1040" y1="308" x2="1040" y2="410"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>セルタ<span class="cl-en">RC Celta de Vigo · 1923</span></h1>
+        <p class="cl-sub">大西洋に面したガリシアの港町ビーゴ。空色（セレステ）をまとい、海の街の誇りとともに技巧的なサッカーを愛するクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北西部・ガリシア地方の港町ビーゴを本拠とするクラブです。<b>大西洋に面した造船と漁業の街</b>で、空色（セレステ）のユニフォームは海と空をそのまま映したかのよう。ケルト由来の名を持つこのクラブは、ガリシアの誇りを一身に背負っています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディオ・アバンカ・バライードス</h2>
+      <p>1928年から街とともにあるスタジアムです。<strong>バライードス</strong>の名で親しまれ、大西洋からの風が吹き抜ける海辺の街の中心で、<span class="cl-hl">セレステ一色に染まるスタンド</span>がチームを後押しします。ガリシアの熱を体現する、由緒ある舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="空色のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#07131f"/>
+          <defs><pattern id="cecrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#07131f"/><circle cx="8.5" cy="7" r="5" fill="#8ac3ee"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#cecrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#bfe0f7" opacity=".6"/>
+          <g stroke="#bfe0f7" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#3f5a6b"/><polygon points="164,30 206,40 164,54" fill="#8ac3ee"/><rect x="420" y="24" width="4" height="64" fill="#3f5a6b"/><polygon points="424,24 466,36 424,50" fill="#8ac3ee"/></g>
+        </svg>
+        <figcaption>セレステの一体感 — バライードスを満たす空色の波。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>大西洋の港、ガリシアの誇り</h2>
+      <p>ビーゴはスペイン有数の漁港を擁する<span class="cl-red">大西洋の港町</span>。造船所のクレーンが立ち並び、リアス式の入り江に潮の香りが漂います。独自の言語と文化を持つガリシア地方にあって、クラブは地域の象徴。海とともに生きる人々の気質が、そのままチームの粘り強さに重なります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="大西洋の入り江と港、灯台を描いた夕景のイラスト">
+          <defs><linearGradient id="cedusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a58"/><stop offset="100%" stop-color="#07131f"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#cedusk)"/>
+          <circle cx="120" cy="46" r="26" fill="#eaf6ff" opacity=".85"/>
+          <!-- 港のクレーン -->
+          <g stroke="#2a4a60" stroke-width="5" fill="none"><path d="M420 118 L420 40 L500 40"/><line x1="500" y1="40" x2="500" y2="70"/></g>
+          <g fill="#2a4a60"><rect x="410" y="118" width="20" height="20"/></g>
+          <!-- 灯台 -->
+          <g transform="translate(520,60)"><path d="M-9 58 L-6 0 L6 0 L9 58 Z" fill="#e9f2f8"/><rect x="-7" y="16" width="14" height="10" fill="#c8323c"/><circle cx="0" cy="-6" r="5" fill="#eaf6ff"/></g>
+          <!-- 街並み -->
+          <g fill="#0c2438"><rect x="180" y="96" width="24" height="30"/><rect x="208" y="84" width="18" height="42"/><rect x="230" y="100" width="28" height="26"/><rect x="264" y="90" width="16" height="36"/><rect x="286" y="104" width="32" height="22"/><rect x="326" y="94" width="20" height="32"/></g>
+          <g fill="#bfe0f7" opacity=".7"><rect x="214" y="92" width="4" height="5"/><rect x="270" y="98" width="4" height="5"/><rect x="332" y="102" width="4" height="5"/></g>
+          <rect x="0" y="126" width="600" height="44" fill="#0a2c46" opacity=".9"/>
+          <g stroke="#bfe0f7" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="148" x2="180" y2="148"/><line x1="320" y1="142" x2="470" y2="142"/><line x1="220" y1="158" x2="380" y2="158"/></g>
+        </svg>
+        <figcaption>大西洋の港町 — クレーンと灯台が見守るビーゴの海辺。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>「セルティーニャ」、技巧のサッカー</h2>
+      <p>セルタは伝統的に、<strong>ボールを大切につなぐ技巧的なサッカー</strong>を志向してきました。攻撃的で華のあるその姿は、時に愛情を込めて<span class="cl-hl">「セルティーニャ」</span>と呼ばれます。地元ガリシア出身の選手が中心を担い、街に根ざした育成と個の技術が、このクラブらしさを形づくっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="パスの軌道とボールで、つなぐサッカーを表したイラスト">
+          <rect width="600" height="180" fill="#07131f"/>
+          <g fill="none" stroke="#8ac3ee" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".8"><path d="M90 140 Q180 60 280 110 Q380 160 500 60"/></g>
+          <g fill="#eaf6ff"><circle cx="90" cy="140" r="10"/><circle cx="280" cy="110" r="10"/><circle cx="500" cy="60" r="12"/></g>
+          <g fill="#0a1826" stroke="#8ac3ee" stroke-width="1.5"><circle cx="90" cy="140" r="5"/><circle cx="280" cy="110" r="5"/></g>
+          <g fill="#8ac3ee" opacity=".5"><circle cx="185" cy="150" r="6"/><circle cx="400" cy="150" r="6"/></g>
+        </svg>
+        <figcaption>セルティーニャ — 丁寧につなぐ、ガリシアの技巧。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>セレステ、空色に染まる海の街</h2>
+      <p>空色（<strong>セレステ</strong>）のユニフォームがクラブの象徴で、ガリシアの海と空をそのまま身にまとったかのよう。100周年を迎えた歴史あるクラブは、<span class="cl-hl">「セレスティスタ」</span>と呼ばれるサポーターとともに歩んできました。大西洋の風のなか、空色の誇りが世代を越えて受け継がれています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="空色のユニフォームの胸に、赤い十字のワンポイントが入ったイラスト">
+          <rect width="600" height="150" fill="#07131f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#8ac3ee"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eaf6ff" opacity=".8"/>
+          <g transform="translate(300,82)">
+            <circle cx="0" cy="0" r="30" fill="#eaf6ff" stroke="#0a1826" stroke-width="2"/>
+            <path d="M-6 -20 L6 -20 L6 -6 L20 -6 L20 6 L6 6 L6 20 L-6 20 L-6 6 L-20 6 L-20 -6 L-6 -6 Z" fill="#c8323c"/>
+          </g>
+          <g stroke="#8ac3ee" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>セレステ — 海と空の色をまとう、100年のクラブ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1923年</dd>
+          <dt>本拠地</dt><dd>ビーゴ（ガリシア州）</dd>
+          <dt>スタジアム</dt><dd>アバンカ・バライードス</dd>
+          <dt>愛称</dt><dd>Os Celestes／Celtiña（セレステ）</dd>
+          <dt>象徴</dt><dd>ガリシアの雄・大西洋の港町</dd>
+          <dt>カラー</dt><dd>セレステ（空色） ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+<!--CLUB slug=getafe name=ヘタフェ league=ラ・リーガ-->
+<!--VIDEO id=aUtS_FcrMGY title=NUESTRO himno A CAPELA／ヘタフェCF公式・アカペラの応援歌-->
+<!--DESC ヘタフェ（ラ・リーガ）のクラブ紹介。マドリード近郊の街、青をまとうアスロネス、堅い守備と激しい球際、比較的新しいクラブながら築いた独自の存在感を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1524; --cl-blue:#005999; --cl-blue-hi:#5aa6de; --cl-white:#ffffff; --cl-gold:#c9a24c;
+    --cl-paper:var(--bg,#f2f6fb); --cl-text:var(--fg,#0f2030); --cl-muted:#5c6f82; --cl-line:#ccdcea; --cl-card:#f7fbff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2ecf6; --cl-muted:#8699ab; --cl-line:#1c2e42; --cl-card:#0f1e2e; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2ecf6; --cl-muted:#8699ab; --cl-line:#1c2e42; --cl-card:#0f1e2e; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0f2030; --cl-muted:#5c6f82; --cl-line:#ccdcea; --cl-card:#f7fbff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,21,36,.94) 32%,rgba(10,21,36,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-blue);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d7e6f4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-blue),var(--cl-blue-hi) 55%,#eaf4ff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,89,153,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-blue);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,89,153,.3);font-weight:700}
+  .cl-blue{color:var(--cl-blue-hi);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bcd2e6;background:#07101c;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blue);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="マドリード近郊の街並みの夜景と、青く輝くスタジアム、堅い守りの盾を描いたイラスト">
+        <defs>
+          <linearGradient id="gesky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f3a63"/><stop offset="55%" stop-color="#0b2540"/><stop offset="100%" stop-color="#0a1524"/></linearGradient>
+          <radialGradient id="geglow" cx="50%" cy="30%" r="50%"><stop offset="0%" stop-color="#005999" stop-opacity=".42"/><stop offset="45%" stop-color="#5aa6de" stop-opacity=".14"/><stop offset="100%" stop-color="#0a1524" stop-opacity="0"/></radialGradient>
+          <linearGradient id="geband" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#005999" stop-opacity=".55"/><stop offset="100%" stop-color="#0b2540" stop-opacity=".9"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#gesky)"/>
+        <rect width="1200" height="470" fill="url(#geglow)"/>
+        <circle cx="960" cy="98" r="46" fill="#eaf4ff" opacity=".9"/>
+        <circle cx="944" cy="88" r="46" fill="#0b2540" opacity=".5"/>
+        <g fill="#5aa6de" opacity=".25"><circle cx="180" cy="80" r="2.5"/><circle cx="320" cy="60" r="2"/><circle cx="460" cy="104" r="2.5"/><circle cx="620" cy="66" r="2"/></g>
+        <!-- 近郊の街並みシルエット -->
+        <g fill="#0b2036"><rect x="40" y="238" width="34" height="82"/><rect x="80" y="256" width="26" height="64"/><rect x="112" y="228" width="22" height="92"/><rect x="140" y="252" width="40" height="68"/><rect x="188" y="240" width="26" height="80"/><rect x="220" y="260" width="34" height="60"/><rect x="262" y="234" width="22" height="86"/><rect x="292" y="252" width="42" height="68"/><rect x="1060" y="248" width="30" height="72"/><rect x="1096" y="234" width="24" height="86"/><rect x="1126" y="256" width="40" height="64"/></g>
+        <g fill="#5aa6de" opacity=".7"><rect x="52" y="252" width="4" height="6"/><rect x="120" y="244" width="4" height="6"/><rect x="196" y="256" width="4" height="6"/><rect x="270" y="250" width="4" height="6"/><rect x="1104" y="250" width="4" height="6"/></g>
+        <!-- スタジアム（コリセウム）曲線スタンド -->
+        <path d="M360 300 Q600 224 840 300 L840 196 Q600 148 360 196 Z" fill="#0d2440" opacity=".95"/>
+        <path d="M360 196 Q600 148 840 196" fill="none" stroke="#5aa6de" stroke-width="3" opacity=".65"/>
+        <g fill="#5aa6de" opacity=".7"><rect x="402" y="192" width="4" height="6"/><rect x="480" y="178" width="4" height="6"/><rect x="600" y="170" width="4" height="6"/><rect x="720" y="178" width="4" height="6"/><rect x="800" y="190" width="4" height="6"/></g>
+        <!-- ピッチの光 -->
+        <ellipse cx="600" cy="300" rx="200" ry="30" fill="#12406a" opacity=".7"/>
+        <!-- 堅守を表す盾 -->
+        <g transform="translate(600,338)">
+          <path d="M0,-48 L42,-36 L42,6 Q42,42 0,58 Q-42,42 -42,6 L-42,-36 Z" fill="#005999" stroke="#eaf4ff" stroke-width="3"/>
+          <path d="M0,-34 L28,-26 L28,4 Q28,28 0,40 Q-28,28 -28,4 L-28,-26 Z" fill="#0a1524"/>
+          <path d="M-16 4 L-4 16 L20 -12" fill="none" stroke="#5aa6de" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <!-- 帯 -->
+        <rect x="0" y="386" width="1200" height="84" fill="url(#geband)"/>
+        <g stroke="#5aa6de" stroke-width="3" stroke-linecap="round" opacity=".4"><line x1="120" y1="420" x2="280" y2="420"/><line x1="360" y1="440" x2="540" y2="440"/><line x1="720" y1="426" x2="900" y2="426"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>ヘタフェ<span class="cl-en">Getafe CF · 1983</span></h1>
+        <p class="cl-sub">マドリード近郊の街のクラブ。青をまとう「アスロネス」は、堅い守備と激しい球際で強豪を苦しめる、規律の申し子です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペインの首都マドリードの南に位置する街ヘタフェを本拠とするクラブです。<b>大都市の近郊に根ざした庶民的なクラブ</b>として、規律ある守備と最後まで走り抜く粘り強さを武器に、名だたる強豪をたびたび苦しめてきました。派手さより実直さ——それがこのクラブの流儀です。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>コリセウム（コリセウム・アルフォンソ・ペレス）</h2>
+      <p>街の中心に建つ、収容約1万7千人のスタジアムです。長く<strong>コリセウム・アルフォンソ・ペレス</strong>として親しまれてきました。規模は大きくないものの、ピッチとの距離が近く、<span class="cl-hl">相手に威圧感を与える独特の雰囲気</span>で知られます。ここでの一戦は、強豪にとって決して簡単ではありません。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="青いスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#07101c"/>
+          <defs><pattern id="gecrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#07101c"/><circle cx="8.5" cy="7" r="5" fill="#005999"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#gecrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5aa6de" opacity=".6"/>
+          <g stroke="#5aa6de" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#3f5266"/><polygon points="164,30 206,40 164,54" fill="#005999"/><rect x="420" y="24" width="4" height="64" fill="#3f5266"/><polygon points="424,24 466,36 424,50" fill="#005999"/></g>
+        </svg>
+        <figcaption>青の要塞 — 強豪を飲み込むコリセウムの空気。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>マドリード近郊、庶民の街</h2>
+      <p>ヘタフェは首都マドリードのすぐ南に広がる<span class="cl-blue">工業と暮らしの街</span>。華やかな中心部とは異なる、働く人々の日常が息づく土地です。大都市の巨大クラブに囲まれながらも、地元に根を張り、<span class="cl-hl">身近な存在としての誇り</span>を大切にしてきました。派手さはなくとも、確かな居場所を築いています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="マドリード近郊の街並みと、遠くの高層ビル群を描いた夕景のイラスト">
+          <defs><linearGradient id="gedusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a58"/><stop offset="100%" stop-color="#07101c"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#gedusk)"/>
+          <circle cx="500" cy="44" r="24" fill="#eaf4ff" opacity=".85"/>
+          <!-- 遠景の高層ビル（マドリード） -->
+          <g fill="#0d2440" opacity=".8"><rect x="440" y="58" width="16" height="66"/><rect x="460" y="46" width="14" height="78"/><rect x="478" y="64" width="16" height="60"/></g>
+          <!-- 近郊の街並み -->
+          <g fill="#0b2036"><rect x="40" y="88" width="34" height="38"/><rect x="78" y="72" width="26" height="54"/><rect x="108" y="94" width="30" height="32"/><rect x="144" y="80" width="24" height="46"/><rect x="174" y="98" width="36" height="28"/><rect x="216" y="84" width="26" height="42"/><rect x="248" y="96" width="34" height="30"/><rect x="288" y="78" width="24" height="48"/><rect x="318" y="94" width="34" height="32"/></g>
+          <g fill="#5aa6de" opacity=".7"><rect x="86" y="80" width="4" height="6"/><rect x="152" y="88" width="4" height="6"/><rect x="224" y="92" width="4" height="6"/><rect x="296" y="86" width="4" height="6"/></g>
+          <rect x="0" y="126" width="600" height="44" fill="#0a2540" opacity=".9"/>
+          <g stroke="#5aa6de" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="60" y1="148" x2="200" y2="148"/><line x1="330" y1="144" x2="480" y2="144"/></g>
+        </svg>
+        <figcaption>近郊の街 — 大都市の隣で、確かな居場所を築く。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>堅守と球際、闘うサッカー</h2>
+      <p>ヘタフェを象徴するのは、<strong>組織的な守備と激しい球際の強度</strong>です。90分間ひたむきに走り、体を張ってゴールを守るその姿勢は、対戦相手にとって大きな脅威。<span class="cl-hl">規律と闘志を前面に押し出すサッカー</span>で、資金力に勝る強豪をたびたび土俵際まで追い込んできました。粘り強さこそ、このクラブの矜持です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="重なり合う盾で、堅い守備の陣形を表したイラスト">
+          <rect width="600" height="180" fill="#07101c"/>
+          <g>
+            <g transform="translate(200,90)"><path d="M0,-40 L34,-30 L34,4 Q34,32 0,46 Q-34,32 -34,4 L-34,-30 Z" fill="#0d2440" stroke="#5aa6de" stroke-width="2.5"/></g>
+            <g transform="translate(300,90)"><path d="M0,-40 L34,-30 L34,4 Q34,32 0,46 Q-34,32 -34,4 L-34,-30 Z" fill="#005999" stroke="#eaf4ff" stroke-width="2.5"/><path d="M-14 4 L-3 15 L18 -10" fill="none" stroke="#eaf4ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <g transform="translate(400,90)"><path d="M0,-40 L34,-30 L34,4 Q34,32 0,46 Q-34,32 -34,4 L-34,-30 Z" fill="#0d2440" stroke="#5aa6de" stroke-width="2.5"/></g>
+          </g>
+          <g fill="#5aa6de" opacity=".5"><circle cx="120" cy="60" r="6"/><circle cx="480" cy="60" r="6"/></g>
+        </svg>
+        <figcaption>堅守のブロック — 体を張って守り抜く、闘う11人。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>青のアスロネス、独自の存在感</h2>
+      <p>青を基調としたユニフォームから、<strong>「アスロネス（青い大男たち）」</strong>の愛称で親しまれます。1983年創設と、スペインの名門の中では比較的新しいクラブですが、<span class="cl-hl">ラ・リーガに定着し独自の存在感</span>を放ってきました。派手な看板選手より、規律とチームの結束を重んじる——その青は、実直なクラブの気質を映しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="青いユニフォームの胸に、盾のエンブレムが描かれたイラスト">
+          <rect width="600" height="150" fill="#07101c"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#005999"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eaf4ff" opacity=".85"/>
+          <g transform="translate(300,82)">
+            <path d="M0,-34 L28,-26 L28,4 Q28,28 0,40 Q-28,28 -28,4 L-28,-26 Z" fill="#0a1524" stroke="#eaf4ff" stroke-width="2.5"/>
+            <path d="M-13 2 L-3 13 L16 -10" fill="none" stroke="#5aa6de" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g stroke="#5aa6de" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>青のアスロネス — 規律と結束を胸に、実直に。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1983年</dd>
+          <dt>本拠地</dt><dd>ヘタフェ（マドリード州）</dd>
+          <dt>スタジアム</dt><dd>コリセウム（約17,000人）</dd>
+          <dt>愛称</dt><dd>Los Azulones（アスロネス／青の一団）</dd>
+          <dt>持ち味</dt><dd>堅守・激しい球際・粘り強さ</dd>
+          <dt>カラー</dt><dd>ブルー ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
