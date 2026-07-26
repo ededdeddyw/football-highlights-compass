@@ -883,7 +883,65 @@ html.spoiler-off .br-ph{display:none}
 .gx-row .gx-soon{font-size:12px;color:var(--soft);white-space:nowrap}
 .gx-row .gx-score{font-weight:800;color:var(--ink);margin:0 4px;font-variant-numeric:tabular-nums}
 html.spoiler-off .gx-row .gx-vs{display:none}
-@media(max-width:620px){.gx-row{grid-template-columns:1fr auto;gap:4px 10px}.gx-row .gx-rd{grid-column:1/-1}.gx-row .gx-meta{grid-column:1;font-size:11.5px}}`;
+@media(max-width:620px){.gx-row{grid-template-columns:1fr auto;gap:4px 10px}.gx-row .gx-rd{grid-column:1/-1}.gx-row .gx-meta{grid-column:1;font-size:11.5px}}
+/* ===== クラブ図鑑ページ サイドレール（順位表／フォーメーション／基本データ＋最新ハイライト） ===== */
+:root{--rl-paper:#ffffff;--rl-line:#e4e9f5;--rl-line2:#d3dcf0;--rl-ink:#16203a;--rl-ink2:#33405e;--rl-muted:#5f6b86;--rl-soft:#8a95b2;--rl-card:#f4f7fe;--rl-pill:#eef2fd;--rl-accent:#1b2a78;--rl-accent2:#2746c9;--rl-bg:#eef2f8}
+@media(prefers-color-scheme:dark){:root{--rl-paper:#101f2e;--rl-line:#1e3346;--rl-line2:#264056;--rl-ink:#e4eef6;--rl-ink2:#c3d3e0;--rl-muted:#8ea3b4;--rl-soft:#6f8496;--rl-card:#0c1a27;--rl-pill:#12283a;--rl-accent:#8fc4ee;--rl-accent2:#4d9fe0;--rl-bg:#0a1622}}
+:root[data-theme="light"]{--rl-paper:#ffffff;--rl-line:#e4e9f5;--rl-line2:#d3dcf0;--rl-ink:#16203a;--rl-ink2:#33405e;--rl-muted:#5f6b86;--rl-soft:#8a95b2;--rl-card:#f4f7fe;--rl-pill:#eef2fd;--rl-accent:#1b2a78;--rl-accent2:#2746c9;--rl-bg:#eef2f8}
+:root[data-theme="dark"]{--rl-paper:#101f2e;--rl-line:#1e3346;--rl-line2:#264056;--rl-ink:#e4eef6;--rl-ink2:#c3d3e0;--rl-muted:#8ea3b4;--rl-soft:#6f8496;--rl-card:#0c1a27;--rl-pill:#12283a;--rl-accent:#8fc4ee;--rl-accent2:#4d9fe0;--rl-bg:#0a1622}
+.cl-shell{max-width:1440px;margin:14px auto 0;padding:0 18px;display:grid;grid-template-columns:260px minmax(0,1fr) 300px;gap:22px;align-items:start}
+.cl-center{min-width:0}
+.cl-rail{display:flex;flex-direction:column;gap:14px;position:sticky;top:60px;align-self:start}
+.rail-card{background:var(--rl-paper);border:1px solid var(--rl-line);border-radius:14px;padding:14px;box-shadow:0 2px 10px rgba(20,30,90,.05)}
+.rail-h{font-size:14px;font-weight:800;color:var(--rl-ink);margin:0 0 11px;letter-spacing:.01em}
+.rail-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.rail-table th{font-weight:700;color:var(--rl-muted);text-align:right;padding:3px 5px;border-bottom:1px solid var(--rl-line)}
+.rail-table thead th:nth-child(2){text-align:left}
+.rail-table td{padding:6px 5px;text-align:right;color:var(--rl-ink2);border-bottom:1px solid var(--rl-line);font-variant-numeric:tabular-nums}
+.rail-table tbody tr:last-child td{border-bottom:none}
+.rail-table td.rt-pos{color:var(--rl-soft);font-weight:700}
+.rail-table td.rt-club{text-align:left;font-weight:700;color:var(--rl-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:118px}
+.rail-table td.rt-pts{font-weight:800;color:var(--rl-ink)}
+.rail-table tr.rt-me td{background:var(--rl-pill)}
+.rail-table tr.rt-me td.rt-pos,.rail-table tr.rt-me td.rt-club,.rail-table tr.rt-me td.rt-pts{color:var(--rl-accent2)}
+.rail-more{display:inline-block;margin-top:9px;font-size:12px;font-weight:800;color:var(--rl-accent2);text-decoration:none}
+.rail-more:hover{text-decoration:underline}
+.rail-upd{font-size:11px;color:var(--rl-soft);margin-top:7px}
+.rail-form{display:flex;align-items:center;gap:14px}
+.rail-form .formsvg{flex:0 0 auto}
+.rail-form-no{font-size:22px;font-weight:900;color:var(--rl-ink);letter-spacing:.05em}
+.rail-form-cap{font-size:11px;color:var(--rl-muted);margin-top:3px;font-weight:700;letter-spacing:.02em}
+.rail-facts{width:100%;border-collapse:collapse;font-size:12.5px}
+.rail-facts th{text-align:left;color:var(--rl-muted);font-weight:700;padding:6px 10px 6px 0;vertical-align:top;white-space:nowrap}
+.rail-facts td{text-align:left;color:var(--rl-ink2);padding:6px 0;line-height:1.6}
+.rail-facts tr+tr th,.rail-facts tr+tr td{border-top:1px solid var(--rl-line)}
+.rail-hl .hl-list{display:flex;flex-direction:column;gap:10px}
+.hl-card{display:flex;gap:10px;text-decoration:none;color:inherit;border:1px solid var(--rl-line);border-radius:10px;overflow:hidden;background:var(--rl-card)}
+.hl-card:hover{border-color:var(--rl-accent2)}
+.hl-thumb{width:96px;height:54px;object-fit:cover;flex:0 0 auto;background:#000}
+.hl-meta{padding:6px 9px 6px 2px;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.hl-date{font-size:11px;color:var(--rl-muted);font-weight:700;font-variant-numeric:tabular-nums}
+.hl-opp{font-size:13px;font-weight:700;color:var(--rl-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.hl-ha{font-size:10px;color:var(--rl-soft);border:1px solid var(--rl-line2);border-radius:4px;padding:0 4px;margin-left:3px;vertical-align:1px}
+.rail-empty{font-size:12.5px;color:var(--rl-muted);margin:0}
+.rail-tab{display:none}
+.rail-ovl{display:none}
+.rail-close{display:none}
+@media(max-width:1099px){
+  .cl-shell{display:block;max-width:900px;padding:0 16px}
+  .cl-rail{position:fixed;top:0;bottom:0;width:min(86%,340px);z-index:70;overflow:auto;background:var(--rl-bg);padding:16px;box-shadow:0 0 34px rgba(8,14,40,.32);transition:transform .24s ease;gap:14px}
+  .cl-rail-left{left:0;transform:translateX(-102%)}
+  .cl-rail-right{right:0;transform:translateX(102%)}
+  body.rail-left-open .cl-rail-left{transform:none}
+  body.rail-right-open .cl-rail-right{transform:none}
+  .rail-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:fixed;top:50%;transform:translateY(-50%);z-index:60;width:34px;padding:13px 0;border:none;cursor:pointer;font-size:16px;line-height:1;color:#fff;background:var(--rl-accent2);box-shadow:0 2px 10px rgba(20,30,90,.25)}
+  .rail-tab span{font-size:10.5px;font-weight:800;writing-mode:vertical-rl;letter-spacing:.14em}
+  .rail-tab-left{left:0;border-radius:0 10px 10px 0}
+  .rail-tab-right{right:0;border-radius:10px 0 0 10px}
+  .rail-ovl{position:fixed;inset:0;background:rgba(8,14,40,.5);z-index:65;opacity:0;pointer-events:none;transition:opacity .24s}
+  body.rail-left-open .rail-ovl,body.rail-right-open .rail-ovl{opacity:1;pointer-events:auto}
+  .rail-close{display:flex;align-items:center;justify-content:center;margin:0 0 12px auto;width:36px;height:36px;border:1px solid var(--rl-line2);background:var(--rl-paper);border-radius:9px;font-size:19px;line-height:1;cursor:pointer;color:var(--rl-ink)}
+}`;
 // article.css のキャッシュバスター。CSS内容が変わると値が変わり、ブラウザが必ず新しいCSSを読む
 const CSS_VER = createHash('md5').update(CSS).digest('hex').slice(0,8);
 
@@ -1184,6 +1242,96 @@ try {
   if (leagueCount) console.log(`リーグ試合ページ: ${leagueCount}`);
 } catch(e){ console.warn('リーグページ生成でエラー:', e.message); }
 
+// ===== クラブ図鑑ページ サイドレール用データ（リーグJSONから一度だけ計算） =====
+// SLUG2LEAGUE: clubSlug -> leagueCode / RAIL_TABLE: code -> 順位表(pos付き) / CLUB_HL: clubSlug -> ハイライト新しい順
+const SLUG2LEAGUE = {};
+const RAIL_TABLE = {};
+const CLUB_HL = {};
+const RAIL_UPDATED = {};
+try {
+  for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
+    let j; try { j = JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch(e){ continue; }
+    const code = j.code; if(!code) continue;
+    const L = { code };
+    if (j.updated) RAIL_UPDATED[code] = String(j.updated);
+    const tbl = {};
+    const row = (slug,name)=> tbl[slug] || (tbl[slug]={slug,name,played:0,w:0,d:0,l:0,gf:0,ga:0,gd:0,pts:0});
+    for (const mt of (j.matches||[])){
+      const hs = mt.homeSlug, as = mt.awaySlug;
+      if (hs) SLUG2LEAGUE[hs] = code;
+      if (as) SLUG2LEAGUE[as] = code;
+      if (mt.videoId){
+        const ms = leagueSlug(mt, L);
+        if (hs) (CLUB_HL[hs]=CLUB_HL[hs]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.away, ha:'H', ms });
+        if (as) (CLUB_HL[as]=CLUB_HL[as]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.home, ha:'A', ms });
+      }
+      const sc = /^(\d+)\s*-\s*(\d+)$/.exec(mt.score||'');
+      if (mt.finished && sc && hs && as){
+        const gh=+sc[1], ga=+sc[2], rh=row(hs,mt.home), ra=row(as,mt.away);
+        rh.played++; ra.played++; rh.gf+=gh; rh.ga+=ga; ra.gf+=ga; ra.ga+=gh;
+        if(gh>ga){ rh.w++; rh.pts+=3; ra.l++; }
+        else if(gh<ga){ ra.w++; ra.pts+=3; rh.l++; }
+        else { rh.d++; ra.d++; rh.pts++; ra.pts++; }
+      }
+    }
+    const rows = Object.values(tbl);
+    rows.forEach(r=>{ r.gd = r.gf - r.ga; });
+    rows.sort((a,b)=> b.pts-a.pts || b.gd-a.gd || b.gf-a.gf || String(a.name).localeCompare(String(b.name),'ja'));
+    rows.forEach((r,i)=>{ r.pos = i+1; });
+    RAIL_TABLE[code] = rows;
+  }
+  for (const s in CLUB_HL){ CLUB_HL[s].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
+} catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
+
+// 日付を日本時間の YYYY/MM/DD に（ネタバレ防止の右レール表示用）
+function railJstYmd(iso){
+  if(!iso) return '';
+  const d = new Date(iso); if(isNaN(d.getTime())) return '';
+  const t = new Date(d.getTime() + 9*3600*1000);
+  return `${t.getUTCFullYear()}/${String(t.getUTCMonth()+1).padStart(2,'0')}/${String(t.getUTCDate()).padStart(2,'0')}`;
+}
+// 左レール：順位表（対象クラブ中心・前後数行）
+function railStandings(clubSlug){
+  const code = SLUG2LEAGUE[clubSlug];
+  const rows = code && RAIL_TABLE[code];
+  if(!rows || !rows.length) return '';
+  const idx = rows.findIndex(r=>r.slug===clubSlug);
+  if(idx<0) return '';
+  let lo = Math.max(0, idx-2), hi = Math.min(rows.length-1, idx+2);
+  while(hi-lo<4 && (lo>0||hi<rows.length-1)){ if(lo>0) lo--; else hi++; }
+  const body = rows.slice(lo,hi+1).map(r=>{
+    const me = r.slug===clubSlug;
+    return `<tr class="${me?'rt-me':''}"><td class="rt-pos">${r.pos}</td><td class="rt-club">${esc(r.name)}</td><td>${r.played}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="rt-pts">${r.pts}</td></tr>`;
+  }).join('');
+  const upd = RAIL_UPDATED[code] ? `<div class="rail-upd">更新 ${esc(String(RAIL_UPDATED[code]).slice(0,10))}</div>` : '';
+  const hub = (LEAGUE_META[code]||{}).hub;
+  const more = hub ? `<a class="rail-more" href="../${hub}">リーグ全体を見る →</a>` : '';
+  return `<div class="rail-card"><div class="rail-h">📊 順位表（現在）</div><table class="rail-table"><thead><tr><th>#</th><th>クラブ</th><th>試</th><th>得失</th><th>点</th></tr></thead><tbody>${body}</tbody></table>${upd}${more}</div>`;
+}
+// 左レール：フォーメーション（DEEP[name].formation があれば）
+function railFormation(name){
+  const d = DEEP[name];
+  if(!d || !d.formation) return '';
+  return `<div class="rail-card"><div class="rail-h">🧩 フォーメーション</div><div class="rail-form">${formationSVG(d.formation)}<div><div class="rail-form-no">${esc(d.formation)}</div><div class="rail-form-cap">代表的な布陣</div></div></div></div>`;
+}
+// 左レール：基本データ（CLUBS[name].info から簡潔に）
+function railFacts(info, flag){
+  const rows = [['国・リーグ', `${flag} ${esc(info.country)}／${esc(info.league)}`], ['創設', `${esc(String(info.founded))}年`]];
+  if(info.stadium) rows.push(['本拠地', esc(info.stadium)]);
+  if(info.honors) rows.push(['主なタイトル', esc(info.honors)]);
+  return `<div class="rail-card"><div class="rail-h">📋 基本データ</div><table class="rail-facts">${rows.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')}</table></div>`;
+}
+// 右レール：最新ハイライト（新しい順・最大12・スコアは出さない）
+function railHighlights(clubSlug){
+  const hl = (CLUB_HL[clubSlug]||[]).slice(0,12);
+  const head = `<div class="rail-h">🎬 最新ハイライト</div>`;
+  if(!hl.length) return `<div class="rail-card">${head}<p class="rail-empty">まだハイライトはありません</p></div>`;
+  const cards = hl.map(h=>`<a class="hl-card" href="../match/${h.ms}.html"><img class="hl-thumb" src="https://i.ytimg.com/vi/${h.videoId}/mqdefault.jpg" alt="" loading="lazy"><div class="hl-meta"><div class="hl-date">${railJstYmd(h.dateUTC)}</div><div class="hl-opp">${h.ha==='H'?'vs':'@'} ${esc(h.opp)}<span class="hl-ha">${h.ha}</span></div></div></a>`).join('');
+  return `<div class="rail-card rail-hl">${head}<div class="hl-list">${cards}</div></div>`;
+}
+// ドロワー開閉（<1100px）。両ドロワーは排他、同じタブ再タップで閉じる。
+const RAIL_JS = `<script>function clRail(s){var b=document.body.classList,L=b.contains('rail-left-open'),R=b.contains('rail-right-open');b.remove('rail-left-open');b.remove('rail-right-open');if(s==='left'&&!L)b.add('rail-left-open');if(s==='right'&&!R)b.add('rail-right-open');}document.addEventListener('keydown',function(e){if(e.key==='Escape')clRail('');});</script>`;
+
 try {
   for (const f of readdirSync('data').filter(n=>/^preseason-\d{4}\.json$/.test(n))){
     const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
@@ -1322,14 +1470,25 @@ function buildClub(name, info){
       .replace(/<!--DESC[\s\S]*?-->\s*/, '')
       .replace('<!--VIDEO-->', embed);
     const rHead = HEAD({ title:`${name}｜クラブ図鑑（歴史・本拠地・スタイル） - Football Highlights Compass`, ogtitle:`${name}｜クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
-    const rOut = rHead + TOPBAR + `<article class="post entity">
+    // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
+    const leftRail = railStandings(slug) + railFormation(name) + railFacts(info, flag);
+    const rightRail = railHighlights(slug);
+    const rOut = rHead + TOPBAR + `<div class="cl-shell">
+  <aside class="cl-rail cl-rail-left" id="railLeft" aria-label="クラブ情報"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${leftRail}</aside>
+  <div class="cl-center"><article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'クラブ'},{label:name}])}
   ${richBody}
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
   ${YTFB}
-  ` + FOOTER();
+  </article></div>
+  <aside class="cl-rail cl-rail-right" id="railRight" aria-label="最新ハイライト"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${rightRail}</aside>
+</div>
+<button class="rail-tab rail-tab-left" type="button" aria-controls="railLeft" onclick="clRail('left')">📊<span>情報</span></button>
+<button class="rail-tab rail-tab-right" type="button" aria-controls="railRight" onclick="clRail('right')">🎬<span>ハイライト</span></button>
+<div class="rail-ovl" id="railOvl" onclick="clRail('')"></div>
+` + FOOTER() + RAIL_JS;
     writeFileSync(`site/${path}`, rOut);
     return;
   }
