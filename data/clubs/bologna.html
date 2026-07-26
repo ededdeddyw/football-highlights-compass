@@ -1,0 +1,182 @@
+<!--CLUB slug=bologna name=ボローニャ league=セリエA-->
+<!--VIDEO id=jP8Avd0Eu8k title=クルヴァ・ブルガレッリ／ダッラーラの雰囲気-->
+<!--DESC ボローニャ（セリエA）のクラブ紹介。美食の街ボローニャ、傾いた二本の塔（レ・ドゥエ・トッリ）、赤紺（ロッソブルー）をまとう古豪の本拠地と歴史を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#10131f; --cl-red:#b3122a; --cl-navy:#1a2f66; --cl-navy-hi:#5878bd; --cl-gold:#d8b24a;
+    --cl-paper:var(--bg,#f4f6fb); --cl-text:var(--fg,#151a26); --cl-muted:#5c6675; --cl-line:#d3dae7; --cl-card:#f9fbfe;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e7ecf5; --cl-muted:#93a0b3; --cl-line:#243247; --cl-card:#121826; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e7ecf5; --cl-muted:#93a0b3; --cl-line:#243247; --cl-card:#121826; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#151a26; --cl-muted:#5c6675; --cl-line:#d3dae7; --cl-card:#f9fbfe; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(16,19,31,.94) 32%,rgba(16,19,31,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-navy-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dde4f1;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-red) 0 50%,var(--cl-navy) 50% 100%);border:1px solid var(--cl-line)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(179,18,42,.24)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(26,47,102,.34);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c3cee0;background:#0c0f18;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ボローニャの傾いた二本の塔（アジネッリ塔とガリセンダ塔）と回廊の街並みを描いた赤紺基調のイラスト">
+        <defs>
+          <linearGradient id="bosky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1c2b4e"/><stop offset="55%" stop-color="#141d33"/><stop offset="100%" stop-color="#10131f"/></linearGradient>
+          <radialGradient id="boglow" cx="42%" cy="24%" r="52%"><stop offset="0%" stop-color="#b3122a" stop-opacity=".3"/><stop offset="48%" stop-color="#1a2f66" stop-opacity=".14"/><stop offset="100%" stop-color="#10131f" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#bosky)"/>
+        <rect width="1200" height="470" fill="url(#boglow)"/>
+        <circle cx="980" cy="100" r="38" fill="#eaf0fa" opacity=".92"/>
+        <circle cx="964" cy="92" r="38" fill="#141d33" opacity=".5"/>
+        <g fill="#5878bd" opacity=".28"><circle cx="360" cy="90" r="2.5"/><circle cx="470" cy="64" r="2"/><circle cx="720" cy="76" r="2.5"/><circle cx="820" cy="56" r="2"/><circle cx="300" cy="140" r="2"/><circle cx="1090" cy="150" r="2.5"/></g>
+        <!-- 街並みシルエット＋回廊（ポルティコ） -->
+        <rect x="0" y="316" width="1200" height="154" fill="#0c0f18"/>
+        <g fill="#1a2338"><rect x="40" y="272" width="30" height="48"/><rect x="76" y="256" width="22" height="64"/><rect x="104" y="280" width="34" height="40"/><rect x="150" y="266" width="24" height="54"/><rect x="900" y="270" width="40" height="50"/><rect x="948" y="258" width="24" height="62"/><rect x="1000" y="276" width="34" height="44"/><rect x="1120" y="266" width="20" height="54"/></g>
+        <g fill="#d8b24a" opacity=".65"><rect x="84" y="266" width="4" height="5"/><rect x="156" y="274" width="4" height="5"/><rect x="956" y="268" width="4" height="5"/></g>
+        <!-- ポルティコ（アーチの連なり） -->
+        <g fill="none" stroke="#3a2a2f" stroke-width="4" opacity=".8"><path d="M120 316 v-30 M120 286 q22 -20 44 0 M164 316 v-30 M164 286 q22 -20 44 0 M208 316 v-30 M208 286 q22 -20 44 0 M252 316 v-30"/></g>
+        <!-- ガリセンダ塔（低く・大きく傾く） -->
+        <g transform="translate(470,318) rotate(6)"><rect x="-24" y="-150" width="48" height="150" fill="#1f1a24" stroke="#3a2f37" stroke-width="2"/><rect x="-24" y="-150" width="48" height="12" fill="#141017"/><g fill="#b3122a" opacity=".5"><rect x="-14" y="-120" width="8" height="12"/><rect x="6" y="-120" width="8" height="12"/><rect x="-14" y="-80" width="8" height="12"/><rect x="6" y="-80" width="8" height="12"/></g></g>
+        <!-- アジネッリ塔（高く・わずかに傾く） -->
+        <g transform="translate(560,318) rotate(2)"><rect x="-22" y="-262" width="44" height="262" fill="#241a20" stroke="#42323b" stroke-width="2"/><rect x="-26" y="-274" width="52" height="14" fill="#181117"/><rect x="-13" y="-278" width="6" height="18" fill="#181117"/><g fill="#d8b24a" opacity=".55"><rect x="-12" y="-232" width="7" height="12"/><rect x="5" y="-232" width="7" height="12"/><rect x="-12" y="-176" width="7" height="12"/><rect x="5" y="-176" width="7" height="12"/><rect x="-12" y="-120" width="7" height="12"/><rect x="5" y="-120" width="7" height="12"/></g></g>
+        <!-- 赤紺の縞バンド -->
+        <g transform="translate(70,330)"><rect x="0" y="0" width="210" height="54" fill="#b3122a"/><rect x="105" y="0" width="105" height="54" fill="#1a2f66"/><rect x="0" y="0" width="210" height="54" fill="none" stroke="#d8b24a" stroke-width="2"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>ボローニャ<span class="cl-en">Bologna FC · 1909</span></h1>
+        <p class="cl-sub">美食の街ボローニャの古豪。傾いた二本の塔を見上げる赤紺（ロッソブルー）のクラブは、長い歴史とともに街の誇りを歌い継ぎます。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北部・エミリア＝ロマーニャ州の州都<b>ボローニャ</b>を本拠とするクラブです。<b>美食の街・学問の街</b>として知られる古都で、赤と紺（ロッソブルー）をまとうチームは、街の回廊（ポルティコ）と傾いた二本の塔を背に、長い歴史を積み重ねてきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタディオ・レナート・ダッラーラ — クルヴァ・ブルガレッリ</h2>
+      <p>1927年開場の歴史あるスタジアムで、外周にそびえる<span class="cl-hl">マラトーナ塔</span>が象徴的です。ゴール裏の<strong>クルヴァ・ブルガレッリ</strong>は、名選手ジャコモ・ブルガレッリにちなんで名づけられたサポーターの拠点。キックオフを前に赤と紺のスカーフが掲げられ、古き良きスタジアムに熱い声援が満ちます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤と紺のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#0c0f18"/>
+          <defs><pattern id="bocrowd" width="18" height="15" patternUnits="userSpaceOnUse"><rect width="18" height="15" fill="#0c0f18"/><circle cx="5" cy="7" r="4.4" fill="#b3122a"/><circle cx="13" cy="7" r="4.4" fill="#1a2f66"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#bocrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5878bd" opacity=".5"/>
+          <g stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0" stroke="#b3122a"/><path d="M220 48 q28 -22 56 0" stroke="#1a2f66"/><path d="M360 56 q28 -22 56 0" stroke="#b3122a"/><path d="M480 46 q28 -22 56 0" stroke="#1a2f66"/></g>
+          <g><rect x="290" y="18" width="5" height="70" fill="#4b4650"/><rect x="266" y="18" width="58" height="18" fill="#241a20"/><rect x="266" y="18" width="58" height="18" fill="none" stroke="#d8b24a" stroke-width="1.5"/></g>
+        </svg>
+        <figcaption>クルヴァ・ブルガレッリ — マラトーナ塔を背に、赤紺のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>二本の塔と、美食の都</h2>
+      <p>ボローニャの中心にそびえるのが、中世に築かれた<span class="cl-hl">レ・ドゥエ・トッリ（二本の塔）</span>。高いアジネッリ塔と、大きく傾いたガリセンダ塔が並ぶ姿は、街のシンボルです。赤い屋根と長い回廊（ポルティコ）が続く街は、ボロネーゼやトルテッリーニで名高い<span class="cl-red">美食の都</span>としても愛され、その豊かさがクラブへの誇りを支えています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景のボローニャにそびえる、高い塔とわずかに傾いたもう一本の塔のシルエット">
+          <defs><linearGradient id="bodusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22335c"/><stop offset="100%" stop-color="#0c0f18"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#bodusk)"/>
+          <circle cx="110" cy="48" r="26" fill="#d8b24a" opacity=".8"/>
+          <rect x="0" y="132" width="600" height="38" fill="#0a0d15"/>
+          <g fill="none" stroke="#2b2036" stroke-width="4" opacity=".8"><path d="M30 132 v-24 M30 108 q20 -18 40 0 M70 132 v-24 M70 108 q20 -18 40 0 M110 132 v-24"/></g>
+          <!-- ガリセンダ（傾く） -->
+          <g transform="translate(250,132) rotate(6)"><rect x="-18" y="-96" width="36" height="96" fill="#1c1722" stroke="#3a2f37" stroke-width="1.5"/><rect x="-18" y="-96" width="36" height="9" fill="#141017"/></g>
+          <!-- アジネッリ（高い） -->
+          <g transform="translate(320,132) rotate(2)"><rect x="-16" y="-118" width="32" height="118" fill="#241a20" stroke="#42323b" stroke-width="1.5"/><rect x="-19" y="-124" width="38" height="10" fill="#181117"/><g fill="#d8b24a" opacity=".5"><rect x="-8" y="-96" width="5" height="9"/><rect x="3" y="-96" width="5" height="9"/><rect x="-8" y="-60" width="5" height="9"/><rect x="3" y="-60" width="5" height="9"/></g></g>
+          <g fill="#1c2338"><rect x="470" y="104" width="16" height="28"/><rect x="490" y="112" width="22" height="20"/><rect x="516" y="100" width="14" height="32"/></g>
+        </svg>
+        <figcaption>レ・ドゥエ・トッリ — 傾いた塔が見守る、赤い屋根の街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 歴史</div>
+      <h2>古豪の誇り — 積み上げたスクデット</h2>
+      <p>ボローニャは、イタリアサッカーの黎明期から強豪として鳴らした<strong>古豪</strong>です。とくに1920〜30年代と1960年代に黄金期を築き、<span class="cl-hl">計7度のスクデット（リーグ優勝）</span>を戴冠。「ボローニャは震え、全世界を震わせる」と謳われた時代の記憶は、いまもサポーターの誇りとして受け継がれ、近年の躍進とともに新たな一章が加えられています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="赤紺の盾に、いくつもの星（優勝の証）が並ぶ紋章のイラスト">
+          <rect width="600" height="180" fill="#0c0f18"/>
+          <g transform="translate(300,88)">
+            <path d="M0,-58 L54,-42 L54,18 Q54,54 0,74 Q-54,54 -54,18 L-54,-42 Z" fill="#1a2f66" stroke="#d8b24a" stroke-width="3"/>
+            <path d="M0,-58 L54,-42 L54,18 Q54,54 0,74 Q-54,54 -54,18 L-54,-42 Z" fill="none"/>
+            <path d="M0,-58 L0,74 Q-54,54 -54,18 L-54,-42 Z" fill="#b3122a" opacity=".92"/>
+            <g fill="#d8b24a"><path d="M-26,-26 l4,9 l10,1 l-7,7 l2,10 l-9,-5 l-9,5 l2,-10 l-7,-7 l10,-1 z"/><path d="M26,-26 l4,9 l10,1 l-7,7 l2,10 l-9,-5 l-9,5 l2,-10 l-7,-7 l10,-1 z"/><path d="M0,4 l4,9 l10,1 l-7,7 l2,10 l-9,-5 l-9,5 l2,-10 l-7,-7 l10,-1 z"/></g>
+          </g>
+          <text x="300" y="166" fill="#8b97a8" font-size="13" text-anchor="middle" font-weight="700">受け継がれる古豪の誇り</text>
+        </svg>
+        <figcaption>古豪の紋章 — 赤と紺に刻まれた、栄光の記憶。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ロッソブルー — 赤と紺の縦縞</h2>
+      <p>赤と紺の縦縞から、クラブは<strong>「ロッソブルー」「イ・ロッソブルー」</strong>と呼ばれます。イタリアでも歴史の古い配色のひとつで、街と一体となった落ち着いた誇りの象徴。堅実さと組織力を土台に、近年は積極的で見ごたえのあるサッカーへと進化し、古豪が再び上位を争う姿が街を沸かせています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤と紺の縦縞のユニフォームのイラスト">
+          <rect width="600" height="150" fill="#0c0f18"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#b3122a"/>
+          <path d="M300 20 C 300 20, 330 22, 350 26 L350 132 C 335 137, 300 140, 300 140 Z" fill="#1a2f66"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eaf0fa" opacity=".8"/>
+          <g stroke="#d8b24a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ロッソブルー — 赤と紺、街と歩む配色。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1909年</dd>
+          <dt>本拠地</dt><dd>ボローニャ（エミリア＝ロマーニャ州）</dd>
+          <dt>スタジアム</dt><dd>レナート・ダッラーラ（クルヴァ・ブルガレッリ）</dd>
+          <dt>愛称</dt><dd>I Rossoblù（ロッソブルー）</dd>
+          <dt>カラー</dt><dd>レッド ＆ ネイビー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

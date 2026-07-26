@@ -1,0 +1,178 @@
+<!--CLUB slug=sassuolo name=サッスオーロ league=セリエA-->
+<!--VIDEO id=ltGO3WsKJ3I title=Cuore Neroverde／サッスオーロ公式アンセム-->
+<!--DESC サッスオーロ（セリエA）のクラブ紹介。エミリアのセラミック（タイル）産業の街、緑と黒のネロヴェルデ、マペイの支援と堅実な育成、モダンな好サッカーを、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1410; --cl-c1:#1f8a4c; --cl-c1hi:#5fd08a; --cl-c2:#0e1a15; --cl-gold:#cdae6a;
+    --cl-paper:var(--bg,#f3f8f4); --cl-text:var(--fg,#132419); --cl-muted:#5d7266; --cl-line:#cfe1d5; --cl-card:#f6fdf8;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e5f2ea; --cl-muted:#8ba99a; --cl-line:#1c3126; --cl-card:#0f1e17; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e5f2ea; --cl-muted:#8ba99a; --cl-line:#1c3126; --cl-card:#0f1e17; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#132419; --cl-muted:#5d7266; --cl-line:#cfe1d5; --cl-card:#f6fdf8; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(5,12,9,.94) 32%,rgba(5,12,9,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#04120b;background:var(--cl-c1);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-c1hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9ecdf;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,#0e1a15,var(--cl-c1) 45%,var(--cl-c1hi))}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(31,138,76,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#04120b;background:var(--cl-c1);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(31,138,76,.32);font-weight:700}
+  .cl-accent{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b7d6c2;background:#050f0a;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-c1);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="セラミックタイルのパターンと窯の煙突が並ぶ、エミリアの街を描いた抽象的なイラスト">
+        <defs>
+          <linearGradient id="sasky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a26"/><stop offset="55%" stop-color="#0c231a"/><stop offset="100%" stop-color="#0a1410"/></linearGradient>
+          <radialGradient id="saglow" cx="50%" cy="26%" r="52%"><stop offset="0%" stop-color="#5fd08a" stop-opacity=".26"/><stop offset="55%" stop-color="#1f8a4c" stop-opacity=".08"/><stop offset="100%" stop-color="#0a1410" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#sasky)"/>
+        <rect width="1200" height="470" fill="url(#saglow)"/>
+        <!-- 抽象的なセラミックタイルのグリッド（背景） -->
+        <g opacity=".18" stroke="#1f8a4c" stroke-width="2" fill="none"><path d="M0 60 H1200 M0 130 H1200 M0 200 H1200"/><path d="M80 20 V240 M240 20 V240 M400 20 V240 M560 20 V240 M720 20 V240 M880 20 V240 M1040 20 V240"/></g>
+        <g fill="#1f8a4c" opacity=".16"><rect x="80" y="60" width="80" height="70"/><rect x="240" y="130" width="80" height="70"/><rect x="560" y="60" width="80" height="70"/><rect x="880" y="130" width="80" height="70"/><rect x="720" y="200" width="80" height="40"/></g>
+        <g fill="#cdae6a" opacity=".14"><rect x="400" y="60" width="80" height="70"/><rect x="1040" y="60" width="80" height="70"/><rect x="240" y="200" width="80" height="40"/></g>
+        <!-- 街並みシルエットと窯の煙突 -->
+        <rect x="0" y="300" width="1200" height="170" fill="#081712"/>
+        <g fill="#0e2018"><rect x="60" y="262" width="30" height="48"/><rect x="96" y="246" width="22" height="64"/><rect x="124" y="272" width="34" height="38"/><rect x="600" y="266" width="26" height="44"/><rect x="632" y="252" width="20" height="58"/><rect x="880" y="260" width="24" height="50"/><rect x="912" y="274" width="34" height="36"/><rect x="1040" y="256" width="20" height="54"/><rect x="1066" y="272" width="40" height="38"/></g>
+        <!-- 窯（キルン）の煙突 -->
+        <g fill="#12281d" stroke="#1f8a4c" stroke-width="1.5"><rect x="720" y="196" width="46" height="114"/><rect x="712" y="188" width="62" height="12"/><rect x="300" y="220" width="30" height="90"/><rect x="294" y="212" width="42" height="10"/></g>
+        <g fill="#5fd08a" opacity=".5"><path d="M743 196 q-8 -30 6 -52 q9 20 20 8 q-2 26 -12 44 z"/><path d="M315 220 q-6 -22 4 -38 q7 14 15 6 q-2 18 -9 32 z"/></g>
+        <g fill="#cdae6a" opacity=".8"><rect x="104" y="256" width="4" height="5"/><rect x="638" y="262" width="4" height="5"/><rect x="888" y="270" width="4" height="5"/><rect x="1048" y="266" width="4" height="5"/></g>
+        <!-- 緑と黒の縞バンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="210" height="56" fill="#1f8a4c"/><g fill="#0a1410"><rect x="0" y="0" width="35" height="56"/><rect x="70" y="0" width="35" height="56"/><rect x="140" y="0" width="35" height="56"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イタリア・セリエA</span>
+        <h1>サッスオーロ<span class="cl-en">US Sassuolo · 1920</span></h1>
+        <p class="cl-sub">セラミック（タイル）産業で栄えるエミリアの街。緑と黒をまとい、堅実な育成とモダンなサッカーでセリエAに定着してきました。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イタリア北部・エミリア＝ロマーニャ州の小さな街<b>サッスオーロ</b>を本拠とするクラブです。世界に知られる<b>セラミックタイル産業</b>の中心地で、大都市の名門とは違う道——賢い補強と若手育成、そして攻撃的で洗練されたサッカー——で、トップリーグに独自の居場所を築いてきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>マペイ・スタジアム — 企業とともに歩む舞台</h2>
+      <p>近隣の街レッジョ・エミリアに建つ、約2万人強を収容するモダンなスタジアムです。クラブを長く支える化学メーカー<span class="cl-hl">マペイ</span>がスタジアムを取得・整備し、その名を冠しています。陸上トラックのない設計でピッチが近く、規模は大きすぎないぶん、応援の声がまっすぐ選手に届きます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="緑に染まったモダンなスタンドと、ピッチを見下ろす観客のイラスト">
+          <rect width="600" height="190" fill="#050f0a"/>
+          <ellipse cx="300" cy="152" rx="232" ry="38" fill="#0f1d16"/>
+          <ellipse cx="300" cy="152" rx="150" ry="22" fill="#1f8a4c" opacity=".45"/>
+          <defs><pattern id="sacrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#050f0a"/><circle cx="8.5" cy="7" r="5" fill="#1f8a4c"/></pattern></defs>
+          <path d="M40,120 Q300,44 560,120 L560,150 Q300,80 40,150 Z" fill="url(#sacrowd)"/>
+          <path d="M40,120 Q300,44 560,120 L560,110 Q300,38 40,110 Z" fill="#5fd08a" opacity=".5"/>
+          <g fill="#0a1410"><rect x="120" y="70" width="10" height="66"/><rect x="290" y="52" width="10" height="70"/><rect x="460" y="70" width="10" height="66"/></g>
+          <g><rect x="200" y="66" width="4" height="52" fill="#4f6b5c"/><polygon points="204,66 244,76 204,90" fill="#1f8a4c"/><rect x="380" y="62" width="4" height="56" fill="#4f6b5c"/><polygon points="384,62 424,72 384,86" fill="#1f8a4c"/></g>
+        </svg>
+        <figcaption>マペイ・スタジアム — ピッチに迫る、ネロヴェルデのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>タイルとやきものの街、エミリアの職人気質</h2>
+      <p>サッスオーロは、世界有数の<span class="cl-accent">セラミックタイル</span>の産地として知られる工業の街です。数多くの窯とメーカーが集まり、精緻なやきものづくりの伝統が息づいています。派手さより堅実さ、ものづくりを大切にする職人気質——そんな土地柄が、地に足のついたクラブ運営とチーム作りにもそのまま映し出されています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="窯の煙突と、幾何学的なセラミックタイルのパターンを描いたイラスト">
+          <defs><linearGradient id="sadusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a26"/><stop offset="100%" stop-color="#050f0a"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#sadusk)"/>
+          <!-- タイルパターン -->
+          <g opacity=".5"><rect x="30" y="40" width="34" height="34" fill="#1f8a4c"/><rect x="70" y="40" width="34" height="34" fill="none" stroke="#5fd08a" stroke-width="2"/><rect x="110" y="40" width="34" height="34" fill="#cdae6a" opacity=".7"/><rect x="30" y="80" width="34" height="34" fill="none" stroke="#5fd08a" stroke-width="2"/><rect x="70" y="80" width="34" height="34" fill="#1f8a4c"/><rect x="110" y="80" width="34" height="34" fill="none" stroke="#5fd08a" stroke-width="2"/></g>
+          <!-- 窯の煙突 -->
+          <g fill="#12281d" stroke="#1f8a4c" stroke-width="1.5"><rect x="420" y="66" width="44" height="80"/><rect x="412" y="58" width="60" height="10"/></g>
+          <path d="M442 66 q-8 -26 5 -46 q8 18 18 7 q-2 24 -11 39 z" fill="#5fd08a" opacity=".55"/>
+          <g fill="#12281d"><rect x="300" y="102" width="18" height="44"/><rect x="324" y="90" width="14" height="56"/><rect x="500" y="98" width="16" height="48"/><rect x="522" y="108" width="24" height="38"/></g>
+          <rect x="0" y="146" width="600" height="24" fill="#0a1410"/>
+        </svg>
+        <figcaption>やきものの街 — 窯の煙と、幾何学のタイル模様。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>育成と好サッカー、地方クラブの矜持</h2>
+      <p>大きな資金力を持たないクラブが、名を上げてきた理由は明確です。<span class="cl-hl">有望な若手を見出して育て、ボールをつなぐ攻撃的なサッカー</span>を志向すること。丁寧なパスワークと大胆な仕掛けで、格上相手にも臆さず立ち向かう——その姿勢が、多くの才能を大舞台へと送り出す土台になってきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="ピッチ上でボールをつなぐパスの軌道を、緑の線と円で表したイラスト">
+          <rect width="600" height="180" fill="#050f0a"/>
+          <rect x="40" y="24" width="520" height="132" rx="6" fill="#0d1c15" stroke="#1f8a4c" stroke-width="2"/>
+          <line x1="300" y1="24" x2="300" y2="156" stroke="#1f8a4c" stroke-width="1.5" opacity=".5"/>
+          <circle cx="300" cy="90" r="30" fill="none" stroke="#1f8a4c" stroke-width="1.5" opacity=".5"/>
+          <g fill="#5fd08a"><circle cx="110" cy="120" r="7"/><circle cx="210" cy="60" r="7"/><circle cx="320" cy="118" r="7"/><circle cx="420" cy="56" r="7"/><circle cx="500" cy="100" r="7"/></g>
+          <path d="M110 120 L210 60 L320 118 L420 56 L500 100" fill="none" stroke="#5fd08a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+          <circle cx="500" cy="100" r="11" fill="none" stroke="#cdae6a" stroke-width="3"/>
+        </svg>
+        <figcaption>つなぐサッカー — 若い才能とパスワークが、クラブの背骨。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ネロヴェルデ、緑と黒の誇り</h2>
+      <p>緑と黒のユニフォームから、<strong>「ネロヴェルデ（黒緑軍団）」</strong>の愛称で親しまれます。イタリアでも珍しいこの色合いは、街のクラブとしての独自性の象徴。派手な看板選手より、チームとしての完成度と若い力を信じる姿勢が、<span class="cl-accent">サッスオーロらしさ</span>として受け継がれています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="緑と黒の縦縞のユニフォームと、育成を象徴する若木の芽のイラスト">
+          <rect width="600" height="150" fill="#050f0a"/>
+          <g><rect x="60" y="0" width="60" height="150" fill="#0a1410"/><rect x="120" y="0" width="60" height="150" fill="#1f8a4c"/><rect x="180" y="0" width="60" height="150" fill="#0a1410"/><rect x="240" y="0" width="60" height="150" fill="#1f8a4c"/><rect x="300" y="0" width="60" height="150" fill="#0a1410"/><rect x="360" y="0" width="60" height="150" fill="#1f8a4c"/><rect x="420" y="0" width="60" height="150" fill="#0a1410"/><rect x="480" y="0" width="60" height="150" fill="#1f8a4c"/></g>
+          <g transform="translate(300,88)"><path d="M0,30 L0,-14" stroke="#cdae6a" stroke-width="4" fill="none"/><path d="M0,-4 q-22 -6 -30 -26 q24 2 30 22" fill="#5fd08a"/><path d="M0,-14 q22 -8 32 -30 q-24 0 -32 24" fill="#5fd08a"/></g>
+        </svg>
+        <figcaption>ネロヴェルデ — 緑と黒の誇りと、育つ若い芽。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1920年</dd>
+          <dt>本拠地</dt><dd>サッスオーロ（エミリア＝ロマーニャ州）</dd>
+          <dt>スタジアム</dt><dd>マペイ・スタジアム（レッジョ・エミリア）</dd>
+          <dt>愛称</dt><dd>Neroverdi（ネロヴェルデ）</dd>
+          <dt>カラー</dt><dd>グリーン ＆ ブラック</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
