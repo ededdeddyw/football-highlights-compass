@@ -1290,8 +1290,11 @@ function railJstYmd(iso){
   const t = new Date(d.getTime() + 9*3600*1000);
   return `${t.getUTCFullYear()}/${String(t.getUTCMonth()+1).padStart(2,'0')}/${String(t.getUTCDate()).padStart(2,'0')}`;
 }
+// クラブ図鑑のslug と 試合データ側slug がずれるクラブの別名対応（レールのデータ引き当て用）。
+const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol' };
 // 左レール：順位表（対象クラブ中心・前後数行）
 function railStandings(clubSlug){
+  clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
   const code = SLUG2LEAGUE[clubSlug];
   const rows = code && RAIL_TABLE[code];
   if(!rows || !rows.length) return '';
@@ -1323,6 +1326,7 @@ function railFacts(info, flag){
 }
 // 右レール：最新ハイライト（新しい順・最大12・スコアは出さない）
 function railHighlights(clubSlug){
+  clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
   const hl = (CLUB_HL[clubSlug]||[]).slice(0,12);
   const head = `<div class="rail-h">🎬 最新ハイライト</div>`;
   if(!hl.length) return `<div class="rail-card">${head}<p class="rail-empty">まだハイライトはありません</p></div>`;

@@ -1,0 +1,197 @@
+<!--CLUB slug=atletico-madrid name=アトレティコ・マドリード league=ラ・リーガ-->
+<!--VIDEO id=GVSWdHoRiYk title=El himno del Atleti／メトロポリターノに響くアトレティコ・アンセム-->
+<!--DESC アトレティコ・マドリード（ラ・リーガ）のクラブ紹介。赤白の縞ロヒブランコス、メトロポリターノ、マドリード市の紋章「熊とイチゴの木」、闘志の哲学チョリスモを、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#101426; --cl-rojo:#cb3524; --cl-rojo-hi:#e8695a; --cl-azul:#262e62; --cl-azul-hi:#6b74b8; --cl-gold:#d8b24a;
+    --cl-paper:var(--bg,#f6f4f6); --cl-text:var(--fg,#181420); --cl-muted:#645f70; --cl-line:#d6cfd8; --cl-card:#fdfbfd;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#eae3ec; --cl-muted:#9a93a8; --cl-line:#262233; --cl-card:#14111e; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#eae3ec; --cl-muted:#9a93a8; --cl-line:#262233; --cl-card:#14111e; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#181420; --cl-muted:#645f70; --cl-line:#d6cfd8; --cl-card:#fdfbfd; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(16,20,38,.94) 32%,rgba(16,20,38,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-rojo);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-rojo-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e0dae8;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:10px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-rojo) 0 18px,#ffffff 18px 36px);border:1px solid var(--cl-line)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(203,53,36,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-rojo);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(203,53,36,.32);font-weight:700}
+  .cl-azul{color:var(--cl-azul-hi);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c9c2d2;background:#101426;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-rojo);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="メトロポリターノと、マドリード市の紋章である熊とイチゴの木を描いたイラスト">
+        <defs>
+          <linearGradient id="atmsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1830"/><stop offset="52%" stop-color="#171634"/><stop offset="100%" stop-color="#101426"/></linearGradient>
+          <radialGradient id="atmglow" cx="66%" cy="28%" r="52%"><stop offset="0%" stop-color="#cb3524" stop-opacity=".34"/><stop offset="50%" stop-color="#262e62" stop-opacity=".14"/><stop offset="100%" stop-color="#101426" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#atmsky)"/>
+        <rect width="1200" height="470" fill="url(#atmglow)"/>
+        <circle cx="250" cy="104" r="40" fill="#f3e6c4" opacity=".85"/>
+        <circle cx="234" cy="96" r="40" fill="#171634" opacity=".5"/>
+        <g fill="#e8695a" opacity=".6"><circle cx="520" cy="80" r="2"/><circle cx="640" cy="120" r="1.6"/><circle cx="760" cy="70" r="2"/><circle cx="900" cy="120" r="1.6"/></g>
+        <!-- メトロポリターノ（波打つ屋根のボウル） -->
+        <g>
+          <ellipse cx="820" cy="360" rx="360" ry="98" fill="#191d3c"/>
+          <path d="M470 360 Q820 244 1170 360 L1170 320 Q820 220 470 320 Z" fill="#22264a"/>
+          <path d="M470 320 Q820 220 1170 320" fill="none" stroke="#cb3524" stroke-width="4" opacity=".7"/>
+          <path d="M470 336 Q820 236 1170 336" fill="none" stroke="#ffffff" stroke-width="2.5" opacity=".4"/>
+          <g stroke="#4a5290" stroke-width="2.5" opacity=".7"><line x1="580" y1="336" x2="580" y2="356"/><line x1="680" y1="312" x2="680" y2="350"/><line x1="780" y1="298" x2="780" y2="346"/><line x1="880" y1="298" x2="880" y2="346"/><line x1="980" y1="312" x2="980" y2="350"/><line x1="1070" y1="332" x2="1070" y2="356"/></g>
+        </g>
+        <!-- 熊とイチゴの木（マドリード市の紋章 el oso y el madroño） -->
+        <g transform="translate(300,244)">
+          <!-- イチゴの木 -->
+          <rect x="120" y="30" width="16" height="96" fill="#5a3a24"/>
+          <path d="M128 40 Q90 20 70 46 Q96 40 108 56 Q84 52 76 74 Q104 62 120 78 Z" fill="#2f6b3a"/>
+          <path d="M128 34 Q166 14 188 40 Q160 34 148 52 Q174 46 182 70 Q152 56 132 74 Z" fill="#2f6b3a"/>
+          <ellipse cx="130" cy="14" rx="46" ry="34" fill="#2f6b3a"/>
+          <g fill="#cb3524"><circle cx="104" cy="10" r="5"/><circle cx="150" cy="6" r="5"/><circle cx="128" cy="26" r="5"/><circle cx="112" cy="34" r="4"/><circle cx="160" cy="30" r="4"/></g>
+          <!-- 立ち上がる熊 -->
+          <path d="M120 126 L120 88 Q116 66 96 62 Q104 52 96 42 Q108 46 114 56 Q120 40 132 40 Q126 52 130 60 Q140 62 142 78 L142 126 Q132 120 120 126 Z" fill="#20140f"/>
+          <circle cx="98" cy="50" r="4" fill="#20140f"/>
+          <circle cx="106" cy="56" r="1.6" fill="#e8695a"/>
+        </g>
+        <!-- 赤白の縞バンド -->
+        <g transform="translate(70,392)"><rect x="0" y="0" width="180" height="54" fill="#ffffff"/><g fill="#cb3524"><rect x="0" y="0" width="30" height="54"/><rect x="60" y="0" width="30" height="54"/><rect x="120" y="0" width="30" height="54"/></g><rect x="0" y="42" width="180" height="12" fill="#262e62"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>アトレティコ・マドリード<span class="cl-en">Atlético de Madrid · 1903</span></h1>
+        <p class="cl-sub">赤白の縞をまとう闘志のクラブ。マドリード市の紋章「熊とイチゴの木」を掲げ、最後まで戦い抜くチョリスモの精神で知られます。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペインの首都<b>マドリード</b>を本拠とするクラブです。同じ街の白い名門とは対照的に、<b>赤と白の縞</b>に紺のパンツをまとい、労働者の街に愛されてきました。派手さより<b>闘志と結束</b>を重んじる姿勢が、多くの人々の共感を集めています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディオ・メトロポリターノ — 赤白のうねり</h2>
+      <p>2017年に本拠を移した、約7万人を収容する近代的なスタジアムです。波打つ屋根が特徴的で、ゴール裏に集うサポーターが生み出す<span class="cl-hl">地鳴りのような声援</span>は圧巻。かつての本拠<strong>ビセンテ・カルデロン</strong>から受け継いだ熱気が、新しい舞台でも赤白のうねりとなって渦を巻きます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤白の縞で埋め尽くされた、うねる屋根のスタンドのイラスト">
+          <rect width="600" height="190" fill="#101426"/>
+          <defs><pattern id="atmcrowd" width="18" height="15" patternUnits="userSpaceOnUse"><rect width="18" height="15" fill="#101426"/><circle cx="5" cy="7" r="4.4" fill="#cb3524"/><circle cx="14" cy="7" r="4.4" fill="#eef1f6"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,94 Q300,54 0,94 Z" fill="url(#atmcrowd)"/>
+          <path d="M0,78 Q300,40 600,78 L600,64 Q300,26 0,64 Z" fill="#22264a"/>
+          <path d="M0,78 Q300,40 600,78" fill="none" stroke="#cb3524" stroke-width="3" opacity=".8"/>
+          <g stroke="#e8695a" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="150" y="30" width="4" height="58" fill="#4a5290"/><polygon points="154,30 196,40 154,54" fill="#cb3524"/><rect x="410" y="24" width="4" height="64" fill="#4a5290"/><polygon points="414,24 456,36 414,50" fill="#262e62"/></g>
+        </svg>
+        <figcaption>メトロポリターノ — 赤白の縞がうねる、闘志のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>熊とイチゴの木、マドリードの紋章</h2>
+      <p>クラブの歴史に深く刻まれるのが、<span class="cl-hl">マドリード市の紋章「熊とイチゴの木（el oso y el madroño）」</span>です。街の中心プエルタ・デル・ソルにも立つこの像は、首都の象徴。クラブのエンブレムにもかつて描かれ、<span class="cl-azul">マドリードの街そのもの</span>を背負う存在であることを示しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="イチゴの木に立ち上がる熊を描いた、マドリード市の紋章のイラスト">
+          <defs><linearGradient id="atmdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1830"/><stop offset="100%" stop-color="#101426"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#atmdusk)"/>
+          <circle cx="470" cy="52" r="30" fill="#d8b24a" opacity=".3"/>
+          <rect x="0" y="140" width="600" height="30" fill="#101426"/>
+          <g transform="translate(250,26)">
+            <rect x="96" y="40" width="18" height="100" fill="#5a3a24"/>
+            <ellipse cx="105" cy="26" rx="56" ry="40" fill="#2f6b3a"/>
+            <path d="M105 34 Q60 12 36 42 Q68 34 82 54 Z" fill="#2f6b3a"/>
+            <path d="M105 30 Q150 8 176 40 Q142 32 128 54 Z" fill="#2f6b3a"/>
+            <g fill="#cb3524"><circle cx="76" cy="18" r="5.5"/><circle cx="128" cy="12" r="5.5"/><circle cx="105" cy="34" r="5.5"/><circle cx="86" cy="44" r="4.5"/><circle cx="138" cy="40" r="4.5"/></g>
+            <path d="M96 140 L96 90 Q92 64 66 60 Q76 48 66 36 Q82 42 90 54 Q96 34 112 34 Q104 50 110 60 Q124 62 126 84 L126 140 Q110 132 96 140 Z" fill="#20140f"/>
+            <circle cx="68" cy="46" r="5" fill="#20140f"/><circle cx="78" cy="54" r="2" fill="#e8695a"/>
+          </g>
+          <text x="300" y="158" fill="#c9c2d2" font-size="12.5" text-anchor="middle" font-weight="700">El oso y el madroño — マドリードの象徴</text>
+        </svg>
+        <figcaption>熊とイチゴの木 — 街の中心に立つ、首都マドリードの紋章。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 精神</div>
+      <h2>チョリスモ — 最後まで戦い抜く哲学</h2>
+      <p>粘り強い守備と、走り続ける献身、そして決してあきらめない<span class="cl-hl">闘志</span>——こうしたクラブの姿勢は、長く指揮を執った監督の愛称にちなんで<strong>「チョリスモ（Cholismo）」</strong>と呼ばれます。試合ごとに120%の力を出し切る一体感は、選手とサポーターを固く結びつける、アトレティコの魂そのものです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="拳を握り、赤白のマフラーを掲げて結束するサポーターのイラスト">
+          <rect width="600" height="180" fill="#101426"/>
+          <g transform="translate(300,96)">
+            <g fill="#e8695a"><path d="M-6,-40 Q-6,-56 8,-56 Q22,-56 22,-40 L22,-6 Q22,10 6,10 Q-6,10 -6,-6 Z"/><rect x="-6" y="-20" width="10" height="18" rx="4"/><rect x="4" y="-26" width="10" height="24" rx="4"/><rect x="14" y="-24" width="9" height="22" rx="4"/></g>
+          </g>
+          <g transform="translate(300,120) rotate(-16)"><rect x="-230" y="-13" width="460" height="26" rx="6" fill="#ffffff"/><g fill="#cb3524"><rect x="-230" y="-13" width="34" height="26"/><rect x="-176" y="-13" width="34" height="26"/><rect x="142" y="-13" width="34" height="26"/><rect x="196" y="-13" width="34" height="26"/></g><rect x="-230" y="7" width="460" height="6" fill="#262e62"/></g>
+          <text x="300" y="166" fill="#c9c2d2" font-size="12.5" text-anchor="middle" font-weight="700">最後の一秒まで — 走り、戦い、抱き合う</text>
+        </svg>
+        <figcaption>チョリスモ — 拳とマフラーに宿る、あきらめない魂。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ロヒブランコス、赤白と紺の誇り</h2>
+      <p>赤と白の縞に紺のパンツという伝統的な装いから<strong>「ロヒブランコス（赤白軍団）」「コルチョネーロス（マットレス職人）」</strong>の愛称で親しまれます。堅い守備を土台に、粘り強く勝機をうかがう現実的なスタイルが持ち味。<span class="cl-hl">結束と闘志</span>を何より重んじる姿勢が、クラブの背骨を貫いています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤白の縞シャツと紺のパンツ、胸のエンブレムを描いたイラスト">
+          <rect width="600" height="150" fill="#101426"/>
+          <path d="M300 16 C 252 16, 216 26, 216 26 L216 100 C 216 100, 260 92, 300 92 C 340 92, 384 100, 384 100 L384 26 C 384 26, 348 16, 300 16 Z" fill="#ffffff"/>
+          <g fill="#cb3524"><path d="M234 23 L262 20 L262 96 Q248 93 234 96 Z"/><path d="M300 18 L328 18 L328 92 L300 92 Z"/><path d="M356 22 L378 28 L378 100 Q368 96 356 96 Z"/></g>
+          <path d="M216 100 C 260 92, 340 92, 384 100 L384 132 C 340 124, 260 124, 216 132 Z" fill="#262e62"/>
+          <g transform="translate(300,54)"><path d="M0,-24 L20,-18 L20,4 Q20,20 0,26 Q-20,20 -20,4 L-20,-18 Z" fill="#fdfbfd" stroke="#cb3524" stroke-width="2"/><g fill="#cb3524"><rect x="-13" y="-14" width="4.5" height="30"/><rect x="-4" y="-14" width="4.5" height="30"/><rect x="5" y="-14" width="4.5" height="30"/></g></g>
+          <g stroke="#d8b24a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ロヒブランコス — 赤白の縞と紺のパンツ、闘うクラブの装い。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1903年</dd>
+          <dt>本拠地</dt><dd>マドリード</dd>
+          <dt>スタジアム</dt><dd>エスタディオ・メトロポリターノ（約70,000人）</dd>
+          <dt>愛称</dt><dd>Los Rojiblancos／Los Colchoneros（ロヒブランコス）</dd>
+          <dt>カラー</dt><dd>レッド＆ホワイト（＆ ネイビー）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

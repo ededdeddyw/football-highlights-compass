@@ -1,0 +1,185 @@
+<!--CLUB slug=fc-barcelona name=バルセロナ league=ラ・リーガ-->
+<!--VIDEO id=xJVx9_3fze8 title=Cant del Barça／ジゼルが歌うFCバルセロナ公式アンセム（カンプ・ノウ）-->
+<!--DESC バルセロナ（ラ・リーガ）のクラブ紹介。ガウディのサグラダ・ファミリアとカンプ・ノウ、ブラウグラナ、「クラブ以上の存在（Més que un club）」とカタルーニャの誇り、育成組織ラ・マシアを、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1424; --cl-grana:#a50044; --cl-grana-hi:#d8447f; --cl-blau:#004d98; --cl-blau-hi:#4f8fd0; --cl-gold:#edbb00;
+    --cl-paper:var(--bg,#f6f4f7); --cl-text:var(--fg,#1a1220); --cl-muted:#6a5f6e; --cl-line:#d8cdd6; --cl-card:#fdfbfd;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#ece2ea; --cl-muted:#a695a4; --cl-line:#2a2030; --cl-card:#150f1c; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#ece2ea; --cl-muted:#a695a4; --cl-line:#2a2030; --cl-card:#150f1c; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1a1220; --cl-muted:#6a5f6e; --cl-line:#d8cdd6; --cl-card:#fdfbfd; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,20,36,.94) 32%,rgba(10,20,36,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-grana);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e3d6e0;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:10px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-grana) 0 18px,var(--cl-blau) 18px 36px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(165,0,68,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-grana);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(237,187,0,.4);font-weight:700}
+  .cl-blau{color:var(--cl-blau-hi);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#cdbccb;background:#0a1424;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-grana);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ガウディのサグラダ・ファミリアの尖塔と、カンプ・ノウを望むバルセロナの夜景を描いたイラスト">
+        <defs>
+          <linearGradient id="fcbsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26123a"/><stop offset="50%" stop-color="#12183a"/><stop offset="100%" stop-color="#0a1424"/></linearGradient>
+          <radialGradient id="fcbglow" cx="34%" cy="26%" r="52%"><stop offset="0%" stop-color="#a50044" stop-opacity=".32"/><stop offset="50%" stop-color="#004d98" stop-opacity=".14"/><stop offset="100%" stop-color="#0a1424" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#fcbsky)"/>
+        <rect width="1200" height="470" fill="url(#fcbglow)"/>
+        <circle cx="980" cy="96" r="40" fill="#f3e6c4" opacity=".85"/>
+        <circle cx="964" cy="88" r="40" fill="#12183a" opacity=".5"/>
+        <g fill="#edbb00" opacity=".7"><circle cx="720" cy="70" r="2"/><circle cx="820" cy="120" r="1.6"/><circle cx="1080" cy="150" r="2"/><circle cx="1140" cy="80" r="1.6"/></g>
+        <!-- サグラダ・ファミリアの尖塔群 -->
+        <g fill="#1c2547" stroke="#2c3768" stroke-width="1.4">
+          <path d="M300 372 L300 150 Q312 96 324 150 L324 372 Z"/>
+          <path d="M348 372 L348 118 Q362 54 376 118 L376 372 Z"/>
+          <path d="M400 372 L400 96 Q416 22 432 96 L432 372 Z"/>
+          <path d="M456 372 L456 128 Q470 66 484 128 L484 372 Z"/>
+          <path d="M504 372 L504 162 Q516 110 528 162 L528 372 Z"/>
+        </g>
+        <!-- 尖塔の頂の装飾（ガウディのタイル） -->
+        <g><circle cx="362" cy="74" r="7" fill="#edbb00"/><circle cx="416" cy="52" r="8" fill="#a50044"/><circle cx="470" cy="86" r="7" fill="#004d98"/><circle cx="312" cy="108" r="6" fill="#004d98"/><circle cx="510" cy="120" r="6" fill="#edbb00"/></g>
+        <g fill="#edbb00" opacity=".55"><rect x="358" y="150" width="8" height="6"/><rect x="412" y="120" width="8" height="6"/><rect x="466" y="160" width="8" height="6"/></g>
+        <!-- カンプ・ノウのボウル -->
+        <g><ellipse cx="820" cy="372" rx="330" ry="86" fill="#141d3c"/><path d="M520 372 Q820 268 1120 372 L1120 330 Q820 232 520 330 Z" fill="#1c2547"/><g stroke="#4f6088" stroke-width="2.5" opacity=".7"><line x1="600" y1="342" x2="600" y2="360"/><line x1="680" y1="320" x2="680" y2="352"/><line x1="760" y1="306" x2="760" y2="348"/><line x1="840" y1="302" x2="840" y2="348"/><line x1="920" y1="308" x2="920" y2="350"/><line x1="1000" y1="322" x2="1000" y2="354"/></g></g>
+        <!-- ブラウグラナの縦縞バンド -->
+        <g transform="translate(70,392)"><g><rect x="0" y="0" width="30" height="54" fill="#a50044"/><rect x="30" y="0" width="30" height="54" fill="#004d98"/><rect x="60" y="0" width="30" height="54" fill="#a50044"/><rect x="90" y="0" width="30" height="54" fill="#004d98"/><rect x="120" y="0" width="30" height="54" fill="#a50044"/><rect x="150" y="0" width="30" height="54" fill="#004d98"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>バルセロナ<span class="cl-en">FC Barcelona · 1899</span></h1>
+        <p class="cl-sub">ガウディの街に息づく、エンジと紺のブラウグラナ。「クラブ以上の存在」を掲げ、カタルーニャの誇りと美しいサッカーを体現します。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北東部・カタルーニャ州の中心都市<b>バルセロナ</b>を本拠とするクラブです。エンジ（グラナ）と紺（ブラウ）の縦縞から<b>「ブラウグラナ」</b>と呼ばれ、地域のアイデンティティと結びつきながら、世界を魅了する攻撃的なサッカーを追求してきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>カンプ・ノウ — 欧州最大級の大聖堂</h2>
+      <p>1957年に開場した、ヨーロッパ屈指の巨大スタジアムです。正式名称は現在<strong>スポティファイ・カンプ・ノウ</strong>。「新しい競技場」を意味するその名のとおり、大規模な改修を経てさらなる進化を続けています。<span class="cl-hl">10万人近い観客</span>が生み出す圧倒的な一体感は、まさにサッカーの大聖堂です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="エンジと紺の縞に染まった、巨大なすり鉢状スタンドのイラスト">
+          <rect width="600" height="190" fill="#0a1424"/>
+          <defs><pattern id="fcbcrowd" width="18" height="15" patternUnits="userSpaceOnUse"><rect width="18" height="15" fill="#0a1424"/><circle cx="5" cy="7" r="4.4" fill="#a50044"/><circle cx="14" cy="7" r="4.4" fill="#004d98"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,92 Q300,52 0,92 Z" fill="url(#fcbcrowd)"/>
+          <path d="M0,92 Q300,52 600,92 L600,78 Q300,38 0,78 Z" fill="#edbb00" opacity=".55"/>
+          <g stroke="#d8447f" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 56 q28 -22 56 0"/><path d="M220 44 q28 -22 56 0"/><path d="M360 52 q28 -22 56 0"/><path d="M480 42 q28 -22 56 0"/></g>
+          <g><rect x="150" y="24" width="4" height="60" fill="#6a7aa0"/><polygon points="154,24 196,34 154,48" fill="#a50044"/><rect x="410" y="20" width="4" height="64" fill="#6a7aa0"/><polygon points="414,20 456,32 414,46" fill="#004d98"/></g>
+        </svg>
+        <figcaption>カンプ・ノウ — エンジと紺に染まる、欧州最大級のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ガウディの街、カタルーニャの都</h2>
+      <p>バルセロナは、<span class="cl-blau">アントニ・ガウディ</span>が残した<strong>サグラダ・ファミリア</strong>をはじめ、独創的な建築が息づく地中海の都。カタルーニャの文化と言語を誇りとする街です。クラブはその地域意識と分かちがたく結びつき、旗（セニェーラ）の色をエンブレムに映すなど、街のアイデンティティそのものを背負っています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景に浮かぶサグラダ・ファミリアの尖塔群のシルエット">
+          <defs><linearGradient id="fcbdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1640"/><stop offset="100%" stop-color="#0a1424"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#fcbdusk)"/>
+          <circle cx="500" cy="48" r="30" fill="#edbb00" opacity=".55"/>
+          <rect x="0" y="140" width="600" height="30" fill="#0a1424"/>
+          <g fill="#1c2547" stroke="#2c3768" stroke-width="1.2">
+            <path d="M180 140 L180 66 Q190 30 200 66 L200 140 Z"/>
+            <path d="M214 140 L214 44 Q226 6 238 44 L238 140 Z"/>
+            <path d="M254 140 L254 30 Q267 -12 280 30 L280 140 Z"/>
+            <path d="M296 140 L296 48 Q307 12 318 48 L318 140 Z"/>
+            <path d="M332 140 L332 70 Q342 36 352 70 L352 140 Z"/>
+          </g>
+          <g><circle cx="226" cy="26" r="5" fill="#edbb00"/><circle cx="267" cy="12" r="6" fill="#a50044"/><circle cx="307" cy="30" r="5" fill="#004d98"/><circle cx="190" cy="48" r="4" fill="#004d98"/><circle cx="342" cy="52" r="4" fill="#edbb00"/></g>
+          <g fill="#1c2547"><rect x="70" y="108" width="16" height="32"/><rect x="92" y="98" width="12" height="42"/><rect x="430" y="104" width="14" height="36"/><rect x="450" y="114" width="20" height="26"/></g>
+        </svg>
+        <figcaption>サグラダ・ファミリア — 天へ伸びる尖塔が見守る、ガウディの街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>「クラブ以上の存在」と、ラ・マシアの哲学</h2>
+      <p>クラブのモットー<span class="cl-hl">「Més que un club（クラブ以上の存在）」</span>は、単なるサッカーチームを超え、カタルーニャの人々の誇りと価値観を体現するという意味を込めた言葉です。育成組織<strong>ラ・マシア</strong>からは数々の名手が巣立ち、ボールを大切につなぐ美しいスタイルとともに、クラブの哲学を世界へ伝えてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="モットーの標語と、育成のボールをつなぐパスラインを描いたイラスト">
+          <rect width="600" height="180" fill="#0a1424"/>
+          <g transform="translate(300,64)"><rect x="-150" y="-24" width="300" height="48" rx="24" fill="none" stroke="#edbb00" stroke-width="3"/><text x="0" y="8" fill="#edbb00" font-size="21" font-weight="900" text-anchor="middle" font-family="Georgia, serif" font-style="italic">Més que un club</text></g>
+          <g stroke="#4f8fd0" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round" fill="none" opacity=".8"><path d="M120 150 C 200 110, 260 160, 340 120 S 460 150, 500 118"/></g>
+          <g fill="#d8447f"><circle cx="120" cy="150" r="7"/><circle cx="340" cy="120" r="7"/><circle cx="500" cy="118" r="7"/></g>
+          <g fill="#fff" opacity=".85"><circle cx="230" cy="130" r="4"/><circle cx="430" cy="132" r="4"/></g>
+        </svg>
+        <figcaption>クラブ以上の存在 — 哲学とパスワークで受け継がれる、バルサの流儀。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ブラウグラナ、美しく勝つという矜持</h2>
+      <p>エンジと紺の縦縞から<strong>「ブラウグラナ（青エンジ軍団）」</strong>、また<span class="cl-hl">「クレ（Culers）」</span>と呼ばれるサポーターに支えられています。ボールを支配し、細かなパスを重ねて崩す攻撃的なサッカーは<span class="cl-blau">「美しく勝つ」</span>という理想の象徴。世界中のファンを惹きつける、クラブの揺るがぬ美学です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="エンジと紺の縦縞ユニフォームと、胸のエンブレムのイラスト">
+          <rect width="600" height="150" fill="#0a1424"/>
+          <path d="M300 18 C 250 18, 214 28, 214 28 L214 116 C 214 130, 300 138, 300 138 C 300 138, 386 130, 386 116 L386 28 C 386 28, 350 18, 300 18 Z" fill="#004d98"/>
+          <g fill="#a50044"><path d="M232 25 L262 22 L262 134 Q248 131 232 126 Z"/><path d="M300 20 L330 20 L330 138 L300 138 Z"/><path d="M356 24 L376 30 L376 118 Q368 122 356 126 Z"/></g>
+          <g transform="translate(300,74)"><path d="M0,-30 L26,-22 L26,6 Q26,26 0,34 Q-26,26 -26,6 L-26,-22 Z" fill="#fdfbfd" stroke="#edbb00" stroke-width="2"/><path d="M-26,-8 L26,-8 L26,2 L-26,2 Z" fill="#a50044" opacity=".5"/><path d="M-8,-22 L8,-22 L8,14 L-8,14 Z" fill="#004d98" opacity=".4"/></g>
+          <g stroke="#edbb00" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ブラウグラナ — エンジと紺の縦縞に宿る、街と哲学の色。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1899年</dd>
+          <dt>本拠地</dt><dd>バルセロナ（カタルーニャ州）</dd>
+          <dt>スタジアム</dt><dd>スポティファイ・カンプ・ノウ（約99,000人）</dd>
+          <dt>愛称</dt><dd>Blaugrana／Barça／Culers（ブラウグラナ）</dd>
+          <dt>カラー</dt><dd>グラナ（エンジ） ＆ ブラウ（紺）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

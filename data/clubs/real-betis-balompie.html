@@ -1,0 +1,180 @@
+<!--CLUB slug=real-betis-balompie name=ベティス league=ラ・リーガ-->
+<!--VIDEO id=NOhTVJJEv30 title=Himno del Real Betis en el Benito Villamarín（応援歌）-->
+<!--DESC レアル・ベティス（ラ・リーガ）のクラブ紹介。アンダルシアの都セビージャ、緑白の縞のベティコ、ベニート・ビジャマリン、そして「負けても愛す」という無条件の忠誠を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08170f; --cl-green:#00954c; --cl-green-hi:#43c885; --cl-gold:#e0b64a; --cl-gold-hi:#ffd25e;
+    --cl-paper:var(--bg,#f1f7f3); --cl-text:var(--fg,#14201a); --cl-muted:#5e6f66; --cl-line:#cfe2d6; --cl-card:#fafefb;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e3f0e8; --cl-muted:#8fa89a; --cl-line:#17301f; --cl-card:#0d1f14; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e3f0e8; --cl-muted:#8fa89a; --cl-line:#17301f; --cl-card:#0d1f14; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#14201a; --cl-muted:#5e6f66; --cl-line:#cfe2d6; --cl-card:#fafefb; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,23,15,.94) 32%,rgba(8,23,15,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-green);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-green-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dcefe3;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--cl-green) 0 15px,#f4f4f4 15px 30px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,149,76,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-green);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,149,76,.3);font-weight:700}
+  .cl-green{color:var(--cl-green);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c6ded0;background:#08170f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-green);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="緑白の縞のティフォで埋まったベニート・ビジャマリンのスタンドを描いたイラスト">
+        <defs>
+          <linearGradient id="btsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0e3a24"/><stop offset="55%" stop-color="#0a2516"/><stop offset="100%" stop-color="#08170f"/></linearGradient>
+          <radialGradient id="btglow" cx="50%" cy="30%" r="54%"><stop offset="0%" stop-color="#00954c" stop-opacity=".34"/><stop offset="50%" stop-color="#43c885" stop-opacity=".12"/><stop offset="100%" stop-color="#08170f" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#btsky)"/>
+        <rect width="1200" height="470" fill="url(#btglow)"/>
+        <circle cx="248" cy="104" r="40" fill="#eaf6ef" opacity=".85"/>
+        <circle cx="232" cy="96" r="40" fill="#0a2516" opacity=".5"/>
+        <g fill="#43c885" opacity=".22"><circle cx="470" cy="90" r="2.5"/><circle cx="560" cy="64" r="2"/><circle cx="700" cy="110" r="2.5"/><circle cx="380" cy="140" r="2"/></g>
+        <!-- スタジアムの屋根 -->
+        <path d="M660 176 L1160 132 L1160 176 Z" fill="#0c2418"/>
+        <path d="M660 176 L1160 132" fill="none" stroke="#00954c" stroke-width="3" opacity=".6"/>
+        <!-- ベニート・ビジャマリンの大スタンド（緑白の縞ティフォ） -->
+        <path d="M640 372 L640 210 Q900 170 1180 210 L1180 372 Z" fill="#0a2016"/>
+        <g>
+          <path d="M640 372 L640 210 Q900 170 1180 210 L1180 372 Z" fill="none" stroke="#123a24" stroke-width="1.5"/>
+          <g>
+            <rect x="648" y="214" width="34" height="158" fill="#00954c"/><rect x="682" y="212" width="34" height="160" fill="#f4f4f4"/><rect x="716" y="209" width="34" height="163" fill="#00954c"/><rect x="750" y="206" width="34" height="166" fill="#f4f4f4"/><rect x="784" y="204" width="34" height="168" fill="#00954c"/><rect x="818" y="202" width="34" height="170" fill="#f4f4f4"/><rect x="852" y="201" width="34" height="171" fill="#00954c"/><rect x="886" y="200" width="34" height="172" fill="#f4f4f4"/><rect x="920" y="201" width="34" height="171" fill="#00954c"/><rect x="954" y="202" width="34" height="170" fill="#f4f4f4"/><rect x="988" y="204" width="34" height="168" fill="#00954c"/><rect x="1022" y="206" width="34" height="166" fill="#f4f4f4"/><rect x="1056" y="209" width="34" height="163" fill="#00954c"/><rect x="1090" y="212" width="34" height="160" fill="#f4f4f4"/><rect x="1124" y="214" width="34" height="158" fill="#00954c"/>
+          </g>
+          <path d="M640 210 Q900 170 1180 210 L1180 236 Q900 196 640 236 Z" fill="#08170f" opacity=".35"/>
+        </g>
+        <rect x="0" y="372" width="1200" height="98" fill="#06130c"/>
+        <!-- ピッチと芝 -->
+        <g stroke="#43c885" stroke-width="3" stroke-linecap="round" opacity=".3"><line x1="80" y1="410" x2="260" y2="410"/><line x1="340" y1="424" x2="520" y2="424"/></g>
+        <!-- 緑白の縞バンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="24" height="54" fill="#00954c"/><rect x="24" y="0" width="24" height="54" fill="#f4f4f4"/><rect x="48" y="0" width="24" height="54" fill="#00954c"/><rect x="72" y="0" width="24" height="54" fill="#f4f4f4"/><rect x="96" y="0" width="24" height="54" fill="#00954c"/><rect x="120" y="0" width="24" height="54" fill="#f4f4f4"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>レアル・ベティス<span class="cl-en">Real Betis · 1907</span></h1>
+        <p class="cl-sub">緑と白の縞をまとうアンダルシアの雄。「負けても愛す」——無条件の忠誠で結ばれた、情熱のベティコたちのクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン南部、アンダルシアの都<b>セビージャ</b>を本拠とするクラブです。緑と白の縞のユニフォームをまとい、熱狂的なサポーター「ベティコ」に愛されてきました。順位や結果に関わらずクラブを愛し続ける<b>無条件の忠誠</b>で知られる、独特の魂を持つクラブです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ベニート・ビジャマリン — 緑白に染まるスタンド</h2>
+      <p>約6万人を収容する<strong>エスタディオ・ベニート・ビジャマリン</strong>は、アンダルシア最大級のスタジアムのひとつ。試合前には<span class="cl-hl">緑と白の巨大なティフォ</span>がスタンド一面を覆い、応援歌が街に響き渡ります。どんなときも席を埋めるベティコの熱量は、スペインでも屈指のものとして知られています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="緑白のマフラーを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#08170f"/>
+          <defs><pattern id="btcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#08170f"/><circle cx="8.5" cy="7" r="5" fill="#00954c"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#btcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#f4f4f4" opacity=".5"/>
+          <g stroke="#43c885" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 66 q28 -20 56 0"/><path d="M220 54 q28 -20 56 0"/><path d="M360 58 q28 -20 56 0"/><path d="M480 52 q28 -20 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="56" fill="#3f5a49"/><polygon points="164,30 206,40 164,54" fill="#00954c"/><rect x="420" y="26" width="4" height="60" fill="#3f5a49"/><polygon points="424,26 466,38 424,52" fill="#f4f4f4"/></g>
+        </svg>
+        <figcaption>緑白のティフォ — 一面を覆う、ベティコの誇り。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> ライバル</div>
+      <h2>セビージャ・ダービー — 街を二分する一戦</h2>
+      <p>同じセビージャの街を本拠とする<strong>セビージャFC</strong>との<span class="cl-hl">「エル・グラン・デルビ（セビージャ・ダービー）」</span>は、街を二分する激しい一戦です。緑白（ベティス）と赤白（セビージャ）——家族や友人までもが色で分かれ、順位を超えて絶対に負けられない誇りの対決。アンダルシアの情熱が最高潮に達する日です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="緑白と赤白、二本のマフラーが交差するイラスト">
+          <rect width="600" height="180" fill="#08170f"/>
+          <g transform="translate(300,90) rotate(-26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#00954c"/><g fill="#f4f4f4"><rect x="-250" y="-16" width="26" height="32"/><rect x="-198" y="-16" width="26" height="32"/><rect x="172" y="-16" width="26" height="32"/><rect x="224" y="-16" width="26" height="32"/></g></g>
+          <g transform="translate(300,90) rotate(26)"><rect x="-250" y="-16" width="500" height="32" rx="6" fill="#cc1233"/><g fill="#f4f4f4"><rect x="-250" y="-16" width="26" height="32"/><rect x="-198" y="-16" width="26" height="32"/><rect x="172" y="-16" width="26" height="32"/><rect x="224" y="-16" width="26" height="32"/></g></g>
+          <g transform="translate(300,90)"><circle r="12" fill="#08170f" stroke="#e0b64a" stroke-width="2"/></g>
+        </svg>
+        <figcaption>エル・グラン・デルビ — 緑白と赤白、街を二分する誇り。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>「¡Viva el Betis manque pierda!」— 負けても愛す</h2>
+      <p>ベティスのサポーターを最もよく表すのが、<strong>「ビバ・エル・ベティス・マンケ・ピエルダ（負けようとも、ベティス万歳）」</strong>という有名な合言葉です。勝ち負けや順位に左右されない、<span class="cl-green">無条件の愛</span>——それこそがベティコの誇り。苦しい時代も熱狂的にクラブを支え続けるその姿は、世界中のサッカーファンから敬意を集めています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="ハートと緑白の縞を配した忠誠の象徴のイラスト">
+          <rect width="600" height="180" fill="#08170f"/>
+          <g transform="translate(300,86)">
+            <path d="M0,50 C-60,6 -84,-22 -60,-46 C-40,-66 -8,-56 0,-30 C8,-56 40,-66 60,-46 C84,-22 60,6 0,50 Z" fill="#0c2418" stroke="#f4f4f4" stroke-width="2.5"/>
+            <g clip-path="none"><rect x="-58" y="-40" width="15" height="86" fill="#00954c"/><rect x="-29" y="-50" width="15" height="96" fill="#00954c"/><rect x="0" y="-52" width="15" height="96" fill="#00954c"/><rect x="29" y="-48" width="15" height="90" fill="#00954c"/></g>
+            <path d="M0,50 C-60,6 -84,-22 -60,-46 C-40,-66 -8,-56 0,-30 C8,-56 40,-66 60,-46 C84,-22 60,6 0,50 Z" fill="none" stroke="#f4f4f4" stroke-width="2.5"/>
+          </g>
+          <g stroke="#e0b64a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="420" y1="58" x2="436" y2="52"/><line x1="430" y1="86" x2="448" y2="86"/><line x1="420" y1="114" x2="436" y2="120"/></g>
+        </svg>
+        <figcaption>Manque pierda — 負けても変わらぬ、緑白への愛。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>緑と白の縞、「ロス・ベルディブランコス」</h2>
+      <p>緑と白の縦縞のユニフォームから、<strong>「ロス・ベルディブランコス（緑白の者たち）」</strong>と呼ばれます。技巧的で華のあるサッカーを好むアンダルシアらしく、魅せるプレーで観客を沸かせてきました。<span class="cl-hl">スペイン・カップ（コパ・デル・レイ）</span>の歓喜など、歴史に残る美しい記憶を、緑白のユニフォームとともに刻んでいます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="緑白の縦縞のユニフォームのイラスト">
+          <rect width="600" height="150" fill="#08170f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f4f4f4"/>
+          <g><rect x="228" y="24" width="18" height="114" fill="#00954c"/><rect x="264" y="22" width="18" height="118" fill="#00954c"/><rect x="300" y="22" width="18" height="118" fill="#00954c"/><rect x="336" y="24" width="18" height="114" fill="#00954c"/></g>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#0c2418" opacity=".6"/>
+          <g stroke="#e0b64a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ベルディブランコス — 緑白の縦縞をまとうアンダルシアの雄。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1907年</dd>
+          <dt>本拠地</dt><dd>セビージャ（アンダルシア州）</dd>
+          <dt>スタジアム</dt><dd>ベニート・ビジャマリン（約60,000人）</dd>
+          <dt>愛称</dt><dd>Los Verdiblancos／Béticos（緑白／ベティコ）</dd>
+          <dt>カラー</dt><dd>グリーン ＆ ホワイト（縦縞）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

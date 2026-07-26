@@ -1,0 +1,189 @@
+<!--CLUB slug=real-madrid name=レアル・マドリード league=ラ・リーガ-->
+<!--VIDEO id=d6GBJ2VTw7M title=Hala Madrid y Nada Más／サンティアゴ・ベルナベウで響くクラブ・アンセム-->
+<!--DESC レアル・マドリード（ラ・リーガ）のクラブ紹介。王都マドリードとサンティアゴ・ベルナベウ、王冠のエンブレム、銀河系軍団、CL最多優勝の白い王者を、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0b1020; --cl-white:#ffffff; --cl-navy:#0a2472; --cl-navy-hi:#5b78d6; --cl-gold:#c9a227; --cl-gold-hi:#e6c860;
+    --cl-paper:var(--bg,#f5f6fa); --cl-text:var(--fg,#141826); --cl-muted:#616a80; --cl-line:#d3d8e6; --cl-card:#fbfcff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e8ebf5; --cl-muted:#98a1ba; --cl-line:#232a3e; --cl-card:#111528; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e8ebf5; --cl-muted:#98a1ba; --cl-line:#232a3e; --cl-card:#111528; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#141826; --cl-muted:#616a80; --cl-line:#d3d8e6; --cl-card:#fbfcff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(11,16,32,.94) 32%,rgba(11,16,32,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0b1020;background:var(--cl-gold);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dde2f2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,#ffffff,var(--cl-gold) 50%,#0a2472);border:1px solid var(--cl-line)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(201,162,39,.3)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#0b1020;background:var(--cl-gold);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(201,162,39,.32);font-weight:700}
+  .cl-navy{color:var(--cl-navy);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c5ccdf;background:#0b1020;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-gold);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="王冠を戴く近代的なサンティアゴ・ベルナベウと、星空に輝くマドリードの夜景を描いたイラスト">
+        <defs>
+          <linearGradient id="rmdsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#151d3a"/><stop offset="55%" stop-color="#0e1428"/><stop offset="100%" stop-color="#0b1020"/></linearGradient>
+          <radialGradient id="rmdglow" cx="50%" cy="24%" r="55%"><stop offset="0%" stop-color="#c9a227" stop-opacity=".3"/><stop offset="50%" stop-color="#5b78d6" stop-opacity=".1"/><stop offset="100%" stop-color="#0b1020" stop-opacity="0"/></radialGradient>
+          <linearGradient id="rmdbowl" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8ecf6"/><stop offset="100%" stop-color="#b7c0d6"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#rmdsky)"/>
+        <rect width="1200" height="470" fill="url(#rmdglow)"/>
+        <!-- 銀河系＝無数の星 -->
+        <g fill="#e6c860"><circle cx="120" cy="70" r="2.4"/><circle cx="210" cy="120" r="1.8"/><circle cx="330" cy="60" r="2.2"/><circle cx="470" cy="100" r="1.6"/><circle cx="560" cy="52" r="2"/><circle cx="700" cy="96" r="1.8"/><circle cx="820" cy="58" r="2.2"/><circle cx="960" cy="104" r="1.6"/><circle cx="1080" cy="66" r="2.2"/><circle cx="1150" cy="128" r="1.8"/></g>
+        <g fill="#ffffff" opacity=".7"><circle cx="170" cy="150" r="1.4"/><circle cx="410" cy="150" r="1.4"/><circle cx="640" cy="150" r="1.4"/><circle cx="900" cy="150" r="1.4"/><circle cx="1130" cy="180" r="1.4"/><circle cx="270" cy="188" r="1.4"/></g>
+        <!-- 王冠（レアル＝王室） -->
+        <g transform="translate(600,86)" fill="#c9a227">
+          <path d="M-70,26 L-70,-2 L-44,20 L-22,-24 L0,14 L22,-24 L44,20 L70,-2 L70,26 Z"/>
+          <rect x="-74" y="26" width="148" height="16" rx="4"/>
+          <circle cx="-70" cy="-6" r="6" fill="#e6c860"/><circle cx="0" cy="-30" r="6" fill="#e6c860"/><circle cx="70" cy="-6" r="6" fill="#e6c860"/>
+        </g>
+        <g transform="translate(600,86)" fill="#5b78d6" opacity=".8"><circle cx="-22" cy="18" r="4"/><circle cx="22" cy="18" r="4"/></g>
+        <!-- 近代的なベルナベウ（金属の縦リボン外装の楕円ボウル） -->
+        <g>
+          <ellipse cx="600" cy="360" rx="470" ry="118" fill="#1a2244"/>
+          <path d="M130 360 Q600 216 1070 360 L1070 300 Q600 168 130 300 Z" fill="url(#rmdbowl)"/>
+          <g stroke="#8f9bbb" stroke-width="3" opacity=".8">
+            <line x1="180" y1="322" x2="180" y2="356"/><line x1="240" y1="300" x2="240" y2="352"/><line x1="300" y1="282" x2="300" y2="350"/><line x1="360" y1="266" x2="360" y2="348"/><line x1="420" y1="252" x2="420" y2="346"/><line x1="480" y1="242" x2="480" y2="344"/><line x1="540" y1="234" x2="540" y2="344"/><line x1="600" y1="230" x2="600" y2="343"/><line x1="660" y1="234" x2="660" y2="344"/><line x1="720" y1="242" x2="720" y2="344"/><line x1="780" y1="252" x2="780" y2="346"/><line x1="840" y1="266" x2="840" y2="348"/><line x1="900" y1="282" x2="900" y2="350"/><line x1="960" y1="300" x2="960" y2="352"/><line x1="1020" y1="322" x2="1020" y2="356"/>
+          </g>
+          <g fill="#c9a227" opacity=".55"><rect x="470" y="240" width="14" height="6"/><rect x="593" y="228" width="14" height="6"/><rect x="716" y="240" width="14" height="6"/></g>
+        </g>
+        <!-- 白・金・紺の帯 -->
+        <g transform="translate(70,392)"><rect x="0" y="0" width="80" height="52" fill="#ffffff"/><rect x="80" y="0" width="80" height="52" fill="#c9a227"/><rect x="160" y="0" width="80" height="52" fill="#0a2472"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>レアル・マドリード<span class="cl-en">Real Madrid CF · 1902</span></h1>
+        <p class="cl-sub">王都マドリードに君臨する白い王者。王冠のエンブレムを掲げ、欧州の頂点に最も多く立ってきた世界屈指の名門です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペインの首都<b>マドリード</b>を本拠とするクラブです。国名の「レアル（王立）」が示すとおり<b>王冠</b>をエンブレムに戴き、真っ白なユニフォームをまとって、国内外のタイトルを最も多く積み上げてきた、世界を代表するクラブです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>サンティアゴ・ベルナベウ — 生まれ変わった白亜の殿堂</h2>
+      <p>マドリード中心部に建つ、約8万人を収容するスタジアムです。伝説的な会長<strong>サンティアゴ・ベルナベウ</strong>の名を冠し、近年は大規模改修によって<span class="cl-hl">金属リボンをまとった開閉式の近代建築</span>へと生まれ変わりました。数々の欧州の夜を見届けてきた、サッカー史に残る舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="白いスカーフを掲げる観客と、金属外装の近代的スタンドのイラスト">
+          <rect width="600" height="190" fill="#0b1020"/>
+          <defs><pattern id="rmdcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0b1020"/><circle cx="8.5" cy="7" r="5" fill="#e8ecf6"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#rmdcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,80 Q300,40 0,80 Z" fill="#b7c0d6" opacity=".7"/>
+          <g stroke="#e6c860" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 60 q28 -22 56 0"/><path d="M220 46 q28 -22 56 0"/><path d="M360 54 q28 -22 56 0"/><path d="M480 44 q28 -22 56 0"/></g>
+          <g><rect x="160" y="28" width="4" height="58" fill="#8f9bbb"/><polygon points="164,28 206,38 164,52" fill="#c9a227"/><rect x="420" y="22" width="4" height="64" fill="#8f9bbb"/><polygon points="424,22 466,34 424,48" fill="#0a2472"/></g>
+        </svg>
+        <figcaption>ベルナベウの白 — 白いスカーフで一体となる、王者のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>王都マドリード、王冠を戴くクラブ</h2>
+      <p>マドリードは、王宮（パラシオ・レアル）を擁するスペインの首都。クラブは1920年、当時の国王<span class="cl-navy">アルフォンソ13世</span>から「レアル（王立）」の称号を認められ、エンブレムに<strong>王冠</strong>を戴きました。首都の誇りと王室の格式が、白いユニフォームとともにクラブの気品を形づくっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="王宮のドームと王冠を頂くマドリードの夜景シルエット">
+          <defs><linearGradient id="rmddusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a2246"/><stop offset="100%" stop-color="#0b1020"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#rmddusk)"/>
+          <g transform="translate(300,30)" fill="#c9a227"><path d="M-30,14 L-30,2 L-18,12 L-9,-8 L0,8 L9,-8 L18,12 L30,2 L30,14 Z"/><rect x="-32" y="14" width="64" height="7" rx="2"/></g>
+          <rect x="0" y="140" width="600" height="30" fill="#0b1020"/>
+          <g fill="#161d3c" stroke="#26305a" stroke-width="1"><rect x="230" y="80" width="140" height="60"/><path d="M256 80 Q300 40 344 80 Z"/><rect x="296" y="34" width="8" height="20"/></g>
+          <g fill="#c9a227" opacity=".7"><rect x="252" y="98" width="6" height="10"/><rect x="290" y="98" width="6" height="10"/><rect x="328" y="98" width="6" height="10"/></g>
+          <g fill="#161d3c"><rect x="70" y="104" width="18" height="36"/><rect x="94" y="94" width="14" height="46"/><rect x="112" y="110" width="22" height="30"/><rect x="470" y="100" width="16" height="40"/><rect x="490" y="112" width="22" height="28"/></g>
+          <g fill="#5b78d6" opacity=".6"><rect x="76" y="112" width="4" height="6"/><rect x="98" y="104" width="4" height="6"/><rect x="476" y="110" width="4" height="6"/></g>
+        </svg>
+        <figcaption>王都マドリード — 王宮を望む街に、王冠を戴くクラブ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>銀河系軍団と、欧州最多の栄冠</h2>
+      <p>世界最高峰の選手たちが集う姿は<span class="cl-hl">「銀河系軍団（ロス・ガラクティコス）」</span>と呼ばれてきました。とりわけ<strong>UEFAチャンピオンズリーグ（欧州王者）で史上最多の優勝回数</strong>を誇り、大舞台での勝負強さは他の追随を許しません。白いユニフォームは、欧州の頂点と分かちがたく結びついています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="星々に囲まれた優勝カップのシルエットのイラスト">
+          <rect width="600" height="180" fill="#0b1020"/>
+          <g fill="#e6c860" opacity=".85"><circle cx="120" cy="40" r="2.4"/><circle cx="200" cy="70" r="1.8"/><circle cx="90" cy="96" r="1.8"/><circle cx="480" cy="40" r="2.4"/><circle cx="400" cy="70" r="1.8"/><circle cx="510" cy="96" r="1.8"/><circle cx="300" cy="24" r="2.2"/></g>
+          <g transform="translate(300,96)" fill="#c9a227">
+            <path d="M-46,-46 L46,-46 L40,-10 Q30,26 0,34 Q-30,26 -40,-10 Z"/>
+            <path d="M-46,-40 Q-76,-36 -76,-12 Q-76,6 -50,8 L-50,-2 Q-64,-4 -64,-14 Q-64,-26 -46,-28 Z"/>
+            <path d="M46,-40 Q76,-36 76,-12 Q76,6 50,8 L50,-2 Q64,-4 64,-14 Q64,-26 46,-28 Z"/>
+            <rect x="-14" y="34" width="28" height="16"/><rect x="-30" y="50" width="60" height="12" rx="3"/>
+          </g>
+          <text x="300" y="104" fill="#0b1020" font-size="30" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">★</text>
+          <text x="300" y="152" fill="#c5ccdf" font-size="13" text-anchor="middle" font-weight="700">欧州の頂点に最も多く立ってきたクラブ</text>
+        </svg>
+        <figcaption>欧州最多の栄冠 — 星の数だけ重ねてきた、大舞台の記憶。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>純白の誇り、ロス・ブランコス</h2>
+      <p>創設以来の真っ白なユニフォームから<strong>「ロス・ブランコス（白い者たち）」「メレンゲス」</strong>の愛称で親しまれます。世界中からスターを集める<span class="cl-hl">華やかさ</span>と、決して勝負をあきらめない<span class="cl-navy">勝者のメンタリティ</span>が伝統。白と金の気品が、クラブの矜持を今に伝えています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="王冠をあしらった白いユニフォームと、胸のエンブレムのイラスト">
+          <rect width="600" height="150" fill="#0b1020"/>
+          <path d="M300 18 C 250 18, 214 28, 214 28 L214 116 C 214 130, 300 138, 300 138 C 300 138, 386 130, 386 116 L386 28 C 386 28, 350 18, 300 18 Z" fill="#f2f4fa"/>
+          <path d="M300 18 C 250 18, 214 28, 214 28 L214 38 C 214 38, 250 28, 300 28 C 350 28, 386 38, 386 38 L386 28 C 386 28, 350 18, 300 18 Z" fill="#dfe4f0"/>
+          <g transform="translate(268,74)"><circle cx="0" cy="0" r="26" fill="#f2f4fa" stroke="#0a2472" stroke-width="2.5"/><g transform="translate(0,-4)" fill="#c9a227"><path d="M-15,7 L-15,-1 L-9,5 L-4,-8 L0,3 L4,-8 L9,5 L15,-1 L15,7 Z"/><rect x="-16" y="7" width="32" height="4" rx="1"/></g><text x="0" y="20" fill="#0a2472" font-size="12" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">RM</text></g>
+          <g stroke="#c9a227" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>純白と王冠 — 気品をまとう、白い王者の胸章。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1902年</dd>
+          <dt>本拠地</dt><dd>マドリード</dd>
+          <dt>スタジアム</dt><dd>サンティアゴ・ベルナベウ（約80,000人）</dd>
+          <dt>愛称</dt><dd>Los Blancos／Los Merengues（ロス・ブランコス）</dd>
+          <dt>カラー</dt><dd>ホワイト（＆ ゴールド）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

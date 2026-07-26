@@ -1,0 +1,178 @@
+<!--CLUB slug=rayo-vallecano-madrid name=ラーヨ・バジェカーノ league=ラ・リーガ-->
+<!--VIDEO id=AHfYzmMGwJ0 title=ラーヨ・バジェカーノ アフィシオンの himno（応援歌）-->
+<!--DESC ラーヨ・バジェカーノ（ラ・リーガ）のクラブ紹介。マドリードの労働者街バジェカス、白地を斜めに走る赤い稲妻（フランハ）、反骨のバンカネロス、庶民に根ざした反骨精神を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140a0a; --cl-red:#e2231a; --cl-red-hi:#ff5b52; --cl-white:#f4f6f9;
+    --cl-paper:var(--bg,#f6f3f2); --cl-text:var(--fg,#1a1210); --cl-muted:#6e5d5b; --cl-line:#e1cfcd; --cl-card:#fffbfa;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f0e4e2; --cl-muted:#a99895; --cl-line:#2a1b19; --cl-card:#160e0d; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f0e4e2; --cl-muted:#a99895; --cl-line:#2a1b19; --cl-card:#160e0d; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1a1210; --cl-muted:#6e5d5b; --cl-line:#e1cfcd; --cl-card:#fffbfa; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,10,10,.95) 34%,rgba(20,10,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#eedddc;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(-45deg,#e2231a 0 14px,#f4f6f9 14px 28px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(226,35,26,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(226,35,26,.32);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#dcc6c4;background:#140a0a;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="白地を斜めに走る赤い稲妻の帯と、労働者街バジェカスの街並みを描いたイラスト">
+        <defs>
+          <linearGradient id="rvsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#eef1f6"/><stop offset="60%" stop-color="#dde1e9"/><stop offset="100%" stop-color="#c9cfd9"/></linearGradient>
+          <linearGradient id="rvband" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff5b52"/><stop offset="100%" stop-color="#e2231a"/></linearGradient>
+        </defs>
+        <!-- 白いユニフォームを思わせる淡い地 -->
+        <rect width="1200" height="470" fill="url(#rvsky)"/>
+        <!-- 斜めに走る赤い帯（フランハ・ロハ） -->
+        <polygon points="820,0 1000,0 300,470 120,470" fill="url(#rvband)"/>
+        <polygon points="1000,0 1030,0 330,470 300,470" fill="#b81810" opacity=".7"/>
+        <!-- 稲妻（rayo）のシルエット -->
+        <path d="M690 40 L560 220 L636 220 L520 430 L724 190 L642 190 L742 40 Z" fill="#ffffff" stroke="#b81810" stroke-width="3" opacity=".95"/>
+        <!-- バジェカスの労働者街（集合住宅のシルエット） -->
+        <g fill="#3a2b2b">
+          <rect x="0" y="300" width="90" height="130"/><rect x="96" y="272" width="70" height="158"/><rect x="172" y="312" width="86" height="118"/><rect x="266" y="288" width="64" height="142"/>
+          <rect x="900" y="296" width="80" height="134"/><rect x="986" y="270" width="70" height="160"/><rect x="1062" y="308" width="80" height="122"/><rect x="1148" y="286" width="52" height="144"/>
+        </g>
+        <!-- 窓あかり／壁画のタッチ -->
+        <g fill="#e2231a" opacity=".85"><rect x="112" y="292" width="10" height="12"/><rect x="132" y="292" width="10" height="12"/><rect x="112" y="316" width="10" height="12"/><rect x="1004" y="290" width="10" height="12"/><rect x="1024" y="290" width="10" height="12"/><rect x="1004" y="314" width="10" height="12"/></g>
+        <g fill="#f4c430" opacity=".8"><rect x="200" y="332" width="9" height="11"/><rect x="220" y="332" width="9" height="11"/><rect x="1080" y="328" width="9" height="11"/><rect x="1100" y="328" width="9" height="11"/></g>
+        <g fill="#2a8f5a" opacity=".7"><rect x="40" y="330" width="14" height="9"/><rect x="60" y="330" width="14" height="9"/></g>
+        <rect x="0" y="428" width="1200" height="42" fill="#241818"/>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>ラーヨ・バジェカーノ<span class="cl-en">Rayo Vallecano · 1924</span></h1>
+        <p class="cl-sub">マドリードの労働者街バジェカスから。白地を斜めに走る赤い稲妻（ラーヨ）をまとい、反骨の"フランヒロホス"が戦います。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">首都マドリードの南東、労働者の街<b>バジェカス</b>を本拠とするクラブです。白いユニフォームを斜めに横切る<b>赤い帯（フランハ・ロハ）</b>が最大の象徴。"ラーヨ（＝稲妻）"の名の通り、庶民の街に根ざした反骨のクラブとして知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディオ・デ・バジェカス — 街に溶け込む箱</h2>
+      <p>バジェカス地区の建物にぴたりと囲まれるように建つ、約1万4千人規模の<strong>エスタディオ・デ・バジェカス</strong>。ゴール裏の一方にスタンドがなく<span class="cl-hl">三方だけを囲む独特の形</span>で知られ、街の路地とスタンドが地続きになっています。小さいがゆえに音が反響し、ピッチとの距離が近い、濃密な空気を持つ舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="街の建物に囲まれた三方スタンドと、白と赤のマフラーのイラスト">
+          <rect width="600" height="190" fill="#140a0a"/>
+          <defs><pattern id="rvcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#140a0a"/><circle cx="8.5" cy="7" r="5" fill="#f4f6f9"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,58 0,96 Z" fill="url(#rvcrowd)"/>
+          <path d="M0,96 Q300,58 600,96 L600,82 Q300,44 0,82 Z" fill="#e2231a" opacity=".85"/>
+          <g stroke="#e2231a" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g fill="#3a2b2b"><rect x="30" y="20" width="40" height="40"/><rect x="520" y="16" width="46" height="46"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#888"/><polygon points="164,30 206,40 164,54" fill="#f4f6f9"/><rect x="420" y="24" width="4" height="64" fill="#888"/><polygon points="424,24 466,36 424,50" fill="#e2231a"/></g>
+        </svg>
+        <figcaption>バジェカス — 街の建物に囲まれた、三方だけのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>バジェカス — 庶民の街と、壁画の路地</h2>
+      <p>バジェカスは、マドリードの中でも<span class="cl-red">労働者の暮らしが息づく下町</span>。派手さより連帯を重んじる気質で知られ、街のあちこちに壁画（ムラール）が描かれています。ラーヨはこの街の日常と分かちがたく結びつき、<strong>「金持ちのクラブ」ではない誇り</strong>を掲げ続けてきました。街とクラブが同じ地面を共有しているのが、バジェカスの魅力です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景のバジェカスの集合住宅と、壁画が描かれた街並みのシルエット">
+          <defs><linearGradient id="rvdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a2b34"/><stop offset="100%" stop-color="#140a0a"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#rvdusk)"/>
+          <circle cx="500" cy="46" r="26" fill="#f4c430" opacity=".55"/>
+          <g fill="#241818"><rect x="20" y="70" width="60" height="100"/><rect x="86" y="54" width="52" height="116"/><rect x="144" y="82" width="64" height="88"/><rect x="214" y="62" width="48" height="108"/><rect x="268" y="86" width="70" height="84"/><rect x="344" y="70" width="54" height="100"/><rect x="404" y="90" width="62" height="80"/></g>
+          <g fill="#e2231a" opacity=".8"><rect x="30" y="86" width="9" height="12"/><rect x="46" y="86" width="9" height="12"/><rect x="98" y="72" width="9" height="12"/><rect x="230" y="80" width="9" height="12"/></g>
+          <g fill="#f4f6f9" opacity=".75"><rect x="120" y="76" width="8" height="11"/><rect x="360" y="88" width="8" height="11"/></g>
+          <!-- 壁面の斜めの赤い帯（壁画のフランハ） -->
+          <g transform="translate(150,120)"><polygon points="30,0 44,0 14,50 0,50" fill="#e2231a" opacity=".85"/></g>
+          <rect x="0" y="150" width="600" height="20" fill="#0f0808"/>
+        </svg>
+        <figcaption>バジェカス — 集合住宅と壁画が並ぶ、庶民の街の夕景。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> アイデンティティ</div>
+      <h2>反骨のバンカネロス、街とともに</h2>
+      <p>ラーヨのサポーターは、社会的なメッセージを掲げることで知られる<span class="cl-hl">バンカネロス</span>をはじめ、地域とのつながりを何より大切にしてきました。恵まれた資金力を持たないクラブとして、<strong>大都市のビッグクラブに立ち向かう</strong>姿は、この街の誇りそのもの。順位や規模ではなく、<span class="cl-red">"どこに立つか"</span>を大切にする——それがラーヨの流儀です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="白地を斜めに走る赤い帯と、その上に重なる稲妻のイラスト">
+          <rect width="600" height="180" fill="#f4f6f9"/>
+          <polygon points="360,0 460,0 240,180 140,180" fill="#e2231a"/>
+          <path d="M330 20 L262 96 L300 96 L244 168 L360 82 L318 82 L372 20 Z" fill="#ffffff" stroke="#b81810" stroke-width="3"/>
+          <g fill="#3a2b2b" opacity=".18"><rect x="0" y="150" width="600" height="30"/></g>
+        </svg>
+        <figcaption>フランハ・ロハ — 白地を斜めに切り裂く、赤い稲妻の帯。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>白地に、斜めの赤い稲妻</h2>
+      <p>白いシャツを<strong>右肩から左脇へ斜めに走る赤い帯</strong>が、世界のサッカーでもひと目でそれとわかるデザイン。この意匠から<span class="cl-red">「フランヒロホス（赤い帯の者たち）」</span>の愛称で親しまれます。前へ前へと運動量で押し、球際を厭わないひたむきなサッカーは、<span class="cl-hl">街の気質そのまま</span>。白地を切り裂く赤が、バジェカスの心意気を映します。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="白いユニフォームを斜めに横切る赤い帯のイラスト">
+          <rect width="600" height="150" fill="#140a0a"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f4f6f9"/>
+          <path d="M214 92 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 60 Z" fill="#e2231a"/>
+          <path d="M300 20 C 285 20, 272 24, 272 24 L300 44 L328 24 C 328 24, 315 20, 300 20 Z" fill="#140a0a"/>
+          <g stroke="#ff5b52" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>フランハ・ロハ — 白地を斜めに横切る、フランヒロホスの赤。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1924年</dd>
+          <dt>本拠地</dt><dd>マドリード（バジェカス地区）</dd>
+          <dt>スタジアム</dt><dd>エスタディオ・デ・バジェカス（約14,700人）</dd>
+          <dt>愛称</dt><dd>Los Franjirrojos（フランヒロホス）</dd>
+          <dt>カラー</dt><dd>ホワイト ＋ 斜めのレッドサッシュ</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

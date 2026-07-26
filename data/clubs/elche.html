@@ -1,0 +1,188 @@
+<!--CLUB slug=elche name=エルチェ league=ラ・リーガ-->
+<!--VIDEO id=YXuJewdgf0I title=Elche CF himno a capela（サポーターが歌うクラブ賛歌）-->
+<!--DESC エルチェ（ラ・リーガ）のクラブ紹介。世界遺産の椰子園に抱かれた地中海沿岸の街、緑と白のフランハベルデ、マルティネス・バレロの熱気を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08150c; --cl-verde:#0a8a3c; --cl-verde-hi:#5fd489; --cl-sun:#e6b23c; --cl-gold:#d9b44a;
+    --cl-paper:var(--bg,#f2faf4); --cl-text:var(--fg,#132518); --cl-muted:#5c7566; --cl-line:#cfe6d6; --cl-card:#f6fcf8;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e4f2e8; --cl-muted:#8aa896; --cl-line:#1c3324; --cl-card:#0f1f15; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e4f2e8; --cl-muted:#8aa896; --cl-line:#1c3324; --cl-card:#0f1f15; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#132518; --cl-muted:#5c7566; --cl-line:#cfe6d6; --cl-card:#f6fcf8; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(6,17,10,.94) 32%,rgba(6,17,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#04120a;background:var(--cl-verde);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-verde-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dcefe1;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-verde),var(--cl-verde-hi) 55%,#eafaf0)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(10,138,60,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#04120a;background:var(--cl-verde);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(10,138,60,.3);font-weight:700}
+  .cl-sun{color:var(--cl-sun);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b6d6c1;background:#061410;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-verde);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="世界遺産の椰子園と南スペインの夕景、緑に染まる街並みを描いたイラスト">
+        <defs>
+          <linearGradient id="elsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123f26"/><stop offset="55%" stop-color="#0c2717"/><stop offset="100%" stop-color="#08150c"/></linearGradient>
+          <radialGradient id="elglow" cx="72%" cy="28%" r="48%"><stop offset="0%" stop-color="#e6b23c" stop-opacity=".34"/><stop offset="45%" stop-color="#0a8a3c" stop-opacity=".12"/><stop offset="100%" stop-color="#08150c" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#elsky)"/>
+        <rect width="1200" height="470" fill="url(#elglow)"/>
+        <circle cx="880" cy="120" r="52" fill="#f4dca0" opacity=".92"/>
+        <circle cx="880" cy="120" r="52" fill="#e6b23c" opacity=".28"/>
+        <g fill="#5fd489" opacity=".22"><circle cx="300" cy="90" r="2.5"/><circle cx="420" cy="66" r="2"/><circle cx="520" cy="110" r="2.5"/><circle cx="200" cy="130" r="2"/></g>
+        <!-- 街並みシルエット -->
+        <rect x="0" y="300" width="1200" height="170" fill="#0a1c12"/>
+        <g fill="#0e2418"><rect x="60" y="262" width="30" height="48"/><rect x="96" y="248" width="22" height="62"/><rect x="126" y="272" width="34" height="38"/><rect x="176" y="256" width="18" height="54"/><rect x="620" y="266" width="26" height="44"/><rect x="652" y="252" width="20" height="58"/><rect x="740" y="270" width="40" height="40"/><rect x="1000" y="258" width="24" height="52"/><rect x="1032" y="272" width="34" height="38"/></g>
+        <!-- 大聖堂サンタ・マリアのドーム -->
+        <g fill="#123a24" stroke="#1f5636" stroke-width="1.5"><rect x="452" y="238" width="70" height="72"/><path d="M452 238 Q487 196 522 238 Z"/><rect x="480" y="176" width="14" height="62"/></g>
+        <polygon points="487,158 492,178 482,178" fill="#e6b23c"/>
+        <g fill="#e6b23c" opacity=".75"><rect x="104" y="258" width="4" height="5"/><rect x="658" y="262" width="4" height="5"/><rect x="1008" y="268" width="4" height="5"/></g>
+        <!-- 椰子園（パルメラル） -->
+        <g stroke="#124a2b" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M170 310 L166 210"/><path d="M360 310 L356 190"/><path d="M540 310 L544 220"/><path d="M980 310 L984 200"/><path d="M1090 310 L1086 214"/>
+        </g>
+        <g fill="#0a8a3c">
+          <g transform="translate(166,206)"><path d="M0 0 Q-42 -18 -70 -6 Q-40 -20 0 -14 Z"/><path d="M0 0 Q42 -18 70 -6 Q40 -20 0 -14 Z"/><path d="M0 0 Q-24 -40 -40 -54 Q-14 -34 0 -14 Z"/><path d="M0 0 Q24 -40 40 -54 Q14 -34 0 -14 Z"/><path d="M0 0 Q0 -46 0 -66 Q6 -40 0 -14 Z"/></g>
+          <g transform="translate(356,186)"><path d="M0 0 Q-46 -20 -76 -6 Q-44 -22 0 -15 Z"/><path d="M0 0 Q46 -20 76 -6 Q44 -22 0 -15 Z"/><path d="M0 0 Q-26 -44 -44 -60 Q-16 -36 0 -15 Z"/><path d="M0 0 Q26 -44 44 -60 Q16 -36 0 -15 Z"/><path d="M0 0 Q0 -50 0 -72 Q6 -44 0 -15 Z"/></g>
+          <g transform="translate(544,216)"><path d="M0 0 Q-40 -16 -66 -4 Q-38 -18 0 -13 Z"/><path d="M0 0 Q40 -16 66 -4 Q38 -18 0 -13 Z"/><path d="M0 0 Q-22 -38 -38 -50 Q-12 -32 0 -13 Z"/><path d="M0 0 Q22 -38 38 -50 Q12 -32 0 -13 Z"/></g>
+          <g transform="translate(984,196)"><path d="M0 0 Q-44 -18 -72 -6 Q-42 -20 0 -14 Z"/><path d="M0 0 Q44 -18 72 -6 Q42 -20 0 -14 Z"/><path d="M0 0 Q-24 -42 -42 -56 Q-14 -34 0 -14 Z"/><path d="M0 0 Q24 -42 42 -56 Q14 -34 0 -14 Z"/><path d="M0 0 Q0 -48 0 -68 Q6 -42 0 -14 Z"/></g>
+          <g transform="translate(1086,210)"><path d="M0 0 Q-38 -16 -62 -4 Q-36 -18 0 -12 Z"/><path d="M0 0 Q38 -16 62 -4 Q36 -18 0 -12 Z"/><path d="M0 0 Q-20 -36 -36 -48 Q-12 -30 0 -12 Z"/><path d="M0 0 Q20 -36 36 -48 Q12 -30 0 -12 Z"/></g>
+        </g>
+        <!-- 緑の帯（フランハベルデ） -->
+        <g transform="translate(70,320)"><rect x="0" y="0" width="220" height="56" fill="#f4fbf6"/><rect x="0" y="19" width="220" height="18" fill="#0a8a3c"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>エルチェ<span class="cl-en">Elche CF · 1923</span></h1>
+        <p class="cl-sub">世界遺産の椰子園に抱かれた地中海沿岸の街。緑と白の帯「フランハベルデ」をまとう、スペイン南東部のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン南東部・バレンシア州アリカンテ県の街<b>エルチェ</b>を本拠とするクラブです。ヨーロッパ最大級の椰子園に囲まれた温暖な土地で、緑と白の帯をまとう「フランハベルデ」として、地元とともに歩んできました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディオ・マヌエル・マルティネス・バレロ</h2>
+      <p>市の南に建つ、約3万3千人を収容するスタジアムです。長年クラブを支えた会長<strong>マヌエル・マルティネス・バレロ</strong>の名を冠し、地元では単に<span class="cl-hl">マルティネス・バレロ</span>と呼ばれ親しまれています。昇格を争う大一番では、緑と白のスカーフがスタンドいっぱいに掲げられ、街の熱がひとつになります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="緑と白のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#061410"/>
+          <defs><pattern id="elcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#061410"/><circle cx="8.5" cy="7" r="5" fill="#0a8a3c"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#elcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5fd489" opacity=".5"/>
+          <g stroke="#eafaf0" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6555"/><polygon points="164,30 206,40 164,54" fill="#0a8a3c"/><rect x="420" y="24" width="4" height="64" fill="#4f6555"/><polygon points="424,24 466,36 424,50" fill="#0a8a3c"/></g>
+        </svg>
+        <figcaption>緑の一体感 — 昇格を懸けた夜、揺れるフランハベルデのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>椰子園の街、地中海の陽ざし</h2>
+      <p>エルチェを象徴するのは、市街を包みこむ広大な<span class="cl-hl">椰子園（エル・パルメラル）</span>。中世に整備された灌漑とともに受け継がれてきたこの景観は、ユネスコの世界遺産に登録されています。<span class="cl-sun">地中海の陽ざし</span>を浴びた椰子の並木は街の誇りであり、クラブのユニフォームの緑もまた、この土地の色そのものです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景の空を背に並ぶ椰子の木々と、南スペインの街並みのシルエット">
+          <defs><linearGradient id="eldusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a4a2c"/><stop offset="100%" stop-color="#061410"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#eldusk)"/>
+          <circle cx="470" cy="52" r="30" fill="#e6b23c" opacity=".85"/>
+          <g fill="#0c2418"><rect x="20" y="106" width="18" height="26"/><rect x="44" y="96" width="14" height="36"/><rect x="62" y="110" width="22" height="22"/><rect x="92" y="100" width="12" height="32"/></g>
+          <g stroke="#124a2b" stroke-width="6" stroke-linecap="round" fill="none"><path d="M180 132 L176 66"/><path d="M300 132 L304 56"/><path d="M420 132 L416 74"/></g>
+          <g fill="#0a8a3c">
+            <g transform="translate(176,62)"><path d="M0 0 Q-34 -14 -56 -4 Q-32 -16 0 -11 Z"/><path d="M0 0 Q34 -14 56 -4 Q32 -16 0 -11 Z"/><path d="M0 0 Q-18 -32 -32 -44 Q-10 -28 0 -11 Z"/><path d="M0 0 Q18 -32 32 -44 Q10 -28 0 -11 Z"/><path d="M0 0 Q0 -40 0 -56 Q5 -34 0 -11 Z"/></g>
+            <g transform="translate(304,52)"><path d="M0 0 Q-38 -16 -62 -4 Q-36 -18 0 -12 Z"/><path d="M0 0 Q38 -16 62 -4 Q36 -18 0 -12 Z"/><path d="M0 0 Q-20 -36 -36 -48 Q-12 -30 0 -12 Z"/><path d="M0 0 Q20 -36 36 -48 Q12 -30 0 -12 Z"/><path d="M0 0 Q0 -44 0 -60 Q5 -36 0 -12 Z"/></g>
+            <g transform="translate(416,70)"><path d="M0 0 Q-32 -12 -52 -4 Q-30 -14 0 -10 Z"/><path d="M0 0 Q32 -12 52 -4 Q30 -14 0 -10 Z"/><path d="M0 0 Q-16 -30 -30 -40 Q-10 -26 0 -10 Z"/><path d="M0 0 Q16 -30 30 -40 Q10 -26 0 -10 Z"/></g>
+          </g>
+          <rect x="0" y="132" width="600" height="38" fill="#08281a" opacity=".9"/>
+        </svg>
+        <figcaption>エル・パルメラル — 世界遺産の椰子園に守られた、緑の街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>フランハベルデ — 胸を横切る緑の帯</h2>
+      <p>白いユニフォームの胸を斜めに横切る<strong>緑の帯（フランハベルデ）</strong>は、クラブの何よりの目印です。この意匠から、チームもサポーターも<span class="cl-hl">「フランヒベルデス」</span>の愛称で呼ばれます。加えて、街に伝わる中世の聖劇「エルチェの神秘劇（ミステリ・ダルシュ）」もまた世界無形文化遺産に数えられ、歴史と信仰が息づく土地の誇りを、クラブは緑の帯に映しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="白地の上を斜めに横切る緑の帯と、椰子の葉をあしらったエンブレム風のイラスト">
+          <rect width="600" height="170" fill="#061410"/>
+          <rect x="150" y="24" width="300" height="122" rx="10" fill="#f4fbf6"/>
+          <polygon points="150,84 450,52 450,96 150,128" fill="#0a8a3c"/>
+          <g stroke="#0a8a3c" stroke-width="4" stroke-linecap="round" fill="none" opacity=".9"><path d="M300 116 Q276 96 258 100"/><path d="M300 116 Q324 96 342 100"/><path d="M300 116 L300 90"/></g>
+          <circle cx="300" cy="120" r="5" fill="#124a2b"/>
+        </svg>
+        <figcaption>緑の帯 — 白い胸を斜めに走る、フランハベルデの誇り。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>緑と白、粘り強く戦う土地のクラブ</h2>
+      <p>基調は<strong>緑と白</strong>。派手さよりも、堅い守りと粘り強さで一戦一戦を戦い抜くスタイルが、この街のクラブらしさとして語られてきました。1回のスペイン国王杯準優勝など、規模の大きくないクラブながらトップリーグでの戦いを重ね、<span class="cl-hl">緑の帯</span>とともに地元の誇りを守り続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="緑の帯が入った白いユニフォームの胸元を描いたイラスト">
+          <rect width="600" height="150" fill="#061410"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f4fbf6"/>
+          <polygon points="214,58 386,34 386,60 214,84" fill="#0a8a3c"/>
+          <path d="M300 20 C 284 20, 272 24, 272 24 L286 40 Q300 46 314 40 L328 24 C 328 24, 316 20, 300 20 Z" fill="#dfeee5"/>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>フランハベルデ — 白と緑、南スペインの色をまとう。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1923年</dd>
+          <dt>本拠地</dt><dd>エルチェ（バレンシア州アリカンテ県）</dd>
+          <dt>スタジアム</dt><dd>マヌエル・マルティネス・バレロ（約33,000人）</dd>
+          <dt>愛称</dt><dd>Los Franjiverdes（フランヒベルデス）</dd>
+          <dt>カラー</dt><dd>グリーン ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

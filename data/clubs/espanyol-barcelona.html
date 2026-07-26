@@ -1,0 +1,177 @@
+<!--CLUB slug=espanyol-barcelona name=エスパニョール league=ラ・リーガ-->
+<!--VIDEO id=GM7t2q9ZTP4 title=RUMBA PERICA／Himno RCD Espanyol（クラブ賛歌の公式映像）-->
+<!--DESC エスパニョール（ラ・リーガ）のクラブ紹介。バルセロナのもう一つのクラブ、青と白の縞、ペリコス（インコ）の愛称、RCDEスタジアムの熱気を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08172b; --cl-blau:#0072ce; --cl-blau-hi:#5fb0f0; --cl-gold:#d9b44a; --cl-sun:#e6b23c;
+    --cl-paper:var(--bg,#f2f7fc); --cl-text:var(--fg,#122335); --cl-muted:#5c7080; --cl-line:#cfe0ee; --cl-card:#f6fafe;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2eef8; --cl-muted:#89a0b2; --cl-line:#1a3145; --cl-card:#0f1e30; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2eef8; --cl-muted:#89a0b2; --cl-line:#1a3145; --cl-card:#0f1e30; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#122335; --cl-muted:#5c7080; --cl-line:#cfe0ee; --cl-card:#f6fafe; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(6,18,32,.94) 32%,rgba(6,18,32,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-blau);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blau-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9e7f4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,#0072ce 0 16px,#eef6fd 16px 32px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,114,206,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-blau);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,114,206,.32);font-weight:700}
+  .cl-sun{color:var(--cl-sun);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b6d2e8;background:#06141f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blau);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="バルセロナの街並みと近代的スタジアム、青と白の縞を描いた夜景イラスト">
+        <defs>
+          <linearGradient id="epsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0e3c60"/><stop offset="55%" stop-color="#0a2743"/><stop offset="100%" stop-color="#08172b"/></linearGradient>
+          <radialGradient id="epglow" cx="50%" cy="26%" r="52%"><stop offset="0%" stop-color="#0072ce" stop-opacity=".34"/><stop offset="55%" stop-color="#5fb0f0" stop-opacity=".08"/><stop offset="100%" stop-color="#08172b" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#epsky)"/>
+        <rect width="1200" height="470" fill="url(#epglow)"/>
+        <circle cx="250" cy="118" r="42" fill="#eaf4ff" opacity=".9"/>
+        <circle cx="236" cy="108" r="42" fill="#0a2743" opacity=".5"/>
+        <g fill="#5fb0f0" opacity=".22"><circle cx="470" cy="88" r="2.5"/><circle cx="560" cy="66" r="2"/><circle cx="660" cy="112" r="2.5"/><circle cx="770" cy="70" r="2"/></g>
+        <!-- 丘の稜線（ティビダボ） -->
+        <polygon points="0,236 240,168 480,206 720,150 960,200 1200,164 1200,300 0,300" fill="#0c2a44"/>
+        <!-- 街並みシルエット -->
+        <rect x="0" y="300" width="1200" height="170" fill="#0a1a2c"/>
+        <g fill="#0e2438"><rect x="60" y="258" width="30" height="52"/><rect x="96" y="244" width="22" height="66"/><rect x="126" y="272" width="34" height="38"/><rect x="176" y="252" width="18" height="58"/><rect x="900" y="256" width="24" height="54"/><rect x="932" y="272" width="34" height="38"/><rect x="1040" y="250" width="20" height="60"/><rect x="1066" y="270" width="40" height="40"/></g>
+        <!-- サグラダ・ファミリア風の尖塔群（バルセロナの象徴） -->
+        <g fill="#123a54" stroke="#1f5678" stroke-width="1.5"><path d="M560 300 L560 150 Q572 96 584 150 L584 300 Z"/><path d="M596 300 L596 128 Q608 70 620 128 L620 300 Z"/><path d="M632 300 L632 158 Q644 108 656 158 L656 300 Z"/></g>
+        <g fill="#e6b23c" opacity=".75"><circle cx="572" cy="150" r="4"/><circle cx="608" cy="128" r="4"/><circle cx="644" cy="158" r="4"/></g>
+        <!-- 近代的スタジアム（RCDEスタジアム） -->
+        <g fill="#0e2c46" stroke="#1f5678" stroke-width="1.5"><path d="M980 300 Q980 244 1090 244 Q1200 244 1200 300 Z"/><path d="M998 300 Q998 262 1090 262 Q1182 262 1182 300 Z" fill="#0072ce" opacity=".35"/></g>
+        <!-- 青と白の縞バンド -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="220" height="58" fill="#eef6fd"/><g fill="#0072ce"><rect x="0" y="0" width="27.5" height="58"/><rect x="55" y="0" width="27.5" height="58"/><rect x="110" y="0" width="27.5" height="58"/><rect x="165" y="0" width="27.5" height="58"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>エスパニョール<span class="cl-en">RCD Espanyol · 1900</span></h1>
+        <p class="cl-sub">バルセロナに根ざす、もう一つの名門。青と白の縞をまとい、「ペリコス（インコ）」の愛称で街に愛されるクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">カタルーニャの都<b>バルセロナ</b>を本拠とするクラブです。世界的な大クラブと同じ街に居を構えながら、青と白の縞をまとう「ペリコス」は、地元に深く根を張った独自の歴史と誇りを大切に守り続けています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>RCDEスタジアム</h2>
+      <p>バルセロナ近郊のコルネジャ＝ダル・プラットに建つ、約4万人を収容する近代的なスタジアムです。2009年に完成したクラブ自前のホームで、地元では<span class="cl-hl">RCDEスタジアム</span>として親しまれています。試合前にはクラブ賛歌がスタンド全体に響き、青と白のマフラーが一斉に掲げられます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="青と白のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#06141f"/>
+          <defs><pattern id="epcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06141f"/><circle cx="8.5" cy="7" r="5" fill="#0072ce"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#epcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5fb0f0" opacity=".55"/>
+          <g stroke="#eef6fd" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6575"/><polygon points="164,30 206,40 164,54" fill="#0072ce"/><rect x="420" y="24" width="4" height="64" fill="#4f6575"/><polygon points="424,24 466,36 424,50" fill="#0072ce"/></g>
+        </svg>
+        <figcaption>青と白の一体感 — キックオフ前、賛歌に揺れるRCDEスタジアム。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>バルセロナ、もう一つの物語</h2>
+      <p>ガウディの建築と地中海に彩られた<span class="cl-sun">バルセロナ</span>は、世界屈指の観光都市。その同じ街で、エスパニョールは大クラブの陰に隠れることなく、<span class="cl-hl">地元に根ざしたもう一つの物語</span>を紡いできました。1900年創設という長い歴史をもち、街のサッカー文化を語るうえで欠かせない存在です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="サグラダ・ファミリア風の尖塔とバルセロナの街並み、夕景のシルエット">
+          <defs><linearGradient id="epdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a58"/><stop offset="100%" stop-color="#06141f"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#epdusk)"/>
+          <circle cx="120" cy="50" r="28" fill="#e6b23c" opacity=".82"/>
+          <g fill="#0e2c46" stroke="#1f5678" stroke-width="1.5"><path d="M270 132 L270 52 Q282 20 294 52 L294 132 Z"/><path d="M306 132 L306 40 Q318 6 330 40 L330 132 Z"/><path d="M342 132 L342 58 Q354 28 366 58 L366 132 Z"/></g>
+          <g fill="#e6b23c" opacity=".8"><circle cx="282" cy="52" r="3.5"/><circle cx="318" cy="40" r="3.5"/><circle cx="354" cy="58" r="3.5"/></g>
+          <g fill="#0a2438"><rect x="20" y="106" width="18" height="26"/><rect x="44" y="96" width="14" height="36"/><rect x="62" y="110" width="22" height="22"/><rect x="470" y="102" width="16" height="30"/><rect x="492" y="112" width="24" height="20"/></g>
+          <rect x="0" y="132" width="600" height="38" fill="#0a2438" opacity=".9"/>
+        </svg>
+        <figcaption>尖塔のシルエット — バルセロナの空に描く、もう一つの物語。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>ペリコス — 街に舞う青いインコ</h2>
+      <p>エスパニョールを象徴するのが、<strong>「ペリコス（インコ）」</strong>の愛称です。かつての本拠地のそばにインコを飼う店があったことに由来すると伝えられ、青いインコはいまやクラブのマスコットとして親しまれています。加えて、創設当初にスペイン国王アルフォンソ13世の庇護を受けたことから、正式名称に<span class="cl-hl">「レアル（王立）」</span>を冠しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="青と白の紋章風の盾に、青いインコをあしらったシンプルなイラスト">
+          <rect width="600" height="170" fill="#06141f"/>
+          <g transform="translate(300,86)">
+            <path d="M0,-56 L54,-42 L54,20 Q54,52 0,68 Q-54,52 -54,20 L-54,-42 Z" fill="#eef6fd" stroke="#0072ce" stroke-width="3"/>
+            <g fill="#0072ce"><rect x="-54" y="-42" width="13.5" height="96"/><rect x="-27" y="-46" width="13.5" height="100"/><rect x="0" y="-48" width="13.5" height="102"/><rect x="27" y="-46" width="13.5" height="100"/></g>
+            <g transform="translate(0,4)"><path d="M-6 -22 Q18 -26 22 -6 Q26 14 6 22 Q-14 26 -20 8 Q-24 -6 -12 -12 Z" fill="#0072ce"/><circle cx="-8" cy="-8" r="3.5" fill="#eef6fd"/><circle cx="-8" cy="-8" r="1.6" fill="#06141f"/><path d="M-12 -12 L-24 -8 L-14 -2 Z" fill="#e6b23c"/><path d="M18 18 q10 8 4 16" stroke="#0072ce" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+          </g>
+        </svg>
+        <figcaption>ペリコ — 青と白の盾に舞う、街のインコ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>青と白の縞、誇り高きブランキアスール</h2>
+      <p>ユニフォームの基調は<strong>青と白の縦縞</strong>。この配色から、チームもサポーターも<span class="cl-hl">「ブランキアスレス」</span>と呼ばれます。国王杯の複数回制覇や、ヨーロッパの舞台での準優勝など、規模の大きなクラブに立ち向かい続けてきた歴史をもち、青と白の縞は今日も誇り高くバルセロナを彩ります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="青と白の縦縞のユニフォームの胸元を描いたイラスト">
+          <rect width="600" height="150" fill="#06141f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eef6fd"/>
+          <g fill="#0072ce"><path d="M214 30 L214 118 Q214 124 226 128 L226 27 Z"/><path d="M252 23 L252 135 L266 137 L266 22 Z"/><path d="M290 20 L290 140 L304 140 L304 20 Z"/><path d="M328 22 L328 137 L342 135 L342 23 Z"/><path d="M366 27 L366 128 Q378 124 378 118 L378 30 Z"/></g>
+          <path d="M300 20 C 284 20, 272 24, 272 24 L286 40 Q300 46 314 40 L328 24 C 328 24, 316 20, 300 20 Z" fill="#0072ce"/>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ブランキアスール — 青と白の縞に宿る、街の誇り。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1900年</dd>
+          <dt>本拠地</dt><dd>バルセロナ（カタルーニャ州）</dd>
+          <dt>スタジアム</dt><dd>RCDEスタジアム（約40,000人）</dd>
+          <dt>愛称</dt><dd>Los Pericos（ペリコス／インコ）</dd>
+          <dt>カラー</dt><dd>ブルー ＆ ホワイト（縦縞）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

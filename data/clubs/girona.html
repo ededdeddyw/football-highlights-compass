@@ -1,0 +1,202 @@
+<!--CLUB slug=girona name=ジローナ league=ラ・リーガ-->
+<!--VIDEO id=ltQ8c_5GIgM title=The Gruixut's, Josep Thió「Himne del Girona FC – Endavant」公式アンセム-->
+<!--DESC ジローナ（ラ・リーガ）のクラブ紹介。カタルーニャの古都、オニャール川沿いのカラフルな家並み、赤白の縞、近年の目覚ましい躍進を、公式アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140a0c; --cl-red:#d31a2b; --cl-red-hi:#ff6b78; --cl-white:#ffffff; --cl-gold:#d9a441;
+    --cl-paper:var(--bg,#fbf5f5); --cl-text:var(--fg,#221215); --cl-muted:#7a5a5e; --cl-line:#e7cdd0; --cl-card:#fff8f8;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f2e2e4; --cl-muted:#b3898e; --cl-line:#341c1f; --cl-card:#1c1013; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f2e2e4; --cl-muted:#b3898e; --cl-line:#341c1f; --cl-card:#1c1013; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#221215; --cl-muted:#7a5a5e; --cl-line:#e7cdd0; --cl-card:#fff8f8; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,10,12,.94) 32%,rgba(20,10,12,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f2dde0;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:10px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(90deg,#d31a2b 0 16px,#ffffff 16px 32px);border:1px solid var(--cl-line)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(211,26,43,.24)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(211,26,43,.28);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e6c4c8;background:#0f0709;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="オニャール川沿いに立ち並ぶカラフルな家並みと、その水面への映り込みを描いたイラスト">
+        <defs>
+          <linearGradient id="gisky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1420"/><stop offset="55%" stop-color="#240e15"/><stop offset="100%" stop-color="#140a0c"/></linearGradient>
+          <radialGradient id="giglow" cx="50%" cy="28%" r="50%"><stop offset="0%" stop-color="#d31a2b" stop-opacity=".3"/><stop offset="45%" stop-color="#d9a441" stop-opacity=".12"/><stop offset="100%" stop-color="#140a0c" stop-opacity="0"/></radialGradient>
+          <linearGradient id="giriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a2530" stop-opacity=".9"/><stop offset="100%" stop-color="#140a0c" stop-opacity=".98"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#gisky)"/>
+        <rect width="1200" height="470" fill="url(#giglow)"/>
+        <circle cx="220" cy="98" r="46" fill="#ffe9d0" opacity=".9"/>
+        <circle cx="204" cy="88" r="46" fill="#240e15" opacity=".5"/>
+        <g fill="#ffb27a" opacity=".25"><circle cx="440" cy="70" r="2.5"/><circle cx="560" cy="54" r="2"/><circle cx="700" cy="90" r="2.5"/><circle cx="880" cy="60" r="2"/></g>
+        <!-- カテドラル/鐘楼のシルエット（背後） -->
+        <g fill="#1c0d13" opacity=".9"><rect x="980" y="110" width="60" height="150"/><polygon points="980,110 1010,72 1040,110"/><rect x="994" y="140" width="14" height="24" fill="#d9a441" opacity=".5"/><rect x="1014" y="140" width="14" height="24" fill="#d9a441" opacity=".5"/></g>
+        <!-- オニャール川沿いのカラフルな家並み -->
+        <g>
+          <rect x="120" y="150" width="90" height="170" fill="#c8492e"/>
+          <rect x="210" y="130" width="86" height="190" fill="#e0b23a"/>
+          <rect x="296" y="164" width="80" height="156" fill="#c73a52"/>
+          <rect x="376" y="140" width="90" height="180" fill="#d98a3a"/>
+          <rect x="466" y="158" width="82" height="162" fill="#b8863a"/>
+          <rect x="548" y="132" width="90" height="188" fill="#cf5a3a"/>
+          <rect x="638" y="150" width="84" height="170" fill="#d9a441"/>
+          <rect x="722" y="164" width="86" height="156" fill="#c33d4e"/>
+          <rect x="808" y="142" width="90" height="178" fill="#d97e3a"/>
+        </g>
+        <!-- 窓 -->
+        <g fill="#2a1218" opacity=".8"><rect x="140" y="186" width="18" height="24"/><rect x="172" y="186" width="18" height="24"/><rect x="140" y="240" width="18" height="24"/><rect x="172" y="240" width="18" height="24"/><rect x="232" y="170" width="18" height="26"/><rect x="264" y="170" width="18" height="26"/><rect x="318" y="200" width="16" height="24"/><rect x="346" y="200" width="16" height="24"/><rect x="400" y="176" width="18" height="26"/><rect x="432" y="176" width="18" height="26"/><rect x="574" y="168" width="18" height="26"/><rect x="606" y="168" width="18" height="26"/><rect x="660" y="188" width="16" height="24"/><rect x="690" y="188" width="16" height="24"/><rect x="832" y="178" width="18" height="26"/><rect x="864" y="178" width="18" height="26"/></g>
+        <!-- 川 -->
+        <rect x="0" y="320" width="1200" height="150" fill="url(#giriver)"/>
+        <!-- 水面への映り込み（家並みの色を薄く反転） -->
+        <g opacity=".4"><rect x="120" y="320" width="90" height="70" fill="#c8492e"/><rect x="210" y="320" width="86" height="80" fill="#e0b23a"/><rect x="296" y="320" width="80" height="64" fill="#c73a52"/><rect x="376" y="320" width="90" height="76" fill="#d98a3a"/><rect x="548" y="320" width="90" height="80" fill="#cf5a3a"/><rect x="638" y="320" width="84" height="70" fill="#d9a441"/><rect x="808" y="320" width="90" height="74" fill="#d97e3a"/></g>
+        <g stroke="#e8b0b6" stroke-width="3" stroke-linecap="round" opacity=".4"><line x1="140" y1="410" x2="300" y2="410"/><line x1="420" y1="430" x2="600" y2="430"/><line x1="700" y1="418" x2="880" y2="418"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>ジローナ<span class="cl-en">Girona FC · 1930</span></h1>
+        <p class="cl-sub">カタルーニャの古都、オニャール川に映るカラフルな家並みの街。赤白の縞をまとい、近年の躍進で世界を驚かせた新星です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北東部・カタルーニャ州の古都ジローナを本拠とするクラブです。<b>オニャール川沿いに立ち並ぶカラフルな家並み</b>で知られる美しい街から、近年めざましい躍進を遂げ、ラ・リーガ上位を争うまでに成長。ヨーロッパの舞台にも足跡を刻んだ、注目の新星です。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エスタディ・ムニシパル・デ・モンティリビ</h2>
+      <p>1970年に開場した、街のシンボル的なスタジアムです。<strong>モンティリビ</strong>の名で親しまれ、収容規模は決して大きくありませんが、<span class="cl-hl">強豪をも飲み込む一体感</span>で知られます。近年の躍進とともに、ここで生まれた数々の名場面が街の記憶に刻まれてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤白のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#0f0709"/>
+          <defs><pattern id="gicrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0f0709"/><circle cx="8.5" cy="7" r="5" fill="#d31a2b"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#gicrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#ffffff" opacity=".65"/>
+          <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a4448"/><polygon points="164,30 206,40 164,54" fill="#d31a2b"/><rect x="420" y="24" width="4" height="64" fill="#5a4448"/><polygon points="424,24 466,36 424,50" fill="#d31a2b"/></g>
+        </svg>
+        <figcaption>赤白の一体感 — モンティリビを満たすアフィシオ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>カタルーニャの古都、川辺の色彩</h2>
+      <p>ジローナは中世の面影を残す<span class="cl-red">カタルーニャの古都</span>。オニャール川に沿って並ぶ赤や黄の家並みが水面に映る風景は、街を象徴する絵画のような一枚です。石畳の旧市街、大聖堂、城壁——歴史が幾層にも重なるこの街で、クラブは地域のアイデンティティと結びついています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="オニャール川沿いのカラフルな家並みと、水面への映り込みを描いたイラスト">
+          <defs><linearGradient id="gidusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1a24"/><stop offset="100%" stop-color="#0f0709"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#gidusk)"/>
+          <circle cx="510" cy="42" r="24" fill="#ffe9d0" opacity=".85"/>
+          <g>
+            <rect x="60" y="54" width="60" height="70" fill="#c8492e"/>
+            <rect x="120" y="40" width="56" height="84" fill="#e0b23a"/>
+            <rect x="176" y="60" width="54" height="64" fill="#c73a52"/>
+            <rect x="230" y="46" width="60" height="78" fill="#d98a3a"/>
+            <rect x="290" y="58" width="56" height="66" fill="#cf5a3a"/>
+            <rect x="346" y="44" width="58" height="80" fill="#d9a441"/>
+          </g>
+          <g fill="#2a1218" opacity=".8"><rect x="74" y="72" width="12" height="16"/><rect x="96" y="72" width="12" height="16"/><rect x="136" y="60" width="12" height="18"/><rect x="158" y="60" width="12" height="18"/><rect x="246" y="66" width="12" height="18"/><rect x="268" y="66" width="12" height="18"/><rect x="362" y="64" width="12" height="18"/><rect x="384" y="64" width="12" height="18"/></g>
+          <rect x="0" y="124" width="600" height="46" fill="#3a1a24" opacity=".9"/>
+          <g opacity=".4"><rect x="120" y="124" width="56" height="34" fill="#e0b23a"/><rect x="230" y="124" width="60" height="30" fill="#d98a3a"/><rect x="346" y="124" width="58" height="32" fill="#d9a441"/></g>
+          <g stroke="#e8b0b6" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="60" y1="150" x2="180" y2="150"/><line x1="320" y1="146" x2="460" y2="146"/></g>
+        </svg>
+        <figcaption>オニャール川の色彩 — 水面に映る古都の家並み。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 躍進</div>
+      <h2>小さな街から、ヨーロッパの舞台へ</h2>
+      <p>比較的新しいクラブながら、緻密な強化と魅力的な攻撃サッカーを掲げ、<strong>近年ラ・リーガ上位を争う躍進</strong>を遂げました。国際的なフットボール・グループの支援のもと積み上げた挑戦は、ついに<span class="cl-hl">欧州の舞台（UEFAチャンピオンズリーグ）への切符</span>という形で結実。小さな街のクラブの快進撃は、多くの人を驚かせました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="上昇する矢印と星で、クラブの躍進を表したイラスト">
+          <rect width="600" height="180" fill="#0f0709"/>
+          <g stroke="#d31a2b" stroke-width="7" stroke-linecap="round" fill="none" opacity=".9"><path d="M90 138 L210 96 L330 108 L470 46"/></g>
+          <polygon points="470,46 442,50 460,72" fill="#d31a2b"/>
+          <g fill="#ffffff" opacity=".85"><circle cx="90" cy="138" r="7"/><circle cx="210" cy="96" r="7"/><circle cx="330" cy="108" r="7"/></g>
+          <g fill="#d9a441"><path d="M470 20 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z"/></g>
+          <g fill="#ffffff" opacity=".3"><rect x="90" y="150" width="18" height="18"/><rect x="210" y="150" width="18" height="18"/><rect x="330" y="150" width="18" height="18"/></g>
+        </svg>
+        <figcaption>右肩上がりの物語 — 新星が駆け上がった軌跡。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>赤白の縞、ロス・ブランクイロージョス</h2>
+      <p>赤と白の縦縞のユニフォームが伝統で、<strong>「ブランクイロージョス（赤白）」</strong>の愛称で親しまれます。ボールを大切につなぎ、前へ運ぶ攻撃志向のスタイルは、街の陽気で色彩豊かな気質を映すかのよう。<span class="cl-hl">赤白に染まるモンティリビ</span>は、いまカタルーニャの新しい誇りとなっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤白の縦縞ユニフォームを描いたイラスト">
+          <rect width="600" height="150" fill="#0f0709"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff"/>
+          <g>
+            <rect x="222" y="24" width="18" height="114" fill="#d31a2b"/>
+            <rect x="258" y="22" width="18" height="118" fill="#d31a2b"/>
+            <rect x="294" y="22" width="18" height="120" fill="#d31a2b"/>
+            <rect x="330" y="22" width="18" height="118" fill="#d31a2b"/>
+            <rect x="366" y="24" width="14" height="114" fill="#d31a2b"/>
+          </g>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#7a0f18"/>
+          <g stroke="#d9a441" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ブランクイロージョス — 赤白の縦縞に宿る古都の誇り。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1930年</dd>
+          <dt>本拠地</dt><dd>ジローナ（カタルーニャ州）</dd>
+          <dt>スタジアム</dt><dd>エスタディ・ムニシパル・デ・モンティリビ</dd>
+          <dt>愛称</dt><dd>Blan-i-vermells（赤白）</dd>
+          <dt>近年</dt><dd>ラ・リーガ躍進・欧州の舞台へ</dd>
+          <dt>カラー</dt><dd>レッド ＆ ホワイト（縦縞）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

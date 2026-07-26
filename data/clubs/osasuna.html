@@ -1,0 +1,193 @@
+<!--CLUB slug=osasuna name=オサスナ league=ラ・リーガ-->
+<!--VIDEO id=gX_774HvHnU title=オサスナ公式 himno（クラブ・アンセム）El Sadar-->
+<!--DESC オサスナ（ラ・リーガ）のクラブ紹介。牛追い祭りサン・フェルミンの街パンプローナ、地鳴りのようなエル・サダール、ナバラの誇りを背負う"ロヒージョス"の赤を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140a0d; --cl-red:#c4122e; --cl-red-hi:#f26173; --cl-navy:#123a86; --cl-navy-hi:#4f7fca;
+    --cl-paper:var(--bg,#f7f2f3); --cl-text:var(--fg,#1b1315); --cl-muted:#6f5f63; --cl-line:#e0d0d2; --cl-card:#fffbfb;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f0e5e6; --cl-muted:#a99a9c; --cl-line:#2c1e21; --cl-card:#170f10; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f0e5e6; --cl-muted:#a99a9c; --cl-line:#2c1e21; --cl-card:#170f10; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1b1315; --cl-muted:#6f5f63; --cl-line:#e0d0d2; --cl-card:#fffbfb; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,10,13,.94) 32%,rgba(20,10,13,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#ecdedd;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:9px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-red),var(--cl-red-hi) 45%,var(--cl-navy))}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(196,18,46,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(196,18,46,.32);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#dcc7c8;background:#140a0d;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="牛追い祭りの街パンプローナと、赤いスカーフをはためかせる情熱を描いたイラスト">
+        <defs>
+          <linearGradient id="ossky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a0f18"/><stop offset="55%" stop-color="#1e0c12"/><stop offset="100%" stop-color="#140a0d"/></linearGradient>
+          <radialGradient id="osglow" cx="72%" cy="26%" r="52%"><stop offset="0%" stop-color="#c4122e" stop-opacity=".34"/><stop offset="50%" stop-color="#123a86" stop-opacity=".12"/><stop offset="100%" stop-color="#140a0d" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#ossky)"/>
+        <rect width="1200" height="470" fill="url(#osglow)"/>
+        <circle cx="250" cy="104" r="42" fill="#f3dcda" opacity=".85"/>
+        <circle cx="234" cy="96" r="42" fill="#1e0c12" opacity=".5"/>
+        <g fill="#f26173" opacity=".22"><circle cx="470" cy="90" r="2.5"/><circle cx="560" cy="66" r="2"/><circle cx="650" cy="116" r="2.5"/><circle cx="730" cy="58" r="2"/><circle cx="390" cy="140" r="2"/></g>
+        <!-- パンプローナ旧市街のシルエット（城壁・大聖堂の双塔） -->
+        <rect x="0" y="300" width="1200" height="60" fill="#180b10"/>
+        <g fill="#22101a">
+          <rect x="70" y="250" width="30" height="50"/><rect x="108" y="232" width="22" height="68"/><rect x="138" y="258" width="34" height="42"/>
+          <rect x="470" y="214" width="26" height="86"/><rect x="502" y="214" width="26" height="86"/><path d="M470 214 h58 v-16 l-29 -22 l-29 22 z"/>
+          <rect x="560" y="256" width="30" height="44"/><rect x="596" y="240" width="20" height="60"/><rect x="622" y="262" width="34" height="38"/>
+        </g>
+        <g fill="#e6b23c" opacity=".7"><rect x="480" y="238" width="4" height="6"/><rect x="514" y="238" width="4" height="6"/><rect x="118" y="248" width="4" height="6"/></g>
+        <!-- エル・サダール（スタジアムのボウル） -->
+        <g>
+          <path d="M760 300 Q1000 236 1160 300 L1160 340 Q1000 292 760 340 Z" fill="#22101a" stroke="#c4122e" stroke-width="2.5" opacity=".9"/>
+          <path d="M792 300 Q1000 248 1128 300" fill="none" stroke="#f26173" stroke-width="4" opacity=".55"/>
+        </g>
+        <!-- 牛追い（サン・フェルミン）のシルエット -->
+        <g fill="#0d0508">
+          <path d="M300 360 c8,-30 40,-40 62,-38 c6,-14 18,-22 30,-20 c-4,8 -2,14 6,16 c22,4 34,22 34,34 l-14,0 l-6,-14 c-4,10 -12,16 -22,16 l-2,10 l-10,0 l0,-10 l-58,0 l0,12 l-10,0 l-2,-12 c-14,0 -24,-4 -28,-16 z"/>
+          <path d="M312 360 c6,-22 30,-30 46,-28 c4,-10 14,-16 22,-14 c-2,6 0,10 4,12 c16,4 26,16 26,26 l-10,0 l-4,-10 c-4,8 -10,12 -18,12 l-2,8 l-8,0 l0,-8 l-44,0 l0,10 l-8,0 l-2,-10 c-10,0 -18,-2 -30,10 z" opacity=".6"/>
+        </g>
+        <!-- 赤いスカーフ（パニュエロ・ロホ）の帯 -->
+        <g transform="translate(70,318)"><rect x="0" y="0" width="150" height="42" fill="#c4122e"/><rect x="0" y="0" width="150" height="8" fill="#f26173" opacity=".7"/></g>
+        <!-- ナバラの赤いフィールド -->
+        <rect x="0" y="360" width="1200" height="110" fill="#180b10"/>
+        <g stroke="#c4122e" stroke-width="3" stroke-linecap="round" opacity=".4"><line x1="120" y1="392" x2="260" y2="392"/><line x1="360" y1="416" x2="520" y2="416"/><line x1="640" y1="400" x2="780" y2="400"/><line x1="860" y1="430" x2="1020" y2="430"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ スペイン・ラ・リーガ</span>
+        <h1>オサスナ<span class="cl-en">CA Osasuna · 1920</span></h1>
+        <p class="cl-sub">牛追い祭りサン・フェルミンの街パンプローナから。ナバラの誇りを背負う"ロヒージョス"は、地鳴りのようなエル・サダールで戦います。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">スペイン北部・ナバラ州の州都<b>パンプローナ</b>を本拠とするクラブです。バスク語で<b>「オサスナ＝健康・活力」</b>を意味するその名の通り、地域と固く結びついたクラブとして、赤いユニフォームをまとって戦い続けてきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>エル・サダール — 地鳴りのスタンド</h2>
+      <p>パンプローナ市に建つ、約2万3千人を収容する<strong>エスタディオ・エル・サダール</strong>。近年の大規模改修で、スタンドがピッチを取り囲むように立ち上がる、いっそう圧が強い箱に生まれ変わりました。観客と芝の距離が近く、<span class="cl-hl">ヨーロッパ屈指の"うるさい"スタジアム</span>のひとつと語られる、熱量の高い舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤いスカーフを掲げる観客で埋まった、急勾配のスタンドのイラスト">
+          <rect width="600" height="190" fill="#140a0d"/>
+          <defs><pattern id="oscrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#140a0d"/><circle cx="8.5" cy="7" r="5" fill="#c4122e"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,92 Q300,52 0,92 Z" fill="url(#oscrowd)"/>
+          <path d="M0,92 Q300,52 600,92 L600,78 Q300,38 0,78 Z" fill="#f26173" opacity=".55"/>
+          <g stroke="#f26173" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 58 q28 -22 56 0"/><path d="M220 44 q28 -22 56 0"/><path d="M360 52 q28 -22 56 0"/><path d="M480 42 q28 -22 56 0"/></g>
+          <g><rect x="160" y="26" width="4" height="58" fill="#123a86"/><polygon points="164,26 206,36 164,50" fill="#c4122e"/><rect x="420" y="20" width="4" height="64" fill="#123a86"/><polygon points="424,20 466,32 424,46" fill="#c4122e"/></g>
+        </svg>
+        <figcaption>エル・サダール — 赤いスカーフが揺れる、急勾配のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>サン・フェルミン、牛追いの街パンプローナ</h2>
+      <p>パンプローナは、毎年7月に<span class="cl-red">牛追い祭り「サン・フェルミン」</span>で世界的に知られる街。白い服に<strong>赤いスカーフ（パニュエロ・ロホ）</strong>を巻いた人々が石畳を駆け抜ける祭りの光景は、そのままクラブの色と気質に重なります。赤に染まる週末のエル・サダールは、この街のもうひとつの祭りの舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夕景の中を牛が駆け、赤いスカーフがはためくパンプローナの街のイラスト">
+          <defs><linearGradient id="osdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a0f18"/><stop offset="100%" stop-color="#140a0d"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#osdusk)"/>
+          <circle cx="120" cy="50" r="28" fill="#e6b23c" opacity=".7"/>
+          <g fill="#22101a"><rect x="20" y="96" width="20" height="30"/><rect x="46" y="82" width="16" height="44"/><rect x="66" y="100" width="24" height="26"/><rect x="98" y="88" width="14" height="38"/><rect x="360" y="86" width="18" height="40"/><rect x="382" y="86" width="18" height="40"/><path d="M360 86 h40 v-12 l-20 -14 l-20 14 z"/></g>
+          <rect x="0" y="126" width="600" height="44" fill="#180b10"/>
+          <!-- 牛 -->
+          <g fill="#0d0508"><path d="M230 150 c6,-20 28,-26 42,-24 c4,-10 12,-14 20,-12 c-2,6 0,8 4,10 c14,4 22,16 22,24 l-10,0 l-4,-10 c-4,8 -10,10 -16,10 l-2,8 l-8,0 l0,-8 l-40,0 l0,8 l-8,0 l-2,-8 c-10,0 -16,-2 -22,-2 z"/></g>
+          <g transform="translate(430,120)"><rect x="0" y="0" width="120" height="20" fill="#c4122e"/><rect x="0" y="0" width="120" height="4" fill="#f26173" opacity=".7"/></g>
+        </svg>
+        <figcaption>サン・フェルミン — 赤いスカーフと駆ける牛、街を彩る祭りの色。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> アイデンティティ</div>
+      <h2>ロヒージョス — 地域が育て、地域が愛する</h2>
+      <p>オサスナは、市民が支える<strong>会員制のクラブ</strong>としての歴史を持ち、地元ナバラとの結びつきをアイデンティティの核にしてきました。派手な補強よりも、走力と球際で戦う<span class="cl-hl">粘り強いスタイル</span>と、地元出身の選手を大切にする姿勢で知られます。赤い小さな仲間たち——<span class="cl-red">「ロヒージョス」</span>の愛称に、その誇りが表れています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="ナバラの盾と鎖の紋章をモチーフにした、赤いエンブレム風のイラスト">
+          <rect width="600" height="180" fill="#140a0d"/>
+          <g transform="translate(300,92)">
+            <path d="M0,-58 L52,-44 L52,20 Q52,52 0,66 Q-52,52 -52,20 L-52,-44 Z" fill="#22101a" stroke="#c4122e" stroke-width="3"/>
+            <g stroke="#f26173" stroke-width="3" fill="none" opacity=".85">
+              <line x1="0" y1="-30" x2="0" y2="30"/><line x1="-30" y1="0" x2="30" y2="0"/><line x1="-21" y1="-21" x2="21" y2="21"/><line x1="21" y1="-21" x2="-21" y2="21"/>
+              <circle cx="0" cy="0" r="7" fill="#c4122e" stroke="none"/>
+            </g>
+            <g fill="#e6b23c" opacity=".9"><circle cx="0" cy="-30" r="3"/><circle cx="0" cy="30" r="3"/><circle cx="-30" cy="0" r="3"/><circle cx="30" cy="0" r="3"/></g>
+          </g>
+        </svg>
+        <figcaption>ナバラの鎖 — 地域の紋章に重なる、赤いクラブの誇り。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ロホ（赤）と、紺のトリム</h2>
+      <p>燃えるような<strong>赤（ロホ）</strong>を基調に、紺のトリムを合わせたユニフォームがクラブの象徴です。逆境でも簡単に折れない粘り強さは<span class="cl-hl">「ここでは誰もあきらめない」</span>の合言葉に結ばれ、スタンドと一体になって最後まで戦うのがオサスナの流儀。派手さより情熱で、赤い週末をパンプローナにもたらします。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤いユニフォームの胸に紺のトリムが入ったイラスト">
+          <rect width="600" height="150" fill="#140a0d"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#c4122e"/>
+          <path d="M300 20 C 275 20, 258 26, 258 26 L300 52 L342 26 C 342 26, 325 20, 300 20 Z" fill="#123a86"/>
+          <path d="M214 30 L214 46 L232 40 L232 118 L214 118 Z" fill="#123a86" opacity=".8"/>
+          <path d="M386 30 L386 46 L368 40 L368 118 L386 118 Z" fill="#123a86" opacity=".8"/>
+          <g stroke="#f26173" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ロホ — 赤い胸に紺のトリム、ロヒージョスの色。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1920年</dd>
+          <dt>本拠地</dt><dd>パンプローナ（ナバラ州）</dd>
+          <dt>スタジアム</dt><dd>エル・サダール（約23,500人）</dd>
+          <dt>愛称</dt><dd>Los Rojillos（ロヒージョス）</dd>
+          <dt>カラー</dt><dd>レッド ＆ ネイビー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
