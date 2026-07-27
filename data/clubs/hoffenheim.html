@@ -1,0 +1,186 @@
+<!--CLUB slug=hoffenheim name=ホッフェンハイム league=ブンデスリーガ-->
+<!--VIDEO id=XShjFKvx8I8 title=TSG Hoffenheim ファンのコレオグラフィー（応援風景）-->
+<!--DESC ホッフェンハイム（ブンデスリーガ）のクラブ紹介。クライヒガウののどかな丘、プレゼロ・アレーナ、データと若手起用で駆け上がった急成長の物語を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08131f; --cl-blue:#1961b5; --cl-blue-hi:#6ba7ea; --cl-sky:#a9d1f5; --cl-gold:#d8b24a;
+    --cl-paper:var(--bg,#eef4fb); --cl-text:var(--fg,#0f2033); --cl-muted:#5c7186; --cl-line:#cddeee; --cl-card:#f7fbff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2edf7; --cl-muted:#8ba0b4; --cl-line:#173047; --cl-card:#0e1e2e; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2edf7; --cl-muted:#8ba0b4; --cl-line:#173047; --cl-card:#0e1e2e; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0f2033; --cl-muted:#5c7186; --cl-line:#cddeee; --cl-card:#f7fbff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,19,31,.94) 32%,rgba(8,19,31,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-blue);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9e7f4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-blue),var(--cl-blue-hi) 55%,#eaf4ff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(25,97,181,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-blue);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(25,97,181,.32);font-weight:700}
+  .cl-sky{color:var(--cl-blue);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b7cee0;background:#061019;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-blue);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="クライヒガウののどかな丘とプレゼロ・アレーナ、青いグローと幾何モチーフを描いたイラスト">
+        <defs>
+          <linearGradient id="hfsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f3157"/><stop offset="55%" stop-color="#0a2138"/><stop offset="100%" stop-color="#08131f"/></linearGradient>
+          <radialGradient id="hfglow" cx="70%" cy="28%" r="50%"><stop offset="0%" stop-color="#1961b5" stop-opacity=".4"/><stop offset="45%" stop-color="#6ba7ea" stop-opacity=".14"/><stop offset="100%" stop-color="#08131f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="hfhill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a63"/><stop offset="100%" stop-color="#08131f"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#hfsky)"/>
+        <rect width="1200" height="470" fill="url(#hfglow)"/>
+        <circle cx="256" cy="112" r="42" fill="#eaf4ff" opacity=".85"/>
+        <circle cx="240" cy="102" r="42" fill="#0a2138" opacity=".5"/>
+        <!-- データ/科学の幾何モチーフ（ネットワーク） -->
+        <g stroke="#6ba7ea" stroke-width="1.6" opacity=".4">
+          <line x1="470" y1="90" x2="560" y2="60"/><line x1="560" y1="60" x2="650" y2="104"/><line x1="650" y1="104" x2="730" y2="70"/><line x1="470" y1="90" x2="540" y2="140"/><line x1="650" y1="104" x2="600" y2="150"/>
+        </g>
+        <g fill="#6ba7ea" opacity=".8"><circle cx="470" cy="90" r="4"/><circle cx="560" cy="60" r="4"/><circle cx="650" cy="104" r="4"/><circle cx="730" cy="70" r="4"/><circle cx="540" cy="140" r="3.5"/><circle cx="600" cy="150" r="3.5"/></g>
+        <!-- のどかな丘の稜線 -->
+        <path d="M0 300 Q200 250 420 288 T820 268 T1200 296 L1200 470 L0 470 Z" fill="url(#hfhill)"/>
+        <path d="M0 300 Q200 250 420 288 T820 268 T1200 296" fill="none" stroke="#1961b5" stroke-width="2.5" opacity=".5"/>
+        <!-- 村の家並み -->
+        <g fill="#0c2237"><rect x="120" y="286" width="30" height="40"/><polygon points="120,286 135,272 150,286"/><rect x="176" y="292" width="34" height="34"/><polygon points="176,292 193,278 210,292"/><rect x="240" y="288" width="26" height="38"/><polygon points="240,288 253,276 266,288"/></g>
+        <g fill="#d8b24a" opacity=".8"><rect x="130" y="298" width="5" height="6"/><rect x="188" y="302" width="5" height="6"/><rect x="250" y="300" width="5" height="6"/></g>
+        <!-- プレゼロ・アレーナ（現代的な白い屋根の連なり） -->
+        <g>
+          <path d="M760 300 Q930 236 1130 300 L1130 320 Q930 262 760 320 Z" fill="#123a63"/>
+          <path d="M760 300 Q930 236 1130 300" fill="none" stroke="#6ba7ea" stroke-width="3" opacity=".8"/>
+          <rect x="770" y="320" width="360" height="70" fill="#0c2237"/>
+          <g fill="#1961b5" opacity=".75"><rect x="792" y="336" width="18" height="26"/><rect x="828" y="336" width="18" height="26"/><rect x="864" y="336" width="18" height="26"/><rect x="900" y="336" width="18" height="26"/><rect x="936" y="336" width="18" height="26"/><rect x="972" y="336" width="18" height="26"/><rect x="1008" y="336" width="18" height="26"/><rect x="1044" y="336" width="18" height="26"/><rect x="1080" y="336" width="18" height="26"/></g>
+        </g>
+        <!-- クラブ色の帯 -->
+        <g stroke="#1961b5" stroke-width="3" opacity=".35"><line x1="945" y1="240" x2="945" y2="300"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ホッフェンハイム<span class="cl-en">TSG 1899 Hoffenheim · 1899</span></h1>
+        <p class="cl-sub">クライヒガウののどかな丘から駆け上がった青と白のクラブ。データと若い才能を武器に、モダンなサッカーを追い求めます。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ南西部、バーデン＝ヴュルテンベルク州のクライヒガウ地方を本拠とするクラブです。<b>人口わずかな小さな村</b>を出自としながら、いまやトップリーグの舞台で戦う——サッカー界でも珍しい成り立ちを持っています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>プレゼロ・アレーナ — 丘のふもとの現代的なホーム</h2>
+      <p>隣町ジンスハイムに建つ、約3万人を収容するスタジアムです。2009年の開場以来、<span class="cl-hl">近代的な設備とコンパクトな一体感</span>で知られてきました。緑に囲まれた立地に、青と白のサポーターが集い、クラブの新しい歴史を刻んでいます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="青いマフラーを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#061019"/>
+          <defs><pattern id="hfcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#061019"/><circle cx="8.5" cy="7" r="5" fill="#1961b5"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#hfcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#6ba7ea" opacity=".55"/>
+          <g stroke="#6ba7ea" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6475"/><polygon points="164,30 206,40 164,54" fill="#1961b5"/><rect x="420" y="24" width="4" height="64" fill="#4f6475"/><polygon points="424,24 466,36 424,50" fill="#a9d1f5"/></g>
+        </svg>
+        <figcaption>青と白の一体感 — 丘のふもとのアレーナを染めるマフラー。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>クライヒガウ — 丘とぶどう畑の田園地帯</h2>
+      <p>本拠のあるクライヒガウは、<span class="cl-sky">なだらかな丘と森、ぶどう畑</span>が広がる静かな田園地帯。大都市のクラブとは対照的に、のどかな風景の中で歩んできました。だからこそ、この小さな土地から生まれたクラブがトップの舞台に立つこと自体が、地域の大きな誇りになっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="なだらかな丘とぶどう畑、小さな村の家並みが広がる田園の夕景シルエット">
+          <defs><linearGradient id="hfdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f3157"/><stop offset="100%" stop-color="#061019"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#hfdusk)"/>
+          <circle cx="500" cy="50" r="28" fill="#d8b24a" opacity=".35"/>
+          <path d="M0 96 Q150 66 320 96 T600 88 L600 170 L0 170 Z" fill="#0c2237"/>
+          <path d="M0 96 Q150 66 320 96 T600 88" fill="none" stroke="#1961b5" stroke-width="2" opacity=".5"/>
+          <g fill="#0a1c2e"><rect x="120" y="96" width="26" height="30"/><polygon points="120,96 133,84 146,96"/><rect x="170" y="100" width="30" height="26"/><polygon points="170,100 185,88 200,100"/></g>
+          <g fill="#d8b24a" opacity=".75"><rect x="128" y="104" width="5" height="6"/><rect x="180" y="108" width="5" height="6"/></g>
+          <g stroke="#6ba7ea" stroke-width="1.6" opacity=".35"><line x1="330" y1="120" x2="330" y2="150"/><line x1="360" y1="120" x2="360" y2="150"/><line x1="390" y1="120" x2="390" y2="150"/><line x1="420" y1="120" x2="420" y2="150"/><line x1="330" y1="120" x2="420" y2="120"/></g>
+        </svg>
+        <figcaption>丘とぶどう畑 — 小さな村から始まった物語。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>データと若手 — 未来志向のクラブづくり</h2>
+      <p>下位カテゴリーから短期間でトップリーグまで駆け上がった急成長で知られ、<strong>2008年にトップリーグ初昇格</strong>を果たしました。<span class="cl-hl">科学的なトレーニングやデータの活用、若い選手の積極起用</span>を早くから打ち出し、モダンで攻撃的なサッカーに挑み続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="上昇する折れ線グラフと、そのまわりを結ぶデータのネットワークを描いたイラスト">
+          <rect width="600" height="180" fill="#061019"/>
+          <g stroke="#1a3a54" stroke-width="1" opacity=".8"><line x1="60" y1="40" x2="540" y2="40"/><line x1="60" y1="80" x2="540" y2="80"/><line x1="60" y1="120" x2="540" y2="120"/></g>
+          <polyline points="60,150 160,132 260,138 360,96 460,70 540,42" fill="none" stroke="#6ba7ea" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#1961b5"><circle cx="60" cy="150" r="6"/><circle cx="160" cy="132" r="6"/><circle cx="260" cy="138" r="6"/><circle cx="360" cy="96" r="6"/><circle cx="460" cy="70" r="6"/></g>
+          <circle cx="540" cy="42" r="8" fill="#a9d1f5"/>
+          <g stroke="#6ba7ea" stroke-width="1.4" opacity=".35"><line x1="160" y1="132" x2="260" y2="138"/><line x1="360" y1="96" x2="460" y2="70"/><line x1="260" y1="138" x2="360" y2="96"/></g>
+        </svg>
+        <figcaption>右肩上がり — データと若手が支える、未来志向のクラブ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>青と白 — クライヒガウの色</h2>
+      <p>青と白のクラブカラーをまとい、地域の名から<strong>「ディ・クライヒガウアー」</strong>とも呼ばれます。伝統的なビッグクラブとは異なる道を歩みながら、<span class="cl-hl">若手を伸ばし、走力と組織で挑む</span>スタイルで、トップリーグに自分たちの居場所を築いてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="青と白の縦縞のユニフォームの胸に紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#061019"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eaf4ff"/>
+          <g fill="#1961b5"><path d="M232 24 L252 22 L252 138 L232 133 Z"/><path d="M272 21 L292 20 L292 140 L272 140 Z"/><path d="M312 20 L332 21 L332 140 L312 140 Z"/><path d="M352 22 L372 26 L372 132 L352 137 Z"/></g>
+          <g transform="translate(300,80)"><circle r="28" fill="#08131f" stroke="#6ba7ea" stroke-width="2"/><text x="0" y="8" fill="#6ba7ea" font-size="22" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">99</text></g>
+          <g stroke="#d8b24a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>青と白の縞 — クライヒガウの色をまとうクラブ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1899年</dd>
+          <dt>本拠地</dt><dd>ジンスハイム／ホッフェンハイム（クライヒガウ地方）</dd>
+          <dt>スタジアム</dt><dd>プレゼロ・アレーナ（約30,000人）</dd>
+          <dt>愛称</dt><dd>Die Kraichgauer（クライヒガウアー）</dd>
+          <dt>カラー</dt><dd>ブルー ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

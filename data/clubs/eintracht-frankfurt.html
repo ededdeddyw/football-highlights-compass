@@ -1,0 +1,185 @@
+<!--CLUB slug=eintracht-frankfurt name=フランクフルト league=ブンデスリーガ-->
+<!--VIDEO id=ZUCE-_fCdEA title=Im Herzen von Europa（フランクフルト公式讃歌）-->
+<!--DESC アイントラハト・フランクフルト（ブンデスリーガ）のクラブ紹介。金融の摩天楼スカイライン、ドイチェ・バンク・パルク、鷲（Adler）の象徴、2022年のヨーロッパリーグ制覇と熱狂的サポーターを、讃歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a0a0c; --cl-red:#e1000f; --cl-red-hi:#ff5560; --cl-black:#000000; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f6f4f5); --cl-text:var(--fg,#151317); --cl-muted:#6f6a70; --cl-line:#d7d3d8; --cl-card:#fdfbfc;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#ece8ee; --cl-muted:#9c96a2; --cl-line:#2a282e; --cl-card:#161519; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#ece8ee; --cl-muted:#9c96a2; --cl-line:#2a282e; --cl-card:#161519; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#151317; --cl-muted:#6f6a70; --cl-line:#d7d3d8; --cl-card:#fdfbfc; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,10,12,.94) 32%,rgba(10,10,12,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e3dde5;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-black),var(--cl-red) 55%,#ff5560)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(225,0,15,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(225,0,15,.3);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c9c4cd;background:#0c0c0e;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="フランクフルトの高層ビル群のスカイラインと、羽を広げた鷲を描いた黒赤のイラスト">
+        <defs>
+          <linearGradient id="efsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1013"/><stop offset="55%" stop-color="#0f0b0d"/><stop offset="100%" stop-color="#0a0a0c"/></linearGradient>
+          <radialGradient id="efglow" cx="50%" cy="60%" r="55%"><stop offset="0%" stop-color="#e1000f" stop-opacity=".34"/><stop offset="45%" stop-color="#ff5560" stop-opacity=".1"/><stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#efsky)"/>
+        <rect width="1200" height="470" fill="url(#efglow)"/>
+        <g fill="#e3dde5" opacity=".7"><circle cx="140" cy="70" r="2.5"/><circle cx="260" cy="46" r="2"/><circle cx="1080" cy="60" r="2.5"/><circle cx="980" cy="44" r="2"/></g>
+        <!-- 摩天楼スカイライン -->
+        <g fill="#141013">
+          <rect x="60" y="240" width="46" height="150"/><rect x="120" y="200" width="40" height="190"/>
+          <rect x="176" y="150" width="52" height="240"/><rect x="176" y="130" width="16" height="24"/>
+          <rect x="244" y="220" width="42" height="170"/><rect x="300" y="176" width="48" height="214"/>
+          <rect x="900" y="210" width="44" height="180"/><rect x="958" y="160" width="50" height="230"/>
+          <rect x="1020" y="120" width="44" height="270"/><rect x="1038" y="96" width="8" height="26"/>
+          <rect x="1080" y="196" width="42" height="194"/><rect x="1136" y="236" width="40" height="154"/>
+        </g>
+        <!-- ビルの窓明かり -->
+        <g fill="#e1000f" opacity=".6"><rect x="190" y="170" width="8" height="10"/><rect x="206" y="200" width="8" height="10"/><rect x="190" y="230" width="8" height="10"/><rect x="1034" y="150" width="8" height="10"/><rect x="1050" y="190" width="8" height="10"/><rect x="1034" y="230" width="8" height="10"/></g>
+        <g fill="#e6b23c" opacity=".55"><rect x="130" y="230" width="6" height="8"/><rect x="316" y="210" width="6" height="8"/><rect x="972" y="200" width="6" height="8"/><rect x="1096" y="230" width="6" height="8"/></g>
+        <!-- 鷲（Adler）羽を広げる -->
+        <g transform="translate(600,180)" fill="#e1000f">
+          <path d="M0 -36 C 10 -36 18 -28 18 -18 C 30 -30 44 -30 56 -22 C 76 -34 110 -34 150 -18 C 110 -18 96 -8 84 2 C 100 2 116 8 128 20 C 100 14 78 18 60 30 C 66 44 64 60 54 74 C 44 60 34 52 20 48 L 20 62 L 12 50 L 0 66 L -12 50 L -20 62 L -20 48 C -34 52 -44 60 -54 74 C -64 60 -66 44 -60 30 C -78 18 -100 14 -128 20 C -116 8 -100 2 -84 2 C -96 -8 -110 -18 -150 -18 C -110 -34 -76 -34 -56 -22 C -44 -30 -30 -30 -18 -18 C -18 -28 -10 -36 0 -36 Z"/>
+          <circle cx="0" cy="-24" r="6" fill="#0a0a0c"/>
+        </g>
+        <ellipse cx="600" cy="330" rx="360" ry="28" fill="#e1000f" opacity=".2"/>
+        <!-- 黒赤バンド -->
+        <g><rect x="0" y="446" width="1200" height="10" fill="#000000"/><rect x="0" y="456" width="1200" height="8" fill="#e1000f"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>フランクフルト<span class="cl-en">Eintracht Frankfurt · 1899</span></h1>
+        <p class="cl-sub">金融の摩天楼がそびえる街の、黒と赤の鷲。熱狂的なサポーターと、ヨーロッパの舞台での躍動で知られるクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ中部・ヘッセン州の金融都市フランクフルトを本拠とするクラブです。<b>摩天楼が立ち並ぶ国際都市</b>で、熱く一体感のあるサポーター文化とともに、ヨーロッパを舞台に躍動してきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ドイチェ・バンク・パルク — 森の中の劇場</h2>
+      <p>市街の南、シュタットヴァルト（市の森）に建つ、約5万8千人を収容するスタジアムです。かつては<strong>ヴァルトシュタディオン（森のスタジアム）</strong>と呼ばれてきました。屋根と可動式の芝で知られる現代的な器で、<span class="cl-hl">熱狂的なノルトヴェスト（北西）スタンド</span>が生み出す一体感は、ドイツでも屈指と評されます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黒と赤の旗とスカーフを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#0c0c0e"/>
+          <defs><pattern id="efcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0c0c0e"/><circle cx="8.5" cy="7" r="5" fill="#e1000f"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#efcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#ff5560" opacity=".5"/>
+          <g stroke="#ff5560" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4d4a50"/><polygon points="164,30 206,40 164,54" fill="#000000"/><rect x="420" y="24" width="4" height="64" fill="#4d4a50"/><polygon points="424,24 466,36 424,50" fill="#e1000f"/></g>
+        </svg>
+        <figcaption>森の中の劇場 — 黒と赤に染まる、一体のスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>フランクフルト — マインハッタンの摩天楼</h2>
+      <p>フランクフルトは、欧州中央銀行をはじめ多くの金融機関が集まるヨーロッパ金融の中心地。マイン川沿いにそびえる高層ビル群は<span class="cl-red">「マインハッタン」</span>と呼ばれ、ドイツでは珍しい摩天楼の街並みを描きます。国際色豊かで開かれた都市の空気が、多彩な選手が集うこのクラブの気風にも通じています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="マイン川沿いに立ち並ぶ高層ビル群の夕景シルエットと水面の反射">
+          <defs><linearGradient id="efdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1418"/><stop offset="100%" stop-color="#0c0c0e"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#efdusk)"/>
+          <circle cx="500" cy="46" r="26" fill="#e6b23c" opacity=".5"/>
+          <g fill="#141013"><rect x="40" y="80" width="26" height="60"/><rect x="76" y="50" width="30" height="90"/><rect x="86" y="34" width="10" height="16"/><rect x="116" y="70" width="28" height="70"/><rect x="154" y="44" width="32" height="96"/><rect x="196" y="88" width="26" height="52"/><rect x="232" y="60" width="30" height="80"/></g>
+          <g fill="#e1000f" opacity=".6"><rect x="88" y="60" width="6" height="8"/><rect x="98" y="80" width="6" height="8"/><rect x="164" y="56" width="6" height="8"/><rect x="242" y="72" width="6" height="8"/></g>
+          <rect x="0" y="140" width="600" height="30" fill="#0a0a0c"/>
+          <g stroke="#e1000f" stroke-width="2.5" stroke-linecap="round" opacity=".35"><line x1="80" y1="150" x2="80" y2="164"/><line x1="164" y1="150" x2="164" y2="164"/><line x1="244" y1="150" x2="244" y2="164"/></g>
+        </svg>
+        <figcaption>マインハッタン — マイン川に映る、ドイツ随一の摩天楼。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>鷲、ヨーロッパを制す</h2>
+      <p>エンブレムに掲げる<strong>鷲（アドラー）</strong>は、クラブの象徴であり街の紋章でもあります。ヨーロッパの舞台では長い歴史を持ち、<span class="cl-hl">2021-22シーズンにはヨーロッパリーグを制覇</span>。数万のサポーターがアウェーの街を赤黒に染めた遠征は語り草となり、「ヨーロッパの心臓」を自負する誇りを一層深めました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーを中心に、羽を広げた鷲のシルエットが重なるイラスト">
+          <rect width="600" height="180" fill="#0c0c0e"/>
+          <!-- 鷲のシルエット -->
+          <g transform="translate(300,80)" fill="#e1000f" opacity=".85"><path d="M0 -30 C 8 -30 14 -24 14 -16 C 26 -26 40 -26 52 -18 C 76 -30 116 -30 156 -14 C 116 -14 100 -4 88 6 C 104 6 120 12 132 24 C 104 18 82 22 62 34 L 62 46 L 40 40 C 44 52 42 66 32 78 C 24 66 14 58 0 56 C -14 58 -24 66 -32 78 C -42 66 -44 52 -40 40 L -62 46 L -62 34 C -82 22 -104 18 -132 24 C -120 12 -104 6 -88 6 C -100 -4 -116 -14 -156 -14 C -116 -30 -76 -30 -52 -18 C -40 -26 -26 -26 -14 -16 C -14 -24 -8 -30 0 -30 Z"/></g>
+          <!-- トロフィー -->
+          <g transform="translate(300,86)"><path d="M-22,-14 L22,-14 L18,8 Q15,22 0,28 Q-15,22 -18,8 Z" fill="#e6b23c"/><rect x="-7" y="28" width="14" height="12" fill="#c8912f"/><rect x="-16" y="40" width="32" height="7" rx="2" fill="#c8912f"/></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".5" fill="none"><path d="M120 150 q180 -24 360 0"/></g>
+        </svg>
+        <figcaption>ヨーロッパの鷲 — 大陸を制した、赤黒の遠征。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>黒と赤、そして日本とのつながり</h2>
+      <p>黒と赤に白を添えたクラブカラーで、<strong>「ディ・アドラー（鷲）」</strong>の愛称で親しまれます。粘り強く戦い、ここぞの勝負強さを見せるスタイルが持ち味。<span class="cl-hl">これまで多くの日本人選手が在籍</span>してきたことでも知られ、日本のファンにとっても身近なクラブのひとつです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="黒と赤のユニフォームの胸に、鷲をあしらった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#0c0c0e"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#000000"/>
+          <path d="M300 20 C 325 20, 343 25, 343 25 L343 133 C 322 138, 300 140, 300 140 L300 20 Z" fill="#e1000f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff" opacity=".8"/>
+          <!-- 紋章：鷲 -->
+          <g transform="translate(300,82)" fill="#ffffff"><path d="M0 -22 C 6 -22 10 -18 10 -12 C 20 -20 30 -20 40 -14 C 56 -22 84 -22 112 -10 C 84 -10 72 -2 64 6 C 76 6 88 10 96 20 C 76 16 60 18 46 26 L 46 34 L 30 30 C 33 40 31 50 24 58 C 18 50 10 44 0 42 C -10 44 -18 50 -24 58 C -31 50 -33 40 -30 30 L -46 34 L -46 26 C -60 18 -76 16 -96 20 C -88 10 -76 6 -64 6 C -72 -2 -84 -10 -112 -10 C -84 -22 -56 -22 -40 -14 C -30 -20 -20 -20 -10 -12 C -10 -18 -6 -22 0 -22 Z"/></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>黒と赤の鷲 — 胸に掲げる、街とクラブの象徴。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1899年</dd>
+          <dt>本拠地</dt><dd>フランクフルト・アム・マイン（ヘッセン州）</dd>
+          <dt>スタジアム</dt><dd>ドイチェ・バンク・パルク（約58,000人）</dd>
+          <dt>愛称</dt><dd>Die Adler（鷲）／SGE</dd>
+          <dt>カラー</dt><dd>ブラック ＆ レッド（ホワイト）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

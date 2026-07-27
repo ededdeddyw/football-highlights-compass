@@ -1257,7 +1257,7 @@ try {
     const tbl = {};
     const row = (slug,name)=> tbl[slug] || (tbl[slug]={slug,name,played:0,w:0,d:0,l:0,gf:0,ga:0,gd:0,pts:0});
     for (const mt of (j.matches||[])){
-      const hs = mt.homeSlug, as = mt.awaySlug;
+      const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away);
       if (hs) SLUG2LEAGUE[hs] = code;
       if (as) SLUG2LEAGUE[as] = code;
       if (mt.videoId){
@@ -1291,7 +1291,9 @@ function railJstYmd(iso){
   return `${t.getUTCFullYear()}/${String(t.getUTCMonth()+1).padStart(2,'0')}/${String(t.getUTCDate()).padStart(2,'0')}`;
 }
 // クラブ図鑑のslug と 試合データ側slug がずれるクラブの別名対応（レールのデータ引き当て用）。
-const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol' };
+const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol',
+  'bayern-munich':'bayern', 'borussia-dortmund':'dortmund', 'rb-leipzig':'leipzig',
+  'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen' };
 // 左レール：順位表（対象クラブ中心・前後数行）
 function railStandings(clubSlug){
   clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;

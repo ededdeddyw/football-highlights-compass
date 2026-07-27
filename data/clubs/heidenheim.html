@@ -1,0 +1,196 @@
+<!--CLUB slug=heidenheim name=ハイデンハイム league=ブンデスリーガ-->
+<!--VIDEO id=CD1_H6xFUzQ title=1. FC Heidenheim 1846 公式クラブ賛歌（応援歌）-->
+<!--DESC ハイデンハイム（ブンデスリーガ）のクラブ紹介。丘の上のヘレンシュタイン城、フォイト＝アレーナ、長期政権と着実な階段で初のトップリーグへ辿り着いた物語を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a0d1a; --cl-red:#e30613; --cl-red-hi:#ff5560; --cl-blue:#003c8f; --cl-blue-hi:#4f86d6; --cl-gold:#c9a24c;
+    --cl-paper:var(--bg,#eef2f8); --cl-text:var(--fg,#111726); --cl-muted:#5d6a80; --cl-line:#ccd6e6; --cl-card:#f7faff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e4eaf4; --cl-muted:#8b96ac; --cl-line:#1c2740; --cl-card:#101627; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e4eaf4; --cl-muted:#8b96ac; --cl-line:#1c2740; --cl-card:#101627; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#111726; --cl-muted:#5d6a80; --cl-line:#ccd6e6; --cl-card:#f7faff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,13,26,.94) 32%,rgba(10,13,26,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dce4f2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-red),var(--cl-blue) 55%,#eaf1ff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(227,6,19,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,60,143,.34);font-weight:700}
+  .cl-blue{color:var(--cl-blue);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bcc8de;background:#080b16;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="丘の上のヘレンシュタイン城とフォイト＝アレーナ、赤と青のグローを描いたイラスト">
+        <defs>
+          <linearGradient id="hdsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f2247"/><stop offset="55%" stop-color="#0c1630"/><stop offset="100%" stop-color="#0a0d1a"/></linearGradient>
+          <radialGradient id="hdglow" cx="40%" cy="30%" r="52%"><stop offset="0%" stop-color="#e30613" stop-opacity=".3"/><stop offset="45%" stop-color="#003c8f" stop-opacity=".18"/><stop offset="100%" stop-color="#0a0d1a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="hdhill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a2a"/><stop offset="100%" stop-color="#0a0d1a"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#hdsky)"/>
+        <rect width="1200" height="470" fill="url(#hdglow)"/>
+        <circle cx="256" cy="112" r="40" fill="#eaf1ff" opacity=".85"/>
+        <circle cx="240" cy="102" r="40" fill="#0c1630" opacity=".5"/>
+        <g fill="#4f86d6" opacity=".28"><circle cx="470" cy="88" r="2.5"/><circle cx="560" cy="62" r="2"/><circle cx="640" cy="112" r="2.5"/><circle cx="720" cy="56" r="2"/><circle cx="380" cy="140" r="2"/></g>
+        <!-- 南ドイツの緑の丘 -->
+        <path d="M0 320 Q300 250 620 300 T1200 296 L1200 470 L0 470 Z" fill="url(#hdhill)"/>
+        <path d="M0 320 Q300 250 620 300 T1200 296" fill="none" stroke="#2c6b3f" stroke-width="2" opacity=".5"/>
+        <!-- 丘の上のヘレンシュタイン城 -->
+        <g fill="#141a2e">
+          <rect x="820" y="180" width="34" height="80"/><rect x="870" y="160" width="44" height="100"/><rect x="930" y="188" width="30" height="72"/>
+          <rect x="854" y="196" width="16" height="64"/><rect x="914" y="196" width="16" height="64"/>
+          <path d="M820 180 l0 -14 l8 0 l0 8 l8 0 l0 -8 l8 0 l0 8 l8 0 l0 -8 l2 0 l0 14 Z"/>
+          <path d="M870 160 l0 -16 l9 0 l0 9 l9 0 l0 -9 l9 0 l0 9 l9 0 l0 -9 l8 0 l0 16 Z"/>
+          <path d="M930 188 l0 -12 l7 0 l0 7 l7 0 l0 -7 l7 0 l0 7 l2 0 l0 5 Z"/>
+        </g>
+        <g fill="#e30613" opacity=".8"><rect x="884" y="184" width="14" height="20"/></g>
+        <g fill="#003c8f" opacity=".9"><rect x="828" y="200" width="8" height="12"/><rect x="940" y="206" width="8" height="12"/></g>
+        <rect x="888" y="120" width="3" height="44" fill="#6b7690"/><polygon points="891,120 919,128 891,136" fill="#e30613"/>
+        <!-- フォイト＝アレーナ（丘のふもとのスタンド） -->
+        <rect x="0" y="330" width="1200" height="140" fill="#0a1120"/>
+        <g fill="#101a33" stroke="#1c2b4a" stroke-width="2"><path d="M300 330 L300 270 Q560 236 820 270 L820 330 Z"/></g>
+        <g fill="#e30613" opacity=".8"><rect x="332" y="292" width="14" height="18"/><rect x="368" y="288" width="14" height="18"/><rect x="404" y="285" width="14" height="18"/><rect x="440" y="283" width="14" height="18"/></g>
+        <g fill="#4f86d6" opacity=".85"><rect x="476" y="282" width="14" height="18"/><rect x="512" y="282" width="14" height="18"/><rect x="548" y="283" width="14" height="18"/><rect x="584" y="285" width="14" height="18"/><rect x="620" y="288" width="14" height="18"/><rect x="656" y="292" width="14" height="18"/></g>
+        <g stroke="#e30613" stroke-width="3" opacity=".35"><line x1="560" y1="240" x2="560" y2="330"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ハイデンハイム<span class="cl-en">1. FC Heidenheim · 2007</span></h1>
+        <p class="cl-sub">丘の上に城がそびえる小さな街から、着実な一歩でトップリーグへ。赤と青をまとう南ドイツのクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ南部、バーデン＝ヴュルテンベルク州の街ハイデンハイム・アン・デア・ブレンツを本拠とするクラブです。<b>丘の上に中世の城がそびえる</b>静かな街から、着実に階段を上ってきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>フォイト＝アレーナ — 丘のふもとのホーム</h2>
+      <p>街を見下ろす丘のふもとに建つスタジアムです。収容規模は<span class="cl-hl">トップリーグでも小さな部類</span>ながら、観客とピッチの近さが生む一体感が魅力。緑に囲まれた立地で、赤と青のサポーターが声を合わせ、格上を相手にした熱戦を後押しします。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤と青のマフラーを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#080b16"/>
+          <defs><pattern id="hdcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#080b16"/><circle cx="8.5" cy="7" r="5" fill="#003c8f"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#hdcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#e30613" opacity=".55"/>
+          <g stroke="#4f86d6" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4a566e"/><polygon points="164,30 206,40 164,54" fill="#e30613"/><rect x="420" y="24" width="4" height="64" fill="#4a566e"/><polygon points="424,24 466,36 424,50" fill="#003c8f"/></g>
+        </svg>
+        <figcaption>赤と青の一体感 — 観客とピッチが近い、丘のふもとのアレーナ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>丘の上のヘレンシュタイン城</h2>
+      <p>街のシンボルは、丘の上にそびえる<span class="cl-blue">ヘレンシュタイン城</span>。中世の面影を残す城跡からは、街と南ドイツの緑の丘陵が一望できます。派手さのない、落ち着いた地方都市——その堅実な気質が、身の丈に合った運営を貫くクラブの姿勢とよく重なります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="丘の上にそびえるヘレンシュタイン城と、南ドイツの緑の丘陵の夕景シルエット">
+          <defs><linearGradient id="hddusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f2247"/><stop offset="100%" stop-color="#080b16"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#hddusk)"/>
+          <circle cx="500" cy="48" r="26" fill="#c9a24c" opacity=".32"/>
+          <path d="M0 110 Q160 70 340 100 T600 96 L600 170 L0 170 Z" fill="#123a2a"/>
+          <g fill="#141a2e">
+            <rect x="230" y="60" width="24" height="50"/><rect x="266" y="44" width="34" height="66"/><rect x="312" y="66" width="22" height="44"/>
+            <path d="M230 60 l0 -10 l6 0 l0 5 l6 0 l0 -5 l6 0 l0 5 l4 0 l0 10 Z"/>
+            <path d="M266 44 l0 -12 l7 0 l0 6 l7 0 l0 -6 l7 0 l0 6 l6 0 l0 12 Z"/>
+          </g>
+          <g fill="#e30613" opacity=".8"><rect x="278" y="60" width="10" height="14"/></g>
+          <rect x="284" y="18" width="2" height="26" fill="#6b7690"/><polygon points="286,18 306,24 286,30" fill="#e30613"/>
+        </svg>
+        <figcaption>ヘレンシュタイン城 — 丘の上から街を見守る、中世の城跡。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 歩み</div>
+      <h2>着実な階段 — 長い時間をかけて頂へ</h2>
+      <p>2007年に現在の形となった比較的新しいクラブながら、<strong>長く同じ指揮官のもとで一貫した強化</strong>を続けてきたことで知られます。下位カテゴリーからひとつずつカテゴリーを上げ、<span class="cl-hl">2023年に初めてトップリーグへ昇格</span>。派手な補強ではなく、時間をかけた積み重ねで頂点の舞台に辿り着きました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="小さな段から一段ずつ上へと積み上がり、頂に赤い旗が立つ階段のイラスト">
+          <rect width="600" height="180" fill="#080b16"/>
+          <g fill="#101a33" stroke="#1c2b4a" stroke-width="1.5">
+            <rect x="60" y="140" width="90" height="26"/>
+            <rect x="150" y="114" width="90" height="52"/>
+            <rect x="240" y="88" width="90" height="78"/>
+            <rect x="330" y="62" width="90" height="104"/>
+            <rect x="420" y="36" width="90" height="130"/>
+          </g>
+          <g fill="#003c8f" opacity=".8"><rect x="60" y="140" width="90" height="6"/><rect x="150" y="114" width="90" height="6"/><rect x="240" y="88" width="90" height="6"/><rect x="330" y="62" width="90" height="6"/><rect x="420" y="36" width="90" height="6"/></g>
+          <g><rect x="462" y="4" width="3" height="34" fill="#6b7690"/><polygon points="465,6 505,14 465,24" fill="#e30613"/></g>
+          <g fill="none" stroke="#ff5560" stroke-width="2.5" stroke-dasharray="3 7" stroke-linecap="round" opacity=".7"><path d="M105 138 L195 112 L285 86 L375 60 L455 34"/></g>
+        </svg>
+        <figcaption>一段ずつ — 時間をかけて上り詰めた、着実な階段。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>赤と青 — 身の丈で挑む堅実なサッカー</h2>
+      <p>赤と青のクラブカラーをまとい、頭文字から<strong>「FCH」</strong>の呼び名でも親しまれます。大きな資本を持たないクラブとして、<span class="cl-hl">規律ある守備と全員でのハードワーク</span>を土台に戦うスタイル。身の丈に合った堅実な歩みそのものが、このクラブの誇りとなっています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤と青に分かれたユニフォームの胸に紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#080b16"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#e30613"/>
+          <path d="M300 20 C 300 20, 350 20, 386 30 L386 118 C 386 118, 300 140, 300 140 Z" fill="#003c8f"/>
+          <path d="M296 20 L304 20 L304 140 L296 140 Z" fill="#eaf1ff" opacity=".85"/>
+          <g transform="translate(300,80)"><path d="M0,-30 L26,-22 L26,6 Q26,26 0,34 Q-26,26 -26,6 L-26,-22 Z" fill="#080b16" stroke="#eaf1ff" stroke-width="2"/><path d="M-16,-12 L0,-12 L0,10 L-16,10 Z" fill="#e30613"/><path d="M0,-12 L16,-12 L16,10 L0,10 Z" fill="#003c8f"/></g>
+          <g stroke="#c9a24c" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>赤と青のクレスト — 身の丈で挑む、南ドイツのクラブ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>2007年</dd>
+          <dt>本拠地</dt><dd>ハイデンハイム・アン・デア・ブレンツ（バーデン＝ヴュルテンベルク州）</dd>
+          <dt>スタジアム</dt><dd>フォイト＝アレーナ（約15,000人）</dd>
+          <dt>愛称</dt><dd>FCH</dd>
+          <dt>カラー</dt><dd>レッド ＆ ブルー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

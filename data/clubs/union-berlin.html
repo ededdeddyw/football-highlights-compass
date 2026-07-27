@@ -1,0 +1,185 @@
+<!--CLUB slug=union-berlin name=ウニオン・ベルリン league=ブンデスリーガ-->
+<!--VIDEO id=wnvH9OIMZog title=Eisern Union／アルテ・フェルステライのクラブ賛歌（応援歌）-->
+<!--DESC ウニオン・ベルリン（ブンデスリーガ）のクラブ紹介。ケーペニックの森に建つアルテ・フェルステライ、「鉄のウニオン」の結束、サポーターが築いたクラブの物語を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140808; --cl-red:#eb1923; --cl-red-hi:#ff5b62; --cl-yellow:#f4c020; --cl-forest:#2c6b3f;
+    --cl-paper:var(--bg,#f8f1f0); --cl-text:var(--fg,#241110); --cl-muted:#6f5854; --cl-line:#e0cbc9; --cl-card:#fff9f8;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f3e0de; --cl-muted:#ab918d; --cl-line:#361a19; --cl-card:#1d100f; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f3e0de; --cl-muted:#ab918d; --cl-line:#361a19; --cl-card:#1d100f; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#241110; --cl-muted:#6f5854; --cl-line:#e0cbc9; --cl-card:#fff9f8; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,8,8,.94) 32%,rgba(20,8,8,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f0dcda;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:repeating-linear-gradient(-45deg,#140808 0 15px,var(--cl-red) 15px 30px)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(235,25,35,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(235,25,35,.32);font-weight:700}
+  .cl-forest{color:var(--cl-forest);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e0c1bf;background:#100606;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ケーペニックの森に囲まれたアルテ・フェルステライと、赤いグロー・鉄骨を描いたイラスト">
+        <defs>
+          <linearGradient id="ubsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1010"/><stop offset="55%" stop-color="#1c0b0b"/><stop offset="100%" stop-color="#140808"/></linearGradient>
+          <radialGradient id="ubglow" cx="50%" cy="34%" r="55%"><stop offset="0%" stop-color="#eb1923" stop-opacity=".34"/><stop offset="45%" stop-color="#f4c020" stop-opacity=".1"/><stop offset="100%" stop-color="#140808" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#ubsky)"/>
+        <rect width="1200" height="470" fill="url(#ubglow)"/>
+        <circle cx="990" cy="110" r="40" fill="#f6ece4" opacity=".85"/>
+        <circle cx="974" cy="100" r="40" fill="#1c0b0b" opacity=".5"/>
+        <g fill="#f4c020" opacity=".28"><circle cx="470" cy="88" r="2.5"/><circle cx="560" cy="62" r="2"/><circle cx="640" cy="112" r="2.5"/><circle cx="720" cy="56" r="2"/></g>
+        <!-- 森（針葉樹） -->
+        <g fill="#16281a">
+          <polygon points="60,320 92,220 124,320"/><polygon points="70,320 92,250 114,320"/>
+          <polygon points="150,330 186,210 222,330"/><polygon points="162,330 186,246 210,330"/>
+          <polygon points="252,326 280,232 308,326"/>
+          <polygon points="900,326 936,214 972,326"/><polygon points="912,326 936,250 960,326"/>
+          <polygon points="1010,332 1046,220 1082,332"/><polygon points="1100,326 1130,238 1160,326"/>
+        </g>
+        <g fill="#2c6b3f" opacity=".5"><polygon points="60,320 92,240 124,320"/><polygon points="150,330 186,240 222,330"/><polygon points="900,326 936,244 972,326"/></g>
+        <!-- スタジアム（鉄骨のフラッドライトと立ち見スタンド） -->
+        <rect x="0" y="326" width="1200" height="144" fill="#0f0606"/>
+        <g fill="#1e0d0d" stroke="#3a1414" stroke-width="2"><path d="M360 326 L360 260 Q600 224 840 260 L840 326 Z"/></g>
+        <g fill="#eb1923" opacity=".8"><rect x="392" y="286" width="14" height="18"/><rect x="428" y="282" width="14" height="18"/><rect x="464" y="279" width="14" height="18"/><rect x="500" y="276" width="14" height="18"/><rect x="536" y="275" width="14" height="18"/><rect x="572" y="275" width="14" height="18"/><rect x="608" y="275" width="14" height="18"/><rect x="644" y="276" width="14" height="18"/><rect x="680" y="279" width="14" height="18"/><rect x="716" y="282" width="14" height="18"/><rect x="752" y="286" width="14" height="18"/></g>
+        <!-- 鉄骨のフラッドライト塔（Eisern=鉄） -->
+        <g stroke="#5a2a2a" stroke-width="4" fill="none"><path d="M300 326 L316 150 M340 326 L324 150 M300 250 L340 250 M306 210 L334 210 M312 180 L328 180"/><path d="M860 326 L876 150 M900 326 L884 150 M860 250 L900 250 M866 210 L894 210 M872 180 L888 180"/></g>
+        <g fill="#f4c020" opacity=".95"><rect x="308" y="140" width="24" height="12" rx="2"/><rect x="868" y="140" width="24" height="12" rx="2"/></g>
+        <g fill="#f4c020" opacity=".2"><polygon points="320,150 200,326 440,326"/><polygon points="880,150 760,326 1000,326"/></g>
+        <g stroke="#eb1923" stroke-width="3" opacity=".35"><line x1="600" y1="230" x2="600" y2="326"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ウニオン・ベルリン<span class="cl-en">1. FC Union Berlin · 1966</span></h1>
+        <p class="cl-sub">森の中のスタジアムに集う「鉄のウニオン」。サポーターの結束が支える、旧東ベルリンの赤いクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツの首都ベルリン南東部、緑豊かなケーペニック地区を本拠とするクラブです。<b>森に囲まれたスタジアム</b>と、熱く結束したサポーターで知られる、旧東ベルリンを代表する存在です。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>アルテ・フェルステライ — 森に抱かれた聖地</h2>
+      <p>その名は「古い森番小屋」を意味し、文字どおり<span class="cl-hl">森に囲まれた立地</span>が特徴のスタジアムです。三方を立ち見の大観衆が固め、独特の一体感を生み出します。改修の際には<strong>多くのサポーターが自らの手で作業に加わった</strong>という逸話でも知られ、クラブと人々の距離の近さを象徴する場所です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤いマフラーを掲げる立ち見の観客で埋まった、森に囲まれたスタンドのイラスト">
+          <rect width="600" height="190" fill="#100606"/>
+          <defs><pattern id="ubcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#100606"/><circle cx="8.5" cy="7" r="5" fill="#eb1923"/></pattern></defs>
+          <g fill="#16281a"><polygon points="20,96 40,40 60,96"/><polygon points="540,96 560,40 580,96"/></g>
+          <path d="M0,190 L600,190 L600,96 Q300,60 0,96 Z" fill="url(#ubcrowd)"/>
+          <path d="M0,96 Q300,60 600,96 L600,84 Q300,48 0,84 Z" fill="#ff5b62" opacity=".5"/>
+          <g stroke="#ff5b62" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 64 q28 -22 56 0"/><path d="M220 52 q28 -22 56 0"/><path d="M360 58 q28 -22 56 0"/><path d="M480 50 q28 -22 56 0"/></g>
+          <g><rect x="160" y="34" width="4" height="56" fill="#5a2a2a"/><polygon points="164,34 206,44 164,58" fill="#eb1923"/><rect x="420" y="30" width="4" height="60" fill="#5a2a2a"/><polygon points="424,30 466,40 424,54" fill="#f4c020"/></g>
+        </svg>
+        <figcaption>森の聖地 — 立ち見の大観衆が固める、赤いスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ケーペニック — 旧東ベルリンの労働者の街</h2>
+      <p>ケーペニックは、湖と<span class="cl-forest">森</span>に恵まれたベルリン南東部の地区。クラブは分断の時代、旧東ドイツ側で<strong>労働者に愛されるチーム</strong>として支持を集めてきました。統一を経てもその気風は変わらず、「大資本より、まず仲間」という姿勢が、いまも多くの共感を呼んでいます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="森と湖に囲まれたケーペニックの街並みと、赤い星のシルエット">
+          <defs><linearGradient id="ubdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1010"/><stop offset="100%" stop-color="#100606"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#ubdusk)"/>
+          <circle cx="500" cy="48" r="26" fill="#f4c020" opacity=".3"/>
+          <g fill="#16281a"><polygon points="60,120 92,50 124,120"/><polygon points="140,124 168,64 196,124"/><polygon points="440,120 472,50 504,120"/><polygon points="510,124 538,64 566,124"/></g>
+          <g fill="#1e0d0d"><rect x="230" y="80" width="30" height="40"/><polygon points="230,80 245,64 260,80"/><rect x="280" y="70" width="26" height="50"/><rect x="320" y="86" width="34" height="34"/><polygon points="320,86 337,70 354,86"/></g>
+          <g fill="#eb1923" opacity=".8"><rect x="240" y="92" width="6" height="8"/><rect x="288" y="84" width="6" height="8"/><rect x="332" y="96" width="6" height="8"/></g>
+          <rect x="0" y="120" width="600" height="50" fill="#0d1a11" opacity=".85"/>
+          <g stroke="#4f8a63" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="138" x2="200" y2="138"/><line x1="320" y1="146" x2="470" y2="146"/><line x1="200" y1="156" x2="360" y2="156"/></g>
+        </svg>
+        <figcaption>森と湖の街 — 労働者に愛されてきたケーペニック。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 結束</div>
+      <h2>アイゼルン・ウニオン — 「鉄の結束」</h2>
+      <p>クラブを表す言葉が<span class="cl-hl">「アイゼルン・ウニオン（鉄のウニオン）」</span>。何度も苦境を経験しながら、サポーターの支えとともに乗り越えてきた歴史がこの合言葉に込められています。長い道のりの末に<strong>初のトップリーグ昇格、そして欧州の舞台へ</strong>と歩を進めた物語は、多くの人の心を打ちました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="組み合わさった鉄骨と、その中央で握り合う二本の腕を表す紋章のイラスト">
+          <rect width="600" height="180" fill="#100606"/>
+          <g stroke="#5a2a2a" stroke-width="6" fill="none" opacity=".8"><path d="M150 40 L150 140 M450 40 L450 140 M150 40 L450 40 M150 140 L450 140 M150 40 L450 140 M450 40 L150 140"/></g>
+          <g stroke="#eb1923" stroke-width="10" stroke-linecap="round"><line x1="230" y1="90" x2="300" y2="90"/><line x1="300" y1="90" x2="370" y2="90"/></g>
+          <g fill="#f4c020"><circle cx="230" cy="90" r="14"/><circle cx="370" cy="90" r="14"/></g>
+          <g fill="none" stroke="#ff5b62" stroke-width="3" opacity=".6"><path d="M300 40 q-50 -6 -90 8"/><path d="M300 40 q50 -6 90 8"/></g>
+          <text x="300" y="164" fill="#ff5b62" font-size="16" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="3">EISERN</text>
+        </svg>
+        <figcaption>鉄の結束 — 苦境をともに越えてきた、クラブと人々。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>赤と白 — 走り、戦い、守り抜く</h2>
+      <p>赤と白のクラブカラーをまとい、<strong>「ディ・アイゼルネン（鉄の男たち）」</strong>と呼ばれます。豊富な運動量と規律ある守備、そして<span class="cl-hl">最後まで諦めない粘り</span>を身上とし、限られた戦力でも上位のクラブに立ち向かう姿が、ホームの熱狂とともに語り継がれています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤いユニフォームの胸に、鉄骨をかたどった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#100606"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eb1923"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f6ece4" opacity=".85"/>
+          <g transform="translate(300,82)"><path d="M0,-30 L26,-22 L26,6 Q26,26 0,34 Q-26,26 -26,6 L-26,-22 Z" fill="#100606" stroke="#f6ece4" stroke-width="2"/><g stroke="#f4c020" stroke-width="3" fill="none"><path d="M-12,-14 L-12,14 M12,-14 L12,14 M-12,-14 L12,-14 M-12,14 L12,14 M-12,-14 L12,14"/></g></g>
+          <g stroke="#f4c020" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>赤と白のクレスト — 鉄骨をかたどった、結束の紋章。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1966年</dd>
+          <dt>本拠地</dt><dd>ベルリン（ケーペニック地区）</dd>
+          <dt>スタジアム</dt><dd>アルテ・フェルステライ（約22,000人）</dd>
+          <dt>愛称</dt><dd>Die Eisernen（鉄の男たち）</dd>
+          <dt>カラー</dt><dd>レッド ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
