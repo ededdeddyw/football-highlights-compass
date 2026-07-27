@@ -1,0 +1,198 @@
+<!--CLUB slug=freiburg name=フライブルク league=ブンデスリーガ-->
+<!--VIDEO id=U1ghLopEH14 title=SC Freiburg Hymne「Schwarzwald im Herzen」（応援歌）-->
+<!--DESC フライブルク（ブンデスリーガ）のクラブ紹介。黒い森の麓に広がる大学都市、大聖堂の塔、堅実な長期政権とオイローパ＝パルク・シュタディオンを、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140909; --cl-red:#e2001a; --cl-red-hi:#ff5a60; --cl-forest:#2f7d3a; --cl-gold:#d8a24a;
+    --cl-paper:var(--bg,#f7f1f1); --cl-text:var(--fg,#1e1313); --cl-muted:#7a6868; --cl-line:#e2cbcb; --cl-card:#fffafa;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f2e5e5; --cl-muted:#ab9898; --cl-line:#341f1f; --cl-card:#1c1010; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f2e5e5; --cl-muted:#ab9898; --cl-line:#341f1f; --cl-card:#1c1010; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1e1313; --cl-muted:#7a6868; --cl-line:#e2cbcb; --cl-card:#fffafa; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,9,9,.94) 32%,rgba(20,9,9,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-red-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f0e1e1;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-red),var(--cl-red-hi) 55%,#ffe0e0)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(226,0,26,.24)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(226,0,26,.3);font-weight:700}
+  .cl-forest{color:var(--cl-forest);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e3c6c6;background:#170b0b;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="黒い森の緑の山並みと大聖堂の塔、その麓のスタジアムを描いたイラスト">
+        <defs>
+          <linearGradient id="frsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1013"/><stop offset="55%" stop-color="#20090b"/><stop offset="100%" stop-color="#140909"/></linearGradient>
+          <radialGradient id="frglow" cx="72%" cy="30%" r="50%"><stop offset="0%" stop-color="#e2001a" stop-opacity=".32"/><stop offset="45%" stop-color="#ff5a60" stop-opacity=".10"/><stop offset="100%" stop-color="#140909" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#frsky)"/>
+        <rect width="1200" height="470" fill="url(#frglow)"/>
+        <g fill="#e2001a" opacity=".16"><circle cx="470" cy="96" r="2.5"/><circle cx="560" cy="70" r="2"/><circle cx="300" cy="110" r="2.5"/><circle cx="720" cy="60" r="2"/></g>
+        <!-- 黒い森の山並み（連なるモミの尾根） -->
+        <path d="M0 280 L120 210 L240 260 L360 196 L500 258 L640 200 L780 254 L920 208 L1060 256 L1200 214 L1200 470 L0 470 Z" fill="#0f2417" opacity=".9"/>
+        <path d="M0 320 L140 262 L300 306 L460 254 L620 306 L780 258 L960 306 L1140 262 L1200 288 L1200 470 L0 470 Z" fill="#122c1c"/>
+        <!-- モミの木のシルエット -->
+        <g fill="#0c1c12"><polygon points="180,300 168,340 192,340"/><polygon points="180,318 164,360 196,360"/><polygon points="420,296 406,342 434,342"/><polygon points="420,316 402,364 438,364"/><polygon points="820,300 806,344 834,344"/><polygon points="820,320 802,366 838,366"/></g>
+        <!-- 大聖堂（フライブルク・ミュンスターの尖塔） -->
+        <g transform="translate(560,120)">
+          <polygon points="40,0 20,70 60,70" fill="#2a1416"/>
+          <rect x="20" y="70" width="40" height="90" fill="#2a1416"/>
+          <polygon points="40,0 40,70 60,70" fill="#3a1c1e"/>
+          <rect x="40" y="70" width="20" height="90" fill="#3a1c1e"/>
+          <g fill="#e2001a" opacity=".55"><rect x="30" y="90" width="8" height="18" rx="3"/><rect x="44" y="90" width="8" height="18" rx="3"/><rect x="30" y="118" width="8" height="18" rx="3"/><rect x="44" y="118" width="8" height="18" rx="3"/></g>
+          <g fill="none" stroke="#e2001a" stroke-width="2" opacity=".5"><path d="M20 70 L60 70"/></g>
+        </g>
+        <!-- スタジアム（モダンな屋根のスタンド） -->
+        <g>
+          <ellipse cx="600" cy="352" rx="290" ry="60" fill="#0d0707"/>
+          <path d="M340 352 Q600 292 860 352 L860 328 Q600 268 340 328 Z" fill="#2a1214"/>
+          <path d="M340 352 Q600 292 860 352" fill="none" stroke="#e2001a" stroke-width="3" opacity=".6"/>
+          <ellipse cx="600" cy="352" rx="150" ry="24" fill="#2f7d3a" opacity=".5"/>
+          <g fill="#ffcfd2" opacity=".5"><circle cx="420" cy="322" r="2"/><circle cx="500" cy="310" r="2"/><circle cx="600" cy="306" r="2"/><circle cx="700" cy="310" r="2"/><circle cx="780" cy="322" r="2"/></g>
+        </g>
+        <!-- 赤白の帯 -->
+        <g transform="translate(70,410)"><rect x="0" y="0" width="320" height="14" fill="#e2001a"/><rect x="0" y="14" width="320" height="12" fill="#f2f2f2"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>フライブルク<span class="cl-en">SC Freiburg · 1904</span></h1>
+        <p class="cl-sub">黒い森の麓に広がる大学都市の赤いクラブ。堅実な運営と長期政権のもと、身の丈を超えた戦いを続けてきた南西ドイツの雄です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ南西端・バーデン地方の大学都市フライブルクを本拠とするクラブです。<b>黒い森（シュヴァルツヴァルト）</b>の麓に広がる陽当たりのよい街で、環境に配慮した先進的な取り組みと、堅実なクラブ運営で知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>オイローパ＝パルク・シュタディオン</h2>
+      <p>市の北部に2021年に開場した、約3万4千人を収容するスタジアムです。それまで長く本拠としてきた<strong>ドライザム／シュヴァルツヴァルト・シュタディオン</strong>から移り、屋根一面にソーラーパネルを備えるなど、環境先進都市らしい設計で知られます。コンパクトな造りゆえに、<span class="cl-hl">ゴール裏の声援がピッチへ真っすぐ届く</span>、熱量の高い舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤い旗を掲げる観客と、ソーラーパネルを備えた屋根のスタンドのイラスト">
+          <rect width="600" height="190" fill="#170b0b"/>
+          <defs><pattern id="frcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#170b0b"/><circle cx="8.5" cy="7" r="5" fill="#e2001a"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,110 Q300,76 0,110 Z" fill="url(#frcrowd)"/>
+          <path d="M0,74 Q300,44 600,74 L600,60 Q300,30 0,60 Z" fill="#3a1c1e"/>
+          <g fill="#1b3a8f" opacity=".55"><rect x="40" y="46" width="520" height="22" rx="4"/></g>
+          <g stroke="#0d0707" stroke-width="2" opacity=".8"><line x1="90" y1="46" x2="90" y2="68"/><line x1="150" y1="46" x2="150" y2="68"/><line x1="210" y1="46" x2="210" y2="68"/><line x1="270" y1="46" x2="270" y2="68"/><line x1="330" y1="46" x2="330" y2="68"/><line x1="390" y1="46" x2="390" y2="68"/><line x1="450" y1="46" x2="450" y2="68"/><line x1="510" y1="46" x2="510" y2="68"/></g>
+          <g><rect x="160" y="86" width="4" height="30" fill="#6b5152"/><polygon points="164,86 206,96 164,110" fill="#e2001a"/><rect x="420" y="80" width="4" height="36" fill="#6b5152"/><polygon points="424,80 466,92 424,106" fill="#f2f2f2"/></g>
+        </svg>
+        <figcaption>ソーラーの屋根 — 環境先進都市が生んだ、コンパクトな熱源。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>黒い森の麓、光あふれる大学都市</h2>
+      <p>フライブルクは、<span class="cl-forest">黒い森（シュヴァルツヴァルト）</span>の縁に位置する古い大学都市。旧市街の中心には、精緻な尖塔で名高い<strong>フライブルク大聖堂</strong>がそびえ、石畳の路地には清らかな水路（ベヒレ）が流れます。ドイツでも指折りの日照に恵まれ、環境と持続可能性を大切にする気風が、街にもクラブにも根づいています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="黒い森の山並みと、フライブルク大聖堂の尖塔が立つ旧市街のシルエット">
+          <defs><linearGradient id="frdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1013"/><stop offset="100%" stop-color="#170b0b"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#frdusk)"/>
+          <circle cx="500" cy="50" r="28" fill="#d8a24a" opacity=".55"/>
+          <path d="M0 88 L80 58 L160 84 L240 54 L340 86 L440 58 L540 86 L600 66 L600 170 L0 170 Z" fill="#0f2417"/>
+          <g fill="#0c1c12"><polygon points="120,96 108,128 132,128"/><polygon points="360,92 346,126 374,126"/></g>
+          <!-- 大聖堂の尖塔 -->
+          <g transform="translate(180,58)">
+            <polygon points="24,0 12,44 36,44" fill="#2a1416"/>
+            <rect x="12" y="44" width="24" height="66" fill="#2a1416"/>
+            <g fill="#e2001a" opacity=".5"><rect x="17" y="60" width="6" height="14" rx="2"/><rect x="25" y="60" width="6" height="14" rx="2"/></g>
+          </g>
+          <g fill="#241213"><rect x="230" y="90" width="16" height="20"/><rect x="250" y="82" width="12" height="28"/><rect x="266" y="96" width="20" height="14"/></g>
+          <rect x="0" y="110" width="600" height="60" fill="#180d0f" opacity=".7"/>
+        </svg>
+        <figcaption>大聖堂と黒い森 — 尖塔がそびえる、光あふれる古都。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> スタイル</div>
+      <h2>堅実運営と長期政権 — 身の丈を超える戦い</h2>
+      <p>フライブルクは、限られた資源のなかで<span class="cl-hl">腰を据えた長期的なクラブ運営</span>を貫くことで知られます。監督を頻繁に替えず、じっくりとチームを築き上げる哲学のもと、若手の育成と組織的な戦い方を積み重ねてきました。派手な補強に頼らず、着実な歩みで大クラブに挑む姿は、ドイツサッカーにおける「堅実さ」の象徴として広く敬意を集めています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="根を張った一本の木が着実に育っていく様子を示したイラスト">
+          <rect width="600" height="180" fill="#170b0b"/>
+          <g stroke="#2f7d3a" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="300" y1="150" x2="240" y2="168"/><line x1="300" y1="150" x2="360" y2="168"/><line x1="300" y1="150" x2="200" y2="160"/><line x1="300" y1="150" x2="400" y2="160"/></g>
+          <rect x="292" y="70" width="16" height="82" rx="4" fill="#5a3a2a"/>
+          <g stroke="#5a3a2a" stroke-width="8" stroke-linecap="round" fill="none"><path d="M300 96 q-34 -14 -52 -40"/><path d="M300 108 q34 -10 54 -34"/><path d="M300 84 q-18 -20 -20 -40"/></g>
+          <g fill="#2f7d3a"><circle cx="248" cy="52" r="26"/><circle cx="356" cy="60" r="24"/><circle cx="300" cy="40" r="30"/><circle cx="212" cy="70" r="18"/><circle cx="392" cy="76" r="18"/></g>
+          <g fill="#e2001a" opacity=".85"><circle cx="262" cy="48" r="4"/><circle cx="344" cy="58" r="4"/><circle cx="300" cy="36" r="4"/></g>
+          <text x="300" y="174" fill="#8a6a6a" font-size="12" text-anchor="middle">腰を据えて、じっくりと</text>
+        </svg>
+        <figcaption>長期政権の哲学 — 根を張り、着実に育て上げる堅実さ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>赤の誇り、南西ドイツの雄</h2>
+      <p>赤を基調としたクラブカラーから、<strong>「ディ・ローテン（赤い者たち）」</strong>と呼ばれます。かつての攻撃的なスタイルから<span class="cl-hl">「ブライスガウ・ブラジル人」</span>という愛称も生まれました。決して規模の大きなクラブではありませんが、地に足のついた運営で欧州の舞台にも顔を出し、多くのファンに愛される南西ドイツの雄です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤い盾に白のラインが入ったクラブカラーの紋章のイラスト">
+          <rect width="600" height="150" fill="#170b0b"/>
+          <g transform="translate(300,75)">
+            <path d="M0,-52 C -44,-52 -66,-42 -66,-42 L-66,22 C -66,48 0,64 0,64 C 0,64 66,48 66,22 L66,-42 C 66,-42 44,-52 0,-52 Z" fill="#e2001a"/>
+            <path d="M0,-44 C -38,-44 -58,-36 -58,-36 L-58,20 C -58,42 0,56 0,56 C 0,56 58,42 58,20 L58,-36 C 58,-36 38,-44 0,-44 Z" fill="none" stroke="#f2f2f2" stroke-width="3"/>
+            <rect x="-40" y="-14" width="80" height="10" fill="#f2f2f2"/>
+            <text x="0" y="30" fill="#f2f2f2" font-size="30" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">SC</text>
+          </g>
+          <g stroke="#d8a24a" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="46" x2="424" y2="40"/><line x1="418" y1="74" x2="434" y2="74"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>赤の盾 — 南西ドイツの誇りを掲げるクラブカラー。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1904年</dd>
+          <dt>本拠地</dt><dd>フライブルク（バーデン＝ヴュルテンベルク州）</dd>
+          <dt>スタジアム</dt><dd>オイローパ＝パルク・シュタディオン（約34,000人）</dd>
+          <dt>愛称</dt><dd>Die Roten（赤い者たち）／Breisgau-Brasilianer</dd>
+          <dt>カラー</dt><dd>レッド ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

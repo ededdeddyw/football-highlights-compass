@@ -1,0 +1,231 @@
+<!--CLUB slug=werder-bremen name=ブレーメン league=ブンデスリーガ-->
+<!--VIDEO id=jxE3HPWo6-w title=Werder Bremen Song Lebenslang Grün-Weiß（応援歌）-->
+<!--DESC ブレーメン（ブンデスリーガ）のクラブ紹介。ハンザ都市の市庁舎とヴェーザー川、ブレーメンの音楽隊、緑と白のヴェーザーシュタディオンを、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08140c; --cl-green:#1d9053; --cl-green-hi:#57c98a; --cl-brass:#c9a24c; --cl-gold:#e0c060;
+    --cl-paper:var(--bg,#f2f8f4); --cl-text:var(--fg,#13251b); --cl-muted:#5e766a; --cl-line:#cbe3d5; --cl-card:#f7fdf9;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e5f2ea; --cl-muted:#8fa89b; --cl-line:#1c3427; --cl-card:#0f1d15; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e5f2ea; --cl-muted:#8fa89b; --cl-line:#1c3427; --cl-card:#0f1d15; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#13251b; --cl-muted:#5e766a; --cl-line:#cbe3d5; --cl-card:#f7fdf9; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,20,12,.94) 32%,rgba(8,20,12,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-green);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-green-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dcefe4;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-green),var(--cl-green-hi) 55%,#ffffff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(29,144,83,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-green);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(29,144,83,.34);font-weight:700}
+  .cl-brass{color:var(--cl-brass);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bfe0cc;background:#0a1610;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-green);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ヴェーザー川のほとりに建つブレーメンの市庁舎と、ブレーメンの音楽隊の塔を描いたイラスト">
+        <defs>
+          <linearGradient id="wbsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0e3a24"/><stop offset="55%" stop-color="#0a2417"/><stop offset="100%" stop-color="#08140c"/></linearGradient>
+          <radialGradient id="wbglow" cx="72%" cy="30%" r="50%"><stop offset="0%" stop-color="#1d9053" stop-opacity=".38"/><stop offset="45%" stop-color="#57c98a" stop-opacity=".12"/><stop offset="100%" stop-color="#08140c" stop-opacity="0"/></radialGradient>
+          <linearGradient id="wbriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1d9053" stop-opacity=".45"/><stop offset="100%" stop-color="#08140c" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#wbsky)"/>
+        <rect width="1200" height="470" fill="url(#wbglow)"/>
+        <circle cx="270" cy="116" r="42" fill="#e8f5ec" opacity=".9"/>
+        <circle cx="254" cy="106" r="42" fill="#0a2417" opacity=".5"/>
+        <g fill="#57c98a" opacity=".3"><circle cx="470" cy="92" r="2.5"/><circle cx="560" cy="66" r="2"/><circle cx="650" cy="118" r="2.5"/><circle cx="740" cy="58" r="2"/><circle cx="390" cy="146" r="2"/></g>
+        <!-- ブレーメン市庁舎（ハンザ様式のファサードと二つの塔） -->
+        <g fill="#0d2417">
+          <rect x="820" y="176" width="230" height="124"/>
+          <rect x="806" y="130" width="34" height="60"/>
+          <polygon points="806,130 823,96 840,130"/>
+          <rect x="1032" y="130" width="34" height="60"/>
+          <polygon points="1032,130 1049,96 1066,130"/>
+          <rect x="905" y="150" width="60" height="34" rx="4"/>
+          <polygon points="900,150 935,120 970,150"/>
+        </g>
+        <g fill="none" stroke="#1d9053" stroke-width="2.5" opacity=".5">
+          <rect x="820" y="176" width="230" height="124"/>
+          <polygon points="900,150 935,120 970,150"/>
+        </g>
+        <!-- 市庁舎の窓の並び（アーケード） -->
+        <g fill="#c9a24c" opacity=".8"><rect x="838" y="210" width="10" height="26"/><rect x="866" y="210" width="10" height="26"/><rect x="894" y="210" width="10" height="26"/><rect x="998" y="210" width="10" height="26"/><rect x="1026" y="210" width="10" height="26"/><rect x="820" y="132" width="8" height="14"/><rect x="1050" y="132" width="8" height="14"/></g>
+        <!-- ブレーメンの音楽隊（ロバ・犬・猫・鶏を積み重ねたシルエット） -->
+        <g fill="#0a1f13" transform="translate(150,150)">
+          <!-- ロバ -->
+          <rect x="0" y="120" width="92" height="70" rx="10"/>
+          <rect x="4" y="150" width="14" height="40"/><rect x="74" y="150" width="14" height="40"/>
+          <path d="M4 120 q-14 -30 4 -56 q10 20 22 10 q-2 26 -16 46 z"/>
+          <circle cx="10" cy="118" r="10"/>
+          <!-- 犬 -->
+          <rect x="14" y="82" width="66" height="42" rx="10"/>
+          <path d="M14 82 q-8 -14 2 -26 q8 12 16 4 q0 14 -8 22 z"/>
+          <circle cx="20" cy="80" r="8"/>
+          <!-- 猫 -->
+          <rect x="24" y="52" width="46" height="34" rx="10"/>
+          <polygon points="24,52 30,38 38,52"/><polygon points="54,52 60,38 68,52"/>
+          <circle cx="30" cy="52" r="6"/>
+          <!-- 鶏 -->
+          <ellipse cx="40" cy="30" rx="16" ry="14"/>
+          <path d="M40 16 q-4 -12 4 -16 q2 8 8 6 q-2 8 -12 10 z" fill="#c9a24c"/>
+          <polygon points="30,26 22,20 30,20" fill="#c9a24c"/>
+        </g>
+        <!-- 街並みシルエット -->
+        <g fill="#0c2016"><rect x="300" y="262" width="26" height="48"/><rect x="332" y="246" width="20" height="64"/><rect x="358" y="270" width="30" height="40"/><rect x="394" y="254" width="18" height="56"/><rect x="418" y="278" width="34" height="32"/><rect x="460" y="260" width="22" height="50"/><rect x="490" y="272" width="30" height="38"/><rect x="528" y="250" width="18" height="60"/><rect x="552" y="276" width="40" height="34"/><rect x="600" y="264" width="24" height="46"/><rect x="632" y="278" width="34" height="32"/><rect x="676" y="268" width="20" height="42"/><rect x="702" y="280" width="42" height="30"/></g>
+        <g fill="#c9a24c" opacity=".8"><rect x="338" y="254" width="4" height="5"/><rect x="400" y="262" width="4" height="5"/><rect x="534" y="258" width="4" height="5"/><rect x="608" y="272" width="4" height="5"/></g>
+        <!-- ヴェーザー川 -->
+        <rect x="0" y="310" width="1200" height="160" fill="url(#wbriver)"/>
+        <g stroke="#57c98a" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="120" y1="342" x2="240" y2="342"/><line x1="360" y1="366" x2="520" y2="366"/><line x1="640" y1="350" x2="760" y2="350"/><line x1="860" y1="384" x2="1020" y2="384"/><line x1="300" y1="410" x2="470" y2="410"/><line x1="720" y1="420" x2="900" y2="420"/></g>
+        <g stroke="#c9a24c" stroke-width="3" opacity=".35"><line x1="960" y1="330" x2="960" y2="420"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ブレーメン<span class="cl-en">SV Werder Bremen · 1899</span></h1>
+        <p class="cl-sub">ヴェーザー川と市庁舎、そして「ブレーメンの音楽隊」の街。緑と白をまとい、生涯変わらぬ愛を掲げる北ドイツの名門です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ北部の自由ハンザ都市ブレーメンを本拠とするクラブです。<b>ヴェーザー川</b>のほとりに開けたこの街で、緑と白のユニフォームは市民の誇りそのもの。<b>「生涯、緑と白（Lebenslang Grün-Weiß）」</b>の言葉が、クラブと街の絆を象徴しています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ヴェーザーシュタディオン — 川のほとりの緑の要塞</h2>
+      <p>その名の通り<strong>ヴェーザー川</strong>のすぐそばに建つ、約4万2千人を収容するスタジアムです。屋根にソーラーパネルを備えた環境志向の改修でも知られます。<span class="cl-hl">緑と白に染まるスタンド</span>と、試合前後に川辺へ集う人々の光景が、この街ならではの雰囲気をつくります。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="緑の旗とスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#0a1610"/>
+          <defs><pattern id="wbcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0a1610"/><circle cx="8.5" cy="7" r="5" fill="#1d9053"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#wbcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#57c98a" opacity=".55"/>
+          <g stroke="#57c98a" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4b6656"/><polygon points="164,30 206,40 164,54" fill="#1d9053"/><rect x="420" y="24" width="4" height="64" fill="#4b6656"/><polygon points="424,24 466,36 424,50" fill="#1d9053"/></g>
+        </svg>
+        <figcaption>緑の一体感 — 川辺のスタンドを埋める、旗とスカーフの海。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>市庁舎とヴェーザー川、そして音楽隊の街</h2>
+      <p>ブレーメンは、世界遺産にも登録された壮麗な<span class="cl-brass">市庁舎とローラント像</span>を中心に広がる、由緒あるハンザ都市。市庁舎の脇には、グリム童話<strong>「ブレーメンの音楽隊」</strong>の像が立ち、ロバ・犬・猫・鶏が重なるその姿は街のシンボルとして親しまれています。ヴェーザー川の水運とともに栄えた商人の街の気質が、堅実で粘り強いクラブの姿勢にも通じます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="ブレーメンの音楽隊（ロバ・犬・猫・鶏）が積み重なった像のシルエットと、川辺の夕景">
+          <defs><linearGradient id="wbdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123f28"/><stop offset="100%" stop-color="#0a1610"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#wbdusk)"/>
+          <circle cx="490" cy="52" r="30" fill="#c9a24c" opacity=".8"/>
+          <!-- 市庁舎シルエット -->
+          <g fill="#0d2417"><rect x="60" y="80" width="120" height="60"/><rect x="52" y="54" width="18" height="30"/><polygon points="52,54 61,40 70,54"/><rect x="170" y="54" width="18" height="30"/><polygon points="170,54 179,40 188,54"/></g>
+          <g fill="#c9a24c" opacity=".8"><rect x="74" y="96" width="8" height="18"/><rect x="94" y="96" width="8" height="18"/><rect x="114" y="96" width="8" height="18"/><rect x="134" y="96" width="8" height="18"/></g>
+          <!-- ブレーメンの音楽隊 -->
+          <g fill="#0a1f13" transform="translate(300,10)">
+            <rect x="0" y="96" width="60" height="44" rx="8"/>
+            <rect x="4" y="118" width="10" height="22"/><rect x="48" y="118" width="10" height="22"/>
+            <path d="M2 96 q-10 -22 2 -40 q7 14 16 6 q-2 20 -12 34 z"/>
+            <rect x="10" y="66" width="44" height="30" rx="8"/>
+            <path d="M10 66 q-6 -12 2 -20 q6 10 12 2 q0 10 -6 18 z"/>
+            <rect x="16" y="44" width="32" height="24" rx="8"/>
+            <polygon points="16,44 20,32 26,44"/><polygon points="38,44 42,32 48,44"/>
+            <ellipse cx="28" cy="26" rx="12" ry="11"/>
+            <path d="M28 15 q-3 -10 4 -13 q1 7 6 5 q-2 6 -10 8 z" fill="#c9a24c"/>
+          </g>
+          <rect x="0" y="140" width="600" height="30" fill="#0e3a24" opacity=".9"/>
+          <g stroke="#57c98a" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="152" x2="150" y2="152"/><line x1="330" y1="152" x2="470" y2="152"/><line x1="220" y1="160" x2="360" y2="160"/></g>
+        </svg>
+        <figcaption>音楽隊と市庁舎 — 童話とハンザの誇りが息づく、街の原風景。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 歴史と栄光</div>
+      <h2>リーグ4度の頂点、北ドイツの名門</h2>
+      <p>ブレーメンは、<span class="cl-hl">ブンデスリーガ制覇4回</span>を誇る古豪です。とりわけ2000年代には攻撃的で魅力的なサッカーで一時代を築き、DFBポカール（ドイツ杯）や欧州の舞台でも存在感を示しました。潤沢な資金力に頼らずとも、育成と組織で強豪と渡り合ってきた伝統が、いまも街の誇りとして語り継がれています。日本代表の菅原由勢も所属しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="緑と白の菱形が連なり、優勝トロフィーへと駆け上がっていくイラスト">
+          <rect width="600" height="180" fill="#0a1610"/>
+          <path d="M60 130 C 220 126, 320 96, 460 52" fill="none" stroke="#4b6656" stroke-width="2.5" stroke-dasharray="3 8" stroke-linecap="round"/>
+          <g fill="#1d9053"><polygon points="60,130 74,120 88,130 74,140"/><polygon points="200,110 216,98 232,110 216,122"/><polygon points="340,84 358,70 376,84 358,98"/></g>
+          <g transform="translate(470,44)">
+            <path d="M-22 -18 L22 -18 L16 6 L-16 6 Z" fill="#c9a24c"/>
+            <path d="M-22 -18 q-16 4 -8 18 q6 8 10 4" fill="none" stroke="#c9a24c" stroke-width="4"/>
+            <path d="M22 -18 q16 4 8 18 q-6 8 -10 4" fill="none" stroke="#c9a24c" stroke-width="4"/>
+            <rect x="-6" y="6" width="12" height="14" fill="#c9a24c"/>
+            <rect x="-16" y="20" width="32" height="8" rx="2" fill="#e0c060"/>
+          </g>
+          <text x="60" y="160" fill="#8fa89b" font-size="12">積み重ねた歩み</text><text x="500" y="150" fill="#bfe0cc" font-size="12" text-anchor="end">頂点へ</text>
+        </svg>
+        <figcaption>緑と白の歩み — 育成と組織で頂点に届いた、名門の伝統。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>緑と白、「生涯変わらぬ」愛</h2>
+      <p>クラブカラーの緑と白から、<strong>「Die Grün-Weißen（緑と白の者たち）」</strong>の愛称で親しまれます。サポーターが掲げる合言葉<span class="cl-hl">「Lebenslang Grün-Weiß（生涯、緑と白）」</span>は、勝っても負けても離れない、街とクラブの変わらぬ絆を表す言葉。北ドイツの実直な気質が、その一途な愛にも映し出されています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="緑のユニフォームの胸に、白い菱形のクラブ紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#0a1610"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#1d9053"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff" opacity=".8"/>
+          <g transform="translate(300,80)">
+            <polygon points="0,-34 30,0 0,34 -30,0" fill="#ffffff" stroke="#0a1f13" stroke-width="2"/>
+            <polygon points="0,-20 18,0 0,20 -18,0" fill="#1d9053"/>
+            <text x="0" y="8" fill="#ffffff" font-size="20" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">W</text>
+          </g>
+          <g stroke="#c9a24c" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>緑と白 — 菱形の紋章を胸に、生涯変わらぬ愛を掲げる。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1899年</dd>
+          <dt>本拠地</dt><dd>ブレーメン（自由ハンザ都市）</dd>
+          <dt>スタジアム</dt><dd>ヴェーザーシュタディオン（約42,000人）</dd>
+          <dt>愛称</dt><dd>Die Grün-Weißen（緑と白の者たち）</dd>
+          <dt>カラー</dt><dd>グリーン ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

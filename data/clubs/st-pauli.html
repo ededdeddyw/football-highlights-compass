@@ -1,0 +1,195 @@
+<!--CLUB slug=st-pauli name=ザンクトパウリ league=ブンデスリーガ-->
+<!--VIDEO id=KRkCQcH95yU title=Hells Bells beim FC St. Pauli（入場アンセム）-->
+<!--DESC ザンクトパウリ（ブンデスリーガ）のクラブ紹介。ハンブルクの港町レーパーバーン、ドクロと骨のシンボル、反差別・反商業主義のカウンターカルチャーを、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0b0706; --cl-brown:#43302e; --cl-brown-hi:#7a5a52; --cl-red:#d23b32; --cl-bone:#efe7dc;
+    --cl-paper:var(--bg,#f4efe9); --cl-text:var(--fg,#1f1614); --cl-muted:#6f605a; --cl-line:#ddd0c6; --cl-card:#fbf7f2;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#efe6dd; --cl-muted:#a3938b; --cl-line:#2c211e; --cl-card:#171110; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#efe6dd; --cl-muted:#a3938b; --cl-line:#2c211e; --cl-card:#171110; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1f1614; --cl-muted:#6f605a; --cl-line:#ddd0c6; --cl-card:#fbf7f2; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(11,7,6,.94) 32%,rgba(11,7,6,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#efe7dc;background:var(--cl-brown);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-brown-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e6dcd2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-brown),var(--cl-red) 55%,#efe7dc)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(210,59,50,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#efe7dc;background:var(--cl-brown);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(210,59,50,.32);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#cdbcb2;background:#0a0605;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-brown);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ハンブルクの港のクレーンと、ドクロと骨のシンボルを描いた夜景のイラスト">
+        <defs>
+          <linearGradient id="spsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1c19"/><stop offset="55%" stop-color="#170f0d"/><stop offset="100%" stop-color="#0b0706"/></linearGradient>
+          <radialGradient id="spglow" cx="30%" cy="34%" r="52%"><stop offset="0%" stop-color="#d23b32" stop-opacity=".30"/><stop offset="45%" stop-color="#7a5a52" stop-opacity=".12"/><stop offset="100%" stop-color="#0b0706" stop-opacity="0"/></radialGradient>
+          <linearGradient id="spwater" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#43302e" stop-opacity=".5"/><stop offset="100%" stop-color="#0b0706" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#spsky)"/>
+        <rect width="1200" height="470" fill="url(#spglow)"/>
+        <g fill="#7a5a52" opacity=".2"><circle cx="520" cy="86" r="2.5"/><circle cx="600" cy="60" r="2"/><circle cx="690" cy="110" r="2.5"/><circle cx="770" cy="54" r="2"/><circle cx="430" cy="130" r="2"/></g>
+        <!-- 港のクレーン群 -->
+        <g stroke="#241816" stroke-width="10" fill="none"><line x1="150" y1="330" x2="150" y2="120"/><line x1="360" y1="330" x2="360" y2="150"/></g>
+        <g fill="#241816"><polygon points="150,120 150,140 300,110 300,92"/><polygon points="360,150 360,168 500,146 500,130"/></g>
+        <g stroke="#43302e" stroke-width="5" opacity=".85" fill="none"><line x1="150" y1="120" x2="120" y2="200"/><line x1="150" y1="120" x2="270" y2="140"/><line x1="360" y1="150" x2="330" y2="220"/><line x1="360" y1="150" x2="470" y2="168"/></g>
+        <g fill="#43302e"><rect x="120" y="330" width="80" height="20"/><rect x="330" y="330" width="70" height="20"/></g>
+        <!-- 波止場のコンテナ -->
+        <g fill="#241816"><rect x="620" y="300" width="70" height="34"/><rect x="694" y="300" width="70" height="34"/><rect x="640" y="266" width="70" height="34"/></g>
+        <g fill="#43302e" opacity=".7"><rect x="620" y="300" width="70" height="34"/><rect x="640" y="266" width="70" height="34"/></g>
+        <!-- ドクロと骨（Totenkopf） -->
+        <g transform="translate(940,180)">
+          <path d="M0,-70 C48,-70 78,-38 78,4 C78,34 60,54 48,66 L48,92 L-48,92 L-48,66 C-60,54 -78,34 -78,4 C-78,-38 -48,-70 0,-70 Z" fill="#efe7dc"/>
+          <ellipse cx="-34" cy="6" rx="22" ry="26" fill="#0b0706"/>
+          <ellipse cx="34" cy="6" rx="22" ry="26" fill="#0b0706"/>
+          <path d="M0,34 l-13,26 l26,0 z" fill="#0b0706"/>
+          <g fill="#efe7dc"><rect x="-34" y="92" width="13" height="18"/><rect x="-14" y="92" width="13" height="18"/><rect x="6" y="92" width="13" height="18"/><rect x="26" y="92" width="13" height="18"/></g>
+          <!-- 交差した骨 -->
+          <g stroke="#efe7dc" stroke-width="15" stroke-linecap="round"><line x1="-96" y1="78" x2="96" y2="138"/><line x1="-96" y1="138" x2="96" y2="78"/></g>
+          <g fill="#efe7dc"><circle cx="-96" cy="78" r="13"/><circle cx="-96" cy="138" r="13"/><circle cx="96" cy="78" r="13"/><circle cx="96" cy="138" r="13"/></g>
+        </g>
+        <!-- 港の水面 -->
+        <rect x="0" y="360" width="1200" height="110" fill="url(#spwater)"/>
+        <g stroke="#7a5a52" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="120" y1="392" x2="240" y2="392"/><line x1="360" y1="414" x2="520" y2="414"/><line x1="640" y1="398" x2="760" y2="398"/><line x1="860" y1="430" x2="1020" y2="430"/></g>
+        <g stroke="#d23b32" stroke-width="3" opacity=".35"><line x1="940" y1="360" x2="940" y2="440"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ ドイツ・ブンデスリーガ</span>
+        <h1>ザンクトパウリ<span class="cl-en">FC St. Pauli · 1910</span></h1>
+        <p class="cl-sub">ハンブルクの港町に生まれた反骨のクラブ。ドクロと骨を掲げ、反差別を貫くカウンターカルチャーの象徴です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ドイツ北部の港湾都市ハンブルク、その繁華街<b>レーパーバーン</b>に近いザンクトパウリ地区を本拠とするクラブです。街の多様性と自由な気風をそのまま映したような、他に類を見ない個性で世界中にファンを持ちます。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ミラーントーア — 港町のど真ん中のスタジアム</h2>
+      <p>繁華街レーパーバーンにほど近い<strong>ミラーントーア・シュタディオン</strong>は、街の中心に溶け込んだ約2万9千人収容のスタジアムです。試合前にはハードロックの名曲が鳴り響き、キックオフとともに <span class="cl-hl">スタンドがドクロの旗で埋め尽くされる</span> ——狭くも濃密な、独特の熱気に包まれる舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="ドクロの旗を掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#0a0605"/>
+          <defs><pattern id="spcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0a0605"/><circle cx="8.5" cy="7" r="5" fill="#43302e"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#spcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#7a5a52" opacity=".55"/>
+          <g><rect x="150" y="28" width="4" height="60" fill="#5a4a44"/><rect x="410" y="22" width="4" height="66" fill="#5a4a44"/>
+            <g transform="translate(176,44) scale(0.5)"><path d="M0,-24 C16,-24 26,-12 26,2 C26,12 20,18 16,22 L16,30 L-16,30 L-16,22 C-20,18 -26,12 -26,2 C-26,-12 -16,-24 0,-24 Z" fill="#efe7dc"/><circle cx="-11" cy="2" r="7" fill="#0a0605"/><circle cx="11" cy="2" r="7" fill="#0a0605"/></g>
+            <g transform="translate(436,38) scale(0.5)"><path d="M0,-24 C16,-24 26,-12 26,2 C26,12 20,18 16,22 L16,30 L-16,30 L-16,22 C-20,18 -26,12 -26,2 C-26,-12 -16,-24 0,-24 Z" fill="#efe7dc"/><circle cx="-11" cy="2" r="7" fill="#0a0605"/><circle cx="11" cy="2" r="7" fill="#0a0605"/></g>
+          </g>
+        </svg>
+        <figcaption>ドクロのスタンド — 旗が波打つ、ミラーントーアの夜。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>レーパーバーン、港と自由の街</h2>
+      <p>ザンクトパウリは、船乗りや旅人が行き交う<span class="cl-red">港の歓楽街</span>として知られてきた地区。ネオンが灯る通りには多様な人々が集まり、既成の枠にとらわれない開放的な空気が流れています。クラブはこの土地の気質を受け継ぎ、街と一体となって歩んできました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="港のクレーンとネオン輝くレーパーバーンの夜景シルエット">
+          <defs><linearGradient id="spdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a1c19"/><stop offset="100%" stop-color="#0a0605"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#spdusk)"/>
+          <circle cx="500" cy="52" r="30" fill="#d23b32" opacity=".22"/>
+          <g stroke="#241816" stroke-width="6" fill="none"><line x1="90" y1="130" x2="90" y2="46"/></g>
+          <polygon points="90,46 90,58 180,42 180,30" fill="#241816"/>
+          <g fill="#241816"><rect x="230" y="70" width="18" height="60"/><rect x="256" y="54" width="14" height="76"/><rect x="278" y="82" width="26" height="48"/><rect x="316" y="64" width="16" height="66"/></g>
+          <g fill="#e2a53a" opacity=".85"><rect x="234" y="78" width="4" height="5"/><rect x="242" y="92" width="4" height="5"/><rect x="260" y="66" width="4" height="5"/><rect x="322" y="76" width="4" height="5"/></g>
+          <rect x="0" y="130" width="600" height="40" fill="#1b1210" opacity=".9"/>
+          <g stroke="#7a5a52" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="148" x2="150" y2="148"/><line x1="330" y1="142" x2="470" y2="142"/><line x1="220" y1="158" x2="360" y2="158"/></g>
+        </svg>
+        <figcaption>港とレーパーバーン — ネオンとクレーンが並ぶ、自由な街の夜。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>ドクロと骨 — 反骨のシンボル</h2>
+      <p>クラブを象徴するのは、公式エンブレムとは別に掲げられる <span class="cl-hl">ドクロと交差した骨（トーテンコップ）</span> の旗。港の反骨精神から自然発生的に広まったこのシンボルは、いまやクラブの顔として世界中で知られています。<strong>反差別・反ファシズム・反商業主義</strong>を掲げる姿勢とともに、多くの共感を集めてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="中央に大きく描かれたドクロと交差した骨のシンボルのイラスト">
+          <rect width="600" height="180" fill="#0a0605"/>
+          <g transform="translate(300,90)">
+            <g stroke="#efe7dc" stroke-width="16" stroke-linecap="round"><line x1="-90" y1="-40" x2="90" y2="40"/><line x1="-90" y1="40" x2="90" y2="-40"/></g>
+            <g fill="#efe7dc"><circle cx="-90" cy="-40" r="14"/><circle cx="-90" cy="40" r="14"/><circle cx="90" cy="-40" r="14"/><circle cx="90" cy="40" r="14"/></g>
+            <path d="M0,-62 C42,-62 68,-34 68,2 C68,28 52,46 42,56 L42,78 L-42,78 L-42,56 C-52,46 -68,28 -68,2 C-68,-34 -42,-62 0,-62 Z" fill="#efe7dc"/>
+            <ellipse cx="-30" cy="4" rx="19" ry="23" fill="#0a0605"/>
+            <ellipse cx="30" cy="4" rx="19" ry="23" fill="#0a0605"/>
+            <path d="M0,28 l-11,22 l22,0 z" fill="#0a0605"/>
+            <g fill="#0a0605"><rect x="-30" y="60" width="10" height="18"/><rect x="-14" y="60" width="10" height="18"/><rect x="4" y="60" width="10" height="18"/><rect x="20" y="60" width="10" height="18"/></g>
+          </g>
+        </svg>
+        <figcaption>トーテンコップ — 港の反骨精神から広まった、クラブの顔。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>茶と白、そして「世界一有名なアマチュア」</h2>
+      <p>クラブカラーは深い<strong>茶色（ブラウン）と白</strong>。派手さとは無縁のこの色合いが、かえって唯一無二の存在感を放ちます。順位や規模だけでは測れない独特の文化と結束で、<span class="cl-hl">世界中にファンを持つ「特別なクラブ」</span>として、ブンデスリーガの中でも異彩を放ち続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="茶色と白のユニフォームの胸に、ドクロのワッペンが輝くイラスト">
+          <rect width="600" height="150" fill="#0a0605"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#43302e"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#efe7dc" opacity=".85"/>
+          <g transform="translate(300,84) scale(0.9)"><path d="M0,-30 C20,-30 32,-16 32,2 C32,14 24,24 18,30 L18,40 L-18,40 L-18,30 C-24,24 -32,14 -32,2 C-32,-16 -20,-30 0,-30 Z" fill="#efe7dc"/><ellipse cx="-14" cy="2" rx="9" ry="11" fill="#0a0605"/><ellipse cx="14" cy="2" rx="9" ry="11" fill="#0a0605"/><path d="M0,16 l-6,12 l12,0 z" fill="#0a0605"/></g>
+          <g stroke="#d23b32" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ブラウンとドクロ — 派手さと無縁の色が放つ、唯一無二の存在感。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1910年</dd>
+          <dt>本拠地</dt><dd>ハンブルク（ザンクトパウリ地区）</dd>
+          <dt>スタジアム</dt><dd>ミラーントーア・シュタディオン（約29,000人）</dd>
+          <dt>愛称</dt><dd>Kiezkicker（キーツキッカー）</dd>
+          <dt>カラー</dt><dd>ブラウン ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
