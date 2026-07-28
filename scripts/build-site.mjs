@@ -1475,7 +1475,8 @@ function buildClub(name, info){
       .replace(/<!--VIDEO id=[\s\S]*?-->\s*/, '')
       .replace(/<!--DESC[\s\S]*?-->\s*/, '')
       .replace('<!--VIDEO-->', embed);
-    const rHead = HEAD({ title:`${name}｜クラブ図鑑（歴史・本拠地・スタイル） - Football Highlights Compass`, ogtitle:`${name}｜クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+    // 「クラブ名 リーグ名」系クエリのCTR改善：非リッチ版（#70）と同様にtitleへリーグ名を明記
+    const rHead = HEAD({ title:`${name}｜${info.league} クラブ図鑑（歴史・本拠地・スタイル） - Football Highlights Compass`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
     // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
     const leftRail = railStandings(slug) + railFormation(name) + railFacts(info, flag);
     const rightRail = railHighlights(slug);
