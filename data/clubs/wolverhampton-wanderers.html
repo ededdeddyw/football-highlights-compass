@@ -1,0 +1,192 @@
+<!--CLUB slug=wolverhampton-wanderers name=ウォルバーハンプトン league=プレミアリーグ-->
+<!--VIDEO id=J-pu8AOyNfo title=Hi Ho Wolverhampton（ウルブズのアンセム）-->
+<!--DESC ウォルバーハンプトン・ワンダラーズ（プレミアリーグ）のクラブ紹介。モリニュー・スタジアム、ミッドランズの街、狼の紋章、1950年代の黄金期、山吹と黒のカラーを、アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#12100a; --cl-gold:#fdb913; --cl-gold-hi:#ffd45e; --cl-black:#231f20; --cl-line-gold:#c99a12;
+    --cl-paper:var(--bg,#f7f5ef); --cl-text:var(--fg,#1a170e); --cl-muted:#6f6957; --cl-line:#e0d9c4; --cl-card:#fffdf6;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f2ecd9; --cl-muted:#a89f86; --cl-line:#332e1f; --cl-card:#181509; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f2ecd9; --cl-muted:#a89f86; --cl-line:#332e1f; --cl-card:#181509; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1a170e; --cl-muted:#6f6957; --cl-line:#e0d9c4; --cl-card:#fffdf6; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(18,16,10,.94) 32%,rgba(18,16,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#12100a;background:var(--cl-gold);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f2e6c8;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-black),var(--cl-gold) 50%,var(--cl-black))}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(253,185,19,.34)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#12100a;background:var(--cl-gold);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(253,185,19,.4);font-weight:700}
+  .cl-black{color:#8a7a12;font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e6d59a;background:#16130c;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-gold);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="夜のモリニュー・スタジアムと、ミッドランズの街並み、狼の紋章を描いたイラスト">
+        <defs>
+          <linearGradient id="wvsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e2812"/><stop offset="55%" stop-color="#1c180d"/><stop offset="100%" stop-color="#12100a"/></linearGradient>
+          <radialGradient id="wvglow" cx="50%" cy="32%" r="52%"><stop offset="0%" stop-color="#fdb913" stop-opacity=".34"/><stop offset="45%" stop-color="#ffd45e" stop-opacity=".12"/><stop offset="100%" stop-color="#12100a" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#wvsky)"/>
+        <rect width="1200" height="470" fill="url(#wvglow)"/>
+        <g fill="#ffd45e" opacity=".65"><circle cx="150" cy="70" r="2.5"/><circle cx="260" cy="50" r="2"/><circle cx="360" cy="96" r="2.5"/><circle cx="1080" cy="70" r="2.5"/><circle cx="980" cy="48" r="2"/><circle cx="1140" cy="110" r="2"/></g>
+        <!-- ミッドランズの街並みシルエット -->
+        <g fill="#191509"><rect x="30" y="248" width="30" height="90"/><rect x="66" y="224" width="24" height="114"/><rect x="98" y="258" width="34" height="80"/><rect x="140" y="238" width="22" height="100"/><rect x="168" y="266" width="40" height="72"/><rect x="216" y="244" width="26" height="94"/><rect x="1000" y="252" width="28" height="86"/><rect x="1034" y="228" width="24" height="110"/><rect x="1066" y="262" width="34" height="76"/><rect x="1108" y="244" width="24" height="94"/><rect x="1144" y="258" width="30" height="80"/></g>
+        <!-- 煙突（工業の街） -->
+        <g fill="#1c180d"><rect x="270" y="196" width="12" height="142"/><rect x="960" y="204" width="12" height="134"/></g>
+        <!-- 窓明かり -->
+        <g fill="#fdb913" opacity=".6"><rect x="74" y="240" width="4" height="6"/><rect x="82" y="256" width="4" height="6"/><rect x="148" y="252" width="4" height="6"/><rect x="1042" y="244" width="4" height="6"/><rect x="1116" y="260" width="4" height="6"/></g>
+        <!-- モリニュー・スタジアム（大スタンド、中央） -->
+        <g transform="translate(600,330)">
+          <rect x="-310" y="-52" width="620" height="76" fill="#1a160c"/>
+          <path d="M-330 -52 L-306 -122 L306 -122 L330 -52 Z" fill="#241f10"/>
+          <path d="M-330 -52 L-306 -122 L306 -122 L330 -52 Z" fill="none" stroke="#fdb913" stroke-width="2.5" opacity=".55"/>
+          <!-- 屋根の梁 -->
+          <g stroke="#fdb913" stroke-width="3" opacity=".55"><line x1="-260" y1="-122" x2="-260" y2="-52"/><line x1="-130" y1="-122" x2="-130" y2="-52"/><line x1="0" y1="-122" x2="0" y2="-52"/><line x1="130" y1="-122" x2="130" y2="-52"/><line x1="260" y1="-122" x2="260" y2="-52"/></g>
+          <!-- スタンド照明 -->
+          <g fill="#ffe9b0" opacity=".85"><rect x="-280" y="-86" width="8" height="6"/><rect x="-190" y="-86" width="8" height="6"/><rect x="-100" y="-86" width="8" height="6"/><rect x="-10" y="-86" width="8" height="6"/><rect x="80" y="-86" width="8" height="6"/><rect x="170" y="-86" width="8" height="6"/><rect x="260" y="-86" width="8" height="6"/></g>
+        </g>
+        <!-- 山吹×黒の縞バンド -->
+        <g><rect x="0" y="354" width="1200" height="30" fill="#fdb913" opacity=".92"/><rect x="0" y="354" width="150" height="30" fill="#231f20"/><rect x="300" y="354" width="150" height="30" fill="#231f20"/><rect x="600" y="354" width="150" height="30" fill="#231f20"/><rect x="900" y="354" width="150" height="30" fill="#231f20"/></g>
+        <!-- 狼のシルエット（右下、遠吠え） -->
+        <g transform="translate(940,400)" fill="#fdb913" opacity=".9">
+          <path d="M0 60 Q-4 24 14 20 Q6 8 18 2 Q10 -8 24 -10 L34 -26 L40 -12 Q54 -14 58 -2 Q74 2 70 18 L88 22 Q80 40 62 36 L66 60 L56 60 L52 40 L26 40 L24 60 L14 60 L14 38 Q2 42 0 60 Z"/>
+          <path d="M34 -26 L30 -42 L40 -30 Z"/>
+        </g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イングランド・プレミアリーグ</span>
+        <h1>ウォルバーハンプトン<span class="cl-en">Wolverhampton Wanderers · 1877</span></h1>
+        <p class="cl-sub">山吹と黒をまとうミッドランズの狼。モリニューを本拠に、黄金期の歴史を誇る古豪です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イングランド中部・ミッドランズの街ウォルバーハンプトンを本拠とするクラブです。<b>山吹（オールドゴールド）と黒</b>という他に類を見ないカラーと、狼の愛称で親しまれ、リーグ創設期からの歴史を刻んできた古豪です。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>モリニュー・スタジアム — 古豪の砦</h2>
+      <p>街の中心近くに建つ、3万1千人あまりを収容するスタジアムです。1889年から使われ続けている、イングランドでも指折りの歴史を持つ舞台で、<span class="cl-hl">山吹色に照らされたスタンド</span>が印象的です。1888年に発足したフットボールリーグの創設メンバーとして、クラブは草創期からこの地で試合を重ねてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="山吹色のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#16130c"/>
+          <defs><pattern id="wvcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#16130c"/><circle cx="8.5" cy="7" r="5" fill="#fdb913"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#wvcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#ffd45e" opacity=".55"/>
+          <g stroke="#ffd45e" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#6b6144"/><polygon points="164,30 206,40 164,54" fill="#fdb913"/><rect x="420" y="24" width="4" height="64" fill="#6b6144"/><polygon points="424,24 466,36 424,50" fill="#231f20"/></g>
+        </svg>
+        <figcaption>山吹の一体感 — 古豪の砦を彩る、ウルブズのスカーフ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ウォルバーハンプトン — 産業のミッドランズ</h2>
+      <p>ウォルバーハンプトンは、鉄工と製造業で栄えたイングランド中部・ミッドランズの街。「ブラック・カントリー」と呼ばれる工業地帯の一角に位置し、<span class="cl-black">職人気質と労働者の誇り</span>が息づく土地柄です。地域に深く根ざしたクラブとして、街の人々の暮らしと分かちがたく結びついています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="煙突と工場、街並みが並ぶミッドランズの夕景シルエット">
+          <defs><linearGradient id="wvdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e2812"/><stop offset="100%" stop-color="#16130c"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#wvdusk)"/>
+          <circle cx="500" cy="46" r="28" fill="#fdb913" opacity=".5"/>
+          <g fill="#191509"><rect x="20" y="78" width="20" height="46"/><rect x="46" y="62" width="16" height="62"/><rect x="66" y="86" width="24" height="38"/><rect x="96" y="70" width="14" height="54"/><rect x="116" y="90" width="28" height="34"/><rect x="152" y="76" width="18" height="48"/><rect x="176" y="92" width="30" height="32"/></g>
+          <!-- 煙突 -->
+          <g fill="#1c180d"><rect x="340" y="38" width="14" height="86"/><rect x="392" y="52" width="14" height="72"/><rect x="240" y="46" width="12" height="78"/></g>
+          <!-- 煙 -->
+          <g fill="#3a3218" opacity=".5"><ellipse cx="347" cy="34" rx="18" ry="8"/><ellipse cx="330" cy="24" rx="14" ry="7"/></g>
+          <rect x="0" y="124" width="600" height="46" fill="#120e08" opacity=".9"/>
+          <g stroke="#ffd45e" stroke-width="2.5" stroke-linecap="round" opacity=".35"><line x1="60" y1="146" x2="150" y2="146"/><line x1="330" y1="140" x2="470" y2="140"/><line x1="220" y1="158" x2="360" y2="158"/></g>
+        </svg>
+        <figcaption>ブラック・カントリー — 鉄と煙で栄えた、ミッドランズの工業の街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>1950年代 — 世界と渡り合った黄金期</h2>
+      <p>クラブの歴史で最も輝いたのが、<span class="cl-hl">1950年代の黄金期</span>です。国内リーグを複数回制し、当時としては珍しかった海外の強豪とのナイトゲームで欧州の名門を打ち破ったことは、後のヨーロッパの大会創設へとつながる出来事のひとつとしても語られます。フットボールリーグの創設メンバーでもある、由緒あるクラブです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーの上に星が輝くイラスト">
+          <rect width="600" height="180" fill="#16130c"/>
+          <g transform="translate(300,110)"><path d="M-40,-40 L40,-40 L34,4 Q30,30 0,38 Q-30,30 -34,4 Z" fill="#fdb913"/><path d="M-40,-40 Q-72,-38 -72,-12 Q-72,8 -46,10 L-44,-4 Q-58,-6 -58,-16 Q-58,-28 -40,-28 Z" fill="#fdb913"/><path d="M40,-40 Q72,-38 72,-12 Q72,8 46,10 L44,-4 Q58,-6 58,-16 Q58,-28 40,-28 Z" fill="#fdb913"/><rect x="-14" y="38" width="28" height="18" fill="#c99a12"/><rect x="-30" y="56" width="60" height="10" rx="3" fill="#c99a12"/></g>
+          <g fill="#ffffff"><path d="M300,28 l4.8,11 l12,0 l-9.7,7.2 l3.8,11.8 l-10.9,-7 l-10.9,7 l3.8,-11.8 l-9.7,-7.2 l12,0 Z"/></g>
+          <g stroke="#fdb913" stroke-width="2.5" stroke-linecap="round" opacity=".6" fill="none"><path d="M120 152 q180 -30 360 0"/></g>
+        </svg>
+        <figcaption>黄金期の輝き — 世界と渡り合った、栄光の1950年代。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>オールドゴールドと黒、狼の紋章</h2>
+      <p><strong>オールドゴールド（山吹色）と黒</strong>という、サッカー界でも珍しい鮮やかな配色がクラブの象徴です。愛称の<span class="cl-hl">「ウルブズ（狼たち）」</span>にちなみ、紋章には勇猛な狼の頭が描かれています。他のどのクラブとも異なる強烈なカラーは、遠くからでもひと目でウォルバーハンプトンとわかる、誇り高きアイデンティティです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="山吹色のユニフォームの胸に、狼の頭をあしらった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#16130c"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#fdb913"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffe9b0" opacity=".8"/>
+          <!-- 紋章の盾：狼の頭 -->
+          <g transform="translate(300,82)"><path d="M0,-30 L24,-24 L24,4 Q24,24 0,32 Q-24,24 -24,4 L-24,-24 Z" fill="#231f20" stroke="#fdb913" stroke-width="2"/>
+          <!-- 狼の顔（幾何的） -->
+          <g fill="#fdb913"><path d="M-14 -14 L-10 -22 L-4 -12 Z"/><path d="M14 -14 L10 -22 L4 -12 Z"/><path d="M-13 -12 L13 -12 L10 6 L0 16 L-10 6 Z"/></g>
+          <g fill="#231f20"><circle cx="-6" cy="-4" r="2.4"/><circle cx="6" cy="-4" r="2.4"/><path d="M-3 6 L3 6 L0 11 Z"/></g>
+          </g>
+          <g stroke="#fdb913" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>オールドゴールドと黒 — 勇猛な狼を掲げる、ウルブズの紋章。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1877年</dd>
+          <dt>本拠地</dt><dd>ウォルバーハンプトン（イングランド中部・ミッドランズ）</dd>
+          <dt>スタジアム</dt><dd>モリニュー・スタジアム（約31,000人）</dd>
+          <dt>愛称</dt><dd>Wolves（ウルブズ／狼たち）</dd>
+          <dt>カラー</dt><dd>オールドゴールド（山吹色） ＆ ブラック</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

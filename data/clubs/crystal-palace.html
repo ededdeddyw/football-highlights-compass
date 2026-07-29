@@ -1,0 +1,184 @@
+<!--CLUB slug=crystal-palace name=クリスタル・パレス league=プレミアリーグ-->
+<!--VIDEO id=gXd6aSM-R20 title=Glad All Over｜Crystal Palace Anthem（応援歌）-->
+<!--DESC クリスタル・パレス（プレミアリーグ）のクラブ紹介。南ロンドンのセルハースト・パーク、熱狂のホルムズデール・エンド、鷲の「イーグルス」、そして2025年のFAカップ初優勝を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a1020; --cl-blue:#1b458f; --cl-blue-hi:#5a86d6; --cl-red:#c4122e; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f2f5fb); --cl-text:var(--fg,#111a2c); --cl-muted:#5d6b85; --cl-line:#ccd6e8; --cl-card:#f7f9ff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e4e9f5; --cl-muted:#8b96b1; --cl-line:#1e2740; --cl-card:#0f1526; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e4e9f5; --cl-muted:#8b96b1; --cl-line:#1e2740; --cl-card:#0f1526; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#111a2c; --cl-muted:#5d6b85; --cl-line:#ccd6e8; --cl-card:#f7f9ff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(10,16,32,.94) 32%,rgba(10,16,32,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-red);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-blue-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d6def0;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-blue),var(--cl-red) 55%,#e06a7c)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(27,69,143,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-red);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(27,69,143,.3);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b8c3dc;background:#070c18;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-red);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="南ロンドンのセルハースト・パークと、夜空を舞う鷲を描いたイラスト">
+        <defs>
+          <linearGradient id="cplsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#132a52"/><stop offset="55%" stop-color="#0e1b38"/><stop offset="100%" stop-color="#0a1020"/></linearGradient>
+          <radialGradient id="cplglow" cx="70%" cy="32%" r="50%"><stop offset="0%" stop-color="#c4122e" stop-opacity=".32"/><stop offset="45%" stop-color="#1b458f" stop-opacity=".14"/><stop offset="100%" stop-color="#0a1020" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#cplsky)"/>
+        <rect width="1200" height="470" fill="url(#cplglow)"/>
+        <g fill="#5a86d6" opacity=".26"><circle cx="180" cy="90" r="2.5"/><circle cx="280" cy="60" r="2"/><circle cx="380" cy="108" r="2.5"/><circle cx="120" cy="140" r="2"/><circle cx="1040" cy="80" r="2.5"/><circle cx="960" cy="58" r="2"/></g>
+        <!-- 南ロンドンの街並み -->
+        <g fill="#0d1930"><rect x="40" y="250" width="30" height="60"/><rect x="76" y="230" width="22" height="80"/><rect x="104" y="262" width="34" height="48"/><rect x="146" y="244" width="20" height="66"/><rect x="172" y="270" width="38" height="40"/><rect x="216" y="252" width="24" height="58"/><rect x="248" y="272" width="34" height="38"/><rect x="288" y="240" width="20" height="70"/><rect x="1120" y="252" width="30" height="58"/><rect x="1084" y="240" width="22" height="70"/><rect x="1054" y="266" width="26" height="44"/></g>
+        <!-- セルハースト・パーク（スタンド屋根） -->
+        <g transform="translate(600,296)">
+          <rect x="-300" y="-8" width="600" height="30" fill="#0c1c3a"/>
+          <path d="M-300 -8 L-268 -46 L268 -46 L300 -8 Z" fill="#122a54"/>
+          <path d="M-300 -8 L-268 -46 L268 -46 L300 -8 Z" fill="none" stroke="#5a86d6" stroke-width="3" opacity=".5"/>
+          <g fill="#e9eefb" opacity=".9"><rect x="-250" y="-40" width="500" height="7"/></g>
+          <g fill="#c4122e" opacity=".55"><rect x="-250" y="-31" width="500" height="4"/></g>
+          <!-- 照明塔 -->
+          <g fill="#4a5a78"><rect x="-286" y="-96" width="5" height="52"/><rect x="281" y="-96" width="5" height="52"/></g>
+          <g fill="#fbeec4" opacity=".9"><rect x="-296" y="-100" width="24" height="8" rx="2"/><rect x="272" y="-100" width="24" height="8" rx="2"/></g>
+        </g>
+        <ellipse cx="600" cy="336" rx="330" ry="26" fill="#1b458f" opacity=".28"/>
+        <!-- 鷲（イーグル） -->
+        <g transform="translate(300,150)" fill="#e9eefb" opacity=".95">
+          <path d="M0 0 q-70 -34 -138 -20 q52 6 74 30 q-40 -4 -62 10 q46 2 66 18 q-26 4 -40 20 q40 -10 66 -2 q-2 24 6 44 q10 -22 28 -34 q18 12 28 34 q8 -20 6 -44 q26 -8 66 2 q-14 -16 -40 -20 q20 -16 66 -18 q-22 -14 -62 -10 q22 -24 74 -30 q-68 -14 -138 20 q-6 -14 0 -30 q-8 8 -18 30 q-10 -22 -18 -30 q6 16 0 30 Z"/>
+        </g>
+        <!-- 赤青の縞バンド -->
+        <g><rect x="0" y="446" width="1200" height="24" fill="#1b458f"/><g fill="#c4122e"><rect x="120" y="446" width="120" height="24"/><rect x="360" y="446" width="120" height="24"/><rect x="600" y="446" width="120" height="24"/><rect x="840" y="446" width="120" height="24"/><rect x="1080" y="446" width="120" height="24"/></g></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イングランド・プレミアリーグ</span>
+        <h1>クリスタル・パレス<span class="cl-en">Crystal Palace · 1905</span></h1>
+        <p class="cl-sub">南ロンドンの熱いクラブ。鷲を掲げる「イーグルス」は、セルハースト・パークの大声援とともに戦います。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">南ロンドンを本拠とするクラブです。クラブ名は、19世紀にこの地へ移築された<b>ガラスと鉄の大宮殿「クリスタル・パレス」</b>に由来します。熱狂的なサポーターと、赤青の縞を身にまとった「イーグルス」の激しい戦いぶりで知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>セルハースト・パーク — 南ロンドンの熱源</h2>
+      <p>1924年から本拠とする、約2万5千人を収容する歴史あるスタジアムです。とりわけゴール裏の<span class="cl-hl">ホルムズデール・エンド</span>は、旗やドラム、途切れない大合唱でチームを後押しする、プレミアリーグ屈指の熱いスタンドとして知られています。街に根ざした、密度の濃い雰囲気が魅力です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="赤と青のスカーフを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#070c18"/>
+          <defs><pattern id="cplcrowd" width="18" height="15" patternUnits="userSpaceOnUse"><rect width="18" height="15" fill="#070c18"/><circle cx="4.5" cy="7" r="4.4" fill="#1b458f"/><circle cx="13.5" cy="7" r="4.4" fill="#c4122e"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#cplcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#5a86d6" opacity=".5"/>
+          <g stroke="#c4122e" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/></g>
+          <g stroke="#5a86d6" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M220 48 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4a5a78"/><polygon points="164,30 206,40 164,54" fill="#c4122e"/><rect x="420" y="24" width="4" height="64" fill="#4a5a78"/><polygon points="424,24 466,36 424,50" fill="#1b458f"/></g>
+        </svg>
+        <figcaption>ホルムズデール・エンド — 赤と青が渦巻く、南ロンドンの熱源。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ガラスの宮殿が名を残した街</h2>
+      <p>1851年のロンドン万国博覧会で建てられた壮麗なガラス建築<span class="cl-red">クリスタル・パレス</span>は、その後この地区へ移築され、街の名として残りました。宮殿そのものは1936年の火災で失われましたが、周辺は今も緑の公園として親しまれています。<strong>労働者の街として栄えた南ロンドン</strong>の気質が、クラブの熱量を支えています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="ガラスと鉄で組まれた大宮殿クリスタル・パレスの夜景シルエット">
+          <defs><linearGradient id="cpldusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16305c"/><stop offset="100%" stop-color="#070c18"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#cpldusk)"/>
+          <circle cx="500" cy="46" r="26" fill="#e6b23c" opacity=".6"/>
+          <!-- クリスタル・パレスの大アーチ棟 -->
+          <g transform="translate(300,150)">
+            <rect x="-200" y="-70" width="400" height="70" fill="#0e1c3a" stroke="#5a86d6" stroke-width="1.5" opacity=".95"/>
+            <path d="M-70 -70 Q0 -128 70 -70 Z" fill="#0e1c3a" stroke="#5a86d6" stroke-width="1.5"/>
+            <g stroke="#3f5a8c" stroke-width="1.2" opacity=".7"><line x1="-160" y1="-70" x2="-160" y2="0"/><line x1="-120" y1="-70" x2="-120" y2="0"/><line x1="-80" y1="-70" x2="-80" y2="0"/><line x1="80" y1="-70" x2="80" y2="0"/><line x1="120" y1="-70" x2="120" y2="0"/><line x1="160" y1="-70" x2="160" y2="0"/><line x1="-200" y1="-40" x2="200" y2="-40"/></g>
+            <g fill="#fbeec4" opacity=".5"><rect x="-150" y="-34" width="14" height="20"/><rect x="-100" y="-34" width="14" height="20"/><rect x="100" y="-34" width="14" height="20"/><rect x="140" y="-34" width="14" height="20"/></g>
+          </g>
+        </svg>
+        <figcaption>クリスタル・パレス — 街に名を残した、ガラスと鉄の大宮殿。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>鷲の「イーグルス」、初の主要タイトル</h2>
+      <p>クラブの象徴は、大空を舞う<span class="cl-hl">鷲（イーグル）</span>。長らく上位カップ戦で惜しくも頂点に届かない時期が続きましたが、<strong>2025年のFAカップ</strong>で、ついにクラブ史上初の主要タイトルを掴み取りました。粘り強く戦い続けてきた南ロンドンの誇りが、大きな歓喜へと結実した瞬間でした。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーの上で翼を広げる鷲のイラスト">
+          <rect width="600" height="180" fill="#070c18"/>
+          <g transform="translate(300,120)"><path d="M-34,-34 L34,-34 L29,4 Q26,26 0,32 Q-26,26 -29,4 Z" fill="#e6b23c"/><path d="M-34,-34 Q-62,-32 -62,-10 Q-62,7 -40,9 L-38,-3 Q-50,-5 -50,-14 Q-50,-24 -34,-24 Z" fill="#e6b23c"/><path d="M34,-34 Q62,-32 62,-10 Q62,7 40,9 L38,-3 Q50,-5 50,-14 Q50,-24 34,-24 Z" fill="#e6b23c"/><rect x="-12" y="32" width="24" height="16" fill="#c8912f"/><rect x="-26" y="48" width="52" height="9" rx="3" fill="#c8912f"/></g>
+          <g transform="translate(300,58)" fill="#e9eefb" opacity=".95"><path d="M0 0 q-56 -26 -108 -14 q40 6 56 24 q-32 -4 -48 8 q36 2 52 14 q-20 4 -30 16 q30 -8 50 -2 q-2 18 6 34 q8 -16 22 -26 q14 10 22 26 q8 -16 6 -34 q20 -6 50 2 q-10 -12 -30 -16 q16 -12 52 -14 q-16 -12 -48 -8 q16 -18 56 -24 q-52 -12 -108 14 Z"/></g>
+        </svg>
+        <figcaption>栄光の鷲 — 翼を広げ、初のトロフィーを掴む。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>赤と青の縦縞</h2>
+      <p>大胆な赤と青の縦縞（サッシュ入りのデザインで知られた時期もあります）が、クラブのアイデンティティです。試合前には<strong>「Glad All Over」</strong>がスタジアムに鳴り響き、サポーターが一斉に飛び跳ねます。堅い守備を土台に、鋭いカウンターと個の突破で試合を決める——南ロンドンらしい、負けん気の強いサッカーが持ち味です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="赤と青の縦縞のユニフォームに、鷲の紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#070c18"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#1b458f"/>
+          <g fill="#c4122e"><path d="M232 26 L258 24 L258 137 Q245 135 232 132 Z"/><path d="M300 21 L326 22 L326 139 Q313 140 300 140 Z"/><path d="M368 26 L368 132 Q355 135 342 137 L342 24 Z"/></g>
+          <g transform="translate(300,80)" fill="#ffffff" opacity=".95"><path d="M0 -18 q-30 -14 -58 -8 q22 4 30 14 q-18 -2 -26 6 q20 2 28 8 q-11 2 -16 10 q16 -5 27 -2 q-1 12 3 22 q5 -10 12 -16 q7 6 12 16 q4 -10 3 -22 q11 -3 27 2 q-5 -8 -16 -10 q8 -6 28 -8 q-8 -8 -26 -6 q8 -10 30 -14 q-28 -6 -58 8 Z"/></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>赤と青の縞 — 胸で翼を広げる、イーグルスの紋章。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1905年</dd>
+          <dt>本拠地</dt><dd>南ロンドン</dd>
+          <dt>スタジアム</dt><dd>セルハースト・パーク（約25,000人）</dd>
+          <dt>愛称</dt><dd>The Eagles（イーグルス）</dd>
+          <dt>カラー</dt><dd>レッド ＆ ブルー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

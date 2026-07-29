@@ -1,0 +1,195 @@
+<!--CLUB slug=newcastle-united name=ニューカッスル league=プレミアリーグ-->
+<!--VIDEO id=WOTBR-AU82s title=Local Hero（セント・ジェームズ・パーク入場アンセム）-->
+<!--DESC ニューカッスル・ユナイテッド（プレミアリーグ）のクラブ紹介。街の中心にそびえるセント・ジェームズ・パーク、タイン川の橋、熱狂のトゥーン・アーミー、白黒の縞を、アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#0a0a0c; --cl-black:#141414; --cl-white:#f2f2f2; --cl-silver:#c9ccd1; --cl-gold:#c9a24c;
+    --cl-paper:var(--bg,#f5f5f6); --cl-text:var(--fg,#131316); --cl-muted:#6a6d75; --cl-line:#d3d5da; --cl-card:#fafafb;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#eceef2; --cl-muted:#9a9da5; --cl-line:#2a2b30; --cl-card:#131417; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#eceef2; --cl-muted:#9a9da5; --cl-line:#2a2b30; --cl-card:#131417; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#131316; --cl-muted:#6a6d75; --cl-line:#d3d5da; --cl-card:#fafafb; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,8,10,.94) 32%,rgba(8,8,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0a0a0c;background:var(--cl-white);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-silver);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dcdee2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,#141414,#f2f2f2 50%,#141414)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(150,153,160,.34)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#0a0a0c;background:var(--cl-white);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(150,153,160,.4);font-weight:700}
+  .cl-gold{color:var(--cl-gold);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#c6c9cf;background:#080809;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-black);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="夜の街の中心にそびえるセント・ジェームズ・パークと、タイン川に架かる橋を描いたイラスト">
+        <defs>
+          <linearGradient id="ncsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1c1d22"/><stop offset="55%" stop-color="#121216"/><stop offset="100%" stop-color="#0a0a0c"/></linearGradient>
+          <radialGradient id="ncglow" cx="50%" cy="30%" r="52%"><stop offset="0%" stop-color="#f2f2f2" stop-opacity=".26"/><stop offset="45%" stop-color="#c9ccd1" stop-opacity=".1"/><stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/></radialGradient>
+          <linearGradient id="nctyne" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a3038" stop-opacity=".7"/><stop offset="100%" stop-color="#0a0a0c" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#ncsky)"/>
+        <rect width="1200" height="470" fill="url(#ncglow)"/>
+        <g fill="#f2f2f2" opacity=".7"><circle cx="150" cy="70" r="2.5"/><circle cx="260" cy="50" r="2"/><circle cx="360" cy="96" r="2.5"/><circle cx="90" cy="120" r="2"/><circle cx="1080" cy="70" r="2.5"/><circle cx="980" cy="48" r="2"/><circle cx="1140" cy="110" r="2"/></g>
+        <!-- 街並みシルエット -->
+        <g fill="#131318"><rect x="40" y="250" width="30" height="80"/><rect x="78" y="232" width="22" height="98"/><rect x="108" y="262" width="34" height="68"/><rect x="150" y="244" width="20" height="86"/><rect x="178" y="270" width="38" height="60"/><rect x="1010" y="248" width="26" height="82"/><rect x="1044" y="232" width="22" height="98"/><rect x="1074" y="262" width="34" height="68"/><rect x="1116" y="250" width="24" height="80"/></g>
+        <!-- セント・ジェームズ・パーク（中央にそびえる大スタンド） -->
+        <g transform="translate(600,300)">
+          <rect x="-300" y="-40" width="600" height="70" fill="#17181d"/>
+          <path d="M-320 -40 L-300 -110 L300 -110 L320 -40 Z" fill="#1d1e24"/>
+          <path d="M-320 -40 L-300 -110 L300 -110 L320 -40 Z" fill="none" stroke="#f2f2f2" stroke-width="2.5" opacity=".5"/>
+          <!-- 支柱の斜張構造 -->
+          <g stroke="#c9ccd1" stroke-width="2" opacity=".6"><line x1="-250" y1="-110" x2="-250" y2="-160"/><line x1="250" y1="-110" x2="250" y2="-160"/><line x1="-250" y1="-160" x2="-140" y2="-110"/><line x1="250" y1="-160" x2="140" y2="-110"/><line x1="-250" y1="-160" x2="-20" y2="-110"/><line x1="250" y1="-160" x2="20" y2="-110"/></g>
+          <!-- スタンドの照明 -->
+          <g fill="#f2f2f2" opacity=".85"><rect x="-280" y="-70" width="8" height="6"/><rect x="-200" y="-70" width="8" height="6"/><rect x="-120" y="-70" width="8" height="6"/><rect x="-40" y="-70" width="8" height="6"/><rect x="40" y="-70" width="8" height="6"/><rect x="120" y="-70" width="8" height="6"/><rect x="200" y="-70" width="8" height="6"/><rect x="272" y="-70" width="8" height="6"/></g>
+        </g>
+        <!-- 白黒の縞バンド（丘の斜面） -->
+        <g><rect x="0" y="330" width="1200" height="34" fill="#f2f2f2" opacity=".9"/><rect x="0" y="330" width="150" height="34" fill="#141414"/><rect x="300" y="330" width="150" height="34" fill="#141414"/><rect x="600" y="330" width="150" height="34" fill="#141414"/><rect x="900" y="330" width="150" height="34" fill="#141414"/></g>
+        <!-- タイン川 -->
+        <rect x="0" y="364" width="1200" height="106" fill="url(#nctyne)"/>
+        <!-- タイン・ブリッジ（アーチ橋） -->
+        <g stroke="#3a4048" stroke-width="6" fill="none" opacity=".9"><path d="M760 364 Q980 288 1200 364"/></g>
+        <g stroke="#3a4048" stroke-width="4" opacity=".8"><line x1="800" y1="352" x2="800" y2="364"/><line x1="860" y1="336" x2="860" y2="364"/><line x1="920" y1="326" x2="920" y2="364"/><line x1="980" y1="322" x2="980" y2="364"/><line x1="1040" y1="326" x2="1040" y2="364"/><line x1="1100" y1="336" x2="1100" y2="364"/></g>
+        <g fill="#3a4048"><rect x="756" y="358" width="14" height="40"/><rect x="1192" y="358" width="14" height="40"/></g>
+        <!-- 川面の反射 -->
+        <g stroke="#c9ccd1" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="120" y1="400" x2="240" y2="400"/><line x1="360" y1="420" x2="520" y2="420"/><line x1="640" y1="410" x2="740" y2="410"/><line x1="300" y1="440" x2="470" y2="440"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イングランド・プレミアリーグ</span>
+        <h1>ニューカッスル<span class="cl-en">Newcastle United · 1892</span></h1>
+        <p class="cl-sub">街の中心にそびえるセント・ジェームズ・パーク。タイン川の街を白黒に染める、熱狂のトゥーン・アーミーのクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">イングランド北東部・タイン川沿いの街ニューカッスルを本拠とするクラブです。<b>街の中心にそびえるスタジアム</b>と、地元愛にあふれる人々の熱量で知られ、白黒の縞のユニフォームは北東部の誇りそのものです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>セント・ジェームズ・パーク — 街にそびえる要塞</h2>
+      <p>市街地のただ中に建つ、5万2千人あまりを収容するスタジアムです。丘の上に大きなスタンドがそびえ、<span class="cl-hl">街のどこからでもその姿が見えます</span>。1892年から続くこの地でホームゲームを重ねてきた、イングランド有数の歴史あるアリーナ。満員のスタンドが生む音の壁は、訪れる相手にとって手強い舞台として知られています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="白黒のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#080809"/>
+          <defs><pattern id="nccrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#080809"/><circle cx="8.5" cy="7" r="5" fill="#e6e6e6"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#nccrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#c9ccd1" opacity=".55"/>
+          <g stroke="#f2f2f2" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a5d63"/><polygon points="164,30 206,40 164,54" fill="#f2f2f2"/><rect x="420" y="24" width="4" height="64" fill="#5a5d63"/><polygon points="424,24 466,36 424,50" fill="#141414"/></g>
+        </svg>
+        <figcaption>白と黒の壁 — 街の要塞を埋め尽くす、マグパイズのスカーフ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>タイン川と橋の街、北東イングランド</h2>
+      <p>ニューカッスルは、<span class="cl-gold">タイン川</span>に幾つもの橋が架かる港湾の街。造船と石炭で栄えた気骨ある土地柄で、地元では「ジョーディー」と呼ばれる独特の言葉と誇りが息づいています。街とクラブの結びつきは深く、試合日には白黒のシャツをまとった人々が中心街からスタジアムへと流れ込みます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="タイン川に架かるアーチ橋と、川沿いの街並みの夕景シルエット">
+          <defs><linearGradient id="ncdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2c33"/><stop offset="100%" stop-color="#080809"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#ncdusk)"/>
+          <circle cx="500" cy="48" r="28" fill="#c9a24c" opacity=".6"/>
+          <g fill="#131318"><rect x="20" y="84" width="18" height="40"/><rect x="44" y="72" width="14" height="52"/><rect x="62" y="90" width="22" height="34"/><rect x="92" y="78" width="12" height="46"/><rect x="112" y="94" width="26" height="30"/><rect x="150" y="82" width="16" height="42"/></g>
+          <!-- アーチ橋 -->
+          <g stroke="#4a5058" stroke-width="6" fill="none" opacity=".9"><path d="M180 124 Q340 56 500 124"/></g>
+          <g stroke="#4a5058" stroke-width="3" opacity=".8"><line x1="220" y1="112" x2="220" y2="124"/><line x1="270" y1="94" x2="270" y2="124"/><line x1="340" y1="84" x2="340" y2="124"/><line x1="410" y1="94" x2="410" y2="124"/><line x1="460" y1="112" x2="460" y2="124"/></g>
+          <g fill="#4a5058"><rect x="176" y="118" width="12" height="34"/><rect x="494" y="118" width="12" height="34"/></g>
+          <rect x="0" y="124" width="600" height="46" fill="#161c22" opacity=".9"/>
+          <g stroke="#c9ccd1" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="60" y1="146" x2="150" y2="146"/><line x1="330" y1="140" x2="470" y2="140"/><line x1="220" y1="158" x2="360" y2="158"/></g>
+        </svg>
+        <figcaption>タイン川の橋 — 造船と石炭で栄えた、北東イングランドの港街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> サポーター</div>
+      <h2>トゥーン・アーミー — 世界屈指の忠誠</h2>
+      <p>ニューカッスルのサポーターは<span class="cl-hl">「トゥーン・アーミー」</span>と呼ばれ、その熱量と忠誠心はイングランドでも屈指と称されます。「トゥーン」は街を指す地元の言葉。順位や時代を問わず満員のスタンドを埋め続ける姿は、街そのものの気質を映しています。近年もカップ戦のタイトルに沸き、その歓喜は街じゅうを白黒に染めました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="かささぎ（マグパイ）をあしらった白黒の紋章のイラスト">
+          <rect width="600" height="180" fill="#080809"/>
+          <path d="M300 24 L360 42 L360 96 Q360 138 300 156 Q240 138 240 96 L240 42 Z" fill="#141414" stroke="#f2f2f2" stroke-width="2.5"/>
+          <path d="M300 24 L360 42 L360 96 Q360 138 300 156 Q240 138 240 96 L240 42 Z" fill="none" stroke="#c9a24c" stroke-width="1" opacity=".6"/>
+          <!-- 中央の白黒縦縞 -->
+          <g><rect x="282" y="42" width="9" height="102" fill="#f2f2f2"/><rect x="300" y="42" width="9" height="106" fill="#f2f2f2"/><rect x="291" y="42" width="9" height="104" fill="#141414"/><rect x="309" y="42" width="9" height="102" fill="#141414"/></g>
+          <!-- マグパイ（かささぎ）のシルエット -->
+          <g fill="#f2f2f2"><ellipse cx="300" cy="86" rx="16" ry="10"/><circle cx="316" cy="76" r="7"/><path d="M300 90 L286 118 L296 112 Z"/></g>
+          <g fill="#141414"><ellipse cx="300" cy="86" rx="9" ry="6"/></g>
+          <polygon points="322,74 334,76 322,80" fill="#c9a24c"/>
+          <g fill="#c9a24c" opacity=".85"><rect x="270" y="126" width="60" height="4" rx="2"/></g>
+        </svg>
+        <figcaption>マグパイズ — かささぎの白黒をまとった、北東部の紋章。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>白と黒の縞、マグパイズの伝統</h2>
+      <p>白黒の縦縞のユニフォームから、かささぎになぞらえて<strong>「マグパイズ」</strong>の愛称で親しまれます。1892年の創設以来、この街の中心でサッカーを続けてきた古豪であり、白黒の縞は北東イングランドの象徴として広く知られています。<span class="cl-hl">熱いホームの後押し</span>を力に、上位を目指して戦い続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="白黒の縦縞のユニフォームの胸に、クラブの紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#080809"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f2f2f2"/>
+          <!-- 縦縞 -->
+          <g fill="#141414"><rect x="224" y="24" width="16" height="114"/><rect x="256" y="22" width="16" height="118"/><rect x="288" y="21" width="16" height="119"/><rect x="320" y="22" width="16" height="118"/><rect x="352" y="24" width="16" height="114"/></g>
+          <!-- 紋章の円 -->
+          <g transform="translate(300,80)"><circle r="28" fill="#141414" stroke="#f2f2f2" stroke-width="3"/><ellipse cx="0" cy="0" rx="13" ry="8" fill="#f2f2f2"/><circle cx="11" cy="-8" r="6" fill="#f2f2f2"/><path d="M0 4 L-11 24 L-3 19 Z" fill="#f2f2f2"/><ellipse cx="0" cy="0" rx="7" ry="5" fill="#141414"/><polygon points="16,-9 26,-7 16,-4" fill="#c9a24c"/></g>
+          <g stroke="#c9a24c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>白と黒の縞 — かささぎの紋章を胸に、北東部の誇りを背負う。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1892年</dd>
+          <dt>本拠地</dt><dd>ニューカッスル・アポン・タイン（イングランド北東部）</dd>
+          <dt>スタジアム</dt><dd>セント・ジェームズ・パーク（約52,000人）</dd>
+          <dt>愛称</dt><dd>The Magpies／The Toon（マグパイズ／トゥーン）</dd>
+          <dt>カラー</dt><dd>ブラック ＆ ホワイト（白黒の縦縞）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

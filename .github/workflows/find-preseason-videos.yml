@@ -1,0 +1,61 @@
+name: Find preseason videos (プレシーズンのハイライト動画を付与)
+
+# プレシーズン/親善試合の各試合に、YouTube から探したハイライト動画（両チーム名一致の公開動画）を
+# videoId として付与し data/preseason-<season>.json を更新する。手動実行。
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン（例: 2026）'
+        required: false
+        default: '2026'
+      limit:
+        description: '処理する最大試合数（空なら全件）'
+        required: false
+        default: ''
+      force:
+        description: '既に動画のある試合も再探索する'
+        required: false
+        default: 'false'
+      dry_run:
+        description: 'JSONを更新せず結果だけ確認する'
+        required: false
+        default: 'false'
+      probe:
+        description: '採用候補の日本再生可否も判定する（記録のみ）'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: find-preseason-videos
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: 探索して付与
+        run: >-
+          node scripts/find-preseason-videos.mjs
+          --season=${{ github.event.inputs.season }}
+          ${{ github.event.inputs.limit != '' && format('--limit={0}', github.event.inputs.limit) || '' }}
+          ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+          ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+          ${{ github.event.inputs.probe == 'true' && '--probe' || '' }}
+      - name: データをコミット
+        if: always()
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/preseason-*.json data/preseason-video-report.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "data: プレシーズンのハイライト動画を付与（find-preseason-videos）"
+          git pull --rebase --autostash || true
+          git push
