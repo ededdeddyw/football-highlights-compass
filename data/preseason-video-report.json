@@ -1,17 +1,17 @@
 {
   "generatedFor": "2026",
   "scanned": 16,
-  "filled": 15,
+  "filled": 10,
   "rows": [
     {
       "date": "2026-07-15",
       "home": "鹿島アントラーズ",
       "away": "Vegalta Sendai",
       "query": "kashima antlers vegalta sendai Vegalta Sendai highlights",
-      "videoId": "SOUMrMvZ5eQ",
-      "title": "Kashima Antlers vs Vegalta Sendai - J.League highlights",
-      "channel": "Goal News & Highlights",
-      "score": 8,
+      "videoId": "X2yS0rPy7iA",
+      "title": "Vegalta Sendai 0-1 Kashima Antlers - Full Goals",
+      "channel": "golosdaAsiaONGOLOS",
+      "score": 6,
       "jp": "不明",
       "playable": "HTTP_400"
     },
@@ -20,12 +20,8 @@
       "home": "セレッソ大阪",
       "away": "Tochigi City",
       "query": "cerezo osaka tochigi city Tochigi City highlights",
-      "videoId": "twPLR-SwIKQ",
-      "title": "🔴Cerezo Osaka VS Tochigi City | International Club Friendly | Live Score",
-      "channel": "SripokuTV",
-      "score": 8,
-      "jp": "不明",
-      "playable": "HTTP_400"
+      "videoId": "",
+      "note": "該当なし（両チーム名一致の公開動画が見つからず）／既存の誤マッチを解除"
     },
     {
       "date": "2026-07-16",
@@ -40,12 +36,8 @@
       "home": "京都サンガF.C.",
       "away": "Shonan Bellmare",
       "query": "kyoto sanga shonan bellmare Shonan Bellmare highlights",
-      "videoId": "i769BAOyBNY",
-      "title": "Brilliant back-heel assist | Kyoto Sanga F.C. 1-2 Shonan Bellmare | 2024 J1 LEAGUE HIGHLIGHTS | MW 2",
-      "channel": "J.LEAGUE International",
-      "score": 8,
-      "jp": "不明",
-      "playable": "HTTP_400"
+      "videoId": "",
+      "note": "該当なし（両チーム名一致の公開動画が見つからず）／既存の誤マッチを解除"
     },
     {
       "date": "2026-07-17",
@@ -88,12 +80,8 @@
       "home": "横浜F・マリノス",
       "away": "Roasso Kumamoto",
       "query": "yokohama f marinos roasso kumamoto Roasso Kumamoto highlights",
-      "videoId": "xhX9rs1rwF8",
-      "title": "Yokohama FC Put on a SHOW! | Yokohama FC 5-0 Roasso Kumamoto | 2024 J2 LEAGUE HIGHLIGHTS | MW 21",
-      "channel": "J.LEAGUE International",
-      "score": 8,
-      "jp": "不明",
-      "playable": "HTTP_400"
+      "videoId": "",
+      "note": "該当なし（両チーム名一致の公開動画が見つからず）／既存の誤マッチを解除"
     },
     {
       "date": "2026-07-20",
@@ -112,24 +100,16 @@
       "home": "FC東京",
       "away": "名古屋グランパス",
       "query": "fc tokyo nagoya grampus highlights",
-      "videoId": "F77EIA_mlDA",
-      "title": "FC TOKYO 3-1 Nagoya Grampus - Game Highlights | 2025 J1 LEAGUE HIGHLIGHTS | MW 3",
-      "channel": "J.LEAGUE International",
-      "score": 8,
-      "jp": "不明",
-      "playable": "HTTP_400"
+      "videoId": "",
+      "note": "該当なし（両チーム名一致の公開動画が見つからず）／既存の誤マッチを解除"
     },
     {
       "date": "2026-07-22",
       "home": "ヴィッセル神戸",
       "away": "FC Imabari",
       "query": "vissel kobe fc imabari FC Imabari highlights",
-      "videoId": "3__sRTOFIBU",
-      "title": "Kobe Finish The Comeback! | FC Imabari 1-2 Vissel Kobe | MD 2 | 2024 Levain Cup",
-      "channel": "J.LEAGUE International",
-      "score": 6,
-      "jp": "不明",
-      "playable": "HTTP_400"
+      "videoId": "",
+      "note": "該当なし（両チーム名一致の公開動画が見つからず）／既存の誤マッチを解除"
     },
     {
       "date": "2026-07-22",
@@ -172,10 +152,10 @@
       "home": "ベンフィカ",
       "away": "Os Belenenses",
       "query": "benfica os belenenses Os Belenenses highlights",
-      "videoId": "bAMDX6BwRys",
-      "title": "Highlights | CF Belenenses 29-30 #AndebolBenfica | Campeonato Nacional",
-      "channel": "Sport Lisboa e Benfica",
-      "score": 9,
+      "videoId": "nfauOuhUj7o",
+      "title": "Belenenses vs SL Benfica",
+      "channel": "UltrasSLBenfica1904",
+      "score": 7,
       "jp": "不明",
       "playable": "HTTP_400"
     },
