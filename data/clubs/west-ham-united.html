@@ -1,0 +1,205 @@
+<!--CLUB slug=west-ham-united name=ウェストハム league=プレミアリーグ-->
+<!--VIDEO id=kLWgd9tNDtk title=I'm Forever Blowing Bubbles（ウェストハムのアンセム）-->
+<!--DESC ウェストハム・ユナイテッド（プレミアリーグ）のクラブ紹介。東ロンドンのロンドン・スタジアム、交差した槌の紋章、シャボン玉の応援歌、2023年UECL制覇の栄光を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140810; --cl-claret:#7a263a; --cl-claret-hi:#c05a72; --cl-sky:#1bb1e7; --cl-sky-hi:#7fd7f5;
+    --cl-paper:var(--bg,#fbf3f5); --cl-text:var(--fg,#1e0f15); --cl-muted:#7d6068; --cl-line:#e8ccd3; --cl-card:#fffafb;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f4e6ea; --cl-muted:#b39aa2; --cl-line:#3a2028; --cl-card:#1d1016; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f4e6ea; --cl-muted:#b39aa2; --cl-line:#3a2028; --cl-card:#1d1016; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1e0f15; --cl-muted:#7d6068; --cl-line:#e8ccd3; --cl-card:#fffafb; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,8,16,.94) 32%,rgba(20,8,16,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-claret);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-sky-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f0dae0;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-claret),var(--cl-sky) 55%,#dff4fc)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(122,38,58,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-claret);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(27,177,231,.34);font-weight:700}
+  .cl-sky{color:var(--cl-sky);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e6c3cc;background:#180a12;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-claret);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="夜の東ロンドンに広がるロンドン・スタジアムと、交差した槌の紋章、舞い上がるシャボン玉を描いたイラスト">
+        <defs>
+          <linearGradient id="whsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c1020"/><stop offset="55%" stop-color="#1e0b16"/><stop offset="100%" stop-color="#140810"/></linearGradient>
+          <radialGradient id="whglow" cx="50%" cy="68%" r="52%"><stop offset="0%" stop-color="#7a263a" stop-opacity=".5"/><stop offset="45%" stop-color="#c05a72" stop-opacity=".14"/><stop offset="100%" stop-color="#140810" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#whsky)"/>
+        <rect width="1200" height="470" fill="url(#whglow)"/>
+        <g fill="#f0dae0" opacity=".8"><circle cx="150" cy="80" r="2.5"/><circle cx="260" cy="56" r="2"/><circle cx="360" cy="104" r="2.5"/><circle cx="90" cy="130" r="2"/><circle cx="1080" cy="74" r="2.5"/><circle cx="980" cy="52" r="2"/></g>
+        <!-- 舞い上がるシャボン玉 -->
+        <g fill="none" stroke="#7fd7f5" stroke-width="2" opacity=".7"><circle cx="180" cy="150" r="22"/><circle cx="300" cy="90" r="14"/><circle cx="1000" cy="120" r="26"/><circle cx="900" cy="60" r="12"/><circle cx="1100" cy="200" r="16"/></g>
+        <g fill="#1bb1e7" opacity=".18"><circle cx="180" cy="150" r="22"/><circle cx="1000" cy="120" r="26"/></g>
+        <g fill="#ffffff" opacity=".5"><circle cx="172" cy="142" r="4"/><circle cx="992" cy="112" r="5"/></g>
+        <!-- 東ロンドン（旧工業地帯）の街並みシルエット -->
+        <g fill="#1d0d17"><rect x="40" y="248" width="26" height="62"/><rect x="72" y="262" width="20" height="48"/><rect x="98" y="234" width="16" height="76"/><rect x="120" y="256" width="30" height="54"/><rect x="1040" y="248" width="24" height="62"/><rect x="1070" y="262" width="20" height="48"/><rect x="1096" y="234" width="18" height="76"/><rect x="1120" y="256" width="30" height="54"/></g>
+        <!-- 煙突（イーストロンドンの名残） -->
+        <g fill="#1d0d17"><rect x="150" y="200" width="12" height="110"/><rect x="1090" y="196" width="12" height="114"/></g>
+        <g fill="#1bb1e7" opacity=".7"><rect x="150" y="200" width="12" height="5"/><rect x="1090" y="196" width="12" height="5"/></g>
+        <!-- ロンドン・スタジアム（陸上競技場由来の低いボウルと白い屋根リング） -->
+        <g transform="translate(600,326)">
+          <ellipse cx="0" cy="4" rx="380" ry="86" fill="#26101c"/>
+          <ellipse cx="0" cy="-14" rx="372" ry="94" fill="#20101a"/>
+          <ellipse cx="0" cy="-52" rx="372" ry="66" fill="none" stroke="#e9d7dd" stroke-width="6" opacity=".55"/>
+          <ellipse cx="0" cy="-14" rx="256" ry="46" fill="#2c1220"/>
+          <ellipse cx="0" cy="-14" rx="256" ry="46" fill="none" stroke="#c05a72" stroke-width="2" opacity=".5"/>
+          <g fill="#c05a72" opacity=".7"><rect x="-320" y="-36" width="70" height="6" rx="3"/><rect x="-120" y="-48" width="70" height="6" rx="3"/><rect x="50" y="-48" width="70" height="6" rx="3"/><rect x="250" y="-36" width="70" height="6" rx="3"/></g>
+        </g>
+        <ellipse cx="600" cy="414" rx="388" ry="28" fill="#7a263a" opacity=".34"/>
+        <!-- 交差した槌（crossed hammers）の紋章 -->
+        <g transform="translate(250,280)" stroke="#1bb1e7" stroke-width="7" stroke-linecap="round" opacity=".9">
+          <line x1="-24" y1="24" x2="24" y2="-24"/>
+          <line x1="24" y1="24" x2="-24" y2="-24"/>
+        </g>
+        <g transform="translate(250,280)" fill="#1bb1e7" opacity=".9">
+          <rect x="-40" y="-40" width="20" height="14" rx="3" transform="rotate(45 -30 -33)"/>
+          <rect x="20" y="-40" width="20" height="14" rx="3" transform="rotate(-45 30 -33)"/>
+        </g>
+        <!-- えんじの縞バンド -->
+        <g fill="#7a263a" opacity=".92"><rect x="0" y="446" width="1200" height="9"/></g>
+        <g fill="#1bb1e7" opacity=".85"><rect x="0" y="459" width="1200" height="5"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ イングランド・プレミアリーグ</span>
+        <h1>ウェストハム<span class="cl-en">West Ham United · 1895</span></h1>
+        <p class="cl-sub">東ロンドンの労働者の誇り。交差した槌を掲げ、シャボン玉の歌とともに戦う、えんじと空色のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">ロンドン東部を本拠とするクラブです。<b>交差した二本の槌（ハンマー）</b>を紋章に掲げ、造船の街に生まれた労働者気質と、試合前に歌われるシャボン玉の応援歌で世界に知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ロンドン・スタジアム</h2>
+      <p>東ロンドンのストラトフォードに建つ、約6万2千人を収容するスタジアムです。もとは<strong>2012年ロンドン五輪</strong>のメインスタジアムとして建設され、2016年に長年の本拠地<span class="cl-hl">ボレイン・グラウンド（アプトン・パーク）</span>から移転してホームとなりました。白い屋根のリングが特徴的な、開放感のある大きな器です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="えんじ色のスカーフを掲げる観客と、舞うシャボン玉を描いたスタンドのイラスト">
+          <rect width="600" height="190" fill="#180a12"/>
+          <defs><pattern id="whcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#180a12"/><circle cx="8.5" cy="7" r="5" fill="#7a263a"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#whcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#c05a72" opacity=".55"/>
+          <g stroke="#c05a72" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <!-- シャボン玉 -->
+          <g fill="none" stroke="#7fd7f5" stroke-width="2" opacity=".8"><circle cx="120" cy="34" r="12"/><circle cx="300" cy="22" r="9"/><circle cx="470" cy="38" r="14"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a4650"/><polygon points="164,30 206,40 164,54" fill="#7a263a"/><rect x="420" y="24" width="4" height="64" fill="#5a4650"/><polygon points="424,24 466,36 424,50" fill="#1bb1e7"/></g>
+        </svg>
+        <figcaption>えんじの声援 — シャボン玉が舞う、クラレットのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>東ロンドン — 造船の街に生まれて</h2>
+      <p>ウェストハムは、テムズ川沿いの造船・製鉄の労働者たちが興したクラブに起源を持ちます。紋章の<span class="cl-hl">交差した二本の槌</span>は、鋲を打つ鉄工の道具に由来し、汗を流して働く街の誇りそのもの。<span class="cl-sky">「アカデミー・オブ・フットボール」</span>と呼ばれる育成の伝統でも知られ、地元出身の名手を数多く送り出してきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="東ロンドンの造船所と煙突のシルエット、交差した槌が浮かぶ夕景のイラスト">
+          <defs><linearGradient id="whdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#341522"/><stop offset="100%" stop-color="#180a12"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#whdusk)"/>
+          <circle cx="500" cy="50" r="28" fill="#c05a72" opacity=".5"/>
+          <g fill="#1d0d17"><rect x="20" y="96" width="20" height="44"/><rect x="46" y="82" width="16" height="58"/><rect x="66" y="102" width="24" height="38"/><rect x="96" y="88" width="14" height="52"/><rect x="116" y="100" width="26" height="40"/></g>
+          <!-- 煙突とクレーン -->
+          <g fill="#1d0d17"><rect x="160" y="56" width="10" height="84"/><rect x="200" y="70" width="8" height="70"/></g>
+          <g stroke="#1d0d17" stroke-width="6" fill="none"><path d="M240 60 l40 0 l0 -14"/></g>
+          <rect x="0" y="140" width="600" height="30" fill="#12070f"/>
+          <g stroke="#7fd7f5" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="152" x2="150" y2="152"/><line x1="330" y1="148" x2="470" y2="148"/></g>
+          <!-- 交差した槌 -->
+          <g transform="translate(400,100)" stroke="#1bb1e7" stroke-width="5" stroke-linecap="round" opacity=".9"><line x1="-16" y1="16" x2="16" y2="-16"/><line x1="16" y1="16" x2="-16" y2="-16"/></g>
+        </svg>
+        <figcaption>東ロンドン — 造船の街に生まれた、槌のクラブ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>ヨーロッパを制した夜</h2>
+      <p>ウェストハムは国内カップ戦での栄光に加え、ヨーロッパの舞台でも歴史を刻んできました。近年では<span class="cl-hl">2023年、ヨーロッパ・カンファレンスリーグを制覇</span>し、数十年ぶりとなる主要タイトルを地元にもたらしました。派手さよりも粘り強さと結束を武器に、大舞台で結果を出す——それがこのクラブの誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーの上に交差した槌が輝くイラスト">
+          <rect width="600" height="180" fill="#180a12"/>
+          <!-- トロフィー -->
+          <g transform="translate(300,110)"><path d="M-40,-40 L40,-40 L34,4 Q30,30 0,38 Q-30,30 -34,4 Z" fill="#c9a24c"/><path d="M-40,-40 Q-72,-38 -72,-12 Q-72,8 -46,10 L-44,-4 Q-58,-6 -58,-16 Q-58,-28 -40,-28 Z" fill="#c9a24c"/><path d="M40,-40 Q72,-38 72,-12 Q72,8 46,10 L44,-4 Q58,-6 58,-16 Q58,-28 40,-28 Z" fill="#c9a24c"/><rect x="-14" y="38" width="28" height="18" fill="#a5842f"/><rect x="-30" y="56" width="60" height="10" rx="3" fill="#a5842f"/></g>
+          <!-- 交差した槌 -->
+          <g transform="translate(300,52)" stroke="#1bb1e7" stroke-width="7" stroke-linecap="round"><line x1="-22" y1="22" x2="22" y2="-22"/><line x1="22" y1="22" x2="-22" y2="-22"/></g>
+          <g stroke="#7a263a" stroke-width="2.5" stroke-linecap="round" opacity=".6" fill="none"><path d="M120 152 q180 -30 360 0"/></g>
+        </svg>
+        <figcaption>欧州の夜 — 交差した槌とともに掲げた、大陸のトロフィー。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>えんじと空色、そしてシャボン玉</h2>
+      <p>えんじ色（クラレット）のシャツに空色の袖が伝統のクラブカラーで、<strong>「ザ・ハンマーズ」「アイアンズ」</strong>の愛称で親しまれます。試合前にスタンド全体で歌われる応援歌<span class="cl-hl">「I'm Forever Blowing Bubbles」</span>は世界的に有名で、無数のシャボン玉が舞う光景はこのクラブならではの名物です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="えんじ色のユニフォームの胸に、交差した槌の紋章とシャボン玉が輝くイラスト">
+          <rect width="600" height="150" fill="#180a12"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#7a263a"/>
+          <!-- 空色の袖 -->
+          <path d="M214 30 L214 118 C 214 124, 236 130, 246 132 L246 34 C 236 31, 214 30, 214 30 Z" fill="#1bb1e7" opacity=".9"/>
+          <path d="M386 30 L386 118 C 386 124, 364 130, 354 132 L354 34 C 364 31, 386 30, 386 30 Z" fill="#1bb1e7" opacity=".9"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#1bb1e7" opacity=".7"/>
+          <!-- 交差した槌 -->
+          <g transform="translate(300,82)" stroke="#1bb1e7" stroke-width="6" stroke-linecap="round"><line x1="-18" y1="18" x2="18" y2="-18"/><line x1="18" y1="18" x2="-18" y2="-18"/></g>
+          <!-- シャボン玉 -->
+          <g fill="none" stroke="#7fd7f5" stroke-width="2" opacity=".8"><circle cx="430" cy="46" r="10"/><circle cx="460" cy="80" r="7"/><circle cx="424" cy="104" r="8"/></g>
+        </svg>
+        <figcaption>クラレットと空色 — 交差する槌に、舞い上がるシャボン玉。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1895年</dd>
+          <dt>本拠地</dt><dd>ロンドン（東ロンドン・ストラトフォード）</dd>
+          <dt>スタジアム</dt><dd>ロンドン・スタジアム（約62,500人）</dd>
+          <dt>愛称</dt><dd>The Hammers／The Irons（ハンマーズ／アイアンズ）</dd>
+          <dt>カラー</dt><dd>クラレット（えんじ） ＆ スカイブルー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
