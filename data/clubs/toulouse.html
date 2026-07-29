@@ -1,0 +1,188 @@
+<!--CLUB slug=toulouse name=トゥールーズ league=リーグアン-->
+<!--VIDEO id=tnexxuY5WA8 title=Se Canto ｜ トゥールーズFCのアンセム（オクシタニアの歌）-->
+<!--DESC トゥールーズFC（リーグアン）のクラブ紹介。南西フランスのバラ色のレンガの街、ガロンヌ川、スタディアム・ドゥ・トゥールーズ、2023年のクープ・ドゥ・フランス制覇を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#120a1f; --cl-violet:#5f259f; --cl-violet-hi:#a771e0; --cl-brick:#c96a4a; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f7f4fb); --cl-text:var(--fg,#1c1130); --cl-muted:#6c5f80; --cl-line:#ddd0ec; --cl-card:#fbf8ff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#ece4f6; --cl-muted:#a294b8; --cl-line:#2e2142; --cl-card:#180f28; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#ece4f6; --cl-muted:#a294b8; --cl-line:#2e2142; --cl-card:#180f28; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1c1130; --cl-muted:#6c5f80; --cl-line:#ddd0ec; --cl-card:#fbf8ff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(18,10,31,.94) 32%,rgba(18,10,31,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--cl-violet);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-violet-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#e3d6f2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-violet),var(--cl-violet-hi) 55%,#f0e4fb)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(95,37,159,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#fff;background:var(--cl-violet);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(95,37,159,.32);font-weight:700}
+  .cl-brick{color:var(--cl-brick);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#d3c1e6;background:#0f0819;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-violet);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="南西フランスのバラ色のレンガの街トゥールーズとガロンヌ川を描いた夜景のイラスト">
+        <defs>
+          <linearGradient id="tosky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a1f5c"/><stop offset="55%" stop-color="#21123a"/><stop offset="100%" stop-color="#120a1f"/></linearGradient>
+          <radialGradient id="toglow" cx="50%" cy="30%" r="52%"><stop offset="0%" stop-color="#5f259f" stop-opacity=".42"/><stop offset="45%" stop-color="#a771e0" stop-opacity=".14"/><stop offset="100%" stop-color="#120a1f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="toriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7a4ba8" stop-opacity=".5"/><stop offset="100%" stop-color="#21123a" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#tosky)"/>
+        <rect width="1200" height="470" fill="url(#toglow)"/>
+        <g fill="#e8d6f6" opacity=".8"><circle cx="160" cy="90" r="2.5"/><circle cx="280" cy="60" r="2"/><circle cx="1040" cy="80" r="2.5"/><circle cx="960" cy="120" r="2"/><circle cx="1120" cy="60" r="2"/></g>
+        <!-- バラ色のレンガの街並み（暖色の窓灯り） -->
+        <g fill="#3a1e33"><rect x="60" y="252" width="70" height="58"/><rect x="140" y="236" width="54" height="74"/><rect x="206" y="258" width="64" height="52"/><rect x="282" y="244" width="50" height="66"/><rect x="344" y="262" width="70" height="48"/></g>
+        <!-- サン・セルナン聖堂の鐘楼（八角形の塔） -->
+        <g transform="translate(470,88)">
+          <rect x="-30" y="120" width="60" height="102" fill="#4a2438"/>
+          <rect x="-24" y="70" width="48" height="52" fill="#57293f"/>
+          <rect x="-18" y="30" width="36" height="42" fill="#5f2d45"/>
+          <rect x="-12" y="4" width="24" height="28" fill="#66324c"/>
+          <path d="M-12 4 L0 -22 L12 4 Z" fill="#7a3a2a"/>
+          <g fill="#e6b23c" opacity=".85"><rect x="-8" y="80" width="6" height="12" rx="2"/><rect x="4" y="80" width="6" height="12" rx="2"/><rect x="-4" y="40" width="6" height="12" rx="2"/></g>
+        </g>
+        <!-- 右手の街並み -->
+        <g fill="#3a1e33"><rect x="560" y="256" width="60" height="54"/><rect x="628" y="246" width="54" height="64"/><rect x="690" y="260" width="66" height="50"/><rect x="900" y="250" width="60" height="60"/><rect x="968" y="240" width="54" height="70"/><rect x="1030" y="258" width="70" height="52"/></g>
+        <g fill="#e6b23c" opacity=".8"><rect x="80" y="264" width="5" height="7"/><rect x="158" y="252" width="5" height="7"/><rect x="300" y="258" width="5" height="7"/><rect x="642" y="260" width="5" height="7"/><rect x="986" y="256" width="5" height="7"/></g>
+        <!-- ガロンヌ川 -->
+        <rect x="0" y="310" width="1200" height="160" fill="url(#toriver)"/>
+        <!-- ポン・ヌフ（アーチ橋） -->
+        <g transform="translate(0,310)" fill="#2a1640"><path d="M760 0 L760 -6 L1080 -6 L1080 0 Q1060 26 1030 26 L1010 0 Q990 26 960 26 L940 0 Q920 26 890 26 L870 0 Q850 26 820 26 L800 0 Q784 20 760 22 Z"/></g>
+        <g stroke="#b083dc" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="120" y1="352" x2="240" y2="352"/><line x1="360" y1="380" x2="520" y2="380"/><line x1="640" y1="360" x2="760" y2="360"/><line x1="300" y1="420" x2="470" y2="420"/></g>
+        <g stroke="#e6b23c" stroke-width="2.5" opacity=".3"><line x1="480" y1="320" x2="480" y2="410"/></g>
+        <!-- 紫の帯 -->
+        <g><rect x="0" y="452" width="1200" height="9" fill="#5f259f"/><rect x="0" y="461" width="1200" height="7" fill="#a771e0" opacity=".9"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ フランス・リーグアン</span>
+        <h1>トゥールーズ<span class="cl-en">Toulouse FC · 1970</span></h1>
+        <p class="cl-sub">南西フランス、バラ色のレンガに彩られたガロンヌ川の街。鮮やかな紫をまとうクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">フランス南西部・オクシタニー地方の中心都市<b>トゥールーズ</b>を本拠とするクラブです。「バラ色の街（ラ・ヴィル・ローズ）」と呼ばれるレンガの街並みと、航空産業で知られるこの都市で、鮮やかな紫のユニフォームが親しまれています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタディアム・ドゥ・トゥールーズ</h2>
+      <p>ガロンヌ川の中州、イル・デュ・ラマ地区に建つスタジアムです。国際大会の舞台にもなってきた由緒ある器で、<span class="cl-hl">紫に染まったスタンド</span>が特徴。川に囲まれた立地が独特の雰囲気を生み、地元サポーターの声援が選手を後押しします。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="紫のスカーフを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#0f0819"/>
+          <defs><pattern id="tocrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0f0819"/><circle cx="8.5" cy="7" r="5" fill="#5f259f"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#tocrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#a771e0" opacity=".55"/>
+          <g stroke="#a771e0" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#6b5878"/><polygon points="164,30 206,40 164,54" fill="#5f259f"/><rect x="420" y="24" width="4" height="64" fill="#6b5878"/><polygon points="424,24 466,36 424,50" fill="#ffffff"/></g>
+        </svg>
+        <figcaption>紫の一体感 — 川の中州に響く、ヴィオレのスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>バラ色のレンガと、ガロンヌの流れ</h2>
+      <p>トゥールーズは、夕日を浴びると街全体がバラ色に輝く<span class="cl-brick">レンガ造りの建物</span>で有名。ガロンヌ川がゆったりと街を貫き、ロマネスクのサン・セルナン聖堂がそびえます。ヨーロッパ航空産業の一大拠点でもあり、伝統と先端技術が同居する活気ある都市です。クラブはその街の色を、そのままユニフォームに映しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="バラ色のレンガの街並みと聖堂の鐘楼、ガロンヌ川を描いた夕景のシルエット">
+          <defs><linearGradient id="todusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a2648"/><stop offset="100%" stop-color="#0f0819"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#todusk)"/>
+          <circle cx="510" cy="46" r="26" fill="#e6b23c" opacity=".6"/>
+          <!-- 聖堂の鐘楼 -->
+          <g transform="translate(120,26)"><rect x="-18" y="80" width="36" height="66" fill="#4a2438"/><rect x="-14" y="48" width="28" height="32" fill="#57293f"/><rect x="-10" y="24" width="20" height="24" fill="#5f2d45"/><path d="M-10 24 L0 6 L10 24 Z" fill="#7a3a2a"/><rect x="-5" y="56" width="5" height="9" rx="2" fill="#e6b23c" opacity=".85"/></g>
+          <!-- レンガの街並み -->
+          <g fill="#3a1e33"><rect x="200" y="96" width="44" height="50"/><rect x="250" y="86" width="38" height="60"/><rect x="294" y="100" width="48" height="46"/><rect x="348" y="90" width="36" height="56"/></g>
+          <g fill="#e6b23c" opacity=".8"><rect x="216" y="108" width="5" height="7"/><rect x="264" y="102" width="5" height="7"/><rect x="312" y="112" width="5" height="7"/></g>
+          <rect x="0" y="146" width="600" height="24" fill="#2a1640" opacity=".9"/>
+          <g stroke="#b083dc" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="156" x2="180" y2="156"/><line x1="330" y1="150" x2="470" y2="150"/></g>
+        </svg>
+        <figcaption>ラ・ヴィル・ローズ — バラ色に染まる、ガロンヌ河畔の街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>2023年、クープ・ドゥ・フランス制覇</h2>
+      <p>2022-23シーズン、このクラブは<span class="cl-hl">クープ・ドゥ・フランス（フランス杯）を制覇</span>しました。堅実なクラブ運営と若手の育成を土台に掴んだ大きなタイトルは、長く待ち望んだファンを歓喜させ、ヨーロッパの舞台への扉も開きました。挑戦者らしい勢いが、このクラブの魅力です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="クープを掲げる紫のリボンと星を描いたイラスト">
+          <rect width="600" height="180" fill="#0f0819"/>
+          <g transform="translate(300,104)"><path d="M-40,-40 L40,-40 L34,4 Q30,30 0,38 Q-30,30 -34,4 Z" fill="#e6b23c"/><path d="M-40,-40 Q-72,-38 -72,-12 Q-72,8 -46,10 L-44,-4 Q-58,-6 -58,-16 Q-58,-28 -40,-28 Z" fill="#e6b23c"/><path d="M40,-40 Q72,-38 72,-12 Q72,8 46,10 L44,-4 Q58,-6 58,-16 Q58,-28 40,-28 Z" fill="#e6b23c"/><rect x="-14" y="38" width="28" height="18" fill="#c8912f"/><rect x="-30" y="56" width="60" height="10" rx="3" fill="#c8912f"/></g>
+          <g stroke="#5f259f" stroke-width="8" stroke-linecap="round" opacity=".85" fill="none"><path d="M150 150 q150 -34 300 0"/></g>
+          <g fill="#a771e0"><path d="M180,52 l3.6,8.4 l9.1,0 l-7.4,5.5 l2.9,9 l-8.2,-5.3 l-8.2,5.3 l2.9,-9 l-7.4,-5.5 l9.1,0 Z"/><path d="M420,52 l3.6,8.4 l9.1,0 l-7.4,5.5 l2.9,9 l-8.2,-5.3 l-8.2,5.3 l2.9,-9 l-7.4,-5.5 l9.1,0 Z"/></g>
+        </svg>
+        <figcaption>紫の歓喜 — 長く待ったファンに届いた、フランス杯。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>ヴィオレ、街を映す紫</h2>
+      <p>鮮やかな紫（ヴィオレ）のクラブカラーで知られ、<strong>「レ・ヴィオレ」「テフセ（TFC）」</strong>の愛称で親しまれます。フランスのプロクラブでは珍しい紫は、バラ色の街の空気と響き合う、唯一無二の個性。組織的な守備をベースに、規律あるサッカーで上位を狙い続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="紫のユニフォームの胸に、オクシタンの十字をあしらった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#0f0819"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#5f259f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff" opacity=".85"/>
+          <!-- オクシタン十字（簡略化） -->
+          <g transform="translate(300,80)" fill="#e6b23c"><rect x="-4" y="-26" width="8" height="52" rx="2"/><rect x="-26" y="-4" width="52" height="8" rx="2"/><circle cx="0" cy="-26" r="5"/><circle cx="0" cy="26" r="5"/><circle cx="-26" cy="0" r="5"/><circle cx="26" cy="0" r="5"/></g>
+          <g stroke="#a771e0" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>ヴィオレの胸に金 — オクシタニーの街を象徴する紫。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1970年</dd>
+          <dt>本拠地</dt><dd>トゥールーズ（オクシタニー地方）</dd>
+          <dt>スタジアム</dt><dd>スタディアム・ドゥ・トゥールーズ</dd>
+          <dt>愛称</dt><dd>Les Violets／TFC（レ・ヴィオレ）</dd>
+          <dt>カラー</dt><dd>ヴィオレ（紫） ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+<!--CLUB slug=kawasaki-frontale name=川崎フロンターレ league=Jリーグ（J1）-->
+<!--VIDEO id=NoUMaqBPb9s title=川崎フロンターレ応援歌 VAI LA DE FRONTALE（川崎華族公式）-->
+<!--DESC 川崎フロンターレ（Jリーグ・J1）のクラブ紹介。多摩川のほとりに建つ等々力陸上競技場、川崎の工場夜景、2010年代後半の黄金期と攻撃的なパスサッカーを、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08131f; --cl-sky:#00a0e9; --cl-sky-hi:#66d0f7; --cl-black:#14202b; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f2f8fc); --cl-text:var(--fg,#0e1e2b); --cl-muted:#5a6f7f; --cl-line:#c9dced; --cl-card:#f6fbff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e3eff7; --cl-muted:#8aa2b3; --cl-line:#1c3040; --cl-card:#0f1d2a; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e3eff7; --cl-muted:#8aa2b3; --cl-line:#1c3040; --cl-card:#0f1d2a; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0e1e2b; --cl-muted:#5a6f7f; --cl-line:#c9dced; --cl-card:#f6fbff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,19,31,.94) 32%,rgba(8,19,31,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#04121e;background:var(--cl-sky);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-sky-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d8ecf6;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,#14202b,var(--cl-sky) 55%,#a6e6fb)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,160,233,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#04121e;background:var(--cl-sky);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,160,233,.32);font-weight:700}
+  .cl-black{color:var(--cl-sky);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b6d2e4;background:#06111c;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-sky);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="多摩川のほとりに建つ等々力陸上競技場と、川崎の工場夜景を描いたイラスト">
+        <defs>
+          <linearGradient id="kwsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d3a55"/><stop offset="55%" stop-color="#0a2436"/><stop offset="100%" stop-color="#08131f"/></linearGradient>
+          <radialGradient id="kwglow" cx="72%" cy="40%" r="50%"><stop offset="0%" stop-color="#00a0e9" stop-opacity=".38"/><stop offset="45%" stop-color="#e6b23c" stop-opacity=".12"/><stop offset="100%" stop-color="#08131f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="kwriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00a0e9" stop-opacity=".5"/><stop offset="100%" stop-color="#0a2436" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#kwsky)"/>
+        <rect width="1200" height="470" fill="url(#kwglow)"/>
+        <g fill="#66d0f7" opacity=".28"><circle cx="180" cy="80" r="2.5"/><circle cx="320" cy="54" r="2"/><circle cx="460" cy="100" r="2.5"/><circle cx="140" cy="130" r="2"/><circle cx="600" cy="70" r="2"/></g>
+        <!-- 川崎の工場夜景（右側・煙突とプラント） -->
+        <g fill="#0b2233">
+          <rect x="720" y="196" width="34" height="114"/><rect x="762" y="168" width="20" height="142"/><rect x="790" y="210" width="44" height="100"/><rect x="842" y="150" width="16" height="160"/><rect x="866" y="190" width="38" height="120"/><rect x="912" y="176" width="22" height="134"/><rect x="944" y="214" width="50" height="96"/><rect x="1002" y="160" width="18" height="150"/><rect x="1028" y="200" width="40" height="110"/><rect x="1076" y="184" width="24" height="126"/><rect x="1108" y="212" width="52" height="98"/>
+        </g>
+        <!-- 煙突の先端と煙 -->
+        <g fill="#e6b23c" opacity=".85"><rect x="848" y="150" width="4" height="6"/><rect x="1008" y="160" width="4" height="6"/><rect x="768" y="168" width="4" height="6"/></g>
+        <g fill="#00a0e9" opacity=".3"><ellipse cx="850" cy="130" rx="26" ry="14"/><ellipse cx="1010" cy="140" rx="22" ry="12"/></g>
+        <!-- 工場の光の粒 -->
+        <g fill="#ffe08a" opacity=".8"><rect x="730" y="230" width="3" height="4"/><rect x="800" y="240" width="3" height="4"/><rect x="878" y="220" width="3" height="4"/><rect x="954" y="244" width="3" height="4"/><rect x="1038" y="230" width="3" height="4"/><rect x="1088" y="236" width="3" height="4"/></g>
+        <!-- 等々力の照明塔とスタンド（左） -->
+        <g transform="translate(300,300)">
+          <path d="M-260 6 Q0 -104 260 6 L260 22 Q0 -88 -260 22 Z" fill="#0f2b40"/>
+          <path d="M-260 6 Q0 -104 260 6" fill="none" stroke="#00a0e9" stroke-width="3" opacity=".55"/>
+          <rect x="-260" y="16" width="520" height="46" fill="#0a2030"/>
+        </g>
+        <g stroke="#66d0f7" stroke-width="3" stroke-linecap="round" opacity=".7"><line x1="90" y1="150" x2="90" y2="210"/><line x1="510" y1="150" x2="510" y2="210"/></g>
+        <g fill="#e6f7ff" opacity=".9"><rect x="80" y="140" width="22" height="14" rx="2"/><rect x="500" y="140" width="22" height="14" rx="2"/></g>
+        <!-- 多摩川 -->
+        <rect x="0" y="392" width="1200" height="78" fill="url(#kwriver)"/>
+        <g stroke="#a6e6fb" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="120" y1="416" x2="280" y2="416"/><line x1="400" y1="436" x2="560" y2="436"/><line x1="700" y1="420" x2="880" y2="420"/><line x1="900" y1="444" x2="1080" y2="444"/></g>
+        <!-- 工場の光の水面反射 -->
+        <g stroke="#ffe08a" stroke-width="3" opacity=".4"><line x1="850" y1="392" x2="850" y2="450"/><line x1="1010" y1="392" x2="1010" y2="450"/></g>
+        <!-- カラーバンド -->
+        <rect x="0" y="448" width="1200" height="9" fill="#00a0e9"/>
+        <rect x="0" y="457" width="1200" height="6" fill="#14202b"/>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ 日本・Jリーグ</span>
+        <h1>川崎フロンターレ<span class="cl-en">Kawasaki Frontale · 1997</span></h1>
+        <p class="cl-sub">多摩川のほとり、工場夜景の街・川崎を本拠に、華麗な攻撃的パスサッカーで黄金期を築いたクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">神奈川県川崎市を本拠とするクラブです。<b>多摩川のほとりと工場夜景</b>で知られる工業都市に根ざし、地域に密着したユニークな活動と、華麗な攻撃的サッカーで多くのファンを惹きつけてきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>等々力陸上競技場 — 多摩川のほとりで</h2>
+      <p>川崎市中原区、等々力緑地の中に建つスタジアムです。多摩川からほど近く、緑に囲まれた立地が特徴。陸上トラックを備えながらも、<span class="cl-hl">クラブと地域が一体となった温かい雰囲気</span>で知られます。ホームゲームでは多彩なイベントや仕掛けが用意され、勝敗を超えて訪れる人を楽しませる、独自のスタジアム文化を育んできました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="空色のマフラーを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#06111c"/>
+          <defs><pattern id="kwcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06111c"/><circle cx="8.5" cy="7" r="5" fill="#00a0e9"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#kwcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#66d0f7" opacity=".55"/>
+          <g stroke="#66d0f7" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4a6070"/><polygon points="164,30 206,40 164,54" fill="#00a0e9"/><rect x="420" y="24" width="4" height="64" fill="#4a6070"/><polygon points="424,24 466,36 424,50" fill="#14202b"/></g>
+        </svg>
+        <figcaption>空色の等々力 — 地域と一体になった、温かなスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>多摩川と工場夜景、ものづくりの街</h2>
+      <p>川崎は、京浜工業地帯の一角をなす<span class="cl-black">ものづくりの街</span>。夜には臨海部のプラントが幻想的な工場夜景を描き、街のシンボルとなっています。多摩川を挟んで向き合う対岸のクラブとの一戦は「多摩川クラシコ」と呼ばれ、地域のダービーとして親しまれています。クラブは算数ドリルや地域イベントなど、街に寄り添うユニークな取り組みでも知られています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="多摩川の対岸に広がる、煙突とプラントが連なる川崎の工場夜景シルエット">
+          <defs><linearGradient id="kwdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d3450"/><stop offset="100%" stop-color="#06111c"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#kwdusk)"/>
+          <circle cx="90" cy="46" r="26" fill="#e6b23c" opacity=".6"/>
+          <!-- 工場群 -->
+          <g fill="#0b2233"><rect x="180" y="78" width="24" height="52"/><rect x="210" y="60" width="14" height="70"/><rect x="230" y="84" width="30" height="46"/><rect x="266" y="70" width="16" height="60"/><rect x="288" y="88" width="34" height="42"/><rect x="328" y="64" width="14" height="66"/><rect x="348" y="80" width="30" height="50"/><rect x="384" y="72" width="16" height="58"/><rect x="406" y="86" width="36" height="44"/><rect x="448" y="66" width="14" height="64"/><rect x="468" y="82" width="30" height="48"/><rect x="504" y="90" width="34" height="40"/></g>
+          <!-- 煙突の光 -->
+          <g fill="#e6b23c" opacity=".85"><rect x="214" y="60" width="4" height="6"/><rect x="332" y="64" width="4" height="6"/><rect x="452" y="66" width="4" height="6"/></g>
+          <g fill="#ffe08a" opacity=".8"><rect x="188" y="96" width="3" height="4"/><rect x="240" y="100" width="3" height="4"/><rect x="296" y="104" width="3" height="4"/><rect x="356" y="98" width="3" height="4"/><rect x="416" y="102" width="3" height="4"/><rect x="476" y="98" width="3" height="4"/></g>
+          <!-- 川と反射 -->
+          <rect x="0" y="130" width="600" height="40" fill="#0a2c42" opacity=".9"/>
+          <g stroke="#66d0f7" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="146" x2="180" y2="146"/><line x1="300" y1="152" x2="440" y2="152"/><line x1="460" y1="160" x2="560" y2="160"/></g>
+          <g stroke="#ffe08a" stroke-width="2.5" opacity=".4"><line x1="240" y1="130" x2="240" y2="164"/><line x1="356" y1="130" x2="356" y2="164"/></g>
+        </svg>
+        <figcaption>川崎の夜景 — 多摩川の対岸に灯る、工場のシルエット。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 黄金期</div>
+      <h2>攻撃的パスサッカーで築いた栄光</h2>
+      <p>長くタイトルに手が届かない時期を経て、<span class="cl-hl">2010年代後半に黄金期</span>を迎えました。ボールを大切につなぐ攻撃的なスタイルを磨き上げ、リーグ制覇をはじめ数々のタイトルを獲得。多くの日本代表選手を育て上げ、送り出してきたことでも知られます。ポゼッションを軸にした華麗なサッカーは、クラブの代名詞として定着しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="パスがつながる軌道とトロフィーを描いた、攻撃サッカーを象徴するイラスト">
+          <rect width="600" height="180" fill="#06111c"/>
+          <!-- パスの軌道 -->
+          <g fill="none" stroke="#00a0e9" stroke-width="2.5" stroke-dasharray="6 6" opacity=".7"><path d="M80 140 Q160 60 240 120 T400 90 T540 60"/></g>
+          <g fill="#66d0f7"><circle cx="80" cy="140" r="6"/><circle cx="240" cy="120" r="6"/><circle cx="400" cy="90" r="6"/><circle cx="540" cy="60" r="6"/></g>
+          <!-- トロフィー -->
+          <g transform="translate(300,120)" fill="#e6b23c"><path d="M-28,-30 L28,-30 L24,2 Q20,22 0,28 Q-20,22 -24,2 Z"/><path d="M-28,-30 Q-52,-28 -52,-8 Q-52,6 -32,8 L-31,-3 Q-42,-5 -42,-12 Q-42,-21 -28,-21 Z"/><path d="M28,-30 Q52,-28 52,-8 Q52,6 32,8 L31,-3 Q42,-5 42,-12 Q42,-21 28,-21 Z"/><rect x="-10" y="28" width="20" height="13" fill="#c8912f"/><rect x="-22" y="41" width="44" height="8" rx="2" fill="#c8912f"/></g>
+        </svg>
+        <figcaption>華麗なパスワーク — つなぐサッカーが呼び込んだ栄冠。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>フロンターレブルー、攻めるサッカー</h2>
+      <p>空色（フロンターレブルー）に黒をあしらったクラブカラーで知られます。クラブ名は「最前線」を意味するイタリア語<strong>「Frontale」</strong>に由来し、常に前へ攻める姿勢を表しています。イルカのマスコット「ふろん太」に親しまれ、地域とともに歩む明るいクラブ文化と、攻撃的で見て楽しいサッカーが多くのファンを魅了しています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="空色のユニフォームの胸に、波とイルカをあしらった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#06111c"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#00a0e9"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff" opacity=".8"/>
+          <!-- 紋章：黒盾に波とイルカ -->
+          <g transform="translate(300,82)"><path d="M0,-32 L28,-24 L28,6 Q28,28 0,36 Q-28,28 -28,6 L-28,-24 Z" fill="#14202b" stroke="#ffffff" stroke-width="2"/><path d="M-18 6 q9 -8 18 0 t18 0" fill="none" stroke="#66d0f7" stroke-width="3"/><path d="M-6 -14 q10 -10 20 0 q-4 12 -16 12 q-6 -6 -4 -12 z" fill="#66d0f7"/></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>フロンターレブルー — 空色の胸に、波とイルカのモチーフ。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1997年（前身は富士通サッカー部）</dd>
+          <dt>本拠地</dt><dd>神奈川県川崎市</dd>
+          <dt>スタジアム</dt><dd>等々力陸上競技場（約27,000人）</dd>
+          <dt>愛称</dt><dd>フロンターレ／ふろんた</dd>
+          <dt>カラー</dt><dd>フロンターレブルー（空色） ＆ ブラック</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

@@ -1,0 +1,201 @@
+<!--CLUB slug=le-havre name=ルアーブル league=リーグアン-->
+<!--VIDEO id=hoKBaNS1IdY title=Hymne HAC（ルアーブルAC公式アンセム）-->
+<!--DESC ルアーブルAC（リーグアン）のクラブ紹介。大西洋の港とスタッド・オセアヌ、ニーマイヤーの文化施設ル・ヴォルカン、フランス最古のクラブの誇り「シエル・エ・マリーヌ」を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08152b; --cl-sky:#7cb9e8; --cl-sky-hi:#a9d4f5; --cl-navy:#0a1f4e; --cl-gold:#d9b24c;
+    --cl-paper:var(--bg,#f2f7fc); --cl-text:var(--fg,#0e1e33); --cl-muted:#5c7086; --cl-line:#cbdcec; --cl-card:#f6fbff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e3eefa; --cl-muted:#8ba2ba; --cl-line:#1a2c46; --cl-card:#0e1b30; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e3eefa; --cl-muted:#8ba2ba; --cl-line:#1a2c46; --cl-card:#0e1b30; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0e1e33; --cl-muted:#5c7086; --cl-line:#cbdcec; --cl-card:#f6fbff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,21,43,.94) 32%,rgba(8,21,43,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#08152b;background:var(--cl-sky);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-sky-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d9e8f6;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-navy),var(--cl-sky) 55%,#e8f3fc)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(124,185,232,.32)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#08152b;background:var(--cl-sky);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(124,185,232,.36);font-weight:700}
+  .cl-navy{color:var(--cl-navy);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bcd4e8;background:#06101f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-navy);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="大西洋の港とスタッド・オセアヌ、ニーマイヤーの白い文化施設ル・ヴォルカンを描いた夜景イラスト">
+        <defs>
+          <linearGradient id="lhsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123a63"/><stop offset="55%" stop-color="#0b2445"/><stop offset="100%" stop-color="#08152b"/></linearGradient>
+          <radialGradient id="lhglow" cx="36%" cy="34%" r="46%"><stop offset="0%" stop-color="#7cb9e8" stop-opacity=".4"/><stop offset="45%" stop-color="#a9d4f5" stop-opacity=".12"/><stop offset="100%" stop-color="#08152b" stop-opacity="0"/></radialGradient>
+          <linearGradient id="lhsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3f7bc0" stop-opacity=".55"/><stop offset="100%" stop-color="#0b2445" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#lhsky)"/>
+        <rect width="1200" height="470" fill="url(#lhglow)"/>
+        <circle cx="960" cy="110" r="42" fill="#e8f3fc" opacity=".9"/>
+        <circle cx="944" cy="100" r="42" fill="#0b2445" opacity=".5"/>
+        <g fill="#7cb9e8" opacity=".3"><circle cx="220" cy="80" r="2.5"/><circle cx="330" cy="58" r="2"/><circle cx="700" cy="100" r="2.5"/><circle cx="820" cy="66" r="2"/><circle cx="1080" cy="120" r="2"/></g>
+        <!-- スタッド・オセアヌ（青く光る楕円） -->
+        <g transform="translate(300,262)">
+          <ellipse cx="0" cy="8" rx="216" ry="52" fill="#0c2748"/>
+          <ellipse cx="0" cy="-8" rx="210" ry="58" fill="#3f7bc0" opacity=".85"/>
+          <ellipse cx="0" cy="-8" rx="210" ry="58" fill="none" stroke="#a9d4f5" stroke-width="3" opacity=".7"/>
+          <g stroke="#a9d4f5" stroke-width="2" opacity=".4"><line x1="-160" y1="-30" x2="-160" y2="30"/><line x1="-80" y1="-46" x2="-80" y2="46"/><line x1="0" y1="-52" x2="0" y2="52"/><line x1="80" y1="-46" x2="80" y2="46"/><line x1="160" y1="-30" x2="160" y2="30"/></g>
+        </g>
+        <ellipse cx="300" cy="322" rx="220" ry="20" fill="#7cb9e8" opacity=".22"/>
+        <!-- ル・ヴォルカン（ニーマイヤーの白い曲面） -->
+        <g transform="translate(720,244)">
+          <path d="M0 56 Q0 -40 58 -40 Q116 -40 116 56 Z" fill="#e6eef4"/>
+          <path d="M0 56 Q0 -40 58 -40 Q116 -40 116 56 Z" fill="none" stroke="#7cb9e8" stroke-width="2" opacity=".5"/>
+          <ellipse cx="58" cy="-40" rx="30" ry="8" fill="#0b2445"/>
+        </g>
+        <!-- 港のクレーン -->
+        <g stroke="#123a63" stroke-width="5" fill="none" opacity=".9">
+          <path d="M900 300 L900 196 L988 220"/><path d="M900 210 L864 224"/>
+          <path d="M1030 300 L1030 208 L1108 232"/><path d="M1030 220 L998 232"/>
+        </g>
+        <g fill="#d9b24c" opacity=".8"><rect x="898" y="194" width="5" height="5"/><rect x="1028" y="206" width="5" height="5"/></g>
+        <!-- 埠頭の街並み -->
+        <g fill="#0a1e3a"><rect x="560" y="272" width="24" height="36"/><rect x="590" y="260" width="18" height="48"/><rect x="616" y="278" width="30" height="30"/><rect x="648" y="266" width="20" height="42"/></g>
+        <!-- 大西洋 -->
+        <rect x="0" y="308" width="1200" height="162" fill="url(#lhsea)"/>
+        <g stroke="#a9d4f5" stroke-width="3" stroke-linecap="round" opacity=".5"><line x1="120" y1="344" x2="260" y2="344"/><line x1="380" y1="370" x2="540" y2="370"/><line x1="640" y1="352" x2="780" y2="352"/><line x1="860" y1="388" x2="1020" y2="388"/><line x1="300" y1="416" x2="480" y2="416"/></g>
+        <g stroke="#d9b24c" stroke-width="3" opacity=".3"><line x1="300" y1="330" x2="300" y2="416"/></g>
+        <!-- 空色と紺の帯 -->
+        <g><rect x="0" y="448" width="1200" height="8" fill="#7cb9e8"/><rect x="0" y="458" width="1200" height="7" fill="#0a1f4e"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ フランス・リーグアン</span>
+        <h1>ルアーブル<span class="cl-en">Le Havre AC · 1872</span></h1>
+        <p class="cl-sub">大西洋の港とニーマイヤーの白い建築が並ぶノルマンディーの街。空色と紺をまとう、フランス最古のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">フランス北西部・ノルマンディー地方の港町ルアーブルを本拠とするクラブです。<b>大西洋に開かれた大貿易港</b>を擁するこの街で、1872年の創設以来、フランスサッカーの歩みとともに長い歴史を重ねてきました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタッド・オセアヌ — 海のように青く光る器</h2>
+      <p>市街に建つ、約2万5千人を収容するスタジアムです。「オセアヌ（大洋）」の名の通り、外壁は<span class="cl-hl">半透明の青いパネル</span>で覆われ、夜には海のように淡く光ります。大西洋からの風が抜ける港町にふさわしい、涼やかで現代的なアリーナです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="空色と紺のスカーフを掲げる観客で埋まった、カーブしたスタンドのイラスト">
+          <rect width="600" height="190" fill="#06101f"/>
+          <defs><pattern id="lhcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06101f"/><circle cx="8.5" cy="7" r="5" fill="#3f7bc0"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#lhcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#7cb9e8" opacity=".6"/>
+          <g stroke="#a9d4f5" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#3f5570"/><polygon points="164,30 206,40 164,54" fill="#7cb9e8"/><rect x="420" y="24" width="4" height="64" fill="#3f5570"/><polygon points="424,24 466,36 424,50" fill="#0a1f4e"/></g>
+        </svg>
+        <figcaption>空色の一体感 — 海のように青く波打つスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ルアーブル — 大西洋の港と再建の街</h2>
+      <p>ルアーブルは、セーヌ川が大西洋に注ぐ河口に開けた大貿易港。戦後に建築家<span class="cl-navy">オーギュスト・ペレ</span>の手で近代都市として再建され、その街並みは世界遺産にも登録されています。港には巨匠オスカー・ニーマイヤーが手がけた真っ白な文化施設「ル・ヴォルカン（火山）」がそびえ、海と現代建築が溶け合う独特の景観を生んでいます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="ニーマイヤーの白い曲面建築と港のクレーン、大西洋の夕景シルエット">
+          <defs><linearGradient id="lhdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#153f6c"/><stop offset="100%" stop-color="#06101f"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#lhdusk)"/>
+          <circle cx="500" cy="46" r="26" fill="#d9b24c" opacity=".65"/>
+          <!-- ル・ヴォルカン -->
+          <g transform="translate(230,58)"><path d="M0 80 Q0 -6 46 -6 Q92 -6 92 80 Z" fill="#e6eef4"/><ellipse cx="46" cy="-6" rx="22" ry="6" fill="#06101f"/></g>
+          <!-- クレーン -->
+          <g stroke="#153f6c" stroke-width="4" fill="none" opacity=".9"><path d="M120 138 L120 66 L172 82"/><path d="M120 76 L96 84"/></g>
+          <g fill="#0a1e3a"><rect x="380" y="98" width="16" height="40"/><rect x="400" y="86" width="12" height="52"/><rect x="418" y="104" width="22" height="34"/></g>
+          <rect x="0" y="138" width="600" height="32" fill="#0a2244" opacity=".9"/>
+          <g stroke="#a9d4f5" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="150" x2="160" y2="150"/><line x1="320" y1="156" x2="460" y2="156"/><line x1="200" y1="162" x2="340" y2="162"/></g>
+        </svg>
+        <figcaption>ル・ヴォルカンと港 — 海と現代建築が出会う街。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 歴史</div>
+      <h2>フランス最古のクラブ — 1872年からの歩み</h2>
+      <p>ルアーブルACは、<span class="cl-hl">フランスで最も古い歴史をもつフットボールクラブ</span>のひとつとして知られます。港町らしく、英仏を行き交う人々のなかから早くにスポーツが根づき、長い年月を通じて数多くの才能を育ててきました。時代の浮き沈みを越えて受け継がれてきた伝統は、この街の大きな誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="羅針盤と錨をあしらった、港のクラブの歴史を象徴するイラスト">
+          <rect width="600" height="180" fill="#06101f"/>
+          <circle cx="300" cy="92" r="46" fill="#0c2748" stroke="#7cb9e8" stroke-width="2"/>
+          <g stroke="#a9d4f5" stroke-width="2" opacity=".6"><line x1="300" y1="52" x2="300" y2="132"/><line x1="260" y1="92" x2="340" y2="92"/></g>
+          <!-- コンパスの針 -->
+          <g><path d="M300 56 L312 92 L300 84 L288 92 Z" fill="#7cb9e8"/><path d="M300 128 L288 92 L300 100 L312 92 Z" fill="#e6eef4"/></g>
+          <!-- 錨 -->
+          <g stroke="#d9b24c" stroke-width="4" fill="none" opacity=".85" stroke-linecap="round"><line x1="440" y1="56" x2="440" y2="124"/><line x1="420" y1="72" x2="460" y2="72"/><path d="M414 108 q26 26 52 0"/></g>
+          <circle cx="440" cy="52" r="6" fill="none" stroke="#d9b24c" stroke-width="4" opacity=".85"/>
+          <g stroke="#7cb9e8" stroke-width="4" fill="none" opacity=".85" stroke-linecap="round"><line x1="160" y1="56" x2="160" y2="124"/><line x1="140" y1="72" x2="180" y2="72"/><path d="M134 108 q26 26 52 0"/></g>
+          <circle cx="160" cy="52" r="6" fill="none" stroke="#7cb9e8" stroke-width="4" opacity=".85"/>
+        </svg>
+        <figcaption>1872年の誇り — 港とともに歩んだ、最古の歴史。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>シエル・エ・マリーヌ — 空色と紺</h2>
+      <p>淡い空色と濃紺を組み合わせたクラブカラーから、<strong>「シエル・エ・マリーヌ（空と海）」</strong>の愛称で親しまれます。大西洋の空と海をそのまま映したような配色は、港町のアイデンティティそのもの。育成を軸に堅実なチーム作りを続け、最古のクラブの誇りを胸に戦い続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="空色と紺のユニフォームの胸に、船の舵をかたどった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#06101f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#7cb9e8"/>
+          <path d="M300 20 C 275 20, 250 26, 250 26 L250 118 C 250 130, 300 140, 300 140 L300 20 Z" fill="#0a1f4e"/>
+          <g transform="translate(300,80)"><circle r="28" fill="none" stroke="#e6eef4" stroke-width="3"/><circle r="9" fill="#0a1f4e" stroke="#e6eef4" stroke-width="2"/><g stroke="#e6eef4" stroke-width="3" stroke-linecap="round"><line x1="0" y1="-28" x2="0" y2="-38"/><line x1="0" y1="28" x2="0" y2="38"/><line x1="-28" y1="0" x2="-38" y2="0"/><line x1="28" y1="0" x2="38" y2="0"/><line x1="-20" y1="-20" x2="-27" y2="-27"/><line x1="20" y1="-20" x2="27" y2="-27"/><line x1="-20" y1="20" x2="-27" y2="27"/><line x1="20" y1="20" x2="27" y2="27"/></g></g>
+          <g stroke="#d9b24c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>空色と紺 — 大西洋の空と海をまとった、HACの色。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1872年</dd>
+          <dt>本拠地</dt><dd>ルアーブル（ノルマンディー地域圏）</dd>
+          <dt>スタジアム</dt><dd>スタッド・オセアヌ（約25,000人）</dd>
+          <dt>愛称</dt><dd>Les Ciel et Marine（空と海）／HAC</dd>
+          <dt>カラー</dt><dd>スカイブルー ＆ ネイビー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

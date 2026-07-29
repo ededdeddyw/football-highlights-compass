@@ -1,0 +1,191 @@
+<!--CLUB slug=marseille name=マルセイユ league=リーグアン-->
+<!--VIDEO id=cazCA-oZTKg title=Aux Armes｜Ultras Olympique de Marseille（マルセイユのアンセム）-->
+<!--DESC オランピック・マルセイユ（リーグアン）のクラブ紹介。地中海の港町、スタッド・ヴェロドローム、ノートルダム・ド・ラ・ガルド、仏唯一の欧州王者、熱狂のサポーターと「Droit au but」。応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08192b; --cl-sky:#2faadc; --cl-sky-hi:#7fd0f0; --cl-gold:#e6b23c; --cl-sea:#1a7fb0;
+    --cl-paper:var(--bg,#f2f8fb); --cl-text:var(--fg,#0f2233); --cl-muted:#5f7688; --cl-line:#cae0ec; --cl-card:#f7fcff;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e4f0f8; --cl-muted:#8ba6b8; --cl-line:#173044; --cl-card:#0e1f2e; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e4f0f8; --cl-muted:#8ba6b8; --cl-line:#173044; --cl-card:#0e1f2e; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0f2233; --cl-muted:#5f7688; --cl-line:#cae0ec; --cl-card:#f7fcff; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,25,43,.94) 32%,rgba(8,25,43,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#04121e;background:var(--cl-sky);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-sky-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d5eaf5;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-sky),var(--cl-sky-hi) 55%,#eaf8ff)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(47,170,220,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#04121e;background:var(--cl-sky);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(47,170,220,.34);font-weight:700}
+  .cl-sea{color:var(--cl-sea);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#b8d5e6;background:#06131f;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-sky);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="マルセイユの旧港とノートルダム・ド・ラ・ガルド、地中海の夕景を描いたイラスト">
+        <defs>
+          <linearGradient id="omsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0e3a5a"/><stop offset="55%" stop-color="#0a2640"/><stop offset="100%" stop-color="#08192b"/></linearGradient>
+          <radialGradient id="omglow" cx="72%" cy="28%" r="50%"><stop offset="0%" stop-color="#2faadc" stop-opacity=".4"/><stop offset="45%" stop-color="#7fd0f0" stop-opacity=".14"/><stop offset="100%" stop-color="#08192b" stop-opacity="0"/></radialGradient>
+          <linearGradient id="omsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2faadc" stop-opacity=".5"/><stop offset="100%" stop-color="#0a2640" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#omsky)"/>
+        <rect width="1200" height="470" fill="url(#omglow)"/>
+        <circle cx="960" cy="110" r="40" fill="#f2c14e" opacity=".55"/>
+        <g fill="#7fd0f0" opacity=".7"><circle cx="200" cy="80" r="2.5"/><circle cx="320" cy="56" r="2"/><circle cx="140" cy="130" r="2"/><circle cx="600" cy="70" r="2"/><circle cx="1080" cy="60" r="2.5"/></g>
+        <!-- 丘の上のノートルダム・ド・ラ・ガルド -->
+        <g transform="translate(820,120)">
+          <path d="M-120 180 Q-40 60 0 40 Q40 60 120 180 Z" fill="#0c2a42"/>
+          <rect x="-26" y="-6" width="52" height="70" fill="#12324c"/>
+          <rect x="-14" y="-58" width="28" height="60" fill="#123852"/>
+          <rect x="-6" y="-92" width="12" height="40" fill="#12324c"/>
+          <circle cx="0" cy="-98" r="8" fill="#e6b23c"/>
+          <path d="M-6 -92 L0 -110 L6 -92 Z" fill="#e6b23c" opacity=".5"/>
+        </g>
+        <!-- 港の街並み -->
+        <g fill="#0b2338"><rect x="60" y="270" width="30" height="46"/><rect x="96" y="252" width="22" height="64"/><rect x="124" y="276" width="34" height="40"/><rect x="164" y="260" width="20" height="56"/><rect x="190" y="282" width="38" height="34"/><rect x="234" y="266" width="24" height="50"/><rect x="266" y="278" width="34" height="38"/><rect x="306" y="256" width="20" height="60"/><rect x="332" y="280" width="44" height="36"/><rect x="384" y="268" width="26" height="48"/><rect x="418" y="282" width="36" height="34"/><rect x="462" y="272" width="22" height="44"/></g>
+        <g fill="#e6b23c" opacity=".8"><rect x="104" y="262" width="4" height="5"/><rect x="170" y="270" width="4" height="5"/><rect x="312" y="266" width="4" height="5"/><rect x="392" y="278" width="4" height="5"/></g>
+        <!-- 旧港（ヴュー・ポール） -->
+        <rect x="0" y="316" width="1200" height="154" fill="url(#omsea)"/>
+        <!-- ヨットのマスト -->
+        <g stroke="#e8f6fb" stroke-width="2" opacity=".6"><line x1="140" y1="316" x2="140" y2="286"/><line x1="200" y1="316" x2="200" y2="280"/><line x1="260" y1="316" x2="260" y2="290"/><line x1="330" y1="316" x2="330" y2="282"/><line x1="400" y1="316" x2="400" y2="292"/></g>
+        <g stroke="#7fd0f0" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="120" y1="350" x2="260" y2="350"/><line x1="360" y1="372" x2="520" y2="372"/><line x1="640" y1="356" x2="780" y2="356"/><line x1="860" y1="390" x2="1020" y2="390"/><line x1="300" y1="418" x2="480" y2="418"/></g>
+        <!-- 空色×白のバンド -->
+        <g><rect x="0" y="446" width="1200" height="8" fill="#2faadc" opacity=".9"/><rect x="0" y="458" width="1200" height="6" fill="#ffffff" opacity=".85"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ フランス・リーグアン</span>
+        <h1>マルセイユ<span class="cl-en">Olympique de Marseille · 1899</span></h1>
+        <p class="cl-sub">地中海の港町を燃やす、フランス屈指の熱狂。空色と白を掲げ、「Droit au but（ゴールへ真っすぐ）」を貫くクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">フランス南部、地中海に面した港町<b>マルセイユ</b>を本拠とするクラブです。国内でも指折りの歴史と人気を誇り、街全体を巻き込む熱狂的なサポーター文化で知られています。「Droit au but（ゴールへ真っすぐ）」を合言葉に戦う、南仏の誇りです。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタッド・ヴェロドローム — 揺れる白い大屋根</h2>
+      <p>市の南部に建つ、約6万7千人を収容するフランス最大級のスタジアムのひとつです。波打つ<span class="cl-hl">白い曲面の大屋根</span>が街のランドマークとなり、南北のゴール裏に陣取る二大サポーター集団が、途切れることのない歌と旗で試合を包み込みます。リーグアン屈指の熱量を誇る舞台です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="空色と白のスカーフを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#06131f"/>
+          <defs><pattern id="omcrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06131f"/><circle cx="8.5" cy="7" r="5" fill="#2faadc"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#omcrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#eaf8ff" opacity=".55"/>
+          <g stroke="#7fd0f0" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4f6475"/><polygon points="164,30 206,40 164,54" fill="#2faadc"/><rect x="420" y="24" width="4" height="64" fill="#4f6475"/><polygon points="424,24 466,36 424,50" fill="#ffffff"/></g>
+        </svg>
+        <figcaption>空色と白のスタンド — 歌と旗が途切れない、ヴェロドロームの熱狂。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>マルセイユ — 地中海の玄関口</h2>
+      <p>フランス第二の都市マルセイユは、古代から続く地中海の港町。船が行き交う<span class="cl-sea">旧港（ヴュー・ポール）</span>を中心に、多様な文化が混ざり合う活気ある街です。丘の上から街を見守るノートルダム・ド・ラ・ガルド聖堂は、地元の象徴。移民が根づいた庶民の街の誇りが、クラブへの熱い愛情となって注がれています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="マルセイユの旧港とノートルダム・ド・ラ・ガルド聖堂の夕景シルエット">
+          <defs><linearGradient id="omdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#123c58"/><stop offset="100%" stop-color="#06131f"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#omdusk)"/>
+          <circle cx="110" cy="46" r="26" fill="#e6b23c" opacity=".55"/>
+          <!-- 丘と聖堂 -->
+          <g transform="translate(470,20)"><path d="M-90 110 Q-20 30 0 20 Q20 30 90 110 Z" fill="#0c2a42"/><rect x="-16" y="-4" width="32" height="44" fill="#123852"/><rect x="-8" y="-36" width="16" height="34" fill="#123852"/><circle cx="0" cy="-40" r="6" fill="#e6b23c"/></g>
+          <!-- 港の街 -->
+          <g fill="#0b2338"><rect x="20" y="94" width="20" height="26"/><rect x="46" y="82" width="16" height="38"/><rect x="66" y="98" width="24" height="22"/><rect x="96" y="88" width="14" height="32"/><rect x="116" y="100" width="26" height="20"/><rect x="150" y="90" width="18" height="30"/></g>
+          <g fill="#e6b23c" opacity=".8"><rect x="52" y="90" width="4" height="5"/><rect x="102" y="94" width="4" height="5"/></g>
+          <!-- 港の水面とマスト -->
+          <g stroke="#e8f6fb" stroke-width="2" opacity=".55"><line x1="60" y1="120" x2="60" y2="100"/><line x1="100" y1="120" x2="100" y2="96"/><line x1="140" y1="120" x2="140" y2="102"/></g>
+          <rect x="0" y="120" width="600" height="50" fill="#123452" opacity=".92"/>
+          <g stroke="#7fd0f0" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="146" x2="180" y2="146"/><line x1="330" y1="152" x2="470" y2="152"/><line x1="220" y1="160" x2="360" y2="160"/></g>
+        </svg>
+        <figcaption>旧港とラ・ボンヌ・メール — 丘の聖堂が見守る、地中海の港町。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>フランス唯一の欧州王者</h2>
+      <p>マルセイユは、フランスのクラブとして初めて<span class="cl-hl">ヨーロッパの頂点（1993年のチャンピオンズリーグ制覇）</span>に立った唯一のクラブです。この栄光は今なお街の大きな誇りであり、サポーターの記憶に深く刻まれています。国内でも数多くのタイトルを重ねてきた、フランスサッカーを代表する名門です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="星を戴くトロフィーが輝くイラスト">
+          <rect width="600" height="180" fill="#06131f"/>
+          <!-- トロフィー -->
+          <g transform="translate(300,104)"><path d="M-38,-40 L38,-40 L32,4 Q28,30 0,38 Q-28,30 -32,4 Z" fill="#e6b23c"/><path d="M-38,-40 Q-68,-38 -68,-12 Q-68,8 -44,10 L-42,-4 Q-55,-6 -55,-16 Q-55,-28 -38,-28 Z" fill="#e6b23c"/><path d="M38,-40 Q68,-38 68,-12 Q68,8 44,10 L42,-4 Q55,-6 55,-16 Q55,-28 38,-28 Z" fill="#e6b23c"/><rect x="-13" y="38" width="26" height="16" fill="#c8912f"/><rect x="-28" y="54" width="56" height="10" rx="3" fill="#c8912f"/></g>
+          <!-- 大きな星 -->
+          <g fill="#2faadc"><path d="M300,24 l5,11.6 l12.6,0 l-10.2,7.6 l4,12.4 l-11.4,-7.4 l-11.4,7.4 l4,-12.4 l-10.2,-7.6 l12.6,0 Z"/></g>
+          <g fill="#eaf8ff" opacity=".9"><path d="M180,54 l3.4,8 l8.6,0 l-7,5.2 l2.7,8.5 l-7.7,-5 l-7.7,5 l2.7,-8.5 l-7,-5.2 l8.6,0 Z"/><path d="M420,54 l3.4,8 l8.6,0 l-7,5.2 l2.7,8.5 l-7.7,-5 l-7.7,5 l2.7,-8.5 l-7,-5.2 l8.6,0 Z"/></g>
+          <g stroke="#2faadc" stroke-width="2.5" stroke-linecap="round" opacity=".6" fill="none"><path d="M120 152 q180 -28 360 0"/></g>
+        </svg>
+        <figcaption>1993年の栄光 — フランス唯一の欧州王者の証、胸の星。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>空色と白、そして「Droit au but」</h2>
+      <p>爽やかな<strong>空色（シエル）と白</strong>のユニフォームから、<span class="cl-hl">「レ・シエル・エ・ブラン」「レ・フォセアン」</span>の愛称で親しまれます。胸に刻まれる標語「Droit au but（ゴールへ真っすぐ）」は、迷わず前へ進む攻撃的な姿勢の象徴。熱狂的なサポーターとともに、真っすぐにゴールを目指すクラブです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="空色と白のユニフォームの胸に、Droit au butの標語をあしらった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#06131f"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#eaf8ff"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 44 C 214 44, 250 34, 300 34 C 350 34, 386 44, 386 44 L386 30 C 386 30, 350 20, 300 20 Z" fill="#2faadc" opacity=".85"/>
+          <!-- 紋章：円にOM -->
+          <g transform="translate(300,82)"><circle r="30" fill="#2faadc" stroke="#ffffff" stroke-width="2.5"/><text x="0" y="10" fill="#ffffff" font-size="28" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">OM</text></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".65"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>空色と白 — 「Droit au but」を掲げる、フォセアンの胸元。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1899年</dd>
+          <dt>本拠地</dt><dd>マルセイユ（プロヴァンス）</dd>
+          <dt>スタジアム</dt><dd>スタッド・ヴェロドローム（約67,000人）</dd>
+          <dt>愛称</dt><dd>Les Ciel et Blanc／Les Phocéens</dd>
+          <dt>カラー</dt><dd>スカイブルー ＆ ホワイト</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

@@ -1,0 +1,191 @@
+<!--CLUB slug=jubilo-iwata name=ジュビロ磐田 league=Jリーグ（J1）-->
+<!--VIDEO id=67t08IVCdSY title=想い乗せて ジュビロ磐田 チャント集（J.LEAGUE LIFE）-->
+<!--DESC ジュビロ磐田（Jリーグ・J1）のクラブ紹介。遠州の茶畑と天竜川、ヤマハスタジアムのサックスブルー、中山雅史・名波浩らが躍動した黄金期の記憶を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08131f; --cl-sax:#00a7e1; --cl-sax-hi:#66d0f5; --cl-navy:#163a6b; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f1f8fc); --cl-text:var(--fg,#0e2233); --cl-muted:#5c7182; --cl-line:#cbe0ec; --cl-card:#f6fbfe;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e5eff6; --cl-muted:#89a0b1; --cl-line:#1b3244; --cl-card:#0e1e2c; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e5eff6; --cl-muted:#89a0b1; --cl-line:#1b3244; --cl-card:#0e1e2c; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0e2233; --cl-muted:#5c7182; --cl-line:#cbe0ec; --cl-card:#f6fbfe; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,19,31,.94) 32%,rgba(8,19,31,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#04131e;background:var(--cl-sax);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-sax-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#dbe9f2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-navy),var(--cl-sax) 55%,#bfeafb)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,167,225,.28)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#04131e;background:var(--cl-sax);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,167,225,.34);font-weight:700}
+  .cl-navy{color:var(--cl-navy);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bcd6e6;background:#06101a;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-sax);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="遠州の茶畑と天竜川、ヤマハスタジアムのサックスブルーの夜景を描いたイラスト">
+        <defs>
+          <linearGradient id="jisky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f3455"/><stop offset="55%" stop-color="#0b2138"/><stop offset="100%" stop-color="#08131f"/></linearGradient>
+          <radialGradient id="jiglow" cx="50%" cy="68%" r="54%"><stop offset="0%" stop-color="#00a7e1" stop-opacity=".4"/><stop offset="45%" stop-color="#66d0f5" stop-opacity=".14"/><stop offset="100%" stop-color="#08131f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="jiriver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00a7e1" stop-opacity=".5"/><stop offset="100%" stop-color="#08131f" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#jisky)"/>
+        <rect width="1200" height="470" fill="url(#jiglow)"/>
+        <circle cx="280" cy="112" r="40" fill="#eaf6ff" opacity=".9"/>
+        <circle cx="264" cy="102" r="40" fill="#0b2138" opacity=".55"/>
+        <g fill="#66d0f5" opacity=".7"><circle cx="540" cy="80" r="2.5"/><circle cx="660" cy="58" r="2"/><circle cx="780" cy="104" r="2.5"/><circle cx="920" cy="66" r="2"/><circle cx="1060" cy="92" r="2"/></g>
+        <!-- 遠州の茶畑（うねる畝の丘） -->
+        <g fill="#123a2a"><path d="M0 300 Q150 258 300 300 Q450 258 600 300 Q750 258 900 300 Q1050 258 1200 300 L1200 340 L0 340 Z"/></g>
+        <g stroke="#1f6b48" stroke-width="3" fill="none" opacity=".7"><path d="M0 292 Q150 250 300 292 Q450 250 600 292 Q750 250 900 292 Q1050 250 1200 292"/><path d="M0 308 Q150 266 300 308 Q450 266 600 308 Q750 266 900 308 Q1050 266 1200 308"/><path d="M0 324 Q150 282 300 324 Q450 282 600 324 Q750 282 900 324 Q1050 282 1200 324"/></g>
+        <!-- ヤマハスタジアム（サックスブルーに灯る器） -->
+        <g transform="translate(600,300)">
+          <path d="M-330 20 L-280 -50 L280 -50 L330 20 Z" fill="#0e2a44"/>
+          <path d="M-280 -50 L280 -50 L280 -66 L-280 -66 Z" fill="#0a2036"/>
+          <path d="M-280 -50 L280 -50 L280 20 L-280 20 Z" fill="#00a7e1" opacity=".28"/>
+          <g stroke="#66d0f5" stroke-width="2.5" opacity=".7"><line x1="-280" y1="-50" x2="280" y2="-50"/></g>
+          <!-- ナイター照明 -->
+          <g stroke="#8a9aa8" stroke-width="4"><line x1="-260" y1="-50" x2="-260" y2="-110"/><line x1="260" y1="-50" x2="260" y2="-110"/></g>
+          <g fill="#eaf6ff" opacity=".85"><rect x="-278" y="-116" width="36" height="10" rx="3"/><rect x="242" y="-116" width="36" height="10" rx="3"/></g>
+        </g>
+        <ellipse cx="600" cy="332" rx="330" ry="20" fill="#00a7e1" opacity=".22"/>
+        <!-- 天竜川 -->
+        <rect x="0" y="336" width="1200" height="134" fill="url(#jiriver)"/>
+        <g stroke="#66d0f5" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="120" y1="364" x2="260" y2="364"/><line x1="380" y1="386" x2="540" y2="386"/><line x1="660" y1="370" x2="800" y2="370"/><line x1="880" y1="404" x2="1040" y2="404"/><line x1="320" y1="430" x2="500" y2="430"/></g>
+        <g stroke="#00a7e1" stroke-width="3" opacity=".35"><line x1="600" y1="344" x2="600" y2="430"/></g>
+        <!-- サックスブルー・紺の縞バンド -->
+        <g fill="#00a7e1" opacity=".95"><rect x="0" y="448" width="1200" height="9"/></g>
+        <g fill="#163a6b" opacity=".9"><rect x="0" y="457" width="1200" height="6"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ 日本・Jリーグ</span>
+        <h1>ジュビロ磐田<span class="cl-en">Júbilo Iwata · 1970s</span></h1>
+        <p class="cl-sub">遠州の茶畑と天竜川。サックスブルーのヤマハスタジアムで、黄金期の記憶を受け継ぐ静岡のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">静岡県磐田市を本拠とするクラブです。<b>遠州の茶畑と天竜川</b>が広がるこの土地で、サックスブルーのユニフォームをまとい、かつての黄金期の記憶とともに歩んできました。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>ヤマハスタジアム — ピッチが近い専用の器</h2>
+      <p>磐田市に建つ、約1万5千人を収容するサッカー専用スタジアムです。楽器メーカーとして知られる<span class="cl-navy">ヤマハ発動機</span>をルーツに持つクラブの本拠で、<span class="cl-hl">ピッチとスタンドの距離が近い</span>ことで知られます。屋根が観客の声援を反響させ、サックスブルーに包まれた濃密な雰囲気が、選手たちを後押しします。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="サックスブルーのタオルマフラーを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#06101a"/>
+          <defs><pattern id="jicrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06101a"/><circle cx="8.5" cy="7" r="5" fill="#00a7e1"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#jicrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#66d0f5" opacity=".55"/>
+          <g stroke="#66d0f5" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#4a5f70"/><polygon points="164,30 206,40 164,54" fill="#00a7e1"/><rect x="420" y="24" width="4" height="64" fill="#4a5f70"/><polygon points="424,24 466,36 424,50" fill="#163a6b"/></g>
+        </svg>
+        <figcaption>サックスブルー — ピッチに迫るスタンドを染める、応援の色。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>遠州の茶畑と天竜川</h2>
+      <p>磐田は、静岡県西部・遠州地方に位置する街。周囲には<span class="cl-hl">うねる畝の茶畑</span>が広がり、東には<span class="cl-navy">天竜川</span>が悠々と流れます。温暖な気候と豊かな水に恵まれた、ものづくりと農の土地柄です。清水とともに「サッカー王国・静岡」の一角を担い、クラブは地域の暮らしに深く根ざしてきました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="遠州の茶畑のうねる畝と天竜川、遠くの山並みの夕景シルエット">
+          <defs><linearGradient id="jidusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f3455"/><stop offset="100%" stop-color="#06101a"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#jidusk)"/>
+          <circle cx="490" cy="46" r="26" fill="#66d0f5" opacity=".55"/>
+          <!-- 山並み -->
+          <path d="M0 88 L110 52 L200 82 L300 46 L400 84 L500 54 L600 86 L600 116 L0 116 Z" fill="#0e2a44"/>
+          <!-- 茶畑の畝 -->
+          <g fill="#123a2a"><path d="M0 116 Q150 96 300 116 Q450 96 600 116 L600 170 L0 170 Z"/></g>
+          <g stroke="#1f6b48" stroke-width="2.5" fill="none" opacity=".7"><path d="M0 124 Q150 104 300 124 Q450 104 600 124"/><path d="M0 140 Q150 120 300 140 Q450 120 600 140"/><path d="M0 156 Q150 136 300 156 Q450 136 600 156"/></g>
+          <!-- 天竜川 -->
+          <path d="M420 116 Q460 140 440 170 L500 170 Q510 140 480 116 Z" fill="#0a3a5c" opacity=".85"/>
+          <g stroke="#66d0f5" stroke-width="2" stroke-linecap="round" opacity=".5"><line x1="452" y1="138" x2="476" y2="138"/><line x1="456" y1="154" x2="482" y2="154"/></g>
+        </svg>
+        <figcaption>遠州の風景 — 茶畑のうねりと、天竜川の流れ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>黄金期のジュビロ — 記憶に残る攻撃サッカー</h2>
+      <p>1990年代後半から2000年代初頭にかけて、クラブは<span class="cl-hl">Jリーグを代表する強豪</span>として一時代を築きました。<strong>中山雅史</strong>のゴールへの執念、<strong>名波浩</strong>が操る流麗なパスワーク——タイトルを重ねたこの黄金期は、いまも多くのファンの記憶に刻まれています。攻撃的で美しいサッカーは、ジュビロの誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーの上に複数の星が輝く、黄金期を象徴するイラスト">
+          <rect width="600" height="180" fill="#06101a"/>
+          <g transform="translate(300,108)"><path d="M-38,-40 L38,-40 L32,4 Q28,30 0,38 Q-28,30 -32,4 Z" fill="#e6b23c"/><path d="M-38,-40 Q-70,-38 -70,-12 Q-70,8 -44,10 L-42,-4 Q-56,-6 -56,-16 Q-56,-28 -38,-28 Z" fill="#e6b23c"/><path d="M38,-40 Q70,-38 70,-12 Q70,8 44,10 L42,-4 Q56,-6 56,-16 Q56,-28 38,-28 Z" fill="#e6b23c"/><rect x="-13" y="38" width="26" height="18" fill="#c8912f"/><rect x="-28" y="56" width="56" height="10" rx="3" fill="#c8912f"/></g>
+          <g fill="#00a7e1"><path d="M180,44 l4.4,10.3 l11.1,0 l-9,6.7 l3.5,11 l-10,-6.5 l-10,6.5 l3.5,-11 l-9,-6.7 l11.1,0 Z"/><path d="M300,30 l4.4,10.3 l11.1,0 l-9,6.7 l3.5,11 l-10,-6.5 l-10,6.5 l3.5,-11 l-9,-6.7 l11.1,0 Z"/><path d="M420,44 l4.4,10.3 l11.1,0 l-9,6.7 l3.5,11 l-10,-6.5 l-10,6.5 l3.5,-11 l-9,-6.7 l11.1,0 Z"/></g>
+          <g stroke="#66d0f5" stroke-width="2.5" stroke-linecap="round" opacity=".55" fill="none"><path d="M120 152 q180 -30 360 0"/></g>
+        </svg>
+        <figcaption>黄金期の記憶 — 数々のタイトルを刻んだ、攻撃の伝統。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>サックスブルー、歓喜を名に</h2>
+      <p>クラブカラーは、澄んだ空を思わせる<strong>サックスブルー（水色）</strong>に紺を添えた配色。チーム名の<span class="cl-hl">「ジュビロ」はポルトガル語などで「歓喜」を意味する言葉</span>で、勝利の喜びを分かち合うクラブの姿勢を表しています。パスをつなぐ攻撃的なスタイルの伝統を受け継ぎ、遠州の地でその歴史を紡ぎ続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="サックスブルーのユニフォームの胸に、紺のラインと紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#06101a"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#00a7e1"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#bfeafb" opacity=".8"/>
+          <path d="M214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 106 L214 106 Z" fill="#163a6b" opacity=".85"/>
+          <!-- 紋章 -->
+          <g transform="translate(300,78)"><circle r="28" fill="#163a6b"/><circle r="28" fill="none" stroke="#bfeafb" stroke-width="3"/><path d="M-16 8 Q-10 -14 0 -16 Q10 -14 16 8 Q0 2 -16 8 Z" fill="#00a7e1"/><circle cx="0" cy="-6" r="5" fill="#bfeafb"/></g>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>サックスブルー — 「歓喜」を名に冠した、遠州の証。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1970年代（ヤマハ発動機サッカー部が前身）</dd>
+          <dt>本拠地</dt><dd>静岡県磐田市</dd>
+          <dt>スタジアム</dt><dd>ヤマハスタジアム（約15,000人）</dd>
+          <dt>愛称</dt><dd>ジュビロ（歓喜）</dd>
+          <dt>カラー</dt><dd>サックスブルー ＆ ネイビー</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

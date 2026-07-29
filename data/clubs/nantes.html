@@ -1,0 +1,209 @@
+<!--CLUB slug=nantes name=ナント league=リーグアン-->
+<!--VIDEO id=i1FKULKpet4 title=Allez Nantais, Hymne à la Beaujoire（クラブ・アンセム）-->
+<!--DESC FCナント（リーグアン）のクラブ紹介。ロワール河口の街ナント、機械仕掛けの巨大な象レ・マシン、スタッド・ドゥ・ラ・ボージョワール、リーグ8度制覇の名門「レ・カナリ」を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#08150c; --cl-green:#00954c; --cl-green-hi:#4fd08a; --cl-yellow:#fdd200; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#f3f9f4); --cl-text:var(--fg,#0f2417); --cl-muted:#5c7566; --cl-line:#c9e2d2; --cl-card:#f6fdf8;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#e2f2e7; --cl-muted:#8bad97; --cl-line:#1c3826; --cl-card:#0e2013; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#e2f2e7; --cl-muted:#8bad97; --cl-line:#1c3826; --cl-card:#0e2013; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#0f2417; --cl-muted:#5c7566; --cl-line:#c9e2d2; --cl-card:#f6fdf8; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(8,21,12,.94) 32%,rgba(8,21,12,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#08150c;background:var(--cl-yellow);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-green-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#d3ecdc;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-green),var(--cl-yellow) 60%,#fff0a0)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(0,149,76,.26)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#08150c;background:var(--cl-yellow);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(0,149,76,.3);font-weight:700}
+  .cl-yellow{color:#b89400;font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#bce0c9;background:#06110a;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-green);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="ロワール河口の街ナントと、機械仕掛けの巨大な象レ・マシンを描いた夜景のイラスト">
+        <defs>
+          <linearGradient id="nask" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#153a25"/><stop offset="55%" stop-color="#0d2416"/><stop offset="100%" stop-color="#08150c"/></linearGradient>
+          <radialGradient id="naglow" cx="50%" cy="30%" r="52%"><stop offset="0%" stop-color="#00954c" stop-opacity=".4"/><stop offset="45%" stop-color="#fdd200" stop-opacity=".12"/><stop offset="100%" stop-color="#08150c" stop-opacity="0"/></radialGradient>
+          <linearGradient id="nariver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2f8a5c" stop-opacity=".45"/><stop offset="100%" stop-color="#0d2416" stop-opacity=".95"/></linearGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#nask)"/>
+        <rect width="1200" height="470" fill="url(#naglow)"/>
+        <g fill="#d6f0df" opacity=".8"><circle cx="160" cy="90" r="2.5"/><circle cx="280" cy="60" r="2"/><circle cx="1040" cy="80" r="2.5"/><circle cx="960" cy="120" r="2"/><circle cx="1120" cy="60" r="2"/></g>
+        <!-- 街並みシルエット -->
+        <g fill="#0c2416"><rect x="60" y="252" width="70" height="58"/><rect x="140" y="236" width="54" height="74"/><rect x="206" y="258" width="64" height="52"/><rect x="282" y="244" width="50" height="66"/><rect x="900" y="250" width="60" height="60"/><rect x="968" y="240" width="54" height="70"/><rect x="1030" y="258" width="70" height="52"/></g>
+        <g fill="#fdd200" opacity=".8"><rect x="80" y="264" width="5" height="7"/><rect x="158" y="252" width="5" height="7"/><rect x="300" y="258" width="5" height="7"/><rect x="986" y="256" width="5" height="7"/></g>
+        <!-- 機械仕掛けの象（レ・マシン・ド・リル） -->
+        <g transform="translate(560,150)">
+          <!-- 体 -->
+          <ellipse cx="60" cy="90" rx="120" ry="60" fill="#5a3a1e"/>
+          <ellipse cx="60" cy="90" rx="120" ry="60" fill="none" stroke="#fdd200" stroke-width="2" opacity=".4"/>
+          <!-- 脚 -->
+          <rect x="-30" y="140" width="26" height="70" fill="#4a2f18"/><rect x="10" y="146" width="26" height="66" fill="#4a2f18"/><rect x="86" y="146" width="26" height="66" fill="#4a2f18"/><rect x="126" y="140" width="26" height="70" fill="#4a2f18"/>
+          <!-- 頭 -->
+          <ellipse cx="-70" cy="60" rx="52" ry="46" fill="#5a3a1e"/>
+          <!-- 耳 -->
+          <ellipse cx="-40" cy="52" rx="28" ry="36" fill="#6a4522"/>
+          <!-- 鼻 -->
+          <path d="M-108 66 Q-150 90 -140 150 Q-134 172 -120 160 Q-128 120 -96 96 Z" fill="#5a3a1e"/>
+          <!-- 牙 -->
+          <path d="M-96 96 Q-108 122 -96 138" fill="none" stroke="#e6d3a3" stroke-width="6" stroke-linecap="round"/>
+          <!-- 目（暖色の灯り） -->
+          <circle cx="-78" cy="52" r="7" fill="#fdd200"/>
+          <!-- 歯車 -->
+          <circle cx="40" cy="80" r="16" fill="none" stroke="#c8912f" stroke-width="4"/>
+          <circle cx="90" cy="100" r="12" fill="none" stroke="#c8912f" stroke-width="3"/>
+          <!-- 背に乗る展望台 -->
+          <rect x="20" y="18" width="80" height="20" rx="4" fill="#4a2f18"/>
+          <g fill="#fdd200" opacity=".8"><rect x="30" y="24" width="5" height="7"/><rect x="50" y="24" width="5" height="7"/><rect x="70" y="24" width="5" height="7"/><rect x="90" y="24" width="5" height="7"/></g>
+        </g>
+        <!-- ロワール川 -->
+        <rect x="0" y="310" width="1200" height="160" fill="url(#nariver)"/>
+        <g stroke="#5fb98a" stroke-width="3" stroke-linecap="round" opacity=".45"><line x1="120" y1="352" x2="240" y2="352"/><line x1="360" y1="380" x2="520" y2="380"/><line x1="640" y1="360" x2="760" y2="360"/><line x1="860" y1="392" x2="1020" y2="392"/><line x1="300" y1="420" x2="470" y2="420"/></g>
+        <g stroke="#fdd200" stroke-width="2.5" opacity=".3"><line x1="560" y1="320" x2="560" y2="410"/></g>
+        <!-- 黄緑の帯 -->
+        <g><rect x="0" y="452" width="1200" height="9" fill="#00954c"/><rect x="0" y="461" width="1200" height="7" fill="#fdd200" opacity=".9"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ フランス・リーグアン</span>
+        <h1>ナント<span class="cl-en">FC Nantes · 1943</span></h1>
+        <p class="cl-sub">ロワール河口、機械仕掛けの巨象が歩く街。黄と緑をまとう、フランスの名門「カナリア」です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">フランス西部・ロワール河口に位置する港湾都市<b>ナント</b>を本拠とするクラブです。かつての造船の街は、いまアートと創造の都市へと生まれ変わり、機械仕掛けの巨大な生き物が歩く街として知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタッド・ドゥ・ラ・ボージョワール</h2>
+      <p>ナント市内に建つ、約3万7千人を収容するスタジアムです。正式名は「スタッド・ドゥ・ラ・ボージョワール＝ルイ・フォンテヌ」。<span class="cl-hl">黄と緑に染まるスタンド</span>が、名門クラブの歴史を今に伝えます。地元に深く根ざした本拠地で、カナリアたちのホームゲームが繰り広げられます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黄色いスカーフを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#06110a"/>
+          <defs><pattern id="nacrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#06110a"/><circle cx="8.5" cy="7" r="5" fill="#00954c"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#nacrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#fdd200" opacity=".55"/>
+          <g stroke="#fdd200" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a6b5e"/><polygon points="164,30 206,40 164,54" fill="#fdd200"/><rect x="420" y="24" width="4" height="64" fill="#5a6b5e"/><polygon points="424,24 466,36 424,50" fill="#00954c"/></g>
+        </svg>
+        <figcaption>黄と緑の一体感 — カナリアの色に染まるスタンド。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>ロワールの河口、機械仕掛けの街</h2>
+      <p>ナントは、大西洋へと注ぐ<span class="cl-yellow">ロワール川</span>の河口に開けた街。かつての造船所の跡地には、あの巨大な機械仕掛けの象をはじめとする「レ・マシン・ド・リル」が生まれ、世界中から人が集まる創造の街になりました。歴史と前衛が同居するこの都市で、クラブは地域の誇りであり続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="ロワール川と機械仕掛けの象、街並みを描いた夕景のシルエット">
+          <defs><linearGradient id="nadusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1c4a30"/><stop offset="100%" stop-color="#06110a"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#nadusk)"/>
+          <circle cx="510" cy="44" r="26" fill="#fdd200" opacity=".55"/>
+          <!-- 象 -->
+          <g transform="translate(140,52)">
+            <ellipse cx="30" cy="50" rx="66" ry="34" fill="#5a3a1e"/>
+            <rect x="-16" y="78" width="16" height="40" fill="#4a2f18"/><rect x="8" y="82" width="16" height="36" fill="#4a2f18"/><rect x="46" y="82" width="16" height="36" fill="#4a2f18"/><rect x="70" y="78" width="16" height="40" fill="#4a2f18"/>
+            <ellipse cx="-40" cy="34" rx="30" ry="26" fill="#5a3a1e"/>
+            <ellipse cx="-22" cy="30" rx="16" ry="20" fill="#6a4522"/>
+            <path d="M-62 38 Q-86 52 -80 86 Q-76 98 -68 90 Q-72 62 -54 50 Z" fill="#5a3a1e"/>
+            <circle cx="-44" cy="30" r="4" fill="#fdd200"/>
+            <circle cx="26" cy="46" r="10" fill="none" stroke="#c8912f" stroke-width="3"/>
+          </g>
+          <!-- 街並み -->
+          <g fill="#0c2416"><rect x="300" y="96" width="44" height="50"/><rect x="350" y="86" width="38" height="60"/><rect x="394" y="100" width="48" height="46"/></g>
+          <g fill="#fdd200" opacity=".8"><rect x="316" y="108" width="5" height="7"/><rect x="364" y="102" width="5" height="7"/></g>
+          <rect x="0" y="146" width="600" height="24" fill="#0d2416" opacity=".9"/>
+          <g stroke="#5fb98a" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="156" x2="180" y2="156"/><line x1="330" y1="150" x2="470" y2="150"/></g>
+        </svg>
+        <figcaption>レ・マシン・ド・リル — ロワール河口を歩く、機械仕掛けの象。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>レ・カナリ — 8度の王座を誇る名門</h2>
+      <p>ナントは、フランスサッカーを代表する名門のひとつです。<span class="cl-hl">リーグ優勝は歴代屈指の8度</span>を数え、華麗なパスをつなぐ「ジュ・ア・ラ・ナンテーズ（ナント流のサッカー）」で知られてきました。数多くの名選手を育て上げた育成の伝統も、このクラブの大きな誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーと、カナリア（黄色い小鳥）を描いたイラスト">
+          <rect width="600" height="180" fill="#06110a"/>
+          <g transform="translate(300,104)"><path d="M-40,-40 L40,-40 L34,4 Q30,30 0,38 Q-30,30 -34,4 Z" fill="#e6b23c"/><path d="M-40,-40 Q-72,-38 -72,-12 Q-72,8 -46,10 L-44,-4 Q-58,-6 -58,-16 Q-58,-28 -40,-28 Z" fill="#e6b23c"/><path d="M40,-40 Q72,-38 72,-12 Q72,8 46,10 L44,-4 Q58,-6 58,-16 Q58,-28 40,-28 Z" fill="#e6b23c"/><rect x="-14" y="38" width="28" height="18" fill="#c8912f"/><rect x="-30" y="56" width="60" height="10" rx="3" fill="#c8912f"/></g>
+          <!-- カナリア -->
+          <g transform="translate(150,80)"><ellipse cx="0" cy="0" rx="26" ry="22" fill="#fdd200"/><circle cx="18" cy="-10" r="12" fill="#fdd200"/><path d="M28 -12 L42 -8 L28 -2 Z" fill="#e88a1a"/><circle cx="22" cy="-12" r="3" fill="#08150c"/><path d="M-20 4 L-40 12 L-18 16 Z" fill="#00954c"/></g>
+          <g transform="translate(450,80) scale(-1,1)"><ellipse cx="0" cy="0" rx="26" ry="22" fill="#fdd200"/><circle cx="18" cy="-10" r="12" fill="#fdd200"/><path d="M28 -12 L42 -8 L28 -2 Z" fill="#e88a1a"/><circle cx="22" cy="-12" r="3" fill="#08150c"/><path d="M-20 4 L-40 12 L-18 16 Z" fill="#00954c"/></g>
+          <g stroke="#00954c" stroke-width="6" stroke-linecap="round" opacity=".7" fill="none"><path d="M170 150 q130 -28 260 0"/></g>
+        </svg>
+        <figcaption>レ・カナリ — 8度の王座と、名門を象徴する黄色い小鳥。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>黄と緑、カナリアの伝統</h2>
+      <p>黄と緑のクラブカラーから、<strong>「レ・カナリ（カナリアたち）」</strong>の愛称で親しまれます。テクニックを重んじ、ボールを大切につなぐ攻撃的なサッカーが伝統。長きにわたりフランスサッカーの一時代を築いてきたこのクラブは、いまも黄と緑の誇りを胸に戦い続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="黄色いユニフォームの胸に、緑の帯とカナリアの紋章をあしらったイラスト">
+          <rect width="600" height="150" fill="#06110a"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#fdd200"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffffff" opacity=".5"/>
+          <rect x="214" y="70" width="172" height="16" fill="#00954c"/>
+          <g transform="translate(300,80)"><ellipse cx="-4" cy="0" rx="20" ry="17" fill="#00954c"/><circle cx="12" cy="-8" r="10" fill="#00954c"/><path d="M20 -10 L34 -6 L20 -1 Z" fill="#e88a1a"/><circle cx="15" cy="-9" r="2.5" fill="#fdd200"/></g>
+          <g stroke="#00954c" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>黄と緑の胸に小鳥 — 名門カナリアの伝統の色。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1943年</dd>
+          <dt>本拠地</dt><dd>ナント（ペイ・ド・ラ・ロワール地方）</dd>
+          <dt>スタジアム</dt><dd>スタッド・ドゥ・ラ・ボージョワール（約37,000人）</dd>
+          <dt>愛称</dt><dd>Les Canaris（レ・カナリ）</dd>
+          <dt>カラー</dt><dd>イエロー ＆ グリーン</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
