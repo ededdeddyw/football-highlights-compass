@@ -1,0 +1,198 @@
+<!--CLUB slug=racing-lens name=RCランス league=リーグアン-->
+<!--VIDEO id=PLACEHOLD03 title=ランスのアンセム-->
+<!--DESC RCランス（リーグアン）のクラブ紹介。北部の炭鉱町、金と赤に燃えるスタッド・ボラール＝ドゥルリス、「サン・エ・オール（血と金）」の熱狂を、アンセム動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#140d00; --cl-gold:#ffd200; --cl-gold-hi:#ffe680; --cl-red:#e2001a; --cl-red-hi:#ff5a6e;
+    --cl-paper:var(--bg,#fcf8ec); --cl-text:var(--fg,#1c1600); --cl-muted:#726b52; --cl-line:#e6dcbe; --cl-card:#fffdf4;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f4ecd6; --cl-muted:#b3a988; --cl-line:#3a3216; --cl-card:#1b1503; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f4ecd6; --cl-muted:#b3a988; --cl-line:#3a3216; --cl-card:#1b1503; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1c1600; --cl-muted:#726b52; --cl-line:#e6dcbe; --cl-card:#fffdf4; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(20,13,0,.94) 32%,rgba(20,13,0,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#140d00;background:var(--cl-gold);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-gold-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f3e9c8;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-red),var(--cl-gold) 55%,#fff2c0)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(255,210,0,.4)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#140d00;background:var(--cl-gold);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(255,210,0,.42);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e6d9a8;background:#100a00;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-gold);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="夜の炭鉱町ランスと、金赤に燃えるスタッド・ボラール、炭鉱の櫓を描いたイラスト">
+        <defs>
+          <linearGradient id="lesky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e2100"/><stop offset="55%" stop-color="#1c1300"/><stop offset="100%" stop-color="#140d00"/></linearGradient>
+          <radialGradient id="leglow" cx="50%" cy="60%" r="52%"><stop offset="0%" stop-color="#ffd200" stop-opacity=".3"/><stop offset="42%" stop-color="#e2001a" stop-opacity=".14"/><stop offset="100%" stop-color="#140d00" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1200" height="470" fill="url(#lesky)"/>
+        <rect width="1200" height="470" fill="url(#leglow)"/>
+        <circle cx="960" cy="102" r="40" fill="#fff2c0" opacity=".85"/>
+        <circle cx="944" cy="92" r="40" fill="#1c1300" opacity=".5"/>
+        <g fill="#ffe680" opacity=".55"><circle cx="180" cy="82" r="2.5"/><circle cx="300" cy="58" r="2"/><circle cx="440" cy="104" r="2.5"/><circle cx="120" cy="130" r="2"/><circle cx="600" cy="70" r="2"/><circle cx="1080" cy="140" r="2"/></g>
+        <!-- ボタ山（炭鉱の三角の丘） -->
+        <path d="M0 300 L150 176 L300 300 Z" fill="#1a1200"/>
+        <path d="M120 300 L280 158 L440 300 Z" fill="#221800"/>
+        <!-- 炭鉱の櫓（シュヴァルマン） -->
+        <g transform="translate(210,150)">
+          <rect x="-6" y="20" width="12" height="130" fill="#2a1e00"/>
+          <rect x="-30" y="20" width="60" height="10" fill="#2a1e00"/>
+          <path d="M-30 30 L0 -8 L30 30 Z" fill="none" stroke="#e2001a" stroke-width="3" opacity=".55"/>
+          <line x1="-30" y1="30" x2="0" y2="150" stroke="#2a1e00" stroke-width="4"/>
+          <line x1="30" y1="30" x2="0" y2="150" stroke="#2a1e00" stroke-width="4"/>
+          <circle cx="0" cy="4" r="12" fill="none" stroke="#ffd200" stroke-width="3" opacity=".7"/>
+        </g>
+        <!-- 街の煙突と家並み -->
+        <g fill="#1e1500"><rect x="360" y="252" width="20" height="48"/><rect x="388" y="238" width="14" height="62"/><rect x="410" y="262" width="26" height="38"/><rect x="446" y="248" width="16" height="52"/><rect x="470" y="268" width="30" height="32"/><rect x="506" y="256" width="18" height="44"/><rect x="530" y="272" width="34" height="28"/></g>
+        <g fill="#e2001a" opacity=".6"><rect x="393" y="230" width="6" height="12"/></g>
+        <!-- スタッド・ボラール＝ドゥルリス -->
+        <g transform="translate(760,300)">
+          <ellipse cx="0" cy="4" rx="270" ry="58" fill="#241900"/>
+          <rect x="-260" y="-52" width="520" height="60" rx="10" fill="#1c1300"/>
+          <rect x="-260" y="-52" width="520" height="60" rx="10" fill="none" stroke="#ffd200" stroke-width="3" opacity=".5"/>
+          <ellipse cx="0" cy="-28" rx="200" ry="30" fill="#ffd200" opacity=".18"/>
+          <!-- 金赤の縦縞コレオ -->
+          <g><rect x="-240" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="-210" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="-180" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="-150" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="-120" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="-90" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="-60" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="-30" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="0" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="30" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="60" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="90" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="120" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="150" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/><rect x="180" y="-46" width="30" height="48" fill="#ffd200" opacity=".8"/><rect x="210" y="-46" width="30" height="48" fill="#e2001a" opacity=".8"/></g>
+        </g>
+        <!-- 金赤の帯 -->
+        <g fill="#e2001a" opacity=".95"><rect x="0" y="450" width="1200" height="7"/></g>
+        <g fill="#ffd200" opacity=".95"><rect x="0" y="459" width="1200" height="7"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ フランス・リーグアン</span>
+        <h1>RCランス<span class="cl-en">Racing Club de Lens · 1906</span></h1>
+        <p class="cl-sub">北部の炭鉱町に生まれたクラブ。金と赤に燃えるボラールのスタンドと、地元の誇り「サン・エ・オール（血と金）」の熱狂です。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">フランス北部、オー＝ド＝フランス地域圏の炭鉱町ランスを本拠とするクラブです。<b>石炭とともに歩んだ労働者の街</b>で、サッカーは地域の誇りそのもの。人口を上回るほどの観客が詰めかける、熱狂のクラブとして知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>スタッド・ボラール＝ドゥルリス — 燃える器</h2>
+      <p>街の中心に建つ、約3万8千人を収容するスタジアムです。人口約3万人のランスにあって、<span class="cl-hl">街の人口を超える収容力</span>を誇るのが象徴的。四方に迫るスタンドが生む音圧は国内屈指で、金と赤に染まった観客席が一体となって揺れる光景は、フランスサッカーの名物のひとつです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="金と赤のマフラーを掲げる観客で埋まったスタンドのイラスト">
+          <rect width="600" height="190" fill="#100a00"/>
+          <defs><pattern id="lecrowd" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#100a00"/><circle cx="8.5" cy="7" r="5" fill="#ffd200"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#lecrowd)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#e2001a" opacity=".55"/>
+          <g stroke="#ffe680" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#6b5c2a"/><polygon points="164,30 206,40 164,54" fill="#e2001a"/><rect x="420" y="24" width="4" height="64" fill="#6b5c2a"/><polygon points="424,24 466,36 424,50" fill="#ffd200"/></g>
+        </svg>
+        <figcaption>金と赤の一体感 — 街の人口を超える、サン・エ・オールの群衆。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>炭鉱の記憶と、労働者の誇り</h2>
+      <p>ランスは、かつて<span class="cl-red">石炭採掘</span>で栄えた北部の工業地帯の中心。街の周囲にはボタ山と呼ばれる採掘くずの丘が今も残り、炭鉱の歴史を伝える景観は世界遺産に登録されています。汗を流して働く人々の街に生まれたクラブは、地域の連帯と誇りの象徴として、世代を超えて愛され続けています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="ボタ山と炭鉱の櫓、煙突が並ぶランスの夕景シルエット">
+          <defs><linearGradient id="ledusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a2a00"/><stop offset="100%" stop-color="#100a00"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#ledusk)"/>
+          <circle cx="500" cy="46" r="28" fill="#e6b23c" opacity=".65"/>
+          <path d="M0 118 L110 60 L220 118 Z" fill="#1a1200"/>
+          <path d="M120 118 L240 74 L360 118 Z" fill="#221800"/>
+          <!-- 炭鉱の櫓 -->
+          <g transform="translate(150,52)"><rect x="-4" y="14" width="8" height="52" fill="#2a1e00"/><rect x="-18" y="14" width="36" height="7" fill="#2a1e00"/><line x1="-18" y1="21" x2="0" y2="66" stroke="#2a1e00" stroke-width="3"/><line x1="18" y1="21" x2="0" y2="66" stroke="#2a1e00" stroke-width="3"/><circle cx="0" cy="4" r="8" fill="none" stroke="#ffd200" stroke-width="2.5" opacity=".7"/></g>
+          <g fill="#1e1500"><rect x="360" y="92" width="16" height="26"/><rect x="382" y="82" width="12" height="36"/><rect x="400" y="98" width="20" height="20"/><rect x="426" y="76" width="8" height="42"/></g>
+          <g fill="#e2001a" opacity=".6"><rect x="428" y="70" width="4" height="8"/></g>
+          <rect x="0" y="118" width="600" height="52" fill="#1a1200" opacity=".9"/>
+          <g stroke="#e6b23c" stroke-width="2.5" stroke-linecap="round" opacity=".4"><line x1="60" y1="140" x2="200" y2="140"/><line x1="300" y1="150" x2="460" y2="150"/></g>
+        </svg>
+        <figcaption>ボタ山と炭鉱の櫓 — 石炭とともに歩んだ、労働者の街の原風景。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 象徴</div>
+      <h2>サン・エ・オール — 血と金の熱狂</h2>
+      <p>クラブを表す言葉が、<span class="cl-hl">「サン・エ・オール（Sang et Or ＝ 血と金）」</span>。赤は流した汗と血を、金は石炭が生んだ豊かさを象徴するといわれます。試合の日、街じゅうがこの色に染まり、スタンドは声と旗で埋め尽くされます。北部の空の下で受け継がれてきた、地元と一体の応援文化がこのクラブの誇りです。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="金と赤の縦縞の旗が並んで揺れるイラスト">
+          <rect width="600" height="180" fill="#100a00"/>
+          <g>
+            <rect x="120" y="34" width="8" height="118" fill="#3a2a00"/><path d="M128 38 Q180 30 128 60 Q180 66 128 92 Z" fill="#ffd200"/><path d="M128 60 Q180 66 128 92 Q180 96 128 120 Z" fill="#e2001a"/>
+            <rect x="290" y="24" width="8" height="128" fill="#3a2a00"/><path d="M298 28 Q356 20 298 52 Q356 58 298 84 Z" fill="#ffd200"/><path d="M298 52 Q356 58 298 84 Q356 90 298 116 Z" fill="#e2001a"/>
+            <rect x="460" y="34" width="8" height="118" fill="#3a2a00"/><path d="M468 38 Q520 30 468 60 Q520 66 468 92 Z" fill="#ffd200"/><path d="M468 60 Q520 66 468 92 Q520 96 468 120 Z" fill="#e2001a"/>
+          </g>
+          <g stroke="#ffd200" stroke-width="2.5" stroke-linecap="round" opacity=".4" fill="none"><path d="M100 164 q200 -20 400 0"/></g>
+        </svg>
+        <figcaption>血と金の旗 — 街を染める、サン・エ・オールの色。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>金と赤、炭鉱の街の色</h2>
+      <p>金（黄）と赤の縦縞のユニフォームは、そのまま<strong>「サン・エ・オール」</strong>の愛称の由来です。派手なスター路線ではなく、走り、戦い、地元とともに戦うスタイルが伝統。<span class="cl-hl">近隣クラブとの熱いダービー</span>や、満員のボラールが生む一体感は、フランスサッカーでも屈指の名物として知られています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="金と赤の縦縞のユニフォームの胸に、獅子の紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#100a00"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#ffd200"/>
+          <g fill="#e2001a"><path d="M214 30 L240 26 L240 132 Q227 128 214 118 Z"/><path d="M266 23 L292 20.5 L292 139 Q279 137 266 134 Z"/><path d="M318 20.5 L344 24 L344 133 Q331 137 318 139 Z"/><path d="M370 27 L386 30 L386 118 Q373 128 370 131 Z"/></g>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#fff3d0" opacity=".7"/>
+          <g transform="translate(300,84)"><circle r="22" fill="#140d00" stroke="#ffd200" stroke-width="2"/><path d="M-12 6 q-2 -14 6 -16 q2 -6 6 0 q4 -6 6 0 q8 2 6 16 q-6 4 -12 4 q-6 0 -12 -4 z" fill="#ffd200"/><circle cx="-4" cy="-6" r="1.6" fill="#140d00"/></g>
+          <g stroke="#e2001a" stroke-width="2.5" stroke-linecap="round" opacity=".6"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>金と赤の縦縞 — 胸に輝く、サン・エ・オールの獅子。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1906年</dd>
+          <dt>本拠地</dt><dd>ランス（オー＝ド＝フランス地域圏）</dd>
+          <dt>スタジアム</dt><dd>スタッド・ボラール＝ドゥルリス（約38,000人）</dd>
+          <dt>愛称</dt><dd>Les Sang et Or（サン・エ・オール／血と金）</dd>
+          <dt>カラー</dt><dd>ゴールド ＆ レッド</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>

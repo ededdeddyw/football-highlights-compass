@@ -1,0 +1,191 @@
+<!--CLUB slug=kashiwa-reysol name=柏レイソル league=Jリーグ（J1）-->
+<!--VIDEO id=PLACEHOLD01 title=柏レイソル 応援歌（日立台）-->
+<!--DESC 柏レイソル（Jリーグ・J1）のクラブ紹介。ピッチとの距離が近い「日立台」の一体感、太陽の王を意味するチーム名、黄と黒のカラー、2011年のJ1制覇を、応援歌動画とオリジナルイラストでわかりやすく。-->
+<style>
+  .clubpage{
+    --cl-ink:#12100a; --cl-yellow:#f5d000; --cl-yellow-hi:#fff36b; --cl-red:#e60012; --cl-gold:#e6b23c;
+    --cl-paper:var(--bg,#fbf9ef); --cl-text:var(--fg,#1f1c10); --cl-muted:#6f6a52; --cl-line:#e2dcbf; --cl-card:#fdfcf3;
+  }
+  @media (prefers-color-scheme: dark){ .clubpage{ --cl-text:#f4efd6; --cl-muted:#a89f7f; --cl-line:#332f1c; --cl-card:#1b1810; } }
+  :root[data-theme="dark"] .clubpage{ --cl-text:#f4efd6; --cl-muted:#a89f7f; --cl-line:#332f1c; --cl-card:#1b1810; }
+  :root[data-theme="light"] .clubpage{ --cl-text:#1f1c10; --cl-muted:#6f6a52; --cl-line:#e2dcbf; --cl-card:#fdfcf3; }
+  .clubpage{color:var(--cl-text)}
+  .clubpage .cl-wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  .cl-hero{position:relative;background:var(--cl-ink);overflow:hidden;border-radius:14px}
+  .cl-hero svg{display:block;width:100%;height:auto}
+  .cl-hero-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 26px;background:linear-gradient(to top,rgba(18,16,10,.94) 32%,rgba(18,16,10,0))}
+  .cl-kicker{display:inline-block;margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#12100a;background:var(--cl-yellow);padding:5px 10px 4px;font-weight:800}
+  .cl-hero h1{margin:0;color:#fff;font-weight:900;letter-spacing:.01em;text-wrap:balance;font-size:clamp(28px,6.4vw,52px);line-height:1.03}
+  .cl-hero h1 .cl-en{display:block;font-size:clamp(12px,2.4vw,16px);letter-spacing:.32em;color:var(--cl-yellow-hi);font-weight:800;text-transform:uppercase;margin-top:11px}
+  .cl-hero .cl-sub{margin:13px 0 0;color:#f1ecd2;font-size:clamp(14px,2.3vw,17px);max-width:44ch}
+  .cl-hazard{height:8px;margin:14px 0 6px;border-radius:4px;background:linear-gradient(90deg,var(--cl-yellow),var(--cl-yellow-hi) 55%,#fffbe0)}
+
+  .clubpage .cl-videotop{margin:20px 0 26px}
+  .clubpage .cl-videotop .cl-eyebrow{margin-bottom:10px}
+
+  .cl-lead{font-size:clamp(17px,2.6vw,20px);line-height:1.85;margin:8px 0;color:var(--cl-text);font-weight:600}
+  .cl-lead b{box-shadow:inset 0 -.5em 0 rgba(245,208,0,.34)}
+  .clubpage .cl-sec{padding:30px 0;border-top:1px solid var(--cl-line)}
+  .cl-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cl-muted);font-weight:700}
+  .cl-eyebrow .cl-tag{color:#12100a;background:var(--cl-yellow);font-weight:900;letter-spacing:.05em;padding:3px 9px;font-size:11px}
+  .clubpage .cl-sec h2{margin:0 0 12px;font-size:clamp(20px,3.2vw,26px);font-weight:900;letter-spacing:.01em;text-wrap:balance;line-height:1.25;color:var(--cl-text)}
+  .clubpage .cl-sec p{margin:0 0 14px;font-size:16px;line-height:1.85;color:var(--cl-text)}
+  .cl-hl{box-shadow:inset 0 -.5em 0 rgba(245,208,0,.4);font-weight:700}
+  .cl-red{color:var(--cl-red);font-weight:700}
+  .cl-sec strong{font-weight:800}
+
+  .cl-fig{margin:22px 0 2px;background:var(--cl-ink);border:1px solid var(--cl-line);border-radius:12px;overflow:hidden}
+  .cl-fig svg{display:block;width:100%;height:auto}
+  .cl-fig figcaption{padding:9px 14px;font-size:12.5px;color:#e7dfb2;background:#0f0d08;letter-spacing:.03em}
+
+  .cl-facts{margin:26px 0 4px;background:var(--cl-card);border:1px solid var(--cl-line);border-left:5px solid var(--cl-yellow);border-radius:10px;overflow:hidden}
+  .cl-facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+  .cl-facts dt{padding:11px 16px;font-size:12.5px;letter-spacing:.1em;color:var(--cl-muted);text-transform:uppercase;font-weight:700;border-top:1px solid var(--cl-line);white-space:nowrap}
+  .cl-facts dd{padding:11px 16px;margin:0;font-size:15px;font-weight:600;border-top:1px solid var(--cl-line);font-variant-numeric:tabular-nums;color:var(--cl-text)}
+  .cl-facts dt:first-of-type,.cl-facts dd:first-of-type{border-top:0}
+  .cl-foot{padding:26px 0 8px;color:var(--cl-muted);font-size:13px}
+
+  @media (max-width:640px){
+    .clubpage .cl-hero-cap{position:static;background:var(--cl-ink);padding:16px 18px 20px}
+    .clubpage .cl-hero h1{font-size:clamp(26px,7.2vw,40px);line-height:1.06}
+    .clubpage .cl-hero .cl-sub{max-width:none}
+  }
+</style>
+
+<div class="clubpage">
+  <div class="cl-wrap">
+    <header class="cl-hero">
+      <svg viewBox="0 0 1200 470" role="img" aria-label="夜の日立台スタジアムと、黄色に染まるゴール裏、柏の街並みを描いたイラスト">
+        <defs>
+          <linearGradient id="krsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2410"/><stop offset="55%" stop-color="#1a170c"/><stop offset="100%" stop-color="#12100a"/></linearGradient>
+          <radialGradient id="krglow" cx="50%" cy="70%" r="52%"><stop offset="0%" stop-color="#f5d000" stop-opacity=".4"/><stop offset="45%" stop-color="#fff36b" stop-opacity=".13"/><stop offset="100%" stop-color="#12100a" stop-opacity="0"/></radialGradient>
+          <pattern id="krcrowd" width="18" height="16" patternUnits="userSpaceOnUse"><rect width="18" height="16" fill="#141108"/><circle cx="9" cy="8" r="5.4" fill="#f5d000"/></pattern>
+        </defs>
+        <rect width="1200" height="470" fill="url(#krsky)"/>
+        <rect width="1200" height="470" fill="url(#krglow)"/>
+        <g fill="#fff36b" opacity=".8"><circle cx="150" cy="86" r="2.5"/><circle cx="270" cy="58" r="2"/><circle cx="380" cy="108" r="2.5"/><circle cx="90" cy="140" r="2"/><circle cx="1080" cy="76" r="2.5"/><circle cx="980" cy="54" r="2"/><circle cx="1140" cy="126" r="2"/></g>
+        <!-- 柏の街並みシルエット -->
+        <g fill="#171308"><rect x="40" y="250" width="26" height="60"/><rect x="72" y="234" width="20" height="76"/><rect x="98" y="256" width="30" height="54"/><rect x="134" y="242" width="18" height="68"/><rect x="158" y="262" width="34" height="48"/><rect x="1010" y="246" width="24" height="64"/><rect x="1040" y="232" width="30" height="78"/><rect x="1078" y="256" width="18" height="54"/><rect x="1102" y="244" width="40" height="66"/><rect x="1150" y="258" width="24" height="52"/></g>
+        <g fill="#f5d000" opacity=".75"><rect x="80" y="244" width="4" height="5"/><rect x="140" y="252" width="4" height="5"/><rect x="1048" y="242" width="4" height="5"/><rect x="1110" y="256" width="4" height="5"/></g>
+        <!-- 日立台スタジアム（コンパクトで四方が近いスタンド） -->
+        <g transform="translate(600,318)">
+          <path d="M-360 60 L-300 -34 L300 -34 L360 60 Z" fill="#1d1809"/>
+          <path d="M-300 -34 L300 -34 L300 -50 L-300 -50 Z" fill="#0f0d07"/>
+          <!-- ゴール裏の黄色い一体感 -->
+          <path d="M-300 -34 L300 -34 L300 60 L-300 60 Z" fill="url(#krcrowd)" opacity=".92"/>
+          <path d="M-300 -34 L300 -34 L300 -20 L-300 -20 Z" fill="#fff36b" opacity=".7"/>
+          <!-- ピッチ -->
+          <ellipse cx="0" cy="86" rx="250" ry="40" fill="#16351c"/>
+          <ellipse cx="0" cy="86" rx="250" ry="40" fill="none" stroke="#dfeee0" stroke-width="2" opacity=".4"/>
+          <line x1="0" y1="48" x2="0" y2="124" stroke="#dfeee0" stroke-width="2" opacity=".4"/>
+        </g>
+        <!-- スタジアムのグロー反射 -->
+        <ellipse cx="600" cy="430" rx="360" ry="26" fill="#f5d000" opacity=".26"/>
+        <!-- 黄・黒・赤トリムの縞バンド -->
+        <g fill="#f5d000" opacity=".95"><rect x="0" y="446" width="1200" height="9"/></g>
+        <g fill="#12100a" opacity=".9"><rect x="0" y="455" width="1200" height="6"/></g>
+        <g fill="#e60012" opacity=".9"><rect x="0" y="461" width="1200" height="4"/></g>
+      </svg>
+      <div class="cl-hero-cap">
+        <span class="cl-kicker">クラブ図鑑 ／ 日本・Jリーグ</span>
+        <h1>柏レイソル<span class="cl-en">Kashiwa Reysol · 1940</span></h1>
+        <p class="cl-sub">ピッチとの距離が近い「日立台」の一体感。太陽の王を名に冠する、千葉・柏の黄と黒のクラブです。</p>
+      </div>
+    </header>
+    <div class="cl-hazard"></div>
+
+    <div class="cl-videotop">
+      <div class="cl-eyebrow"><span class="cl-tag">♪</span> まずは雰囲気を</div>
+      <!--VIDEO-->
+    </div>
+
+    <p class="cl-lead">千葉県柏市を本拠とするクラブです。<b>ピッチとスタンドが驚くほど近い「日立台」</b>を舞台に、黄色に染まったゴール裏と選手が一体となる、独特の熱量で知られています。</p>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">01</span> 本拠地</div>
+      <h2>三協フロンテア柏スタジアム — 通称「日立台」</h2>
+      <p>柏市日立台に建つ、約1万5千人を収容するスタジアムです。愛称の<span class="cl-hl">「日立台（ひたちだい）」</span>で親しまれ、J1のスタジアムのなかでもとりわけ<strong>ピッチとスタンドの距離が近い</strong>ことで知られます。選手の息づかいや観客の声援がそのまま届く、包み込まれるような一体感が最大の魅力です。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 190" role="img" aria-label="黄色いタオルマフラーを掲げる観客で埋まった、ピッチに迫るスタンドのイラスト">
+          <rect width="600" height="190" fill="#0f0d08"/>
+          <defs><pattern id="krcrowd2" width="17" height="15" patternUnits="userSpaceOnUse"><rect width="17" height="15" fill="#0f0d08"/><circle cx="8.5" cy="7" r="5" fill="#f5d000"/></pattern></defs>
+          <path d="M0,190 L600,190 L600,96 Q300,56 0,96 Z" fill="url(#krcrowd2)"/>
+          <path d="M0,96 Q300,56 600,96 L600,82 Q300,42 0,82 Z" fill="#fff36b" opacity=".55"/>
+          <g stroke="#fff36b" stroke-width="8" stroke-linecap="round" opacity=".9" fill="none"><path d="M70 62 q28 -22 56 0"/><path d="M220 48 q28 -22 56 0"/><path d="M360 56 q28 -22 56 0"/><path d="M480 46 q28 -22 56 0"/></g>
+          <g><rect x="160" y="30" width="4" height="58" fill="#5a5334"/><polygon points="164,30 206,40 164,54" fill="#f5d000"/><rect x="420" y="24" width="4" height="64" fill="#5a5334"/><polygon points="424,24 466,36 424,50" fill="#e60012"/></g>
+        </svg>
+        <figcaption>黄色い一体感 — ピッチに迫るスタンドを埋める、レイソルイエロー。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">02</span> 街とのつながり</div>
+      <h2>柏の街と、日立台という地名</h2>
+      <p>クラブの前身は、この地に工場を構えた<span class="cl-red">日立製作所</span>のサッカー部。スタジアムの愛称「日立台」も、その地名に由来します。首都圏のベッドタウンとして発展した柏の街で、クラブは地域に深く根ざした存在として愛されてきました。街のあちこちに掲げられる黄色い旗が、ホームゲームの日を告げます。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 170" role="img" aria-label="夜の柏の街並みと工場のシルエット、黄色い街灯の夕景イラスト">
+          <defs><linearGradient id="krdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#302a12"/><stop offset="100%" stop-color="#0f0d08"/></linearGradient></defs>
+          <rect width="600" height="170" fill="url(#krdusk)"/>
+          <circle cx="500" cy="50" r="28" fill="#e6b23c" opacity=".6"/>
+          <!-- 街並み -->
+          <g fill="#171308"><rect x="20" y="96" width="26" height="44"/><rect x="52" y="80" width="20" height="60"/><rect x="78" y="102" width="30" height="38"/><rect x="114" y="88" width="18" height="52"/><rect x="138" y="106" width="34" height="34"/><rect x="182" y="94" width="22" height="46"/></g>
+          <!-- 工場（煙突と切妻屋根） -->
+          <g fill="#1d1809"><rect x="300" y="98" width="120" height="42"/><path d="M300 98 l15 -14 l15 14 M330 98 l15 -14 l15 14 M360 98 l15 -14 l15 14 M390 98 l15 -14 l15 14" fill="none" stroke="#1d1809" stroke-width="10"/><rect x="440" y="60" width="12" height="80"/></g>
+          <rect x="0" y="140" width="600" height="30" fill="#0c0a06"/>
+          <g fill="#f5d000" opacity=".8"><rect x="60" y="90" width="3" height="4"/><rect x="122" y="98" width="3" height="4"/><rect x="330" y="112" width="3" height="4"/><rect x="380" y="112" width="3" height="4"/></g>
+          <g stroke="#f5d000" stroke-width="2.5" stroke-linecap="round" opacity=".45"><line x1="60" y1="150" x2="150" y2="150"/><line x1="320" y1="150" x2="440" y2="150"/></g>
+        </svg>
+        <figcaption>日立台の地名 — 工場とともに歩んだ、柏の街の記憶。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">03</span> 栄光</div>
+      <h2>2011年 — 昇格1年目のJ1制覇</h2>
+      <p>クラブの歴史を象徴するのが、<span class="cl-hl">2011年のJ1リーグ制覇</span>です。前年にJ2を戦っていたチームが、昇格1年目でそのままリーグ王者へと駆け上がったこの快挙は、日本サッカー史に残る出来事として広く知られています。日立台の熱狂とともに、柏の街が黄色い歓喜に包まれました。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 180" role="img" aria-label="トロフィーを掲げ、黄色い紙吹雪が舞う優勝の情景イラスト">
+          <rect width="600" height="180" fill="#0f0d08"/>
+          <g transform="translate(300,104)"><path d="M-38,-40 L38,-40 L32,4 Q28,30 0,38 Q-28,30 -32,4 Z" fill="#e6b23c"/><path d="M-38,-40 Q-70,-38 -70,-12 Q-70,8 -44,10 L-42,-4 Q-56,-6 -56,-16 Q-56,-28 -38,-28 Z" fill="#e6b23c"/><path d="M38,-40 Q70,-38 70,-12 Q70,8 44,10 L42,-4 Q56,-6 56,-16 Q56,-28 38,-28 Z" fill="#e6b23c"/><rect x="-13" y="38" width="26" height="18" fill="#c8912f"/><rect x="-28" y="56" width="56" height="10" rx="3" fill="#c8912f"/></g>
+          <text x="300" y="104" fill="#12100a" font-size="30" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif">'11</text>
+          <!-- 黄色の紙吹雪 -->
+          <g fill="#f5d000"><rect x="120" y="30" width="8" height="8" transform="rotate(20 124 34)"/><rect x="200" y="20" width="7" height="7" transform="rotate(-15 203 23)"/><rect x="410" y="34" width="8" height="8" transform="rotate(30 414 38)"/><rect x="470" y="24" width="7" height="7" transform="rotate(-20 473 27)"/><rect x="150" y="70" width="6" height="6" transform="rotate(10 153 73)"/><rect x="440" y="70" width="6" height="6" transform="rotate(-25 443 73)"/></g>
+          <g fill="#e60012"><rect x="250" y="26" width="6" height="6" transform="rotate(15 253 29)"/><rect x="350" y="30" width="6" height="6" transform="rotate(-18 353 33)"/></g>
+          <g stroke="#f5d000" stroke-width="2.5" stroke-linecap="round" opacity=".55" fill="none"><path d="M120 152 q180 -28 360 0"/></g>
+        </svg>
+        <figcaption>黄色い歓喜 — 昇格1年目でつかんだ、リーグの頂点。</figcaption>
+      </figure>
+    </section>
+
+    <section class="cl-sec">
+      <div class="cl-eyebrow"><span class="cl-tag">04</span> カラーとスタイル</div>
+      <h2>「太陽の王」レイソル、黄と黒</h2>
+      <p>チーム名の<strong>「レイソル」</strong>は、スペイン語の Rey（王）と Sol（太陽）を組み合わせた造語で、<span class="cl-hl">「太陽の王」</span>を意味します。その名の通り、太陽を思わせる鮮やかな黄色を基調に、黒と赤のトリムを添えたカラーが特徴です。攻撃的で躍動感のあるサッカーと、若手を育てる伝統でも知られています。</p>
+      <figure class="cl-fig">
+        <svg viewBox="0 0 600 150" role="img" aria-label="黄色いユニフォームの胸に、太陽をかたどった紋章が輝くイラスト">
+          <rect width="600" height="150" fill="#0f0d08"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 30 C 386 30, 350 20, 300 20 Z" fill="#f5d000"/>
+          <path d="M300 20 C 250 20, 214 30, 214 30 L214 40 C 214 40, 250 30, 300 30 C 350 30, 386 40, 386 40 L386 30 C 386 30, 350 20, 300 20 Z" fill="#fffbe0" opacity=".8"/>
+          <path d="M214 118 C 214 132, 300 140, 300 140 C 300 140, 386 132, 386 118 L386 108 L214 108 Z" fill="#12100a" opacity=".85"/>
+          <!-- 太陽の紋章 -->
+          <g transform="translate(300,78)"><circle r="24" fill="#12100a"/><circle r="24" fill="none" stroke="#fffbe0" stroke-width="2"/><circle r="12" fill="#f5d000"/><g stroke="#f5d000" stroke-width="3" stroke-linecap="round"><line x1="0" y1="-30" x2="0" y2="-20"/><line x1="0" y1="20" x2="0" y2="30"/><line x1="-30" y1="0" x2="-20" y2="0"/><line x1="20" y1="0" x2="30" y2="0"/><line x1="-21" y1="-21" x2="-14" y2="-14"/><line x1="14" y1="14" x2="21" y2="21"/><line x1="21" y1="-21" x2="14" y2="-14"/><line x1="-14" y1="14" x2="-21" y2="21"/></g></g>
+          <g stroke="#e60012" stroke-width="2.5" stroke-linecap="round" opacity=".7"><line x1="410" y1="50" x2="424" y2="44"/><line x1="418" y1="76" x2="434" y2="76"/><line x1="410" y1="102" x2="424" y2="108"/></g>
+        </svg>
+        <figcaption>太陽の王 — 黄色の胸に輝く、太陽をかたどった証。</figcaption>
+      </figure>
+
+      <div class="cl-facts">
+        <dl>
+          <dt>創設</dt><dd>1940年（日立製作所サッカー部）</dd>
+          <dt>本拠地</dt><dd>千葉県柏市</dd>
+          <dt>スタジアム</dt><dd>三協フロンテア柏スタジアム／日立台（約15,000人）</dd>
+          <dt>愛称</dt><dd>レイソル（太陽の王）</dd>
+          <dt>カラー</dt><dd>イエロー ＆ ブラック（赤のトリム）</dd>
+        </dl>
+      </div>
+    </section>
+
+    <p class="cl-foot">掲載内容は広く知られた事実に基づいて構成しています。イラストはすべてオリジナルの描き起こしで、各クラブのカラーと土地柄をモチーフにしています。動画は権利元の公式・関連チャンネルのものを埋め込みプレイヤーで再生します。</p>
+  </div>
+</div>
