@@ -45,7 +45,13 @@ function tokensOf(slug) {
 }
 // 表示名（英語名のとき検索語に足すと精度が上がる）
 const isAscii = s => /^[\x00-\x7f]+$/.test(s || '');
-const HLWORDS = ['highlights', 'highlight', 'ハイライト', 'resumen', 'resume', 'extended', 'friendly', 'friendlies', 'pre-season', 'preseason', 'amichevole', 'amichevoli', 'pretemporada', 'testspiel', 'freundschaft'];
+const HLWORDS = ['highlights', 'highlight', 'ハイライト', 'resumen', 'resume', 'extended', 'friendly', 'friendlies', 'pre-season', 'preseason', 'amichevole', 'amichevoli', 'pretemporada', 'testspiel', 'freundschaft', 'pre-epoca', 'pré-época', 'pre-temporada'];
+// 別大会・別競技・非公式など「その親善試合ではない」動画を弾く保険（これに当たれば不採用）。
+//   - 公式リーグ/カップ戦（J1/J2/ルヴァン/コパ/コッパ/ポカール/カラバオ/節番号 等）は夏の親善試合ではない
+//   - サッカー以外（ハンドボール/バスケ/フットサル 等）や、非公式ライブ配信/リアクション/切り抜き
+const PRESEASON_NEG = /\bj[123]\s*league\b|j\.?league.*(highlights|league)|levain|ルヴァン|league cup|carabao|coupe\s+de|copa\s+del|coppa\s+italia|dfb.?pokal|supercopa|community shield|campeonato nacional|\bmw\s?\d|\bmd\s?\d|matchday|jornada\s?\d|giornata|andebol|handball|balonmano|baloncesto|basket|futsal|voleibol|\bwatchalong\b|\breaction\b|live\s?score|live\s?stream|full\s?match|\bfifa\b|\befootball\b|\bfc\s?mobile\b/i;
+// 今夏(2026)より前の年・シーズン表記があれば別試合とみなす（2026/2027・26/27 は許可）。
+const OLD_YEAR = /\b20(0\d|1\d|2[0-5])\b|\b(0\d|1\d|2[0-5])\s*[\/-]\s*(0\d|1\d|2[0-6])\b/;
 
 async function searchIds(query) {
   try {
@@ -78,6 +84,8 @@ function scoreCandidate(title, author, homeToks, awayToks) {
   const t = norm(title);
   if (/#short|\bshorts\b/.test(t)) return { score: -1 };
   if (t.length < 8) return { score: -1 };
+  if (PRESEASON_NEG.test(t)) return { score: -1 };   // 別大会・別競技・非公式など
+  if (OLD_YEAR.test(t)) return { score: -1 };         // 今夏より前の年/シーズン表記
   const homeHit = homeToks.some(tok => t.includes(tok));
   const awayHit = awayToks.some(tok => t.includes(tok));
   if (!(homeHit && awayHit)) return { score: 0, homeHit, awayHit };  // 両チーム名が要る
@@ -124,7 +132,10 @@ for (const mt of matches) {
     if (probe) row.jp = probe.jp === null ? '不明' : probe.jp ? '○' : '×', row.playable = probe.status;
     console.log(`✅ ${row.date}  ${mt.home} vs ${mt.away}\n    → ${best.id} [${best.author}] ${best.title}${probe ? `  (JP=${row.jp}/${probe.status})` : ''}`);
   } else {
-    row.videoId = ''; row.note = ids.length ? '該当なし（両チーム名一致の公開動画が見つからず）' : '検索結果ゼロ';
+    // --force 再探索で、既に付いていた動画が新ゲートを通らない場合は空に戻す（誤マッチの掃除）。
+    const cleared = FORCE && mt.videoId;
+    if (!DRY && FORCE) mt.videoId = '';
+    row.videoId = ''; row.note = (ids.length ? '該当なし（両チーム名一致の公開動画が見つからず）' : '検索結果ゼロ') + (cleared ? '／既存の誤マッチを解除' : '');
     console.log(`— ${row.date}  ${mt.home} vs ${mt.away}  … 見送り（${row.note}）`);
   }
   report.push(row);
