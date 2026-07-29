@@ -1293,7 +1293,8 @@ function railJstYmd(iso){
 // クラブ図鑑のslug と 試合データ側slug がずれるクラブの別名対応（レールのデータ引き当て用）。
 const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol',
   'bayern-munich':'bayern', 'borussia-dortmund':'dortmund', 'rb-leipzig':'leipzig',
-  'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen' };
+  'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen',
+  'as-monaco':'monaco', 'psg':'paris-saint-germain', 'marseille':'olympique-marseille' };
 // 左レール：順位表（対象クラブ中心・前後数行）
 function railStandings(clubSlug){
   clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
