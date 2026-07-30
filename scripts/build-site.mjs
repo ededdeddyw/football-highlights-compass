@@ -1552,6 +1552,7 @@ const GUIDES = [
       ${jp.length?`<h2 class="lined">日本代表の試合</h2>${cardGrid(jp)}`:''}
       ${daznCta('W杯26の全試合フル・見逃し配信はDAZNで。')}
       ${(()=>{const ls=[...new Set(SCHEDULE.filter(s=>s.stage==='group'&&s.group).map(s=>s.group))].sort(); return ls.length?`<h2 class="lined">グループ別ページ・決勝トーナメント（順位・日程・ハイライト）</h2><div class="chips">${ls.map(L=>`<a href="../group/${L.toLowerCase()}.html">グループ${L}</a>`).join('')}<a href="../group/knockout.html">🏆 決勝トーナメント</a></div>`:'';})()}
+      ${(()=>{const picks=[['モロッコ','歴代最高ベスト4（2022）'],['ウルグアイ','歴代最高優勝（1930/1950）']].filter(([n])=>PAGE_OF[n]); return picks.length?`<h2 class="lined">注目の代表チーム（歴代成績・日程・ハイライト）</h2><div class="chips">${picks.map(([n,c])=>`<a href="../${PAGE_OF[n]}">${flagImg(n)}${esc(n)}代表｜${esc(c)}</a>`).join('')}</div>`:'';})()}
       <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
       <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
     } },
