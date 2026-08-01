@@ -20,6 +20,8 @@ const LEAGUES = {
   sa:     { jp: 'セリエA',       src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'SA',  sdb: '4332' },
   laliga: { jp: 'ラ・リーガ',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'PD',  sdb: '4335' },
   ligue1: { jp: 'リーグアン',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'FL1', sdb: '4334' },
+  // Jリーグ（J1）は暦年制シーズン（"2026" 単年表記）。TheSportsDB のみ。
+  j1:     { jp: 'Jリーグ（J1）',  src: 'sportsdb', sdb: '4396', calendarSeason: true },
 };
 const L = LEAGUES[CODE];
 if (!L) { console.error(`未対応リーグ: ${CODE}（対応: ${Object.keys(LEAGUES).join(', ')}）`); process.exit(1); }
@@ -46,7 +48,8 @@ async function fetchOpenLiga() {
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function fetchSportsDB() {
   // 無料公開キーの eventsseason は件数が絞られる（1リーグ5件など）。ラウンド別 eventsround を1節ずつ回して全試合を集める。
-  const season = `${SEASON}-${+SEASON + 1}`;
+  // 欧州リーグは "2025-2026"、Jリーグ等の暦年制リーグは "2026" 単年表記。
+  const season = L.calendarSeason ? `${SEASON}` : `${SEASON}-${+SEASON + 1}`;
   const events = [];
   let emptyStreak = 0;
   for (let round = 1; round <= 46; round++) {
