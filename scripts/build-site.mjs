@@ -358,6 +358,12 @@ const PAGE_OF = {};
 for(const [n,info] of Object.entries(COUNTRIES)) if(entityMatches(n).length) PAGE_OF[n]=`country/${info.slug}.html`;
 for(const [n] of Object.entries(CLUBS)) PAGE_OF[n]=`club/${CLUBS[n].slug}.html`;
 
+// 選手プロフィール（data/players.json）。顔写真なしで成立する一枚絵。クラブ名→所属選手の逆引きも作る。
+let PLAYERS = [];
+try { PLAYERS = (JSON.parse(readFileSync('data/players.json','utf8')).players)||[]; } catch(e){ PLAYERS = []; }
+const PLAYERS_BY_CLUB = {};
+for(const p of PLAYERS){ if(p.club) (PLAYERS_BY_CLUB[p.club]=PLAYERS_BY_CLUB[p.club]||[]).push(p); }
+
 // ========================= 共通パーツ =========================
 const HEAD = (o)=>`<!DOCTYPE html>
 <html lang="ja"><head>
@@ -951,6 +957,7 @@ const AD = `<div class="ad"><span class="adlabel">広告</span><ins class="adsby
 mkdirSync('site/match', { recursive:true });
 mkdirSync('site/country', { recursive:true });
 mkdirSync('site/club', { recursive:true });
+mkdirSync('site/player', { recursive:true });
 writeFileSync('site/article.css', CSS);
 
 // ========================= 試合ページ =========================
@@ -1294,7 +1301,8 @@ function railJstYmd(iso){
 const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol',
   'bayern-munich':'bayern', 'borussia-dortmund':'dortmund', 'rb-leipzig':'leipzig',
   'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen',
-  'as-monaco':'monaco', 'psg':'paris-saint-germain', 'marseille':'olympique-marseille' };
+  'as-monaco':'monaco', 'psg':'paris-saint-germain', 'marseille':'olympique-marseille',
+  'ac-milan':'milan', 'inter':'internazionale-milano', 'as-roma':'roma', 'fiorentina':'acf-fiorentina' };
 // 左レール：順位表（対象クラブ中心・前後数行）
 function railStandings(clubSlug){
   clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
@@ -1457,7 +1465,9 @@ function buildClub(name, info){
   const sameLeague = Object.entries(CLUBS).filter(([n,i])=>n!==name && i.league===info.league).slice(0,12);
   const leagueHub = LEAGUE_LIST.find(h=>h.clubLabel===info.league);
   const leagueLink = leagueHub?`<p style="margin:2px 0 10px"><a href="../league/${leagueHub.slug}.html"><b>🇪🇺 ${esc(leagueHub.name)} の試合一覧へ →</b></a></p>`:'';
-  const related = (leagueLink?leagueLink:'') + (sameLeague.length?`<h2>同じリーグのクラブ</h2><div class="chips">${sameLeague.map(([n,i])=>`<a href="../club/${i.slug}.html">${esc(n)}</a>`).join('')}</div>`:'');
+  const clubPlayers = PLAYERS_BY_CLUB[name] || [];
+  const playersBlock = clubPlayers.length?`<h2>このクラブの選手</h2><div class="chips">${clubPlayers.map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`:'';
+  const related = (leagueLink?leagueLink:'') + playersBlock + (sameLeague.length?`<h2>同じリーグのクラブ</h2><div class="chips">${sameLeague.map(([n,i])=>`<a href="../club/${i.slug}.html">${esc(n)}</a>`).join('')}</div>`:'');
 
   // 作り込み済みクラブ（data/clubs/<slug>.html）はリッチ版で出す：ヒーロー＋動画（ページ上部）＋文中イラスト＋既存の試合一覧/関連。
   const richFile = `data/clubs/${slug}.html`;
@@ -1520,6 +1530,127 @@ function buildClub(name, info){
 }
 function flagImg2(iso){ return iso?`<img class="flag" src="https://flagcdn.com/w40/${iso}.png" srcset="https://flagcdn.com/w80/${iso}.png 2x" alt="" loading="lazy">`:''; }
 
+// ========================= 選手プロフィール（一枚絵・顔写真なし） =========================
+// ピッチ上のポジション座標（縦向きピッチ viewBox 0 0 100 150／上が攻撃方向）
+const POS_XY = { GK:[50,138], CB:[50,116], RB:[80,113], LB:[20,113], DM:[50,96], CM:[50,80], AM:[50,60], RW:[80,54], LW:[20,54], FW:[50,40], ST:[50,40] };
+const POS_JA = { GK:'GK', CB:'DF', RB:'DF', LB:'DF', DM:'MF', CM:'MF', AM:'MF', RW:'MF', LW:'MF', FW:'FW', ST:'FW' };
+// クラブ配色（選手のテーマ色に流用）。無ければ既定。
+const CLUB_THEME = {
+  'ソシエダ':['#0067b1','#ffffff'], 'ブライトン':['#0057b8','#ffffff'], 'リバプール':['#c8102e','#f6c744'], 'アーセナル':['#ef0107','#f2e9c9'],
+  'モナコ':['#e63946','#ffffff'], 'スポルティング':['#2fae5f','#ffffff'], 'バイエルン':['#dc052d','#ffffff'], 'フランクフルト':['#e1000f','#111114'],
+  'パルマ':['#f9c200','#0a4aa0'], 'セレッソ大阪':['#e4007f','#ffffff'], 'ミラン':['#fb090b','#0a0a0a'], 'FC東京':['#0a2472','#e60012'],
+  'ヴィッセル神戸':['#8e1728','#ffffff'], '名古屋グランパス':['#e60012','#ffd200'], '川崎フロンターレ':['#00a0e9','#0a0a0a']
+};
+function pitchPosSVG(posKey){
+  const xy = POS_XY[posKey] || [50,80];
+  const dots = Object.entries(POS_XY);
+  return `<svg viewBox="0 0 100 150" width="132" role="img" aria-label="ポジション ${esc(posKey)}" style="background:#0b7a3b;border-radius:10px">
+  <rect x="3" y="3" width="94" height="144" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+  <line x1="3" y1="75" x2="97" y2="75" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+  <circle cx="50" cy="75" r="12" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+  <rect x="30" y="3" width="40" height="20" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+  <rect x="30" y="127" width="40" height="20" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+  ${dots.map(([k,c])=>`<circle cx="${c[0]}" cy="${c[1]}" r="2.4" fill="#ffffff" opacity="0.32"/>`).join('')}
+  <circle cx="${xy[0]}" cy="${xy[1]}" r="6.5" fill="#ffd400" stroke="#0a0a0a" stroke-width="1.4"/>
+</svg>`;
+}
+function buildPlayer(p){
+  const slug=p.slug; const path=`player/${slug}.html`; const url=`${DOMAIN}/${path}`;
+  const flag = flagImg2(p.iso||'jp');
+  const club = p.club && CLUBS[p.club] ? p.club : '';
+  const clubSlug = club ? CLUBS[club].slug : '';
+  const clubLeague = club ? CLUBS[club].league : '';
+  const theme = CLUB_THEME[p.club] || ['#0a2472','#e60012'];
+  const [c1,c2] = theme;
+  const posJa = POS_JA[p.posKey]||p.pos||'';
+  const dek = (p.blurb&&p.blurb[0])||'';
+  const desc = `${p.name}（${p.pos}／${club||''}）のプロフィール。ポジション・経歴・プレースタイルをネタバレなしで紹介。所属クラブの最新ハイライトへの導線つき。`.slice(0,120);
+  const ogimg = clubSlug && CREST[clubSlug] ? CREST[clubSlug] : `${DOMAIN}/og.png`;
+  const jsonld = [
+    {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
+  ];
+  const head = HEAD({ title:`${p.name}｜プロフィール（ポジション・経歴・プレースタイル） - Football Highlights Compass`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
+
+  const hero = `<div class="pl-hero" style="background:linear-gradient(135deg,${c1} 0%,#0b1020 78%);color:#fff;border-radius:16px;padding:22px 22px 20px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:-30px;top:-30px;font-weight:900;font-size:150px;line-height:1;opacity:.14;color:${c2}">${p.number?esc(String(p.number)):'⚽'}</div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:13px;opacity:.9">${flag}<span>日本 ／ ${esc(posJa)}</span>${club?`<span>／ ${esc(clubLeague)}</span>`:''}</div>
+    <h1 style="margin:6px 0 2px;font-size:clamp(28px,6.4vw,44px);line-height:1.05">${esc(p.name)}</h1>
+    <div style="opacity:.85;font-size:14px">${esc(p.kana||'')}${p.en?` ／ ${esc(p.en)}`:''}</div>
+    <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px">
+      ${p.number?`<span class="pl-badge" style="background:${c2};color:#0a0a0a">背番号 ${esc(String(p.number))}</span>`:''}
+      <span class="pl-badge" style="background:rgba(255,255,255,.18)">${esc(p.pos)}${p.posDetail?`・${esc(p.posDetail)}`:''}</span>
+      ${p.foot?`<span class="pl-badge" style="background:rgba(255,255,255,.18)">利き足 ${esc(p.foot)}</span>`:''}
+    </div>
+  </div>`;
+
+  const lead = `<p class="dek" style="margin-top:14px">${esc(dek)}</p>`;
+  const body = `<div class="post-body">${(p.blurb||[]).slice(1).map(t=>`<p>${esc(t)}</p>`).join('')}</div>`;
+
+  const timeline = (p.career&&p.career.length)?`<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">経歴</h2>
+    <ul class="pl-timeline" style="list-style:none;margin:0;padding:0;border-left:3px solid ${c1};padding-left:14px">
+    ${p.career.map(c=>`<li style="margin:0 0 10px;position:relative"><span style="position:absolute;left:-20px;top:4px;width:9px;height:9px;border-radius:50%;background:${c1}"></span><b>${esc(c[0])}</b> <span style="opacity:.7;font-size:13px">${esc(c[1]||'')}</span></li>`).join('')}
+    </ul></div>`:'';
+
+  const factHtml = `<div class="factcard"><table>
+    <tr><th>ポジション</th><td>${esc(p.pos)}${p.posDetail?`／${esc(p.posDetail)}`:''}</td></tr>
+    ${p.foot?`<tr><th>利き足</th><td>${esc(p.foot)}</td></tr>`:''}
+    ${p.born?`<tr><th>生年</th><td>${esc(String(p.born))}年</td></tr>`:''}
+    ${club?`<tr><th>所属</th><td><a href="../club/${clubSlug}.html">${esc(club)}</a></td></tr>`:''}
+    ${p.honors?`<tr><th>主な実績</th><td>${esc(p.honors)}</td></tr>`:''}
+  </table></div>`;
+
+  // 顔写真は権利処理が必要なため出さない。将来ライセンス取得後に公式埋め込みを差し込むスロット。
+  const imgSlot = `<div class="rail-card"><div class="rail-h">📷 選手写真</div><p class="rail-empty" style="font-size:12px;line-height:1.6">写真は権利に配慮し、公式提供・ライセンス取得後に掲載予定です。いまはポジション図と経歴でご紹介します。</p></div>`;
+  const posCard = `<div class="rail-card"><div class="rail-h">🎽 ポジション</div><div style="display:flex;gap:12px;align-items:center">${pitchPosSVG(p.posKey)}<div style="font-size:13px"><b>${esc(posJa)}</b><br>${esc(p.posDetail||p.pos)}</div></div></div>`;
+
+  const clubLink = club?`<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">所属クラブ</h2><div class="chips"><a href="../club/${clubSlug}.html">${esc(club)}のクラブ図鑑 →</a></div></div>`:'';
+  const otherPlayers = PLAYERS.filter(q=>q.slug!==slug && q.club===p.club);
+  const teammates = otherPlayers.length?`<div class="cl-wrap" style="margin-top:14px"><h2 style="margin:0 0 8px">同じクラブの選手</h2><div class="chips">${otherPlayers.map(q=>`<a href="./${q.slug}.html">${esc(q.name)}</a>`).join('')}</div></div>`:'';
+  const backAll = `<div class="cl-wrap" style="margin-top:14px"><div class="chips"><a href="./">選手一覧へ →</a></div></div>`;
+
+  const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${imgSlot}`;
+  const rightRail = clubSlug ? railHighlights(clubSlug) : `<div class="rail-card"><div class="rail-h">🎬 最新ハイライト</div><p class="rail-empty">所属クラブのハイライトはこちら。</p></div>`;
+
+  const out = head + TOPBAR + `<div class="cl-shell">
+  <aside class="cl-rail cl-rail-left" id="railLeft" aria-label="選手情報"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${leftRail}</aside>
+  <div class="cl-center"><article class="post entity">
+  ${crumb([{label:'トップ',href:'../'},{label:'選手',href:'./'},{label:p.name}])}
+  ${hero}
+  ${lead}
+  ${body}
+  ${timeline}
+  ${AD}
+  ${clubLink}
+  ${teammates}
+  ${backAll}
+  </article></div>
+  <aside class="cl-rail cl-rail-right" id="railRight" aria-label="所属クラブの最新ハイライト"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${rightRail}</aside>
+</div>
+<button class="rail-tab rail-tab-left" type="button" aria-controls="railLeft" onclick="clRail('left')">📋<span>情報</span></button>
+<button class="rail-tab rail-tab-right" type="button" aria-controls="railRight" onclick="clRail('right')">🎬<span>ハイライト</span></button>
+<div class="rail-ovl" id="railOvl" onclick="clRail('')"></div>
+` + FOOTER() + RAIL_JS;
+  writeFileSync(`site/${path}`, out);
+}
+function buildPlayerIndex(){
+  const byLeague = {};
+  for(const p of PLAYERS){ const lg = (p.club&&CLUBS[p.club])?CLUBS[p.club].league:'その他'; (byLeague[lg]=byLeague[lg]||[]).push(p); }
+  const order = ['プレミアリーグ','ラ・リーガ','セリエA','ブンデスリーガ','リーグアン','Jリーグ（J1）','Jリーグ','その他'];
+  const secs = order.filter(l=>byLeague[l]).map(l=>`<h2>${esc(l)}</h2><div class="chips">${byLeague[l].map(p=>`<a href="./${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`).join('');
+  const url=`${DOMAIN}/player/`;
+  const desc = `サッカー選手プロフィール一覧。日本人選手を中心に、ポジション・経歴・プレースタイルをネタバレなしで紹介します。`;
+  const head = HEAD({ title:`選手プロフィール一覧｜Football Highlights Compass`, ogtitle:`選手プロフィール一覧`, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:[crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url}])] });
+  const out = head + TOPBAR + `<article class="post entity"><div class="cl-wrap">
+  ${crumb([{label:'トップ',href:'../'},{label:'選手'}])}
+  <h1>選手プロフィール</h1>
+  <p class="dek">日本人選手を中心に、ポジション・経歴・プレースタイルをネタバレなしで紹介します。顔写真は権利に配慮し、公式・ライセンス取得後に掲載予定です。</p>
+  ${secs}
+  ${AD}
+  </div></article>` + FOOTER();
+  writeFileSync('site/player/index.html', out);
+}
+
 // ========================= 集客記事（ガイド）の定義（エンティティ生成より前に。関連ガイドの文脈リンク用） =========================
 function cardGrid(ms){ return ms.length?`<div class="mcards">${ms.slice(0,30).map(m=>matchCard(m, m.meta)).join('')}</div>`:''; }
 function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
@@ -1568,6 +1699,7 @@ function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.lengt
 let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
 for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
+let npl=0; for(const p of PLAYERS){ buildPlayer(p); npl++; } if(PLAYERS.length) buildPlayerIndex();
 
 // ========================= 欧州リーグ ハブページ =========================
 mkdirSync('site/league', { recursive:true });
@@ -1826,6 +1958,7 @@ for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmo
 for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
 for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
+if(PLAYERS.length){ sm += `  <url><loc>${DOMAIN}/player/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; for(const p of PLAYERS) sm += `  <url><loc>${DOMAIN}/player/${p.slug}.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
 for(const s of slugs){
