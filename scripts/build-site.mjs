@@ -1404,10 +1404,11 @@ function buildCountry(name, info){
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
   // 「国名 ワールドカップ 歴代」系クエリのCTR改善：peakが短く収まる国は具体的な戦績をtitleに出す（長すぎる国は従来のまま）
+  // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通りの長さでOK）
   const peakInTitle = info.peak.length<=18 ? info.peak : null;
   const cTitle = peakInTitle
-    ? `${name}代表｜歴代最高${peakInTitle}・W杯2026日程とハイライト - Football Highlights Compass`
-    : `${name}代表｜W杯2026 ハイライト・試合日程・歴代成績 - Football Highlights Compass`;
+    ? `${name}代表｜歴代${peakInTitle}・W杯2026ハイライト`
+    : `${name}代表｜W杯2026ハイライト・試合日程`;
   const cOgTitle = peakInTitle
     ? `${name}代表｜歴代最高${peakInTitle}・W杯2026日程とハイライト`
     : `${name}代表｜W杯2026 ハイライト・試合日程・歴代成績`;
@@ -1454,7 +1455,8 @@ function buildClub(name, info){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
   ];
   if(ms.length) clgraph.push(itemListLd(ms));
-  const head = HEAD({ title:`${name}｜${info.league} ハイライト動画・試合一覧 - Football Highlights Compass`, ogtitle:`${name}｜${info.league} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+  // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
+  const head = HEAD({ title:`${name}｜${info.league} ハイライト動画・試合一覧`, ogtitle:`${name}｜${info.league} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
   const factHtml = `<div class="factcard"><table>
     <tr><th>国・リーグ</th><td>${flag} ${esc(info.country)}／${esc(info.league)}</td></tr>
     <tr><th>創設</th><td>${esc(String(info.founded))}年</td></tr>
@@ -1487,7 +1489,8 @@ function buildClub(name, info){
       .replace(/<!--DESC[\s\S]*?-->\s*/, '')
       .replace('<!--VIDEO-->', embed);
     // 「クラブ名 リーグ名」系クエリのCTR改善：非リッチ版（#70）と同様にtitleへリーグ名を明記
-    const rHead = HEAD({ title:`${name}｜${info.league} クラブ図鑑（歴史・本拠地・スタイル） - Football Highlights Compass`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+    // titleは検索結果でのピクセル幅切れ防止のため簡潔に（旧: 「（歴史・本拠地・スタイル） - Football Highlights Compass」を付与＝長すぎて表示上切れていた）
+    const rHead = HEAD({ title:`${name}｜${info.league} クラブ図鑑`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
     // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
     const leftRail = railStandings(slug) + railFormation(name) + railFacts(info, flag);
     const rightRail = railHighlights(slug);
