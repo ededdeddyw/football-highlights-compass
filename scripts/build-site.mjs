@@ -363,6 +363,9 @@ let PLAYERS = [];
 try { PLAYERS = (JSON.parse(readFileSync('data/players.json','utf8')).players)||[]; } catch(e){ PLAYERS = []; }
 const PLAYERS_BY_CLUB = {};
 for(const p of PLAYERS){ if(p.club) (PLAYERS_BY_CLUB[p.club]=PLAYERS_BY_CLUB[p.club]||[]).push(p); }
+// 選手名→プロフィール（試合ページ等から選手プロフィールへ内部リンクするための逆引き）
+const PLAYER_BY_NAME = {};
+for(const p of PLAYERS){ PLAYER_BY_NAME[p.name] = p; }
 
 // ========================= 共通パーツ =========================
 const HEAD = (o)=>`<!DOCTYPE html>
@@ -982,7 +985,7 @@ function buildMatch(m){
   } // 結果に触れる m.topic は dek（リード文）に出さない＝ネタバレ防止。見どころは下のfactカードに控えめ版で格納
   const dek = `${hook?hook+'。':''}${teamsTxt||m.mt}${lg?`（${lg}）`:''}の公式ハイライトです。`;
   // description（meta/og/twitter/JSON-LDに波及）には結果に触れる m.topic を入れない＝検索スニペットでのネタバレ防止
-  const desc = `${teamsTxt||m.mt}${lgSeo?'（'+lgSeo+'）':''}のハイライト動画。${m.players.length?m.players.join('・')+'出場。':''}DAZN公式映像でネタバレ防止、試合結果・見どころも掲載。`.slice(0,120);
+  const desc = `${teamsTxt||m.mt}${lgSeo?'（'+lgSeo+'）':''}のハイライト動画はこちら。${m.players.length?m.players.join('・')+'の出場シーンも。':''}日本から観られる公式映像をネタバレ防止でご案内。試合日程・見どころも。`.slice(0,120);
   // fact card
   const facts=[];
   if(lg) facts.push(['大会', lg]);
@@ -996,6 +999,9 @@ function buildMatch(m){
   // チーム/国のハブページへの内部リンク
   const teamLinks = m.teams.map(t=> PAGE_OF[t] ? `<a href="../${PAGE_OF[t]}">${m.league==='wc'?flagImg(t):''}${esc(t)}</a>` : '').filter(Boolean);
   const teamHtml = teamLinks.length ? `<h2>チーム・${m.league==='wc'?'国':'クラブ'}を深掘り</h2><div class="chips">${teamLinks.join('')}</div>` : '';
+  // 出場した日本人選手にプロフィールがあれば内部リンク（試合→選手ページの導線）
+  const playerLinks = (m.players||[]).map(nm=> PLAYER_BY_NAME[nm] ? `<a href="../player/${PLAYER_BY_NAME[nm].slug}.html">${esc(nm)}<small style="opacity:.6"> ${esc(PLAYER_BY_NAME[nm].pos)}</small></a>` : '').filter(Boolean);
+  const playerHtml = playerLinks.length ? `<h2>出場選手を深掘り</h2><div class="chips">${playerLinks.join('')}</div>` : '';
   // related
   const rel = relatedMatches(m);
   const relHtml = rel.length ? collapsible('関連する試合', `<div class="mcards">${rel.map(r=>matchCard(r.m, r.why)).join('')}</div>`) : '';
@@ -1077,6 +1083,7 @@ function buildMatch(m){
   ${AD}
   ${factHtml}
   ${teamHtml}
+  ${playerHtml}
   ${bottomRel}
   ${footerInner}
   </article></main>
@@ -1449,7 +1456,7 @@ function buildClub(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = crestUrl || (ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const dek = info.blurb[0]||'';
-  const desc = `${name}（${info.league}）のハイライト動画・試合一覧とクラブ情報。${info.founded}年創設・本拠地${info.stadium}。公式映像のみ・ネタバレ防止で${ms.length}試合を掲載。`.slice(0,120);
+  const desc = `${name}の最新ハイライト動画を${ms.length}試合分。${info.league}の試合日程・結果に加え、${info.founded}年創設・本拠地${info.stadium}などクラブ情報も。公式映像だけをネタバレ防止で。`.slice(0,120);
   const clgraph = [
     {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
@@ -1542,7 +1549,8 @@ const CLUB_THEME = {
   'ソシエダ':['#0067b1','#ffffff'], 'ブライトン':['#0057b8','#ffffff'], 'リバプール':['#c8102e','#f6c744'], 'アーセナル':['#ef0107','#f2e9c9'],
   'モナコ':['#e63946','#ffffff'], 'スポルティング':['#2fae5f','#ffffff'], 'バイエルン':['#dc052d','#ffffff'], 'フランクフルト':['#e1000f','#111114'],
   'パルマ':['#f9c200','#0a4aa0'], 'セレッソ大阪':['#e4007f','#ffffff'], 'ミラン':['#fb090b','#0a0a0a'], 'FC東京':['#0a2472','#e60012'],
-  'ヴィッセル神戸':['#8e1728','#ffffff'], '名古屋グランパス':['#e60012','#ffd200'], '川崎フロンターレ':['#00a0e9','#0a0a0a']
+  'ヴィッセル神戸':['#8e1728','#ffffff'], '名古屋グランパス':['#e60012','#ffd200'], '川崎フロンターレ':['#00a0e9','#0a0a0a'],
+  'リーズ':['#1d428a','#ffcd00'], 'マインツ':['#c3141e','#ffffff'], '横浜F・マリノス':['#004098','#e60012'], '浦和レッズ':['#e60012','#111114']
 };
 function pitchPosSVG(posKey){
   const xy = POS_XY[posKey] || [50,80];
@@ -1567,7 +1575,7 @@ function buildPlayer(p){
   const [c1,c2] = theme;
   const posJa = POS_JA[p.posKey]||p.pos||'';
   const dek = (p.blurb&&p.blurb[0])||'';
-  const desc = `${p.name}（${p.pos}／${club||''}）のプロフィール。ポジション・経歴・プレースタイルをネタバレなしで紹介。所属クラブの最新ハイライトへの導線つき。`.slice(0,120);
+  const desc = `${p.name}の経歴・ポジション・プレースタイルをピッチ図でわかりやすく紹介。${club?club+'（'+clubLeague+'）での歩みや背番号も。':''}所属クラブの最新ハイライト動画への導線つき。`.slice(0,120);
   const ogimg = clubSlug && CREST[clubSlug] ? CREST[clubSlug] : `${DOMAIN}/og.png`;
   const jsonld = [
     {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
@@ -1610,9 +1618,16 @@ function buildPlayer(p){
   const clubLink = club?`<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">所属クラブ</h2><div class="chips"><a href="../club/${clubSlug}.html">${esc(club)}のクラブ図鑑 →</a></div></div>`:'';
   const otherPlayers = PLAYERS.filter(q=>q.slug!==slug && q.club===p.club);
   const teammates = otherPlayers.length?`<div class="cl-wrap" style="margin-top:14px"><h2 style="margin:0 0 8px">同じクラブの選手</h2><div class="chips">${otherPlayers.map(q=>`<a href="./${q.slug}.html">${esc(q.name)}</a>`).join('')}</div></div>`:'';
+  // 所属リーグのハブへ（試合一覧）＋同リーグ／その他の選手へ相互リンク＝選手ページ同士のつながりを強化
+  const plLeagueHub = clubLeague ? LEAGUE_LIST.find(h=>h.clubLabel===clubLeague) : null;
+  const leagueLink = plLeagueHub?`<div class="cl-wrap" style="margin-top:14px"><div class="chips"><a href="../league/${plLeagueHub.slug}.html"><b>🇪🇺 ${esc(plLeagueHub.name)}の試合一覧へ →</b></a></div></div>`:'';
+  const sameLeaguePlayers = clubLeague?PLAYERS.filter(q=>q.slug!==slug && q.club!==p.club && CLUBS[q.club] && CLUBS[q.club].league===clubLeague):[];
+  const relPool = sameLeaguePlayers.length?sameLeaguePlayers:PLAYERS.filter(q=>q.slug!==slug && q.club!==p.club);
+  const relatedPlayers = relPool.length?`<div class="cl-wrap" style="margin-top:14px"><h2 style="margin:0 0 8px">${sameLeaguePlayers.length?esc(clubLeague)+'の注目選手':'ほかの注目選手'}</h2><div class="chips">${relPool.slice(0,10).map(q=>`<a href="./${q.slug}.html">${esc(q.name)}<small style="opacity:.6"> ${esc(q.pos)}</small></a>`).join('')}</div></div>`:'';
   const backAll = `<div class="cl-wrap" style="margin-top:14px"><div class="chips"><a href="./">選手一覧へ →</a></div></div>`;
 
-  const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${imgSlot}`;
+  const clubGuides = club?guideLinksFor(club):'';
+  const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${imgSlot}${clubGuides}`;
   const rightRail = clubSlug ? railHighlights(clubSlug) : `<div class="rail-card"><div class="rail-h">🎬 最新ハイライト</div><p class="rail-empty">所属クラブのハイライトはこちら。</p></div>`;
 
   const out = head + TOPBAR + `<div class="cl-shell">
@@ -1626,6 +1641,8 @@ function buildPlayer(p){
   ${AD}
   ${clubLink}
   ${teammates}
+  ${leagueLink}
+  ${relatedPlayers}
   ${backAll}
   </article></div>
   <aside class="cl-rail cl-rail-right" id="railRight" aria-label="所属クラブの最新ハイライト"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${rightRail}</aside>
@@ -1640,9 +1657,13 @@ function buildPlayerIndex(){
   const byLeague = {};
   for(const p of PLAYERS){ const lg = (p.club&&CLUBS[p.club])?CLUBS[p.club].league:'その他'; (byLeague[lg]=byLeague[lg]||[]).push(p); }
   const order = ['プレミアリーグ','ラ・リーガ','セリエA','ブンデスリーガ','リーグアン','Jリーグ（J1）','Jリーグ','その他'];
-  const secs = order.filter(l=>byLeague[l]).map(l=>`<h2>${esc(l)}</h2><div class="chips">${byLeague[l].map(p=>`<a href="./${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`).join('');
+  const secs = order.filter(l=>byLeague[l]).map(l=>{
+    const hub = LEAGUE_LIST.find(h=>h.clubLabel===l);
+    const heading = hub?`<h2>${esc(l)} <a href="../league/${hub.slug}.html" style="font-size:13px;font-weight:600;opacity:.85">試合一覧 →</a></h2>`:`<h2>${esc(l)}</h2>`;
+    return `${heading}<div class="chips">${byLeague[l].map(p=>`<a href="./${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`;
+  }).join('');
   const url=`${DOMAIN}/player/`;
-  const desc = `サッカー選手プロフィール一覧。日本人選手を中心に、ポジション・経歴・プレースタイルをネタバレなしで紹介します。`;
+  const desc = `日本人サッカー選手のプロフィール一覧。海外組・Jリーグの選手を、ポジション・経歴・プレースタイルからネタバレなしで紹介。所属クラブの最新ハイライトへもすぐ。`.slice(0,120);
   const head = HEAD({ title:`選手プロフィール一覧｜Football Highlights Compass`, ogtitle:`選手プロフィール一覧`, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:[crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url}])] });
   const out = head + TOPBAR + `<article class="post entity"><div class="cl-wrap">
   ${crumb([{label:'トップ',href:'../'},{label:'選手'}])}
