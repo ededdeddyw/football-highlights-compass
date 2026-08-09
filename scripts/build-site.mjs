@@ -1490,7 +1490,7 @@ function buildClub(name, info){
       .replace('<!--VIDEO-->', embed);
     // 「クラブ名 リーグ名」系クエリのCTR改善：非リッチ版（#70）と同様にtitleへリーグ名を明記
     // titleは検索結果でのピクセル幅切れ防止のため簡潔に（旧: 「（歴史・本拠地・スタイル） - Football Highlights Compass」を付与＝長すぎて表示上切れていた）
-    const rHead = HEAD({ title:`${name}｜${info.league} クラブ図鑑`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+    const rHead = HEAD({ title:`${name}｜${info.league}の歴史・本拠地・ハイライト動画`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
     // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
     const leftRail = railStandings(slug) + railFormation(name) + railFacts(info, flag);
     const rightRail = railHighlights(slug);
@@ -1573,7 +1573,7 @@ function buildPlayer(p){
     {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
   ];
-  const head = HEAD({ title:`${p.name}｜プロフィール（ポジション・経歴・プレースタイル） - Football Highlights Compass`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
+  const head = HEAD({ title:`${p.name}｜${club?club+'／':''}${p.pos}・経歴・プレースタイル`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
 
   const hero = `<div class="pl-hero" style="background:linear-gradient(135deg,${c1} 0%,#0b1020 78%);color:#fff;border-radius:16px;padding:22px 22px 20px;position:relative;overflow:hidden">
     <div style="position:absolute;right:-30px;top:-30px;font-weight:900;font-size:150px;line-height:1;opacity:.14;color:${c2}">${p.number?esc(String(p.number)):'⚽'}</div>
