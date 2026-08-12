@@ -2,15 +2,15 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-08-11
+> 最終更新: 2026-08-12
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **0** ↓1
-- 表示(7日): **922** ↑31
-- 平均順位(7日): **15.3** ↑1.2（数字が小さいほど上位）
+- クリック(7日): **0** →
+- 表示(7日): **881** ↓41
+- 平均順位(7日): **16.2** ↑0.9（数字が小さいほど上位）
 - CTR(7日): **0.0%**
 - サイトマップ indexed: **0** / submitted 575 →
-- GA ユーザー(28日): **76** / セッション 95
+- GA ユーザー(28日): **72** / セッション 88
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -18,13 +18,13 @@
 | ブレーメン ブンデスリーガ | 2 | 9 | 23.7 |
 | ogc ニース | 1 | 1 | 24.0 |
 | サッカーハイライト | 1 | 4 | 8.8 |
-| スペイン ハイライト | 1 | 5 | 10.6 |
 | ワールドカップ2026ハイライト | 1 | 1 | 22.0 |
 | ワールドカップサッカーハイライト | 1 | 1 | 27.0 |
 | ワールドカップハイライト | 1 | 1 | 38.0 |
 | 1 fsv マインツ 05 | 0 | 1 | 60.0 |
 | 1930ウルグアイ代表 | 0 | 1 | 8.0 |
 | benfica | 0 | 2 | 45.5 |
+| c グループ | 0 | 1 | 42.0 |
 | club cerezo | 0 | 1 | 29.0 |
 | dazn 結果表示 消す | 0 | 1 | 1.0 |
 | e組 ワールドカップ | 0 | 1 | 21.0 |
@@ -34,33 +34,35 @@
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| / | 6 | 55 | 10.3 |
-| /club/jubilo-iwata.html | 2 | 35 | 18.5 |
-| /club/werder-bremen.html | 2 | 78 | 17.9 |
-| /country/spain.html | 2 | 81 | 12.0 |
-| /club/borussia-dortmund.html | 1 | 44 | 23.0 |
+| / | 4 | 51 | 10.7 |
+| /club/jubilo-iwata.html | 2 | 33 | 17.4 |
+| /club/werder-bremen.html | 2 | 70 | 18.8 |
+| /club/borussia-dortmund.html | 1 | 43 | 23.1 |
 | /club/eintracht-frankfurt.html | 1 | 29 | 32.8 |
 | /club/nice.html | 1 | 3 | 14.0 |
+| /country/spain.html | 1 | 51 | 13.4 |
 | /country/uruguay.html | 1 | 253 | 11.4 |
 | /match/0-5qfsxThHg.html | 1 | 1 | 34.0 |
-| /about.html | 0 | 6 | 6.0 |
-| /club/atletico-madrid.html | 0 | 34 | 17.0 |
-| /club/benfica.html | 0 | 11 | 32.7 |
+| /about.html | 0 | 5 | 4.4 |
+| /club/atletico-madrid.html | 0 | 36 | 15.5 |
+| /club/benfica.html | 0 | 10 | 35.4 |
 | /club/bologna.html | 0 | 1 | 8.0 |
-| /club/cerezo-osaka.html | 0 | 40 | 11.8 |
-| /club/espanyol-barcelona.html | 0 | 4 | 15.8 |
+| /club/cerezo-osaka.html | 0 | 41 | 11.7 |
+| /club/espanyol-barcelona.html | 0 | 8 | 12.8 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Direct | 53 | 15 | 72 |
-| Organic Search | 40 | 22 | 248 |
+| Direct | 46 | 13 | 82 |
+| Organic Search | 37 | 21 | 267 |
+| Cross-network | 2 | 0 | 8 |
 | Referral | 2 | 0 | 2 |
+| Unassigned | 1 | 0 | 0 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 50 | 35 | 364 |
+| / | 47 | 32 | 373 |
 | /club/eintracht-frankfurt.html | 10 | 9 | 29 |
 | /club/napoli.html | 6 | 3 | 21 |
 | /match/s2OyDJ5O3ZY.html | 6 | 3 | 9 |
@@ -68,18 +70,17 @@
 | /league/serie-a.html | 4 | 3 | 14 |
 | /club/cremonese.html | 3 | 1 | 17 |
 | /club/werder-bremen.html | 3 | 3 | 47 |
-| /country/spain.html | 3 | 3 | 232 |
 | /group/a.html | 3 | 1 | 8 |
-| /guide/world-cup-2026-how-to-watch.html | 3 | 3 | 40 |
 | /league/laliga.html | 3 | 2 | 21 |
 | /match/ED28CZxLiIQ.html | 3 | 1 | 2 |
-| /match/bl-2526-md1-bayern-leipzig.html | 3 | 1 | 35 |
 | /match/s9MoErtoO44.html | 3 | 2 | 5 |
+| /club/borussia-dortmund.html | 2 | 2 | 23 |
+| /club/jubilo-iwata.html | 2 | 2 | 1 |
+| /country/spain.html | 2 | 3 | 222 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-08-02 | 6 | 561 | 20.9 | 0 | 95 |
 | 2026-08-03 | 7 | 632 | 19.0 | 0 | 100 |
 | 2026-08-04 | 5 | 736 | 19.5 | 0 | 95 |
 | 2026-08-05 | 6 | 803 | 18.5 | 0 | 94 |
@@ -89,14 +90,15 @@
 | 2026-08-09 | 2 | 917 | 15.4 | 0 | 84 |
 | 2026-08-10 | 1 | 891 | 14.1 | 0 | 81 |
 | 2026-08-11 | 0 | 922 | 15.3 | 0 | 76 |
+| 2026-08-12 | 0 | 881 | 16.2 | 0 | 72 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 258 | 0 | 0.0% |
-| W杯国別（/country/） | 562 | 0 | 0.0% |
+| クラブ/リーグ（/club/・/league/） | 266 | 0 | 0.0% |
+| W杯国別（/country/） | 518 | 0 | 0.0% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
-| 2026-08-11 | 258 | 562 |
+| 2026-08-12 | 266 | 518 |
 
