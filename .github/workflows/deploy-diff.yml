@@ -41,8 +41,8 @@ jobs:
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/deploy-manifest.json
+          git add data/deploy-manifest.json data/page-modified.json
           if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
-          git commit -m "chore(deploy): デプロイ差分マニフェスト更新"
+          git commit -m "chore(deploy): デプロイ差分マニフェスト・更新日マップ更新"
           git pull --rebase --autostash || true
           git push

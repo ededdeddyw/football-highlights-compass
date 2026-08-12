@@ -2006,4 +2006,43 @@ for(const s of slugs){
 }
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
+// ===== 更新日の安定化（FTP差分デプロイの肥大化を防ぐ）=====
+// article:published_time / article:modified_time に毎ビルドの TODAY を全ページ埋め込むと、
+// 内容が不変でも「日付だけ」でバイトが変化し、差分デプロイが毎回ほぼ全ファイル（2000超）再送になり
+// 18分のFTPタイムアウトに当たりやすい。ここでは更新日トークンを除いたページ内容のハッシュを取り、
+// 前回（data/page-modified.json）と一致すれば前回の日付を据え置く。実際に内容が変わったページだけ
+// TODAY に更新する。これで差分デプロイが「本当に変わったファイルだけ」に収束する。
+// 対象は値が TODAY の更新日トークンのみ（試合日程など実データ由来の日付＝TODAY以外は不変なので触れない）。
+function stabilizeDates(){
+  let prevMap = {};
+  try { prevMap = JSON.parse(readFileSync('data/page-modified.json','utf8')); } catch { prevMap = {}; }
+  const next = {};
+  const reMeta = /(<meta property="article:(?:published|modified)_time" content=")([^"]+)(">)/g;
+  let bumped = 0, held = 0;
+  const walk = (dir) => { for (const f of readdirSync(dir, { withFileTypes:true })) {
+    const p = `${dir}/${f.name}`;
+    if (f.isDirectory()) { walk(p); continue; }
+    if (!f.name.endsWith('.html')) continue;
+    const rel = p.replace(/^site\//,'');
+    const html = readFileSync(p, 'utf8');
+    let hitCount = 0;
+    const canon = html.replace(reMeta, (m, a, val, b) => {
+      if (val.startsWith(TODAY)) { hitCount++; return `${a}@@D@@${b}`; }
+      return m;
+    });
+    if (!hitCount) continue;   // TODAY依存の更新日を持たない（既に安定）ページは対象外
+    const h = createHash('md5').update(canon).digest('hex');
+    const prev = prevMap[rel];
+    const stable = (prev && prev.h === h) ? prev.d : TODAY;
+    next[rel] = { h, d: stable };
+    if (stable === TODAY) { bumped++; }         // 新規 or 内容変更 → 現状の TODAY のまま
+    else { held++; writeFileSync(p, canon.split('@@D@@').join(`${stable}T12:00:00+09:00`)); }  // 据え置き
+  }};
+  walk('site');
+  const sorted = {}; for (const k of Object.keys(next).sort()) sorted[k] = next[k];
+  writeFileSync('data/page-modified.json', JSON.stringify(sorted));
+  console.log(`更新日安定化: 据え置き ${held} / 更新(新規・変更) ${bumped} ページ`);
+}
+stabilizeDates();
+
 console.log(`試合ページ: ${slugs.length} / 国: ${nc} / クラブ: ${ncl} / sitemap URL: ${slugs.length + new Set(Object.values(ENTITY_PAGES)).size + 1}`);
