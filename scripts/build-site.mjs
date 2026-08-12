@@ -1404,21 +1404,22 @@ function buildCountry(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const dek = info.blurb[0]||'';
-  const desc = `${name}代表のW杯歴代成績（最高${info.peak}）と2026年全${ms.length}試合の公式ハイライト・試合日程。公式映像のみ・ネタバレ防止で、結果を隠したまま安全に視聴できます。`.slice(0,120);
+  const desc = `${name}代表のW杯2026 全${ms.length}試合の結果とハイライト、歴代成績（最高${info.peak}）。公式映像のみ・ネタバレ防止で、結果を隠したまま安全に振り返れます。`.slice(0,120);
   const cgraph = [
     {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
-  // 「国名 ワールドカップ 歴代」系クエリのCTR改善：peakが短く収まる国は具体的な戦績をtitleに出す（長すぎる国は従来のまま）
+  // W杯2026は閉幕済み。検索需要は「日程（これから）」→「結果・歴代・振り返り」へ移行しているため、titleから"試合日程"を外し
+  // 「結果・歴代成績・ハイライト」を前面に出す。「国名 ワールドカップ 歴代」系のinformationalクエリにも噛み合わせる。
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通りの長さでOK）
   const peakInTitle = info.peak.length<=18 ? info.peak : null;
   const cTitle = peakInTitle
     ? `${name}代表｜歴代${peakInTitle}・W杯2026ハイライト`
-    : `${name}代表｜W杯2026ハイライト・試合日程`;
+    : `${name}代表｜W杯2026 結果・ハイライト・歴代成績`;
   const cOgTitle = peakInTitle
-    ? `${name}代表｜歴代最高${peakInTitle}・W杯2026日程とハイライト`
-    : `${name}代表｜W杯2026 ハイライト・試合日程・歴代成績`;
+    ? `${name}代表｜歴代最高${peakInTitle}・W杯2026 結果とハイライト`
+    : `${name}代表｜W杯2026 結果・ハイライト・歴代成績`;
   const head = HEAD({ title:cTitle, ogtitle:cOgTitle, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:cgraph });
   const blurbHtml = info.blurb.map(p=>`<p>${esc(p)}</p>`).join('');
   const factHtml = `<div class="factcard"><table>
@@ -1430,6 +1431,8 @@ function buildCountry(name, info){
   // 関連：同連盟の他国
   const sameConfed = Object.entries(COUNTRIES).filter(([n,i])=>n!==name && i.confed===info.confed && entityMatches(n).length>0).slice(0,12);
   const related = sameConfed.length?`<h2>同じ連盟の国</h2><div class="chips">${sameConfed.map(([n,i])=>`<a href="../country/${i.slug}.html">${flagImg(n)}${esc(n)}</a>`).join('')}</div>`:'';
+  // W杯閉幕後は欧州クラブが新シーズン開幕。国別ページ（サイト最大の露出面）から新シーズンのクラブ/リーグ面へ内部リンクで送客し、権威を再分配する。
+  const clubBridge = LEAGUE_LIST.length?`<h2>クラブのハイライトも</h2><p style="font-size:12px;margin:2px 0 8px;opacity:.75">W杯のあとは欧州クラブの新シーズン。公式ハイライトはこちら。</p><div class="chips">${LEAGUE_LIST.map(h=>`<a href="../league/${h.slug}.html">${esc(h.name)}</a>`).join('')}</div>`:'';
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'国（ワールドカップ）'},{label:name}])}
   <p class="kicker">${flag} ${esc(info.confed)}</p>
@@ -1440,7 +1443,7 @@ function buildCountry(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<h2 class="lined">${esc(name)}代表の歴史とW杯の歩み</h2><p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
-    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}</aside>
+    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}${clubBridge}</aside>
   </div>
   ${AD}
   ${list}
@@ -1735,6 +1738,9 @@ function buildLeague(h){
   const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>{ const cr=CREST[CLUBS[c].slug]; return `<a class="clubchip" href="../club/${CLUBS[c].slug}.html">${cr?`<img src="${cr}" alt="" loading="lazy">`:'🛡️'}${esc(c)}</a>`; }).join('');
   const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
   const cross = others.length?`<h2 class="lined">他の欧州リーグ</h2><div class="chips">${others.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('')}</div>`:'';
+  // このリーグに所属する日本人選手 → 選手プロフィールへ相互リンク（リーグ→選手。新シーズンの検索需要に噛み合わせ、選手ページの内部リンクを増やす）
+  const leaguePlayers = PLAYERS.filter(p=>p.club && CLUBS[p.club] && CLUBS[p.club].league===h.clubLabel);
+  const playerChips = leaguePlayers.length?`<h2 class="lined">注目の日本人選手</h2><div class="chips">${leaguePlayers.slice(0,12).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`:'';
   const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
   const desc = `${h.name}（${h.country}）のハイライト動画・試合一覧。公式・権利元が公開する映像のみ・ネタバレ防止で${ms.length}試合を掲載。最新結果もチェック。`.slice(0,120);
   const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}])];
@@ -1744,8 +1750,9 @@ function buildLeague(h){
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
-  <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。</p>
+  <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
+  ${playerChips}
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
   ${AD}
   ${collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms))}
