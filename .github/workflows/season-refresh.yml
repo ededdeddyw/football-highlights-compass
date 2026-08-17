@@ -60,8 +60,8 @@ jobs:
             node scripts/fetch-league.mjs "$c" "${{ steps.s.outputs.season }}" || echo "⚠ fetch $c 失敗（継続）"
           done
 
-      - name: 公式ハイライトを検知（videoId紐付け）
-        run: node scripts/watch-league.mjs --limit=40 || echo "⚠ watch-league 失敗（継続）"
+      - name: 公式ハイライトを検知（videoId紐付け・当該シーズンのみ）
+        run: node scripts/watch-league.mjs --season=${{ steps.s.outputs.season }} --limit=40 --maxsearch=120 || echo "⚠ watch-league 失敗（継続）"
 
       - name: サイト生成
         run: node scripts/build-site.mjs

@@ -12,7 +12,11 @@ const args = process.argv.slice(2);
 const DRY = args.includes('--dry-run');
 const DIAG = args.includes('--diag') || process.env.WATCH_DIAG === '1';
 const CODE = (args.find(a => a.startsWith('--code=')) || '').split('=')[1] || '';
+const SEASON = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';   // 例 --season=2026 で当該シーズンのファイルのみ対象（終了済み過去シーズンの再走査を回避）
 const LIMIT = (() => { const v = +((args.find(a => a.startsWith('--limit=')) || '').split('=')[1]); return Number.isFinite(v) && v > 0 ? v : 30; })();
+// 1回の実行で行うYouTube検索の総上限。未マッチ試合（過去分・公式ハイライト不在）の再走査で
+// ジョブがタイムアウトするのを防ぐ安全弁。超過分は次回実行で処理（videoId済みはスキップ＝再開可能）。
+const MAXSEARCH = (() => { const v = +((args.find(a => a.startsWith('--maxsearch=')) || '').split('=')[1]); return Number.isFinite(v) && v > 0 ? v : 120; })();
 const readJson = (p, d) => { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d; } catch { return d; } };
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -74,10 +78,13 @@ async function meta(id) {
   try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
 }
 
-const files = readdirSync('data').filter(n => /^league-([a-z0-9]+)-\d{4}\.json$/.test(n)).filter(n => !CODE || n.startsWith(`league-${CODE}-`));
+const files = readdirSync('data').filter(n => /^league-([a-z0-9]+)-\d{4}\.json$/.test(n))
+  .filter(n => !CODE || n.startsWith(`league-${CODE}-`))
+  .filter(n => !SEASON || n.endsWith(`-${SEASON}.json`));
 let searched = 0, confirmedTotal = 0;
 
 for (const f of files) {
+  if (searched >= MAXSEARCH) { console.log(`  [cap] 検索上限 ${MAXSEARCH} 到達。残りは次回実行で処理。`); break; }
   const path = `data/${f}`;
   const data = readJson(path, null); if (!data || !Array.isArray(data.matches)) continue;
   const code = data.code; const cfg = LEAGUE[code];
@@ -88,7 +95,7 @@ for (const f of files) {
   const confirmed = [];
   for (const m of data.matches) {
     if (m.videoId || !m.finished || m.matchday == null) continue;
-    if (confirmed.length >= LIMIT) break;
+    if (confirmed.length >= LIMIT || searched >= MAXSEARCH) break;
     if (searched++) await sleep(800);
     const mdRe = new RegExp('matchday\\s*0*' + m.matchday + '(?!\\d)', 'i');
     const ids = await searchIds(`${firstAlias(m.home)} ${firstAlias(m.away)} ${cfg.q} highlights${cfg.matchday ? ' matchday ' + m.matchday : ''}`);
