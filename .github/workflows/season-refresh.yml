@@ -1,0 +1,90 @@
+name: Season refresh (新シーズン 日程・結果・ハイライトの自動更新→本番反映)
+
+# 欧州5大リーグの日程・結果を取得し、公式ハイライトを検知して videoId を紐付け、
+# サイトを生成して本番へ差分デプロイするまでを1本で自動実行する。
+# W杯終了後にサイトを陳腐化させないための定期実行。手動実行(workflow_dispatch)も可能。
+#  - fetch-league:  data/league-<code>-<season>.json（日程・結果）
+#  - watch-league:  同ファイルに公式ハイライトの videoId を紐付け（現行シーズンは日付から自動判定）
+#  - build-site:    site/ を生成
+#  - deploy.mjs:    変更ファイルのみFTP差分デプロイ（更新日は内容ハッシュで安定化＝再送最小）
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン開始年（空欄で日付から自動判定。例 2026=2026-27）'
+        required: false
+        default: ''
+      codes:
+        description: '対象リーグ（空欄で bl pl laliga ligue1 sa 全部）'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 6 * * *'   # 毎日 06:00 UTC = 15:00 JST。前日までの試合・公式ハイライトを反映
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ftp-deploy      # deploy-diff と同じFTPデプロイ枠を共有し、同時デプロイを避ける
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: シーズン年を決定
+        id: s
+        run: |
+          if [ -n "${{ github.event.inputs.season }}" ]; then
+            S="${{ github.event.inputs.season }}"
+          else
+            Y=$(date -u +%Y); M=$(date -u +%-m)
+            if [ "$M" -ge 7 ]; then S=$Y; else S=$((Y-1)); fi   # 7月以降を新シーズン開始年とみなす
+          fi
+          echo "season=$S" >> "$GITHUB_OUTPUT"
+          echo "対象シーズン: $S-$((S+1))"
+
+      - name: 日程・結果を取得（5大リーグ）
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          CODES="${{ github.event.inputs.codes }}"
+          [ -z "$CODES" ] && CODES="bl pl laliga ligue1 sa"
+          for c in $CODES; do
+            echo "== fetch $c ${{ steps.s.outputs.season }} =="
+            node scripts/fetch-league.mjs "$c" "${{ steps.s.outputs.season }}" || echo "⚠ fetch $c 失敗（継続）"
+          done
+
+      - name: 公式ハイライトを検知（videoId紐付け）
+        run: node scripts/watch-league.mjs --limit=40 || echo "⚠ watch-league 失敗（継続）"
+
+      - name: サイト生成
+        run: node scripts/build-site.mjs
+
+      - name: FTP 差分デプロイ（変更ファイルのみ）
+        timeout-minutes: 18
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_DIR:  ${{ secrets.FTP_DIR }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          npm install basic-ftp --no-save --no-package-lock --no-audit --no-fund
+          node scripts/deploy.mjs
+
+      - name: データ・マニフェストをコミット（次回の差分判定用）
+        if: always()
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/league-*.json data/deploy-manifest.json data/page-modified.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "chore(season): リーグ日程・結果・ハイライトを自動更新→本番反映"
+          git pull --rebase --autostash || true
+          git push
