@@ -6,8 +6,10 @@ name: Watch WC knockout
 # 注: 動画は ANTHROPIC_API_KEY 無しでも出る（②は結果に依存しない）。①③はキー設定時のみ（対戦カード生成/スコア反映）。
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/15 * * * *'   # 15分ごと（動画検知は毎回／結果検証は毎時1回にthrottle）。W杯終了後はこの2行を再コメントで停止
+  # W杯終了に伴い自動実行を停止（2026-08）。決勝トーナメントの動画検知・結果検証を15分毎に回す必要がなくなったため。
+  # 再開する場合は下の schedule 2行のコメントを外す。手動実行(workflow_dispatch)は引き続き可能。
+  # schedule:
+  #   - cron: '*/15 * * * *'   # 15分ごと（動画検知は毎回／結果検証は毎時1回にthrottle）
 
 permissions:
   contents: write

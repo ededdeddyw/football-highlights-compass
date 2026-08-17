@@ -4,8 +4,10 @@ name: Watch WC highlights
 # できたら下の schedule(cron) のコメントを外して有効化する。W杯終了後は再コメントで停止。
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/10 * * * *'   # 10分間隔（Actions cronは遅延・スキップあり＝検知窓を広めに設定済み）。W杯終了後はこの2行を再コメントで停止
+  # W杯終了に伴い自動実行を停止（2026-08）。WCハイライト検知＋本番デプロイを10分毎に回す必要がなくなったため。
+  # 再開する場合は下の schedule 2行のコメントを外す。手動実行(workflow_dispatch)は引き続き可能。
+  # schedule:
+  #   - cron: '*/10 * * * *'   # 10分間隔（Actions cronは遅延・スキップあり＝検知窓を広めに設定済み）
 
 permissions:
   contents: write
