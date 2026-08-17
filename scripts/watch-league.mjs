@@ -33,9 +33,15 @@ const LEAGUE = {
 // コンパイル/まとめ動画を弾く保険（公式chでもシーズン総集編・週間まとめ等がある）。
 const NEG = /top\s*\d|best .*goals|goals of the|all goals|every goal|\bskills\b|preview|line-?ups?\b|simulation|predict|\bsquad|how old|efootball|fc mobile|\bshorts\b|\bpics\b|week\s*\d|results\s*&|round-?up|season review|best of/i;
 
-// シーズン取り違え防止：同じ対戦は毎年あるため、別シーズン表記があれば弾く（現行=2025/26）。
-const CUR_SEASON = /(2025\s*[\/-]\s*26|(^|\D)25\s*[\/-]\s*26(\D|$))/;
-const OTHER_SEASON = /(20(1\d|2[0-4]|2[6-9])\s*[\/-]\s*\d{2})|((^|\D)(1\d|2[0-4]|2[6-9])\s*[\/-]\s*\d{2}(\D|$))/;
+// シーズン取り違え防止：同じ対戦は毎年あるため、別シーズン表記があれば弾く。
+// 現行シーズンは日付から自動判定（欧州は8月開幕＝7月以降を新シーズン開始年とみなす）。
+// 例: 2026-08〜2027-06 → 開始年2026 → 現行 "2026/27"・"26/27"。翌年以降も自動で切り替わる。
+const _now = new Date();
+const _startY = (_now.getUTCMonth() + 1) >= 7 ? _now.getUTCFullYear() : _now.getUTCFullYear() - 1;
+const _yy = String(_startY).slice(2), _nn = String((_startY + 1) % 100).padStart(2, '0');
+const CUR_SEASON = new RegExp(`(${_startY}\\s*[\\/-]\\s*${_nn}|(^|\\D)${_yy}\\s*[\\/-]\\s*${_nn}(\\D|$))`);
+// 任意のシーズン表記（20xx/yy or xx/yy、2桁年は10〜29台のみ＝日付/スコアの誤爆回避）。現行以外なら「別シーズン」として弾く（下で !CUR_SEASON と併用）。
+const OTHER_SEASON = /(20[12]\d\s*[\/-]\s*\d{2})|((^|\D)[12]\d\s*[\/-]\s*\d{2}(\D|$))/;
 
 // アクセント除去＋小文字化。タイトルはアクセント無し表記が多い（Atlético→atletico）ので両側で畳む。
 const fold = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
