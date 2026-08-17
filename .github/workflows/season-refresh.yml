@@ -31,7 +31,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -67,7 +67,7 @@ jobs:
         run: node scripts/build-site.mjs
 
       - name: FTP 差分デプロイ（変更ファイルのみ）
-        timeout-minutes: 18
+        timeout-minutes: 35   # シーズン開幕時は全節のfixtureを一括初回アップするため広めに確保。deploy.mjsはマニフェスト再開式なので途中終了しても次回続行
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
