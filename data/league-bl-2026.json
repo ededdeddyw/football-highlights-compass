@@ -1,0 +1,2762 @@
+{
+  "code": "bl",
+  "jp": "ブンデスリーガ",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-28T18:30:00Z",
+      "home": "バイエルン",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T13:30:00Z",
+      "home": "マインツ",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T13:30:00Z",
+      "home": "ケルン",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-29T16:30:00Z",
+      "home": "ドルトムント",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-30T13:30:00Z",
+      "home": "フライブルク",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "2026-08-30T15:30:00Z",
+      "home": "アウクスブルク",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-04T18:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-05T16:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-06T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "2026-09-06T15:30:00Z",
+      "home": "フランクフルト",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-11T18:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T13:30:00Z",
+      "home": "フライブルク",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T13:30:00Z",
+      "home": "マインツ",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-12T16:30:00Z",
+      "home": "ケルン",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-13T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-13T15:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-18T18:30:00Z",
+      "home": "バイエルン",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-19T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-19T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-19T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-19T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-19T16:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-20T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-20T15:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-20T17:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "フライブルク",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "マインツ",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "ケルン",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-10-10T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "バイエルン",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-10-17T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "フライブルク",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "マインツ",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "ケルン",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-10-24T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "バイエルン",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-31T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "フライブルク",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "マインツ",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "ケルン",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "2026-11-07T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "バイエルン",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-21T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "フライブルク",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "マインツ",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "ケルン",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-28T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "バイエルン",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "フライブルク",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-05T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "マインツ",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ケルン",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "バイエルン",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "フライブルク",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "マインツ",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ケルン",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-09T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "バイエルン",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "フライブルク",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "マインツ",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "ケルン",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-12T19:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "バイエルン",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "フライブルク",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "マインツ",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "ケルン",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 19,
+      "dateUTC": "2027-01-30T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "バイエルン",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 20,
+      "dateUTC": "2027-02-06T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "フライブルク",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "マインツ",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "ケルン",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 21,
+      "dateUTC": "2027-02-13T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "バイエルン",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 22,
+      "dateUTC": "2027-02-20T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "フライブルク",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "マインツ",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "ケルン",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2027-02-27T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "バイエルン",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "フランクフルト",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "ボルシアMG",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "ブレーメン",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 24,
+      "dateUTC": "2027-03-02T19:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "フライブルク",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "マインツ",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "ケルン",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 25,
+      "dateUTC": "2027-03-06T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "バイエルン",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 26,
+      "dateUTC": "2027-03-13T14:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "ドルトムント",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "シュツットガルト",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "フライブルク",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "マインツ",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "ケルン",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 27,
+      "dateUTC": "2027-03-20T14:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "バイエルン",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 28,
+      "dateUTC": "2027-04-03T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "シュツットガルト",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "マインツ",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ケルン",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 29,
+      "dateUTC": "2027-04-10T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "バイエルン",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "フライブルク",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 30,
+      "dateUTC": "2027-04-17T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "シュツットガルト",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ケルン",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 31,
+      "dateUTC": "2027-04-24T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "バイエルン",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "フライブルク",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "マインツ",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 32,
+      "dateUTC": "2027-05-08T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "ドルトムント",
+      "away": "ケルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "シュツットガルト",
+      "away": "ライプツィヒ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "マインツ",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "レバークーゼン",
+      "away": "バイエルン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "フランクフルト",
+      "away": "SV 07 Elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "ボルシアMG",
+      "away": "アウクスブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "フライブルク",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "ブレーメン",
+      "away": "FC Schalke 04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 33,
+      "dateUTC": "2027-05-15T13:30:00Z",
+      "home": "SC Paderborn 07",
+      "away": "ウニオン・ベルリン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "バイエルン",
+      "away": "フランクフルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ホッフェンハイム",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "フライブルク",
+      "away": "ドルトムント",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "アウクスブルク",
+      "away": "ハンブルガーSV",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "マインツ",
+      "away": "シュツットガルト",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "ボルシアMG",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "ケルン",
+      "away": "SC Paderborn 07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "FC Schalke 04",
+      "away": "レバークーゼン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 34,
+      "dateUTC": "2027-05-22T13:30:00Z",
+      "home": "SV 07 Elversberg",
+      "away": "ブレーメン",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    }
+  ]
+}
