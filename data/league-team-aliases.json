@@ -307,5 +307,76 @@
   ],
   "ロリアン": [
     "Lorient"
+  ],
+  "シャルケ": [
+    "Schalke",
+    "Schalke 04",
+    "FC Schalke",
+    "FC Schalke 04",
+    "S04"
+  ],
+  "パーダーボルン": [
+    "Paderborn",
+    "SC Paderborn",
+    "Paderborn 07"
+  ],
+  "エルファースベルク": [
+    "Elversberg",
+    "SV Elversberg",
+    "SV 07 Elversberg"
+  ],
+  "マラガ": [
+    "Malaga",
+    "Málaga",
+    "Malaga CF"
+  ],
+  "デポルティボ": [
+    "Deportivo",
+    "Deportivo La Coruna",
+    "Deportivo La Coruña",
+    "La Coruna",
+    "Depor",
+    "RC Deportivo"
+  ],
+  "ラシン・サンタンデール": [
+    "Racing Santander",
+    "Racing",
+    "Real Racing Club",
+    "Racing de Santander",
+    "RC Santander"
+  ],
+  "トロワ": [
+    "Troyes",
+    "ESTAC",
+    "ES Troyes",
+    "Troyes AC"
+  ],
+  "ルマン": [
+    "Le Mans",
+    "Le Mans FC",
+    "LMFC"
+  ],
+  "コベントリー": [
+    "Coventry",
+    "Coventry City"
+  ],
+  "ハル・シティ": [
+    "Hull",
+    "Hull City"
+  ],
+  "イプスウィッチ": [
+    "Ipswich",
+    "Ipswich Town"
+  ],
+  "モンツァ": [
+    "Monza",
+    "AC Monza"
+  ],
+  "フロジノーネ": [
+    "Frosinone"
+  ],
+  "ヴェネツィア": [
+    "Venezia",
+    "Venezia FC"
   ]
 }
