@@ -41,7 +41,7 @@ async function fetchOpenLiga() {
     const finished = !!m.matchIsFinished;
     let score = '';
     if (finished) { const rs = Array.isArray(m.matchResults) ? m.matchResults : []; const f = rs.find(x => x.resultTypeID === 2) || rs[rs.length - 1]; if (f && f.pointsTeam1 != null && f.pointsTeam2 != null) score = `${f.pointsTeam1}-${f.pointsTeam2}`; }
-    return { matchday: m.group?.groupOrderID ?? null, dateUTC: m.matchDateTimeUTC || m.matchDateTime || '', home: ja(m.team1?.teamName || ''), away: ja(m.team2?.teamName || ''), finished, score, videoId: '' };
+    return { matchday: m.group?.groupOrderID ?? null, dateUTC: m.matchDateTimeUTC || m.matchDateTime || '', home: ja(m.team1?.teamName || ''), away: ja(m.team2?.teamName || ''), homeSlug: slugify(m.team1?.teamName), awaySlug: slugify(m.team2?.teamName), finished, score, videoId: '' };
   });
 }
 
@@ -97,6 +97,20 @@ out = out.filter(m => m.matchday != null && m.home && m.away)
          .sort((a, b) => (a.matchday - b.matchday) || String(a.dateUTC).localeCompare(String(b.dateUTC)));
 
 const OUT = `data/league-${CODE}-${SEASON}.json`;
+// 既存の videoId を引き継ぐ：fetch は日程・結果を上書きするが、watch-league が紐付けた公式ハイライトは残す。
+// これがないと日次実行のたびに全 videoId が消え、watch が毎回ゼロから再検知＝ハイライトが定着しない。
+// キーは「節＋英語原名スラッグ」（日本語ローカライズに依存しない安定キー）。
+{
+  const prev = readJson(OUT, null);
+  if (prev && Array.isArray(prev.matches)) {
+    const vid = new Map();
+    const keyOf = m => `${m.matchday}|${m.homeSlug || m.home}|${m.awaySlug || m.away}`;
+    for (const m of prev.matches) if (m.videoId) vid.set(keyOf(m), m.videoId);
+    let kept = 0;
+    for (const m of out) if (!m.videoId) { const v = vid.get(keyOf(m)); if (v) { m.videoId = v; kept++; } }
+    if (kept) console.log(`  既存の公式ハイライト ${kept}件を引き継ぎ`);
+  }
+}
 writeFileSync(OUT, JSON.stringify({ code: CODE, jp: L.jp, season: SEASON, updated: '', matches: out }, null, 2) + '\n');
 const fin = out.filter(m => m.finished).length;
 console.log(`fetch-league ${CODE} ${SEASON}: ${out.length}試合（完了 ${fin} / 未消化 ${out.length - fin}）→ ${OUT}`);
