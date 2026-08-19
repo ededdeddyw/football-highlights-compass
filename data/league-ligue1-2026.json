@@ -204,40 +204,7 @@
     },
     {
       "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "ルアーブル",
-      "away": "ブレスト",
-      "homeSlug": "le-havre",
-      "awaySlug": "brest",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "マルセイユ",
-      "away": "パリFC",
-      "homeSlug": "marseille",
-      "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "ランス",
-      "away": "ロリアン",
-      "homeSlug": "rc-lens",
-      "awaySlug": "lorient",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
+      "dateUTC": "2026-09-03T18:45:00Z",
       "home": "トゥールーズ",
       "away": "リール",
       "homeSlug": "toulouse",
@@ -248,29 +215,7 @@
     },
     {
       "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "パリ・サンジェルマン",
-      "away": "モナコ",
-      "homeSlug": "psg",
-      "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "アンジェ",
-      "away": "レンヌ",
-      "homeSlug": "angers-sco",
-      "awaySlug": "stade-rennais",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
+      "dateUTC": "2026-09-04T17:00:00Z",
       "home": "リヨン",
       "away": "オセール",
       "homeSlug": "olympique-lyon",
@@ -281,7 +226,51 @@
     },
     {
       "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
+      "dateUTC": "2026-09-04T19:05:00Z",
+      "home": "パリ・サンジェルマン",
+      "away": "モナコ",
+      "homeSlug": "psg",
+      "awaySlug": "monaco",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-05T15:15:00Z",
+      "home": "ランス",
+      "away": "ロリアン",
+      "homeSlug": "rc-lens",
+      "awaySlug": "lorient",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-05T18:45:00Z",
+      "home": "ルアーブル",
+      "away": "ブレスト",
+      "homeSlug": "le-havre",
+      "awaySlug": "brest",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-05T18:45:00Z",
+      "home": "ニース",
+      "away": "ルマン",
+      "homeSlug": "nice",
+      "awaySlug": "le-mans",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-06T13:00:00Z",
       "home": "トロワ",
       "away": "ストラスブール",
       "homeSlug": "troyes",
@@ -292,11 +281,22 @@
     },
     {
       "matchday": 3,
-      "dateUTC": "2026-09-05T15:00:00Z",
-      "home": "ニース",
-      "away": "ルマン",
-      "homeSlug": "nice",
-      "awaySlug": "le-mans",
+      "dateUTC": "2026-09-06T15:15:00Z",
+      "home": "アンジェ",
+      "away": "レンヌ",
+      "homeSlug": "angers-sco",
+      "awaySlug": "stade-rennais",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "2026-09-06T18:45:00Z",
+      "home": "マルセイユ",
+      "away": "パリFC",
+      "homeSlug": "marseille",
+      "awaySlug": "paris-fc",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -402,7 +402,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "オセール",
       "away": "ブレスト",
       "homeSlug": "auxerre",
@@ -413,7 +413,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "ルマン",
       "away": "ロリアン",
       "homeSlug": "le-mans",
@@ -424,7 +424,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "ニース",
       "away": "リール",
       "homeSlug": "nice",
@@ -435,7 +435,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "パリFC",
       "away": "ストラスブール",
       "homeSlug": "paris-fc",
@@ -446,7 +446,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ルアーブル",
       "homeSlug": "toulouse",
@@ -457,7 +457,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "アンジェ",
       "away": "トロワ",
       "homeSlug": "angers-sco",
@@ -468,7 +468,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "モナコ",
       "away": "ランス",
       "homeSlug": "monaco",
@@ -479,7 +479,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T15:00:00Z",
+      "dateUTC": "2026-09-19T00:00:00Z",
       "home": "リヨン",
       "away": "レンヌ",
       "homeSlug": "olympique-lyon",
@@ -501,7 +501,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "ブレスト",
       "away": "アンジェ",
       "homeSlug": "brest",
@@ -512,7 +512,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "レンヌ",
       "away": "オセール",
       "homeSlug": "stade-rennais",
@@ -523,7 +523,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "ロリアン",
       "away": "パリFC",
       "homeSlug": "lorient",
@@ -534,7 +534,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "ランス",
       "away": "リヨン",
       "homeSlug": "rc-lens",
@@ -545,7 +545,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "ニース",
       "away": "ストラスブール",
       "homeSlug": "nice",
@@ -556,7 +556,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "トロワ",
       "away": "マルセイユ",
       "homeSlug": "troyes",
@@ -567,7 +567,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ルマン",
       "homeSlug": "psg",
@@ -578,7 +578,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "モナコ",
       "away": "トゥールーズ",
       "homeSlug": "monaco",
@@ -589,7 +589,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-10-10T15:00:00Z",
+      "dateUTC": "2026-10-10T00:00:00Z",
       "home": "リール",
       "away": "ルアーブル",
       "homeSlug": "lille",
@@ -600,7 +600,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "ロリアン",
       "away": "モナコ",
       "homeSlug": "lorient",
@@ -611,7 +611,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "パリFC",
       "away": "レンヌ",
       "homeSlug": "paris-fc",
@@ -622,7 +622,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "トロワ",
       "away": "ランス",
       "homeSlug": "troyes",
@@ -633,7 +633,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "リール",
       "away": "ブレスト",
       "homeSlug": "lille",
@@ -644,7 +644,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "ルマン",
       "away": "トゥールーズ",
       "homeSlug": "le-mans",
@@ -655,7 +655,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "ストラスブール",
       "away": "パリ・サンジェルマン",
       "homeSlug": "strasbourg",
@@ -666,7 +666,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "ルアーブル",
       "away": "オセール",
       "homeSlug": "le-havre",
@@ -677,7 +677,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "アンジェ",
       "away": "マルセイユ",
       "homeSlug": "angers-sco",
@@ -688,7 +688,7 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-10-17T15:00:00Z",
+      "dateUTC": "2026-10-17T00:00:00Z",
       "home": "リヨン",
       "away": "ニース",
       "homeSlug": "olympique-lyon",
@@ -699,7 +699,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "マルセイユ",
       "away": "ルアーブル",
       "homeSlug": "marseille",
@@ -710,7 +710,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "モナコ",
       "away": "リール",
       "homeSlug": "monaco",
@@ -721,7 +721,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "レンヌ",
       "away": "ストラスブール",
       "homeSlug": "stade-rennais",
@@ -732,7 +732,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "ランス",
       "away": "パリFC",
       "homeSlug": "rc-lens",
@@ -743,7 +743,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "アンジェ",
       "away": "ロリアン",
       "homeSlug": "angers-sco",
@@ -754,7 +754,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "ブレスト",
       "away": "ニース",
       "homeSlug": "brest",
@@ -765,7 +765,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "トゥールーズ",
       "away": "トロワ",
       "homeSlug": "toulouse",
@@ -776,7 +776,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-24T15:00:00Z",
+      "dateUTC": "2026-10-24T00:00:00Z",
       "home": "オセール",
       "away": "ルマン",
       "homeSlug": "auxerre",
@@ -798,7 +798,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "リール",
       "away": "ランス",
       "homeSlug": "lille",
@@ -809,7 +809,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "リヨン",
       "away": "アンジェ",
       "homeSlug": "olympique-lyon",
@@ -820,7 +820,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "ロリアン",
       "away": "ブレスト",
       "homeSlug": "lorient",
@@ -831,7 +831,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "パリFC",
       "away": "モナコ",
       "homeSlug": "paris-fc",
@@ -842,7 +842,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "トロワ",
       "away": "ルマン",
       "homeSlug": "troyes",
@@ -853,7 +853,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "ルアーブル",
       "away": "パリ・サンジェルマン",
       "homeSlug": "le-havre",
@@ -864,7 +864,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "マルセイユ",
       "away": "トゥールーズ",
       "homeSlug": "marseille",
@@ -875,7 +875,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "ニース",
       "away": "レンヌ",
       "homeSlug": "nice",
@@ -886,7 +886,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-10-31T16:00:00Z",
+      "dateUTC": "2026-10-31T00:00:00Z",
       "home": "ストラスブール",
       "away": "オセール",
       "homeSlug": "strasbourg",
@@ -897,7 +897,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "ルマン",
       "away": "モナコ",
       "homeSlug": "le-mans",
@@ -908,7 +908,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "ブレスト",
       "away": "リヨン",
       "homeSlug": "brest",
@@ -919,7 +919,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "ルアーブル",
       "away": "ロリアン",
       "homeSlug": "le-havre",
@@ -930,7 +930,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "アンジェ",
       "away": "ニース",
       "homeSlug": "angers-sco",
@@ -941,7 +941,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "トロワ",
       "homeSlug": "psg",
@@ -952,7 +952,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "レンヌ",
       "away": "リール",
       "homeSlug": "stade-rennais",
@@ -963,7 +963,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "オセール",
       "away": "パリFC",
       "homeSlug": "auxerre",
@@ -974,7 +974,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T16:00:00Z",
+      "dateUTC": "2026-11-07T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ストラスブール",
       "homeSlug": "toulouse",
@@ -996,7 +996,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "モナコ",
       "away": "オセール",
       "homeSlug": "monaco",
@@ -1007,7 +1007,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "トロワ",
       "away": "ルアーブル",
       "homeSlug": "troyes",
@@ -1018,7 +1018,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "ランス",
       "away": "トゥールーズ",
       "homeSlug": "rc-lens",
@@ -1029,7 +1029,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "リール",
       "away": "リヨン",
       "homeSlug": "lille",
@@ -1040,7 +1040,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "パリFC",
       "away": "アンジェ",
       "homeSlug": "paris-fc",
@@ -1051,7 +1051,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "ロリアン",
       "away": "レンヌ",
       "homeSlug": "lorient",
@@ -1062,7 +1062,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "ストラスブール",
       "away": "ブレスト",
       "homeSlug": "strasbourg",
@@ -1073,7 +1073,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "ニース",
       "away": "パリ・サンジェルマン",
       "homeSlug": "nice",
@@ -1084,7 +1084,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T16:00:00Z",
+      "dateUTC": "2026-11-21T00:00:00Z",
       "home": "マルセイユ",
       "away": "ルマン",
       "homeSlug": "marseille",
@@ -1095,7 +1095,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "ブレスト",
       "away": "パリFC",
       "homeSlug": "brest",
@@ -1106,7 +1106,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "ルマン",
       "away": "リール",
       "homeSlug": "le-mans",
@@ -1117,7 +1117,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "トゥールーズ",
       "away": "レンヌ",
       "homeSlug": "toulouse",
@@ -1128,7 +1128,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "オセール",
       "away": "マルセイユ",
       "homeSlug": "auxerre",
@@ -1139,7 +1139,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "ニース",
       "away": "トロワ",
       "homeSlug": "nice",
@@ -1150,7 +1150,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "アンジェ",
       "away": "ランス",
       "homeSlug": "angers-sco",
@@ -1161,7 +1161,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "ルアーブル",
       "away": "ストラスブール",
       "homeSlug": "le-havre",
@@ -1172,7 +1172,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ロリアン",
       "homeSlug": "psg",
@@ -1183,7 +1183,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T16:00:00Z",
+      "dateUTC": "2026-11-28T00:00:00Z",
       "home": "リヨン",
       "away": "モナコ",
       "homeSlug": "olympique-lyon",
@@ -1194,7 +1194,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "トロワ",
       "away": "リヨン",
       "homeSlug": "troyes",
@@ -1205,7 +1205,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "モナコ",
       "away": "アンジェ",
       "homeSlug": "monaco",
@@ -1216,7 +1216,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "ランス",
       "away": "ルアーブル",
       "homeSlug": "rc-lens",
@@ -1227,7 +1227,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "リール",
       "away": "オセール",
       "homeSlug": "lille",
@@ -1238,7 +1238,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "マルセイユ",
       "away": "ニース",
       "homeSlug": "marseille",
@@ -1249,7 +1249,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "レンヌ",
       "away": "ブレスト",
       "homeSlug": "stade-rennais",
@@ -1260,7 +1260,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "トゥールーズ",
       "away": "パリ・サンジェルマン",
       "homeSlug": "toulouse",
@@ -1271,7 +1271,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "ストラスブール",
       "away": "ロリアン",
       "homeSlug": "strasbourg",
@@ -1282,7 +1282,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-05T16:00:00Z",
+      "dateUTC": "2026-12-05T00:00:00Z",
       "home": "パリFC",
       "away": "ルマン",
       "homeSlug": "paris-fc",
@@ -1293,7 +1293,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "ニース",
       "away": "ランス",
       "homeSlug": "nice",
@@ -1304,7 +1304,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "パリFC",
       "homeSlug": "psg",
@@ -1315,7 +1315,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "アンジェ",
       "away": "ストラスブール",
       "homeSlug": "angers-sco",
@@ -1326,7 +1326,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "ブレスト",
       "away": "トロワ",
       "homeSlug": "brest",
@@ -1337,7 +1337,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "ルアーブル",
       "away": "ルマン",
       "homeSlug": "le-havre",
@@ -1348,7 +1348,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "レンヌ",
       "away": "モナコ",
       "homeSlug": "stade-rennais",
@@ -1359,7 +1359,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "ロリアン",
       "away": "リール",
       "homeSlug": "lorient",
@@ -1370,7 +1370,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-12T16:00:00Z",
+      "dateUTC": "2026-12-12T00:00:00Z",
       "home": "オセール",
       "away": "トゥールーズ",
       "homeSlug": "auxerre",
@@ -1392,7 +1392,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "ルマン",
       "away": "リヨン",
       "homeSlug": "le-mans",
@@ -1403,7 +1403,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "ブレスト",
       "away": "マルセイユ",
       "homeSlug": "brest",
@@ -1414,7 +1414,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "トロワ",
       "away": "レンヌ",
       "homeSlug": "troyes",
@@ -1425,7 +1425,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "トゥールーズ",
       "away": "アンジェ",
       "homeSlug": "toulouse",
@@ -1436,7 +1436,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "モナコ",
       "away": "ニース",
       "homeSlug": "monaco",
@@ -1447,7 +1447,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "パリFC",
       "away": "ルアーブル",
       "homeSlug": "paris-fc",
@@ -1458,7 +1458,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "ロリアン",
       "away": "オセール",
       "homeSlug": "lorient",
@@ -1469,7 +1469,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-02T12:00:00Z",
+      "dateUTC": "2027-01-02T00:00:00Z",
       "home": "リール",
       "away": "ストラスブール",
       "homeSlug": "lille",
@@ -1480,7 +1480,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2027-01-03T12:00:00Z",
+      "dateUTC": "2027-01-03T00:00:00Z",
       "home": "ランス",
       "away": "パリ・サンジェルマン",
       "homeSlug": "rc-lens",
@@ -1491,7 +1491,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "マルセイユ",
       "away": "リール",
       "homeSlug": "marseille",
@@ -1502,7 +1502,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "リヨン",
       "away": "ロリアン",
       "homeSlug": "olympique-lyon",
@@ -1513,7 +1513,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "パリFC",
       "away": "トゥールーズ",
       "homeSlug": "paris-fc",
@@ -1524,7 +1524,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "レンヌ",
       "away": "ランス",
       "homeSlug": "stade-rennais",
@@ -1535,7 +1535,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "ニース",
       "away": "ルアーブル",
       "homeSlug": "nice",
@@ -1546,7 +1546,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "オセール",
       "away": "トロワ",
       "homeSlug": "auxerre",
@@ -1557,7 +1557,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "ストラスブール",
       "away": "ルマン",
       "homeSlug": "strasbourg",
@@ -1568,7 +1568,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "モナコ",
       "away": "ブレスト",
       "homeSlug": "monaco",
@@ -1579,7 +1579,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-16T12:00:00Z",
+      "dateUTC": "2027-01-16T00:00:00Z",
       "home": "アンジェ",
       "away": "パリ・サンジェルマン",
       "homeSlug": "angers-sco",
@@ -1590,7 +1590,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "ルアーブル",
       "away": "レンヌ",
       "homeSlug": "le-havre",
@@ -1601,7 +1601,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "ストラスブール",
       "away": "リヨン",
       "homeSlug": "strasbourg",
@@ -1612,7 +1612,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "リール",
       "away": "パリFC",
       "homeSlug": "lille",
@@ -1623,7 +1623,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "ランス",
       "away": "ブレスト",
       "homeSlug": "rc-lens",
@@ -1634,7 +1634,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "オセール",
       "homeSlug": "psg",
@@ -1645,7 +1645,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "トロワ",
       "away": "モナコ",
       "homeSlug": "troyes",
@@ -1656,7 +1656,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "ロリアン",
       "away": "マルセイユ",
       "homeSlug": "lorient",
@@ -1667,7 +1667,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "ルマン",
       "away": "アンジェ",
       "homeSlug": "le-mans",
@@ -1678,7 +1678,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-23T12:00:00Z",
+      "dateUTC": "2027-01-23T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ニース",
       "homeSlug": "toulouse",
@@ -1689,7 +1689,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "パリFC",
       "away": "オセール",
       "homeSlug": "paris-fc",
@@ -1700,7 +1700,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "リヨン",
       "away": "リール",
       "homeSlug": "olympique-lyon",
@@ -1711,7 +1711,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "レンヌ",
       "away": "ロリアン",
       "homeSlug": "stade-rennais",
@@ -1722,7 +1722,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "ルマン",
       "away": "ニース",
       "homeSlug": "le-mans",
@@ -1733,7 +1733,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "マルセイユ",
       "away": "トロワ",
       "homeSlug": "marseille",
@@ -1744,7 +1744,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "アンジェ",
       "away": "ルアーブル",
       "homeSlug": "angers-sco",
@@ -1755,7 +1755,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "ブレスト",
       "away": "ストラスブール",
       "homeSlug": "brest",
@@ -1766,7 +1766,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "モナコ",
       "away": "パリ・サンジェルマン",
       "homeSlug": "monaco",
@@ -1777,7 +1777,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2027-01-30T12:00:00Z",
+      "dateUTC": "2027-01-30T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ランス",
       "homeSlug": "toulouse",
@@ -1788,7 +1788,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "トロワ",
       "away": "リール",
       "homeSlug": "troyes",
@@ -1799,7 +1799,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "ランス",
       "away": "アンジェ",
       "homeSlug": "rc-lens",
@@ -1810,7 +1810,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "ルアーブル",
       "away": "トゥールーズ",
       "homeSlug": "le-havre",
@@ -1821,7 +1821,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "ロリアン",
       "away": "ルマン",
       "homeSlug": "lorient",
@@ -1832,7 +1832,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "ニース",
       "away": "ブレスト",
       "homeSlug": "nice",
@@ -1843,7 +1843,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "レンヌ",
       "away": "リヨン",
       "homeSlug": "stade-rennais",
@@ -1854,7 +1854,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "ストラスブール",
       "away": "パリFC",
       "homeSlug": "strasbourg",
@@ -1865,7 +1865,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-06T12:00:00Z",
+      "dateUTC": "2027-02-06T00:00:00Z",
       "home": "オセール",
       "away": "モナコ",
       "homeSlug": "auxerre",
@@ -1876,7 +1876,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-02-07T12:00:00Z",
+      "dateUTC": "2027-02-07T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "マルセイユ",
       "homeSlug": "psg",
@@ -1887,7 +1887,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "ブレスト",
       "away": "レンヌ",
       "homeSlug": "brest",
@@ -1898,7 +1898,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "パリFC",
       "away": "トロワ",
       "homeSlug": "paris-fc",
@@ -1909,7 +1909,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "ルマン",
       "away": "パリ・サンジェルマン",
       "homeSlug": "le-mans",
@@ -1920,7 +1920,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "ロリアン",
       "away": "ルアーブル",
       "homeSlug": "lorient",
@@ -1931,7 +1931,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "オセール",
       "away": "ストラスブール",
       "homeSlug": "auxerre",
@@ -1942,7 +1942,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "トゥールーズ",
       "away": "モナコ",
       "homeSlug": "toulouse",
@@ -1953,7 +1953,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "マルセイユ",
       "away": "アンジェ",
       "homeSlug": "marseille",
@@ -1964,7 +1964,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "リール",
       "away": "ニース",
       "homeSlug": "lille",
@@ -1975,7 +1975,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-02-13T12:00:00Z",
+      "dateUTC": "2027-02-13T00:00:00Z",
       "home": "リヨン",
       "away": "ランス",
       "homeSlug": "olympique-lyon",
@@ -1986,7 +1986,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "アンジェ",
       "away": "パリFC",
       "homeSlug": "angers-sco",
@@ -1997,7 +1997,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "レンヌ",
       "away": "トゥールーズ",
       "homeSlug": "stade-rennais",
@@ -2008,7 +2008,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ブレスト",
       "homeSlug": "psg",
@@ -2019,7 +2019,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "ストラスブール",
       "away": "マルセイユ",
       "homeSlug": "strasbourg",
@@ -2030,7 +2030,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "ニース",
       "away": "オセール",
       "homeSlug": "nice",
@@ -2041,7 +2041,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "ルアーブル",
       "away": "リヨン",
       "homeSlug": "le-havre",
@@ -2052,7 +2052,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "モナコ",
       "away": "ルマン",
       "homeSlug": "monaco",
@@ -2063,7 +2063,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "リール",
       "away": "ロリアン",
       "homeSlug": "lille",
@@ -2074,7 +2074,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-02-20T12:00:00Z",
+      "dateUTC": "2027-02-20T00:00:00Z",
       "home": "ランス",
       "away": "トロワ",
       "homeSlug": "rc-lens",
@@ -2085,7 +2085,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "ストラスブール",
       "away": "ルアーブル",
       "homeSlug": "strasbourg",
@@ -2096,7 +2096,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "オセール",
       "away": "リール",
       "homeSlug": "auxerre",
@@ -2107,7 +2107,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "トロワ",
       "away": "ニース",
       "homeSlug": "troyes",
@@ -2118,7 +2118,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "ブレスト",
       "away": "モナコ",
       "homeSlug": "brest",
@@ -2129,7 +2129,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "ロリアン",
       "away": "アンジェ",
       "homeSlug": "lorient",
@@ -2140,7 +2140,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "マルセイユ",
       "away": "レンヌ",
       "homeSlug": "marseille",
@@ -2151,7 +2151,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "リヨン",
       "away": "トゥールーズ",
       "homeSlug": "olympique-lyon",
@@ -2162,7 +2162,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-27T12:00:00Z",
+      "dateUTC": "2027-02-27T00:00:00Z",
       "home": "ルマン",
       "away": "パリFC",
       "homeSlug": "le-mans",
@@ -2173,7 +2173,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-02-28T12:00:00Z",
+      "dateUTC": "2027-02-28T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ランス",
       "homeSlug": "psg",
@@ -2184,7 +2184,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "ルアーブル",
       "away": "ニース",
       "homeSlug": "le-havre",
@@ -2195,7 +2195,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "レンヌ",
       "away": "パリ・サンジェルマン",
       "homeSlug": "stade-rennais",
@@ -2206,7 +2206,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "ランス",
       "away": "ストラスブール",
       "homeSlug": "rc-lens",
@@ -2217,7 +2217,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ルマン",
       "homeSlug": "toulouse",
@@ -2228,7 +2228,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "トロワ",
       "away": "ロリアン",
       "homeSlug": "troyes",
@@ -2239,7 +2239,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "アンジェ",
       "away": "オセール",
       "homeSlug": "angers-sco",
@@ -2250,7 +2250,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "モナコ",
       "away": "リヨン",
       "homeSlug": "monaco",
@@ -2261,7 +2261,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "パリFC",
       "away": "ブレスト",
       "homeSlug": "paris-fc",
@@ -2272,7 +2272,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-03-06T12:00:00Z",
+      "dateUTC": "2027-03-06T00:00:00Z",
       "home": "リール",
       "away": "マルセイユ",
       "homeSlug": "lille",
@@ -2283,7 +2283,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "ニース",
       "away": "トゥールーズ",
       "homeSlug": "nice",
@@ -2294,7 +2294,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "パリFC",
       "away": "ロリアン",
       "homeSlug": "paris-fc",
@@ -2305,7 +2305,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "ストラスブール",
       "away": "アンジェ",
       "homeSlug": "strasbourg",
@@ -2316,7 +2316,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "ルマン",
       "away": "レンヌ",
       "homeSlug": "le-mans",
@@ -2327,7 +2327,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "ブレスト",
       "away": "リール",
       "homeSlug": "brest",
@@ -2338,7 +2338,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "ルアーブル",
       "away": "ランス",
       "homeSlug": "le-havre",
@@ -2349,7 +2349,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "マルセイユ",
       "away": "モナコ",
       "homeSlug": "marseille",
@@ -2360,7 +2360,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "オセール",
       "away": "パリ・サンジェルマン",
       "homeSlug": "auxerre",
@@ -2371,7 +2371,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-03-13T12:00:00Z",
+      "dateUTC": "2027-03-13T00:00:00Z",
       "home": "リヨン",
       "away": "トロワ",
       "homeSlug": "olympique-lyon",
@@ -2382,7 +2382,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "アンジェ",
       "away": "ルマン",
       "homeSlug": "angers-sco",
@@ -2393,7 +2393,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ブレスト",
       "homeSlug": "toulouse",
@@ -2404,7 +2404,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "トロワ",
       "away": "オセール",
       "homeSlug": "troyes",
@@ -2415,7 +2415,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "レンヌ",
       "away": "パリFC",
       "homeSlug": "stade-rennais",
@@ -2426,7 +2426,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "モナコ",
       "away": "ルアーブル",
       "homeSlug": "monaco",
@@ -2437,7 +2437,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ストラスブール",
       "homeSlug": "psg",
@@ -2448,7 +2448,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "ランス",
       "away": "リール",
       "homeSlug": "rc-lens",
@@ -2459,7 +2459,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-20T12:00:00Z",
+      "dateUTC": "2027-03-20T00:00:00Z",
       "home": "ロリアン",
       "away": "ニース",
       "homeSlug": "lorient",
@@ -2470,7 +2470,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-03-21T12:00:00Z",
+      "dateUTC": "2027-03-21T00:00:00Z",
       "home": "マルセイユ",
       "away": "リヨン",
       "homeSlug": "marseille",
@@ -2481,7 +2481,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "ルアーブル",
       "away": "トロワ",
       "homeSlug": "le-havre",
@@ -2492,7 +2492,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "アンジェ",
       "away": "モナコ",
       "homeSlug": "angers-sco",
@@ -2503,7 +2503,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "ルマン",
       "away": "マルセイユ",
       "homeSlug": "le-mans",
@@ -2514,7 +2514,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "オセール",
       "away": "ランス",
       "homeSlug": "auxerre",
@@ -2525,7 +2525,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "リール",
       "away": "レンヌ",
       "homeSlug": "lille",
@@ -2536,7 +2536,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "ブレスト",
       "away": "ロリアン",
       "homeSlug": "brest",
@@ -2547,7 +2547,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "ストラスブール",
       "away": "トゥールーズ",
       "homeSlug": "strasbourg",
@@ -2558,7 +2558,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "パリFC",
       "away": "パリ・サンジェルマン",
       "homeSlug": "paris-fc",
@@ -2569,7 +2569,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-04-03T12:00:00Z",
+      "dateUTC": "2027-04-03T00:00:00Z",
       "home": "ニース",
       "away": "リヨン",
       "homeSlug": "nice",
@@ -2580,7 +2580,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "ロリアン",
       "away": "ランス",
       "homeSlug": "lorient",
@@ -2591,7 +2591,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "マルセイユ",
       "away": "ブレスト",
       "homeSlug": "marseille",
@@ -2602,7 +2602,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "モナコ",
       "away": "レンヌ",
       "homeSlug": "monaco",
@@ -2613,7 +2613,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "トロワ",
       "away": "アンジェ",
       "homeSlug": "troyes",
@@ -2624,7 +2624,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ルアーブル",
       "homeSlug": "psg",
@@ -2635,7 +2635,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "リヨン",
       "away": "ストラスブール",
       "homeSlug": "olympique-lyon",
@@ -2646,7 +2646,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "ルマン",
       "away": "オセール",
       "homeSlug": "le-mans",
@@ -2657,7 +2657,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "リール",
       "away": "トゥールーズ",
       "homeSlug": "lille",
@@ -2668,7 +2668,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-04-10T12:00:00Z",
+      "dateUTC": "2027-04-10T00:00:00Z",
       "home": "ニース",
       "away": "パリFC",
       "homeSlug": "nice",
@@ -2679,7 +2679,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "オセール",
       "away": "ロリアン",
       "homeSlug": "auxerre",
@@ -2690,7 +2690,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "ブレスト",
       "away": "ルマン",
       "homeSlug": "brest",
@@ -2701,7 +2701,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "モナコ",
       "away": "ストラスブール",
       "homeSlug": "monaco",
@@ -2712,7 +2712,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "アンジェ",
       "away": "リヨン",
       "homeSlug": "angers-sco",
@@ -2723,7 +2723,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "ランス",
       "away": "ニース",
       "homeSlug": "rc-lens",
@@ -2734,7 +2734,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "レンヌ",
       "away": "トロワ",
       "homeSlug": "stade-rennais",
@@ -2745,7 +2745,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "ルアーブル",
       "away": "マルセイユ",
       "homeSlug": "le-havre",
@@ -2756,7 +2756,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "リール",
       "homeSlug": "psg",
@@ -2767,7 +2767,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-04-17T12:00:00Z",
+      "dateUTC": "2027-04-17T00:00:00Z",
       "home": "トゥールーズ",
       "away": "パリFC",
       "homeSlug": "toulouse",
@@ -2778,7 +2778,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "パリFC",
       "away": "ランス",
       "homeSlug": "paris-fc",
@@ -2789,7 +2789,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "マルセイユ",
       "away": "オセール",
       "homeSlug": "marseille",
@@ -2800,7 +2800,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "リール",
       "away": "モナコ",
       "homeSlug": "lille",
@@ -2811,7 +2811,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "ロリアン",
       "away": "パリ・サンジェルマン",
       "homeSlug": "lorient",
@@ -2822,7 +2822,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "トロワ",
       "away": "トゥールーズ",
       "homeSlug": "troyes",
@@ -2833,7 +2833,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "ニース",
       "away": "アンジェ",
       "homeSlug": "nice",
@@ -2844,7 +2844,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "リヨン",
       "away": "ブレスト",
       "homeSlug": "olympique-lyon",
@@ -2855,7 +2855,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "ルマン",
       "away": "ルアーブル",
       "homeSlug": "le-mans",
@@ -2866,7 +2866,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-04-24T12:00:00Z",
+      "dateUTC": "2027-04-24T00:00:00Z",
       "home": "ストラスブール",
       "away": "レンヌ",
       "homeSlug": "strasbourg",
@@ -2877,7 +2877,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "ストラスブール",
       "away": "リール",
       "homeSlug": "strasbourg",
@@ -2888,7 +2888,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "モナコ",
       "away": "ロリアン",
       "homeSlug": "monaco",
@@ -2899,7 +2899,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "トロワ",
       "away": "ブレスト",
       "homeSlug": "troyes",
@@ -2910,7 +2910,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "ランス",
       "away": "ルマン",
       "homeSlug": "rc-lens",
@@ -2921,7 +2921,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "アンジェ",
       "homeSlug": "psg",
@@ -2932,7 +2932,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "ルアーブル",
       "away": "パリFC",
       "homeSlug": "le-havre",
@@ -2943,7 +2943,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "オセール",
       "away": "リヨン",
       "homeSlug": "auxerre",
@@ -2954,7 +2954,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "レンヌ",
       "away": "ニース",
       "homeSlug": "stade-rennais",
@@ -2965,7 +2965,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-05-01T12:00:00Z",
+      "dateUTC": "2027-05-01T00:00:00Z",
       "home": "トゥールーズ",
       "away": "マルセイユ",
       "homeSlug": "toulouse",
@@ -2976,7 +2976,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "パリFC",
       "away": "リール",
       "homeSlug": "paris-fc",
@@ -2987,7 +2987,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "ロリアン",
       "away": "ストラスブール",
       "homeSlug": "lorient",
@@ -2998,7 +2998,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "ブレスト",
       "away": "オセール",
       "homeSlug": "brest",
@@ -3009,7 +3009,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "ルマン",
       "away": "トロワ",
       "homeSlug": "le-mans",
@@ -3020,7 +3020,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "レンヌ",
       "away": "ルアーブル",
       "homeSlug": "stade-rennais",
@@ -3031,7 +3031,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "ランス",
       "away": "モナコ",
       "homeSlug": "rc-lens",
@@ -3042,7 +3042,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "アンジェ",
       "away": "トゥールーズ",
       "homeSlug": "angers-sco",
@@ -3053,7 +3053,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-08T12:00:00Z",
+      "dateUTC": "2027-05-08T00:00:00Z",
       "home": "ニース",
       "away": "マルセイユ",
       "homeSlug": "nice",
@@ -3064,7 +3064,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-05-09T12:00:00Z",
+      "dateUTC": "2027-05-09T00:00:00Z",
       "home": "リヨン",
       "away": "パリ・サンジェルマン",
       "homeSlug": "olympique-lyon",
@@ -3075,7 +3075,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "モナコ",
       "away": "パリFC",
       "homeSlug": "monaco",
@@ -3086,7 +3086,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "リヨン",
       "away": "ルマン",
       "homeSlug": "olympique-lyon",
@@ -3097,7 +3097,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "ニース",
       "homeSlug": "psg",
@@ -3108,7 +3108,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "トゥールーズ",
       "away": "ロリアン",
       "homeSlug": "toulouse",
@@ -3119,7 +3119,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "ブレスト",
       "away": "ルアーブル",
       "homeSlug": "brest",
@@ -3130,7 +3130,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "マルセイユ",
       "away": "ランス",
       "homeSlug": "marseille",
@@ -3141,7 +3141,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "リール",
       "away": "アンジェ",
       "homeSlug": "lille",
@@ -3152,7 +3152,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "オセール",
       "away": "レンヌ",
       "homeSlug": "auxerre",
@@ -3163,7 +3163,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-05-16T12:00:00Z",
+      "dateUTC": "2027-05-16T00:00:00Z",
       "home": "ストラスブール",
       "away": "トロワ",
       "homeSlug": "strasbourg",
@@ -3174,7 +3174,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "ニース",
       "away": "モナコ",
       "homeSlug": "nice",
@@ -3185,7 +3185,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "アンジェ",
       "away": "ブレスト",
       "homeSlug": "angers-sco",
@@ -3196,7 +3196,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "ロリアン",
       "away": "リヨン",
       "homeSlug": "lorient",
@@ -3207,7 +3207,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "トロワ",
       "away": "パリ・サンジェルマン",
       "homeSlug": "troyes",
@@ -3218,7 +3218,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "ルマン",
       "away": "ストラスブール",
       "homeSlug": "le-mans",
@@ -3229,7 +3229,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "トゥールーズ",
       "away": "オセール",
       "homeSlug": "toulouse",
@@ -3240,7 +3240,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "ルアーブル",
       "away": "リール",
       "homeSlug": "le-havre",
@@ -3251,7 +3251,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "パリFC",
       "away": "マルセイユ",
       "homeSlug": "paris-fc",
@@ -3262,7 +3262,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-05-22T12:00:00Z",
+      "dateUTC": "2027-05-22T00:00:00Z",
       "home": "ランス",
       "away": "レンヌ",
       "homeSlug": "rc-lens",
@@ -3273,7 +3273,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "モナコ",
       "away": "トロワ",
       "homeSlug": "monaco",
@@ -3284,7 +3284,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "パリ・サンジェルマン",
       "away": "トゥールーズ",
       "homeSlug": "psg",
@@ -3295,7 +3295,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "リール",
       "away": "ルマン",
       "homeSlug": "lille",
@@ -3306,7 +3306,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "ブレスト",
       "away": "ランス",
       "homeSlug": "brest",
@@ -3317,7 +3317,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "マルセイユ",
       "away": "ロリアン",
       "homeSlug": "marseille",
@@ -3328,7 +3328,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "レンヌ",
       "away": "アンジェ",
       "homeSlug": "stade-rennais",
@@ -3339,7 +3339,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "リヨン",
       "away": "パリFC",
       "homeSlug": "olympique-lyon",
@@ -3350,7 +3350,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "オセール",
       "away": "ルアーブル",
       "homeSlug": "auxerre",
@@ -3361,7 +3361,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-29T12:00:00Z",
+      "dateUTC": "2027-05-29T00:00:00Z",
       "home": "ストラスブール",
       "away": "ニース",
       "homeSlug": "strasbourg",
