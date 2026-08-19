@@ -294,6 +294,8 @@ def main():
         lines.append(f"- CTR(7日): **{_fmt_pct(t7['ctr'])}**")
     if idx:
         lines.append(f"- サイトマップ indexed: **{idx.get('indexed','?')}** / submitted {idx.get('submitted','?')} {_delta(idx.get('indexed',''), prev_row.get('indexed'))}")
+        if idx.get('indexed', 0) in (0, '0') and gsc["t7"] and t7['impressions'] > 0:
+            lines.append("  - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。")
     if ga["totals"]:
         lines.append(f"- GA ユーザー(28日): **{ga_tot[0]}** / セッション {ga_tot[1] if len(ga_tot)>1 else '?'}")
     lines.append("")
