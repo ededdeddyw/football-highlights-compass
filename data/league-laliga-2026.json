@@ -66,9 +66,9 @@
       "away": "マラガ",
       "homeSlug": "atleti",
       "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "TCMLua52xqY"
     },
     {
       "matchday": 1,

@@ -359,17 +359,6 @@
     {
       "matchday": 4,
       "dateUTC": "2026-09-12T16:00:00Z",
-      "home": "ラツィオ",
-      "away": "ミラン",
-      "homeSlug": "lazio",
-      "awaySlug": "milan",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 4,
-      "dateUTC": "2026-09-12T16:00:00Z",
       "home": "サッスオーロ",
       "away": "ユベントス",
       "homeSlug": "sassuolo",
@@ -429,6 +418,17 @@
       "away": "ボローニャ",
       "homeSlug": "napoli",
       "awaySlug": "bologna",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-13T18:45:00Z",
+      "home": "ラツィオ",
+      "away": "ミラン",
+      "homeSlug": "lazio",
+      "awaySlug": "milan",
       "finished": false,
       "score": "",
       "videoId": ""

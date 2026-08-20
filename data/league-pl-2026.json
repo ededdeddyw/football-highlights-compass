@@ -996,7 +996,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "アーセナル",
       "away": "ハル・シティ",
       "homeSlug": "arsenal",
@@ -1007,7 +1007,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "マンチェスター・シティ",
       "homeSlug": "nottingham",
@@ -1018,7 +1018,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "リーズ",
       "away": "トッテナム",
       "homeSlug": "leeds-united",
@@ -1029,7 +1029,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "フラム",
       "away": "ニューカッスル",
       "homeSlug": "fulham",
@@ -1040,7 +1040,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "エバートン",
       "away": "コベントリー",
       "homeSlug": "everton",
@@ -1051,7 +1051,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "リバプール",
       "homeSlug": "crystal-palace",
@@ -1062,7 +1062,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "サンダーランド",
       "away": "チェルシー",
       "homeSlug": "sunderland",
@@ -1073,7 +1073,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "ボーンマス",
       "homeSlug": "ipswich-town",
@@ -1084,7 +1084,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "ブライトン",
       "away": "ブレントフォード",
       "homeSlug": "brighton-hove",
@@ -1095,7 +1095,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T00:00:00Z",
+      "dateUTC": "2026-11-07T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "アストン・ヴィラ",
       "homeSlug": "man-united",
@@ -1106,7 +1106,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "チェルシー",
       "away": "リーズ",
       "homeSlug": "chelsea",
@@ -1117,7 +1117,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "フラム",
       "homeSlug": "man-city",
@@ -1128,7 +1128,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "サンダーランド",
       "homeSlug": "aston-villa",
@@ -1139,7 +1139,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "リバプール",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "liverpool",
@@ -1150,7 +1150,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "ハル・シティ",
       "away": "ブライトン",
       "homeSlug": "hull-city",
@@ -1161,7 +1161,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "ボーンマス",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "bournemouth",
@@ -1172,7 +1172,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "トッテナム",
       "away": "イプスウィッチ",
       "homeSlug": "tottenham",
@@ -1183,7 +1183,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "ブレントフォード",
       "away": "エバートン",
       "homeSlug": "brentford",
@@ -1194,7 +1194,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "コベントリー",
       "away": "クリスタル・パレス",
       "homeSlug": "coventry-city",
@@ -1205,7 +1205,7 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T00:00:00Z",
+      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "ニューカッスル",
       "away": "アーセナル",
       "homeSlug": "newcastle",
@@ -1216,7 +1216,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "リーズ",
       "away": "コベントリー",
       "homeSlug": "leeds-united",
@@ -1227,7 +1227,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "アストン・ヴィラ",
       "homeSlug": "ipswich-town",
@@ -1238,7 +1238,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "アーセナル",
       "away": "マンチェスター・シティ",
       "homeSlug": "arsenal",
@@ -1249,7 +1249,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ブレントフォード",
       "homeSlug": "man-united",
@@ -1260,7 +1260,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "エバートン",
       "away": "リバプール",
       "homeSlug": "everton",
@@ -1271,7 +1271,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "フラム",
       "away": "ボーンマス",
       "homeSlug": "fulham",
@@ -1282,7 +1282,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "チェルシー",
       "homeSlug": "nottingham",
@@ -1293,7 +1293,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "ブライトン",
       "away": "ニューカッスル",
       "homeSlug": "brighton-hove",
@@ -1304,7 +1304,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "サンダーランド",
       "away": "トッテナム",
       "homeSlug": "sunderland",
@@ -1315,7 +1315,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T00:00:00Z",
+      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "ハル・シティ",
       "homeSlug": "crystal-palace",
@@ -1326,7 +1326,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "トッテナム",
       "away": "フラム",
       "homeSlug": "tottenham",
@@ -1337,7 +1337,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "リバプール",
       "away": "サンダーランド",
       "homeSlug": "liverpool",
@@ -1348,7 +1348,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "ハル・シティ",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "hull-city",
@@ -1359,7 +1359,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "チェルシー",
       "away": "クリスタル・パレス",
       "homeSlug": "chelsea",
@@ -1370,7 +1370,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "エバートン",
       "homeSlug": "aston-villa",
@@ -1381,7 +1381,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "ブレントフォード",
       "away": "アーセナル",
       "homeSlug": "brentford",
@@ -1392,7 +1392,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "コベントリー",
       "away": "イプスウィッチ",
       "homeSlug": "coventry-city",
@@ -1403,7 +1403,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "リーズ",
       "homeSlug": "man-city",
@@ -1414,7 +1414,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "ニューカッスル",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "newcastle",
@@ -1425,7 +1425,7 @@
     },
     {
       "matchday": 13,
-      "dateUTC": "2026-12-02T00:00:00Z",
+      "dateUTC": "2026-12-02T20:00:00Z",
       "home": "ボーンマス",
       "away": "ブライトン",
       "homeSlug": "bournemouth",
@@ -1436,7 +1436,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "トッテナム",
       "away": "アーセナル",
       "homeSlug": "tottenham",
@@ -1447,7 +1447,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "コベントリー",
       "homeSlug": "man-united",
@@ -1458,7 +1458,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "リーズ",
       "away": "イプスウィッチ",
       "homeSlug": "leeds-united",
@@ -1469,7 +1469,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "ニューカッスル",
       "away": "サンダーランド",
       "homeSlug": "newcastle",
@@ -1480,7 +1480,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "チェルシー",
       "away": "リバプール",
       "homeSlug": "chelsea",
@@ -1491,7 +1491,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "ブレントフォード",
       "away": "マンチェスター・シティ",
       "homeSlug": "brentford",
@@ -1502,7 +1502,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "ボーンマス",
       "away": "ハル・シティ",
       "homeSlug": "bournemouth",
@@ -1513,7 +1513,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "クリスタル・パレス",
       "homeSlug": "aston-villa",
@@ -1524,7 +1524,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "ブライトン",
       "homeSlug": "nottingham",
@@ -1535,7 +1535,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-05T00:00:00Z",
+      "dateUTC": "2026-12-05T15:00:00Z",
       "home": "エバートン",
       "away": "フラム",
       "homeSlug": "everton",
@@ -1546,7 +1546,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "サンダーランド",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "sunderland",
@@ -1557,7 +1557,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "crystal-palace",
@@ -1568,7 +1568,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "ハル・シティ",
       "away": "トッテナム",
       "homeSlug": "hull-city",
@@ -1579,7 +1579,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "ブライトン",
       "away": "エバートン",
       "homeSlug": "brighton-hove",
@@ -1590,7 +1590,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "ニューカッスル",
       "homeSlug": "ipswich-town",
@@ -1601,7 +1601,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "コベントリー",
       "away": "アストン・ヴィラ",
       "homeSlug": "coventry-city",
@@ -1612,7 +1612,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "アーセナル",
       "away": "ボーンマス",
       "homeSlug": "arsenal",
@@ -1623,7 +1623,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "チェルシー",
       "homeSlug": "man-city",
@@ -1634,7 +1634,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "リバプール",
       "away": "リーズ",
       "homeSlug": "liverpool",
@@ -1645,7 +1645,7 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-12T00:00:00Z",
+      "dateUTC": "2026-12-12T15:00:00Z",
       "home": "フラム",
       "away": "ブレントフォード",
       "homeSlug": "fulham",
@@ -1656,7 +1656,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "リーズ",
       "away": "フラム",
       "homeSlug": "leeds-united",
@@ -1667,7 +1667,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "ブライトン",
       "away": "イプスウィッチ",
       "homeSlug": "brighton-hove",
@@ -1678,7 +1678,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "エバートン",
       "homeSlug": "nottingham",
@@ -1689,7 +1689,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "ブレントフォード",
       "away": "ニューカッスル",
       "homeSlug": "brentford",
@@ -1700,7 +1700,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "ハル・シティ",
       "homeSlug": "man-city",
@@ -1711,7 +1711,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "サンダーランド",
       "away": "クリスタル・パレス",
       "homeSlug": "sunderland",
@@ -1722,7 +1722,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "ボーンマス",
       "away": "コベントリー",
       "homeSlug": "bournemouth",
@@ -1733,7 +1733,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "アーセナル",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "arsenal",
@@ -1744,7 +1744,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "リバプール",
       "away": "トッテナム",
       "homeSlug": "liverpool",
@@ -1755,7 +1755,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-19T00:00:00Z",
+      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "チェルシー",
       "away": "アストン・ヴィラ",
       "homeSlug": "chelsea",
@@ -1766,7 +1766,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "リーズ",
       "homeSlug": "aston-villa",
@@ -1777,7 +1777,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "man-united",
@@ -1788,7 +1788,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "アーセナル",
       "homeSlug": "crystal-palace",
@@ -1799,7 +1799,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "エバートン",
       "away": "サンダーランド",
       "homeSlug": "everton",
@@ -1810,7 +1810,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "コベントリー",
       "away": "チェルシー",
       "homeSlug": "coventry-city",
@@ -1821,7 +1821,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "ニューカッスル",
       "away": "マンチェスター・シティ",
       "homeSlug": "newcastle",
@@ -1832,7 +1832,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "フラム",
       "away": "ブライトン",
       "homeSlug": "fulham",
@@ -1843,7 +1843,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "トッテナム",
       "away": "ボーンマス",
       "homeSlug": "tottenham",
@@ -1854,7 +1854,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "ハル・シティ",
       "away": "リバプール",
       "homeSlug": "hull-city",
@@ -1865,7 +1865,7 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2026-12-26T00:00:00Z",
+      "dateUTC": "2026-12-26T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "ブレントフォード",
       "homeSlug": "ipswich-town",
@@ -1876,7 +1876,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "フラム",
       "away": "アーセナル",
       "homeSlug": "fulham",
@@ -1887,7 +1887,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "コベントリー",
       "away": "ブレントフォード",
       "homeSlug": "coventry-city",
@@ -1898,7 +1898,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "リバプール",
       "homeSlug": "aston-villa",
@@ -1909,7 +1909,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "ニューカッスル",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "newcastle",
@@ -1920,7 +1920,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "ハル・シティ",
       "away": "リーズ",
       "homeSlug": "hull-city",
@@ -1931,7 +1931,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "サンダーランド",
       "homeSlug": "man-united",
@@ -1942,7 +1942,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "イプスウィッチ",
       "away": "チェルシー",
       "homeSlug": "ipswich-town",
@@ -1953,7 +1953,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "トッテナム",
       "away": "ブライトン",
       "homeSlug": "tottenham",
@@ -1964,7 +1964,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "エバートン",
       "away": "マンチェスター・シティ",
       "homeSlug": "everton",
@@ -1975,7 +1975,7 @@
     },
     {
       "matchday": 18,
-      "dateUTC": "2026-12-30T00:00:00Z",
+      "dateUTC": "2026-12-30T20:00:00Z",
       "home": "クリスタル・パレス",
       "away": "ボーンマス",
       "homeSlug": "crystal-palace",
@@ -1986,7 +1986,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "ボーンマス",
       "away": "アストン・ヴィラ",
       "homeSlug": "bournemouth",
@@ -1997,7 +1997,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "ブレントフォード",
       "away": "クリスタル・パレス",
       "homeSlug": "brentford",
@@ -2008,7 +2008,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "リーズ",
       "away": "エバートン",
       "homeSlug": "leeds-united",
@@ -2019,7 +2019,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "アーセナル",
       "away": "イプスウィッチ",
       "homeSlug": "arsenal",
@@ -2030,7 +2030,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "サンダーランド",
       "away": "ハル・シティ",
       "homeSlug": "sunderland",
@@ -2041,7 +2041,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "リバプール",
       "away": "コベントリー",
       "homeSlug": "liverpool",
@@ -2052,7 +2052,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "チェルシー",
       "away": "ニューカッスル",
       "homeSlug": "chelsea",
@@ -2063,7 +2063,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "フラム",
       "homeSlug": "nottingham",
@@ -2074,7 +2074,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "ブライトン",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "brighton-hove",
@@ -2085,7 +2085,7 @@
     },
     {
       "matchday": 19,
-      "dateUTC": "2027-01-02T00:00:00Z",
+      "dateUTC": "2027-01-02T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "トッテナム",
       "homeSlug": "man-city",
@@ -2096,7 +2096,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "アーセナル",
       "away": "ブレントフォード",
       "homeSlug": "arsenal",
@@ -2107,7 +2107,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "リーズ",
       "away": "マンチェスター・シティ",
       "homeSlug": "leeds-united",
@@ -2118,7 +2118,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ニューカッスル",
       "homeSlug": "man-united",
@@ -2129,7 +2129,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "ブライトン",
       "away": "ボーンマス",
       "homeSlug": "brighton-hove",
@@ -2140,7 +2140,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "ハル・シティ",
       "homeSlug": "nottingham",
@@ -2151,7 +2151,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "フラム",
       "away": "トッテナム",
       "homeSlug": "fulham",
@@ -2162,7 +2162,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "エバートン",
       "away": "アストン・ヴィラ",
       "homeSlug": "everton",
@@ -2173,7 +2173,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "サンダーランド",
       "away": "リバプール",
       "homeSlug": "sunderland",
@@ -2184,7 +2184,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "クリスタル・パレス",
       "away": "チェルシー",
       "homeSlug": "crystal-palace",
@@ -2195,7 +2195,7 @@
     },
     {
       "matchday": 20,
-      "dateUTC": "2027-01-06T00:00:00Z",
+      "dateUTC": "2027-01-06T20:00:00Z",
       "home": "イプスウィッチ",
       "away": "コベントリー",
       "homeSlug": "ipswich-town",
@@ -2206,7 +2206,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "ボーンマス",
       "away": "イプスウィッチ",
       "homeSlug": "bournemouth",
@@ -2217,7 +2217,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "man-city",
@@ -2228,7 +2228,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "チェルシー",
       "away": "サンダーランド",
       "homeSlug": "chelsea",
@@ -2239,7 +2239,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "ブレントフォード",
       "away": "ブライトン",
       "homeSlug": "brentford",
@@ -2250,7 +2250,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "aston-villa",
@@ -2261,7 +2261,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "トッテナム",
       "away": "リーズ",
       "homeSlug": "tottenham",
@@ -2272,7 +2272,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "コベントリー",
       "away": "エバートン",
       "homeSlug": "coventry-city",
@@ -2283,7 +2283,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "リバプール",
       "away": "クリスタル・パレス",
       "homeSlug": "liverpool",
@@ -2294,7 +2294,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "ハル・シティ",
       "away": "アーセナル",
       "homeSlug": "hull-city",
@@ -2305,7 +2305,7 @@
     },
     {
       "matchday": 21,
-      "dateUTC": "2027-01-16T00:00:00Z",
+      "dateUTC": "2027-01-16T15:00:00Z",
       "home": "ニューカッスル",
       "away": "フラム",
       "homeSlug": "newcastle",
@@ -2316,7 +2316,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "ハル・シティ",
       "homeSlug": "ipswich-town",
@@ -2327,7 +2327,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "エバートン",
       "away": "ブレントフォード",
       "homeSlug": "everton",
@@ -2338,7 +2338,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "サンダーランド",
       "away": "コベントリー",
       "homeSlug": "sunderland",
@@ -2349,7 +2349,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "ボーンマス",
       "homeSlug": "nottingham",
@@ -2360,7 +2360,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "アーセナル",
       "away": "ニューカッスル",
       "homeSlug": "arsenal",
@@ -2371,7 +2371,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "リーズ",
       "away": "チェルシー",
       "homeSlug": "leeds-united",
@@ -2382,7 +2382,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "フラム",
       "away": "アストン・ヴィラ",
       "homeSlug": "fulham",
@@ -2393,7 +2393,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "リバプール",
       "homeSlug": "man-united",
@@ -2404,7 +2404,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "ブライトン",
       "away": "マンチェスター・シティ",
       "homeSlug": "brighton-hove",
@@ -2415,7 +2415,7 @@
     },
     {
       "matchday": 22,
-      "dateUTC": "2027-01-23T00:00:00Z",
+      "dateUTC": "2027-01-23T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "トッテナム",
       "homeSlug": "crystal-palace",
@@ -2426,7 +2426,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "トッテナム",
       "away": "サンダーランド",
       "homeSlug": "tottenham",
@@ -2437,7 +2437,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "ブレントフォード",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "brentford",
@@ -2448,7 +2448,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "ニューカッスル",
       "away": "ブライトン",
       "homeSlug": "newcastle",
@@ -2459,7 +2459,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "ハル・シティ",
       "away": "クリスタル・パレス",
       "homeSlug": "hull-city",
@@ -2470,7 +2470,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "コベントリー",
       "away": "リーズ",
       "homeSlug": "coventry-city",
@@ -2481,7 +2481,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "ボーンマス",
       "away": "フラム",
       "homeSlug": "bournemouth",
@@ -2492,7 +2492,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "チェルシー",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "chelsea",
@@ -2503,7 +2503,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "リバプール",
       "away": "エバートン",
       "homeSlug": "liverpool",
@@ -2514,7 +2514,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "アーセナル",
       "homeSlug": "man-city",
@@ -2525,7 +2525,7 @@
     },
     {
       "matchday": 23,
-      "dateUTC": "2027-01-30T00:00:00Z",
+      "dateUTC": "2027-01-30T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "イプスウィッチ",
       "homeSlug": "aston-villa",
@@ -2536,7 +2536,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "アーセナル",
       "away": "リバプール",
       "homeSlug": "arsenal",
@@ -2547,7 +2547,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "ブライトン",
       "away": "ハル・シティ",
       "homeSlug": "brighton-hove",
@@ -2558,7 +2558,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "サンダーランド",
       "away": "アストン・ヴィラ",
       "homeSlug": "sunderland",
@@ -2569,7 +2569,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "コベントリー",
       "homeSlug": "crystal-palace",
@@ -2580,7 +2580,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "トッテナム",
       "homeSlug": "ipswich-town",
@@ -2591,7 +2591,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "エバートン",
       "away": "ニューカッスル",
       "homeSlug": "everton",
@@ -2602,7 +2602,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "フラム",
       "away": "マンチェスター・シティ",
       "homeSlug": "fulham",
@@ -2613,7 +2613,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "リーズ",
       "away": "ボーンマス",
       "homeSlug": "leeds-united",
@@ -2624,7 +2624,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "チェルシー",
       "homeSlug": "man-united",
@@ -2635,7 +2635,7 @@
     },
     {
       "matchday": 24,
-      "dateUTC": "2027-02-06T00:00:00Z",
+      "dateUTC": "2027-02-06T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "ブレントフォード",
       "homeSlug": "nottingham",
@@ -2646,7 +2646,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "エバートン",
       "away": "リーズ",
       "homeSlug": "everton",
@@ -2657,7 +2657,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "コベントリー",
       "away": "リバプール",
       "homeSlug": "coventry-city",
@@ -2668,7 +2668,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "ハル・シティ",
       "away": "サンダーランド",
       "homeSlug": "hull-city",
@@ -2679,7 +2679,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "ボーンマス",
       "homeSlug": "aston-villa",
@@ -2690,7 +2690,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "クリスタル・パレス",
       "away": "ブレントフォード",
       "homeSlug": "crystal-palace",
@@ -2701,7 +2701,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "ニューカッスル",
       "away": "チェルシー",
       "homeSlug": "newcastle",
@@ -2712,7 +2712,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "フラム",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "fulham",
@@ -2723,7 +2723,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "トッテナム",
       "away": "マンチェスター・シティ",
       "homeSlug": "tottenham",
@@ -2734,7 +2734,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ブライトン",
       "homeSlug": "man-united",
@@ -2745,7 +2745,7 @@
     },
     {
       "matchday": 25,
-      "dateUTC": "2027-02-10T00:00:00Z",
+      "dateUTC": "2027-02-10T20:00:00Z",
       "home": "イプスウィッチ",
       "away": "アーセナル",
       "homeSlug": "ipswich-town",
@@ -2756,7 +2756,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "ニューカッスル",
       "homeSlug": "man-city",
@@ -2767,7 +2767,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "ボーンマス",
       "away": "クリスタル・パレス",
       "homeSlug": "bournemouth",
@@ -2778,7 +2778,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "ブレントフォード",
       "away": "コベントリー",
       "homeSlug": "brentford",
@@ -2789,7 +2789,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "チェルシー",
       "away": "イプスウィッチ",
       "homeSlug": "chelsea",
@@ -2800,7 +2800,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "リバプール",
       "away": "ハル・シティ",
       "homeSlug": "liverpool",
@@ -2811,7 +2811,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "アーセナル",
       "away": "フラム",
       "homeSlug": "arsenal",
@@ -2822,7 +2822,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "nottingham",
@@ -2833,7 +2833,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "ブライトン",
       "away": "トッテナム",
       "homeSlug": "brighton-hove",
@@ -2844,7 +2844,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "サンダーランド",
       "away": "エバートン",
       "homeSlug": "sunderland",
@@ -2855,7 +2855,7 @@
     },
     {
       "matchday": 26,
-      "dateUTC": "2027-02-20T00:00:00Z",
+      "dateUTC": "2027-02-20T15:00:00Z",
       "home": "リーズ",
       "away": "アストン・ヴィラ",
       "homeSlug": "leeds-united",
@@ -2866,7 +2866,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "サンダーランド",
       "homeSlug": "crystal-palace",
@@ -2877,7 +2877,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "アーセナル",
       "homeSlug": "man-united",
@@ -2888,7 +2888,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "ブライトン",
       "homeSlug": "ipswich-town",
@@ -2899,7 +2899,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "コベントリー",
       "away": "ボーンマス",
       "homeSlug": "coventry-city",
@@ -2910,7 +2910,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "エバートン",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "everton",
@@ -2921,7 +2921,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "フラム",
       "away": "リーズ",
       "homeSlug": "fulham",
@@ -2932,7 +2932,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "チェルシー",
       "homeSlug": "aston-villa",
@@ -2943,7 +2943,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "トッテナム",
       "away": "リバプール",
       "homeSlug": "tottenham",
@@ -2954,7 +2954,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "ニューカッスル",
       "away": "ブレントフォード",
       "homeSlug": "newcastle",
@@ -2965,7 +2965,7 @@
     },
     {
       "matchday": 27,
-      "dateUTC": "2027-02-27T00:00:00Z",
+      "dateUTC": "2027-02-27T15:00:00Z",
       "home": "ハル・シティ",
       "away": "マンチェスター・シティ",
       "homeSlug": "hull-city",
@@ -2976,7 +2976,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "ニューカッスル",
       "homeSlug": "nottingham",
@@ -2987,7 +2987,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "ボーンマス",
       "away": "トッテナム",
       "homeSlug": "bournemouth",
@@ -2998,7 +2998,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "エバートン",
       "homeSlug": "man-city",
@@ -3009,7 +3009,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "アーセナル",
       "away": "クリスタル・パレス",
       "homeSlug": "arsenal",
@@ -3020,7 +3020,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "リーズ",
       "away": "ハル・シティ",
       "homeSlug": "leeds-united",
@@ -3031,7 +3031,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "サンダーランド",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "sunderland",
@@ -3042,7 +3042,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "リバプール",
       "away": "アストン・ヴィラ",
       "homeSlug": "liverpool",
@@ -3053,7 +3053,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "ブライトン",
       "away": "フラム",
       "homeSlug": "brighton-hove",
@@ -3064,7 +3064,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "ブレントフォード",
       "away": "イプスウィッチ",
       "homeSlug": "brentford",
@@ -3075,7 +3075,7 @@
     },
     {
       "matchday": 28,
-      "dateUTC": "2027-03-03T00:00:00Z",
+      "dateUTC": "2027-03-03T20:00:00Z",
       "home": "チェルシー",
       "away": "コベントリー",
       "homeSlug": "chelsea",
@@ -3086,7 +3086,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "リーズ",
       "away": "ブライトン",
       "homeSlug": "leeds-united",
@@ -3097,7 +3097,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "トッテナム",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "tottenham",
@@ -3108,7 +3108,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "フラム",
       "homeSlug": "crystal-palace",
@@ -3119,7 +3119,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "リバプール",
       "away": "イプスウィッチ",
       "homeSlug": "liverpool",
@@ -3130,7 +3130,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "コベントリー",
       "away": "マンチェスター・シティ",
       "homeSlug": "coventry-city",
@@ -3141,7 +3141,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "ボーンマス",
       "away": "ニューカッスル",
       "homeSlug": "bournemouth",
@@ -3152,7 +3152,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "チェルシー",
       "away": "アーセナル",
       "homeSlug": "chelsea",
@@ -3163,7 +3163,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "ハル・シティ",
       "homeSlug": "aston-villa",
@@ -3174,7 +3174,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "エバートン",
       "homeSlug": "man-united",
@@ -3185,7 +3185,7 @@
     },
     {
       "matchday": 29,
-      "dateUTC": "2027-03-13T00:00:00Z",
+      "dateUTC": "2027-03-13T15:00:00Z",
       "home": "サンダーランド",
       "away": "ブレントフォード",
       "homeSlug": "sunderland",
@@ -3196,7 +3196,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "ブレントフォード",
       "away": "ボーンマス",
       "homeSlug": "brentford",
@@ -3207,7 +3207,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "ブライトン",
       "away": "コベントリー",
       "homeSlug": "brighton-hove",
@@ -3218,7 +3218,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "man-city",
@@ -3229,7 +3229,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "クリスタル・パレス",
       "homeSlug": "ipswich-town",
@@ -3240,7 +3240,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "アーセナル",
       "away": "サンダーランド",
       "homeSlug": "arsenal",
@@ -3251,7 +3251,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "フラム",
       "away": "リバプール",
       "homeSlug": "fulham",
@@ -3262,7 +3262,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "ハル・シティ",
       "away": "チェルシー",
       "homeSlug": "hull-city",
@@ -3273,7 +3273,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "アストン・ヴィラ",
       "homeSlug": "nottingham",
@@ -3284,7 +3284,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "エバートン",
       "away": "トッテナム",
       "homeSlug": "everton",
@@ -3295,7 +3295,7 @@
     },
     {
       "matchday": 30,
-      "dateUTC": "2027-03-20T00:00:00Z",
+      "dateUTC": "2027-03-20T15:00:00Z",
       "home": "ニューカッスル",
       "away": "リーズ",
       "homeSlug": "newcastle",
@@ -3306,7 +3306,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "サンダーランド",
       "away": "イプスウィッチ",
       "homeSlug": "sunderland",
@@ -3317,7 +3317,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "リーズ",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "leeds-united",
@@ -3328,7 +3328,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ハル・シティ",
       "homeSlug": "man-united",
@@ -3339,7 +3339,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "チェルシー",
       "away": "フラム",
       "homeSlug": "chelsea",
@@ -3350,7 +3350,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "リバプール",
       "away": "ニューカッスル",
       "homeSlug": "liverpool",
@@ -3361,7 +3361,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "コベントリー",
       "away": "アーセナル",
       "homeSlug": "coventry-city",
@@ -3372,7 +3372,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "ボーンマス",
       "away": "マンチェスター・シティ",
       "homeSlug": "bournemouth",
@@ -3383,7 +3383,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "クリスタル・パレス",
       "away": "エバートン",
       "homeSlug": "crystal-palace",
@@ -3394,7 +3394,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "トッテナム",
       "away": "ブレントフォード",
       "homeSlug": "tottenham",
@@ -3405,7 +3405,7 @@
     },
     {
       "matchday": 31,
-      "dateUTC": "2027-04-10T00:00:00Z",
+      "dateUTC": "2027-04-10T14:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "ブライトン",
       "homeSlug": "aston-villa",
@@ -3416,7 +3416,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "ブライトン",
       "away": "チェルシー",
       "homeSlug": "brighton-hove",
@@ -3427,7 +3427,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "フラム",
       "away": "サンダーランド",
       "homeSlug": "fulham",
@@ -3438,7 +3438,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "ブレントフォード",
       "away": "リーズ",
       "homeSlug": "brentford",
@@ -3449,7 +3449,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "リバプール",
       "homeSlug": "nottingham",
@@ -3460,7 +3460,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "ハル・シティ",
       "away": "コベントリー",
       "homeSlug": "hull-city",
@@ -3471,7 +3471,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "アーセナル",
       "away": "アストン・ヴィラ",
       "homeSlug": "arsenal",
@@ -3482,7 +3482,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "イプスウィッチ",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "ipswich-town",
@@ -3493,7 +3493,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "クリスタル・パレス",
       "homeSlug": "man-city",
@@ -3504,7 +3504,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "ニューカッスル",
       "away": "トッテナム",
       "homeSlug": "newcastle",
@@ -3515,7 +3515,7 @@
     },
     {
       "matchday": 32,
-      "dateUTC": "2027-04-17T00:00:00Z",
+      "dateUTC": "2027-04-17T14:00:00Z",
       "home": "エバートン",
       "away": "ボーンマス",
       "homeSlug": "everton",
@@ -3526,7 +3526,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "チェルシー",
       "away": "マンチェスター・シティ",
       "homeSlug": "chelsea",
@@ -3537,7 +3537,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "ボーンマス",
       "away": "アーセナル",
       "homeSlug": "bournemouth",
@@ -3548,7 +3548,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "トッテナム",
       "away": "ハル・シティ",
       "homeSlug": "tottenham",
@@ -3559,7 +3559,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "クリスタル・パレス",
       "homeSlug": "man-united",
@@ -3570,7 +3570,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "エバートン",
       "away": "ブライトン",
       "homeSlug": "everton",
@@ -3581,7 +3581,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "サンダーランド",
       "homeSlug": "nottingham",
@@ -3592,7 +3592,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "ニューカッスル",
       "away": "イプスウィッチ",
       "homeSlug": "newcastle",
@@ -3603,7 +3603,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "コベントリー",
       "homeSlug": "aston-villa",
@@ -3614,7 +3614,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "ブレントフォード",
       "away": "フラム",
       "homeSlug": "brentford",
@@ -3625,7 +3625,7 @@
     },
     {
       "matchday": 33,
-      "dateUTC": "2027-04-24T00:00:00Z",
+      "dateUTC": "2027-04-24T14:00:00Z",
       "home": "リーズ",
       "away": "リバプール",
       "homeSlug": "leeds-united",
@@ -3636,7 +3636,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "サンダーランド",
       "away": "ニューカッスル",
       "homeSlug": "sunderland",
@@ -3647,7 +3647,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "ブライトン",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "brighton-hove",
@@ -3658,7 +3658,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "コベントリー",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "coventry-city",
@@ -3669,7 +3669,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "ハル・シティ",
       "away": "ボーンマス",
       "homeSlug": "hull-city",
@@ -3680,7 +3680,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "ブレントフォード",
       "homeSlug": "man-city",
@@ -3691,7 +3691,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "フラム",
       "away": "エバートン",
       "homeSlug": "fulham",
@@ -3702,7 +3702,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "リバプール",
       "away": "チェルシー",
       "homeSlug": "liverpool",
@@ -3713,7 +3713,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "アーセナル",
       "away": "トッテナム",
       "homeSlug": "arsenal",
@@ -3724,7 +3724,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "クリスタル・パレス",
       "away": "アストン・ヴィラ",
       "homeSlug": "crystal-palace",
@@ -3735,7 +3735,7 @@
     },
     {
       "matchday": 34,
-      "dateUTC": "2027-05-01T00:00:00Z",
+      "dateUTC": "2027-05-01T14:00:00Z",
       "home": "イプスウィッチ",
       "away": "リーズ",
       "homeSlug": "ipswich-town",
@@ -3746,7 +3746,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "リバプール",
       "homeSlug": "man-city",
@@ -3757,7 +3757,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "リーズ",
       "away": "アーセナル",
       "homeSlug": "leeds-united",
@@ -3768,7 +3768,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "フラム",
       "away": "イプスウィッチ",
       "homeSlug": "fulham",
@@ -3779,7 +3779,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "クリスタル・パレス",
       "homeSlug": "nottingham",
@@ -3790,7 +3790,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "ブレントフォード",
       "away": "アストン・ヴィラ",
       "homeSlug": "brentford",
@@ -3801,7 +3801,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "ニューカッスル",
       "away": "コベントリー",
       "homeSlug": "newcastle",
@@ -3812,7 +3812,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "ブライトン",
       "away": "サンダーランド",
       "homeSlug": "brighton-hove",
@@ -3823,7 +3823,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "トッテナム",
       "away": "チェルシー",
       "homeSlug": "tottenham",
@@ -3834,7 +3834,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "エバートン",
       "away": "ハル・シティ",
       "homeSlug": "everton",
@@ -3845,7 +3845,7 @@
     },
     {
       "matchday": 35,
-      "dateUTC": "2027-05-08T00:00:00Z",
+      "dateUTC": "2027-05-08T14:00:00Z",
       "home": "ボーンマス",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "bournemouth",
@@ -3856,7 +3856,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "ハル・シティ",
       "away": "フラム",
       "homeSlug": "hull-city",
@@ -3867,7 +3867,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "リーズ",
       "homeSlug": "man-united",
@@ -3878,7 +3878,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "クリスタル・パレス",
       "away": "ブライトン",
       "homeSlug": "crystal-palace",
@@ -3889,7 +3889,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "ニューカッスル",
       "homeSlug": "aston-villa",
@@ -3900,7 +3900,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "チェルシー",
       "away": "エバートン",
       "homeSlug": "chelsea",
@@ -3911,7 +3911,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "コベントリー",
       "away": "トッテナム",
       "homeSlug": "coventry-city",
@@ -3922,7 +3922,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "サンダーランド",
       "away": "ボーンマス",
       "homeSlug": "sunderland",
@@ -3933,7 +3933,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "リバプール",
       "away": "ブレントフォード",
       "homeSlug": "liverpool",
@@ -3944,7 +3944,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "イプスウィッチ",
       "away": "マンチェスター・シティ",
       "homeSlug": "ipswich-town",
@@ -3955,7 +3955,7 @@
     },
     {
       "matchday": 36,
-      "dateUTC": "2027-05-15T00:00:00Z",
+      "dateUTC": "2027-05-15T14:00:00Z",
       "home": "アーセナル",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "arsenal",
@@ -3966,7 +3966,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "ブレントフォード",
       "away": "ハル・シティ",
       "homeSlug": "brentford",
@@ -3977,7 +3977,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "ニューカッスル",
       "away": "クリスタル・パレス",
       "homeSlug": "newcastle",
@@ -3988,7 +3988,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "トッテナム",
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "tottenham",
@@ -3999,7 +3999,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "リーズ",
       "away": "サンダーランド",
       "homeSlug": "leeds-united",
@@ -4010,7 +4010,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "ブライトン",
       "away": "リバプール",
       "homeSlug": "brighton-hove",
@@ -4021,7 +4021,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "イプスウィッチ",
       "homeSlug": "nottingham",
@@ -4032,7 +4032,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "ボーンマス",
       "away": "チェルシー",
       "homeSlug": "bournemouth",
@@ -4043,7 +4043,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "フラム",
       "away": "コベントリー",
       "homeSlug": "fulham",
@@ -4054,7 +4054,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "エバートン",
       "away": "アーセナル",
       "homeSlug": "everton",
@@ -4065,7 +4065,7 @@
     },
     {
       "matchday": 37,
-      "dateUTC": "2027-05-23T00:00:00Z",
+      "dateUTC": "2027-05-23T14:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "アストン・ヴィラ",
       "homeSlug": "man-city",
@@ -4076,7 +4076,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "イプスウィッチ",
       "away": "エバートン",
       "homeSlug": "ipswich-town",
@@ -4087,7 +4087,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "アーセナル",
       "away": "ブライトン",
       "homeSlug": "arsenal",
@@ -4098,7 +4098,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "リバプール",
       "away": "ボーンマス",
       "homeSlug": "liverpool",
@@ -4109,7 +4109,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "コベントリー",
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "coventry-city",
@@ -4120,7 +4120,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "トッテナム",
       "homeSlug": "aston-villa",
@@ -4131,7 +4131,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "ハル・シティ",
       "away": "ニューカッスル",
       "homeSlug": "hull-city",
@@ -4142,7 +4142,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "フラム",
       "homeSlug": "man-united",
@@ -4153,7 +4153,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "サンダーランド",
       "away": "マンチェスター・シティ",
       "homeSlug": "sunderland",
@@ -4164,7 +4164,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "チェルシー",
       "away": "ブレントフォード",
       "homeSlug": "chelsea",
@@ -4175,7 +4175,7 @@
     },
     {
       "matchday": 38,
-      "dateUTC": "2027-05-30T00:00:00Z",
+      "dateUTC": "2027-05-30T15:00:00Z",
       "home": "クリスタル・パレス",
       "away": "リーズ",
       "homeSlug": "crystal-palace",
