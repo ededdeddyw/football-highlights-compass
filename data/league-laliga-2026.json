@@ -121,9 +121,9 @@
       "away": "アラベス",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "U5f7ikFDgSQ"
     },
     {
       "matchday": 2,
