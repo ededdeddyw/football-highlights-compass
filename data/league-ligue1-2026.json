@@ -11,8 +11,8 @@
       "away": "ストラスブール",
       "homeSlug": "marseille",
       "awaySlug": "strasbourg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {

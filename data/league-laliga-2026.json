@@ -132,9 +132,9 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "real-betis",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "p0ytvj2j94I"
     },
     {
       "matchday": 2,
