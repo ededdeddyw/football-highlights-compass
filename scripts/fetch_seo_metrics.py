@@ -11,6 +11,7 @@ GitHub Actions のスケジュール（毎朝）で実行する想定。ロー�
 出力:
   docs/seo_daily_report.md      … 最新スナップショット + 推移 + 自動ハイライト（毎回上書き）
   docs/seo_metrics_history.csv  … 主要指標の履歴（毎回1行追記・推移用）
+  docs/seo_category_history.csv … クラブ/リーグ vs W杯国別ページの表示回数履歴（毎回1行追記）
 
 依存（Actions でインストール）:
   google-api-python-client google-auth google-analytics-data
