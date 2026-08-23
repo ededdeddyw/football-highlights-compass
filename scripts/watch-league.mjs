@@ -28,7 +28,9 @@ const ALIASES = readJson('data/league-team-aliases.json', {});
 // league: タイトルにこのリーグ名が入っていることを必須化（同じ公式chが出すカップ戦=コッパ/コパ/クープ等を除外）。
 const LEAGUE = {
   bl:     { q: 'Bundesliga',     channels: ['Bundesliga'],                                              kw: /highlights|ハイライト/i,          league: /bundesliga/i,     matchday: true,  order: false, allowScore: false },
-  pl:     { q: 'Premier League', channels: ['Premier League'],                                          kw: /highlights|ハイライト/i,          league: /premier\s*league/i, matchday: true,  order: true,  allowScore: false },
+  // PLは公式グローバルch(La Liga型)が全ハイライトを出さない（放映権）。各クラブ公式chが投稿するため clubChannels で受理。
+  // クラブchのタイトルは節番号なし・スコア入りが常態なので matchday:false / allowScore:true（スコアはページ側で隠す）。
+  pl:     { q: 'Premier League', channels: ['Premier League'], clubChannels: true,                     kw: /highlights|ハイライト/i,          league: /premier\s*league/i, matchday: false, order: true,  allowScore: true },
   sa:     { q: 'Serie A',        channels: ['Serie A', 'Lega Serie A'],                                 kw: /highlights|ハイライト/i,          league: /serie\s*a/i,      matchday: false, order: true,  allowScore: true },
   laliga: { q: 'LaLiga',         channels: ['LALIGA EA SPORTS', 'LaLiga', 'LALIGA'],                    kw: /highlights|ハイライト|resumen/i,  league: /la\s*liga/i,      matchday: false, order: true,  allowScore: true },
   ligue1: { q: 'Ligue 1',        channels: ["Ligue 1 McDonald's", 'Ligue 1 McDonald’s', 'Ligue 1'],    kw: null,                              league: /ligue\s*1/i,      matchday: false, order: true,  allowScore: true },
@@ -105,7 +107,11 @@ for (const f of files) {
       const mt = await meta(id); await sleep(120);
       if (!mt) { rejects.push(`meta失敗 ${id}`); continue; }
       const tN = nsp(mt.title);
-      const gate = !chOk(mt.author) ? `非公式ch(${mt.author})`
+      // 公式クラブch許可（cfg.clubChannels）：著者名の正規化が対戦2チームいずれかのエイリアスと厳密一致する場合のみ受理。
+      // （部分一致だとファンch「Arsenal Fan TV」等を誤許可するため厳密一致。両チーム名＋リーグ名＋節順などの後段ゲートで更に担保）
+      const authorNsp = nsp(mt.author);
+      const clubChOk = cfg.clubChannels && (variants(m.home).includes(authorNsp) || variants(m.away).includes(authorNsp));
+      const gate = !(chOk(mt.author) || clubChOk) ? `非公式ch(${mt.author})`
         : !nameHit(m.home, tN) ? 'homeなし'
         : !nameHit(m.away, tN) ? 'awayなし'
         : (cfg.order && !orderAdjacent(m.home, m.away, tN)) ? 'ホーム→アウェイ隣接なし（別レグ/編集見出し）'
