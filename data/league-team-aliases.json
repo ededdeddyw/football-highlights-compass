@@ -378,5 +378,89 @@
   "ヴェネツィア": [
     "Venezia",
     "Venezia FC"
+  ],
+  "アーセナル": [
+    "Arsenal",
+    "Arsenal FC"
+  ],
+  "アストン・ヴィラ": [
+    "Aston Villa",
+    "Aston Villa FC",
+    "AVFC"
+  ],
+  "エバートン": [
+    "Everton",
+    "Everton FC"
+  ],
+  "クリスタル・パレス": [
+    "Crystal Palace",
+    "Crystal Palace FC",
+    "CPFC"
+  ],
+  "サンダーランド": [
+    "Sunderland",
+    "Sunderland AFC",
+    "SAFC"
+  ],
+  "チェルシー": [
+    "Chelsea",
+    "Chelsea FC"
+  ],
+  "トッテナム": [
+    "Tottenham",
+    "Tottenham Hotspur",
+    "Spurs",
+    "THFC"
+  ],
+  "ニューカッスル": [
+    "Newcastle",
+    "Newcastle United",
+    "NUFC"
+  ],
+  "ノッティンガム・フォレスト": [
+    "Nottingham Forest",
+    "Nott m Forest",
+    "Forest",
+    "NFFC"
+  ],
+  "フラム": [
+    "Fulham",
+    "Fulham FC"
+  ],
+  "ブライトン": [
+    "Brighton",
+    "Brighton & Hove Albion",
+    "Brighton and Hove Albion"
+  ],
+  "ブレントフォード": [
+    "Brentford",
+    "Brentford FC"
+  ],
+  "ボーンマス": [
+    "Bournemouth",
+    "AFC Bournemouth"
+  ],
+  "マンチェスター・シティ": [
+    "Manchester City",
+    "Man City",
+    "Man. City",
+    "MCFC"
+  ],
+  "マンチェスター・ユナイテッド": [
+    "Manchester United",
+    "Man United",
+    "Man Utd",
+    "Man. United",
+    "MUFC"
+  ],
+  "リバプール": [
+    "Liverpool",
+    "Liverpool FC",
+    "LFC"
+  ],
+  "リーズ": [
+    "Leeds",
+    "Leeds United",
+    "LUFC"
   ]
 }
