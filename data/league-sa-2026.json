@@ -11,9 +11,9 @@
       "away": "コモ",
       "homeSlug": "udinese",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "YWg6eiPtYoU"
     },
     {
       "matchday": 1,
@@ -22,9 +22,9 @@
       "away": "モンツァ",
       "homeSlug": "inter",
       "awaySlug": "monza",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-1",
+      "videoId": "xy83b-Gcrr0"
     },
     {
       "matchday": 1,
@@ -33,9 +33,9 @@
       "away": "ナポリ",
       "homeSlug": "genoa",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "bYgRVR5ZfoQ"
     },
     {
       "matchday": 1,
@@ -44,9 +44,9 @@
       "away": "カリアリ",
       "homeSlug": "parma",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "lktyJMDfy5U"
     },
     {
       "matchday": 1,

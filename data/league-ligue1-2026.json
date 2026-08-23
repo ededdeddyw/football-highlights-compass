@@ -22,8 +22,8 @@
       "away": "オセール",
       "homeSlug": "rc-lens",
       "awaySlug": "auxerre",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-2",
       "videoId": ""
     },
     {
@@ -33,8 +33,8 @@
       "away": "ブレスト",
       "homeSlug": "le-mans",
       "awaySlug": "brest",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -44,8 +44,8 @@
       "away": "パリFC",
       "homeSlug": "troyes",
       "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": ""
     },
     {
@@ -55,8 +55,8 @@
       "away": "ロリアン",
       "homeSlug": "nice",
       "awaySlug": "lorient",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": ""
     },
     {
@@ -66,8 +66,8 @@
       "away": "リヨン",
       "homeSlug": "toulouse",
       "awaySlug": "olympique-lyon",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {
