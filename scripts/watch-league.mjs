@@ -33,7 +33,10 @@ const LEAGUE = {
   pl:     { q: 'Premier League', channels: ['Premier League'], clubChannels: true,                     kw: /highlights|ハイライト/i,          league: /premier\s*league/i, matchday: false, order: true,  allowScore: true },
   sa:     { q: 'Serie A',        channels: ['Serie A', 'Lega Serie A'],                                 kw: /highlights|ハイライト/i,          league: /serie\s*a/i,      matchday: false, order: true,  allowScore: true },
   laliga: { q: 'LaLiga',         channels: ['LALIGA EA SPORTS', 'LaLiga', 'LALIGA'],                    kw: /highlights|ハイライト|resumen/i,  league: /la\s*liga/i,      matchday: false, order: true,  allowScore: true },
-  ligue1: { q: 'Ligue 1',        channels: ["Ligue 1 McDonald's", 'Ligue 1 McDonald’s', 'Ligue 1'],    kw: null,                              league: /ligue\s*1/i,      matchday: false, order: true,  allowScore: true },
+  // Ligue1は公式ch(Ligue 1 McDonald's)がフル映像を上位に出さず、放映権元 beIN SPORTS が主要ソース。
+  // beIN は過去試合(2023等・日付入り)も投稿するため、後段の「過去年ガード」で別シーズンを除外して安全に受理。
+  // 併せてクラブ公式chも許可（PLと同様、著者名の厳密一致のみ）。
+  ligue1: { q: 'Ligue 1',        channels: ["Ligue 1 McDonald's", 'Ligue 1 McDonald’s', 'Ligue 1', 'beIN SPORTS', 'beIN SPORTS USA'], clubChannels: true, kw: null, league: /ligue\s*1/i, matchday: false, order: true, allowScore: true },
 };
 
 // コンパイル/まとめ動画を弾く保険（公式chでもシーズン総集編・週間まとめ等がある）。
@@ -48,6 +51,9 @@ const _yy = String(_startY).slice(2), _nn = String((_startY + 1) % 100).padStart
 const CUR_SEASON = new RegExp(`(${_startY}\\s*[\\/-]\\s*${_nn}|(^|\\D)${_yy}\\s*[\\/-]\\s*${_nn}(\\D|$))`);
 // 任意のシーズン表記（20xx/yy or xx/yy、2桁年は10〜29台のみ＝日付/スコアの誤爆回避）。現行以外なら「別シーズン」として弾く（下で !CUR_SEASON と併用）。
 const OTHER_SEASON = /(20[12]\d\s*[\/-]\s*\d{2})|((^|\D)[12]\d\s*[\/-]\s*\d{2}(\D|$))/;
+// 過去年ガード：タイトルに現行開始年・翌年以外の4桁年(20xx)が含まれる動画を弾く。
+// 放映権元ch（beIN 等）が過去試合を "… | 10/08/2023 | …" のような日付付きで投稿するため、その誤採用を防ぐ。
+const pastYear = t => { const m = String(t || '').match(/\b20\d\d\b/g); return m ? m.some(y => +y < _startY || +y > _startY + 1) : false; };
 
 // アクセント除去＋小文字化。タイトルはアクセント無し表記が多い（Atlético→atletico）ので両側で畳む。
 const fold = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -120,6 +126,7 @@ for (const f of files) {
         : (cfg.matchday && !mdRe.test(mt.title)) ? `節不一致(md${m.matchday})`
         : (!cfg.allowScore && /\d+\s*[-–—]\s*\d+/.test(mt.title)) ? 'スコア入り(ネタバレ)'
         : (OTHER_SEASON.test(mt.title) && !CUR_SEASON.test(mt.title)) ? '別シーズン'
+        : pastYear(mt.title) ? '過去年（別シーズン）'
         : NEG.test(mt.title) ? 'まとめ/総集編'
         : 'OK';
       if (gate !== 'OK') { rejects.push(`✗ ${gate} | ${mt.author} | ${mt.title}`); continue; }
