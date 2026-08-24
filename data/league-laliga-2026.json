@@ -176,9 +176,9 @@
       "away": "ビジャレアル",
       "homeSlug": "atleti",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "4dPE5OkzbeQ"
     },
     {
       "matchday": 2,
@@ -187,9 +187,9 @@
       "away": "ラシン・サンタンデール",
       "homeSlug": "getafe",
       "awaySlug": "santander",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "hkl8h8XWbws"
     },
     {
       "matchday": 2,
@@ -198,9 +198,9 @@
       "away": "バルセロナ",
       "homeSlug": "elche",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-5",
+      "videoId": "jV-hxmJQKfc"
     },
     {
       "matchday": 2,

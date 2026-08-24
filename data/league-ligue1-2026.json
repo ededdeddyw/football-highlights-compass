@@ -77,9 +77,9 @@
       "away": "リール",
       "homeSlug": "angers-sco",
       "awaySlug": "lille",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "D-UlJ_Kmflg"
     },
     {
       "matchday": 1,
@@ -88,9 +88,9 @@
       "away": "モナコ",
       "homeSlug": "le-havre",
       "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "uCfA0vTfZbE"
     },
     {
       "matchday": 1,
@@ -99,9 +99,9 @@
       "away": "レンヌ",
       "homeSlug": "psg",
       "awaySlug": "stade-rennais",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "WBq-4QYoR7Q"
     },
     {
       "matchday": 2,

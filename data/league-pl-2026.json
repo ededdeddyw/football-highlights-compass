@@ -77,8 +77,8 @@
       "away": "ボーンマス",
       "homeSlug": "man-city",
       "awaySlug": "bournemouth",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": ""
     },
     {
@@ -88,8 +88,8 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "brighton-hove",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {
@@ -99,9 +99,9 @@
       "away": "リバプール",
       "homeSlug": "newcastle",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "1UCwnQ35las"
     },
     {
       "matchday": 1,

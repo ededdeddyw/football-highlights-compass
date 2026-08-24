@@ -55,9 +55,9 @@
       "away": "ユベントス",
       "homeSlug": "frosinone",
       "awaySlug": "juventus",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "jmFr9JzaI-U"
     },
     {
       "matchday": 1,
@@ -66,9 +66,9 @@
       "away": "レッチェ",
       "homeSlug": "venezia-fc",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "0lCAEmRmSPo"
     },
     {
       "matchday": 1,
@@ -77,9 +77,9 @@
       "away": "サッスオーロ",
       "homeSlug": "atalanta",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "Mb92KLexsJ8"
     },
     {
       "matchday": 1,
@@ -88,9 +88,9 @@
       "away": "ミラン",
       "homeSlug": "torino",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "A4Q8SBNo_lM"
     },
     {
       "matchday": 1,
