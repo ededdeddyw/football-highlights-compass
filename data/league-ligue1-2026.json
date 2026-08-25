@@ -95,13 +95,13 @@
     {
       "matchday": 1,
       "dateUTC": "2026-08-23T18:45:00Z",
-      "home": "パリ・サンジェルマン",
-      "away": "レンヌ",
-      "homeSlug": "psg",
-      "awaySlug": "stade-rennais",
+      "home": "レンヌ",
+      "away": "パリ・サンジェルマン",
+      "homeSlug": "stade-rennais",
+      "awaySlug": "psg",
       "finished": true,
       "score": "2-2",
-      "videoId": "WBq-4QYoR7Q"
+      "videoId": "CnM94GMIIuw"
     },
     {
       "matchday": 2,
@@ -2196,10 +2196,10 @@
     {
       "matchday": 23,
       "dateUTC": "2027-03-06T00:00:00Z",
-      "home": "レンヌ",
-      "away": "パリ・サンジェルマン",
-      "homeSlug": "stade-rennais",
-      "awaySlug": "psg",
+      "home": "パリ・サンジェルマン",
+      "away": "レンヌ",
+      "homeSlug": "psg",
+      "awaySlug": "stade-rennais",
       "finished": false,
       "score": "",
       "videoId": ""

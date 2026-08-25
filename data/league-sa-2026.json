@@ -99,9 +99,9 @@
       "away": "ラツィオ",
       "homeSlug": "bologna",
       "awaySlug": "lazio",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "YS-YcfQ9RVA"
     },
     {
       "matchday": 1,
@@ -110,9 +110,9 @@
       "away": "フィオレンティーナ",
       "homeSlug": "roma",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-0",
+      "videoId": "nsgdRnzgieY"
     },
     {
       "matchday": 2,

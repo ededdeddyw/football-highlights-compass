@@ -110,8 +110,8 @@
       "away": "チェルシー",
       "homeSlug": "fulham",
       "awaySlug": "chelsea",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {
