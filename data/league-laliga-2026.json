@@ -77,9 +77,9 @@
       "away": "ベティス",
       "homeSlug": "valencia",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "6necjALien0"
     },
     {
       "matchday": 1,
