@@ -88,9 +88,9 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "real-madrid",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-1",
+      "videoId": "pK5dDBJ8Dak"
     },
     {
       "matchday": 1,
