@@ -99,9 +99,9 @@
       "away": "オサスナ",
       "homeSlug": "celta",
       "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "Dirz0wdnpoM"
     },
     {
       "matchday": 1,
@@ -110,9 +110,9 @@
       "away": "アスレティック・ビルバオ",
       "homeSlug": "barca",
       "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "ejyZPCDZbCM"
     },
     {
       "matchday": 2,
