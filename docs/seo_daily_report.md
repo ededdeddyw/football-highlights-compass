@@ -5,13 +5,13 @@
 > 最終更新: 2026-08-28
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **2** ↑1
-- 表示(7日): **560** ↓65
-- 平均順位(7日): **18.6** ↑0.8（数字が小さいほど上位）
-- CTR(7日): **0.4%**
+- クリック(7日): **3** ↑1
+- 表示(7日): **662** ↑102
+- 平均順位(7日): **19.6** ↑1（数字が小さいほど上位）
+- CTR(7日): **0.5%**
 - サイトマップ indexed: **0** / submitted 575 →
   - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。
-- GA ユーザー(28日): **76** / セッション 83
+- GA ユーザー(28日): **79** / セッション 86
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -30,40 +30,40 @@
 | f 組 | 0 | 1 | 56.0 |
 | fc metz | 0 | 1 | 25.0 |
 | fc メス | 0 | 2 | 21.0 |
-| fc 東京 本拠地 | 0 | 26 | 38.0 |
+| fc 東京 本拠地 | 0 | 28 | 38.5 |
 
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| / | 2 | 66 | 10.5 |
-| /club/borussia-dortmund.html | 1 | 43 | 17.5 |
-| /club/espanyol-barcelona.html | 1 | 47 | 14.7 |
+| / | 2 | 68 | 10.5 |
+| /club/borussia-dortmund.html | 1 | 45 | 17.1 |
+| /club/espanyol-barcelona.html | 1 | 49 | 14.5 |
 | /club/jubilo-iwata.html | 1 | 33 | 19.9 |
 | /club/nice.html | 1 | 6 | 11.8 |
-| /club/rb-leipzig.html | 1 | 105 | 18.2 |
-| /club/real-betis-balompie.html | 1 | 73 | 12.1 |
+| /club/rb-leipzig.html | 1 | 107 | 18.7 |
+| /club/real-betis-balompie.html | 1 | 75 | 11.9 |
 | /club/werder-bremen.html | 1 | 23 | 36.9 |
 | /country/spain.html | 1 | 38 | 12.4 |
+| /guide/kubo-takefusa-highlights.html | 1 | 13 | 10.6 |
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 1 | 2 | 6.5 |
 | /match/sa-2526-md36-parma-roma.html | 1 | 2 | 18.0 |
 | /about.html | 0 | 3 | 3.0 |
-| /club/atletico-madrid.html | 0 | 39 | 14.0 |
-| /club/benfica.html | 0 | 9 | 34.2 |
-| /club/bologna.html | 0 | 8 | 9.5 |
+| /club/atletico-madrid.html | 0 | 41 | 14.0 |
+| /club/benfica.html | 0 | 10 | 35.0 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Organic Search | 51 | 21 | 72 |
-| Direct | 28 | 6 | 6 |
-| Unassigned | 4 | 0 | 36 |
+| Organic Search | 52 | 24 | 71 |
+| Direct | 30 | 6 | 6 |
 | Referral | 3 | 1 | 4 |
 | AI Assistant | 1 | 1 | 34 |
+| Unassigned | 1 | 0 | 5 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 29 | 25 | 291 |
+| / | 30 | 26 | 316 |
 | /club/eintracht-frankfurt.html | 10 | 9 | 21 |
 | /league/serie-a.html | 5 | 3 | 26 |
 | /guide/world-cup-2026-how-to-watch.html | 3 | 3 | 261 |
@@ -72,17 +72,16 @@
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 3 | 1 | 6 |
 | /club/real-betis-balompie.html | 2 | 2 | 54 |
 | /country/belgium.html | 2 | 2 | 19 |
-| /guide/kubo-takefusa-highlights.html | 2 | 1 | 1 |
+| /group/c.html | 2 | 2 | 10 |
+| /guide/kubo-takefusa-highlights.html | 2 | 1 | 4 |
 | /guide/suzuki-zion-highlights.html | 2 | 2 | 2 |
 | /match/3twjzNKlYWc.html | 2 | 2 | 35 |
 | /match/BEpOPoLd4mk.html | 2 | 1 | 2 |
 | /match/BvmWDhzkbe4.html | 2 | 1 | 0 |
-| /match/I4Vh8qt2QvM.html | 2 | 2 | 11 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-08-18 | 2 | 803 | 19.9 | 0 | 66 |
 | 2026-08-19 | 2 | 725 | 22.0 | 0 | 67 |
 | 2026-08-20 | 3 | 672 | 23.5 | 0 | 67 |
 | 2026-08-21 | 3 | 605 | 22.4 | 0 | 65 |
@@ -92,12 +91,13 @@
 | 2026-08-25 | 3 | 634 | 17.8 | 0 | 68 |
 | 2026-08-26 | 1 | 625 | 17.8 | 0 | 72 |
 | 2026-08-28 | 2 | 560 | 18.6 | 0 | 76 |
+| 2026-08-28 | 3 | 662 | 19.6 | 0 | 79 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 304 | 2 | 0.7% |
-| W杯国別（/country/） | 156 | 0 | 0.0% |
+| クラブ/リーグ（/club/・/league/） | 354 | 2 | 0.6% |
+| W杯国別（/country/） | 189 | 0 | 0.0% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
@@ -106,4 +106,5 @@
 | 2026-08-25 | 329 | 190 |
 | 2026-08-26 | 324 | 188 |
 | 2026-08-28 | 304 | 156 |
+| 2026-08-28 | 354 | 189 |
 
