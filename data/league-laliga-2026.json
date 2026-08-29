@@ -231,9 +231,9 @@
       "away": "エルチェ",
       "homeSlug": "santander",
       "awaySlug": "elche",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "D1elEXXFTJs"
     },
     {
       "matchday": 3,
@@ -242,9 +242,9 @@
       "away": "ビジャレアル",
       "homeSlug": "alaves",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "MBvkv_Spac0"
     },
     {
       "matchday": 3,

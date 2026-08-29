@@ -110,9 +110,9 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "lille",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "nMCCjPUTgg8"
     },
     {
       "matchday": 2,

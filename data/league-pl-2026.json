@@ -121,9 +121,9 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "crystal-palace",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-4",
+      "videoId": "LuVCELWM0BM"
     },
     {
       "matchday": 2,
@@ -512,17 +512,6 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T14:00:00Z",
-      "home": "マンチェスター・シティ",
-      "away": "サンダーランド",
-      "homeSlug": "man-city",
-      "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
       "dateUTC": "2026-09-19T16:30:00Z",
       "home": "ノッティンガム・フォレスト",
       "away": "コベントリー",
@@ -539,6 +528,17 @@
       "away": "リバプール",
       "homeSlug": "bournemouth",
       "awaySlug": "liverpool",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-20T13:00:00Z",
+      "home": "マンチェスター・シティ",
+      "away": "サンダーランド",
+      "homeSlug": "man-city",
+      "awaySlug": "sunderland",
       "finished": false,
       "score": "",
       "videoId": ""

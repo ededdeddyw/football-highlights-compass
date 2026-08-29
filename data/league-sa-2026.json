@@ -121,9 +121,9 @@
       "away": "ヴェネツィア",
       "homeSlug": "milan",
       "awaySlug": "venezia-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "8ogTeYqNm2E"
     },
     {
       "matchday": 2,
