@@ -13,7 +13,7 @@
       "awaySlug": "coventry-city",
       "finished": true,
       "score": "3-0",
-      "videoId": ""
+      "videoId": "eev4aa-cCOU"
     },
     {
       "matchday": 1,
@@ -132,8 +132,8 @@
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "liverpool",
       "awaySlug": "nottingham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -143,8 +143,8 @@
       "away": "エバートン",
       "homeSlug": "bournemouth",
       "awaySlug": "everton",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -154,8 +154,8 @@
       "away": "ハル・シティ",
       "homeSlug": "coventry-city",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": ""
     },
     {
@@ -165,8 +165,8 @@
       "away": "ニューカッスル",
       "homeSlug": "tottenham",
       "awaySlug": "newcastle",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {

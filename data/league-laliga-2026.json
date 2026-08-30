@@ -253,9 +253,9 @@
       "away": "ベティス",
       "homeSlug": "levante",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-2",
+      "videoId": "wlZrMN00EEI"
     },
     {
       "matchday": 3,
@@ -264,9 +264,9 @@
       "away": "エスパニョール",
       "homeSlug": "real-sociedad",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "RzVG6C6AXLg"
     },
     {
       "matchday": 3,
@@ -275,9 +275,9 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "sevilla-fc",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-3",
+      "videoId": "TQEhReF2Vl0"
     },
     {
       "matchday": 3,
