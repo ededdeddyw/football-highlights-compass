@@ -1152,10 +1152,14 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
-    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} 2025-26 - Football Highlights Compass`,
+    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
     ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
-    jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]) ]
+    // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。
+    jsonld:[
+      ...(mt.videoId ? [{"@type":"VideoObject","name":`${teamsTxt}｜${L.jp} ${nara} 公式ハイライト`,"description":desc,"thumbnailUrl":ogimg,"uploadDate":(mt.dateUTC||`${TODAY}T12:00:00+09:00`),"embedUrl":`https://www.youtube.com/embed/${mt.videoId}`,"contentUrl":url,"publisher":ORG}] : []),
+      crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}])
+    ]
   });
   const out = head + TOPBAR_NAV
   + `<div class="spoilerbar" data-binge-next="${bingeNext}"><div class="spoilerbar-in">${spoilerToggleBtn}${bingeNext?BINGE_TOGGLE:''}<span class="sb-note">タップで結果（スコア）の表示を切り替えます。</span></div></div>`
@@ -1247,7 +1251,7 @@ try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     const j = JSON.parse(readFileSync(`data/${f}`,'utf8'));
     const L = { code:j.code, jp:(LEAGUE_META[j.code]||{}).jp||j.jp||j.code, hub:(LEAGUE_META[j.code]||{}).hub };
-    const seasonLbl = j.season==='2025'?'2025-26':j.season;
+    const seasonLbl = j.season ? `${j.season}-${String((+j.season+1)%100).padStart(2,'0')}` : j.season;   // 例 2025→2025-26 / 2026→2026-27
     // このリーグの「動画あり試合」を並び順でチェーン化（連続再生の次ページ）。
     { const c = (j.matches||[]).filter(mt=>mt.videoId && mt.matchday!=null && mt.home && mt.away).map(mt=>leagueSlug(mt, L));
       if (c.length >= 2) c.forEach((s, i) => { NEXT[s] = c[(i + 1) % c.length] + '.html'; }); }
