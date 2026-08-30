@@ -132,8 +132,8 @@
       "away": "トリノ",
       "homeSlug": "sassuolo",
       "awaySlug": "torino",
-      "finished": true,
-      "score": "2-1",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -143,8 +143,8 @@
       "away": "ウディネーゼ",
       "homeSlug": "monza",
       "awaySlug": "udinese",
-      "finished": true,
-      "score": "2-3",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -154,8 +154,8 @@
       "away": "フロジノーネ",
       "homeSlug": "fiorentina",
       "awaySlug": "frosinone",
-      "finished": true,
-      "score": "0-3",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -165,8 +165,8 @@
       "away": "パルマ",
       "homeSlug": "juventus",
       "awaySlug": "parma",
-      "finished": true,
-      "score": "2-0",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {

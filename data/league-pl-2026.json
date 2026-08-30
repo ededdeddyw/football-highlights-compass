@@ -46,7 +46,7 @@
       "awaySlug": "leeds-united",
       "finished": true,
       "score": "0-1",
-      "videoId": ""
+      "videoId": "bNt7XL5RA9E"
     },
     {
       "matchday": 1,
@@ -112,7 +112,7 @@
       "awaySlug": "chelsea",
       "finished": true,
       "score": "2-3",
-      "videoId": ""
+      "videoId": "7g4Gh3SVAeo"
     },
     {
       "matchday": 2,
@@ -132,8 +132,8 @@
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "liverpool",
       "awaySlug": "nottingham",
-      "finished": true,
-      "score": "2-2",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -143,8 +143,8 @@
       "away": "エバートン",
       "homeSlug": "bournemouth",
       "awaySlug": "everton",
-      "finished": true,
-      "score": "1-1",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -154,8 +154,8 @@
       "away": "ハル・シティ",
       "homeSlug": "coventry-city",
       "awaySlug": "hull-city",
-      "finished": true,
-      "score": "0-1",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -165,8 +165,8 @@
       "away": "ニューカッスル",
       "homeSlug": "tottenham",
       "awaySlug": "newcastle",
-      "finished": true,
-      "score": "0-2",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
