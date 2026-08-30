@@ -113,10 +113,14 @@ for (const f of files) {
       const mt = await meta(id); await sleep(120);
       if (!mt) { rejects.push(`meta失敗 ${id}`); continue; }
       const tN = nsp(mt.title);
-      // 公式クラブch許可（cfg.clubChannels）：著者名の正規化が対戦2チームいずれかのエイリアスと厳密一致する場合のみ受理。
-      // （部分一致だとファンch「Arsenal Fan TV」等を誤許可するため厳密一致。両チーム名＋リーグ名＋節順などの後段ゲートで更に担保）
+      // 公式クラブch許可（cfg.clubChannels）：著者名がそのクラブのエイリアスと一致する場合のみ受理。
+      // 一般的な接尾辞（FC / AFC / Football Club / Official）だけ除いたコアで完全一致を判定する
+      //（"Coventry City FC"→coventrycity, "Chelsea Football Club"→chelsea, "Leeds United Official"→leedsunited）。
+      // 完全一致に限るため「Arsenal Fan TV」等のファンchは弾いたまま。両チーム名＋リーグ名＋節順などの後段ゲートで更に担保。
       const authorNsp = nsp(mt.author);
-      const clubChOk = cfg.clubChannels && (variants(m.home).includes(authorNsp) || variants(m.away).includes(authorNsp));
+      const authorCore = authorNsp.replace(/(footballclub|official|afc|fc)$/, '');
+      const clubMatch = ja => variants(ja).some(v => v === authorNsp || v === authorCore);
+      const clubChOk = cfg.clubChannels && (clubMatch(m.home) || clubMatch(m.away));
       const gate = !(chOk(mt.author) || clubChOk) ? `非公式ch(${mt.author})`
         : !nameHit(m.home, tN) ? 'homeなし'
         : !nameHit(m.away, tN) ? 'awayなし'
