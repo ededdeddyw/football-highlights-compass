@@ -154,12 +154,17 @@ const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田�
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
 // 欧州リーグのハブページ定義（clubLabel は entities.mjs の CLUBS[].league 表記に一致させる）
 const LEAGUE_HUBS = [
-  { name:'ラ・リーガ', slug:'laliga', clubLabel:'ラ・リーガ', country:'スペイン', blurb:'スペイン1部リーグ。世界屈指の技術レベルで知られ、日本人選手も活躍しています。' },
-  { name:'セリエA', slug:'serie-a', clubLabel:'セリエA', country:'イタリア', blurb:'イタリア1部リーグ。堅守と戦術の伝統で知られます。' },
-  { name:'ブンデスリーガ', slug:'bundesliga', clubLabel:'ブンデスリーガ', country:'ドイツ', blurb:'ドイツ1部リーグ。多くの日本人選手が在籍してきたリーグです。' },
-  { name:'リーグアン', slug:'ligue-1', clubLabel:'リーグアン', country:'フランス', blurb:'フランス1部リーグ。' },
-  { name:'プリメイラ・リーガ', slug:'primeira-liga', clubLabel:'プリメイラ・リーガ', country:'ポルトガル', blurb:'ポルトガル1部リーグ。' },
+  { name:'プレミアリーグ', slug:'premier-league', code:'pl', clubLabel:'プレミアリーグ', country:'イングランド', blurb:'イングランド1部リーグ。世界最高峰の人気と競争力を誇り、多くの日本人選手も在籍します。' },
+  { name:'ラ・リーガ', slug:'laliga', code:'laliga', clubLabel:'ラ・リーガ', country:'スペイン', blurb:'スペイン1部リーグ。世界屈指の技術レベルで知られ、日本人選手も活躍しています。' },
+  { name:'セリエA', slug:'serie-a', code:'sa', clubLabel:'セリエA', country:'イタリア', blurb:'イタリア1部リーグ。堅守と戦術の伝統で知られます。' },
+  { name:'ブンデスリーガ', slug:'bundesliga', code:'bl', clubLabel:'ブンデスリーガ', country:'ドイツ', blurb:'ドイツ1部リーグ。多くの日本人選手が在籍してきたリーグです。' },
+  { name:'リーグアン', slug:'ligue-1', code:'ligue1', clubLabel:'リーグアン', country:'フランス', blurb:'フランス1部リーグ。' },
+  { name:'プリメイラ・リーガ', slug:'primeira-liga', code:'primeira', clubLabel:'プリメイラ・リーガ', country:'ポルトガル', blurb:'ポルトガル1部リーグ。' },
 ];
+// リーグJSONに「結果確定済み（スコア入り）」の試合があるコード集合。順位表を出せる＝ハブを建てる根拠にする。
+// （byTeamの旧試合が無いPLも、league-pl-*.json に結果があればハブを生成できるようにする）
+const LEAGUE_HAS_DATA = new Set();
+try { for(const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){ const j=JSON.parse(readFileSync(`data/${f}`,'utf8')); if(j.code && (j.matches||[]).some(m=>m.finished && /^\d+\s*-\s*\d+$/.test(m.score||''))) LEAGUE_HAS_DATA.add(j.code); } } catch(e){}
 const esc = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const escA = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');
 
@@ -337,7 +342,7 @@ function leagueMatches(clubLabel){
   clubsIn.forEach(c=> (byTeam[c]||[]).forEach(m=>{ if(m.id&&!seen.has(m.id)){ seen.add(m.id); ms.push(m); } }));
   return { clubsIn, ms };
 }
-const LEAGUE_LIST = LEAGUE_HUBS.filter(h=> leagueMatches(h.clubLabel).ms.length>0);
+const LEAGUE_LIST = LEAGUE_HUBS.filter(h=> leagueMatches(h.clubLabel).ms.length>0 || LEAGUE_HAS_DATA.has(h.code));
 function leagueNavHtml(prefix){ return LEAGUE_LIST.length ? `<nav class="nav-guides nav-eu" aria-label="欧州リーグ"><div class="ng-h">🇪🇺 欧州リーグ</div>${LEAGUE_LIST.map(h=>`<a href="${prefix}league/${h.slug}.html">${esc(h.name)}</a>`).join('')}</nav>` : ''; }
 function relatedMatches(m){
   const seen=new Set([m.id]); const rel=[];
@@ -1106,7 +1111,7 @@ data.forEach(buildMatch);
 // 現状は記事/動画が揃うまで noindex（薄コンテンツのindex回避＝AdSense対策）。結果はマスクしてネタバレ防止。
 const LEAGUE_META = {
   bl:     { jp: 'ブンデスリーガ', hub: 'league/bundesliga.html' },
-  pl:     { jp: 'プレミアリーグ', hub: '' },
+  pl:     { jp: 'プレミアリーグ', hub: 'league/premier-league.html' },
   sa:     { jp: 'セリエA',       hub: 'league/serie-a.html' },
   laliga: { jp: 'ラ・リーガ',     hub: 'league/laliga.html' },
   ligue1: { jp: 'リーグアン',     hub: 'league/ligue-1.html' },
@@ -1266,6 +1271,7 @@ const SLUG2LEAGUE = {};
 const RAIL_TABLE = {};
 const CLUB_HL = {};
 const RAIL_UPDATED = {};
+const LEAGUE_RECENT = {};   // code -> 動画あり試合（新しい順）。リーグハブの「最新ハイライト」用
 try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     let j; try { j = JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch(e){ continue; }
@@ -1280,6 +1286,7 @@ try {
       if (as) SLUG2LEAGUE[as] = code;
       if (mt.videoId){
         const ms = leagueSlug(mt, L);
+        (LEAGUE_RECENT[code]=LEAGUE_RECENT[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC||'', videoId:mt.videoId, ms });
         if (hs) (CLUB_HL[hs]=CLUB_HL[hs]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.away, ha:'H', ms });
         if (as) (CLUB_HL[as]=CLUB_HL[as]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.home, ha:'A', ms });
       }
@@ -1299,6 +1306,7 @@ try {
     RAIL_TABLE[code] = rows;
   }
   for (const s in CLUB_HL){ CLUB_HL[s].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
+  for (const c in LEAGUE_RECENT){ LEAGUE_RECENT[c].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
 } catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
 
 // 日付を日本時間の YYYY/MM/DD に（ネタバレ防止の右レール表示用）
@@ -1762,7 +1770,9 @@ mkdirSync('site/league', { recursive:true });
 const leagueUrls = [];
 function buildLeague(h){
   const { clubsIn, ms } = leagueMatches(h.clubLabel);
-  if(!ms.length) return;
+  const stand = RAIL_TABLE[h.code] || [];
+  const recent = (LEAGUE_RECENT[h.code] || []).slice(0, 12);
+  if(!ms.length && !stand.length && !recent.length) return;   // byTeam試合・順位表・最新ハイライトのいずれも無ければ建てない
   const path=`league/${h.slug}.html`, url=`${DOMAIN}/${path}`;
   const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>{ const cr=CREST[CLUBS[c].slug]; return `<a class="clubchip" href="../club/${CLUBS[c].slug}.html">${cr?`<img src="${cr}" alt="" loading="lazy">`:'🛡️'}${esc(c)}</a>`; }).join('');
   const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
@@ -1770,21 +1780,32 @@ function buildLeague(h){
   // このリーグに所属する日本人選手 → 選手プロフィールへ相互リンク（リーグ→選手。新シーズンの検索需要に噛み合わせ、選手ページの内部リンクを増やす）
   const leaguePlayers = PLAYERS.filter(p=>p.club && CLUBS[p.club] && CLUBS[p.club].league===h.clubLabel);
   const playerChips = leaguePlayers.length?`<h2 class="lined">注目の日本人選手</h2><div class="chips">${leaguePlayers.slice(0,12).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`:'';
-  const ogimg = ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`;
-  const desc = `${h.name}（${h.country}）のハイライト動画・試合一覧。公式・権利元が公開する映像のみ・ネタバレ防止で${ms.length}試合を掲載。最新結果もチェック。`.slice(0,120);
+  const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
+  const desc = `${h.name}（${h.country}）の順位表と最新ハイライト動画。試合結果・順位表に加え、公式・権利元の映像のみ・ネタバレ防止で試合を掲載。`.slice(0,120);
+  // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
+  const standCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}</style>`;
+  const standTable = stand.length ? `${standCss}<h2 class="lined">${esc(h.name)} 順位表</h2>
+  <div class="stand-wrap"><table class="stand"><thead><tr><th>#</th><th>クラブ</th><th title="試合数">試</th><th title="勝ち">勝</th><th title="引き分け">分</th><th title="負け">敗</th><th title="得失点差">得失</th><th title="勝点">点</th></tr></thead><tbody>
+  ${stand.map(r=>{ const cs=CLUBS[r.name]&&CLUBS[r.name].slug; const nm=cs?`<a href="../club/${cs}.html">${esc(r.name)}</a>`:esc(r.name); return `<tr><td class="rk">${r.pos}</td><td class="tm">${nm}</td><td>${r.played}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`; }).join('')}
+  </tbody></table></div>
+  <p class="stand-note">※ 当サイト掲載の結果から集計。未消化・未取得の試合は反映されないことがあります。</p>` : '';
+  // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
+  const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
   const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}])];
   graph.push(itemListLd(ms));
-  const head=HEAD({ title:`${h.name} ハイライト動画・試合一覧｜最新結果 - Football Highlights Compass`, ogtitle:`${h.name} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+  const head=HEAD({ title:`${h.name} 順位表・ハイライト動画｜最新結果 - Football Highlights Compass`, ogtitle:`${h.name} 順位表・ハイライト動画`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  ${standTable}
+  ${recentBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
   ${AD}
-  ${collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms))}
+  ${ms.length?collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms)):''}
   ${cross}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
