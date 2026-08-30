@@ -1,0 +1,45 @@
+name: X auth helper (投稿用アカウントの Access Token を取得)
+
+# ブランド用アカウントが個人アプリを「許可」して、そのアカウント宛ての Access Token を得るための1回きりの補助。
+# 事前に Secrets に X_API_KEY / X_API_SECRET（個人アプリの API Key / Secret）を登録しておくこと。
+#
+# 使い方：
+#  STEP1) 入力を空のまま実行 → ログに「認可URL」と oauth_token / oauth_token_secret が出る
+#         → ブランドアカウントでログインした状態で認可URLを開き「アプリを認証」→ 7桁PIN を控える
+#  STEP2) pin / oauth_token / oauth_token_secret を入力して実行 → ログに ACCESS_TOKEN / ACCESS_SECRET が出る
+#         → それを Secrets（X_ACCESS_TOKEN / X_ACCESS_SECRET）に登録
+#  ※ 完了後、このワークフローの実行ログは削除推奨（トークンがログに残るため）。
+on:
+  workflow_dispatch:
+    inputs:
+      pin:
+        description: 'STEP2: 認可後に表示された7桁のPIN（STEP1では空のまま）'
+        required: false
+        default: ''
+      oauth_token:
+        description: 'STEP2: STEP1で出た oauth_token'
+        required: false
+        default: ''
+      oauth_token_secret:
+        description: 'STEP2: STEP1で出た oauth_token_secret'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  auth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: OAuth 認可ヘルパー
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_OAUTH_VERIFIER: ${{ github.event.inputs.pin }}
+          X_OAUTH_TOKEN: ${{ github.event.inputs.oauth_token }}
+          X_OAUTH_TOKEN_SECRET: ${{ github.event.inputs.oauth_token_secret }}
+        run: node scripts/x-oauth.mjs
