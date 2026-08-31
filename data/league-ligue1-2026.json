@@ -121,8 +121,8 @@
       "away": "ランス",
       "homeSlug": "strasbourg",
       "awaySlug": "rc-lens",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "gICLZydYQ3A"
     },
     {
@@ -132,8 +132,8 @@
       "away": "トロワ",
       "homeSlug": "lorient",
       "awaySlug": "troyes",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "sdWzy-phX6o"
     },
     {
@@ -143,8 +143,8 @@
       "away": "ルアーブル",
       "homeSlug": "olympique-lyon",
       "awaySlug": "le-havre",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "7n1JxqDYPeU"
     },
     {
@@ -154,8 +154,8 @@
       "away": "アンジェ",
       "homeSlug": "auxerre",
       "awaySlug": "angers-sco",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-3",
       "videoId": "eUXZ34E2vCc"
     },
     {
@@ -165,8 +165,8 @@
       "away": "トゥールーズ",
       "homeSlug": "brest",
       "awaySlug": "toulouse",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "jI4BxDZHG1c"
     },
     {
@@ -176,9 +176,9 @@
       "away": "ニース",
       "homeSlug": "paris-fc",
       "awaySlug": "nice",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "-4GNvGmv--w"
     },
     {
       "matchday": 2,
@@ -187,9 +187,9 @@
       "away": "ルマン",
       "homeSlug": "stade-rennais",
       "awaySlug": "le-mans",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "n9wszVUVA6o"
     },
     {
       "matchday": 2,

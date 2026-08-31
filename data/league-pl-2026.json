@@ -132,9 +132,9 @@
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "liverpool",
       "awaySlug": "nottingham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "y7KqSjvN_5s"
     },
     {
       "matchday": 2,
@@ -143,8 +143,8 @@
       "away": "エバートン",
       "homeSlug": "bournemouth",
       "awaySlug": "everton",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -154,9 +154,9 @@
       "away": "ハル・シティ",
       "homeSlug": "coventry-city",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "bhlTuDxLbmQ"
     },
     {
       "matchday": 2,
@@ -165,9 +165,9 @@
       "away": "ニューカッスル",
       "homeSlug": "tottenham",
       "awaySlug": "newcastle",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "uwx9nMb_GMA"
     },
     {
       "matchday": 2,
@@ -176,9 +176,9 @@
       "away": "フラム",
       "homeSlug": "sunderland",
       "awaySlug": "fulham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "Prqwcfqzb4Y"
     },
     {
       "matchday": 2,
@@ -187,9 +187,9 @@
       "away": "ブライトン",
       "homeSlug": "chelsea",
       "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-3",
+      "videoId": "1QvHaCXnIWg"
     },
     {
       "matchday": 2,
@@ -198,9 +198,9 @@
       "away": "ブレントフォード",
       "homeSlug": "leeds-united",
       "awaySlug": "brentford",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "IL2JpncBtTk"
     },
     {
       "matchday": 2,
@@ -209,8 +209,8 @@
       "away": "イプスウィッチ",
       "homeSlug": "man-united",
       "awaySlug": "ipswich-town",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-2",
       "videoId": ""
     },
     {

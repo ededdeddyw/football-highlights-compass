@@ -24,7 +24,7 @@
       "awaySlug": "borussia-monchengladbach",
       "finished": true,
       "score": "3-0",
-      "videoId": ""
+      "videoId": "hP0-xSX3ba8"
     },
     {
       "matchday": 1,
@@ -35,7 +35,7 @@
       "awaySlug": "sc-paderborn-07",
       "finished": true,
       "score": "0-0",
-      "videoId": ""
+      "videoId": "xb0rJ4juqgI"
     },
     {
       "matchday": 1,
@@ -46,7 +46,7 @@
       "awaySlug": "eintracht-frankfurt",
       "finished": true,
       "score": "3-3",
-      "videoId": ""
+      "videoId": "wIauRNpJ2gw"
     },
     {
       "matchday": 1,
@@ -57,7 +57,7 @@
       "awaySlug": "tsg-hoffenheim",
       "finished": true,
       "score": "3-2",
-      "videoId": ""
+      "videoId": "ncTOh_baORY"
     },
     {
       "matchday": 1,
@@ -88,9 +88,9 @@
       "away": "ブレーメン",
       "homeSlug": "sc-freiburg",
       "awaySlug": "sv-werder-bremen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-1",
+      "videoId": "80C9zwJSSlY"
     },
     {
       "matchday": 1,
@@ -99,9 +99,9 @@
       "away": "シャルケ",
       "homeSlug": "fc-augsburg",
       "awaySlug": "fc-schalke-04",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "s3iHKEG-NS8"
     },
     {
       "matchday": 2,
