@@ -198,9 +198,9 @@
       "away": "マルセイユ",
       "homeSlug": "monaco",
       "awaySlug": "marseille",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "bqHxvqRb-00"
     },
     {
       "matchday": 3,
@@ -402,73 +402,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "オセール",
-      "away": "ブレスト",
-      "homeSlug": "auxerre",
-      "awaySlug": "brest",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "ルマン",
-      "away": "ロリアン",
-      "homeSlug": "le-mans",
-      "awaySlug": "lorient",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "ニース",
-      "away": "リール",
-      "homeSlug": "nice",
-      "awaySlug": "lille",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "パリFC",
-      "away": "ストラスブール",
-      "homeSlug": "paris-fc",
-      "awaySlug": "strasbourg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "トゥールーズ",
-      "away": "ルアーブル",
-      "homeSlug": "toulouse",
-      "awaySlug": "le-havre",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
-      "home": "アンジェ",
-      "away": "トロワ",
-      "homeSlug": "angers-sco",
-      "awaySlug": "troyes",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
+      "dateUTC": "2026-09-18T18:45:00Z",
       "home": "モナコ",
       "away": "ランス",
       "homeSlug": "monaco",
@@ -479,11 +413,77 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-19T00:00:00Z",
+      "dateUTC": "2026-09-19T15:15:00Z",
+      "home": "パリFC",
+      "away": "ストラスブール",
+      "homeSlug": "paris-fc",
+      "awaySlug": "strasbourg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-19T18:45:00Z",
+      "home": "ルマン",
+      "away": "ロリアン",
+      "homeSlug": "le-mans",
+      "awaySlug": "lorient",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-19T18:45:00Z",
+      "home": "トゥールーズ",
+      "away": "ルアーブル",
+      "homeSlug": "toulouse",
+      "awaySlug": "le-havre",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-19T18:45:00Z",
+      "home": "アンジェ",
+      "away": "トロワ",
+      "homeSlug": "angers-sco",
+      "awaySlug": "troyes",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-19T18:45:00Z",
       "home": "リヨン",
       "away": "レンヌ",
       "homeSlug": "olympique-lyon",
       "awaySlug": "stade-rennais",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-20T13:00:00Z",
+      "home": "オセール",
+      "away": "ブレスト",
+      "homeSlug": "auxerre",
+      "awaySlug": "brest",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-20T15:15:00Z",
+      "home": "ニース",
+      "away": "リール",
+      "homeSlug": "nice",
+      "awaySlug": "lille",
       "finished": false,
       "score": "",
       "videoId": ""

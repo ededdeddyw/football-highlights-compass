@@ -297,9 +297,9 @@
       "away": "バレンシア",
       "homeSlug": "deportivo",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "qsXYpowigQ8"
     },
     {
       "matchday": 3,
@@ -308,9 +308,9 @@
       "away": "アスレティック・ビルバオ",
       "homeSlug": "celta",
       "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "7itGZZ7PlWM"
     },
     {
       "matchday": 3,
@@ -319,9 +319,9 @@
       "away": "ヘタフェ",
       "homeSlug": "osasuna",
       "awaySlug": "getafe",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "OoTZ2gWMUKc"
     },
     {
       "matchday": 3,
@@ -330,9 +330,9 @@
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "barca",
       "awaySlug": "rayo-vallecano",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-2",
+      "videoId": "BJW5gAgk4bg"
     },
     {
       "matchday": 4,
@@ -446,18 +446,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
-      "home": "ヘタフェ",
-      "away": "デポルティボ",
-      "homeSlug": "getafe",
-      "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
+      "dateUTC": "2026-09-11T19:00:00Z",
       "home": "セビージャ",
       "away": "バレンシア",
       "homeSlug": "sevilla-fc",
@@ -468,7 +457,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
+      "dateUTC": "2026-09-12T12:00:00Z",
       "home": "ラシン・サンタンデール",
       "away": "アラベス",
       "homeSlug": "santander",
@@ -479,29 +468,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
-      "home": "ビジャレアル",
-      "away": "ベティス",
-      "homeSlug": "villarreal",
-      "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
-      "home": "セルタ",
-      "away": "マラガ",
-      "homeSlug": "celta",
-      "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
+      "dateUTC": "2026-09-12T14:15:00Z",
       "home": "オサスナ",
       "away": "エスパニョール",
       "homeSlug": "osasuna",
@@ -512,29 +479,7 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
-      "home": "レアル・ソシエダ",
-      "away": "アトレティコ・マドリード",
-      "homeSlug": "real-sociedad",
-      "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
-      "home": "レバンテ",
-      "away": "バルセロナ",
-      "homeSlug": "levante",
-      "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
+      "dateUTC": "2026-09-12T16:30:00Z",
       "home": "アスレティック・ビルバオ",
       "away": "エルチェ",
       "homeSlug": "athletic",
@@ -545,11 +490,66 @@
     },
     {
       "matchday": 5,
-      "dateUTC": "2026-09-13T00:00:00Z",
+      "dateUTC": "2026-09-12T19:00:00Z",
       "home": "レアル・マドリード",
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "real-madrid",
       "awaySlug": "rayo-vallecano",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-13T12:00:00Z",
+      "home": "セルタ",
+      "away": "マラガ",
+      "homeSlug": "celta",
+      "awaySlug": "malaga",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-13T14:15:00Z",
+      "home": "レバンテ",
+      "away": "バルセロナ",
+      "homeSlug": "levante",
+      "awaySlug": "barca",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-13T16:30:00Z",
+      "home": "ヘタフェ",
+      "away": "デポルティボ",
+      "homeSlug": "getafe",
+      "awaySlug": "deportivo",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-13T19:00:00Z",
+      "home": "レアル・ソシエダ",
+      "away": "アトレティコ・マドリード",
+      "homeSlug": "real-sociedad",
+      "awaySlug": "atleti",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-14T19:00:00Z",
+      "home": "ビジャレアル",
+      "away": "ベティス",
+      "homeSlug": "villarreal",
+      "awaySlug": "real-betis",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -567,7 +567,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-15T17:00:00Z",
       "home": "ラーヨ・バジェカーノ",
       "away": "エスパニョール",
       "homeSlug": "rayo-vallecano",
@@ -578,18 +578,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
-      "home": "デポルティボ",
-      "away": "セビージャ",
-      "homeSlug": "deportivo",
-      "awaySlug": "sevilla-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-15T18:00:00Z",
       "home": "アラベス",
       "away": "バレンシア",
       "homeSlug": "alaves",
@@ -600,7 +589,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-15T19:30:00Z",
       "home": "エルチェ",
       "away": "レアル・マドリード",
       "homeSlug": "elche",
@@ -611,18 +600,18 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
-      "home": "マラガ",
-      "away": "ビジャレアル",
-      "homeSlug": "malaga",
-      "awaySlug": "villarreal",
+      "dateUTC": "2026-09-16T17:00:00Z",
+      "home": "デポルティボ",
+      "away": "セビージャ",
+      "homeSlug": "deportivo",
+      "awaySlug": "sevilla-fc",
       "finished": false,
       "score": "",
       "videoId": ""
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-16T17:00:00Z",
       "home": "アトレティコ・マドリード",
       "away": "オサスナ",
       "homeSlug": "atleti",
@@ -633,7 +622,7 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-16T19:30:00Z",
       "home": "レバンテ",
       "away": "アスレティック・ビルバオ",
       "homeSlug": "levante",
@@ -644,7 +633,18 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
+      "dateUTC": "2026-09-16T19:30:00Z",
+      "home": "バルセロナ",
+      "away": "ラシン・サンタンデール",
+      "homeSlug": "barca",
+      "awaySlug": "santander",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "2026-09-17T17:00:00Z",
       "home": "ベティス",
       "away": "ヘタフェ",
       "homeSlug": "real-betis",
@@ -655,10 +655,43 @@
     },
     {
       "matchday": 6,
-      "dateUTC": "2026-09-16T00:00:00Z",
-      "home": "バルセロナ",
+      "dateUTC": "2026-09-17T19:30:00Z",
+      "home": "マラガ",
+      "away": "ビジャレアル",
+      "homeSlug": "malaga",
+      "awaySlug": "villarreal",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-09-19T12:00:00Z",
+      "home": "オサスナ",
+      "away": "ラーヨ・バジェカーノ",
+      "homeSlug": "osasuna",
+      "awaySlug": "rayo-vallecano",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-09-19T14:15:00Z",
+      "home": "アスレティック・ビルバオ",
+      "away": "アラベス",
+      "homeSlug": "athletic",
+      "awaySlug": "alaves",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-09-19T16:30:00Z",
+      "home": "セルタ",
       "away": "ラシン・サンタンデール",
-      "homeSlug": "barca",
+      "homeSlug": "celta",
       "awaySlug": "santander",
       "finished": false,
       "score": "",
@@ -666,11 +699,11 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "アトレティコ・マドリード",
-      "away": "レアル・マドリード",
-      "homeSlug": "atleti",
-      "awaySlug": "real-madrid",
+      "dateUTC": "2026-09-19T19:00:00Z",
+      "home": "セビージャ",
+      "away": "バルセロナ",
+      "homeSlug": "sevilla-fc",
+      "awaySlug": "barca",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -689,28 +722,6 @@
     {
       "matchday": 7,
       "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "セビージャ",
-      "away": "バルセロナ",
-      "homeSlug": "sevilla-fc",
-      "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "アスレティック・ビルバオ",
-      "away": "アラベス",
-      "homeSlug": "athletic",
-      "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
       "home": "エスパニョール",
       "away": "エルチェ",
       "homeSlug": "espanyol",
@@ -721,29 +732,29 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "オサスナ",
-      "away": "ラーヨ・バジェカーノ",
-      "homeSlug": "osasuna",
-      "awaySlug": "rayo-vallecano",
+      "dateUTC": "2026-09-20T12:00:00Z",
+      "home": "ヘタフェ",
+      "away": "マラガ",
+      "homeSlug": "getafe",
+      "awaySlug": "malaga",
       "finished": false,
       "score": "",
       "videoId": ""
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "セルタ",
-      "away": "ラシン・サンタンデール",
-      "homeSlug": "celta",
-      "awaySlug": "santander",
+      "dateUTC": "2026-09-20T14:15:00Z",
+      "home": "アトレティコ・マドリード",
+      "away": "レアル・マドリード",
+      "homeSlug": "atleti",
+      "awaySlug": "real-madrid",
       "finished": false,
       "score": "",
       "videoId": ""
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
+      "dateUTC": "2026-09-20T16:30:00Z",
       "home": "デポルティボ",
       "away": "ベティス",
       "homeSlug": "deportivo",
@@ -754,22 +765,11 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
+      "dateUTC": "2026-09-20T16:30:00Z",
       "home": "ビジャレアル",
       "away": "レバンテ",
       "homeSlug": "villarreal",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "ヘタフェ",
-      "away": "マラガ",
-      "homeSlug": "getafe",
-      "awaySlug": "malaga",
       "finished": false,
       "score": "",
       "videoId": ""

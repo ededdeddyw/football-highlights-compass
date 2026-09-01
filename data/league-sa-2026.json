@@ -145,7 +145,7 @@
       "awaySlug": "udinese",
       "finished": true,
       "score": "2-3",
-      "videoId": ""
+      "videoId": "ZGTmcudRtMs"
     },
     {
       "matchday": 2,
@@ -187,9 +187,9 @@
       "away": "ジェノア",
       "homeSlug": "lazio",
       "awaySlug": "genoa",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "YtfUV294hGo"
     },
     {
       "matchday": 2,
@@ -198,9 +198,9 @@
       "away": "インテル",
       "homeSlug": "cagliari",
       "awaySlug": "inter",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "rQaUtoggWDw"
     },
     {
       "matchday": 2,
@@ -209,9 +209,9 @@
       "away": "ローマ",
       "homeSlug": "lecce",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-4",
+      "videoId": "u7dUrTt4_FM"
     },
     {
       "matchday": 2,
@@ -220,9 +220,9 @@
       "away": "ボローニャ",
       "homeSlug": "atalanta",
       "awaySlug": "bologna",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "LYOXkS8JqM0"
     },
     {
       "matchday": 3,
@@ -314,7 +314,7 @@
     },
     {
       "matchday": 3,
-      "dateUTC": "2026-09-07T16:00:00Z",
+      "dateUTC": "2026-09-07T16:30:00Z",
       "home": "カリアリ",
       "away": "レッチェ",
       "homeSlug": "cagliari",
@@ -359,10 +359,10 @@
     {
       "matchday": 4,
       "dateUTC": "2026-09-12T16:00:00Z",
-      "home": "サッスオーロ",
-      "away": "ユベントス",
-      "homeSlug": "sassuolo",
-      "awaySlug": "juventus",
+      "home": "ラツィオ",
+      "away": "ミラン",
+      "homeSlug": "lazio",
+      "awaySlug": "milan",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -374,28 +374,6 @@
       "away": "カリアリ",
       "homeSlug": "atalanta",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 4,
-      "dateUTC": "2026-09-13T10:30:00Z",
-      "home": "トリノ",
-      "away": "ローマ",
-      "homeSlug": "torino",
-      "awaySlug": "roma",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 4,
-      "dateUTC": "2026-09-13T13:00:00Z",
-      "home": "コモ",
-      "away": "パルマ",
-      "homeSlug": "como-1907",
-      "awaySlug": "parma",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -425,10 +403,32 @@
     {
       "matchday": 4,
       "dateUTC": "2026-09-13T18:45:00Z",
-      "home": "ラツィオ",
-      "away": "ミラン",
-      "homeSlug": "lazio",
-      "awaySlug": "milan",
+      "home": "サッスオーロ",
+      "away": "ユベントス",
+      "homeSlug": "sassuolo",
+      "awaySlug": "juventus",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-14T16:30:00Z",
+      "home": "コモ",
+      "away": "パルマ",
+      "homeSlug": "como-1907",
+      "awaySlug": "parma",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "2026-09-14T16:30:00Z",
+      "home": "トリノ",
+      "away": "ローマ",
+      "homeSlug": "torino",
+      "awaySlug": "roma",
       "finished": false,
       "score": "",
       "videoId": ""
