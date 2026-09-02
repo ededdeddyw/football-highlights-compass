@@ -666,6 +666,17 @@
     },
     {
       "matchday": 7,
+      "dateUTC": "2026-09-18T19:00:00Z",
+      "home": "エスパニョール",
+      "away": "エルチェ",
+      "homeSlug": "espanyol",
+      "awaySlug": "elche",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
       "dateUTC": "2026-09-19T12:00:00Z",
       "home": "オサスナ",
       "away": "ラーヨ・バジェカーノ",
@@ -710,28 +721,6 @@
     },
     {
       "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "バレンシア",
-      "away": "レアル・ソシエダ",
-      "homeSlug": "valencia",
-      "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 7,
-      "dateUTC": "2026-09-20T00:00:00Z",
-      "home": "エスパニョール",
-      "away": "エルチェ",
-      "homeSlug": "espanyol",
-      "awaySlug": "elche",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 7,
       "dateUTC": "2026-09-20T12:00:00Z",
       "home": "ヘタフェ",
       "away": "マラガ",
@@ -770,6 +759,17 @@
       "away": "レバンテ",
       "homeSlug": "villarreal",
       "awaySlug": "levante",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "2026-09-20T19:00:00Z",
+      "home": "バレンシア",
+      "away": "レアル・ソシエダ",
+      "homeSlug": "valencia",
+      "awaySlug": "real-sociedad",
       "finished": false,
       "score": "",
       "videoId": ""

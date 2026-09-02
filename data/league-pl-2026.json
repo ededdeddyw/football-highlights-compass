@@ -480,17 +480,6 @@
     {
       "matchday": 5,
       "dateUTC": "2026-09-19T14:00:00Z",
-      "home": "リーズ",
-      "away": "クリスタル・パレス",
-      "homeSlug": "leeds-united",
-      "awaySlug": "crystal-palace",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 5,
-      "dateUTC": "2026-09-19T14:00:00Z",
       "home": "ブライトン",
       "away": "アーセナル",
       "homeSlug": "brighton-hove",
@@ -528,6 +517,17 @@
       "away": "リバプール",
       "homeSlug": "bournemouth",
       "awaySlug": "liverpool",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "2026-09-20T13:00:00Z",
+      "home": "リーズ",
+      "away": "クリスタル・パレス",
+      "homeSlug": "leeds-united",
+      "awaySlug": "crystal-palace",
       "finished": false,
       "score": "",
       "videoId": ""
