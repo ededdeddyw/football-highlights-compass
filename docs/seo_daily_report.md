@@ -2,16 +2,16 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-09-01
+> 最終更新: 2026-09-02
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **8** ↑2
-- 表示(7日): **666** ↑39
-- 平均順位(7日): **28.1** ↑1.6（数字が小さいほど上位）
-- CTR(7日): **1.2%**
+- クリック(7日): **7** ↓1
+- 表示(7日): **650** ↓16
+- 平均順位(7日): **28.8** ↑0.7（数字が小さいほど上位）
+- CTR(7日): **1.1%**
 - サイトマップ indexed: **0** / submitted 3615 →
   - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。
-- GA ユーザー(28日): **78** / セッション 93
+- GA ユーザー(28日): **76** / セッション 95
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -27,7 +27,7 @@
 | espanyol | 0 | 1 | 61.0 |
 | f 組 | 0 | 1 | 56.0 |
 | fc メス | 0 | 1 | 68.0 |
-| fc 東京 本拠地 | 0 | 27 | 38.7 |
+| fc 東京 本拠地 | 0 | 26 | 39.0 |
 | fcメス | 0 | 1 | 18.0 |
 | fc東京 カラー | 0 | 2 | 11.5 |
 | fc東京 本拠地 | 0 | 1 | 27.0 |
@@ -36,53 +36,52 @@
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
 | /club/real-betis-balompie.html | 2 | 82 | 13.3 |
-| / | 1 | 68 | 9.7 |
-| /club/borussia-dortmund.html | 1 | 43 | 25.1 |
-| /club/espanyol-barcelona.html | 1 | 53 | 17.6 |
-| /club/rb-leipzig.html | 1 | 102 | 18.6 |
-| /club/torino.html | 1 | 13 | 8.3 |
-| /country/belgium.html | 1 | 120 | 9.4 |
-| /country/spain.html | 1 | 37 | 11.7 |
-| /group/c.html | 1 | 26 | 30.0 |
+| / | 1 | 68 | 9.8 |
+| /club/borussia-dortmund.html | 1 | 44 | 24.8 |
+| /club/espanyol-barcelona.html | 1 | 56 | 20.2 |
+| /club/rb-leipzig.html | 1 | 103 | 19.3 |
+| /club/torino.html | 1 | 14 | 8.4 |
+| /country/belgium.html | 1 | 106 | 9.7 |
+| /country/spain.html | 1 | 36 | 11.6 |
+| /group/c.html | 1 | 25 | 31.1 |
 | /guide/kubo-takefusa-highlights.html | 1 | 11 | 11.1 |
 | /match/JvsTwIDJNII.html | 1 | 6 | 7.7 |
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 1 | 2 | 6.5 |
 | /match/sa-2526-md36-parma-roma.html | 1 | 2 | 18.0 |
 | /about.html | 0 | 1 | 2.0 |
-| /club/atletico-madrid.html | 0 | 38 | 15.6 |
+| /club/atletico-madrid.html | 0 | 38 | 15.7 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Organic Search | 57 | 23 | 143 |
-| Direct | 24 | 5 | 6 |
-| Unassigned | 10 | 0 | 1094 |
-| AI Assistant | 7 | 4 | 1556 |
+| Organic Search | 56 | 29 | 142 |
+| Direct | 23 | 5 | 6 |
+| AI Assistant | 11 | 8 | 1088 |
 | Referral | 3 | 1 | 4 |
+| Unassigned | 2 | 0 | 5 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 44 | 26 | 773 |
-| /match/3twjzNKlYWc.html | 8 | 3 | 79 |
+| / | 45 | 27 | 798 |
+| /match/3twjzNKlYWc.html | 11 | 3 | 79 |
 | /league/serie-a.html | 4 | 2 | 20 |
 | /match/3jIMk43CECY.html | 4 | 1 | 16 |
 | /club/eintracht-frankfurt.html | 3 | 3 | 0 |
+| /club/lille.html | 3 | 1 | 92 |
 | /country/belgium.html | 3 | 3 | 43 |
-| /guide/world-cup-2026-how-to-watch.html | 3 | 3 | 261 |
 | /league/premier-league.html | 3 | 3 | 29 |
 | /match/2raR8K6S8uQ.html | 3 | 1 | 1 |
 | /match/ED28CZxLiIQ.html | 3 | 1 | 2 |
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 3 | 1 | 6 |
 | /about.html | 2 | 2 | 9 |
-| /club/lille.html | 2 | 1 | 92 |
 | /club/real-betis-balompie.html | 2 | 2 | 54 |
 | /club/torino.html | 2 | 1 | 16 |
+| /group/c.html | 2 | 2 | 10 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-08-23 | 3 | 597 | 22.2 | 0 | 68 |
 | 2026-08-24 | 3 | 603 | 20.8 | 0 | 66 |
 | 2026-08-25 | 3 | 634 | 17.8 | 0 | 68 |
 | 2026-08-26 | 1 | 625 | 17.8 | 0 | 72 |
@@ -92,16 +91,16 @@
 | 2026-08-30 | 5 | 640 | 22.7 | 0 | 78 |
 | 2026-08-31 | 6 | 627 | 26.5 | 0 | 80 |
 | 2026-09-01 | 8 | 666 | 28.1 | 0 | 78 |
+| 2026-09-02 | 7 | 650 | 28.8 | 0 | 76 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 305 | 3 | 1.0% |
-| W杯国別（/country/） | 221 | 1 | 0.5% |
+| クラブ/リーグ（/club/・/league/） | 284 | 2 | 0.7% |
+| W杯国別（/country/） | 215 | 1 | 0.5% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
-| 2026-08-23 | 298 | 211 |
 | 2026-08-24 | 318 | 183 |
 | 2026-08-25 | 329 | 190 |
 | 2026-08-26 | 324 | 188 |
@@ -111,4 +110,5 @@
 | 2026-08-30 | 330 | 207 |
 | 2026-08-31 | 320 | 213 |
 | 2026-09-01 | 305 | 221 |
+| 2026-09-02 | 284 | 215 |
 
