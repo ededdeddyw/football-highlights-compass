@@ -799,17 +799,6 @@
     {
       "matchday": 8,
       "dateUTC": "2026-10-24T14:00:00Z",
-      "home": "リバプール",
-      "away": "ブライトン",
-      "homeSlug": "liverpool",
-      "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 8,
-      "dateUTC": "2026-10-24T14:00:00Z",
       "home": "アーセナル",
       "away": "エバートン",
       "homeSlug": "arsenal",
@@ -836,6 +825,17 @@
       "away": "トッテナム",
       "homeSlug": "chelsea",
       "awaySlug": "tottenham",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-10-25T14:00:00Z",
+      "home": "リバプール",
+      "away": "ブライトン",
+      "homeSlug": "liverpool",
+      "awaySlug": "brighton-hove",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -963,7 +963,7 @@
     },
     {
       "matchday": 9,
-      "dateUTC": "2026-11-01T14:00:00Z",
+      "dateUTC": "2026-10-31T20:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "フラム",
       "homeSlug": "aston-villa",
