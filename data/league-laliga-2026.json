@@ -561,9 +561,9 @@
       "away": "セルタ",
       "homeSlug": "real-sociedad",
       "awaySlug": "celta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "jmrGAcizaCk"
     },
     {
       "matchday": 6,
