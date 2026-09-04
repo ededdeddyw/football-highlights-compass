@@ -2,16 +2,16 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-09-03
+> 最終更新: 2026-09-04
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **7** →
-- 表示(7日): **721** ↑71
-- 平均順位(7日): **26.5** ↓2.3（数字が小さいほど上位）
+- クリック(7日): **8** ↑1
+- 表示(7日): **804** ↑83
+- 平均順位(7日): **26.3** ↓0.2（数字が小さいほど上位）
 - CTR(7日): **1.0%**
 - サイトマップ indexed: **0** / submitted 3680 →
   - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。
-- GA ユーザー(28日): **76** / セッション 96
+- GA ユーザー(28日): **79** / セッション 100
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -27,7 +27,7 @@
 | espanyol | 0 | 1 | 61.0 |
 | f 組 | 0 | 1 | 56.0 |
 | fc メス | 0 | 1 | 68.0 |
-| fc 東京 本拠地 | 0 | 23 | 39.3 |
+| fc 東京 本拠地 | 0 | 22 | 39.7 |
 | fcメス | 0 | 1 | 18.0 |
 | fc東京 カラー | 0 | 2 | 11.5 |
 | fc東京 本拠地 | 0 | 1 | 27.0 |
@@ -35,55 +35,54 @@
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /club/real-betis-balompie.html | 2 | 82 | 13.3 |
-| / | 1 | 73 | 9.7 |
-| /club/borussia-dortmund.html | 1 | 41 | 25.8 |
+| / | 2 | 73 | 9.7 |
+| /club/olympique-lyonnais.html | 2 | 192 | 8.7 |
+| /club/real-betis-balompie.html | 2 | 83 | 14.9 |
+| /club/borussia-dortmund.html | 1 | 43 | 26.6 |
 | /club/espanyol-barcelona.html | 1 | 56 | 20.2 |
-| /club/olympique-lyonnais.html | 1 | 105 | 8.8 |
-| /club/rb-leipzig.html | 1 | 100 | 19.2 |
+| /club/rb-leipzig.html | 1 | 101 | 19.7 |
 | /club/torino.html | 1 | 15 | 8.3 |
-| /country/belgium.html | 1 | 108 | 9.8 |
-| /country/spain.html | 1 | 34 | 11.7 |
-| /group/c.html | 1 | 25 | 31.8 |
-| /guide/kubo-takefusa-highlights.html | 1 | 11 | 11.1 |
+| /country/belgium.html | 1 | 89 | 10.1 |
+| /country/spain.html | 1 | 33 | 11.8 |
+| /group/c.html | 1 | 30 | 32.2 |
+| /guide/kubo-takefusa-highlights.html | 1 | 10 | 11.5 |
+| /guide/world-cup-2026-how-to-watch.html | 1 | 1 | 11.0 |
 | /match/JvsTwIDJNII.html | 1 | 6 | 7.7 |
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 1 | 2 | 6.5 |
 | /match/sa-2526-md36-parma-roma.html | 1 | 2 | 18.0 |
-| /about.html | 0 | 1 | 2.0 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Organic Search | 60 | 31 | 137 |
+| Organic Search | 62 | 35 | 133 |
 | Direct | 21 | 3 | 5 |
-| AI Assistant | 11 | 9 | 1073 |
-| Unassigned | 4 | 0 | 16 |
+| AI Assistant | 12 | 9 | 1006 |
 | Referral | 3 | 1 | 4 |
-| Cross-network | 1 | 0 | 25 |
+| Unassigned | 2 | 0 | 36 |
+| Cross-network | 1 | 0 | 0 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
 | / | 42 | 26 | 805 |
 | /match/3twjzNKlYWc.html | 11 | 3 | 79 |
+| /match/3jIMk43CECY.html | 5 | 1 | 20 |
 | /league/serie-a.html | 4 | 2 | 20 |
-| /match/3jIMk43CECY.html | 4 | 1 | 16 |
 | /club/eintracht-frankfurt.html | 3 | 3 | 0 |
-| /club/lille.html | 3 | 1 | 92 |
+| /club/lille.html | 3 | 2 | 104 |
 | /club/torino.html | 3 | 1 | 16 |
 | /country/belgium.html | 3 | 3 | 43 |
+| /guide/kubo-takefusa-highlights.html | 3 | 2 | 12 |
+| /league/laliga.html | 3 | 3 | 66 |
 | /league/premier-league.html | 3 | 3 | 29 |
 | /match/2raR8K6S8uQ.html | 3 | 1 | 1 |
 | /match/ED28CZxLiIQ.html | 3 | 1 | 2 |
 | /match/sa-2526-md28-acf-fiorentina-parma.html | 3 | 1 | 6 |
 | /about.html | 2 | 2 | 9 |
-| /club/olympique-lyonnais.html | 2 | 2 | 27 |
-| /club/real-betis-balompie.html | 2 | 2 | 54 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-08-25 | 3 | 634 | 17.8 | 0 | 68 |
 | 2026-08-26 | 1 | 625 | 17.8 | 0 | 72 |
 | 2026-08-28 | 2 | 560 | 18.6 | 0 | 76 |
 | 2026-08-28 | 3 | 662 | 19.6 | 0 | 79 |
@@ -93,16 +92,16 @@
 | 2026-09-01 | 8 | 666 | 28.1 | 0 | 78 |
 | 2026-09-02 | 7 | 650 | 28.8 | 0 | 76 |
 | 2026-09-03 | 7 | 721 | 26.5 | 0 | 76 |
+| 2026-09-04 | 8 | 804 | 26.3 | 0 | 79 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 354 | 3 | 0.8% |
-| W杯国別（/country/） | 219 | 1 | 0.5% |
+| クラブ/リーグ（/club/・/league/） | 417 | 3 | 0.7% |
+| W杯国別（/country/） | 219 | 0 | 0.0% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
-| 2026-08-25 | 329 | 190 |
 | 2026-08-26 | 324 | 188 |
 | 2026-08-28 | 304 | 156 |
 | 2026-08-28 | 354 | 189 |
@@ -112,4 +111,5 @@
 | 2026-09-01 | 305 | 221 |
 | 2026-09-02 | 284 | 215 |
 | 2026-09-03 | 354 | 219 |
+| 2026-09-04 | 417 | 219 |
 
