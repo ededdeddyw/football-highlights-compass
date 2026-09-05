@@ -231,8 +231,8 @@
       "away": "リバプール",
       "homeSlug": "ipswich-town",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {

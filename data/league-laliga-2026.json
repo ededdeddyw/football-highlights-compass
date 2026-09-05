@@ -341,9 +341,9 @@
       "away": "レアル・マドリード",
       "homeSlug": "real-betis",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "rBSh5tzNeL8"
     },
     {
       "matchday": 4,

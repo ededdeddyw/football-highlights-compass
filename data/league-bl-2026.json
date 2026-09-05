@@ -110,9 +110,9 @@
       "away": "ケルン",
       "homeSlug": "vfb-stuttgart",
       "awaySlug": "1-fc-koln",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-1",
+      "videoId": "aqCJdDtkd5Q"
     },
     {
       "matchday": 2,

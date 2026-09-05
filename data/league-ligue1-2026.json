@@ -220,9 +220,9 @@
       "away": "オセール",
       "homeSlug": "olympique-lyon",
       "awaySlug": "auxerre",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "5__L5__2O50"
     },
     {
       "matchday": 3,
@@ -231,9 +231,9 @@
       "away": "モナコ",
       "homeSlug": "psg",
       "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "5B0t5BkZlck"
     },
     {
       "matchday": 3,
