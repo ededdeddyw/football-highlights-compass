@@ -1857,7 +1857,8 @@ function buildLeague(h){
   <ul class="fx">${fixtures.map(m=>{ const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
     const hn=hs?`<a href="../club/${hs}.html">${esc(m.home)}</a>`:esc(m.home); const an=as?`<a href="../club/${as}.html">${esc(m.away)}</a>`:esc(m.away);
     return `<li><span class="fx-d">${fixtureJst(m.dateUTC)}</span><span class="fx-m">${hn} <em>vs</em> ${an}</span></li>`; }).join('')}</ul>
-  <p class="stand-note">※ 日本時間。日程・時刻は変更される場合があります。試合後は公式ハイライトを掲載します。</p>` : '';
+  <p class="stand-note">※ 日本時間。日程・時刻は変更される場合があります。試合後は公式ハイライトを掲載します。</p>
+  <p style="margin:6px 2px 0"><a href="../schedule/">▶ 欧州5大リーグ 今週の試合日程（全リーグ横断）</a></p>` : '';
   const standTable = stand.length ? `<h2 class="lined">${esc(h.name)} 順位表</h2>
   <div class="stand-wrap"><table class="stand"><thead><tr><th>#</th><th>クラブ</th><th title="試合数">試</th><th title="勝ち">勝</th><th title="引き分け">分</th><th title="負け">敗</th><th title="得失点差">得失</th><th title="勝点">点</th></tr></thead><tbody>
   ${stand.map(r=>{ const cs=CLUBS[r.name]&&CLUBS[r.name].slug; const nm=cs?`<a href="../club/${cs}.html">${esc(r.name)}</a>`:esc(r.name); return `<tr><td class="rk">${r.pos}</td><td class="tm">${nm}</td><td>${r.played}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`; }).join('')}
@@ -1888,6 +1889,59 @@ function buildLeague(h){
   leagueUrls.push(url);
 }
 for(const h of LEAGUE_LIST) buildLeague(h);
+
+// ========================= 全リーグ横断「今週の試合日程」ページ =========================
+// 欧州5大リーグの未消化試合を日本時間の日付でまとめる。「今日/今週の試合」系の広い検索需要＋日次の再訪動線。
+let scheduleUrl = '';
+{
+  const cut = new Date(`${TODAY}T00:00:00+09:00`).getTime();
+  const horizon = cut + 12*24*3600*1000;   // 今日から12日先まで
+  const all = [];
+  for(const code in LEAGUE_UPCOMING){
+    if(!LEAGUE_META[code]) continue;   // 5大リーグのみ
+    for(const m of LEAGUE_UPCOMING[code]){
+      const t = new Date(m.dateUTC).getTime();
+      if(isNaN(t) || t<cut || t>horizon) continue;
+      all.push({ ...m, code, t });
+    }
+  }
+  all.sort((a,b)=> a.t-b.t);
+  if(all.length){
+    // 日本時間の日付キーでグループ化
+    const dayKey = iso => { const d=new Date(new Date(iso).getTime()+9*3600*1000); return `${d.getUTCFullYear()}/${String(d.getUTCMonth()+1).padStart(2,'0')}/${String(d.getUTCDate()).padStart(2,'0')}`; };
+    const dayLabel = iso => { const d=new Date(new Date(iso).getTime()+9*3600*1000); const w='日月火水木金土'[d.getUTCDay()]; return `${d.getUTCMonth()+1}月${d.getUTCDate()}日（${w}）`; };
+    const jstTime = iso => { const d=new Date(new Date(iso).getTime()+9*3600*1000); const hh=d.getUTCHours(),mm=d.getUTCMinutes(); return (hh===0&&mm===0)?'時刻未定':`${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`; };
+    const groups = [];
+    for(const m of all){ const k=dayKey(m.dateUTC); let g=groups.find(x=>x.k===k); if(!g){ g={k, label:dayLabel(m.dateUTC), rows:[]}; groups.push(g); } g.rows.push(m); }
+    const leagueHub = code => (LEAGUE_META[code]||{}).hub;
+    const css = `<style>.sc-day{margin:18px 0 6px;font-size:15px;font-weight:800;padding-bottom:4px;border-bottom:2px solid var(--accent)}.sc-list{list-style:none;margin:0 0 6px;padding:0}.sc-row{display:flex;gap:10px;align-items:baseline;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}.sc-t{color:var(--muted);font-size:12.5px;min-width:4.2em;font-variant-numeric:tabular-nums}.sc-lg{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:1px 7px;white-space:nowrap}.sc-lg a{color:var(--muted);text-decoration:none}.sc-m{font-weight:700}.sc-m a{color:var(--accent);text-decoration:none}.sc-m a:hover{text-decoration:underline}.sc-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 5px}.sc-md{font-size:11px;color:var(--muted)}</style>`;
+    const body = groups.map(g=>`<div class="sc-day">${esc(g.label)}</div><ul class="sc-list">${g.rows.map(m=>{
+      const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
+      const hn=hs?`<a href="../club/${hs}.html">${esc(m.home)}</a>`:esc(m.home); const an=as?`<a href="../club/${as}.html">${esc(m.away)}</a>`:esc(m.away);
+      const hub=leagueHub(m.code); const lg=(LEAGUE_META[m.code]||{}).jp||'';
+      const lgHtml=hub?`<a href="../${hub}">${esc(lg)}</a>`:esc(lg);
+      return `<li class="sc-row"><span class="sc-t">${esc(jstTime(m.dateUTC))}</span><span class="sc-lg">${lgHtml}</span><span class="sc-m">${hn} <em>vs</em> ${an}</span>${m.matchday!=null?`<span class="sc-md">第${m.matchday}節</span>`:''}</li>`;
+    }).join('')}</ul>`).join('');
+    const path='schedule/index.html', url=`${DOMAIN}/schedule/`; scheduleUrl=url;
+    mkdirSync('site/schedule', { recursive:true });
+    const firstD=all[0], lastD=all[all.length-1];
+    const desc=`欧州5大リーグ（プレミア・ラ・リーガ・セリエA・ブンデス・リーグアン）の今週の試合日程を日本時間で一覧。キックオフ時刻・対戦カード・節をまとめ、試合後は公式ハイライトへ。`.slice(0,120);
+    const hubs = LEAGUE_LIST.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('');
+    const graph=[{"@type":"CollectionPage","name":"今週の試合日程｜欧州5大リーグ","url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'試合日程',url}])];
+    const head=HEAD({ title:`今週の試合日程｜欧州5大リーグ（日本時間）- Football Highlights Compass`, ogtitle:`今週の試合日程｜欧州5大リーグ（日本時間）`, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+    const out = head + TOPBAR + css + `<article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:'試合日程'}])}
+  <p class="kicker">📅 試合日程</p>
+  <h1 class="headline">今週の試合日程｜欧州5大リーグ</h1>
+  <p class="dek">プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアンの直近の試合日程を<strong>日本時間</strong>でまとめています（${esc(dayLabel(firstD.dateUTC))}〜${esc(dayLabel(lastD.dateUTC))}）。キックオフ時刻・対戦カードを確認して、試合後は各カードの公式ハイライトへ。</p>
+  ${body}
+  <h2 class="lined">リーグ別のハブ</h2><div class="chips">${hubs}</div>
+  ${daznCta('欧州5大リーグのフル・見逃し配信はDAZNで。')}
+  ${AD}
+  ` + FOOTER();
+    writeFileSync(`site/${path}`, out);
+  }
+}
 
 // ========================= 集客記事（ガイド）の生成 =========================
 mkdirSync('site/guide', { recursive:true });
@@ -2110,6 +2164,7 @@ const PICKUP_HTML = (()=>{
 
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
+if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
 for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
