@@ -1270,6 +1270,8 @@ try {
 const SLUG2LEAGUE = {};
 const RAIL_TABLE = {};
 const CLUB_HL = {};
+const CLUB_NEXT = {};
+const DATA_SLUG_BY_JA = {};
 const RAIL_UPDATED = {};
 const LEAGUE_RECENT = {};   // code -> 動画あり試合（新しい順）。リーグハブの「最新ハイライト」用
 const LEAGUE_UPCOMING = {}; // code -> 未消化試合（日付昇順）。リーグハブの「次節の試合日程」用
@@ -1285,6 +1287,8 @@ try {
       const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away);
       if (hs) SLUG2LEAGUE[hs] = code;
       if (as) SLUG2LEAGUE[as] = code;
+      if (hs && mt.home) DATA_SLUG_BY_JA[mt.home] = hs;   // 日本語名→データ側slug（クラブ図鑑slugとのズレを自動解決）
+      if (as && mt.away) DATA_SLUG_BY_JA[mt.away] = as;
       if (mt.videoId){
         const ms = leagueSlug(mt, L);
         (LEAGUE_RECENT[code]=LEAGUE_RECENT[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC||'', videoId:mt.videoId, ms });
@@ -1312,6 +1316,13 @@ try {
   for (const s in CLUB_HL){ CLUB_HL[s].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
   for (const c in LEAGUE_RECENT){ LEAGUE_RECENT[c].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
   for (const c in LEAGUE_UPCOMING){ LEAGUE_UPCOMING[c].sort((a,b)=> String(a.dateUTC).localeCompare(String(b.dateUTC))); }
+  // CLUB_NEXT: クラブslug → 最も近い「今日以降」の試合（クラブページの左レール「次の試合」用）
+  { const cut = new Date(`${TODAY}T00:00:00+09:00`).getTime();
+    for (const c in LEAGUE_UPCOMING) for (const m of LEAGUE_UPCOMING[c]){
+      const t = new Date(m.dateUTC).getTime(); if (isNaN(t) || t < cut) continue;
+      if (m.homeSlug && !CLUB_NEXT[m.homeSlug]) CLUB_NEXT[m.homeSlug] = { opp:m.away, ha:'H', dateUTC:m.dateUTC, matchday:m.matchday, code:c };
+      if (m.awaySlug && !CLUB_NEXT[m.awaySlug]) CLUB_NEXT[m.awaySlug] = { opp:m.home, ha:'A', dateUTC:m.dateUTC, matchday:m.matchday, code:c };
+    } }
 } catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
 
 // 日付を日本時間の YYYY/MM/DD に（ネタバレ防止の右レール表示用）
@@ -1337,9 +1348,27 @@ const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-
   'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen',
   'as-monaco':'monaco', 'psg':'paris-saint-germain', 'marseille':'olympique-marseille',
   'ac-milan':'milan', 'inter':'internazionale-milano', 'as-roma':'roma', 'fiorentina':'acf-fiorentina' };
+// PAGE2DATA: クラブ図鑑slug → データ側slug を自動解決（既存一致→手動別名→日本語名一致 の順）。
+// slug表記ゆれ（例: fc-barcelona→barca, olympique-lyonnais→olympique-lyon）でも順位表・ハイライト・次の試合の各レールが引き当たる。
+const PAGE2DATA = {};
+{
+  // 現行シーズンの順位表slugのみを「有効slug集合」とする（CLUB_HL等の旧シーズンslugは混ぜない＝手動別名の誤ヒット防止）。
+  const DATA_SLUGS = new Set();
+  for (const c in RAIL_TABLE) for (const r of RAIL_TABLE[c]) DATA_SLUGS.add(r.slug);
+  for (const [nm,info] of Object.entries(CLUBS)){
+    const ps = info && info.slug; if(!ps || PAGE2DATA[ps]) continue;
+    const byJa = DATA_SLUG_BY_JA[nm];   // 日本語名一致＝現行データ準拠でもっとも信頼できる
+    const ds = DATA_SLUGS.has(ps) ? ps
+      : (byJa && DATA_SLUGS.has(byJa)) ? byJa
+      : (RAIL_ALIAS[ps] && DATA_SLUGS.has(RAIL_ALIAS[ps])) ? RAIL_ALIAS[ps]
+      : (byJa || '');
+    if (ds) PAGE2DATA[ps] = ds;
+  }
+}
+const railSlug = s => PAGE2DATA[s] || RAIL_ALIAS[s] || s;
 // 左レール：順位表（対象クラブ中心・前後数行）
 function railStandings(clubSlug){
-  clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
+  clubSlug = railSlug(clubSlug);
   const code = SLUG2LEAGUE[clubSlug];
   const rows = code && RAIL_TABLE[code];
   if(!rows || !rows.length) return '';
@@ -1356,6 +1385,21 @@ function railStandings(clubSlug){
   const more = hub ? `<a class="rail-more" href="../${hub}">リーグ全体を見る →</a>` : '';
   return `<div class="rail-card"><div class="rail-h">📊 順位表（現在）</div><table class="rail-table"><thead><tr><th>#</th><th>クラブ</th><th>試</th><th>得失</th><th>点</th></tr></thead><tbody>${body}</tbody></table>${upd}${more}</div>`;
 }
+// 左レール：次の試合（CLUB_NEXT＝リーグJSONの未消化・最も近い試合）。共有CSSは増やさずインライン装飾。
+function railNextMatch(clubSlug){
+  clubSlug = railSlug(clubSlug);
+  const n = CLUB_NEXT[clubSlug];
+  if(!n) return '';
+  const meta = LEAGUE_META[n.code] || {};
+  const when = fixtureJst(n.dateUTC);
+  const vs = n.ha==='H' ? 'vs' : '@';
+  const md = n.matchday!=null ? `第${n.matchday}節` : '';
+  const hub = meta.hub ? `<a class="rail-more" href="../${meta.hub}">日程をすべて見る →</a>` : '';
+  return `<div class="rail-card"><div class="rail-h">⚽ 次の試合</div>`
+    + `<div style="padding:2px 2px 4px"><div style="font-size:12px;color:var(--muted)">${esc(when)}${md?'・'+esc(md):''}</div>`
+    + `<div style="font-weight:800;font-size:15px;margin-top:3px">${esc(vs)} ${esc(n.opp)}</div>`
+    + `<div style="font-size:11.5px;color:var(--muted);margin-top:2px">${esc(meta.jp||'')}${n.ha==='H'?'（ホーム）':'（アウェイ）'}</div></div>${hub}</div>`;
+}
 // 左レール：フォーメーション（DEEP[name].formation があれば）
 function railFormation(name){
   const d = DEEP[name];
@@ -1371,6 +1415,8 @@ function railFacts(info, flag){
 }
 // 右レール：最新ハイライト（新しい順・最大12・スコアは出さない）
 function railHighlights(clubSlug){
+  // ハイライトrailは従来の解決（RAIL_ALIAS）を維持。railSlugは現行シーズンslugを優先するため、
+  // 旧シーズンに紐づく既存ハイライトが減る場合があり、ここでは既存挙動を変えない（次の試合・順位表のみ改善）。
   clubSlug = RAIL_ALIAS[clubSlug] || clubSlug;
   const hl = (CLUB_HL[clubSlug]||[]).slice(0,12);
   const head = `<div class="rail-h">🎬 最新ハイライト</div>`;
@@ -1534,7 +1580,7 @@ function buildClub(name, info){
     // titleは検索結果でのピクセル幅切れ防止のため簡潔に（旧: 「（歴史・本拠地・スタイル） - Football Highlights Compass」を付与＝長すぎて表示上切れていた）
     const rHead = HEAD({ title:`${name}｜${info.league}の歴史・本拠地・ハイライト動画`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
     // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
-    const leftRail = railStandings(slug) + railFormation(name) + railFacts(info, flag);
+    const leftRail = railStandings(slug) + railNextMatch(slug) + railFormation(name) + railFacts(info, flag);
     const rightRail = railHighlights(slug);
     const rOut = rHead + TOPBAR + `<div class="cl-shell">
   <aside class="cl-rail cl-rail-left" id="railLeft" aria-label="クラブ情報"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${leftRail}</aside>
