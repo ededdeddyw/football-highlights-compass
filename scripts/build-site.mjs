@@ -1272,6 +1272,7 @@ const RAIL_TABLE = {};
 const CLUB_HL = {};
 const RAIL_UPDATED = {};
 const LEAGUE_RECENT = {};   // code -> 動画あり試合（新しい順）。リーグハブの「最新ハイライト」用
+const LEAGUE_UPCOMING = {}; // code -> 未消化試合（日付昇順）。リーグハブの「次節の試合日程」用
 try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     let j; try { j = JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch(e){ continue; }
@@ -1290,6 +1291,9 @@ try {
         if (hs) (CLUB_HL[hs]=CLUB_HL[hs]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.away, ha:'H', ms });
         if (as) (CLUB_HL[as]=CLUB_HL[as]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.home, ha:'A', ms });
       }
+      if (!mt.finished && mt.dateUTC){
+        (LEAGUE_UPCOMING[code]=LEAGUE_UPCOMING[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC, homeSlug:hs, awaySlug:as });
+      }
       const sc = /^(\d+)\s*-\s*(\d+)$/.exec(mt.score||'');
       if (mt.finished && sc && hs && as){
         const gh=+sc[1], ga=+sc[2], rh=row(hs,mt.home), ra=row(as,mt.away);
@@ -1307,6 +1311,7 @@ try {
   }
   for (const s in CLUB_HL){ CLUB_HL[s].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
   for (const c in LEAGUE_RECENT){ LEAGUE_RECENT[c].sort((a,b)=> String(b.dateUTC).localeCompare(String(a.dateUTC))); }
+  for (const c in LEAGUE_UPCOMING){ LEAGUE_UPCOMING[c].sort((a,b)=> String(a.dateUTC).localeCompare(String(b.dateUTC))); }
 } catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
 
 // 日付を日本時間の YYYY/MM/DD に（ネタバレ防止の右レール表示用）
@@ -1315,6 +1320,16 @@ function railJstYmd(iso){
   const d = new Date(iso); if(isNaN(d.getTime())) return '';
   const t = new Date(d.getTime() + 9*3600*1000);
   return `${t.getUTCFullYear()}/${String(t.getUTCMonth()+1).padStart(2,'0')}/${String(t.getUTCDate()).padStart(2,'0')}`;
+}
+// 日程表示用：日本時間の「M/D(曜) HH:MM」。キックオフ時刻が0:00（＝時刻未確定）なら日付のみ。
+function fixtureJst(iso){
+  if(!iso) return '';
+  const d = new Date(iso); if(isNaN(d.getTime())) return '';
+  const t = new Date(d.getTime() + 9*3600*1000);
+  const w = '日月火水木金土'[t.getUTCDay()];
+  const hh = t.getUTCHours(), mm = t.getUTCMinutes();
+  const base = `${t.getUTCMonth()+1}/${t.getUTCDate()}(${w})`;
+  return (hh===0 && mm===0) ? base : `${base} ${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
 }
 // クラブ図鑑のslug と 試合データ側slug がずれるクラブの別名対応（レールのデータ引き当て用）。
 const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-futbol',
@@ -1774,7 +1789,12 @@ function buildLeague(h){
   const { clubsIn, ms } = leagueMatches(h.clubLabel);
   const stand = RAIL_TABLE[h.code] || [];
   const recent = (LEAGUE_RECENT[h.code] || []).slice(0, 12);
-  if(!ms.length && !stand.length && !recent.length) return;   // byTeam試合・順位表・最新ハイライトのいずれも無ければ建てない
+  // 次節の試合日程：未消化試合のうち「今日以降（日本時間）」を最も近い節でまとめる
+  const upCutoff = new Date(`${TODAY}T00:00:00+09:00`).getTime();
+  const upFuture = (LEAGUE_UPCOMING[h.code] || []).filter(m=>{ const t=new Date(m.dateUTC).getTime(); return !isNaN(t) && t>=upCutoff; });
+  const upMd = upFuture.length ? upFuture[0].matchday : null;
+  const fixtures = (upMd!=null ? upFuture.filter(m=>m.matchday===upMd) : upFuture).slice(0, 12);
+  if(!ms.length && !stand.length && !recent.length && !fixtures.length) return;   // 試合・順位表・最新ハイライト・日程のいずれも無ければ建てない
   const path=`league/${h.slug}.html`, url=`${DOMAIN}/${path}`;
   const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>{ const cr=CREST[CLUBS[c].slug]; return `<a class="clubchip" href="../club/${CLUBS[c].slug}.html">${cr?`<img src="${cr}" alt="" loading="lazy">`:'🛡️'}${esc(c)}</a>`; }).join('');
   const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
@@ -1785,8 +1805,14 @@ function buildLeague(h){
   const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const desc = `${h.name}（${h.country}）の順位表と最新ハイライト動画。試合結果・順位表に加え、公式・権利元の映像のみ・ネタバレ防止で試合を掲載。`.slice(0,120);
   // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
-  const standCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}</style>`;
-  const standTable = stand.length ? `${standCss}<h2 class="lined">${esc(h.name)} 順位表</h2>
+  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}</style>`;
+  // 次節の日程（未消化・日本時間）。クラブは在庫があればクラブ図鑑へリンク。将来試合なのでスコアは無し＝ネタバレ配慮不要。
+  const fixTable = fixtures.length ? `<h2 class="lined">${esc(h.name)} 次の試合日程${upMd!=null?`（第${upMd}節）`:''}</h2>
+  <ul class="fx">${fixtures.map(m=>{ const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
+    const hn=hs?`<a href="../club/${hs}.html">${esc(m.home)}</a>`:esc(m.home); const an=as?`<a href="../club/${as}.html">${esc(m.away)}</a>`:esc(m.away);
+    return `<li><span class="fx-d">${fixtureJst(m.dateUTC)}</span><span class="fx-m">${hn} <em>vs</em> ${an}</span></li>`; }).join('')}</ul>
+  <p class="stand-note">※ 日本時間。日程・時刻は変更される場合があります。試合後は公式ハイライトを掲載します。</p>` : '';
+  const standTable = stand.length ? `<h2 class="lined">${esc(h.name)} 順位表</h2>
   <div class="stand-wrap"><table class="stand"><thead><tr><th>#</th><th>クラブ</th><th title="試合数">試</th><th title="勝ち">勝</th><th title="引き分け">分</th><th title="負け">敗</th><th title="得失点差">得失</th><th title="勝点">点</th></tr></thead><tbody>
   ${stand.map(r=>{ const cs=CLUBS[r.name]&&CLUBS[r.name].slug; const nm=cs?`<a href="../club/${cs}.html">${esc(r.name)}</a>`:esc(r.name); return `<tr><td class="rk">${r.pos}</td><td class="tm">${nm}</td><td>${r.played}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`; }).join('')}
   </tbody></table></div>
@@ -1801,7 +1827,9 @@ function buildLeague(h){
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  ${(standTable||fixTable)?hubCss:''}
   ${standTable}
+  ${fixTable}
   ${recentBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
