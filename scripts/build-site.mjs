@@ -1474,7 +1474,7 @@ function buildClub(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = crestUrl || (ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const dek = info.blurb[0]||'';
-  const desc = `${name}の最新ハイライト動画を${ms.length}試合分。${info.league}の試合日程・結果に加え、${info.founded}年創設・本拠地${info.stadium}などクラブ情報も。公式映像だけをネタバレ防止で。`.slice(0,120);
+  const desc = `${name}｜${info.league}の最新ハイライト動画・試合結果・順位表を、公式映像のみ・ネタバレ防止で。${info.founded}年創設、本拠地${info.stadium}。`.slice(0,120);
   const clgraph = [
     {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
@@ -1507,7 +1507,9 @@ function buildClub(name, info){
       embed = `<div class="source"><div class="source-head"><span class="tag embed">▶ 応援歌・雰囲気</span><span class="name">YouTube</span></div><div class="embedwrap"><iframe id="ytf_${vid}" src="https://www.youtube-nocookie.com/embed/${vid}?enablejsapi=1" loading="lazy" title="${escA(name)} 応援歌" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">YouTubeで見る<small>雰囲気動画</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
     }
     const dm = rich.match(/<!--DESC ([\s\S]*?)-->/);
-    const rDesc = dm ? dm[1].trim().slice(0,120) : desc;
+    // meta description は検索スニペット用に実利先頭（ハイライト・結果・順位表）で統一。
+    // クラブ固有の情緒テキスト(dm)は本文側(richBody)に残す。
+    const rDesc = desc;
     const richBody = rich
       .replace(/<!--CLUB[\s\S]*?-->\s*/, '')
       .replace(/<!--VIDEO id=[\s\S]*?-->\s*/, '')
