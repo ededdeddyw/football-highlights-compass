@@ -352,9 +352,9 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "athletic",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "zajs7NPb070"
     },
     {
       "matchday": 4,
@@ -363,9 +363,9 @@
       "away": "ラシン・サンタンデール",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "santander",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "LRRW8iZ28ks"
     },
     {
       "matchday": 4,
@@ -374,9 +374,9 @@
       "away": "デポルティボ",
       "homeSlug": "villarreal",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "g-X47GOLG5U"
     },
     {
       "matchday": 4,

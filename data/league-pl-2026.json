@@ -242,8 +242,8 @@
       "away": "ボーンマス",
       "homeSlug": "newcastle",
       "awaySlug": "bournemouth",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -253,9 +253,9 @@
       "away": "トッテナム",
       "homeSlug": "nottingham",
       "awaySlug": "tottenham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "iij9Gz7Ge2s"
     },
     {
       "matchday": 3,
@@ -264,8 +264,8 @@
       "away": "コベントリー",
       "homeSlug": "man-city",
       "awaySlug": "coventry-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {
@@ -275,9 +275,9 @@
       "away": "リーズ",
       "homeSlug": "brighton-hove",
       "awaySlug": "leeds-united",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "LYQGlH7OjpU"
     },
     {
       "matchday": 3,
@@ -286,9 +286,9 @@
       "away": "サンダーランド",
       "homeSlug": "brentford",
       "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "UE6khKHN4fg"
     },
     {
       "matchday": 3,
@@ -297,9 +297,9 @@
       "away": "クリスタル・パレス",
       "homeSlug": "fulham",
       "awaySlug": "crystal-palace",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "p9tM-hHFmoo"
     },
     {
       "matchday": 3,
@@ -308,8 +308,8 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "hull-city",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": ""
     },
     {

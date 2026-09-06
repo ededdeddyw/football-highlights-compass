@@ -242,9 +242,9 @@
       "away": "トリノ",
       "homeSlug": "fiorentina",
       "awaySlug": "torino",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "WNE05r5SA3k"
     },
     {
       "matchday": 3,
@@ -253,9 +253,9 @@
       "away": "ナポリ",
       "homeSlug": "inter",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "yDrJbKNnk9E"
     },
     {
       "matchday": 3,
@@ -264,9 +264,9 @@
       "away": "アタランタ",
       "homeSlug": "roma",
       "awaySlug": "atalanta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "BcGJd0fz4WY"
     },
     {
       "matchday": 3,
