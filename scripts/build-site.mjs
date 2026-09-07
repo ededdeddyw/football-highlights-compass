@@ -149,6 +149,10 @@ const ld = x => Array.isArray(x) ? {"@context":"https://schema.org","@graph":x} 
 function crumbLd(items){ return {"@type":"BreadcrumbList","itemListElement":items.map((it,i)=>({"@type":"ListItem","position":i+1,"name":it.name,"item":it.url||DOMAIN+'/'}))}; }
 // 試合一覧の ItemList
 function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0,30).map((mm,i)=>({"@type":"ListItem","position":i+1,"name":mm.ttl,"item":`${DOMAIN}/match/${mm.id}.html`}))}; }
+// FAQ 構造化データ（GEO/リッチリザルト用）。items=[{q,a}]。回答はプレーンテキスト。
+function faqLd(items){ return {"@type":"FAQPage","mainEntity":items.filter(x=>x&&x.q&&x.a).map(x=>({"@type":"Question","name":x.q,"acceptedAnswer":{"@type":"Answer","text":x.a}}))}; }
+// 可視FAQブロック（本文にも出す＝AIが抽出しやすく、Googleのリッチリザルト要件＝可視も満たす）
+function faqBlock(items){ const v=items.filter(x=>x&&x.q&&x.a); if(!v.length) return ''; return `<h2 class="lined">よくある質問</h2><div class="faq">${v.map(x=>`<details class="faq-q"><summary>${esc(x.q)}</summary><div class="faq-a">${esc(x.a)}</div></details>`).join('')}</div>`; }
 
 const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
@@ -1851,7 +1855,7 @@ function buildLeague(h){
   const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const desc = `${h.name}（${h.country}）の順位表と最新ハイライト動画。試合結果・順位表に加え、公式・権利元の映像のみ・ネタバレ防止で試合を掲載。`.slice(0,120);
   // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
-  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}</style>`;
+  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}</style>`;
   // 次節の日程（未消化・日本時間）。クラブは在庫があればクラブ図鑑へリンク。将来試合なのでスコアは無し＝ネタバレ配慮不要。
   const fixTable = fixtures.length ? `<h2 class="lined">${esc(h.name)} 次の試合日程${upMd!=null?`（第${upMd}節）`:''}</h2>
   <ul class="fx">${fixtures.map(m=>{ const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
@@ -1866,7 +1870,12 @@ function buildLeague(h){
   <p class="stand-note">※ 当サイト掲載の結果から集計。未消化・未取得の試合は反映されないことがあります。</p>` : '';
   // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
   const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
-  const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}])];
+  // FAQ（GEO/AI検索向け＝最新の事実をQ&Aで抽出しやすく。可視ブロック＋FAQPage構造化データ）
+  const faqItems = [];
+  if(stand.length){ const t=stand[0]; faqItems.push({ q:`${h.name}の首位はどこ？（現在の順位表）`, a:`${TODAY}時点で首位は${t.name}（勝点${t.pts}・${t.played}試合）。当サイト掲載の結果から集計した最新順位表を${h.name}ページに掲載しています。` }); }
+  if(fixtures.length){ const n=fixtures[0]; faqItems.push({ q:`${h.name}の次の試合はいつ？`, a:`直近は${fixtureJst(n.dateUTC)}（日本時間）に${n.home} vs ${n.away}${upMd!=null?`ほか第${upMd}節`:''}が予定されています。全リーグ横断の日程は /schedule/ でも確認できます。` }); }
+  faqItems.push({ q:`${h.name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元がYouTube等で公開している${h.name}のハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。試合ページから公式映像へ移動できます。` });
+  const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}]), faqLd(faqItems)];
   graph.push(itemListLd(ms));
   const head=HEAD({ title:`${h.name} 順位表・ハイライト動画｜最新結果 - Football Highlights Compass`, ogtitle:`${h.name} 順位表・ハイライト動画`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
   const out = head + TOPBAR + `<article class="post entity">
@@ -1874,7 +1883,7 @@ function buildLeague(h){
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
-  ${(standTable||fixTable)?hubCss:''}
+  ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
   ${fixTable}
   ${recentBlock}
@@ -1883,6 +1892,7 @@ function buildLeague(h){
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
   ${AD}
   ${ms.length?collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms)):''}
+  ${faqBlock(faqItems)}
   ${cross}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
@@ -2186,6 +2196,28 @@ for(const s of slugs){
   }
 }
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
+
+// ===== llms.txt（AI検索/クローラー向けの案内。GEO：ChatGPT/Perplexity等が要点を把握しやすく）=====
+{
+  const L = [];
+  L.push('# Football Highlights Compass');
+  L.push('');
+  L.push('> 欧州5大リーグ（プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアン）やFIFAワールドカップ2026の、公式・権利元が公開するサッカーのハイライト動画だけを、スコアを隠した「ネタバレ防止」表示で探せる日本語サイト。各試合の公式ハイライトに加え、最新の順位表・試合日程（日本時間）・次の試合・クラブ図鑑・日本人選手プロフィールを提供します。');
+  L.push('');
+  L.push('- 掲載するのは公式・権利元がYouTube等で公開している映像のみ（無断アップロードは扱いません）。');
+  L.push('- スコアや結果は既定で隠し、利用者の操作で表示（ネタバレ防止）。');
+  L.push(`- サイトマップ: ${DOMAIN}/sitemap.xml`);
+  L.push('');
+  L.push('## 主要ページ');
+  if(scheduleUrl) L.push(`- [今週の試合日程（欧州5大リーグ・日本時間）](${scheduleUrl}): 全リーグ横断の直近の試合日程。`);
+  for(const h of LEAGUE_LIST) L.push(`- [${h.name}](${DOMAIN}/league/${h.slug}.html): ${h.name}の順位表・試合日程・次の試合・公式ハイライト。`);
+  L.push('');
+  if(guideUrls.length){ L.push('## ガイド'); for(let i=0;i<GUIDES.length && i<guideUrls.length;i++) L.push(`- [${GUIDES[i].h1}](${guideUrls[i]})`); L.push(''); }
+  L.push('## サイトについて');
+  L.push('- 運営: Football Highlights Compass');
+  L.push('- 目的: サッカーのあらゆる情報（ハイライト・結果・順位・日程）を、ネタバレ防止で一か所から探せるようにすること。');
+  writeFileSync('site/llms.txt', L.join('\n') + '\n');
+}
 
 // ===== 更新日の安定化（FTP差分デプロイの肥大化を防ぐ）=====
 // article:published_time / article:modified_time に毎ビルドの TODAY を全ページ埋め込むと、
