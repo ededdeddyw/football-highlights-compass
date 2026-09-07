@@ -99,12 +99,15 @@ out = out.filter(m => m.matchday != null && m.home && m.away)
 const OUT = `data/league-${CODE}-${SEASON}.json`;
 // 既存の videoId を引き継ぐ：fetch は日程・結果を上書きするが、watch-league が紐付けた公式ハイライトは残す。
 // これがないと日次実行のたびに全 videoId が消え、watch が毎回ゼロから再検知＝ハイライトが定着しない。
-// キーは「節＋英語原名スラッグ」（日本語ローカライズに依存しない安定キー）。
+// キーは「英語原名スラッグの home|away」のみ（節番号は含めない）。
+// ＝データ源(特にPL/TheSportsDB)が再フェッチのたびに intRound（節番号）を揺らすため、
+//   節を含めると同一カードでもキーがずれて videoId が毎回外れ、ハイライトが定着しない。
+//   1シーズン内で (home,away) の並びは各カード1回だけ＝節に依存しない安定キーになる。
 {
   const prev = readJson(OUT, null);
   if (prev && Array.isArray(prev.matches)) {
     const vid = new Map();
-    const keyOf = m => `${m.matchday}|${m.homeSlug || m.home}|${m.awaySlug || m.away}`;
+    const keyOf = m => `${m.homeSlug || m.home}|${m.awaySlug || m.away}`;
     for (const m of prev.matches) if (m.videoId) vid.set(keyOf(m), m.videoId);
     let kept = 0;
     for (const m of out) if (!m.videoId) { const v = vid.get(keyOf(m)); if (v) { m.videoId = v; kept++; } }
