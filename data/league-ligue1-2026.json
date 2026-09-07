@@ -275,9 +275,9 @@
       "away": "ストラスブール",
       "homeSlug": "troyes",
       "awaySlug": "strasbourg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-6",
+      "videoId": "S4ZBla-QPBI"
     },
     {
       "matchday": 3,
@@ -286,9 +286,9 @@
       "away": "レンヌ",
       "homeSlug": "angers-sco",
       "awaySlug": "stade-rennais",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "CMcK7Pu2wdc"
     },
     {
       "matchday": 3,
@@ -297,9 +297,9 @@
       "away": "パリFC",
       "homeSlug": "marseille",
       "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "86b-VdoN_UA"
     },
     {
       "matchday": 4,

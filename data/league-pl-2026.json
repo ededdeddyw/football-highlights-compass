@@ -310,7 +310,7 @@
       "awaySlug": "aston-villa",
       "finished": true,
       "score": "0-0",
-      "videoId": ""
+      "videoId": "dApImyA1xxY"
     },
     {
       "matchday": 3,
@@ -319,9 +319,9 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "everton",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "lBbYl2vhQ_U"
     },
     {
       "matchday": 3,
@@ -330,9 +330,9 @@
       "away": "チェルシー",
       "homeSlug": "arsenal",
       "awaySlug": "chelsea",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "nALnEAhBCY4"
     },
     {
       "matchday": 4,

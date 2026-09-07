@@ -385,9 +385,9 @@
       "away": "バルセロナ",
       "homeSlug": "valencia",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-5",
+      "videoId": "-8uIcHiSr8Q"
     },
     {
       "matchday": 4,
@@ -396,9 +396,9 @@
       "away": "オサスナ",
       "homeSlug": "alaves",
       "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-2",
+      "videoId": "3_BY-7moTbE"
     },
     {
       "matchday": 4,
@@ -407,9 +407,9 @@
       "away": "レバンテ",
       "homeSlug": "malaga",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "AQXFVXM5ZZA"
     },
     {
       "matchday": 4,
@@ -418,9 +418,9 @@
       "away": "セビージャ",
       "homeSlug": "espanyol",
       "awaySlug": "sevilla-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "56-xUqjHv-I"
     },
     {
       "matchday": 4,

@@ -275,8 +275,8 @@
       "away": "モンツァ",
       "homeSlug": "parma",
       "awaySlug": "monza",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -286,9 +286,9 @@
       "away": "ヴェネツィア",
       "homeSlug": "frosinone",
       "awaySlug": "venezia-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "dOWvWWcFvjk"
     },
     {
       "matchday": 3,
@@ -297,9 +297,9 @@
       "away": "サッスオーロ",
       "homeSlug": "bologna",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "CDVRijNA8Vs"
     },
     {
       "matchday": 3,
@@ -308,9 +308,9 @@
       "away": "ミラン",
       "homeSlug": "juventus",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "QWDVyr-HzHU"
     },
     {
       "matchday": 3,
