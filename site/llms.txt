@@ -1,0 +1,28 @@
+# Football Highlights Compass
+
+> 欧州5大リーグ（プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアン）やFIFAワールドカップ2026の、公式・権利元が公開するサッカーのハイライト動画だけを、スコアを隠した「ネタバレ防止」表示で探せる日本語サイト。各試合の公式ハイライトに加え、最新の順位表・試合日程（日本時間）・次の試合・クラブ図鑑・日本人選手プロフィールを提供します。
+
+- 掲載するのは公式・権利元がYouTube等で公開している映像のみ（無断アップロードは扱いません）。
+- スコアや結果は既定で隠し、利用者の操作で表示（ネタバレ防止）。
+- サイトマップ: https://highlight-compass.com/sitemap.xml
+
+## 主要ページ
+- [今週の試合日程（欧州5大リーグ・日本時間）](https://highlight-compass.com/schedule/): 全リーグ横断の直近の試合日程。
+- [プレミアリーグ](https://highlight-compass.com/league/premier-league.html): プレミアリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [ラ・リーガ](https://highlight-compass.com/league/laliga.html): ラ・リーガの順位表・試合日程・次の試合・公式ハイライト。
+- [セリエA](https://highlight-compass.com/league/serie-a.html): セリエAの順位表・試合日程・次の試合・公式ハイライト。
+- [ブンデスリーガ](https://highlight-compass.com/league/bundesliga.html): ブンデスリーガの順位表・試合日程・次の試合・公式ハイライト。
+- [リーグアン](https://highlight-compass.com/league/ligue-1.html): リーグアンの順位表・試合日程・次の試合・公式ハイライト。
+- [プリメイラ・リーガ](https://highlight-compass.com/league/primeira-liga.html): プリメイラ・リーガの順位表・試合日程・次の試合・公式ハイライト。
+
+## ガイド
+- [2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ](https://highlight-compass.com/guide/world-cup-2026-how-to-watch.html)
+- [久保建英 公式ハイライトまとめ（レアル・ソシエダ／2025-26）](https://highlight-compass.com/guide/kubo-takefusa-highlights.html)
+- [鈴木彩艶 公式ハイライトまとめ（パルマ／2025-26）](https://highlight-compass.com/guide/suzuki-zion-highlights.html)
+- [南野拓実 公式ハイライトまとめ（ASモナコ／2025-26）](https://highlight-compass.com/guide/minamino-takumi-highlights.html)
+- [堂安律 公式ハイライトまとめ（フランクフルト／2025-26）](https://highlight-compass.com/guide/doan-ritsu-highlights.html)
+- [サッカーの結果・スコアを見ずにハイライトを楽しむ方法](https://highlight-compass.com/guide/avoid-spoilers-how-to-watch.html)
+
+## サイトについて
+- 運営: Football Highlights Compass
+- 目的: サッカーのあらゆる情報（ハイライト・結果・順位・日程）を、ネタバレ防止で一か所から探せるようにすること。
