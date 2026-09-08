@@ -79,18 +79,22 @@ def _gsc_totals(service, start, end, page_contains=None):
     }
 
 
-def _gsc_rows(service, start, end, dim, limit=15):
-    r = _gsc_query(service, start, end, dimensions=[dim], row_limit=limit)
-    out = []
+def _gsc_rows(service, start, end, dim, limit=15, fetch_limit=1000):
+    # APIのrowLimitは返却件数の上限であって並び順の保証ではない（クリック0が並ぶ場合、
+    # 実質キーの内部順＝アルファベット順寄りになり、表示回数が多い行が上位15件に入らないことがある）。
+    # そのため広めに取得してから「クリック優先・次点で表示回数」で確実にソートする。
+    r = _gsc_query(service, start, end, dimensions=[dim], row_limit=fetch_limit)
+    rows = []
     for row in r.get("rows", []):
         keys = row.get("keys", [""])
-        out.append({
+        rows.append({
             "key": keys[0],
             "clicks": int(row.get("clicks", 0)),
             "impressions": int(row.get("impressions", 0)),
             "position": float(row.get("position", 0.0)),
         })
-    return out
+    rows.sort(key=lambda x: (-x["clicks"], -x["impressions"]))
+    return rows[:limit]
 
 
 def _gsc_index_counts(service):
