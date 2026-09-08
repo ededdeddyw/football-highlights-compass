@@ -429,9 +429,9 @@
       "away": "セルタ",
       "homeSlug": "getafe",
       "awaySlug": "celta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "WThHBksMZZc"
     },
     {
       "matchday": 4,
@@ -440,9 +440,9 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "elche",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "CGwY-AJRZOc"
     },
     {
       "matchday": 5,
