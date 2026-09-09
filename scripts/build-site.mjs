@@ -1139,7 +1139,9 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
   LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId || '', date: (mt.dateUTC || '').slice(0, 10) || TODAY, title: `${teamsTxt}｜${L.jp} ${nara}` });
   const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
-  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）のハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
+  // 「〇〇 対 〇〇 試合経過」等の結果検索クエリはCTRの取りこぼしが大きいため、
+  // 「結果を隠す」ではなく「結果はここにある（タップで表示）」という前向きな言い方にする。
+  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の試合結果・ハイライト動画。スコアはタップで表示（ネタバレ防止）。日本から観られる公式映像はこちら。`.slice(0,120);
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
   let videoBlock;
   if (mt.videoId){
@@ -1161,8 +1163,8 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
-    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
-    ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
+    title:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。
     jsonld:[
