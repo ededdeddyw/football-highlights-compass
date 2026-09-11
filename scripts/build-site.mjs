@@ -153,6 +153,8 @@ function itemListLd(ms){ return {"@type":"ItemList","itemListElement":ms.slice(0
 function faqLd(items){ return {"@type":"FAQPage","mainEntity":items.filter(x=>x&&x.q&&x.a).map(x=>({"@type":"Question","name":x.q,"acceptedAnswer":{"@type":"Answer","text":x.a}}))}; }
 // 可視FAQブロック（本文にも出す＝AIが抽出しやすく、Googleのリッチリザルト要件＝可視も満たす）
 function faqBlock(items){ const v=items.filter(x=>x&&x.q&&x.a); if(!v.length) return ''; return `<h2 class="lined">よくある質問</h2><div class="faq">${v.map(x=>`<details class="faq-q"><summary>${esc(x.q)}</summary><div class="faq-a">${esc(x.a)}</div></details>`).join('')}</div>`; }
+// FAQの装飾（共有article.cssを増やさずページ内インラインで。ハブ以外＝クラブ等で使用）
+const FAQ_STYLE = `<style>.faq{margin:10px 0}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}</style>`;
 
 const CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
 const LG = { wc:'FIFAワールドカップ26', jl:'Jリーグ2026', laliga:'ラ・リーガ', seriea:'セリエA', ligue1:'リーグアン', bundes:'ブンデスリーガ', portugal:'ポルトガルリーグ', other:'' };
@@ -1139,9 +1141,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
   LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId || '', date: (mt.dateUTC || '').slice(0, 10) || TODAY, title: `${teamsTxt}｜${L.jp} ${nara}` });
   const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
-  // 「〇〇 対 〇〇 試合経過」等の結果検索クエリはCTRの取りこぼしが大きいため、
-  // 「結果を隠す」ではなく「結果はここにある（タップで表示）」という前向きな言い方にする。
-  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の試合結果・ハイライト動画。スコアはタップで表示（ネタバレ防止）。日本から観られる公式映像はこちら。`.slice(0,120);
+  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）のハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
   let videoBlock;
   if (mt.videoId){
@@ -1163,8 +1163,8 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
-    title:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
-    ogtitle:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
+    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。
     jsonld:[
@@ -1547,6 +1547,16 @@ function buildClub(name, info){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
   ];
   if(ms.length) clgraph.push(itemListLd(ms));
+  // クラブFAQ（GEO/リッチリザルト：順位・次の試合・ハイライト入手先を実データQ&Aで。AI検索が引用しやすい最新の事実）
+  const cfaq = [];
+  { const ds = railSlug(slug); const code = SLUG2LEAGUE[ds]; const rows = code && RAIL_TABLE[code];
+    const row = rows && rows.find(r=>r.slug===ds);
+    if(row) cfaq.push({ q:`${name}は今シーズン何位？`, a:`${TODAY}時点で${info.league}${row.pos}位（勝点${row.pts}・${row.played}試合・得失点差${row.gd>0?'+':''}${row.gd}）。最新の順位表は${name}ページに掲載しています。` });
+    const nx = CLUB_NEXT[ds];
+    if(nx){ const mm=LEAGUE_META[nx.code]||{}; cfaq.push({ q:`${name}の次の試合はいつ？`, a:`次戦は${fixtureJst(nx.dateUTC)}（日本時間）、${nx.ha==='H'?'ホームで':'アウェイで'}${nx.opp}と対戦予定です${mm.jp?`（${mm.jp}${nx.matchday!=null?` 第${nx.matchday}節`:''}）`:''}。` }); }
+    cfaq.push({ q:`${name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元が公開している${name}の試合ハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。各試合ページから公式映像へ移動できます。` });
+  }
+  if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
   const head = HEAD({ title:`${name}｜${info.league} ハイライト動画・試合一覧`, ogtitle:`${name}｜${info.league} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
   const factHtml = `<div class="factcard"><table>
@@ -1596,6 +1606,7 @@ function buildClub(name, info){
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
+  ${cfaq.length?`<div class="cl-wrap" style="margin-top:18px">${FAQ_STYLE}${faqBlock(cfaq)}</div>`:''}
   ${YTFB}
   </article></div>
   <aside class="cl-rail cl-rail-right" id="railRight" aria-label="最新ハイライト"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${rightRail}</aside>
@@ -1622,6 +1633,7 @@ function buildClub(name, info){
   </div>
   ${AD}
   ${list}
+  ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
 }
