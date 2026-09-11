@@ -1492,6 +1492,11 @@ function buildCountry(name, info){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
+  // 国FAQ（GEO：歴代最高成績・連盟・ハイライト所在を事実Q&Aで。「〈国〉 ワールドカップ 最高成績」等のinformationalクエリ向け）
+  const cfaq = [];
+  cfaq.push({ q:`${name}代表のワールドカップ最高成績は？`, a:`${name}代表のW杯最高成績は${info.peak}です。所属連盟は${info.confed}${info.talent?`、主なタレントは${info.talent}`:''}。` });
+  if(ms.length) cfaq.push({ q:`${name}代表のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元が公開している${name}代表のFIFAワールドカップ2026ハイライト（全${ms.length}試合）を、スコアを隠したネタバレ防止表示でまとめています。` });
+  cgraph.push(faqLd(cfaq));
   // W杯2026は閉幕済み。検索需要は「日程（これから）」→「結果・歴代・振り返り」へ移行しているため、titleから"試合日程"を外し
   // 「結果・歴代成績・ハイライト」を前面に出す。「国名 ワールドカップ 歴代」系のinformationalクエリにも噛み合わせる。
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通りの長さでOK）
@@ -1529,6 +1534,7 @@ function buildCountry(name, info){
   </div>
   ${AD}
   ${list}
+  ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
 }
@@ -1676,10 +1682,17 @@ function buildPlayer(p){
   const dek = (p.blurb&&p.blurb[0])||'';
   const desc = `${p.name}の経歴・ポジション・プレースタイルをピッチ図でわかりやすく紹介。${club?club+'（'+clubLeague+'）での歩みや背番号も。':''}所属クラブの最新ハイライト動画への導線つき。`.slice(0,120);
   const ogimg = clubSlug && CREST[clubSlug] ? CREST[clubSlug] : `${DOMAIN}/og.png`;
+  // 選手FAQ（GEO：所属クラブ・次の試合・ハイライト所在を事実Q&Aで）＋所属クラブの次戦データ
+  const nextC = clubSlug ? CLUB_NEXT[railSlug(clubSlug)] : null;
+  const pfaq = [];
+  if(club) pfaq.push({ q:`${p.name}の所属クラブは？`, a:`${p.name}は${club}（${clubLeague}）に所属しています。ポジションは${p.pos}${p.number?`、背番号は${p.number}`:''}。` });
+  if(nextC){ const mm=LEAGUE_META[nextC.code]||{}; pfaq.push({ q:`${p.name}（${club}）の次の試合はいつ？`, a:`所属する${club}の次戦は${fixtureJst(nextC.dateUTC)}（日本時間）、${nextC.ha==='H'?'ホームで':'アウェイで'}${nextC.opp}と対戦予定です${mm.jp?`（${mm.jp}${nextC.matchday!=null?` 第${nextC.matchday}節`:''}）`:''}。` }); }
+  if(club) pfaq.push({ q:`${p.name}のハイライト動画はどこで見られる？`, a:`所属クラブ${club}の公式ハイライトを、当サイトがスコアを隠したネタバレ防止表示でまとめています。このページ右の「最新ハイライト」から各試合の公式映像へ移動できます。` });
   const jsonld = [
     {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
   ];
+  if(pfaq.length) jsonld.push(faqLd(pfaq));
   const head = HEAD({ title:`${p.name}｜${club?club+'／':''}${p.pos}・経歴・プレースタイル`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
 
   const hero = `<div class="pl-hero" style="background:linear-gradient(135deg,${c1} 0%,#0b1020 78%);color:#fff;border-radius:16px;padding:22px 22px 20px;position:relative;overflow:hidden">
@@ -1726,7 +1739,7 @@ function buildPlayer(p){
   const backAll = `<div class="cl-wrap" style="margin-top:14px"><div class="chips"><a href="./">選手一覧へ →</a></div></div>`;
 
   const clubGuides = club?guideLinksFor(club):'';
-  const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${imgSlot}${clubGuides}`;
+  const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${clubSlug?railNextMatch(clubSlug):''}${imgSlot}${clubGuides}`;
   const rightRail = clubSlug ? railHighlights(clubSlug) : `<div class="rail-card"><div class="rail-h">🎬 最新ハイライト</div><p class="rail-empty">所属クラブのハイライトはこちら。</p></div>`;
 
   const out = head + TOPBAR + `<div class="cl-shell">
@@ -1742,6 +1755,7 @@ function buildPlayer(p){
   ${teammates}
   ${leagueLink}
   ${relatedPlayers}
+  ${pfaq.length?`<div class="cl-wrap" style="margin-top:16px">${FAQ_STYLE}${faqBlock(pfaq)}</div>`:''}
   ${backAll}
   </article></div>
   <aside class="cl-rail cl-rail-right" id="railRight" aria-label="所属クラブの最新ハイライト"><button class="rail-close" type="button" onclick="clRail('')" aria-label="閉じる">×</button>${rightRail}</aside>
