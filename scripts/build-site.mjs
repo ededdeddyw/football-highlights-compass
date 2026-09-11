@@ -1141,7 +1141,9 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
   LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId || '', date: (mt.dateUTC || '').slice(0, 10) || TODAY, title: `${teamsTxt}｜${L.jp} ${nara}` });
   const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
-  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）のハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
+  // 検索クエリには「試合経過」「結果」等スコアを知りたい意図も多い。「マスク/隠す」を前面に出すとCTRを下げるため、
+  // スニペットは結果情報がある旨を伝えつつ、ネタバレ防止は「選べる機能」として添える（表示は既定で隠したまま＝機能自体は不変）。
+  const desc = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の試合結果とハイライト動画をチェック。公式映像のみ掲載、ネタバレ防止表示にも切替可能。`.slice(0,120);
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
   let videoBlock;
   if (mt.videoId){
@@ -1163,8 +1165,8 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
-    title:`${teamsTxt} ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
-    ogtitle:`${teamsTxt} ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
+    title:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara} ${seasonLbl} - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} 結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。
     jsonld:[
@@ -1212,7 +1214,7 @@ function buildPreseasonMatch(mt, season){
   LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId||'', date:(mt.dateUTC||'').slice(0,10)||TODAY, title:`${teamsTxt}｜プレシーズン親善試合` });
   const dateTxt = mt.dateUTC ? mt.dateUTC.slice(0,10) : '';
   const dek = `${teamsTxt}（プレシーズン親善試合）の公式ハイライト。結果はネタバレ防止で隠しています。`;
-  const desc = `${teamsTxt}のプレシーズン親善試合ハイライト。結果・スコアはネタバレ防止でマスク。日本から観られる公式映像へ誘導。`.slice(0,120);
+  const desc = `${teamsTxt}のプレシーズン親善試合、結果とハイライト動画をチェック。公式映像のみ掲載、ネタバレ防止表示にも切替可能。`.slice(0,120);
   let videoBlock;
   if (mt.videoId){
     const emb = `<div class="source"><div class="source-head"><span class="tag embed">▶ 公式ハイライト</span><span class="name">YouTube</span><span class="geo">日本で再生可</span></div><div class="embedwrap"><iframe id="ytf_${mt.videoId}" src="https://www.youtube-nocookie.com/embed/${mt.videoId}?enablejsapi=1" loading="lazy" title="${escA(teamsTxt)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="ytfb" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener"><span class="ytfb-ic">▶</span><span class="ytfb-tx">この試合をYouTubeで見る<small>公式ハイライト</small></span></a></div><a class="ytalt" href="https://www.youtube.com/watch?v=${mt.videoId}" target="_blank" rel="noopener">うまく再生できないときは ▶ YouTubeで見る</a></div>`;
@@ -1232,8 +1234,8 @@ function buildPreseasonMatch(mt, season){
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
-    title:`${teamsTxt} ハイライト｜プレシーズン親善試合 - Football Highlights Compass`,
-    ogtitle:`${teamsTxt} ハイライト｜プレシーズン親善試合`, desc, url, ogimg, ogtype:'video.other',
+    title:`${teamsTxt} 結果・ハイライト｜プレシーズン親善試合 - Football Highlights Compass`,
+    ogtitle:`${teamsTxt} 結果・ハイライト｜プレシーズン親善試合`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:teamsTxt,url}]) ]
   });
