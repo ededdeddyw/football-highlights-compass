@@ -1883,7 +1883,7 @@ function buildLeague(h){
   const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const desc = `${h.name}（${h.country}）の順位表と最新ハイライト動画。試合結果・順位表に加え、公式・権利元の映像のみ・ネタバレ防止で試合を掲載。`.slice(0,120);
   // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
-  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}</style>`;
+  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}.rank2{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 2px}.rank-col{flex:1;min-width:210px}.rank-h{font-weight:800;font-size:13px;margin:4px 0 4px}.rank-list{margin:0;padding:0;list-style:none;counter-reset:rk}.rank-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:rk}.rank-list li::before{content:counter(rk);color:var(--muted);font-weight:800;min-width:1.3em}.rk-n{flex:1;font-weight:700}.rk-n a{color:var(--accent);text-decoration:none}.rk-n a:hover{text-decoration:underline}.rk-v{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}</style>`;
   // 次節の日程（未消化・日本時間）。クラブは在庫があればクラブ図鑑へリンク。将来試合なのでスコアは無し＝ネタバレ配慮不要。
   const fixTable = fixtures.length ? `<h2 class="lined">${esc(h.name)} 次の試合日程${upMd!=null?`（第${upMd}節）`:''}</h2>
   <ul class="fx">${fixtures.map(m=>{ const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
@@ -1896,6 +1896,18 @@ function buildLeague(h){
   ${stand.map(r=>{ const cs=CLUBS[r.name]&&CLUBS[r.name].slug; const nm=cs?`<a href="../club/${cs}.html">${esc(r.name)}</a>`:esc(r.name); return `<tr><td class="rk">${r.pos}</td><td class="tm">${nm}</td><td>${r.played}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`; }).join('')}
   </tbody></table></div>
   <p class="stand-note">※ 当サイト掲載の結果から集計。未消化・未取得の試合は反映されないことがあります。</p>` : '';
+  // チーム別スタッツ・ランキング（順位表と同じ自前集計データから。攻撃力＝総得点／堅守＝総失点の少なさ）
+  const rankBlock = (()=>{
+    const pl = stand.filter(r=>r.played>0);
+    if(pl.length<3) return '';
+    const atk = [...pl].sort((a,b)=> b.gf-a.gf || b.gd-a.gd).slice(0,5);
+    const def = [...pl].sort((a,b)=> a.ga-b.ga || b.gd-a.gd).slice(0,5);
+    const li = (r,val,unit)=>{ const cs=CLUBS[r.name]&&CLUBS[r.name].slug; const nm=cs?`<a href="../club/${cs}.html">${esc(r.name)}</a>`:esc(r.name); return `<li><span class="rk-n">${nm}</span><span class="rk-v">${val}${unit}</span></li>`; };
+    return `<h2 class="lined">${esc(h.name)} チーム別スタッツ</h2><div class="rank2">`
+      + `<div class="rank-col"><div class="rank-h">⚔️ 攻撃力（総得点）</div><ol class="rank-list">${atk.map(r=>li(r,r.gf,'点')).join('')}</ol></div>`
+      + `<div class="rank-col"><div class="rank-h">🛡️ 堅守（総失点の少なさ）</div><ol class="rank-list">${def.map(r=>li(r,r.ga,'失点')).join('')}</ol></div>`
+      + `</div><p class="stand-note">※ 当サイト掲載の結果からの集計です（チーム単位）。</p>`;
+  })();
   // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
   const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
   // FAQ（GEO/AI検索向け＝最新の事実をQ&Aで抽出しやすく。可視ブロック＋FAQPage構造化データ）
@@ -1913,6 +1925,7 @@ function buildLeague(h){
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
+  ${rankBlock}
   ${fixTable}
   ${recentBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
