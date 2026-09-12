@@ -1549,7 +1549,10 @@ function buildClub(name, info){
   const url=`${DOMAIN}/${path}`;
   const ogimg = crestUrl || (ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const dek = info.blurb[0]||'';
-  const desc = `${name}｜${info.league}の最新ハイライト動画・試合結果・順位表を、公式映像のみ・ネタバレ防止で。${info.founded}年創設、本拠地${info.stadium}。`.slice(0,120);
+  // 検索結果スニペットは全クラブ共通の定型文よりblurbの固有フック（タイトル歴・著名選手など）の方がCTRを稼ぎやすいため先頭に配置（国ページと同じ手法）
+  const hookSentence = (dek.match(/^[^。]*。/)||[dek])[0];
+  const hook = hookSentence.length>60 ? hookSentence.slice(0,60)+'…' : hookSentence;
+  const desc = `${hook}${info.league}の最新ハイライト動画・試合結果・順位表を、公式映像のみ・ネタバレ防止で。`.slice(0,120);
   const clgraph = [
     {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
