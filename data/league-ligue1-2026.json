@@ -308,9 +308,9 @@
       "away": "マルセイユ",
       "homeSlug": "stade-rennais",
       "awaySlug": "marseille",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "24ak0kcZeOk"
     },
     {
       "matchday": 4,

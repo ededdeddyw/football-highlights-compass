@@ -341,9 +341,9 @@
       "away": "フィオレンティーナ",
       "homeSlug": "venezia-fc",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-4",
+      "videoId": "0roH3ja-QZU"
     },
     {
       "matchday": 4,

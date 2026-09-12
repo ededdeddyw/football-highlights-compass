@@ -451,9 +451,9 @@
       "away": "バレンシア",
       "homeSlug": "sevilla-fc",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "G1DAYWMXstc"
     },
     {
       "matchday": 5,
