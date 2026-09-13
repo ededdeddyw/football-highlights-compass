@@ -27,7 +27,10 @@ const ALIASES = readJson('data/league-team-aliases.json', {});
 //  order: ホーム→アウェイの登場順で判定するか。allowScore: スコア入りタイトルを許可するか。
 // league: タイトルにこのリーグ名が入っていることを必須化（同じ公式chが出すカップ戦=コッパ/コパ/クープ等を除外）。
 const LEAGUE = {
-  bl:     { q: 'Bundesliga',     channels: ['Bundesliga'],                                              kw: /highlights|ハイライト/i,          league: /bundesliga/i,     matchday: true,  order: false, allowScore: false },
+  // blは公式Bundesliga chが今季の各試合フル尺を出さず（節別の過去物ばかり）、米放映権元 NBC Sports が現行シーズンを投稿。
+  //  NBCは "Home v. Away | BUNDESLIGA HIGHLIGHTS | M/D/YY | NBC Sports" 形式で節番号なし → matchday:false・order:true に変更し、
+  //  両チーム＋登場順＋"Bundesliga"＋過去年/別シーズンガードで安全に受理。クラブ公式chも許可（PL/Ligue1同様）。
+  bl:     { q: 'Bundesliga',     channels: ['Bundesliga', 'NBC Sports'], clubChannels: true,            kw: /highlights|ハイライト/i,          league: /bundesliga/i,     matchday: false, order: true,  allowScore: true },
   // PLは公式グローバルch(La Liga型)が全ハイライトを出さない（放映権）。各クラブ公式ch＋米放映権元 NBC Sports が主要ソース。
   //  - NBC Sports は "Home v. Away | PREMIER LEAGUE HIGHLIGHTS | M/D/YYYY | NBC Sports" 形式で全試合を投稿（PL公式ライツ保有）。
   //    両チーム＋登場順＋"Premier League"＋過去年ガード の後段ゲートで、旧シーズンの同カード再掲を除外して安全に受理。
