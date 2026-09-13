@@ -1985,7 +1985,7 @@ let scheduleUrl = '';
     const groups = [];
     for(const m of all){ const k=dayKey(m.dateUTC); let g=groups.find(x=>x.k===k); if(!g){ g={k, label:dayLabel(m.dateUTC), rows:[]}; groups.push(g); } g.rows.push(m); }
     const leagueHub = code => (LEAGUE_META[code]||{}).hub;
-    const css = `<style>.sc-day{margin:18px 0 6px;font-size:15px;font-weight:800;padding-bottom:4px;border-bottom:2px solid var(--accent)}.sc-list{list-style:none;margin:0 0 6px;padding:0}.sc-row{display:flex;gap:10px;align-items:baseline;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}.sc-t{color:var(--muted);font-size:12.5px;min-width:4.2em;font-variant-numeric:tabular-nums}.sc-lg{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:1px 7px;white-space:nowrap}.sc-lg a{color:var(--muted);text-decoration:none}.sc-m{font-weight:700}.sc-m a{color:var(--accent);text-decoration:none}.sc-m a:hover{text-decoration:underline}.sc-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 5px}.sc-md{font-size:11px;color:var(--muted)}.sc-note{font-size:12px;color:var(--muted);margin:2px 2px 6px}.faq{margin:8px 0}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}</style>`;
+    const css = `<style>.sc-day{margin:18px 0 6px;font-size:15px;font-weight:800;padding-bottom:4px;border-bottom:2px solid var(--accent)}.sc-list{list-style:none;margin:0 0 6px;padding:0}.sc-row{display:flex;gap:10px;align-items:baseline;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}.sc-t{color:var(--muted);font-size:12.5px;min-width:4.2em;font-variant-numeric:tabular-nums}.sc-lg{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:1px 7px;white-space:nowrap}.sc-lg a{color:var(--muted);text-decoration:none}.sc-m{font-weight:700}.sc-m a{color:var(--accent);text-decoration:none}.sc-m a:hover{text-decoration:underline}.sc-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 5px}.sc-md{font-size:11px;color:var(--muted)}.sc-note{font-size:12px;color:var(--muted);margin:2px 2px 6px}.faq{margin:8px 0}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}.rank2{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 2px}.rank-col{flex:1;min-width:200px}.rank-h{font-weight:800;font-size:13px;margin:4px 0 4px}.rank-h a{color:var(--accent);text-decoration:none}.scorer-list{margin:0;padding:0;list-style:none;counter-reset:sc}.scorer-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:sc;flex-wrap:wrap}.scorer-list li::before{content:counter(sc);color:var(--muted);font-weight:800;min-width:1.3em}.scorer-list .sc-nm{font-weight:700}.scorer-list .sc-tm{color:var(--muted);font-size:12px;flex:1}.scorer-list .sc-tm a{color:var(--accent);text-decoration:none}.scorer-list .sc-g{font-weight:800;font-variant-numeric:tabular-nums}.scorer-list .sc-g small{font-weight:700;color:var(--muted)}</style>`;
     const body = groups.map(g=>`<div class="sc-day">${esc(g.label)}</div><ul class="sc-list">${g.rows.map(m=>{
       const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
       const hn=hs?`<a href="../club/${hs}.html">${esc(m.home)}</a>`:esc(m.home); const an=as?`<a href="../club/${as}.html">${esc(m.away)}</a>`:esc(m.away);
@@ -2006,12 +2006,17 @@ let scheduleUrl = '';
     const path='schedule/index.html', url=`${DOMAIN}/schedule/`; scheduleUrl=url;
     mkdirSync('site/schedule', { recursive:true });
     const firstD=all[0], lastD=all[all.length-1];
-    // スケジュールFAQ（GEO：今週の日程・直近ハイライトの所在をQ&Aで）
+    // 今季の得点王（全リーグ横断・各リーグTOP3）。出典 football-data。
+    const leagueScorers = [];
+    for(const h of LEAGUE_LIST){ const sc=TOPSCORERS[h.code]; if(sc&&sc.length) leagueScorers.push({ name:h.name, slug:h.slug, top:sc.slice(0,3) }); }
+    const topScorerBlock = leagueScorers.length ? `<h2 class="lined">今季の得点王（欧州5大リーグ）</h2><div class="rank2">${leagueScorers.map(L=>`<div class="rank-col"><div class="rank-h"><a href="../league/${L.slug}.html">${esc(L.name)}</a></div><ol class="scorer-list">${L.top.map(s=>{ const cs=CLUBS[s.team]&&CLUBS[s.team].slug; const tm=cs?`<a href="../club/${cs}.html">${esc(s.team)}</a>`:esc(s.team); return `<li><span class="sc-nm">${esc(s.name)}</span><span class="sc-tm">${tm}</span><span class="sc-g">${s.goals}<small>G</small></span></li>`; }).join('')}</ol></div>`).join('')}</div><p class="sc-note">※ 出典: football-data.org。各リーグの得点ランキング上位10名は各ハブに掲載。</p>` : '';
+    // スケジュールFAQ（GEO：今週の日程・直近ハイライト・得点王の所在をQ&Aで）
     const sfaq = [
       { q:`今週の欧州5大リーグの試合日程は？`, a:`${dayLabel(firstD.dateUTC)}〜${dayLabel(lastD.dateUTC)}の日程を日本時間でまとめています。プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアンの対戦カードとキックオフ時刻を掲載しています。` },
       { q:`終わった試合のハイライトはどこで見られる？`, a:`当ページの「直近のハイライト」または各リーグページから、公式・権利元が公開する映像へ移動できます。スコアはネタバレ防止で既定は非表示です。` },
     ];
-    const desc=`欧州5大リーグ（プレミア・ラ・リーガ・セリエA・ブンデス・リーグアン）の今週の試合日程を日本時間で一覧。キックオフ時刻・対戦カード・節をまとめ、試合後は公式ハイライトへ。`.slice(0,120);
+    if(leagueScorers.length) sfaq.push({ q:`今季の欧州5大リーグの得点王は？`, a: leagueScorers.map(L=>`${L.name}は${L.top[0].name}（${L.top[0].goals}ゴール）`).join('、') + '。各リーグの上位10名は各リーグページに掲載しています。出典: football-data.org。' });
+    const desc=`欧州5大リーグ（プレミア・ラ・リーガ・セリエA・ブンデス・リーグアン）の今週の試合日程と今季の得点王を日本時間で一覧。対戦カード・キックオフ時刻・得点ランキングをまとめ、試合後は公式ハイライトへ。`.slice(0,120);
     const hubs = LEAGUE_LIST.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('');
     const graph=[{"@type":"CollectionPage","name":"今週の試合日程｜欧州5大リーグ","url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'試合日程',url}]), faqLd(sfaq)];
     const head=HEAD({ title:`今週の試合日程｜欧州5大リーグ（日本時間）- Football Highlights Compass`, ogtitle:`今週の試合日程｜欧州5大リーグ（日本時間）`, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
@@ -2021,6 +2026,7 @@ let scheduleUrl = '';
   <h1 class="headline">今週の試合日程｜欧州5大リーグ</h1>
   <p class="dek">プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアンの直近の試合日程を<strong>日本時間</strong>でまとめています（${esc(dayLabel(firstD.dateUTC))}〜${esc(dayLabel(lastD.dateUTC))}）。キックオフ時刻・対戦カードを確認して、試合後は各カードの公式ハイライトへ。</p>
   ${body}
+  ${topScorerBlock}
   ${recentBlock}
   <h2 class="lined">リーグ別のハブ</h2><div class="chips">${hubs}</div>
   ${daznCta('欧州5大リーグのフル・見逃し配信はDAZNで。')}
