@@ -1584,7 +1584,7 @@ function buildClub(name, info){
   }
   if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
-  const head = HEAD({ title:`${name}｜${info.league} ハイライト動画・試合一覧`, ogtitle:`${name}｜${info.league} ハイライト動画・試合一覧`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+  const head = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} 試合結果・ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
   const factHtml = `<div class="factcard"><table>
     <tr><th>国・リーグ</th><td>${flag} ${esc(info.country)}／${esc(info.league)}</td></tr>
     <tr><th>創設</th><td>${esc(String(info.founded))}年</td></tr>
@@ -1620,7 +1620,7 @@ function buildClub(name, info){
       .replace('<!--VIDEO-->', embed);
     // 「クラブ名 リーグ名」系クエリのCTR改善：非リッチ版（#70）と同様にtitleへリーグ名を明記
     // titleは検索結果でのピクセル幅切れ防止のため簡潔に（旧: 「（歴史・本拠地・スタイル） - Football Highlights Compass」を付与＝長すぎて表示上切れていた）
-    const rHead = HEAD({ title:`${name}｜${info.league}の歴史・本拠地・ハイライト動画`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
+    const rHead = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} クラブ図鑑`, desc:rDesc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
     // 左右のサイドレール（共通CSS/JS。data/clubs/*.html は変更せず、ここでシェルを被せる）
     const leftRail = railStandings(slug) + railNextMatch(slug) + railFormation(name) + railFacts(info, flag);
     const rightRail = railHighlights(slug);
