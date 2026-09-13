@@ -63,6 +63,11 @@ jobs:
       - name: 公式ハイライトを検知（videoId紐付け・当該シーズンのみ）
         run: node scripts/watch-league.mjs --season=${{ steps.s.outputs.season }} --limit=40 --maxsearch=120 || echo "⚠ watch-league 失敗（継続）"
 
+      - name: 得点王ランキングを取得（football-data）
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: node scripts/fetch-scorers.mjs || echo "⚠ fetch-scorers 失敗（継続）"
+
       - name: サイト生成
         run: node scripts/build-site.mjs
 
