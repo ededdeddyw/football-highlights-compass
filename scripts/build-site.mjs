@@ -1333,6 +1333,10 @@ try {
     } }
 } catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
 
+// 得点王ランキング（data/topscorers-<code>.json ＝ fetch-scorers.mjs が football-data から取得）。code -> [{rank,name,team,goals,assists,apps,nat}]
+const TOPSCORERS = {};
+try { for(const f of readdirSync('data').filter(n=>/^topscorers-[a-z0-9]+\.json$/.test(n))){ let j; try{ j=JSON.parse(readFileSync(`data/${f}`,'utf8')); }catch{ continue; } if(j && j.code && Array.isArray(j.scorers)) TOPSCORERS[j.code]=j.scorers; } } catch(e){}
+
 // 日付を日本時間の YYYY/MM/DD に（ネタバレ防止の右レール表示用）
 function railJstYmd(iso){
   if(!iso) return '';
@@ -1888,7 +1892,7 @@ function buildLeague(h){
   const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
   const desc = `${h.name}（${h.country}）の順位表と最新ハイライト動画。試合結果・順位表に加え、公式・権利元の映像のみ・ネタバレ防止で試合を掲載。`.slice(0,120);
   // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
-  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}.rank2{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 2px}.rank-col{flex:1;min-width:210px}.rank-h{font-weight:800;font-size:13px;margin:4px 0 4px}.rank-list{margin:0;padding:0;list-style:none;counter-reset:rk}.rank-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:rk}.rank-list li::before{content:counter(rk);color:var(--muted);font-weight:800;min-width:1.3em}.rk-n{flex:1;font-weight:700}.rk-n a{color:var(--accent);text-decoration:none}.rk-n a:hover{text-decoration:underline}.rk-v{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}</style>`;
+  const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}.rank2{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 2px}.rank-col{flex:1;min-width:210px}.rank-h{font-weight:800;font-size:13px;margin:4px 0 4px}.rank-list{margin:0;padding:0;list-style:none;counter-reset:rk}.rank-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:rk}.rank-list li::before{content:counter(rk);color:var(--muted);font-weight:800;min-width:1.3em}.rk-n{flex:1;font-weight:700}.rk-n a{color:var(--accent);text-decoration:none}.rk-n a:hover{text-decoration:underline}.rk-v{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}.scorer-list{margin:8px 0 2px;padding:0;list-style:none;counter-reset:sc}.scorer-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:sc;flex-wrap:wrap}.scorer-list li::before{content:counter(sc);color:var(--muted);font-weight:800;min-width:1.4em}.scorer-list .sc-nm{font-weight:700}.scorer-list .sc-tm{color:var(--muted);font-size:12px;flex:1}.scorer-list .sc-tm a{color:var(--accent);text-decoration:none}.scorer-list .sc-tm a:hover{text-decoration:underline}.scorer-list .sc-g{font-weight:800;font-variant-numeric:tabular-nums}.scorer-list .sc-g small{font-weight:700;color:var(--muted)}.scorer-list .sc-a{color:var(--muted);font-size:11.5px}</style>`;
   // 次節の日程（未消化・日本時間）。クラブは在庫があればクラブ図鑑へリンク。将来試合なのでスコアは無し＝ネタバレ配慮不要。
   const fixTable = fixtures.length ? `<h2 class="lined">${esc(h.name)} 次の試合日程${upMd!=null?`（第${upMd}節）`:''}</h2>
   <ul class="fx">${fixtures.map(m=>{ const hs=CLUBS[m.home]&&CLUBS[m.home].slug, as=CLUBS[m.away]&&CLUBS[m.away].slug;
@@ -1913,11 +1917,21 @@ function buildLeague(h){
       + `<div class="rank-col"><div class="rank-h">🛡️ 堅守（総失点の少なさ）</div><ol class="rank-list">${def.map(r=>li(r,r.ga,'失点')).join('')}</ol></div>`
       + `</div><p class="stand-note">※ 当サイト掲載の結果からの集計です（チーム単位）。</p>`;
   })();
+  // 得点王ランキング（選手別・data/topscorers-<code>.json＝football-data由来）。累計スタッツなので順位表と同レベル（ネタバレ配慮不要）。
+  const scList = TOPSCORERS[h.code] || [];
+  const scorerBlock = scList.length ? `<h2 class="lined">${esc(h.name)} 得点ランキング</h2>
+  <ol class="scorer-list">${scList.slice(0,10).map(s=>{
+    const cs=CLUBS[s.team]&&CLUBS[s.team].slug; const tm=cs?`<a href="../club/${cs}.html">${esc(s.team)}</a>`:esc(s.team);
+    const a=(s.assists!=null&&s.assists!=='')?`<span class="sc-a">${s.assists}A</span>`:'';
+    return `<li><span class="sc-nm">${esc(s.name)}</span><span class="sc-tm">${tm}</span><span class="sc-g">${s.goals}<small>G</small></span>${a}</li>`;
+  }).join('')}</ol>
+  <p class="stand-note">※ 出典: football-data.org（${TODAY}時点の集計）。選手名は原語表記。</p>` : '';
   // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
   const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
   // FAQ（GEO/AI検索向け＝最新の事実をQ&Aで抽出しやすく。可視ブロック＋FAQPage構造化データ）
   const faqItems = [];
   if(stand.length){ const t=stand[0]; faqItems.push({ q:`${h.name}の首位はどこ？（現在の順位表）`, a:`${TODAY}時点で首位は${t.name}（勝点${t.pts}・${t.played}試合）。当サイト掲載の結果から集計した最新順位表を${h.name}ページに掲載しています。` }); }
+  if(scList.length){ const t=scList[0]; faqItems.push({ q:`${h.name}の得点ランキング1位は？（今季）`, a:`${TODAY}時点の得点ランキング首位は${t.name}（${t.team}）で${t.goals}ゴールです。上位10名を${h.name}ページの得点ランキングに掲載しています。出典: football-data.org。` }); }
   if(fixtures.length){ const n=fixtures[0]; faqItems.push({ q:`${h.name}の次の試合はいつ？`, a:`直近は${fixtureJst(n.dateUTC)}（日本時間）に${n.home} vs ${n.away}${upMd!=null?`ほか第${upMd}節`:''}が予定されています。全リーグ横断の日程は /schedule/ でも確認できます。` }); }
   faqItems.push({ q:`${h.name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元がYouTube等で公開している${h.name}のハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。試合ページから公式映像へ移動できます。` });
   const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}]), faqLd(faqItems)];
@@ -1930,6 +1944,7 @@ function buildLeague(h){
   <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
+  ${scorerBlock}
   ${rankBlock}
   ${fixTable}
   ${recentBlock}
