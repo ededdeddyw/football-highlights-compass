@@ -1164,14 +1164,23 @@ function buildLeagueMatch(mt, L, seasonLbl){
   const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${hubHref}<a href="../">他の試合を探す</a></div>`;
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
+  // 試合ページFAQ（FAQPageリッチリザルト＝SERP占有面積UPでCTR底上げ。回答はネタバレ配慮でスコアは出さない）
+  const mfaq = [
+    { q:`${teamsTxt}のハイライト動画はどこで見られる？`, a:`公式・権利元がYouTube等で公開している「${teamsTxt}」（${L.jp} ${nara}）のハイライトを、この試合ページにまとめています。公式映像のみ・ネタバレ防止表示に対応。` },
+    { q:`${teamsTxt}（${L.jp} ${nara}）の試合結果・スコアは？`, a:`結果はこの試合ページに掲載しています。スコアは既定ではネタバレ防止のため非表示ですが、ページ上部の「ネタバレ防止：ON/OFF」で表示に切り替えられます。` },
+  ];
+  if(dateTxt) mfaq.push({ q:`${teamsTxt}の試合はいつ開催？`, a:`${dateTxt}に${mt.finished?'開催されました':'開催予定です'}（${L.jp} ${nara}・${seasonLbl}）。` });
+  // 対戦クラブの図鑑ページへの内部リンク（在庫がある場合＝内部リンク網の強化）
+  const clubChips = [mt.home, mt.away].map(nm=> CLUBS[nm] ? `<a href="../club/${CLUBS[nm].slug}.html">${esc(nm)}</a>` : '').filter(Boolean).join('');
   const head = HEAD({
     title:`${teamsTxt} 試合結果・経過とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
-    // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。
+    // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。FAQPageも付与しSERP占有UP。
     jsonld:[
       ...(mt.videoId ? [{"@type":"VideoObject","name":`${teamsTxt}｜${L.jp} ${nara} 公式ハイライト`,"description":desc,"thumbnailUrl":ogimg,"uploadDate":(mt.dateUTC||`${TODAY}T12:00:00+09:00`),"embedUrl":`https://www.youtube.com/embed/${mt.videoId}`,"contentUrl":url,"publisher":ORG}] : []),
-      crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}])
+      crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]),
+      faqLd(mfaq)
     ]
   });
   const out = head + TOPBAR_NAV
@@ -1188,6 +1197,8 @@ function buildLeagueMatch(mt, L, seasonLbl){
   ${daznCta('見逃し配信・フルマッチはDAZNで。')}
   ${AD}
   ${factHtml}
+  ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
+  ${FAQ_STYLE}${faqBlock(mfaq)}
   ${footer1()}
   </article></main>
   ${readDrawer(sideRead||'').aside}
