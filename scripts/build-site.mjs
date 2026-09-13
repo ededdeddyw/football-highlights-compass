@@ -38,6 +38,9 @@ try { if (existsSync('data/club-owners.json')) { const oj = JSON.parse(readFileS
 // 監督の系譜・師弟マップ（師弟関係は歴史的事実で安定／『現在』は時点つき）。data/lineage.json。
 let LINEAGE = { trees: [] }, LINEAGE_UPDATED = '';
 try { if (existsSync('data/lineage.json')) { const lj = JSON.parse(readFileSync('data/lineage.json','utf8')); LINEAGE = { trees: lj.trees||[] }; LINEAGE_UPDATED = lj.updated||''; } } catch(e){ console.warn('lineage読込失敗:', e.message); }
+// 選手のスキルセット・持ち味（数値評価はしない方針＝言葉で強み＋代表的スーパープレー）。data/player-skills.json（slug→情報）。
+let PLAYER_SKILLS = {};
+try { if (existsSync('data/player-skills.json')) { PLAYER_SKILLS = JSON.parse(readFileSync('data/player-skills.json','utf8')).players||{}; } } catch(e){ console.warn('player-skills読込失敗:', e.message); }
 
 // ---------- スコア（videoId→"2-3" 等。実結果ベースで data/scores.json に手動記録。ネタバレOFF時のみ各一覧で表示） ----------
 let SCORES = {};
@@ -1735,6 +1738,13 @@ function buildPlayer(p){
   if(club) pfaq.push({ q:`${p.name}の所属クラブは？`, a:`${p.name}は${club}（${clubLeague}）に所属しています。ポジションは${p.pos}${p.number?`、背番号は${p.number}`:''}。` });
   if(nextC){ const mm=LEAGUE_META[nextC.code]||{}; pfaq.push({ q:`${p.name}（${club}）の次の試合はいつ？`, a:`所属する${club}の次戦は${fixtureJst(nextC.dateUTC)}（日本時間）、${nextC.ha==='H'?'ホームで':'アウェイで'}${nextC.opp}と対戦予定です${mm.jp?`（${mm.jp}${nextC.matchday!=null?` 第${nextC.matchday}節`:''}）`:''}。` }); }
   if(club) pfaq.push({ q:`${p.name}のハイライト動画はどこで見られる？`, a:`所属クラブ${club}の公式ハイライトを、当サイトがスコアを隠したネタバレ防止表示でまとめています。このページ右の「最新ハイライト」から各試合の公式映像へ移動できます。` });
+  // スキルセット・持ち味（data/player-skills.json／数値評価はしない＝言葉で強み＋代表的スーパープレー）
+  const sk = PLAYER_SKILLS[slug];
+  const skillSection = sk ? `<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">スキルセット・持ち味</h2>
+    ${sk.style?`<p class="dek" style="margin:0 0 10px">${esc(sk.style)}</p>`:''}
+    ${Array.isArray(sk.strengths)&&sk.strengths.length?`<div class="chips">${sk.strengths.map(s=>`<span class="pl-badge" style="background:rgba(127,127,127,.14)">${esc(s)}</span>`).join('')}</div>`:''}
+    ${sk.signature?`<p style="margin:10px 0 2px"><b>代表的なスーパープレー：</b>${esc(sk.signature)}</p>`:''}</div>` : '';
+  if(sk){ pfaq.push({ q:`${p.name}のプレースタイル・強みは？`, a:`${sk.style||''}${Array.isArray(sk.strengths)&&sk.strengths.length?'強みは'+sk.strengths.join('、')+'。':''}${sk.signature?'代表的なプレーは'+sk.signature+'。':''}` }); }
   const jsonld = [
     {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
@@ -1796,6 +1806,7 @@ function buildPlayer(p){
   ${hero}
   ${lead}
   ${body}
+  ${skillSection}
   ${timeline}
   ${AD}
   ${clubLink}
