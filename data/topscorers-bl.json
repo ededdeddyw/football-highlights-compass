@@ -1,0 +1,158 @@
+{
+  "code": "bl",
+  "season": "2026",
+  "source": "football-data.org",
+  "updated": "2026-09-13",
+  "scorers": [
+    {
+      "rank": 1,
+      "name": "Younes Ebnoutalib",
+      "team": "フランクフルト",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 2,
+      "name": "Patrik Schick",
+      "team": "レバークーゼン",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Czech Republic"
+    },
+    {
+      "rank": 3,
+      "name": "Yuito Suzuki",
+      "team": "フライブルク",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Japan"
+    },
+    {
+      "rank": 4,
+      "name": "Igor Matanovic",
+      "team": "フライブルク",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Croatia"
+    },
+    {
+      "rank": 5,
+      "name": "Michael Gregoritsch",
+      "team": "アウクスブルク",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Austria"
+    },
+    {
+      "rank": 6,
+      "name": "Phillip Tietz",
+      "team": "マインツ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 7,
+      "name": "Josha Vagnoman",
+      "team": "シュツットガルト",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 8,
+      "name": "Ridle Baku",
+      "team": "ライプツィヒ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 2,
+      "nat": "Germany"
+    },
+    {
+      "rank": 9,
+      "name": "Tim Skarke",
+      "team": "ウニオン・ベルリン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 10,
+      "name": "David Mokwa Ntusu",
+      "team": "エルファースベルク",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 2,
+      "nat": "France"
+    },
+    {
+      "rank": 11,
+      "name": "Christian Kofane",
+      "team": "レバークーゼン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Cameroon"
+    },
+    {
+      "rank": 12,
+      "name": "Thijs Dallinga",
+      "team": "ケルン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 2,
+      "nat": "Netherlands"
+    },
+    {
+      "rank": 13,
+      "name": "Sehrou Guirassy",
+      "team": "ドルトムント",
+      "goals": 2,
+      "assists": 2,
+      "pens": null,
+      "apps": 3,
+      "nat": "Guinea"
+    },
+    {
+      "rank": 14,
+      "name": "Niclas Füllkrug",
+      "team": "ブレーメン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 15,
+      "name": "Fábio Silva",
+      "team": "ドルトムント",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Portugal"
+    }
+  ]
+}

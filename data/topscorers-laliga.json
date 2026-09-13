@@ -1,0 +1,158 @@
+{
+  "code": "laliga",
+  "season": "2026",
+  "source": "football-data.org",
+  "updated": "2026-09-13",
+  "scorers": [
+    {
+      "rank": 1,
+      "name": "Sergio Camello",
+      "team": "ラーヨ・バジェカーノ",
+      "goals": 6,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Spain"
+    },
+    {
+      "rank": 2,
+      "name": "Raphinha",
+      "team": "バルセロナ",
+      "goals": 6,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "Brazil"
+    },
+    {
+      "rank": 3,
+      "name": "Kylian Mbappé",
+      "team": "レアル・マドリード",
+      "goals": 6,
+      "assists": 1,
+      "pens": 1,
+      "apps": 5,
+      "nat": "France"
+    },
+    {
+      "rank": 4,
+      "name": "Roberto Fernández",
+      "team": "エスパニョール",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Spain"
+    },
+    {
+      "rank": 5,
+      "name": "Yassir Zabiri",
+      "team": "ラシン・サンタンデール",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Morocco"
+    },
+    {
+      "rank": 6,
+      "name": "Pierre-Emerick Aubameyang",
+      "team": "デポルティボ",
+      "goals": 4,
+      "assists": 2,
+      "pens": null,
+      "apps": 4,
+      "nat": "Gabon"
+    },
+    {
+      "rank": 7,
+      "name": "Fermín López",
+      "team": "バルセロナ",
+      "goals": 4,
+      "assists": 2,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    },
+    {
+      "rank": 8,
+      "name": "Ante Budimir",
+      "team": "オサスナ",
+      "goals": 4,
+      "assists": null,
+      "pens": 3,
+      "apps": 5,
+      "nat": "Croatia"
+    },
+    {
+      "rank": 9,
+      "name": "Lucas Boyé",
+      "team": "アラベス",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Argentina"
+    },
+    {
+      "rank": 10,
+      "name": "Lamine Yamal",
+      "team": "バルセロナ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    },
+    {
+      "rank": 11,
+      "name": "Mariano Díaz",
+      "team": "アラベス",
+      "goals": 3,
+      "assists": 3,
+      "pens": null,
+      "apps": 5,
+      "nat": "Dominican Republic"
+    },
+    {
+      "rank": 12,
+      "name": "Álex Baena",
+      "team": "アトレティコ・マドリード",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    },
+    {
+      "rank": 13,
+      "name": "Jude Bellingham",
+      "team": "レアル・マドリード",
+      "goals": 3,
+      "assists": 2,
+      "pens": null,
+      "apps": 5,
+      "nat": "England"
+    },
+    {
+      "rank": 14,
+      "name": "Nicolas Pépé",
+      "team": "ビジャレアル",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Ivory Coast"
+    },
+    {
+      "rank": 15,
+      "name": "Rodrigo Riquelme",
+      "team": "ベティス",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    }
+  ]
+}

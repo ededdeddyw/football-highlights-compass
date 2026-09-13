@@ -1,0 +1,158 @@
+{
+  "code": "sa",
+  "season": "2026",
+  "source": "football-data.org",
+  "updated": "2026-09-13",
+  "scorers": [
+    {
+      "rank": 1,
+      "name": "Donyell Malen",
+      "team": "ローマ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Netherlands"
+    },
+    {
+      "rank": 2,
+      "name": "Antonio Raimondo",
+      "team": "フロジノーネ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Italy"
+    },
+    {
+      "rank": 3,
+      "name": "Davide Frattesi",
+      "team": "ラツィオ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Italy"
+    },
+    {
+      "rank": 4,
+      "name": "Franco Mastantuono",
+      "team": "フィオレンティーナ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Argentina"
+    },
+    {
+      "rank": 5,
+      "name": "Hassane Kamara",
+      "team": "ウディネーゼ",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Ivory Coast"
+    },
+    {
+      "rank": 6,
+      "name": "Anastasios Douvikas",
+      "team": "コモ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Greece"
+    },
+    {
+      "rank": 7,
+      "name": "Hakan Çalhanoğlu",
+      "team": "インテル",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Turkey"
+    },
+    {
+      "rank": 8,
+      "name": "Gustavo Varela",
+      "team": "モンツァ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 2,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 9,
+      "name": "Alphadjo Cisse",
+      "team": "ミラン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Italy"
+    },
+    {
+      "rank": 10,
+      "name": "Che Adams",
+      "team": "トリノ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Scotland"
+    },
+    {
+      "rank": 11,
+      "name": "Martin Baturina",
+      "team": "コモ",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Croatia"
+    },
+    {
+      "rank": 12,
+      "name": "Rasmus Højlund",
+      "team": "ナポリ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Denmark"
+    },
+    {
+      "rank": 13,
+      "name": "Matias Soule",
+      "team": "ローマ",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Argentina"
+    },
+    {
+      "rank": 14,
+      "name": "Assane Diao",
+      "team": "コモ",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 3,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 15,
+      "name": "Mateo Pellegrino",
+      "team": "フィオレンティーナ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Argentina"
+    }
+  ]
+}

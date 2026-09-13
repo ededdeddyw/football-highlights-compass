@@ -1,0 +1,158 @@
+{
+  "code": "ligue1",
+  "season": "2026",
+  "source": "football-data.org",
+  "updated": "2026-09-13",
+  "scorers": [
+    {
+      "rank": 1,
+      "name": "Amine Gouiri",
+      "team": "マルセイユ",
+      "goals": 4,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "Algeria"
+    },
+    {
+      "rank": 2,
+      "name": "Kamory Doumbia",
+      "team": "ブレスト",
+      "goals": 4,
+      "assists": 1,
+      "pens": 1,
+      "apps": 3,
+      "nat": "Mali"
+    },
+    {
+      "rank": 3,
+      "name": "Lassine Sinayoko",
+      "team": "パリFC",
+      "goals": 4,
+      "assists": null,
+      "pens": 2,
+      "apps": 4,
+      "nat": "Mali"
+    },
+    {
+      "rank": 4,
+      "name": "Florian Thauvin",
+      "team": "ランス",
+      "goals": 3,
+      "assists": 1,
+      "pens": 3,
+      "apps": 3,
+      "nat": "France"
+    },
+    {
+      "rank": 5,
+      "name": "Louis Mafouta",
+      "team": "ルマン",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 3,
+      "nat": "Central African Republic"
+    },
+    {
+      "rank": 6,
+      "name": "Esteban Lepaul",
+      "team": "レンヌ",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "France"
+    },
+    {
+      "rank": 7,
+      "name": "Paris Brunner",
+      "team": "モナコ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Germany"
+    },
+    {
+      "rank": 8,
+      "name": "Ferrán Torres",
+      "team": "パリ・サンジェルマン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Spain"
+    },
+    {
+      "rank": 9,
+      "name": "Marquinhos",
+      "team": "パリ・サンジェルマン",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Brazil"
+    },
+    {
+      "rank": 10,
+      "name": "Gessime Yassine",
+      "team": "ストラスブール",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 4,
+      "nat": "France"
+    },
+    {
+      "rank": 11,
+      "name": "Cameron Archer",
+      "team": "オセール",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 2,
+      "nat": "England"
+    },
+    {
+      "rank": 12,
+      "name": "Samuel Amo-Ameyaw",
+      "team": "ストラスブール",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "England"
+    },
+    {
+      "rank": 13,
+      "name": "Keyliane Abdallah",
+      "team": "マルセイユ",
+      "goals": 1,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "France"
+    },
+    {
+      "rank": 14,
+      "name": "Pierre Emile Højbjerg",
+      "team": "マルセイユ",
+      "goals": 1,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Denmark"
+    },
+    {
+      "rank": 15,
+      "name": "Franjo Ivanovic",
+      "team": "ランス",
+      "goals": 1,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Austria"
+    }
+  ]
+}
