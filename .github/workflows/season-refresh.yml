@@ -31,7 +31,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -72,7 +72,7 @@ jobs:
         run: node scripts/build-site.mjs
 
       - name: FTP 差分デプロイ（変更ファイルのみ）
-        timeout-minutes: 35   # シーズン開幕時は全節のfixtureを一括初回アップするため広めに確保。deploy.mjsはマニフェスト再開式なので途中終了しても次回続行
+        timeout-minutes: 50   # シーズン開幕時は全節のfixtureを一括初回アップするため広めに確保。deploy.mjsはマニフェスト再開式なので途中終了しても次回続行
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -88,7 +88,7 @@ jobs:
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/league-*.json data/deploy-manifest.json data/page-modified.json
+          git add data/league-*.json data/topscorers-*.json data/deploy-manifest.json data/page-modified.json
           if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
           git commit -m "chore(season): リーグ日程・結果・ハイライトを自動更新→本番反映"
           git pull --rebase --autostash || true
