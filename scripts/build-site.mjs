@@ -35,6 +35,9 @@ try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('
 // クラブのオーナー・資本・経営の特色（実在の資本情報＝正確性重視・時点つき）。data/club-owners.json（slug→情報）。
 let OWNERS = {}, OWNERS_UPDATED = '';
 try { if (existsSync('data/club-owners.json')) { const oj = JSON.parse(readFileSync('data/club-owners.json','utf8')); OWNERS = oj.clubs||{}; OWNERS_UPDATED = oj.updated||''; } } catch(e){ console.warn('owners読込失敗:', e.message); }
+// 監督の系譜・師弟マップ（師弟関係は歴史的事実で安定／『現在』は時点つき）。data/lineage.json。
+let LINEAGE = { trees: [] }, LINEAGE_UPDATED = '';
+try { if (existsSync('data/lineage.json')) { const lj = JSON.parse(readFileSync('data/lineage.json','utf8')); LINEAGE = { trees: lj.trees||[] }; LINEAGE_UPDATED = lj.updated||''; } } catch(e){ console.warn('lineage読込失敗:', e.message); }
 
 // ---------- スコア（videoId→"2-3" 等。実結果ベースで data/scores.json に手動記録。ネタバレOFF時のみ各一覧で表示） ----------
 let SCORES = {};
@@ -1867,6 +1870,28 @@ const GUIDES = [
       ${(()=>{const picks=[['モロッコ','歴代最高ベスト4（2022）'],['ウルグアイ','歴代最高優勝（1930/1950）'],['イングランド','歴代最高優勝（1966）'],['ベルギー','歴代最高ベスト4（1986・2018）']].filter(([n])=>PAGE_OF[n]); return picks.length?`<h2 class="lined">注目の代表チーム（歴代成績・日程・ハイライト）</h2><div class="chips">${picks.map(([n,c])=>`<a href="../${PAGE_OF[n]}">${flagImg(n)}${esc(n)}代表｜${esc(c)}</a>`).join('')}</div>`:'';})()}
       <h2 class="lined">ワールドカップ26の注目試合</h2>${cardGrid(wc)}
       <p style="margin-top:14px"><a href="../?league=wc">▶ ワールドカップ26の全試合を一覧で見る</a></p>`;
+    } },
+  { slug:'coaching-lineage',
+    title:'サッカー名将の系譜・師弟マップ｜あの名将は誰の弟子？いま何を？',
+    h1:'サッカー名将の系譜・師弟マップ',
+    dek:'「あの名将は実は◯◯の弟子だった」——監督の師弟関係を系譜でたどり、いまどこで指揮を執っているか（2026年時点）まで一気にわかるマップです。',
+    desc:'サッカー監督の師弟系譜（ミケルス→クライフ→グアルディオラ→アルテタ 等）と、名将たちの現在の職（2026年時点）をまとめて可視化。あの名将は誰の弟子か。',
+    body(){
+      const trees = LINEAGE.trees||[];
+      if(!trees.length) return '<div class="post-body"><p>準備中です。</p></div>';
+      const style = `<style>.lin-tree{margin:10px 0 6px}.lin-node{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(127,127,127,.06)}.lin-name{font-weight:800;font-size:15px}.lin-role{font-weight:600;font-size:12px;opacity:.72;margin-left:6px}.lin-note{font-size:13px;line-height:1.7;margin-top:4px}.lin-now{font-size:12.5px;margin-top:6px;font-weight:700}.lin-arrow{text-align:center;font-size:12px;opacity:.65;margin:6px 0}</style>`;
+      const treesHtml = trees.map(t=>`
+        <h2 class="lined">${esc(t.title)}</h2>
+        <p style="font-size:12.5px;opacity:.75;margin:2px 0 6px">系譜：${esc(t.chain||'')}</p>
+        <p class="dek" style="margin:0 0 10px">${esc(t.intro||'')}</p>
+        <div class="lin-tree">${(t.people||[]).map((p,i)=>`
+          <div class="lin-node"><div class="lin-name">${esc(p.name)}<span class="lin-role">${esc(p.role||'')}</span></div>
+          ${p.note?`<div class="lin-note">${esc(p.note)}</div>`:''}
+          ${p.now?`<div class="lin-now">📍 現在：${esc(p.now)}</div>`:''}</div>
+          ${i<(t.people||[]).length-1?`<div class="lin-arrow">↓ 弟子へ</div>`:''}`).join('')}</div>`).join('');
+      return style + `<div class="post-body"><p>サッカーの戦術や哲学は、名将から名将へと「師弟」で受け継がれてきました。いま活躍しているあの監督が、実は伝説的指導者の弟子だった——そんな系譜を辿れるマップです。各人物の<b>現在の役職も2026年時点で明記</b>しています（監督は異動が多いため）。</p></div>
+      ${treesHtml}
+      <p class="stand-note" style="margin-top:12px">※ 師弟関係は歴史的事実にもとづきます。「現在」の役職は${esc(LINEAGE_UPDATED||'')}時点の公開情報です（異動により変わる場合があります）。系譜は順次追加していきます。</p>`;
     } },
   playerGuide('kubo-takefusa-highlights','久保建英','ソシエダ','レアル・ソシエダ','ラ・リーガ','攻撃の中心を担う'),
   playerGuide('suzuki-zion-highlights','鈴木彩艶','パルマ','パルマ','セリエA','守護神を務める'),
