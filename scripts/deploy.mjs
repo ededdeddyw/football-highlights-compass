@@ -32,6 +32,18 @@ async function connect() {
   await c.ensureDir(env.FTP_DIR);
   return c;
 }
+// 接続はリトライ付き（サーバ一時不通で「接続タイムアウト→1回も上げずに全滅」を防ぐ。
+// 過去にrun#81が control socket timeout で done=0 のまま失敗＝この保険が要る）。
+async function connectRetry(maxAttempts = 4) {
+  for (let attempt = 1; ; attempt++) {
+    try { return await connect(); }
+    catch (e) {
+      if (attempt >= maxAttempts) throw e;
+      console.error(`  接続失敗（${attempt}/${maxAttempts}）: ${e.message} — ${attempt*5}秒後に再接続`);
+      await new Promise(r => setTimeout(r, attempt * 5000));   // 5s,10s,15s...（サーバ復帰待ち）
+    }
+  }
+}
 
 // 末尾で切れがちな主要ファイル（表示・SEOに効くもの）は最後に個別保証
 const TAIL = ['index.html', 'sitemap.xml', 'robots.txt', 'og.png', 'ads.txt', 'about.html', 'privacy.html', 'contact.html'];
@@ -59,7 +71,7 @@ async function uploadAll() {
   console.log(`アップロード先: ${env.FTP_DIR} ／ 全${files.length}中 ${targets.length}ファイルが変更（差分）${FULL ? ' [FULL]' : ''}`);
   if (!targets.length) { writeFileSync(MANIFEST, JSON.stringify(hashes)); return { total: files.length, done: 0, failed: [], skipped: files.length }; }
   const newMan = { ...man };
-  let c = await connect();
+  let c = await connectRetry();
   let curDir = null;
   const ensure = async (dir) => {
     const abs = dir === '.' ? (rootClean || '/') : (rootClean + '/' + dir);
@@ -81,7 +93,7 @@ async function uploadAll() {
         if (attempt > 6) { failed.push(rel); console.error(`\n  失敗 ${rel}: ${e.message}`); break; }
         try { c.close(); } catch {}
         await new Promise(r => setTimeout(r, Math.min(1500 * attempt, 9000)));   // 指数的バックオフ（一過性のcontrol socket切断に強く）
-        try { c = await connect(); curDir = null; } catch { await new Promise(r => setTimeout(r, 3000)); }   // 再接続失敗も一拍おいて次周回で再試行
+        try { c = await connectRetry(3); curDir = null; } catch { await new Promise(r => setTimeout(r, 3000)); }   // 再接続失敗も一拍おいて次周回で再試行
       }
     }
   }
@@ -93,7 +105,7 @@ let changedTail = new Set();
 async function uploadTail() {
   const tails = TAIL.filter(f => changedTail.has(f) && existsSync('site/' + f));   // 今回変わった主要ファイルだけ別接続で念押し
   if (!tails.length) return;
-  const c = await connect();
+  const c = await connectRetry();
   try { for (const f of tails) { try { await c.uploadFrom('site/' + f, f); console.log('  ↑(tail) ' + f); } catch (e) { console.error('  tail失敗 ' + f + ':', e.message); } } }
   finally { c.close(); }
 }
