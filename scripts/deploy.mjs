@@ -23,7 +23,7 @@ for (const k of ['FTP_HOST','FTP_USER','FTP_PASS','FTP_DIR','SITE_URL']) if (pro
 for (const k of ['FTP_HOST', 'FTP_USER', 'FTP_PASS', 'FTP_DIR']) if (!env[k]) { console.error('FTP情報が不足: ' + k + '（deploy.env または環境変数で指定）'); process.exit(1); }
 
 async function connect() {
-  const c = new ftp.Client(60000); c.ftp.verbose = false;
+  const c = new ftp.Client(120000); c.ftp.verbose = false;   // 操作タイムアウト120秒（遅いFTPでのcontrol socket切断を緩和）
   try {
     await c.access({ host: env.FTP_HOST, user: env.FTP_USER, password: env.FTP_PASS, secure: true, secureOptions: { rejectUnauthorized: false } });
   } catch {
@@ -78,10 +78,10 @@ async function uploadAll() {
         if (done % 20 === 0) { try { writeFileSync(MANIFEST, JSON.stringify(newMan)); } catch {} }   // 途中保存＝タイムアウトで打ち切られても進捗を残し次回再開できる
         break;
       } catch (e) {
-        if (attempt > 4) { failed.push(rel); console.error(`\n  失敗 ${rel}: ${e.message}`); break; }
+        if (attempt > 6) { failed.push(rel); console.error(`\n  失敗 ${rel}: ${e.message}`); break; }
         try { c.close(); } catch {}
-        await new Promise(r => setTimeout(r, 1500));
-        try { c = await connect(); curDir = null; } catch {}
+        await new Promise(r => setTimeout(r, Math.min(1500 * attempt, 9000)));   // 指数的バックオフ（一過性のcontrol socket切断に強く）
+        try { c = await connect(); curDir = null; } catch { await new Promise(r => setTimeout(r, 3000)); }   // 再接続失敗も一拍おいて次周回で再試行
       }
     }
   }
