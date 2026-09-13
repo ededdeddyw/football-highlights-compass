@@ -319,9 +319,9 @@
       "away": "モナコ",
       "homeSlug": "strasbourg",
       "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "-AGDFk42Hrg"
     },
     {
       "matchday": 4,
@@ -330,9 +330,9 @@
       "away": "トゥールーズ",
       "homeSlug": "lorient",
       "awaySlug": "toulouse",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "-Mn7jcsqqIQ"
     },
     {
       "matchday": 4,
@@ -341,9 +341,9 @@
       "away": "ニース",
       "homeSlug": "auxerre",
       "awaySlug": "nice",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "fGxQkGn4sVo"
     },
     {
       "matchday": 4,
@@ -352,9 +352,9 @@
       "away": "アンジェ",
       "homeSlug": "le-havre",
       "awaySlug": "angers-sco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "TlENf-JPqLM"
     },
     {
       "matchday": 4,
@@ -363,9 +363,9 @@
       "away": "リヨン",
       "homeSlug": "paris-fc",
       "awaySlug": "olympique-lyon",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "AkMYVCIU-lM"
     },
     {
       "matchday": 4,

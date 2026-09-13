@@ -462,9 +462,9 @@
       "away": "アラベス",
       "homeSlug": "santander",
       "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "JMsl9Ar7WhA"
     },
     {
       "matchday": 5,
@@ -473,9 +473,9 @@
       "away": "エスパニョール",
       "homeSlug": "osasuna",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "REXiUn3wDrs"
     },
     {
       "matchday": 5,
@@ -484,9 +484,9 @@
       "away": "エルチェ",
       "homeSlug": "athletic",
       "awaySlug": "elche",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "1LXx7lRWtxs"
     },
     {
       "matchday": 5,
@@ -495,9 +495,9 @@
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "real-madrid",
       "awaySlug": "rayo-vallecano",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-1",
+      "videoId": "f7Tv5u_pXD0"
     },
     {
       "matchday": 5,

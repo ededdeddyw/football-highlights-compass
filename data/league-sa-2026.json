@@ -352,9 +352,9 @@
       "away": "フロジノーネ",
       "homeSlug": "genoa",
       "awaySlug": "frosinone",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "lc42XBmSqsc"
     },
     {
       "matchday": 4,
@@ -363,9 +363,9 @@
       "away": "ミラン",
       "homeSlug": "lazio",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "APXDuovx_QY"
     },
     {
       "matchday": 4,
@@ -374,8 +374,8 @@
       "away": "カリアリ",
       "homeSlug": "atalanta",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": ""
     },
     {
