@@ -25,7 +25,7 @@ jobs:
         run: node scripts/build-site.mjs
 
       - name: FTP 差分デプロイ（変更ファイルのみ）
-        timeout-minutes: 28
+        timeout-minutes: 50   # テンプレ変更日（数千ページ一括）でも1回で完走できるよう拡大。deploy.mjsはマニフェスト再開式なので途中終了しても次回続行
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
