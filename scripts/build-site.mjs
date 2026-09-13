@@ -32,6 +32,9 @@ function schedFor(m){
 // ---------- クラブ紋章（TheSportsDB・slug→URL。無いクラブは国旗フォールバック） ----------
 let CREST = {};
 try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('data/club-crests.json','utf8')); } catch(e){ console.warn('crest読込失敗:', e.message); }
+// クラブのオーナー・資本・経営の特色（実在の資本情報＝正確性重視・時点つき）。data/club-owners.json（slug→情報）。
+let OWNERS = {}, OWNERS_UPDATED = '';
+try { if (existsSync('data/club-owners.json')) { const oj = JSON.parse(readFileSync('data/club-owners.json','utf8')); OWNERS = oj.clubs||{}; OWNERS_UPDATED = oj.updated||''; } } catch(e){ console.warn('owners読込失敗:', e.message); }
 
 // ---------- スコア（videoId→"2-3" 等。実結果ベースで data/scores.json に手動記録。ネタバレOFF時のみ各一覧で表示） ----------
 let SCORES = {};
@@ -1589,6 +1592,18 @@ function buildClub(name, info){
     if(nx){ const mm=LEAGUE_META[nx.code]||{}; cfaq.push({ q:`${name}の次の試合はいつ？`, a:`次戦は${fixtureJst(nx.dateUTC)}（日本時間）、${nx.ha==='H'?'ホームで':'アウェイで'}${nx.opp}と対戦予定です${mm.jp?`（${mm.jp}${nx.matchday!=null?` 第${nx.matchday}節`:''}）`:''}。` }); }
     cfaq.push({ q:`${name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元が公開している${name}の試合ハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。各試合ページから公式映像へ移動できます。` });
   }
+  // オーナー・資本・経営の特色（data/club-owners.json）。他サイトにない“色”＝滞在時間・GEO引用に効く。
+  const own = OWNERS[slug];
+  const ownerSection = own ? `<div class="cl-wrap" style="margin-top:20px"><h2 class="lined">オーナー・経営の特色</h2>
+    <div class="factcard"><table>
+      <tr><th>現オーナー</th><td>${esc(own.owner)}</td></tr>
+      ${own.since?`<tr><th>現体制</th><td>${esc(String(own.since))}年〜</td></tr>`:''}
+      ${own.type?`<tr><th>資本の性格</th><td>${esc(own.type)}</td></tr>`:''}
+    </table></div>
+    ${own.character?`<p style="margin:10px 0 4px"><b>特色・傾向：</b>${esc(own.character)}</p>`:''}
+    ${own.history?`<p style="font-size:13px;opacity:.85"><b>歴代オーナーの流れ：</b>${esc(own.history)}</p>`:''}
+    <p class="stand-note">※ 資本情報は${esc(OWNERS_UPDATED||'公開情報')}時点にもとづく（売却等で変わる場合あり）。</p></div>` : '';
+  if(own){ cfaq.push({ q:`${name}のオーナー（経営）は誰？どんな特色？`, a:`${own.owner}${own.since?`（${own.since}年〜）`:''}。${own.character||''}` }); }
   if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
   const head = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} 試合結果・ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
@@ -1638,6 +1653,7 @@ function buildClub(name, info){
   ${richBody}
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
+  ${ownerSection}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
   ${cfaq.length?`<div class="cl-wrap" style="margin-top:18px">${FAQ_STYLE}${faqBlock(cfaq)}</div>`:''}
   ${YTFB}
@@ -1666,6 +1682,7 @@ function buildClub(name, info){
   </div>
   ${AD}
   ${list}
+  ${ownerSection}
   ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
