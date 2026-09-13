@@ -1,0 +1,44 @@
+name: Fetch API-Football (得点王など)
+
+# API-Football（api-sports.io）から五大リーグの得点王ランキングを取得し data/topscorers-*.json を更新。
+# 要 Secrets: APIFOOTBALL_KEY。まずは手動実行で疎通確認 → 問題なければ season-refresh に組み込む。
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン開始年（例 2026）'
+        required: false
+        default: '2026'
+      code:
+        description: 'リーグコード（pl/laliga/sa/bl/ligue1・空で全部）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-apifootball
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: 取得
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+        run: node scripts/fetch-apifootball.mjs --season=${{ github.event.inputs.season }} ${{ github.event.inputs.code && format('--code={0}', github.event.inputs.code) || '' }}
+      - name: データをコミット
+        if: always()
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/topscorers-*.json
+          if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
+          git commit -m "data: API-Football 得点王ランキング取得"
+          git pull --rebase --autostash || true
+          git push
