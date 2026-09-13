@@ -1128,7 +1128,7 @@ let leagueCount = 0;
 const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
 const LEAGUE_SITEMAP = new Map();   // sitemap用：slug → {videoId, date, title}
 function leagueSlug(mt, L){ const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away); return `${L.code}-2526-md${mt.matchday}-${hs}-${as}`; }
-function buildLeagueMatch(mt, L, seasonLbl){
+function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   if (mt.matchday == null || !mt.home || !mt.away) return;
   const slug = leagueSlug(mt, L);
   const bingeNext = NEXT[slug] || '';
@@ -1172,6 +1172,12 @@ function buildLeagueMatch(mt, L, seasonLbl){
   if(dateTxt) mfaq.push({ q:`${teamsTxt}の試合はいつ開催？`, a:`${dateTxt}に${mt.finished?'開催されました':'開催予定です'}（${L.jp} ${nara}・${seasonLbl}）。` });
   // 対戦クラブの図鑑ページへの内部リンク（在庫がある場合＝内部リンク網の強化）
   const clubChips = [mt.home, mt.away].map(nm=> CLUBS[nm] ? `<a href="../club/${CLUBS[nm].slug}.html">${esc(nm)}</a>` : '').filter(Boolean).join('');
+  // 同じ節の他の試合へ内部リンク（試合ページ同士を密に相互リンク＝クロール性・回遊・各ページの権威分配を強化）
+  const sameMdChips = (allMatches||[])
+    .filter(o => o && o.matchday === mt.matchday && o.home && o.away && !(o.home === mt.home && o.away === mt.away))
+    .slice(0, 12)
+    .map(o => `<a href="${leagueSlug(o, L)}.html">${esc(o.home)} vs ${esc(o.away)}</a>`)
+    .join('');
   const head = HEAD({
     title:`${teamsTxt} 試合結果・経過とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
@@ -1198,6 +1204,7 @@ function buildLeagueMatch(mt, L, seasonLbl){
   ${AD}
   ${factHtml}
   ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
+  ${sameMdChips?`<h2 class="lined">${esc(L.jp)} ${esc(nara)}の他の試合</h2><div class="chips">${sameMdChips}</div>`:''}
   ${FAQ_STYLE}${faqBlock(mfaq)}
   ${footer1()}
   </article></main>
@@ -1279,7 +1286,7 @@ try {
     // このリーグの「動画あり試合」を並び順でチェーン化（連続再生の次ページ）。
     { const c = (j.matches||[]).filter(mt=>mt.videoId && mt.matchday!=null && mt.home && mt.away).map(mt=>leagueSlug(mt, L));
       if (c.length >= 2) c.forEach((s, i) => { NEXT[s] = c[(i + 1) % c.length] + '.html'; }); }
-    (j.matches||[]).forEach(mt=>buildLeagueMatch(mt, L, seasonLbl));
+    (j.matches||[]).forEach(mt=>buildLeagueMatch(mt, L, seasonLbl, j.matches));
   }
   if (leagueCount) console.log(`リーグ試合ページ: ${leagueCount}`);
 } catch(e){ console.warn('リーグページ生成でエラー:', e.message); }
@@ -1713,7 +1720,7 @@ function buildPlayer(p){
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
   ];
   if(pfaq.length) jsonld.push(faqLd(pfaq));
-  const head = HEAD({ title:`${p.name}｜${club?club+'／':''}${p.pos}・経歴・プレースタイル`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
+  const head = HEAD({ title:`${p.name}｜${club?club+'／':''}${p.pos}・経歴・最新ハイライト`, ogtitle:`${p.name}｜サッカー選手プロフィール`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld });
 
   const hero = `<div class="pl-hero" style="background:linear-gradient(135deg,${c1} 0%,#0b1020 78%);color:#fff;border-radius:16px;padding:22px 22px 20px;position:relative;overflow:hidden">
     <div style="position:absolute;right:-30px;top:-30px;font-weight:900;font-size:150px;line-height:1;opacity:.14;color:${c2}">${p.number?esc(String(p.number)):'⚽'}</div>
