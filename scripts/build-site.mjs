@@ -2264,34 +2264,34 @@ let WCHUB_HTML = '';   // トップ左ナビ「W杯26ハブ」（決勝T＋全�
 // 掲載データ（data）から毎ビルド再生成するので、新しい試合が入れば自動で入れ替わる。
 function pickupDate(m){ return effDate(m); }
 const PICKUP_HTML = (()=>{
-  const NOTABLE = new Set(['スペイン','ブラジル','アルゼンチン','フランス','イングランド','ポルトガル','ドイツ','オランダ','イタリア','ベルギー','クロアチア','アメリカ','メキシコ','ウルグアイ','コロンビア','モロッコ']);
-  const withId = data.filter(m=>m.id);
-  const isKO = m => (m.id && KO_ROUND_BY_VID.has(m.id)) || /決勝トーナメント/.test(m.meta||'');
-  const byDateDesc = (a,b)=> pickupDate(b).localeCompare(pickupDate(a));
-  const knockout= withId.filter(isKO).sort(byDateDesc);                                   // 決勝T（最新ラウンド優先）＝開催中は最優先で必ず掲載
-  const japan   = withId.filter(m=>m.teams.includes('日本')).sort(byDateDesc);
-  const wcHot   = withId.filter(m=>m.league==='wc' && !m.teams.includes('日本') && m.teams.some(t=>NOTABLE.has(t))).sort(byDateDesc);
-  const starClub= withId.filter(m=>m.league!=='wc' && (m.prefix||m.players.length)).sort(byDateDesc);
-  const seen=new Set(), pick=[];
-  const add=m=>{ if(m && !seen.has(m.id)){ seen.add(m.id); pick.push(m); } };
-  knockout.slice(0,6).forEach(add);  // 決勝T全試合（新しいラウンド順）を最優先で候補化
-  japan.slice(0,3).forEach(add);     // 日本代表戦（直近）
-  wcHot.slice(0,4).forEach(add);     // W杯の注目カード（強豪国・直近）
-  starClub.slice(0,3).forEach(add);  // 端境期フォールバック（W杯/日本戦が少ない時期の変化用）
-  const PICK = pick.slice(0,8);
-  const badge = m =>
-    m.teams.includes('日本') ? '🇯🇵 日本代表'
-    : isKO(m) ? '🏆 決勝トーナメント'
-    : m.league==='wc' ? '🔥 W杯注目'
-    : m.prefix ? '⚽ '+m.prefix
-    : m.players.length ? '⚽ '+m.players[0]
-    : m.league==='jl' ? '🏆 Jリーグ'
-    : '⚡ PICK';
-  const matchLine = m => (m.league==='wc' && m.teams.length===2)
-    ? `${flagImg(m.teams[0])} ${esc(m.teams[0])} vs ${flagImg(m.teams[1])} ${esc(m.teams[1])}`
-    : (m.prefix?`<span class="ppre">${esc(m.prefix)}</span>`:'') + esc(m.mt || m.teams.join(' vs '));
-  const altOf = m => m.teams.length===2 ? m.teams.join(' vs ') : (m.mt||m.ttl);
-  return PICK.map(m=>`<a class="pcard cf-card" href="match/${m.id}.html"><div class="thumb"><span class="pbadge">${badge(m)}</span><img src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="${escA(altOf(m))}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(m.meta || LG[m.league] || '')}</span><span class="pmatch">${matchLine(m)}</span></div></a>`).join('\n      ');
+  const LG_JP = code => (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+  const seen=new Set(), items=[];
+  const push=(it)=>{ if(it && it.vid && !seen.has(it.vid)){ seen.add(it.vid); items.push(it); } };
+  // ① 現行クラブシーズンの最新ハイライト（動画あり）を全リーグ横断で新しい順に＝トップの主役
+  const leagueItems=[];
+  for(const code in LEAGUE_RECENT){
+    for(const r of (LEAGUE_RECENT[code]||[])){
+      if(!r.videoId || !r.ms) continue;
+      leagueItems.push({ url:`match/${r.ms}.html`, vid:r.videoId, date:(r.dateUTC||'').slice(0,10),
+        comp:`${LG_JP(code)}${r.matchday!=null?` 第${r.matchday}節`:''}`,
+        line:`${esc(r.home)} vs ${esc(r.away)}`, alt:`${r.home} vs ${r.away}`, badge:'⚡ 最新ハイライト' });
+    }
+  }
+  leagueItems.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  leagueItems.slice(0,8).forEach(push);
+  // ② 端境期フォールバック：現行リーグの動画が薄い時だけ、日本代表→W杯の名勝負で埋める（歴史枠として明示）
+  if(items.length<6){
+    const withId=data.filter(m=>m.id);
+    const isKO=m=>(m.id&&KO_ROUND_BY_VID.has(m.id))||/決勝トーナメント/.test(m.meta||'');
+    const byD=(a,b)=>effDate(b).localeCompare(effDate(a));
+    const toItem=(m,badge)=>({ url:`match/${m.id}.html`, vid:m.id, date:effDate(m), comp:m.meta||LG[m.league]||'',
+      line:(m.league==='wc'&&m.teams.length===2)?`${flagImg(m.teams[0])} ${esc(m.teams[0])} vs ${flagImg(m.teams[1])} ${esc(m.teams[1])}`:esc(m.mt||m.teams.join(' vs ')),
+      alt:m.teams.length===2?m.teams.join(' vs '):(m.mt||m.ttl), badge });
+    withId.filter(m=>m.teams.includes('日本')).sort(byD).slice(0,2).forEach(m=>push(toItem(m,'🇯🇵 日本代表')));
+    withId.filter(isKO).sort(byD).slice(0,4).forEach(m=>push(toItem(m,'🏆 W杯 名勝負')));
+  }
+  const PICK=items.slice(0,8);
+  return PICK.map(it=>`<a class="pcard cf-card" href="${it.url}"><div class="thumb"><span class="pbadge">${it.badge}</span><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="${escA(it.alt)}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(it.comp)}</span><span class="pmatch">${it.line}</span></div></a>`).join('\n      ');
 })();
 
 // ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
