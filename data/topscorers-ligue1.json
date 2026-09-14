@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "scorers": [
     {
       "rank": 1,
@@ -21,7 +21,7 @@
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 3,
+      "apps": 4,
       "nat": "Mali"
     },
     {
@@ -39,9 +39,9 @@
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 3,
-      "assists": 1,
+      "assists": 2,
       "pens": 3,
-      "apps": 3,
+      "apps": 4,
       "nat": "France"
     },
     {
@@ -51,7 +51,7 @@
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 3,
+      "apps": 4,
       "nat": "Central African Republic"
     },
     {
@@ -66,6 +66,16 @@
     },
     {
       "rank": 7,
+      "name": "Ferrán Torres",
+      "team": "パリ・サンジェルマン",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    },
+    {
+      "rank": 8,
       "name": "Paris Brunner",
       "team": "モナコ",
       "goals": 3,
@@ -75,27 +85,37 @@
       "nat": "Germany"
     },
     {
-      "rank": 8,
-      "name": "Ferrán Torres",
-      "team": "パリ・サンジェルマン",
+      "rank": 9,
+      "name": "Franjo Ivanovic",
+      "team": "ランス",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
-      "nat": "Spain"
+      "apps": 4,
+      "nat": "Austria"
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "name": "Tiago Santos",
+      "team": "リール",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 11,
       "name": "Marquinhos",
       "team": "パリ・サンジェルマン",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Brazil"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Gessime Yassine",
       "team": "ストラスブール",
       "goals": 2,
@@ -105,7 +125,7 @@
       "nat": "France"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Cameron Archer",
       "team": "オセール",
       "goals": 2,
@@ -115,7 +135,17 @@
       "nat": "England"
     },
     {
-      "rank": 12,
+      "rank": 14,
+      "name": "Adil Bourabaa",
+      "team": "ルマン",
+      "goals": 2,
+      "assists": 2,
+      "pens": null,
+      "apps": 4,
+      "nat": "Algeria"
+    },
+    {
+      "rank": 15,
       "name": "Samuel Amo-Ameyaw",
       "team": "ストラスブール",
       "goals": 2,
@@ -123,36 +153,6 @@
       "pens": null,
       "apps": 4,
       "nat": "England"
-    },
-    {
-      "rank": 13,
-      "name": "Keyliane Abdallah",
-      "team": "マルセイユ",
-      "goals": 1,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "France"
-    },
-    {
-      "rank": 14,
-      "name": "Pierre Emile Højbjerg",
-      "team": "マルセイユ",
-      "goals": 1,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Denmark"
-    },
-    {
-      "rank": 15,
-      "name": "Franjo Ivanovic",
-      "team": "ランス",
-      "goals": 1,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Austria"
     }
   ]
 }

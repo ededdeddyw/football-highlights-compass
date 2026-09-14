@@ -418,9 +418,9 @@
       "away": "ブライトン",
       "homeSlug": "coventry-city",
       "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-5",
+      "videoId": "HZO6C-XMnp8"
     },
     {
       "matchday": 4,
@@ -429,9 +429,9 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "man-united",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "AIBC0fJMgLA"
     },
     {
       "matchday": 4,

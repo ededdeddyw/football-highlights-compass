@@ -233,7 +233,7 @@
       "awaySlug": "vfb-stuttgart",
       "finished": true,
       "score": "2-1",
-      "videoId": ""
+      "videoId": "XnwRqJtGu68"
     },
     {
       "matchday": 3,
@@ -255,7 +255,7 @@
       "awaySlug": "bayer-04-leverkusen",
       "finished": true,
       "score": "2-2",
-      "videoId": ""
+      "videoId": "smetF5194UM"
     },
     {
       "matchday": 3,
@@ -286,9 +286,9 @@
       "away": "ハンブルガーSV",
       "homeSlug": "rb-leipzig",
       "awaySlug": "hamburger-sv",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-0",
+      "videoId": "X_p818BPjZ8"
     },
     {
       "matchday": 3,
@@ -297,9 +297,9 @@
       "away": "バイエルン",
       "homeSlug": "sv-07-elversberg",
       "awaySlug": "fc-bayern-munchen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "h-BXJf4NXos"
     },
     {
       "matchday": 4,

@@ -2,10 +2,20 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "scorers": [
     {
       "rank": 1,
+      "name": "Erling Haaland",
+      "team": "マンチェスター・シティ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Norway"
+    },
+    {
+      "rank": 2,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -15,7 +25,7 @@
       "nat": "England"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Marcus Tavernier",
       "team": "ボーンマス",
       "goals": 3,
@@ -25,7 +35,7 @@
       "nat": "England"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 3,
@@ -35,7 +45,7 @@
       "nat": "Brazil"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 3,
@@ -43,16 +53,6 @@
       "pens": null,
       "apps": 4,
       "nat": "England"
-    },
-    {
-      "rank": 5,
-      "name": "Erling Haaland",
-      "team": "マンチェスター・シティ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Norway"
     },
     {
       "rank": 6,
@@ -81,7 +81,7 @@
       "goals": 3,
       "assists": 1,
       "pens": 1,
-      "apps": 3,
+      "apps": 4,
       "nat": "Portugal"
     },
     {

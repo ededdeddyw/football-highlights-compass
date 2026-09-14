@@ -374,9 +374,9 @@
       "away": "トロワ",
       "homeSlug": "lille",
       "awaySlug": "troyes",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "AvqawVDeLmg"
     },
     {
       "matchday": 4,
@@ -385,9 +385,9 @@
       "away": "ランス",
       "homeSlug": "le-mans",
       "awaySlug": "rc-lens",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "XG5_6SXciAg"
     },
     {
       "matchday": 4,
@@ -396,9 +396,9 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "brest",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "VA934-C0TXs"
     },
     {
       "matchday": 5,

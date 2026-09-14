@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "scorers": [
     {
       "rank": 1,
@@ -81,11 +81,21 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 2,
+      "apps": 3,
       "nat": "Portugal"
     },
     {
       "rank": 9,
+      "name": "Tiago Gabriel",
+      "team": "レッチェ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 10,
       "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 2,
@@ -95,7 +105,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Che Adams",
       "team": "トリノ",
       "goals": 2,
@@ -105,7 +115,7 @@
       "nat": "Scotland"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Martin Baturina",
       "team": "コモ",
       "goals": 2,
@@ -115,17 +125,17 @@
       "nat": "Croatia"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Rasmus Højlund",
       "team": "ナポリ",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Denmark"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Matias Soule",
       "team": "ローマ",
       "goals": 2,
@@ -135,7 +145,7 @@
       "nat": "Argentina"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Assane Diao",
       "team": "コモ",
       "goals": 2,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 3,
       "nat": "Senegal"
-    },
-    {
-      "rank": 15,
-      "name": "Mateo Pellegrino",
-      "team": "フィオレンティーナ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Argentina"
     }
   ]
 }

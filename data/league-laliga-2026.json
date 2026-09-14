@@ -506,9 +506,9 @@
       "away": "マラガ",
       "homeSlug": "celta",
       "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "VYkVgYTI2sI"
     },
     {
       "matchday": 5,
@@ -517,9 +517,9 @@
       "away": "バルセロナ",
       "homeSlug": "levante",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-4",
+      "videoId": "te6eWlim9yU"
     },
     {
       "matchday": 5,
@@ -528,9 +528,9 @@
       "away": "デポルティボ",
       "homeSlug": "getafe",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "Y30eoNtNBQs"
     },
     {
       "matchday": 5,
@@ -539,9 +539,9 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "real-sociedad",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-3",
+      "videoId": "UWJ3Z7DuIoM"
     },
     {
       "matchday": 5,

@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "scorers": [
     {
       "rank": 1,
@@ -19,9 +19,9 @@
       "name": "Raphinha",
       "team": "バルセロナ",
       "goals": 6,
-      "assists": null,
+      "assists": 2,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "Brazil"
     },
     {
@@ -36,6 +36,16 @@
     },
     {
       "rank": 4,
+      "name": "Lamine Yamal",
+      "team": "バルセロナ",
+      "goals": 6,
+      "assists": null,
+      "pens": 1,
+      "apps": 5,
+      "nat": "Spain"
+    },
+    {
+      "rank": 5,
       "name": "Roberto Fernández",
       "team": "エスパニョール",
       "goals": 5,
@@ -45,7 +55,17 @@
       "nat": "Spain"
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "name": "Pierre-Emerick Aubameyang",
+      "team": "デポルティボ",
+      "goals": 5,
+      "assists": 2,
+      "pens": null,
+      "apps": 5,
+      "nat": "Gabon"
+    },
+    {
+      "rank": 7,
       "name": "Yassir Zabiri",
       "team": "ラシン・サンタンデール",
       "goals": 5,
@@ -55,27 +75,17 @@
       "nat": "Morocco"
     },
     {
-      "rank": 6,
-      "name": "Pierre-Emerick Aubameyang",
-      "team": "デポルティボ",
-      "goals": 4,
-      "assists": 2,
-      "pens": null,
-      "apps": 4,
-      "nat": "Gabon"
-    },
-    {
-      "rank": 7,
+      "rank": 8,
       "name": "Fermín López",
       "team": "バルセロナ",
       "goals": 4,
       "assists": 2,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Spain"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Ante Budimir",
       "team": "オサスナ",
       "goals": 4,
@@ -85,7 +95,7 @@
       "nat": "Croatia"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Lucas Boyé",
       "team": "アラベス",
       "goals": 4,
@@ -93,16 +103,6 @@
       "pens": null,
       "apps": 4,
       "nat": "Argentina"
-    },
-    {
-      "rank": 10,
-      "name": "Lamine Yamal",
-      "team": "バルセロナ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Spain"
     },
     {
       "rank": 11,
@@ -121,7 +121,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Spain"
     },
     {
@@ -136,6 +136,16 @@
     },
     {
       "rank": 14,
+      "name": "Brugui",
+      "team": "レバンテ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Spain"
+    },
+    {
+      "rank": 15,
       "name": "Nicolas Pépé",
       "team": "ビジャレアル",
       "goals": 2,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 4,
       "nat": "Ivory Coast"
-    },
-    {
-      "rank": 15,
-      "name": "Rodrigo Riquelme",
-      "team": "ベティス",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Spain"
     }
   ]
 }

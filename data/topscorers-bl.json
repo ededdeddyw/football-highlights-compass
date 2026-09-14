@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "scorers": [
     {
       "rank": 1,
@@ -56,6 +56,16 @@
     },
     {
       "rank": 6,
+      "name": "Maurice Krattenmacher",
+      "team": "エルファースベルク",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "Germany"
+    },
+    {
+      "rank": 7,
       "name": "Phillip Tietz",
       "team": "マインツ",
       "goals": 3,
@@ -65,7 +75,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Josha Vagnoman",
       "team": "シュツットガルト",
       "goals": 2,
@@ -75,17 +85,27 @@
       "nat": "Germany"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Ridle Baku",
       "team": "ライプツィヒ",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 2,
+      "apps": 3,
       "nat": "Germany"
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "name": "Antonio Nusa",
+      "team": "ライプツィヒ",
+      "goals": 2,
+      "assists": 2,
+      "pens": null,
+      "apps": 3,
+      "nat": "Norway"
+    },
+    {
+      "rank": 11,
       "name": "Tim Skarke",
       "team": "ウニオン・ベルリン",
       "goals": 2,
@@ -95,17 +115,17 @@
       "nat": "Germany"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "David Mokwa Ntusu",
       "team": "エルファースベルク",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 2,
+      "apps": 3,
       "nat": "France"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Christian Kofane",
       "team": "レバークーゼン",
       "goals": 2,
@@ -115,7 +135,7 @@
       "nat": "Cameroon"
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "Thijs Dallinga",
       "team": "ケルン",
       "goals": 2,
@@ -125,7 +145,7 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "Sehrou Guirassy",
       "team": "ドルトムント",
       "goals": 2,
@@ -133,26 +153,6 @@
       "pens": null,
       "apps": 3,
       "nat": "Guinea"
-    },
-    {
-      "rank": 14,
-      "name": "Niclas Füllkrug",
-      "team": "ブレーメン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Germany"
-    },
-    {
-      "rank": 15,
-      "name": "Fábio Silva",
-      "team": "ドルトムント",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Portugal"
     }
   ]
 }
