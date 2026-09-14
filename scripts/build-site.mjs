@@ -1152,7 +1152,9 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   const dek = `${teamsTxt}（${L.jp} ${nara}・${seasonLbl}）の公式ハイライト。結果はネタバレ防止で隠しています。`;
   // 検索クエリには「試合経過」「結果」等スコアを知りたい意図も多い。「マスク/隠す」を前面に出すとCTRを下げるため、
   // スニペットは結果情報がある旨を伝えつつ、ネタバレ防止は「選べる機能」として添える（表示は既定で隠したまま＝機能自体は不変）。
-  const desc = `${teamsTxt}の試合結果・経過とハイライト動画。${L.jp} ${nara}（${seasonLbl}）の公式映像のみ掲載。スコアはネタバレ防止で表示切替できます。`.slice(0,120);
+  // 「試合経過」は実際の検索クエリで頻出（例:高表示・0クリックの「○○対○○ 試合経過」）。「試合結果・経過」だと
+  // 中黒で分断され完全一致しないため、title/descは「試合経過」を連続表記にしてスニペットの一致度・CTRを上げる。
+  const desc = `${teamsTxt}の試合経過・結果とハイライト動画。${L.jp} ${nara}（${seasonLbl}）の公式映像のみ掲載。スコアはネタバレ防止で表示切替できます。`.slice(0,120);
   // 動画：あればembed＋フォールバック、無ければ「準備中＋YouTube検索」
   let videoBlock;
   if (mt.videoId){
@@ -1188,7 +1190,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
     .map(o => `<a href="${leagueSlug(o, L)}.html">${esc(o.home)} vs ${esc(o.away)}</a>`)
     .join('');
   const head = HEAD({
-    title:`${teamsTxt} 試合結果・経過とハイライト動画｜${L.jp} ${nara}`,
+    title:`${teamsTxt} 試合経過・結果とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
     robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。FAQPageも付与しSERP占有UP。
@@ -2007,7 +2009,9 @@ function buildLeague(h){
   faqItems.push({ q:`${h.name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元がYouTube等で公開している${h.name}のハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。試合ページから公式映像へ移動できます。` });
   const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}]), faqLd(faqItems)];
   graph.push(itemListLd(ms));
-  const head=HEAD({ title:`${h.name} 順位表・${scList.length?'得点王・':''}ハイライト動画｜最新結果`, ogtitle:`${h.name} 順位表・ハイライト動画`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+  // 「○○ ハイライト」「○○ 動画」は実クエリで11〜20位（あと一歩）に多いため、titleは「ハイライト動画」を
+  // リーグ名の直後（先頭寄り）に置いて完全一致度を上げる（旧: 順位表・得点王が先でハイライトが後ろに埋没）。
+  const head=HEAD({ title:`${h.name} ハイライト動画・順位表${scList.length?'・得点王':''}｜最新結果`, ogtitle:`${h.name} 順位表・ハイライト動画`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
