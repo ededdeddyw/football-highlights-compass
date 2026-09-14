@@ -2294,6 +2294,26 @@ const PICKUP_HTML = (()=>{
   return PICK.map(it=>`<a class="pcard cf-card" href="${it.url}"><div class="thumb"><span class="pbadge">${it.badge}</span><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="${escA(it.alt)}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(it.comp)}</span><span class="pmatch">${it.line}</span></div></a>`).join('\n      ');
 })();
 
+// 「動画一覧」グリッドに現行クラブシーズンの最新ハイライトを注入（details.match スタブ）。
+// トップの details.match は隠され、グリッドJSのデータ源として使われる＝スタブで十分。
+// グリッドJSが .meta のリーグ名から自動分類し、MATCH_DATES で新着順ソートするため、
+// リーグ名を含む .meta と .ttl（Home vs Away）と iframe(videoId) を持たせる。
+const LEAGUE_MATCHES_HTML = (()=>{
+  const LG_JP = code => (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+  const items=[];
+  for(const code in LEAGUE_RECENT){
+    for(const r of (LEAGUE_RECENT[code]||[])){
+      if(!r.videoId || !r.home || !r.away) continue;
+      items.push({ code, home:r.home, away:r.away, md:r.matchday, vid:r.videoId, date:(r.dateUTC||'').slice(0,10) });
+    }
+  }
+  items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  return items.slice(0,80).map(it=>{
+    const meta = `${esc(LG_JP(it.code))}${it.md!=null?` 第${it.md}節`:''}`;
+    return `<details class="match"><summary><div><div class="ttl">${esc(it.home)} vs ${esc(it.away)}</div><div class="meta">${meta}</div></div><span class="chev">▶</span></summary><div class="body"><div class="sources"><div class="source"><div class="embedwrap"><iframe src="https://www.youtube-nocookie.com/embed/${it.vid}" loading="lazy" title="${escA(it.home+' vs '+it.away)}"></iframe></div></div></div></div></details>`;
+  }).join('\n  ');
+})();
+
 // ENTITY_PAGES と CLUB_CRESTS（メニュー用 クラブ名→紋章URL）を index.html に注入
 {
   const map = JSON.stringify(ENTITY_PAGES);
@@ -2304,11 +2324,14 @@ const PICKUP_HTML = (()=>{
   // 新着順ソート用の日付（videoId→"YYYY-MM-DD"）。W杯はスケジュール日付、それ以外は日付不明（空）
   const dateMap = {};
   for(const m of data){ if(!m.id) continue; const d=effDate(m); if(d) dateMap[m.id]=d; }
+  // 現行リーグの試合日付も追加＝グリッド新着順で現行クラブ戦が先頭に来る（W杯7月より新しい）
+  for(const code in LEAGUE_RECENT){ for(const r of (LEAGUE_RECENT[code]||[])){ if(r.videoId && r.dateUTC) dateMap[r.videoId]=r.dateUTC.slice(0,10); } }
   let next = html.replace(/\/\*ENTITY_PAGES_START\*\/[\s\S]*?\/\*ENTITY_PAGES_END\*\//, `/*ENTITY_PAGES_START*/\nvar ENTITY_PAGES = ${map};\n/*ENTITY_PAGES_END*/`);
   next = next.replace(/\/\*CLUB_CRESTS_START\*\/[\s\S]*?\/\*CLUB_CRESTS_END\*\//, `/*CLUB_CRESTS_START*/\nvar CLUB_CRESTS = ${JSON.stringify(crestMap)};\n/*CLUB_CRESTS_END*/`);
   next = next.replace(/\/\*MATCH_SCORES_START\*\/[\s\S]*?\/\*MATCH_SCORES_END\*\//, `/*MATCH_SCORES_START*/\nvar MATCH_SCORES = ${JSON.stringify(scoreMap)};\n/*MATCH_SCORES_END*/`);
   next = next.replace(/\/\*MATCH_DATES_START\*\/[\s\S]*?\/\*MATCH_DATES_END\*\//, `/*MATCH_DATES_START*/\nvar MATCH_DATES = ${JSON.stringify(dateMap)};\n/*MATCH_DATES_END*/`);
   next = next.replace(/<!--PICKUP_START-->[\s\S]*?<!--PICKUP_END-->/, `<!--PICKUP_START-->\n      ${PICKUP_HTML}\n      <!--PICKUP_END-->`);
+  next = next.replace(/<!--LEAGUE_MATCHES_START-->[\s\S]*?<!--LEAGUE_MATCHES_END-->/, `<!--LEAGUE_MATCHES_START-->\n  ${LEAGUE_MATCHES_HTML}\n  <!--LEAGUE_MATCHES_END-->`);
   // 広告ユニット（トップ）も AD 定義から注入し、スロットIDを一元管理（data/ads.json）
   next = next.replace(/<!--AD_UNIT_START-->[\s\S]*?<!--AD_UNIT_END-->/, `<!--AD_UNIT_START-->\n  ${AD}\n  <!--AD_UNIT_END-->`);
   // W杯ハブ（左ナビ）：決勝T＋全組リンク。group/knockout への内部リンク導線（クローラビリティ）
