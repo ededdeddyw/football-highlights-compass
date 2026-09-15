@@ -31,11 +31,11 @@ const LEAGUE = {
   //  NBCは "Home v. Away | BUNDESLIGA HIGHLIGHTS | M/D/YY | NBC Sports" 形式で節番号なし → matchday:false・order:true に変更し、
   //  両チーム＋登場順＋"Bundesliga"＋過去年/別シーズンガードで安全に受理。クラブ公式chも許可（PL/Ligue1同様）。
   bl:     { q: 'Bundesliga',     channels: ['Bundesliga', 'NBC Sports'], clubChannels: true,            kw: /highlights|ハイライト/i,          league: /bundesliga/i,     matchday: false, order: true,  allowScore: true },
-  // PLは公式グローバルch(La Liga型)が全ハイライトを出さない（放映権）。各クラブ公式ch＋米放映権元 NBC Sports が主要ソース。
-  //  - NBC Sports は "Home v. Away | PREMIER LEAGUE HIGHLIGHTS | M/D/YYYY | NBC Sports" 形式で全試合を投稿（PL公式ライツ保有）。
-  //    両チーム＋登場順＋"Premier League"＋過去年ガード の後段ゲートで、旧シーズンの同カード再掲を除外して安全に受理。
-  //  - クラブchのタイトルは節番号なし・スコア入りが常態なので matchday:false / allowScore:true（スコアはページ側で隠す）。
-  pl:     { q: 'Premier League', channels: ['Premier League', 'NBC Sports'], clubChannels: true,        kw: /highlights|ハイライト/i,          league: /premier\s*league/i, matchday: false, order: true,  allowScore: true },
+  // PLの正規ハイライトは、米放映権元 NBC Sports が「日本では公開されていません」（geo-block）＝日本のサイトでは再生不可。
+  //  日本で見られるのは日本放映権元 U-NEXT だが、U-NEXTの動画は日本限定公開で GitHub(米国) からは一切見えない
+  //  （実証済み：チャンネルページは開けるが動画0件）。よってこの自動検知(米国実行)ではPLを扱えない。
+  //  → local:true で自動検知をスキップし、日本の端末で実行する scripts/fetch-unext-pl.mjs が U-NEXT を突合して管理する。
+  pl:     { local: true },
   sa:     { q: 'Serie A',        channels: ['Serie A', 'Lega Serie A'],                                 kw: /highlights|ハイライト/i,          league: /serie\s*a/i,      matchday: false, order: true,  allowScore: true },
   laliga: { q: 'LaLiga',         channels: ['LALIGA EA SPORTS', 'LaLiga', 'LALIGA'],                    kw: /highlights|ハイライト|resumen/i,  league: /la\s*liga/i,      matchday: false, order: true,  allowScore: true },
   // Ligue1は公式ch(Ligue 1 McDonald's)がフル映像を上位に出さず、放映権元 beIN SPORTS が主要ソース。
@@ -102,6 +102,7 @@ for (const f of files) {
   const data = readJson(path, null); if (!data || !Array.isArray(data.matches)) continue;
   const code = data.code; const cfg = LEAGUE[code];
   if (!cfg) { console.log(`  [skip] ${code}: 照合設定なし`); continue; }
+  if (cfg.local) { console.log(`  [skip] ${code}: 日本の端末実行（scripts/fetch-unext-pl.mjs）で管理（米国から見えないJP限定chのため自動検知しない）`); continue; }
   const channelsN = cfg.channels.map(c => c.toLowerCase().replace(/[^a-z0-9]/g, ''));
   const chOk = author => channelsN.includes((author || '').toLowerCase().replace(/[^a-z0-9]/g, ''));
   const known = new Set(data.matches.map(m => m.videoId).filter(Boolean));
