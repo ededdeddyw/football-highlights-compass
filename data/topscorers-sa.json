@@ -2,16 +2,16 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "scorers": [
     {
       "rank": 1,
       "name": "Donyell Malen",
       "team": "ローマ",
-      "goals": 5,
+      "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Netherlands"
     },
     {
@@ -51,7 +51,7 @@
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Ivory Coast"
     },
     {
@@ -61,7 +61,7 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Greece"
     },
     {
@@ -86,6 +86,16 @@
     },
     {
       "rank": 9,
+      "name": "Francesco Esposito",
+      "team": "インテル",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 4,
+      "nat": "Italy"
+    },
+    {
+      "rank": 10,
       "name": "Tiago Gabriel",
       "team": "レッチェ",
       "goals": 2,
@@ -95,7 +105,7 @@
       "nat": "Portugal"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 2,
@@ -105,7 +115,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Che Adams",
       "team": "トリノ",
       "goals": 2,
@@ -115,44 +125,34 @@
       "nat": "Scotland"
     },
     {
-      "rank": 12,
+      "rank": 13,
+      "name": "Niccolo Pisilli",
+      "team": "ローマ",
+      "goals": 2,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Italy"
+    },
+    {
+      "rank": 14,
+      "name": "Jurgen Ekkelenkamp",
+      "team": "ウディネーゼ",
+      "goals": 2,
+      "assists": 1,
+      "pens": null,
+      "apps": 4,
+      "nat": "Netherlands"
+    },
+    {
+      "rank": 15,
       "name": "Martin Baturina",
       "team": "コモ",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 3,
-      "nat": "Croatia"
-    },
-    {
-      "rank": 13,
-      "name": "Rasmus Højlund",
-      "team": "ナポリ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
       "apps": 4,
-      "nat": "Denmark"
-    },
-    {
-      "rank": 14,
-      "name": "Matias Soule",
-      "team": "ローマ",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 3,
-      "nat": "Argentina"
-    },
-    {
-      "rank": 15,
-      "name": "Assane Diao",
-      "team": "コモ",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 3,
-      "nat": "Senegal"
+      "nat": "Croatia"
     }
   ]
 }

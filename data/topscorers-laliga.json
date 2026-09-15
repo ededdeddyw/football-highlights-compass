@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "scorers": [
     {
       "rank": 1,
@@ -151,7 +151,7 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Ivory Coast"
     }
   ]

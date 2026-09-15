@@ -550,9 +550,9 @@
       "away": "ベティス",
       "homeSlug": "villarreal",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "gpE_AVbAie4"
     },
     {
       "matchday": 6,

@@ -418,9 +418,9 @@
       "away": "パルマ",
       "homeSlug": "como-1907",
       "awaySlug": "parma",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "aNe3zx9_5f4"
     },
     {
       "matchday": 4,
@@ -429,9 +429,9 @@
       "away": "ローマ",
       "homeSlug": "torino",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "7FuX4sRPEvA"
     },
     {
       "matchday": 4,
@@ -440,9 +440,9 @@
       "away": "ウディネーゼ",
       "homeSlug": "inter",
       "awaySlug": "udinese",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-3",
+      "videoId": "lUJb1MDUsjE"
     },
     {
       "matchday": 5,
