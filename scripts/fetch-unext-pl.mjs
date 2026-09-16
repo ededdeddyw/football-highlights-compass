@@ -96,6 +96,10 @@ const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
   .filter(v => nsp(v.author || '').includes('unext'))   // U-NEXT自身の投稿だけ（ページ内の関連動画等を除外）
   .filter(v => v.p.isPL && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
 console.log(`うちプレミア・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
+if (parsed.length === 0 && vids.length) {
+  console.log('  [診断] 候補0件のため、取得動画の先頭20本を表示します（author ｜ title ｜ 解析結果）:');
+  vids.slice(0, 20).forEach(v => { const p = parseTitle(v.title); console.log(`     ${v.author} ｜ ${v.title} ｜ PL=${p.isPL} Hi=${p.isHi} home=${p.home} away=${p.away} md=${p.md} season=${p.seasonStart}`); });
+}
 
 const files = readdirSync('data').filter(n => /^league-pl-\d{4}\.json$/.test(n))
   .filter(n => n.endsWith(`-${CUR_START}.json`));
