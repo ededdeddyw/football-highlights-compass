@@ -2,20 +2,40 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "scorers": [
     {
       "rank": 1,
+      "name": "Kylian Mbappé",
+      "team": "レアル・マドリード",
+      "goals": 7,
+      "assists": 2,
+      "pens": 1,
+      "apps": 6,
+      "nat": "France"
+    },
+    {
+      "rank": 2,
+      "name": "Roberto Fernández",
+      "team": "エスパニョール",
+      "goals": 6,
+      "assists": null,
+      "pens": null,
+      "apps": 6,
+      "nat": "Spain"
+    },
+    {
+      "rank": 3,
       "name": "Sergio Camello",
       "team": "ラーヨ・バジェカーノ",
       "goals": 6,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Spain"
     },
     {
-      "rank": 2,
+      "rank": 4,
       "name": "Raphinha",
       "team": "バルセロナ",
       "goals": 6,
@@ -25,32 +45,12 @@
       "nat": "Brazil"
     },
     {
-      "rank": 3,
-      "name": "Kylian Mbappé",
-      "team": "レアル・マドリード",
-      "goals": 6,
-      "assists": 1,
-      "pens": 1,
-      "apps": 5,
-      "nat": "France"
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "name": "Lamine Yamal",
       "team": "バルセロナ",
       "goals": 6,
       "assists": null,
       "pens": 1,
-      "apps": 5,
-      "nat": "Spain"
-    },
-    {
-      "rank": 5,
-      "name": "Roberto Fernández",
-      "team": "エスパニョール",
-      "goals": 5,
-      "assists": null,
-      "pens": null,
       "apps": 5,
       "nat": "Spain"
     },
@@ -101,7 +101,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Argentina"
     },
     {
@@ -111,7 +111,7 @@
       "goals": 3,
       "assists": 3,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Dominican Republic"
     },
     {
@@ -131,11 +131,21 @@
       "goals": 3,
       "assists": 2,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "England"
     },
     {
       "rank": 14,
+      "name": "Fer Niño",
+      "team": "エルチェ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 6,
+      "nat": "Spain"
+    },
+    {
+      "rank": 15,
       "name": "Brugui",
       "team": "レバンテ",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 4,
       "nat": "Spain"
-    },
-    {
-      "rank": 15,
-      "name": "Nicolas Pépé",
-      "team": "ビジャレアル",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Ivory Coast"
     }
   ]
 }

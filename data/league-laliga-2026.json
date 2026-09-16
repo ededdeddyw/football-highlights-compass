@@ -572,9 +572,9 @@
       "away": "エスパニョール",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "k_7CA-nC1Rc"
     },
     {
       "matchday": 6,
@@ -583,8 +583,8 @@
       "away": "バレンシア",
       "homeSlug": "alaves",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": ""
     },
     {
@@ -594,9 +594,9 @@
       "away": "レアル・マドリード",
       "homeSlug": "elche",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "s7gWTLWzW_k"
     },
     {
       "matchday": 6,
