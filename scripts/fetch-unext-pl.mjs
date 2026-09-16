@@ -41,60 +41,37 @@ const variants = ja => [ja, ...(ALIASES[ja] || [])].map(nsp).filter(v => v.lengt
 // トークン（U-NEXTタイトル中のチーム表記）が、日程表のチーム ja に一致するか（部分一致・双方向）
 const teamMatch = (ja, token) => { const t = nsp(token); if (!t) return false; return variants(ja).some(v => t === v || t.includes(v) || v.includes(t)); };
 
-// ---- YouTube: チャンネル投稿一覧を取得（初期ページ＋継続ページで最大~150本）----
-function braceJson(html, marker) {
-  const i = html.indexOf(marker); if (i < 0) return null;
-  const start = html.indexOf('{', i); if (start < 0) return null;
-  let depth = 0, inStr = false, esc = false;
-  for (let j = start; j < html.length; j++) {
-    const c = html[j];
-    if (inStr) { if (esc) esc = false; else if (c === '\\') esc = true; else if (c === '"') inStr = false; }
-    else if (c === '"') inStr = true; else if (c === '{') depth++; else if (c === '}') { if (--depth === 0) return html.slice(start, j + 1); }
-  }
-  return null;
-}
-function walkVideos(node, out, seen) {
-  if (!node || typeof node !== 'object') return;
-  if (Array.isArray(node)) { for (const x of node) walkVideos(x, out, seen); return; }
-  const vr = node.videoRenderer || node.gridVideoRenderer;
-  if (vr && vr.videoId) {
-    const id = vr.videoId;
-    const title = (vr.title && (vr.title.runs ? vr.title.runs.map(r => r.text).join('') : vr.title.simpleText)) || '';
-    if (!seen.has(id)) { seen.add(id); out.push({ id, title }); }
-  }
-  for (const k in node) walkVideos(node[k], out, seen);
-}
-function findToken(node) {
-  if (!node || typeof node !== 'object') return null;
-  if (node.continuationItemRenderer) {
-    const t = node.continuationItemRenderer.continuationEndpoint?.continuationCommand?.token;
-    if (t) return t;
-  }
-  for (const k in node) { const t = findToken(node[k]); if (t) return t; }
-  return null;
+// ---- YouTube: チャンネル投稿一覧を取得（構造非依存：正規表現でvideoId抽出→oembedでタイトル取得）----
+// ページのJSON構造は頻繁に変わるため、videoIdは正規表現で拾い、タイトルは各動画のoembedで確実に取る。
+const HDRS = { 'user-agent': UA, 'accept-language': 'ja-JP,ja;q=0.9,en;q=0.5', 'cookie': 'SOCS=CAISNQgDEitib3; CONSENT=YES+1' };
+const grabIds = txt => { const seen = new Set(), out = []; for (const m of (txt || '').matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g)) if (!seen.has(m[1])) { seen.add(m[1]); out.push(m[1]); } return out; };
+async function oembed(id) {
+  try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
 }
 async function channelVideos() {
-  const r = await fetch(`https://www.youtube.com/${HANDLE}/videos?hl=ja&gl=JP`, { headers: { 'user-agent': UA, 'accept-language': 'ja-JP,ja;q=0.9' } });
-  if (!r.ok) throw new Error(`チャンネル取得に失敗: HTTP ${r.status}`);
-  const html = await r.text();
+  const r = await fetch(`https://www.youtube.com/${HANDLE}/videos?hl=ja&gl=JP`, { headers: HDRS });
+  const html = r.ok ? await r.text() : '';
+  const idset = new Set(grabIds(html));
+  console.log(`  [診断] チャンネル取得: HTTP ${r.status} / ページ長 ${html.length} / ytInitialData ${html.includes('ytInitialData') ? 'あり' : 'なし'} / 抽出videoId ${idset.size}件`);
   const key = (html.match(/"INNERTUBE_API_KEY":"([^"]+)"/) || [])[1];
   const ver = (html.match(/"clientVersion":"([^"]+)"/) || [])[1] || '2.20240101.00.00';
-  const data = JSON.parse(braceJson(html, 'ytInitialData'));
-  const out = [], seen = new Set();
-  walkVideos(data, out, seen);
-  let token = findToken(data), pages = 0;
-  while (token && key && pages < 5 && out.length < 150) {
+  let token = (html.match(/"continuationCommand":\{"token":"([^"]+)"/) || [])[1], pages = 0;
+  while (token && key && pages < 6 && idset.size < 200) {
     pages++;
     const cr = await fetch(`https://www.youtube.com/youtubei/v1/browse?key=${key}&prettyPrint=false`, {
-      method: 'POST', headers: { 'content-type': 'application/json', 'user-agent': UA, 'accept-language': 'ja' },
+      method: 'POST', headers: { ...HDRS, 'content-type': 'application/json' },
       body: JSON.stringify({ context: { client: { clientName: 'WEB', clientVersion: ver, hl: 'ja', gl: 'JP' } }, continuation: token })
     });
     if (!cr.ok) break;
-    const cj = await cr.json();
-    const before = out.length; walkVideos(cj, out, seen); token = findToken(cj);
-    if (out.length === before) break;
+    const ct = await cr.text();
+    const before = idset.size; for (const id of grabIds(ct)) idset.add(id);
+    token = (ct.match(/"continuationCommand":\{"token":"([^"]+)"/) || [])[1];
+    if (idset.size === before) break;
     await new Promise(r => setTimeout(r, 400));
   }
+  // 各videoIdのタイトルを oembed で取得（構造変化に強い）
+  const out = [];
+  for (const id of idset) { const t = await oembed(id); if (t) out.push({ id, title: t.title, author: t.author }); await new Promise(r => setTimeout(r, 90)); }
   return out;
 }
 
@@ -116,6 +93,7 @@ function parseTitle(title) {
 const vids = await channelVideos();
 console.log(`U-NEXT(@UNEXT_football) 投稿取得: ${vids.length}本`);
 const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
+  .filter(v => nsp(v.author || '').includes('unext'))   // U-NEXT自身の投稿だけ（ページ内の関連動画等を除外）
   .filter(v => v.p.isPL && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
 console.log(`うちプレミア・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
 
