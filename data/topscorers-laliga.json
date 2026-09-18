@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "scorers": [
     {
       "rank": 1,
@@ -126,6 +126,16 @@
     },
     {
       "rank": 13,
+      "name": "Pape Gueye",
+      "team": "ビジャレアル",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 6,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 14,
       "name": "Jude Bellingham",
       "team": "レアル・マドリード",
       "goals": 3,
@@ -135,23 +145,13 @@
       "nat": "England"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Fer Niño",
       "team": "エルチェ",
       "goals": 3,
       "assists": null,
       "pens": null,
       "apps": 6,
-      "nat": "Spain"
-    },
-    {
-      "rank": 15,
-      "name": "Brugui",
-      "team": "レバンテ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
       "nat": "Spain"
     }
   ]
