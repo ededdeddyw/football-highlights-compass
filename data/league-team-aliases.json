@@ -358,11 +358,13 @@
   ],
   "コベントリー": [
     "Coventry",
-    "Coventry City"
+    "Coventry City",
+    "コヴェントリー"
   ],
   "ハル・シティ": [
     "Hull",
-    "Hull City"
+    "Hull City",
+    "ハル"
   ],
   "イプスウィッチ": [
     "Ipswich",
@@ -386,7 +388,12 @@
   "アストン・ヴィラ": [
     "Aston Villa",
     "Aston Villa FC",
-    "AVFC"
+    "AVFC",
+    "A・ヴィラ",
+    "ヴィラ",
+    "アストン・ビラ",
+    "アストンビラ",
+    "ビラ"
   ],
   "エバートン": [
     "Everton",
@@ -395,7 +402,10 @@
   "クリスタル・パレス": [
     "Crystal Palace",
     "Crystal Palace FC",
-    "CPFC"
+    "CPFC",
+    "C・パレス",
+    "パレス",
+    "クリスタルパレス"
   ],
   "サンダーランド": [
     "Sunderland",
@@ -410,7 +420,9 @@
     "Tottenham",
     "Tottenham Hotspur",
     "Spurs",
-    "THFC"
+    "THFC",
+    "トッテナム・ホットスパー",
+    "スパーズ"
   ],
   "ニューカッスル": [
     "Newcastle",
@@ -421,7 +433,10 @@
     "Nottingham Forest",
     "Nott m Forest",
     "Forest",
-    "NFFC"
+    "NFFC",
+    "N・フォレスト",
+    "Nフォレスト",
+    "ノッティンガム"
   ],
   "フラム": [
     "Fulham",
@@ -444,14 +459,20 @@
     "Manchester City",
     "Man City",
     "Man. City",
-    "MCFC"
+    "MCFC",
+    "マンチェスター・C",
+    "マンC",
+    "マンチェスターC"
   ],
   "マンチェスター・ユナイテッド": [
     "Manchester United",
     "Man United",
     "Man Utd",
     "Man. United",
-    "MUFC"
+    "MUFC",
+    "マンチェスター・U",
+    "マンU",
+    "マンチェスターU"
   ],
   "リバプール": [
     "Liverpool",
