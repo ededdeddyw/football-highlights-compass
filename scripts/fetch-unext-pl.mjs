@@ -75,18 +75,34 @@ async function channelVideos() {
   return out;
 }
 
-// ---- タイトル解析：「【HOME v AWAY｜…】…第N節…プレミアリーグ2026/27」----
+// ---- タイトル解析：実タイトル例「【<煽り文>｜HOME v AWAY｜ショートハイライト】プレミアリーグ2026/27 第N節」----
+// U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
+function detectLeague(t) {
+  if (/プレミアリーグ|premier\s*league/i.test(t)) return 'pl';
+  if (/ラ・?リーガ|la\s*liga/i.test(t)) return 'laliga';
+  if (/セリエ\s*a|serie\s*a/i.test(t)) return 'sa';
+  if (/ブンデスリーガ|bundesliga/i.test(t)) return 'bl';
+  if (/リーグ\s*アン|ligue\s*1/i.test(t)) return 'ligue1';
+  if (/エールディヴィジ|eredivisie/i.test(t)) return 'eredivisie';
+  return null;
+}
 function parseTitle(title) {
-  const isPL = /プレミアリーグ|premier\s*league/i.test(title);
+  const league = detectLeague(title);
   const isHi = /ハイライト|highlight/i.test(title);
   const md = (title.match(/第\s*0*(\d+)\s*節/) || [])[1];
-  const sm = title.match(/20(\d\d)\s*[\/\-]\s*(\d{2})/);            // 2026/27 → 開始年2026
-  const seasonStart = sm ? 2000 + (+sm[1]) : null;
-  const br = title.match(/[【\[]([^】\]]+)[】\]]/);                  // 【 】内
-  const teamsPart = (br ? br[1] : title).split(/[｜|]/)[0];         // ｜より前（ショート/ロングハイライト等を除去）
-  const vs = teamsPart.split(/\s*(?:vs?\.?|×|✕|ｖｓ|対)\s*/i);
-  if (vs.length < 2) return { isPL, isHi, md: md ? +md : null, seasonStart, home: null, away: null };
-  return { isPL, isHi, md: md ? +md : null, seasonStart, home: vs[0].trim(), away: vs[1].trim() };
+  // シーズン開始年：2026/27・2026/2027・26/27 のいずれの表記にも対応
+  let seasonStart = null;
+  let sm = title.match(/20(\d\d)\s*[\/\-]\s*(?:20)?\d{2}/);          // 2026/27, 2026/2027
+  if (sm) seasonStart = 2000 + (+sm[1]);
+  else { sm = title.match(/(?<!\d)(\d{2})\s*[\/\-]\s*(\d{2})(?!\d)/); if (sm) seasonStart = 2000 + (+sm[1]); } // 26/27
+  // 「HOME v AWAY」を含むセグメントを探す（｜ 【 】 [ ] で分割し、対戦表記のある区切りだけ拾う）
+  let home = null, away = null;
+  for (const seg of title.split(/[｜|【】\[\]]/)) {
+    const m = seg.match(/^\s*([^｜|]+?)\s+(?:v|vs\.?)\s+([^｜|]+?)\s*$/i)
+          || seg.match(/^\s*([^｜|]+?)\s*(?:×|✕|ｖｓ|対)\s*([^｜|]+?)\s*$/);
+    if (m && m[1] && m[2]) { home = m[1].trim(); away = m[2].trim(); break; }
+  }
+  return { league, isHi, md: md ? +md : null, seasonStart, home, away };
 }
 
 // ---- 実行 ----
@@ -94,11 +110,11 @@ const vids = await channelVideos();
 console.log(`U-NEXT(@UNEXT_football) 投稿取得: ${vids.length}本`);
 const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
   .filter(v => nsp(v.author || '').includes('unext'))   // U-NEXT自身の投稿だけ（ページ内の関連動画等を除外）
-  .filter(v => v.p.isPL && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
+  .filter(v => v.p.league === 'pl' && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
 console.log(`うちプレミア・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
 if (parsed.length === 0 && vids.length) {
   console.log('  [診断] 候補0件のため、取得動画の先頭20本を表示します（author ｜ title ｜ 解析結果）:');
-  vids.slice(0, 20).forEach(v => { const p = parseTitle(v.title); console.log(`     ${v.author} ｜ ${v.title} ｜ PL=${p.isPL} Hi=${p.isHi} home=${p.home} away=${p.away} md=${p.md} season=${p.seasonStart}`); });
+  vids.slice(0, 20).forEach(v => { const p = parseTitle(v.title); console.log(`     ${v.author} ｜ ${v.title} ｜ league=${p.league} Hi=${p.isHi} home=${p.home} away=${p.away} md=${p.md} season=${p.seasonStart}`); });
 }
 
 const files = readdirSync('data').filter(n => /^league-pl-\d{4}\.json$/.test(n))
