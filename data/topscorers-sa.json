@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "scorers": [
     {
       "rank": 1,
@@ -16,6 +16,16 @@
     },
     {
       "rank": 2,
+      "name": "Gustavo Varela",
+      "team": "モンツァ",
+      "goals": 4,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 3,
       "name": "Antonio Raimondo",
       "team": "フロジノーネ",
       "goals": 4,
@@ -25,7 +35,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
       "goals": 3,
@@ -35,7 +45,17 @@
       "nat": "Italy"
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "name": "Vasilije Adzic",
+      "team": "サッスオーロ",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Montenegro"
+    },
+    {
+      "rank": 6,
       "name": "Franco Mastantuono",
       "team": "フィオレンティーナ",
       "goals": 3,
@@ -45,7 +65,7 @@
       "nat": "Argentina"
     },
     {
-      "rank": 5,
+      "rank": 7,
       "name": "Hassane Kamara",
       "team": "ウディネーゼ",
       "goals": 2,
@@ -55,7 +75,7 @@
       "nat": "Ivory Coast"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "Anastasios Douvikas",
       "team": "コモ",
       "goals": 2,
@@ -65,7 +85,7 @@
       "nat": "Greece"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "Hakan Çalhanoğlu",
       "team": "インテル",
       "goals": 2,
@@ -75,17 +95,7 @@
       "nat": "Turkey"
     },
     {
-      "rank": 8,
-      "name": "Gustavo Varela",
-      "team": "モンツァ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Portugal"
-    },
-    {
-      "rank": 9,
+      "rank": 10,
       "name": "Francesco Esposito",
       "team": "インテル",
       "goals": 2,
@@ -95,7 +105,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Tiago Gabriel",
       "team": "レッチェ",
       "goals": 2,
@@ -105,7 +115,7 @@
       "nat": "Portugal"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 2,
@@ -115,7 +125,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Che Adams",
       "team": "トリノ",
       "goals": 2,
@@ -125,7 +135,7 @@
       "nat": "Scotland"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Niccolo Pisilli",
       "team": "ローマ",
       "goals": 2,
@@ -135,7 +145,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Jurgen Ekkelenkamp",
       "team": "ウディネーゼ",
       "goals": 2,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 4,
       "nat": "Netherlands"
-    },
-    {
-      "rank": 15,
-      "name": "Martin Baturina",
-      "team": "コモ",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 4,
-      "nat": "Croatia"
     }
   ]
 }

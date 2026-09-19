@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "scorers": [
     {
       "rank": 1,
@@ -41,7 +41,7 @@
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Spain"
     },
     {
@@ -76,6 +76,16 @@
     },
     {
       "rank": 8,
+      "name": "Fer Niño",
+      "team": "エルチェ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Spain"
+    },
+    {
+      "rank": 9,
       "name": "Álex Baena",
       "team": "アトレティコ・マドリード",
       "goals": 4,
@@ -85,7 +95,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Fermín López",
       "team": "バルセロナ",
       "goals": 4,
@@ -95,7 +105,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Ante Budimir",
       "team": "オサスナ",
       "goals": 4,
@@ -105,7 +115,7 @@
       "nat": "Croatia"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Lucas Boyé",
       "team": "アラベス",
       "goals": 4,
@@ -115,7 +125,7 @@
       "nat": "Argentina"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Mariano Díaz",
       "team": "アラベス",
       "goals": 3,
@@ -125,7 +135,7 @@
       "nat": "Dominican Republic"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Pape Gueye",
       "team": "ビジャレアル",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Senegal"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Jude Bellingham",
       "team": "レアル・マドリード",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 6,
       "nat": "England"
-    },
-    {
-      "rank": 15,
-      "name": "Fer Niño",
-      "team": "エルチェ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Spain"
     }
   ]
 }

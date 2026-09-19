@@ -2,10 +2,20 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "scorers": [
     {
       "rank": 1,
+      "name": "Michael Olise",
+      "team": "バイエルン",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 4,
+      "nat": "France"
+    },
+    {
+      "rank": 2,
       "name": "Younes Ebnoutalib",
       "team": "フランクフルト",
       "goals": 3,
@@ -15,7 +25,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
       "goals": 3,
@@ -25,7 +35,7 @@
       "nat": "Czech Republic"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Yuito Suzuki",
       "team": "フライブルク",
       "goals": 3,
@@ -35,7 +45,7 @@
       "nat": "Japan"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 3,
@@ -45,7 +55,7 @@
       "nat": "Croatia"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 3,
@@ -55,7 +65,7 @@
       "nat": "Austria"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Maurice Krattenmacher",
       "team": "エルファースベルク",
       "goals": 3,
@@ -65,7 +75,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Phillip Tietz",
       "team": "マインツ",
       "goals": 3,
@@ -75,7 +85,17 @@
       "nat": "Germany"
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "name": "Harry Kane",
+      "team": "バイエルン",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "England"
+    },
+    {
+      "rank": 10,
       "name": "Josha Vagnoman",
       "team": "シュツットガルト",
       "goals": 2,
@@ -85,7 +105,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Ridle Baku",
       "team": "ライプツィヒ",
       "goals": 2,
@@ -95,7 +115,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Antonio Nusa",
       "team": "ライプツィヒ",
       "goals": 2,
@@ -105,17 +125,17 @@
       "nat": "Norway"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Tim Skarke",
       "team": "ウニオン・ベルリン",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Germany"
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "David Mokwa Ntusu",
       "team": "エルファースベルク",
       "goals": 2,
@@ -125,7 +145,7 @@
       "nat": "France"
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "Christian Kofane",
       "team": "レバークーゼン",
       "goals": 2,
@@ -133,26 +153,6 @@
       "pens": null,
       "apps": 3,
       "nat": "Cameroon"
-    },
-    {
-      "rank": 14,
-      "name": "Thijs Dallinga",
-      "team": "ケルン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 2,
-      "nat": "Netherlands"
-    },
-    {
-      "rank": 15,
-      "name": "Sehrou Guirassy",
-      "team": "ドルトムント",
-      "goals": 2,
-      "assists": 2,
-      "pens": null,
-      "apps": 3,
-      "nat": "Guinea"
     }
   ]
 }

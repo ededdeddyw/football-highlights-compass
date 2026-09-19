@@ -451,9 +451,9 @@
       "away": "サッスオーロ",
       "homeSlug": "monza",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "INZbYj_wNKs"
     },
     {
       "matchday": 5,

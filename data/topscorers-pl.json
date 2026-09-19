@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "scorers": [
     {
       "rank": 1,
@@ -51,7 +51,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "England"
     },
     {
@@ -71,7 +71,7 @@
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     },
     {
@@ -121,7 +121,7 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     },
     {

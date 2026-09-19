@@ -308,9 +308,9 @@
       "away": "ウニオン・ベルリン",
       "homeSlug": "fc-bayern-munchen",
       "awaySlug": "1-fc-union-berlin",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "7-0",
+      "videoId": "YyRS82WiIog"
     },
     {
       "matchday": 4,

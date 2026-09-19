@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "scorers": [
     {
       "rank": 1,
@@ -36,16 +36,26 @@
     },
     {
       "rank": 4,
-      "name": "Florian Thauvin",
-      "team": "ランス",
-      "goals": 3,
-      "assists": 2,
-      "pens": 3,
-      "apps": 4,
-      "nat": "France"
+      "name": "Paris Brunner",
+      "team": "モナコ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Germany"
     },
     {
       "rank": 5,
+      "name": "Florian Thauvin",
+      "team": "ランス",
+      "goals": 3,
+      "assists": 3,
+      "pens": 3,
+      "apps": 5,
+      "nat": "France"
+    },
+    {
+      "rank": 6,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 3,
@@ -55,7 +65,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Esteban Lepaul",
       "team": "レンヌ",
       "goals": 3,
@@ -65,7 +75,7 @@
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 3,
@@ -75,23 +85,13 @@
       "nat": "Spain"
     },
     {
-      "rank": 8,
-      "name": "Paris Brunner",
-      "team": "モナコ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Germany"
-    },
-    {
       "rank": 9,
       "name": "Franjo Ivanovic",
       "team": "ランス",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Austria"
     },
     {
