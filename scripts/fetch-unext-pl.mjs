@@ -17,14 +17,17 @@
 //   node scripts/fetch-unext-pl.mjs                # 現行シーズンを自動判定して更新
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示
-//   node scripts/fetch-unext-pl.mjs --keep-existing # U-NEXTで拾えなかった既存videoIdを消さない
+//   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoId(NBC等)を消す（初回の掃除用）
+//   ※既定では既存videoIdは消しません（過去に埋めたU-NEXT動画を守るため）。初回のNBC一掃だけ --purge を付けてください。
+//   ※試合の finished 状態は問いません（ハイライトがある＝実施済み。スコアは次回のリーグ取得で自動で埋まります）。
 //   実行後: git add data/league-pl-*.json && git commit && git push で本番に反映されます。
 // ============================================================================
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry-run');
-const KEEP = args.includes('--keep-existing');
+const KEEP = args.includes('--keep-existing');   // 後方互換（既定でクリアしなくなったため実質no-op）
+const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった既存videoId（NBC等）を消す。既定はOFF（消さない）
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 const HANDLE = '@UNEXT_football';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
@@ -36,7 +39,7 @@ const CUR_START = SEASON_ARG ? +SEASON_ARG : ((now.getUTCMonth() + 1) >= 7 ? now
 // ---- 正規化・チーム名突合（watch-league と同じ考え方。日本語名も含めて畳む）----
 const ALIASES = (() => { try { return JSON.parse(readFileSync('data/league-team-aliases.json', 'utf8')); } catch { return {}; } })();
 const fold = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '');
-const nsp = s => fold(s).toLowerCase().replace(/[\s・･‐-‒–—―.,'’`｜|()（）]/g, '');
+const nsp = s => fold(s).toLowerCase().replace(/[\s\-・･‐-―.,'’`｜|()（）]/g, '');  // ASCIIハイフン(U+002D)も除去（U-NEXT → unext）
 const variants = ja => [ja, ...(ALIASES[ja] || [])].map(nsp).filter(v => v.length >= 2);
 // トークン（U-NEXTタイトル中のチーム表記）が、日程表のチーム ja に一致するか（部分一致・双方向）
 const teamMatch = (ja, token) => { const t = nsp(token); if (!t) return false; return variants(ja).some(v => t === v || t.includes(v) || v.includes(t)); };
@@ -125,7 +128,9 @@ let filled = 0, replaced = 0, cleared = 0; const used = new Set(); const unmatch
 for (const f of files) {
   const path = `data/${f}`; const j = JSON.parse(readFileSync(path, 'utf8'));
   for (const m of (j.matches || [])) {
-    if (!m.finished || m.matchday == null || !m.home || !m.away) continue;
+    // finished は要求しない：U-NEXTがハイライトを出している＝試合実施済み。スコアは次回のリーグ取得で埋まる。
+    // 節番号(matchday)は必須にして、同カード（往復対戦）の取り違えを防ぐ。
+    if (m.matchday == null || !m.home || !m.away) continue;
     // この試合に一致するU-NEXT動画を探す（両オリエンテーション・節番号があれば一致必須）
     const hit = parsed.find(v => used.has(v.id) ? false : (
       ((teamMatch(m.home, v.p.home) && teamMatch(m.away, v.p.away)) ||
@@ -137,8 +142,8 @@ for (const f of files) {
       if (m.videoId === hit.id) { /* 変更なし */ }
       else if (m.videoId) { m.videoId = hit.id; replaced++; }
       else { m.videoId = hit.id; filled++; }
-    } else if (m.videoId && !KEEP) {
-      // U-NEXTで拾えなかった既存videoId（＝日本で見られないNBC等）は既定でクリア
+    } else if (m.videoId && PURGE) {
+      // --purge 指定時のみ：U-NEXTで拾えなかった既存videoId（＝日本で見られないNBC等）をクリア
       m.videoId = ''; cleared++;
     }
   }
