@@ -462,9 +462,9 @@
       "away": "トリノ",
       "homeSlug": "bologna",
       "awaySlug": "torino",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "klX7Qw6IH0s"
     },
     {
       "matchday": 5,
@@ -473,9 +473,9 @@
       "away": "カリアリ",
       "homeSlug": "udinese",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "RSTdAPjfeLE"
     },
     {
       "matchday": 5,
@@ -484,9 +484,9 @@
       "away": "インテル",
       "homeSlug": "roma",
       "awaySlug": "inter",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "sw8FOhBHACc"
     },
     {
       "matchday": 5,
@@ -495,9 +495,9 @@
       "away": "ラツィオ",
       "homeSlug": "venezia-fc",
       "awaySlug": "lazio",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "a4axHXlbIs0"
     },
     {
       "matchday": 5,
@@ -506,9 +506,9 @@
       "away": "ナポリ",
       "homeSlug": "fiorentina",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "fa0DH-3sg8U"
     },
     {
       "matchday": 5,
@@ -517,9 +517,9 @@
       "away": "コモ",
       "homeSlug": "frosinone",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "8ZBuqXlZ3Ko"
     },
     {
       "matchday": 5,
@@ -528,9 +528,9 @@
       "away": "ジェノア",
       "homeSlug": "parma",
       "awaySlug": "genoa",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "eDI_q4r7bpU"
     },
     {
       "matchday": 5,
@@ -539,9 +539,9 @@
       "away": "アタランタ",
       "homeSlug": "juventus",
       "awaySlug": "atalanta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "3h4PItU2hLw"
     },
     {
       "matchday": 5,
@@ -550,9 +550,9 @@
       "away": "レッチェ",
       "homeSlug": "milan",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "dVzz_vYqjPc"
     },
     {
       "matchday": 6,

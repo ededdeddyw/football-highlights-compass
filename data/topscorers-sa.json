@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "scorers": [
     {
       "rank": 1,
@@ -11,7 +11,7 @@
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Netherlands"
     },
     {
@@ -31,21 +31,41 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Italy"
     },
     {
       "rank": 4,
+      "name": "Lautaro Martínez",
+      "team": "インテル",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Argentina"
+    },
+    {
+      "rank": 5,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Italy"
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "name": "Giorgi Kvernadze",
+      "team": "フロジノーネ",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Georgia"
+    },
+    {
+      "rank": 7,
       "name": "Vasilije Adzic",
       "team": "サッスオーロ",
       "goals": 3,
@@ -55,37 +75,57 @@
       "nat": "Montenegro"
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "name": "Daniel Maldini",
+      "team": "カリアリ",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 5,
+      "nat": "Italy"
+    },
+    {
+      "rank": 9,
       "name": "Franco Mastantuono",
       "team": "フィオレンティーナ",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Argentina"
     },
     {
-      "rank": 7,
+      "rank": 10,
+      "name": "Diego Moreira",
+      "team": "ミラン",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Belgium"
+    },
+    {
+      "rank": 11,
       "name": "Hassane Kamara",
       "team": "ウディネーゼ",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Ivory Coast"
     },
     {
-      "rank": 8,
+      "rank": 12,
       "name": "Anastasios Douvikas",
       "team": "コモ",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Greece"
     },
     {
-      "rank": 9,
+      "rank": 13,
       "name": "Hakan Çalhanoğlu",
       "team": "インテル",
       "goals": 2,
@@ -95,64 +135,24 @@
       "nat": "Turkey"
     },
     {
-      "rank": 10,
+      "rank": 14,
       "name": "Francesco Esposito",
       "team": "インテル",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 4,
-      "nat": "Italy"
-    },
-    {
-      "rank": 11,
-      "name": "Tiago Gabriel",
-      "team": "レッチェ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Portugal"
-    },
-    {
-      "rank": 12,
-      "name": "Alphadjo Cisse",
-      "team": "ミラン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Italy"
-    },
-    {
-      "rank": 13,
-      "name": "Che Adams",
-      "team": "トリノ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Scotland"
-    },
-    {
-      "rank": 14,
-      "name": "Niccolo Pisilli",
-      "team": "ローマ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Italy"
     },
     {
       "rank": 15,
-      "name": "Jurgen Ekkelenkamp",
-      "team": "ウディネーゼ",
+      "name": "Bremer",
+      "team": "ユベントス",
       "goals": 2,
-      "assists": 1,
+      "assists": null,
       "pens": null,
-      "apps": 4,
-      "nat": "Netherlands"
+      "apps": 5,
+      "nat": "Brazil"
     }
   ]
 }

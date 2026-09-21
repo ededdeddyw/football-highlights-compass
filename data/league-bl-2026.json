@@ -319,9 +319,9 @@
       "away": "フライブルク",
       "homeSlug": "eintracht-frankfurt",
       "awaySlug": "sc-freiburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "WbiJbk0MJX4"
     },
     {
       "matchday": 4,
@@ -330,9 +330,9 @@
       "away": "マインツ",
       "homeSlug": "borussia-monchengladbach",
       "awaySlug": "1-fsv-mainz-05",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-4",
+      "videoId": "AYZojA8qXYw"
     },
     {
       "matchday": 4,
@@ -341,9 +341,9 @@
       "away": "ケルン",
       "homeSlug": "hamburger-sv",
       "awaySlug": "1-fc-koln",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "AzNA2UteAEo"
     },
     {
       "matchday": 4,
@@ -352,9 +352,9 @@
       "away": "アウクスブルク",
       "homeSlug": "sv-werder-bremen",
       "awaySlug": "fc-augsburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "2dQlyDgvTFY"
     },
     {
       "matchday": 4,
@@ -363,9 +363,9 @@
       "away": "ドルトムント",
       "homeSlug": "vfb-stuttgart",
       "awaySlug": "borussia-dortmund",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "ofUcybZlWBE"
     },
     {
       "matchday": 4,
@@ -374,9 +374,9 @@
       "away": "ライプツィヒ",
       "homeSlug": "bayer-04-leverkusen",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "G0Ax1HeP9EY"
     },
     {
       "matchday": 4,
@@ -385,9 +385,9 @@
       "away": "エルファースベルク",
       "homeSlug": "fc-schalke-04",
       "awaySlug": "sv-07-elversberg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "cr-iFkgzX9Q"
     },
     {
       "matchday": 4,
@@ -396,8 +396,8 @@
       "away": "ホッフェンハイム",
       "homeSlug": "sc-paderborn-07",
       "awaySlug": "tsg-hoffenheim",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {

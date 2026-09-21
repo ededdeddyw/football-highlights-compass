@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "scorers": [
     {
       "rank": 1,
@@ -18,74 +18,94 @@
       "rank": 2,
       "name": "Younes Ebnoutalib",
       "team": "フランクフルト",
-      "goals": 3,
+      "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Germany"
     },
     {
       "rank": 3,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
-      "goals": 3,
+      "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Czech Republic"
     },
     {
       "rank": 4,
       "name": "Yuito Suzuki",
       "team": "フライブルク",
-      "goals": 3,
+      "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Japan"
     },
     {
       "rank": 5,
+      "name": "Phillip Tietz",
+      "team": "マインツ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Germany"
+    },
+    {
+      "rank": 6,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Croatia"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Austria"
     },
     {
-      "rank": 7,
+      "rank": 8,
+      "name": "Niclas Füllkrug",
+      "team": "ブレーメン",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 4,
+      "nat": "Germany"
+    },
+    {
+      "rank": 9,
       "name": "Maurice Krattenmacher",
       "team": "エルファースベルク",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Germany"
     },
     {
-      "rank": 8,
-      "name": "Phillip Tietz",
-      "team": "マインツ",
+      "rank": 10,
+      "name": "Jonathan Burkardt",
+      "team": "フランクフルト",
       "goals": 3,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Germany"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Harry Kane",
       "team": "バイエルン",
       "goals": 3,
@@ -95,39 +115,19 @@
       "nat": "England"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Josha Vagnoman",
       "team": "シュツットガルト",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "Germany"
-    },
-    {
-      "rank": 11,
-      "name": "Ridle Baku",
-      "team": "ライプツィヒ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Germany"
-    },
-    {
-      "rank": 12,
-      "name": "Antonio Nusa",
-      "team": "ライプツィヒ",
-      "goals": 2,
-      "assists": 2,
-      "pens": null,
-      "apps": 3,
-      "nat": "Norway"
     },
     {
       "rank": 13,
-      "name": "Tim Skarke",
-      "team": "ウニオン・ベルリン",
+      "name": "Ridle Baku",
+      "team": "ライプツィヒ",
       "goals": 2,
       "assists": null,
       "pens": null,
@@ -136,23 +136,23 @@
     },
     {
       "rank": 14,
-      "name": "David Mokwa Ntusu",
-      "team": "エルファースベルク",
+      "name": "Antonio Nusa",
+      "team": "ライプツィヒ",
       "goals": 2,
-      "assists": null,
+      "assists": 2,
       "pens": null,
-      "apps": 3,
-      "nat": "France"
+      "apps": 4,
+      "nat": "Norway"
     },
     {
       "rank": 15,
-      "name": "Christian Kofane",
-      "team": "レバークーゼン",
+      "name": "Tim Skarke",
+      "team": "ウニオン・ベルリン",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 3,
-      "nat": "Cameroon"
+      "apps": 4,
+      "nat": "Germany"
     }
   ]
 }

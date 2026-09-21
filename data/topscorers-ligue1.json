@@ -2,16 +2,16 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "scorers": [
     {
       "rank": 1,
       "name": "Amine Gouiri",
       "team": "マルセイユ",
       "goals": 4,
-      "assists": null,
+      "assists": 1,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "Algeria"
     },
     {
@@ -21,21 +21,31 @@
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "Mali"
     },
     {
       "rank": 3,
-      "name": "Lassine Sinayoko",
-      "team": "パリFC",
+      "name": "Ferrán Torres",
+      "team": "パリ・サンジェルマン",
       "goals": 4,
       "assists": null,
-      "pens": 2,
-      "apps": 4,
-      "nat": "Mali"
+      "pens": null,
+      "apps": 5,
+      "nat": "Spain"
     },
     {
       "rank": 4,
+      "name": "Lassine Sinayoko",
+      "team": "パリFC",
+      "goals": 4,
+      "assists": 1,
+      "pens": 2,
+      "apps": 5,
+      "nat": "Mali"
+    },
+    {
+      "rank": 5,
       "name": "Paris Brunner",
       "team": "モナコ",
       "goals": 4,
@@ -45,7 +55,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 3,
@@ -55,37 +65,77 @@
       "nat": "France"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "Central African Republic"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Esteban Lepaul",
       "team": "レンヌ",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "France"
     },
     {
-      "rank": 8,
-      "name": "Ferrán Torres",
+      "rank": 9,
+      "name": "Marquinhos",
       "team": "パリ・サンジェルマン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
-      "nat": "Spain"
+      "apps": 5,
+      "nat": "Brazil"
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "name": "Cameron Archer",
+      "team": "オセール",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 3,
+      "nat": "England"
+    },
+    {
+      "rank": 11,
+      "name": "Ernest Nuamah",
+      "team": "リヨン",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Ghana"
+    },
+    {
+      "rank": 12,
+      "name": "Adil Bourabaa",
+      "team": "ルマン",
+      "goals": 3,
+      "assists": 2,
+      "pens": null,
+      "apps": 5,
+      "nat": "Algeria"
+    },
+    {
+      "rank": 13,
+      "name": "Casper Tengstedt",
+      "team": "トゥールーズ",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 3,
+      "nat": "Denmark"
+    },
+    {
+      "rank": 14,
       "name": "Franjo Ivanovic",
       "team": "ランス",
       "goals": 2,
@@ -95,64 +145,14 @@
       "nat": "Austria"
     },
     {
-      "rank": 10,
+      "rank": 15,
       "name": "Tiago Santos",
       "team": "リール",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Portugal"
-    },
-    {
-      "rank": 11,
-      "name": "Marquinhos",
-      "team": "パリ・サンジェルマン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Brazil"
-    },
-    {
-      "rank": 12,
-      "name": "Gessime Yassine",
-      "team": "ストラスブール",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 4,
-      "nat": "France"
-    },
-    {
-      "rank": 13,
-      "name": "Cameron Archer",
-      "team": "オセール",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 2,
-      "nat": "England"
-    },
-    {
-      "rank": 14,
-      "name": "Adil Bourabaa",
-      "team": "ルマン",
-      "goals": 2,
-      "assists": 2,
-      "pens": null,
-      "apps": 4,
-      "nat": "Algeria"
-    },
-    {
-      "rank": 15,
-      "name": "Samuel Amo-Ameyaw",
-      "team": "ストラスブール",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "England"
     }
   ]
 }

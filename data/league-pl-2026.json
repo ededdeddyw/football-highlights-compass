@@ -462,8 +462,8 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "tottenham",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": "WsxGxp1C6vw"
     },
     {
@@ -473,8 +473,8 @@
       "away": "イプスウィッチ",
       "homeSlug": "everton",
       "awaySlug": "ipswich-town",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "Now_Sy2jLAU"
     },
     {
@@ -484,8 +484,8 @@
       "away": "アーセナル",
       "homeSlug": "brighton-hove",
       "awaySlug": "arsenal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "eFZMv5yhtnM"
     },
     {
@@ -495,8 +495,8 @@
       "away": "ハル・シティ",
       "homeSlug": "newcastle",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "o2Y3NS4VUGw"
     },
     {
@@ -506,8 +506,8 @@
       "away": "コベントリー",
       "homeSlug": "nottingham",
       "awaySlug": "coventry-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "8VzafviK9E8"
     },
     {
@@ -517,8 +517,8 @@
       "away": "リバプール",
       "homeSlug": "bournemouth",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": ""
     },
     {
@@ -528,8 +528,8 @@
       "away": "クリスタル・パレス",
       "homeSlug": "leeds-united",
       "awaySlug": "crystal-palace",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": ""
     },
     {
@@ -539,8 +539,8 @@
       "away": "サンダーランド",
       "homeSlug": "man-city",
       "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-3",
       "videoId": ""
     },
     {
@@ -550,8 +550,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "fulham",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {

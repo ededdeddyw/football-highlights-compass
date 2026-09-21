@@ -2,40 +2,50 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "scorers": [
     {
       "rank": 1,
       "name": "Erling Haaland",
       "team": "マンチェスター・シティ",
-      "goals": 4,
+      "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Norway"
     },
     {
       "rank": 2,
+      "name": "Alexander Isak",
+      "team": "リバプール",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Sweden"
+    },
+    {
+      "rank": 3,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "England"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Marcus Tavernier",
       "team": "ボーンマス",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "England"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 3,
@@ -45,7 +55,7 @@
       "nat": "Brazil"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 3,
@@ -55,17 +65,27 @@
       "nat": "England"
     },
     {
-      "rank": 6,
-      "name": "Alexander Isak",
-      "team": "リバプール",
+      "rank": 7,
+      "name": "Rayan Cherki",
+      "team": "マンチェスター・シティ",
       "goals": 3,
-      "assists": null,
+      "assists": 2,
       "pens": null,
-      "apps": 4,
-      "nat": "Sweden"
+      "apps": 5,
+      "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
+      "name": "Pascal Groß",
+      "team": "ブライトン",
+      "goals": 3,
+      "assists": 3,
+      "pens": 1,
+      "apps": 5,
+      "nat": "Germany"
+    },
+    {
+      "rank": 9,
       "name": "Kevin Schade",
       "team": "ブレントフォード",
       "goals": 3,
@@ -75,49 +95,29 @@
       "nat": "Germany"
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "Bruno Fernandes",
       "team": "マンチェスター・ユナイテッド",
       "goals": 3,
       "assists": 1,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "Portugal"
     },
     {
-      "rank": 9,
-      "name": "Kai Havertz",
-      "team": "アーセナル",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Germany"
-    },
-    {
-      "rank": 10,
-      "name": "Martin Ødegaard",
-      "team": "アーセナル",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Norway"
-    },
-    {
       "rank": 11,
-      "name": "Emersonn",
-      "team": "イプスウィッチ",
-      "goals": 2,
-      "assists": 1,
+      "name": "Brian Brobbey",
+      "team": "サンダーランド",
+      "goals": 3,
+      "assists": null,
       "pens": null,
-      "apps": 4,
-      "nat": "Brazil"
+      "apps": 5,
+      "nat": "Netherlands"
     },
     {
       "rank": 12,
-      "name": "Vitaly Janelt",
-      "team": "ブレントフォード",
+      "name": "Kai Havertz",
+      "team": "アーセナル",
       "goals": 2,
       "assists": null,
       "pens": null,
@@ -126,33 +126,33 @@
     },
     {
       "rank": 13,
-      "name": "Jack Hinshelwood",
-      "team": "ブライトン",
+      "name": "Martin Ødegaard",
+      "team": "アーセナル",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 1,
-      "nat": "England"
+      "apps": 5,
+      "nat": "Norway"
     },
     {
       "rank": 14,
-      "name": "Anthony Elanga",
-      "team": "ニューカッスル",
+      "name": "Emersonn",
+      "team": "イプスウィッチ",
       "goals": 2,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 3,
-      "nat": "Sweden"
+      "apps": 5,
+      "nat": "Brazil"
     },
     {
       "rank": 15,
-      "name": "Joshua King",
-      "team": "フラム",
+      "name": "Thierno Barry",
+      "team": "エバートン",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 4,
-      "nat": "England"
+      "apps": 5,
+      "nat": "France"
     }
   ]
 }

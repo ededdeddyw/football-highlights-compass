@@ -682,9 +682,9 @@
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "osasuna",
       "awaySlug": "rayo-vallecano",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "jUh982JYpsM"
     },
     {
       "matchday": 7,
@@ -693,9 +693,9 @@
       "away": "アラベス",
       "homeSlug": "athletic",
       "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "6xoVcoMdsT8"
     },
     {
       "matchday": 7,
@@ -704,9 +704,9 @@
       "away": "ラシン・サンタンデール",
       "homeSlug": "celta",
       "awaySlug": "santander",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-0",
+      "videoId": "eLQS27LNsBQ"
     },
     {
       "matchday": 7,
@@ -715,9 +715,9 @@
       "away": "バルセロナ",
       "homeSlug": "sevilla-fc",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-3",
+      "videoId": "ZJom79fRhv0"
     },
     {
       "matchday": 7,
@@ -726,9 +726,9 @@
       "away": "マラガ",
       "homeSlug": "getafe",
       "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "VLO0aPib4SU"
     },
     {
       "matchday": 7,
@@ -737,9 +737,9 @@
       "away": "レアル・マドリード",
       "homeSlug": "atleti",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "pvYN0luukM4"
     },
     {
       "matchday": 7,
@@ -748,9 +748,9 @@
       "away": "ベティス",
       "homeSlug": "deportivo",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "kOnxo2_JtCI"
     },
     {
       "matchday": 7,
@@ -759,9 +759,9 @@
       "away": "レバンテ",
       "homeSlug": "villarreal",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "CzFRWJpylqo"
     },
     {
       "matchday": 7,
@@ -770,9 +770,9 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "valencia",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "PX_Z58lDe84"
     },
     {
       "matchday": 8,
