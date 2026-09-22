@@ -2065,7 +2065,9 @@ try {
     const byMd = new Map();
     for (const mt of (j.matches||[])){ if(mt.matchday==null||!mt.home||!mt.away) continue; if(!byMd.has(mt.matchday)) byMd.set(mt.matchday,[]); byMd.get(mt.matchday).push(mt); }
     const mds = [...byMd.keys()].sort((a,b)=>a-b);
-    if (seasonsByCode[code] === season) MDNAV[code] = { season, mds, jp: meta.jp, hub: meta.hub };
+    let lastPlayed = null;
+    for (const m of mds){ if (byMd.get(m).some(mt=> mt.finished || mt.videoId)) lastPlayed = m; }   // 最新の実施済み節
+    if (seasonsByCode[code] === season) MDNAV[code] = { season, mds, lastPlayed, jp: meta.jp, hub: meta.hub };
     for (let i=0;i<mds.length;i++){
       const md = mds[i];
       const list = byMd.get(md).slice().sort((a,b)=> String(a.dateUTC||'').localeCompare(String(b.dateUTC||'')));
@@ -2147,6 +2149,19 @@ let scheduleUrl = '';
     }
   }
   all.sort((a,b)=> a.t-b.t);
+  // 端境期（インターナショナルブレイク等）で12日以内に試合が無い場合は、直近の予定試合の日から5日分を拾って
+  // 「次回の開催」を表示（日程ページが空・古いままになるのを防ぐ）。
+  let breakMode = false;
+  if(!all.length){
+    let minT = Infinity;
+    for(const code in LEAGUE_UPCOMING){ if(!LEAGUE_META[code]) continue; for(const m of LEAGUE_UPCOMING[code]){ const t=new Date(m.dateUTC).getTime(); if(!isNaN(t)&&t>=cut&&t<minT) minT=t; } }
+    if(isFinite(minT)){
+      const h2 = minT + 8*24*3600*1000;   // 次ラウンド（週末＋ミッドウィーク）を拾えるよう広めに
+      for(const code in LEAGUE_UPCOMING){ if(!LEAGUE_META[code]) continue; for(const m of LEAGUE_UPCOMING[code]){ const t=new Date(m.dateUTC).getTime(); if(isNaN(t)||t<cut||t>h2) continue; all.push({ ...m, code, t }); } }
+      all.sort((a,b)=> a.t-b.t);
+      breakMode = all.length>0;
+    }
+  }
   if(all.length){
     // 日本時間の日付キーでグループ化
     const dayKey = iso => { const d=new Date(new Date(iso).getTime()+9*3600*1000); return `${d.getUTCFullYear()}/${String(d.getUTCMonth()+1).padStart(2,'0')}/${String(d.getUTCDate()).padStart(2,'0')}`; };
@@ -2173,6 +2188,9 @@ let scheduleUrl = '';
       const lg=(LEAGUE_META[r.code]||{}).jp||'';
       return `<li class="sc-row"><span class="sc-t">${esc(mmdd(r.dateUTC))}</span><span class="sc-lg">${esc(lg)}</span><span class="sc-m"><a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}</a></span><span class="sc-md">▶ ハイライト</span></li>`;
     }).join('')}</ul>` : '';
+    // 各リーグの「最新節まとめ」ページへの導線（新設の節ページを高権威ページから発見可能に）
+    const mdLinks = LEAGUE_LIST.map(x=>{ const n=(typeof MDNAV!=='undefined')?MDNAV[x.code]:null; if(!n||n.lastPlayed==null) return ''; return `<a href="../matchday/${x.code}-${n.season}-md${n.lastPlayed}.html">${esc(x.name)} 第${n.lastPlayed}節</a>`; }).filter(Boolean).join('');
+    const mdBlock = mdLinks ? `<h2 class="lined">最新節のまとめ（全試合・結果・ハイライト）</h2><p class="sc-note">各リーグの直近の節の全試合を1ページで。結果はネタバレ防止です。</p><div class="chips">${mdLinks}</div>` : '';
     const path='schedule/index.html', url=`${DOMAIN}/schedule/`; scheduleUrl=url;
     mkdirSync('site/schedule', { recursive:true });
     const firstD=all[0], lastD=all[all.length-1];
@@ -2194,8 +2212,9 @@ let scheduleUrl = '';
   ${crumb([{label:'トップ',href:'../'},{label:'試合日程'}])}
   <p class="kicker">📅 試合日程</p>
   <h1 class="headline">今週の試合日程｜欧州5大リーグ</h1>
-  <p class="dek">プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアンの直近の試合日程を<strong>日本時間</strong>でまとめています（${esc(dayLabel(firstD.dateUTC))}〜${esc(dayLabel(lastD.dateUTC))}）。キックオフ時刻・対戦カードを確認して、試合後は各カードの公式ハイライトへ。</p>
+  <p class="dek">${breakMode?'現在は代表ウィーク（インターナショナルブレイク）で国内リーグは中断中。<strong>次回の開催</strong>予定を':'プレミアリーグ・ラ・リーガ・セリエA・ブンデスリーガ・リーグアンの直近の試合日程を'}<strong>日本時間</strong>でまとめています（${esc(dayLabel(firstD.dateUTC))}〜${esc(dayLabel(lastD.dateUTC))}）。キックオフ時刻・対戦カードを確認して、試合後は各カードの公式ハイライトへ。</p>
   ${body}
+  ${mdBlock}
   ${topScorerBlock}
   ${recentBlock}
   <h2 class="lined">リーグ別のハブ</h2><div class="chips">${hubs}</div>
