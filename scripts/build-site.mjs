@@ -1191,6 +1191,9 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
     .slice(0, 12)
     .map(o => `<a href="${leagueSlug(o, L)}.html">${esc(o.home)} vs ${esc(o.away)}</a>`)
     .join('');
+  // 「第N節まとめ」ページへの内部リンク（節の全試合・結果へ着地）
+  const seasonStart = parseInt(seasonLbl, 10);
+  const mdHref = Number.isFinite(seasonStart) ? `../matchday/${L.code}-${seasonStart}-md${mt.matchday}.html` : '';
   const head = HEAD({
     title:`${teamsTxt} 試合経過・結果とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
@@ -1218,6 +1221,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   ${factHtml}
   ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
   ${sameMdChips?`<h2 class="lined">${esc(L.jp)} ${esc(nara)}の他の試合</h2><div class="chips">${sameMdChips}</div>`:''}
+  ${mdHref?`<p style="margin:8px 2px 0"><a href="${mdHref}">▶ ${esc(L.jp)} ${esc(nara)}の全試合・結果をまとめて見る</a></p>`:''}
   ${FAQ_STYLE}${faqBlock(mfaq)}
   ${footer1()}
   </article></main>
@@ -2003,6 +2007,9 @@ function buildLeague(h){
   <p class="stand-note">※ 出典: football-data.org（${TODAY}時点の集計）。選手名は原語表記。</p>` : '';
   // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
   const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
+  // 節別ページへのナビ（第1節〜）＝各節まとめページへの内部リンク網。現行シーズンの全節を列挙。
+  const mdn = (typeof MDNAV!=='undefined') ? MDNAV[h.code] : null;
+  const mdNavBlock = (mdn && mdn.mds && mdn.mds.length) ? `<h2 class="lined">節別で見る（${mdn.season}-${String((mdn.season+1)%100).padStart(2,'0')}）</h2><div class="chips">${mdn.mds.map(n=>`<a href="../matchday/${h.code}-${mdn.season}-md${n}.html">第${n}節</a>`).join('')}</div>` : '';
   // FAQ（GEO/AI検索向け＝最新の事実をQ&Aで抽出しやすく。可視ブロック＋FAQPage構造化データ）
   const faqItems = [];
   if(stand.length){ const t=stand[0]; faqItems.push({ q:`${h.name}の首位はどこ？（現在の順位表）`, a:`${TODAY}時点で首位は${t.name}（勝点${t.pts}・${t.played}試合）。当サイト掲載の結果から集計した最新順位表を${h.name}ページに掲載しています。` }); }
@@ -2025,6 +2032,7 @@ function buildLeague(h){
   ${rankBlock}
   ${fixTable}
   ${recentBlock}
+  ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
@@ -2036,6 +2044,91 @@ function buildLeague(h){
   writeFileSync(`site/${path}`, out);
   leagueUrls.push(url);
 }
+
+// ========================= 節（第N節）ページ =========================
+// 各リーグ・各節の全試合を1ページに集約（結果はネタバレ防止・前後の節へ移動可）。従来は試合単位のページしか
+// 無く「第N節まとめ」の着地ページが欠けていた。回遊性・網羅感・内部リンク網・「第N節/全試合」系クエリのSEOを強化。
+mkdirSync('site/matchday', { recursive:true });
+const MDNAV = {};            // code -> { season, mds:[N...], jp, hub }（現行シーズンのみ・ハブのナビ用）
+const matchdayUrls = [];
+const mdCss = `<style>.mdnav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0}.mdnav-b{flex:0 0 auto;font-weight:700;font-size:13px;color:var(--accent);text-decoration:none;padding:6px 12px;border:1px solid var(--line);border-radius:999px}.mdnav-b:hover{background:var(--card2)}.mdnav-b.is-off{color:var(--muted);opacity:.4;border-style:dashed;pointer-events:none}.mdnav-c{font-weight:800;font-size:14px}.mdlist{list-style:none;margin:12px 0 4px;padding:0}.mdr{display:flex;align-items:center;gap:10px;padding:11px 8px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}.mdr:hover{background:var(--card2)}.mdr.is-plain{cursor:default}.mdr-d{color:var(--muted);font-size:12px;min-width:6.6em;font-variant-numeric:tabular-nums}.mdr-tm{flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:700;font-size:14px}.mdr-vs{color:var(--muted);font-weight:400;font-size:12px}.mdr-sc{font-weight:900;font-variant-numeric:tabular-nums}.mdr-hl{color:var(--accent);font-weight:800;font-size:12px;white-space:nowrap}.mdr-soon{color:var(--muted);font-size:12px;white-space:nowrap}.mdnote{font-size:11px;color:var(--muted);margin:6px 2px 0}</style>`;
+try {
+  const files = readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n));
+  const seasonsByCode = {};
+  for (const f of files){ const m=/^league-([a-z0-9]+)-(\d{4})\.json$/.exec(f); if(m){ const c=m[1], s=+m[2]; if(!(c in seasonsByCode)||s>seasonsByCode[c]) seasonsByCode[c]=s; } }
+  for (const f of files){
+    let j; try { j = JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch(e){ continue; }
+    const code = j.code, meta = LEAGUE_META[code]; if(!code || !meta) continue;   // 定義済みリーグのみ
+    const season = +(/(\d{4})\.json$/.exec(f)||[])[1] || +j.season;
+    const seasonLbl = season ? `${season}-${String((season+1)%100).padStart(2,'0')}` : '';
+    const L = { code, jp: meta.jp, hub: meta.hub };
+    const byMd = new Map();
+    for (const mt of (j.matches||[])){ if(mt.matchday==null||!mt.home||!mt.away) continue; if(!byMd.has(mt.matchday)) byMd.set(mt.matchday,[]); byMd.get(mt.matchday).push(mt); }
+    const mds = [...byMd.keys()].sort((a,b)=>a-b);
+    if (seasonsByCode[code] === season) MDNAV[code] = { season, mds, jp: meta.jp, hub: meta.hub };
+    for (let i=0;i<mds.length;i++){
+      const md = mds[i];
+      const list = byMd.get(md).slice().sort((a,b)=> String(a.dateUTC||'').localeCompare(String(b.dateUTC||'')));
+      const slug = `${code}-${season}-md${md}`;
+      const url = `${DOMAIN}/matchday/${slug}.html`;
+      const played = list.some(mt=> mt.finished || mt.videoId);
+      const nVid = list.filter(mt=>mt.videoId).length;
+      const title = `${L.jp} 第${md}節 全試合の結果・ハイライト動画｜${seasonLbl}`;
+      const desc = `${L.jp} 第${md}節（${seasonLbl}）の全${list.length}試合の結果とハイライト動画をまとめて掲載。スコアはネタバレ防止で表示を切り替えできます。`.slice(0,120);
+      const ogVid = (list.find(mt=>mt.videoId)||{}).videoId;
+      const ogimg = ogVid ? `https://i.ytimg.com/vi/${ogVid}/hqdefault.jpg` : `${DOMAIN}/og.png`;
+      const prev = i>0 ? mds[i-1] : null, next = i<mds.length-1 ? mds[i+1] : null;
+      const nav = `<div class="mdnav">`
+        + (prev!=null?`<a class="mdnav-b" href="${code}-${season}-md${prev}.html">← 第${prev}節</a>`:`<span class="mdnav-b is-off">←</span>`)
+        + `<span class="mdnav-c">第${md}節</span>`
+        + (next!=null?`<a class="mdnav-b" href="${code}-${season}-md${next}.html">第${next}節 →</a>`:`<span class="mdnav-b is-off">→</span>`)
+        + `</div>`;
+      const rows = list.map(mt=>{
+        const ls = leagueSlug(mt, L), linkable = slugs.includes(ls);
+        const vid = mt.videoId ? `<span class="mdr-hl">▶ ハイライト</span>` : `<span class="mdr-soon">準備中</span>`;
+        const scoreSpan = (mt.finished && /^\d+\s*-\s*\d+$/.test(mt.score||'')) ? `<span class="mdr-sc spoiler-cover">${esc(mt.score.replace('-','−'))}</span>` : '';
+        const teams = `<span class="mdr-h">${esc(mt.home)}</span>${scoreSpan||''}<span class="mdr-vs">vs</span><span class="mdr-a">${esc(mt.away)}</span>`;
+        const inner = `<span class="mdr-d">${mt.dateUTC?fixtureJst(mt.dateUTC):''}</span><span class="mdr-tm">${teams}</span>${vid}`;
+        return linkable ? `<a class="mdr" href="../match/${ls}.html">${inner}</a>` : `<div class="mdr is-plain">${inner}</div>`;
+      }).join('');
+      const mfaq = [
+        { q:`${L.jp} 第${md}節のハイライト動画はどこで見られる？`, a:`このページに${L.jp} 第${md}節（${seasonLbl}）の全${list.length}試合をまとめ、公式・権利元が公開するハイライトのある試合は各試合ページへ移動できます。${nVid?`現在${nVid}試合に公式ハイライトを掲載中。`:'公開され次第、順次掲載します。'}` },
+        { q:`${L.jp} 第${md}節の結果・スコアは？`, a:`各試合の結果はこのページに掲載しています。スコアは既定でネタバレ防止のため非表示ですが、上部の「ネタバレ防止：ON/OFF」で表示に切り替えられます。` },
+      ];
+      const itemLd = {"@type":"ItemList","itemListElement":list.slice(0,30).map((mt,idx)=>({"@type":"ListItem","position":idx+1,"name":`${mt.home} 対 ${mt.away}`,"item":`${DOMAIN}/match/${leagueSlug(mt,L)}.html`}))};
+      const head = HEAD({
+        title, ogtitle:`${L.jp} 第${md}節 結果・ハイライト｜${seasonLbl}`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`,
+        robots: played ? undefined : 'noindex,follow',   // 結果も動画も無い未来の節（日程のみ）は薄いのでnoindex
+        jsonld:[
+          {"@type":"CollectionPage","name":`${L.jp} 第${md}節`,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}},
+          crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:`第${md}節`,url}]),
+          faqLd(mfaq), itemLd
+        ]
+      });
+      const out = head + TOPBAR
+        + `<div class="spoilerbar"><div class="spoilerbar-in"><button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button><span class="sb-note">タップでスコアの表示を切り替えます。</span></div></div>`
+        + `<article class="post entity">
+  ${crumb([{label:'トップ',href:'../'},{label:L.jp,href:L.hub?`../${L.hub}`:'../'},{label:`第${md}節`}])}
+  <p class="kicker">⚽ ${esc(L.jp)} ${esc(seasonLbl)}</p>
+  <h1 class="headline">${esc(L.jp)} 第${md}節｜全試合の結果・ハイライト</h1>
+  <p class="dek">${esc(L.jp)}（${esc(seasonLbl)}）第${md}節の全${list.length}試合をまとめました。結果はネタバレ防止で隠しています（上部で切替）。各試合の公式ハイライトは試合ページからご覧いただけます。</p>
+  ${mdCss}
+  ${nav}
+  <div class="mdlist">${rows}</div>
+  <p class="mdnote">※ 日付は日本時間。スコアはネタバレ防止で既定は非表示です。公式ハイライトは公開・権利元の映像のみを掲載しています。</p>
+  ${nav}
+  ${L.hub?`<p style="margin:10px 2px 0"><a href="../${L.hub}">▶ ${esc(L.jp)}の順位表・得点ランキング・全節</a></p>`:''}
+  ${daznCta(`${L.jp}のフル・見逃し配信はDAZNで。`)}
+  ${AD}
+  ${faqBlock(mfaq)}
+  ` + FOOTER() + NAVJS + `</body></html>`;
+      writeFileSync(`site/matchday/${slug}.html`, out);
+      matchdayUrls.push({ url, played, date:(list.find(mt=>mt.dateUTC)||{}).dateUTC||'' });
+    }
+  }
+  console.log(`節ページ: ${matchdayUrls.length}`);
+} catch(e){ console.warn('節ページ生成でエラー:', e.message); }
+
 for(const h of LEAGUE_LIST) buildLeague(h);
 
 // ========================= 全リーグ横断「今週の試合日程」ページ =========================
@@ -2363,6 +2456,7 @@ for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
 for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
 for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+for(const m of (typeof matchdayUrls!=='undefined'?matchdayUrls:[])){ if(!m.played) continue; sm += `  <url><loc>${m.url}</loc><lastmod>${(m.date||'').slice(0,10)||TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 if(PLAYERS.length){ sm += `  <url><loc>${DOMAIN}/player/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; for(const p of PLAYERS) sm += `  <url><loc>${DOMAIN}/player/${p.slug}.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
 const matchById = new Map(data.map(m=>[m.id,m]));
