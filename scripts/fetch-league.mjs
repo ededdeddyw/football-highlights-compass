@@ -24,6 +24,8 @@ const LEAGUES = {
   // football-data.org の無料枠対象（要トークン）。ここではリーグフェーズ(LEAGUE_STAGE)のみ保存し、
   // 決勝トーナメントは別途扱う（node scripts/fetch-league.mjs cl 2026）。
   cl:     { jp: 'チャンピオンズリーグ', src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'CL', sdb: '4480', leaguePhaseOnly: true },
+  // エールディビジ（オランダ1部）。日本人所属クラブが複数、U-NEXTがハイライト配信。football-data無料枠(DED)。
+  eredivisie: { jp: 'エールディヴィジ', src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'DED', sdb: '4337' },
   // Jリーグ（J1）は暦年制シーズン（"2026" 単年表記）。TheSportsDB のみ。
   j1:     { jp: 'Jリーグ（J1）',  src: 'sportsdb', sdb: '4396', calendarSeason: true },
 };
