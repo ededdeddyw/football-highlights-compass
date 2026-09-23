@@ -1,0 +1,53 @@
+name: Update club news (クラブ別ニュース自動更新)
+
+# 各クラブの最新ニュース（Google News RSS）を取得して data/club-news.json を更新し、
+# 変化があれば本番デプロイ（deploy-diff.yml）を起動する。YouTubeと違いconsent不要でCIから取得できる。
+on:
+  schedule:
+    - cron: '0 21 * * *'   # 毎日 06:00 JST（21:00 UTC）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write   # deploy-diff.yml をディスパッチするため
+
+concurrency:
+  group: club-news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: ニュース取得
+        run: node scripts/fetch-club-news.mjs --per=6
+
+      - name: 変化があればコミット
+        id: commit
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/club-news.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "ニュースに変化なし。"
+            exit 0
+          fi
+          git commit -m "data(news): クラブ別ニュース自動更新"
+          git pull --rebase --autostash || true
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 本番デプロイを起動（変化時のみ）
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-diff.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy-diff.yml をディスパッチしました。"

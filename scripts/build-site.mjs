@@ -35,6 +35,10 @@ try { if (existsSync('data/club-crests.json')) CREST = JSON.parse(readFileSync('
 // クラブのオーナー・資本・経営の特色（実在の資本情報＝正確性重視・時点つき）。data/club-owners.json（slug→情報）。
 let OWNERS = {}, OWNERS_UPDATED = '';
 try { if (existsSync('data/club-owners.json')) { const oj = JSON.parse(readFileSync('data/club-owners.json','utf8')); OWNERS = oj.clubs||{}; OWNERS_UPDATED = oj.updated||''; } } catch(e){ console.warn('owners読込失敗:', e.message); }
+// クラブ別ニュース（Google News RSS／scripts/fetch-club-news.mjs が生成）。slug→{name,updated,items:[{t,u,src,d}]}。
+// ネタバレ配慮：見出しに結果が含まれ得るため、クラブページでは「結果注意」ラベル＋既定折りたたみで表示する。
+let CLUB_NEWS = {};
+try { if (existsSync('data/club-news.json')) CLUB_NEWS = JSON.parse(readFileSync('data/club-news.json','utf8')); } catch(e){ console.warn('club-news読込失敗:', e.message); }
 // 監督の系譜・師弟マップ（師弟関係は歴史的事実で安定／『現在』は時点つき）。data/lineage.json。
 let LINEAGE = { trees: [] }, LINEAGE_UPDATED = '';
 try { if (existsSync('data/lineage.json')) { const lj = JSON.parse(readFileSync('data/lineage.json','utf8')); LINEAGE = { trees: lj.trees||[] }; LINEAGE_UPDATED = lj.updated||''; } } catch(e){ console.warn('lineage読込失敗:', e.message); }
@@ -1665,6 +1669,17 @@ function buildClub(name, info){
     ${own.history?`<p style="font-size:13px;opacity:.85"><b>歴代オーナーの流れ：</b>${esc(own.history)}</p>`:''}
     <p class="stand-note">※ 資本情報は${esc(OWNERS_UPDATED||'公開情報')}時点にもとづく（売却等で変わる場合あり）。</p></div>` : '';
   if(own){ cfaq.push({ q:`${name}のオーナー（経営）は誰？どんな特色？`, a:`${own.owner}${own.since?`（${own.since}年〜）`:''}。${own.character||''}` }); }
+  // 最新ニュース（data/club-news.json＝Google News RSS）。見出しは結果に触れ得るので「結果注意」ラベル＋既定折りたたみ。
+  const news = CLUB_NEWS[slug];
+  const newsSection = (news && news.items && news.items.length) ? (()=>{
+    const rel = iso8601 => { if(!iso8601) return ''; const days = Math.floor((Date.now()-new Date(iso8601).getTime())/86400000); if(isNaN(days)) return ''; return days<=0?'今日':days===1?'昨日':days<7?`${days}日前`:days<30?`${Math.floor(days/7)}週間前`:`${Math.floor(days/30)}か月前`; };
+    const rows = news.items.slice(0,8).map(it=>`<li class="clnews-i"><a href="${escA(it.u)}" target="_blank" rel="noopener nofollow">${esc(it.t)}</a><span class="clnews-m">${it.src?esc(it.src):''}${it.d?` ・ ${rel(it.d)}`:''}</span></li>`).join('');
+    const upd = news.updated ? new Date(news.updated).toISOString().slice(0,10) : '';
+    const css = `<style>.clnews-list{list-style:none;margin:12px 0 4px;padding:0}.clnews-i{padding:9px 2px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:3px}.clnews-i a{color:var(--accent);text-decoration:none;font-weight:700;font-size:14px;line-height:1.5}.clnews-i a:hover{text-decoration:underline}.clnews-m{color:var(--muted);font-size:11.5px}.clnews-warn{font-size:11px;font-weight:600;color:#b45309;background:#fef3c7;border-radius:4px;padding:1px 7px;margin-left:2px}:root:not([data-theme="light"]) .clnews-warn{background:#3a2c07;color:#fcd34d}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .clnews-warn{background:#3a2c07;color:#fcd34d}}:root[data-theme="dark"] .clnews-warn{background:#3a2c07;color:#fcd34d}</style>`;
+    return `${css}<div class="cl-wrap" style="margin-top:20px"><details class="m-collapse clnews"><summary>📰 ${esc(name)}の最新ニュース <span class="clnews-warn">結果・スコアに触れる場合あり</span><span class="mc-ico"></span></summary>
+      <ul class="clnews-list">${rows}</ul>
+      <p class="stand-note">出典: Google ニュース（各媒体の見出し・リンク）。見出しは外部サイトへ移動します。${upd?`更新: ${upd}`:''}</p></details></div>`;
+  })() : '';
   if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
   const head = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} 試合結果・ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
@@ -1715,6 +1730,7 @@ function buildClub(name, info){
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
   ${ownerSection}
+  ${newsSection}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
   ${cfaq.length?`<div class="cl-wrap" style="margin-top:18px">${FAQ_STYLE}${faqBlock(cfaq)}</div>`:''}
   ${YTFB}
@@ -1744,6 +1760,7 @@ function buildClub(name, info){
   ${AD}
   ${list}
   ${ownerSection}
+  ${newsSection}
   ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
   writeFileSync(`site/${path}`, out);
