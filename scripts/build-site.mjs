@@ -46,6 +46,17 @@ try { if (existsSync('data/club-info.json')) CLUB_INFO = JSON.parse(readFileSync
 // 選手別ニュース（Google News RSS／scripts/fetch-player-news.mjs）。slug→{name,updated,items:[{t,u,src,d}]}。
 let PLAYER_NEWS = {};
 try { if (existsSync('data/player-news.json')) PLAYER_NEWS = JSON.parse(readFileSync('data/player-news.json','utf8')); } catch(e){ console.warn('player-news読込失敗:', e.message); }
+// 選手概要（Wikipedia日本語版導入部）。scripts/fetch-player-info.mjs。slug→{title,wikiUrl,extract,updated}。
+let PLAYER_INFO = {};
+try { if (existsSync('data/player-info.json')) PLAYER_INFO = JSON.parse(readFileSync('data/player-info.json','utf8')); } catch(e){ console.warn('player-info読込失敗:', e.message); }
+// Wikipedia概要の折りたたみ節（クラブ/選手共用）。出典＋リンク必須（CC BY-SA）。
+function aboutBlock(name, rec, factsHtml){
+  if(!rec || !rec.extract || rec.extract.length < 30) return '';
+  const css = `<style>.clabout{margin-top:22px}.clabout>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:1.18em;font-weight:800;color:var(--ink);padding-top:14px;border-top:2px solid var(--ink)}.clabout>summary::-webkit-details-marker{display:none}.clabout-body{font-size:14px;line-height:1.85;margin:12px 0 4px}.clabout-facts{font-size:12.5px;color:var(--muted);margin:6px 0}</style>`;
+  return `${css}<div class="cl-wrap"><details class="clabout" open><summary>📖 ${esc(name)}とは<span class="mc-ico"></span></summary>
+    <p class="clabout-body">${esc(rec.extract)}</p>${factsHtml||''}
+    <p class="stand-note">出典: <a href="${escA(rec.wikiUrl)}" target="_blank" rel="noopener">Wikipedia「${esc(rec.title)}」</a>（CC BY-SA）。最新の詳細はリンク先で。</p></details></div>`;
+}
 // クラブ/選手ニュースの折りたたみ節を組み立てる共通ヘルパ（結果注意ラベル＋既定折りたたみ＋外部リンク）。
 function newsBlock(title, rec){
   if(!rec || !rec.items || !rec.items.length) return '';
@@ -1914,6 +1925,7 @@ function buildPlayer(p){
   ${timeline}
   ${AD}
   ${clubLink}
+  ${aboutBlock(p.name, PLAYER_INFO[p.slug])}
   ${newsBlock(p.name+'の最新ニュース', PLAYER_NEWS[p.slug])}
   ${teammates}
   ${leagueLink}
