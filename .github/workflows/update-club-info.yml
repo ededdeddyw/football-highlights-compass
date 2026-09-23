@@ -1,0 +1,51 @@
+name: Update club info (クラブ概要 週次更新)
+
+# 各クラブの概要（Wikipedia日本語版）＋安定事実（Wikidata）を取得して data/club-info.json を更新。
+# クラブ概要は変化が緩やかなので週1回。ニュース(update-club-news.yml)とは別カデンス。
+on:
+  schedule:
+    - cron: '0 20 * * 0'   # 毎週日曜 05:00 JST（日曜20:00 UTC）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: club-info
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: クラブ概要取得（Wikipedia/Wikidata）
+        run: node scripts/fetch-club-info.mjs
+
+      - name: 変化があればコミット
+        id: commit
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/club-info.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "変化なし。"; exit 0
+          fi
+          git commit -m "data(club-info): クラブ概要 週次更新"
+          git pull --rebase --autostash || true
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 本番デプロイを起動（変化時のみ）
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-diff.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy-diff.yml をディスパッチしました。"
