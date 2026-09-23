@@ -39,6 +39,10 @@ try { if (existsSync('data/club-owners.json')) { const oj = JSON.parse(readFileS
 // ネタバレ配慮：見出しに結果が含まれ得るため、クラブページでは「結果注意」ラベル＋既定折りたたみで表示する。
 let CLUB_NEWS = {};
 try { if (existsSync('data/club-news.json')) CLUB_NEWS = JSON.parse(readFileSync('data/club-news.json','utf8')); } catch(e){ console.warn('club-news読込失敗:', e.message); }
+// クラブ概要（Wikipedia日本語版の導入部）＋安定した事実。scripts/fetch-club-info.mjs が生成。slug→{title,wikiUrl,extract,founded,stadium,capacity,website,updated}。
+// 出典明示（CC BY-SA）でWikipediaへリンクしつつクラブページのGEO/滞在時間を底上げする。
+let CLUB_INFO = {};
+try { if (existsSync('data/club-info.json')) CLUB_INFO = JSON.parse(readFileSync('data/club-info.json','utf8')); } catch(e){ console.warn('club-info読込失敗:', e.message); }
 // 監督の系譜・師弟マップ（師弟関係は歴史的事実で安定／『現在』は時点つき）。data/lineage.json。
 let LINEAGE = { trees: [] }, LINEAGE_UPDATED = '';
 try { if (existsSync('data/lineage.json')) { const lj = JSON.parse(readFileSync('data/lineage.json','utf8')); LINEAGE = { trees: lj.trees||[] }; LINEAGE_UPDATED = lj.updated||''; } } catch(e){ console.warn('lineage読込失敗:', e.message); }
@@ -1680,6 +1684,18 @@ function buildClub(name, info){
       <ul class="clnews-list">${rows}</ul>
       <p class="stand-note">出典: Google ニュース（各媒体の見出し・リンク）。見出しは外部サイトへ移動します。${upd?`更新: ${upd}`:''}</p></details></div>`;
   })() : '';
+  // クラブ概要（Wikipedia日本語版の導入部）。手書きblurbに百科事典的な厚みを足す。CC BY-SA なので出典＋リンク必須。
+  const cinfo = CLUB_INFO[slug];
+  const infoSection = (cinfo && cinfo.extract && cinfo.extract.length >= 30) ? (()=>{
+    const facts = [];
+    if (cinfo.capacity) facts.push(`収容 ${Number(cinfo.capacity).toLocaleString('en-US')}人`);
+    if (cinfo.website) facts.push(`<a href="${escA(cinfo.website)}" target="_blank" rel="noopener nofollow">公式サイト</a>`);
+    const factLine = facts.length ? `<p class="clabout-facts">${facts.join('　・　')}</p>` : '';
+    const css = `<style>.clabout{margin-top:22px}.clabout>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:1.18em;font-weight:800;color:var(--ink);padding-top:14px;border-top:2px solid var(--ink)}.clabout>summary::-webkit-details-marker{display:none}.clabout-body{font-size:14px;line-height:1.85;margin:12px 0 4px}.clabout-facts{font-size:12.5px;color:var(--muted);margin:6px 0}</style>`;
+    return `${css}<div class="cl-wrap"><details class="clabout" open><summary>📖 ${esc(name)}とは<span class="mc-ico"></span></summary>
+      <p class="clabout-body">${esc(cinfo.extract)}</p>${factLine}
+      <p class="stand-note">出典: <a href="${escA(cinfo.wikiUrl)}" target="_blank" rel="noopener">Wikipedia「${esc(cinfo.title)}」</a>（CC BY-SA）。最新の詳細はリンク先で。</p></details></div>`;
+  })() : '';
   if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
   const head = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} 試合結果・ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
@@ -1730,6 +1746,7 @@ function buildClub(name, info){
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
   ${ownerSection}
+  ${infoSection}
   ${newsSection}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
   ${cfaq.length?`<div class="cl-wrap" style="margin-top:18px">${FAQ_STYLE}${faqBlock(cfaq)}</div>`:''}
@@ -1760,6 +1777,7 @@ function buildClub(name, info){
   ${AD}
   ${list}
   ${ownerSection}
+  ${infoSection}
   ${newsSection}
   ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
