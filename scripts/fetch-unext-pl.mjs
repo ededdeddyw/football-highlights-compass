@@ -99,6 +99,7 @@ async function channelVideos() {
 // ---- タイトル解析：実タイトル例「【<煽り文>｜HOME v AWAY｜ショートハイライト】プレミアリーグ2026/27 第N節」----
 // U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
 function detectLeague(t) {
+  if (/女子|women/i.test(t)) return null;   // 女子CL等は対象外（男子リーグの日程表に無い）
   if (/チャンピオンズリーグ|champions\s*league|UEFA\s*CL|欧州CL|ＵＥＦＡ/i.test(t)) return 'cl';
   if (/プレミアリーグ|premier\s*league/i.test(t)) return 'pl';
   if (/ラ・?リーガ|la\s*liga/i.test(t)) return 'laliga';
