@@ -20,6 +20,10 @@ const LEAGUES = {
   sa:     { jp: 'セリエA',       src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'SA',  sdb: '4332' },
   laliga: { jp: 'ラ・リーガ',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'PD',  sdb: '4335' },
   ligue1: { jp: 'リーグアン',     src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'FL1', sdb: '4334' },
+  // UEFAチャンピオンズリーグ（2024-25以降のスイス方式＝36チーム単一リーグフェーズ 第1〜8節）。
+  // football-data.org の無料枠対象（要トークン）。ここではリーグフェーズ(LEAGUE_STAGE)のみ保存し、
+  // 決勝トーナメントは別途扱う（node scripts/fetch-league.mjs cl 2026）。
+  cl:     { jp: 'チャンピオンズリーグ', src: FD_TOKEN ? 'fd' : 'sportsdb', fd: 'CL', sdb: '4480', leaguePhaseOnly: true },
   // Jリーグ（J1）は暦年制シーズン（"2026" 単年表記）。TheSportsDB のみ。
   j1:     { jp: 'Jリーグ（J1）',  src: 'sportsdb', sdb: '4396', calendarSeason: true },
 };
@@ -88,12 +92,15 @@ async function fetchFootballData() {
     const score = (finished && ft.home != null && ft.away != null) ? `${ft.home}-${ft.away}` : '';
     const hn = m.homeTeam?.name || '', an = m.awayTeam?.name || '';
     const hslug = slugify(m.homeTeam?.shortName || m.homeTeam?.tla || hn), aslug = slugify(m.awayTeam?.shortName || m.awayTeam?.tla || an);
-    return { matchday: m.matchday ?? null, dateUTC: m.utcDate || '', home: ja(hn), away: ja(an), homeSlug: hslug, awaySlug: aslug, finished, score, videoId: '' };
+    return { matchday: m.matchday ?? null, stage: m.stage || '', dateUTC: m.utcDate || '', home: ja(hn), away: ja(an), homeSlug: hslug, awaySlug: aslug, finished, score, videoId: '' };
   });
 }
 
 let out = L.src === 'openliga' ? await fetchOpenLiga() : L.src === 'fd' ? await fetchFootballData() : await fetchSportsDB();
+// CL等はリーグフェーズ(LEAGUE_STAGE)のみ保存（決勝トーナメントは別扱い）。stage不明のデータ源では素通し。
+if (L.leaguePhaseOnly) out = out.filter(m => !m.stage || m.stage === 'LEAGUE_STAGE' || m.stage === 'GROUP_STAGE');
 out = out.filter(m => m.matchday != null && m.home && m.away)
+         .map(m => { const { stage, ...rest } = m; return rest; })   // stageは内部用。出力形状は他リーグと統一
          .sort((a, b) => (a.matchday - b.matchday) || String(a.dateUTC).localeCompare(String(b.dateUTC)));
 
 const OUT = `data/league-${CODE}-${SEASON}.json`;

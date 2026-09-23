@@ -175,6 +175,7 @@ const LEAGUE_HUBS = [
   { name:'ブンデスリーガ', slug:'bundesliga', code:'bl', clubLabel:'ブンデスリーガ', country:'ドイツ', blurb:'ドイツ1部リーグ。多くの日本人選手が在籍してきたリーグです。' },
   { name:'リーグアン', slug:'ligue-1', code:'ligue1', clubLabel:'リーグアン', country:'フランス', blurb:'フランス1部リーグ。' },
   { name:'プリメイラ・リーガ', slug:'primeira-liga', code:'primeira', clubLabel:'プリメイラ・リーガ', country:'ポルトガル', blurb:'ポルトガル1部リーグ。' },
+  { name:'UEFAチャンピオンズリーグ', slug:'champions-league', code:'cl', clubLabel:'チャンピオンズリーグ', country:'ヨーロッパ', blurb:'ヨーロッパ最高峰のクラブ大会。2024-25シーズンから36チームのリーグフェーズ（第1〜8節）＋決勝トーナメント方式で行われます。' },
 ];
 // リーグJSONに「結果確定済み（スコア入り）」の試合があるコード集合。順位表を出せる＝ハブを建てる根拠にする。
 // （byTeamの旧試合が無いPLも、league-pl-*.json に結果があればハブを生成できるようにする）
@@ -1130,6 +1131,7 @@ const LEAGUE_META = {
   sa:     { jp: 'セリエA',       hub: 'league/serie-a.html' },
   laliga: { jp: 'ラ・リーガ',     hub: 'league/laliga.html' },
   ligue1: { jp: 'リーグアン',     hub: 'league/ligue-1.html' },
+  cl:     { jp: 'チャンピオンズリーグ', hub: 'league/champions-league.html' },
 };
 const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
@@ -2025,7 +2027,7 @@ function buildLeague(h){
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
-  <p class="dek">${esc(h.blurb)}${esc(h.country)}のトップリーグの試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  <p class="dek">${esc(h.blurb)}${h.code==='cl'?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
   ${scorerBlock}
