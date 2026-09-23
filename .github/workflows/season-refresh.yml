@@ -54,7 +54,7 @@ jobs:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: |
           CODES="${{ github.event.inputs.codes }}"
-          [ -z "$CODES" ] && CODES="bl pl laliga ligue1 sa"
+          [ -z "$CODES" ] && CODES="bl pl laliga ligue1 sa cl"
           for c in $CODES; do
             echo "== fetch $c ${{ steps.s.outputs.season }} =="
             node scripts/fetch-league.mjs "$c" "${{ steps.s.outputs.season }}" || echo "⚠ fetch $c 失敗（継続）"

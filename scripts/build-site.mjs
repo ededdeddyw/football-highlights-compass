@@ -1187,6 +1187,16 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   if(dateTxt) mfaq.push({ q:`${teamsTxt}の試合はいつ開催？`, a:`${dateTxt}に${mt.finished?'開催されました':'開催予定です'}（${L.jp} ${nara}・${seasonLbl}）。` });
   // 対戦クラブの図鑑ページへの内部リンク（在庫がある場合＝内部リンク網の強化）
   const clubChips = [mt.home, mt.away].map(nm=> CLUBS[nm] ? `<a href="../club/${CLUBS[nm].slug}.html">${esc(nm)}</a>` : '').filter(Boolean).join('');
+  // 対戦クラブに所属する日本人選手のプロフィール（ハイライト導線）へ内部リンク
+  const jpPlayers = [];
+  for (const nm of [mt.home, mt.away]) for (const p of jpPlayersFor(nm)) if(!jpPlayers.some(x=>x.slug===p.slug)) jpPlayers.push(p);
+  const playerChips = jpPlayers.slice(0,8).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos||'')}</small></a>`).join('');
+  // 両クラブの「他の公式ハイライト」試合ページへ内部リンク（この試合を除く・新しい順）
+  const hsSlug = mt.homeSlug||teamSlug(mt.home), asSlug = mt.awaySlug||teamSlug(mt.away);
+  const clubHl = []; const seenHl = new Set([slug]);
+  for (const cs of [hsSlug, asSlug]) for (const r of (CLUB_MATCHES[cs]||[])) if(!seenHl.has(r.slug)){ seenHl.add(r.slug); clubHl.push(r); }
+  clubHl.sort((a,b)=>String(b.dateUTC).localeCompare(String(a.dateUTC)));
+  const clubHlChips = clubHl.slice(0,8).map(r=>`<a href="${r.slug}.html">${r.ha==='H'?'vs':'@'} ${esc(r.opp)}</a>`).join('');
   // 同じ節の他の試合へ内部リンク（試合ページ同士を密に相互リンク＝クロール性・回遊・各ページの権威分配を強化）
   const sameMdChips = (allMatches||[])
     .filter(o => o && o.matchday === mt.matchday && o.home && o.away && !(o.home === mt.home && o.away === mt.away))
@@ -1222,6 +1232,8 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   ${AD}
   ${factHtml}
   ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
+  ${playerChips?`<h2 class="lined">この試合に関わる日本人選手</h2><div class="chips">${playerChips}</div>`:''}
+  ${clubHlChips?`<h2 class="lined">両クラブの他のハイライト</h2><div class="chips">${clubHlChips}</div>`:''}
   ${sameMdChips?`<h2 class="lined">${esc(L.jp)} ${esc(nara)}の他の試合</h2><div class="chips">${sameMdChips}</div>`:''}
   ${mdHref?`<p style="margin:8px 2px 0"><a href="${mdHref}">▶ ${esc(L.jp)} ${esc(nara)}の全試合・結果をまとめて見る</a></p>`:''}
   ${FAQ_STYLE}${faqBlock(mfaq)}
@@ -1296,6 +1308,30 @@ function buildPreseasonMatch(mt, season){
 </div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${slug}.html`, out);
 }
+
+// buildLeagueMatch の相互リンク用の事前計算（試合ループより前に用意）。
+// CLUB_JP_PLAYERS: クラブ日本語名 → 所属日本人選手[]（選手ページへ）。
+// CLUB_MATCHES: クラブslug → そのクラブの「動画あり試合」[{slug,opp,ha,dateUTC}]（他ハイライトページへ）。
+// クラブ名の表記ゆれ（例: players.json「ソシエダ」 vs 試合データ「レアル・ソシエダ」）を吸収するため
+// 正規化＋包含マッチで「このクラブに所属する日本人選手」を引く。
+const nrmClub = s => String(s||'').toLowerCase().replace(/[\s・･‐-―.,'’`()（）]/g,'');
+const JP_CLUB_NRM = PLAYERS.filter(p=>p.club).map(p=>({ p, k:nrmClub(p.club) })).filter(x=>x.k.length>=2);
+const jpPlayersFor = team => { const b=nrmClub(team); if(!b) return []; return JP_CLUB_NRM.filter(x=> x.k===b || b.includes(x.k) || x.k.includes(b)).map(x=>x.p); };
+const clubHasJP = team => jpPlayersFor(team).length>0;
+const CLUB_MATCHES = {};
+try {
+  for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
+    let j; try { j=JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch { continue; }
+    const L={ code:j.code };
+    for (const mt of (j.matches||[])){
+      if(!mt.videoId || mt.matchday==null || !mt.home || !mt.away) continue;
+      const s=leagueSlug(mt,L), hs=mt.homeSlug||teamSlug(mt.home), as=mt.awaySlug||teamSlug(mt.away);
+      (CLUB_MATCHES[hs]=CLUB_MATCHES[hs]||[]).push({ slug:s, opp:mt.away, ha:'H', dateUTC:mt.dateUTC||'' });
+      (CLUB_MATCHES[as]=CLUB_MATCHES[as]||[]).push({ slug:s, opp:mt.home, ha:'A', dateUTC:mt.dateUTC||'' });
+    }
+  }
+  for (const k in CLUB_MATCHES) CLUB_MATCHES[k].sort((a,b)=>String(b.dateUTC).localeCompare(String(a.dateUTC)));
+} catch(e){ console.warn('CLUB_MATCHES計算でエラー:', e.message); }
 
 try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
@@ -2387,18 +2423,34 @@ const PICKUP_HTML = (()=>{
   const LG_JP = code => (LEAGUE_META[code]||{}).jp || (LG[code]||code);
   const seen=new Set(), items=[];
   const push=(it)=>{ if(it && it.vid && !seen.has(it.vid)){ seen.add(it.vid); items.push(it); } };
-  // ① 現行クラブシーズンの最新ハイライト（動画あり）を全リーグ横断で新しい順に＝トップの主役
+  // ① 現行クラブシーズンのハイライト（動画あり）を「需要スコア × 新しさ」で選抜＝トップの主役。
+  //   需要＝日本人所属クラブを最優先、著名クラブ（図鑑掲載）を加点、CL・人気リーグを加点。
+  //   直近45日を優先プールにし、その中で需要の高い順→新しい順で上位8枚（＝「新規かつ需要がありそう」なカードだけ）。
+  const demandScore = (home,away,code)=>{ let s=0; if(clubHasJP(home)||clubHasJP(away)) s+=4; if(CLUBS[home]) s+=1; if(CLUBS[away]) s+=1; if(code==='cl') s+=2; else if(code==='pl'||code==='laliga') s+=1; return s; };
+  const pkCutoffMs = new Date(`${TODAY}T00:00:00+09:00`).getTime() - 45*24*3600*1000;
   const leagueItems=[];
   for(const code in LEAGUE_RECENT){
     for(const r of (LEAGUE_RECENT[code]||[])){
       if(!r.videoId || !r.ms) continue;
-      leagueItems.push({ url:`match/${r.ms}.html`, vid:r.videoId, date:(r.dateUTC||'').slice(0,10),
+      const jp = clubHasJP(r.home)||clubHasJP(r.away);
+      leagueItems.push({ code, url:`match/${r.ms}.html`, vid:r.videoId, date:(r.dateUTC||'').slice(0,10),
+        t:(new Date(r.dateUTC||0).getTime()||0), score:demandScore(r.home,r.away,code),
         comp:`${LG_JP(code)}${r.matchday!=null?` 第${r.matchday}節`:''}`,
-        line:`${esc(r.home)} vs ${esc(r.away)}`, alt:`${r.home} vs ${r.away}`, badge:'⚡ 最新ハイライト' });
+        line:`${esc(r.home)} vs ${esc(r.away)}`, alt:`${r.home} vs ${r.away}`, badge: jp?'🇯🇵 注目':(code==='cl'?'🏆 CL':'⚡ 注目の試合') });
     }
   }
-  leagueItems.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  leagueItems.slice(0,8).forEach(push);
+  // 直近45日を優先プール（8枚に満たなければ全体から）。需要スコア→新しさ の順に。
+  let pkPool = leagueItems.filter(it=>it.t>=pkCutoffMs);
+  if(pkPool.length<8) pkPool = leagueItems;
+  pkPool.sort((a,b)=> (b.score-a.score) || (b.t-a.t));
+  // 需要フィルタ：スコア3以上＝「日本人所属クラブ(+4)」または「著名クラブ同士＋人気リーグ等(≧3)」のみ採用。
+  //   （無名同士・低人気カードは新しくてもピックアップに出さない、というご要望の運用）。
+  const hot = pkPool.filter(it=>it.score>=3);
+  // その中でリーグ多様性（1リーグ最大4枚）を保ちつつ需要順に最大8枚。
+  const pkCap={}; for(const it of hot){ if(items.length>=8) break; if((pkCap[it.code]||0)>=4) continue; pkCap[it.code]=(pkCap[it.code]||0)+1; push(it); }
+  if(items.length<8) for(const it of hot){ if(items.length>=8) break; push(it); }   // 高需要が余っていればキャップ無視で補完
+  // それでも極端に少ない端境期のみ、最新の試合で最低限埋める（空カルーセル回避）。
+  if(items.length<4) for(const it of pkPool){ if(items.length>=6) break; push(it); }
   // ② 端境期フォールバック：現行リーグの動画が薄い時だけ、日本代表→W杯の名勝負で埋める（歴史枠として明示）
   if(items.length<6){
     const withId=data.filter(m=>m.id);
