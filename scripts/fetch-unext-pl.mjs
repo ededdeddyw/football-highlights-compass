@@ -15,7 +15,7 @@
 //
 // ★ 使い方（Node 18以降が必要。リポジトリのルートで実行）
 //   node scripts/fetch-unext-pl.mjs                # プレミアリーグ（既定）を更新
-//   node scripts/fetch-unext-pl.mjs --league=cl    # チャンピオンズリーグを更新（データは data/league-cl-<season>.json）
+//   node scripts/fetch-unext-pl.mjs --league=cl    # チャンピオンズリーグを更新（配信元は自動でWOWOW @wowowsoccer）
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
 //   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoIdを消す（初回の掃除用）
@@ -36,7 +36,18 @@ const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
 const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ' };
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
-const HANDLE = '@UNEXT_football';
+// リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
+//   PL/ラ・リーガ/エールディビジ: U-NEXT（@UNEXT_football）
+//   CL: WOWOW（@wowowsoccer、2026-27 日本独占。各試合の3分ハイライトを無料公開）
+const CHANNELS = {
+  pl:         { handle: '@UNEXT_football', author: 'unext' },
+  laliga:     { handle: '@UNEXT_football', author: 'unext' },
+  eredivisie: { handle: '@UNEXT_football', author: 'unext' },
+  cl:         { handle: '@wowowsoccer',    author: 'wowow' },
+};
+const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
+const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
+const AUTHOR_TOKEN = ((args.find(a => a.startsWith('--author=')) || '').split('=')[1] || CH.author).toLowerCase();  // 投稿者名に含むべき語（関連動画を除外）
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
 // 現行シーズン開始年（欧州は7月以降を新シーズン扱い）。--season 指定があればそれ。
@@ -100,7 +111,8 @@ function detectLeague(t) {
 function parseTitle(title) {
   const league = detectLeague(title);
   const isHi = /ハイライト|highlight/i.test(title);
-  const md = (title.match(/第\s*0*(\d+)\s*節/) || [])[1];
+  // 節/マッチデー：U-NEXTは「第N節」、WOWOWは「MD6」「リーグフェーズ MD6」表記。両対応。
+  const md = (title.match(/第\s*0*(\d+)\s*節/) || title.match(/\bMD\s*0*(\d+)\b/i) || title.match(/マッチデー\s*0*(\d+)/) || [])[1];
   // シーズン開始年：2026/27・2026/2027・26/27 のいずれの表記にも対応
   let seasonStart = null;
   let sm = title.match(/20(\d\d)\s*[\/\-]\s*(?:20)?\d{2}/);          // 2026/27, 2026/2027
@@ -118,9 +130,9 @@ function parseTitle(title) {
 
 // ---- 実行 ----
 const vids = await channelVideos();
-console.log(`U-NEXT(@UNEXT_football) 投稿取得: ${vids.length}本`);
+console.log(`配信元(${HANDLE}) 投稿取得: ${vids.length}本`);
 const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
-  .filter(v => nsp(v.author || '').includes('unext'))   // U-NEXT自身の投稿だけ（ページ内の関連動画等を除外）
+  .filter(v => nsp(v.author || '').includes(AUTHOR_TOKEN))   // 配信元チャンネル自身の投稿だけ（ページ内の関連動画等を除外）
   .filter(v => v.p.league === LEAGUE_ARG && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
 console.log(`うち${LG_LABEL}・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
 if (parsed.length === 0 && vids.length) {
