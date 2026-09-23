@@ -47,7 +47,10 @@ const J1_SLUGS = [
   ['アルビレックス新潟','niigata'],['名古屋グランパス','nagoya'],['ジュビロ磐田','iwata'],['清水エスパルス','shimizu'],
   ['京都サンガ','kyoto'],['ガンバ大阪','gamba-osaka'],['セレッソ大阪','cerezo-osaka'],['ヴィッセル神戸','kobe'],
   ['サンフレッチェ広島','hiroshima'],['アビスパ福岡','fukuoka'],['サガン鳥栖','tosu'],['ファジアーノ岡山','okayama'],
-  ['V・ファーレン長崎','nagasaki'],['ヴァンフォーレ甲府','kofu'],['ジェフ千葉','chiba'],['大分トリニータ','oita'],['モンテディオ山形','yamagata'],
+  ['V・ファーレン長崎','nagasaki'],['ヴァンフォーレ甲府','kofu'],['ジェフユナイテッド千葉','chiba'],['ジェフ千葉','chiba'],
+  ['大分トリニータ','oita'],['モンテディオ山形','yamagata'],['水戸ホーリーホック','mito'],['いわきFC','iwaki'],
+  ['ロアッソ熊本','kumamoto'],['レノファ山口','yamaguchi'],['徳島ヴォルティス','tokushima'],['ザスパ群馬','gunma'],
+  ['ブラウブリッツ秋田','akita'],['藤枝MYFC','fujieda'],['愛媛FC','ehime'],['RB大宮アルディージャ','omiya'],['大宮アルディージャ','omiya'],
 ];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
