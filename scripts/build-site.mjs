@@ -182,7 +182,8 @@ const LEAGUE_HUBS = [
 // リーグJSONに「結果確定済み（スコア入り）」の試合があるコード集合。順位表を出せる＝ハブを建てる根拠にする。
 // （byTeamの旧試合が無いPLも、league-pl-*.json に結果があればハブを生成できるようにする）
 const LEAGUE_HAS_DATA = new Set();
-try { for(const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){ const j=JSON.parse(readFileSync(`data/${f}`,'utf8')); if(j.code && (j.matches||[]).some(m=>m.finished && /^\d+\s*-\s*\d+$/.test(m.score||''))) LEAGUE_HAS_DATA.add(j.code); } } catch(e){}
+// スコア付き完了試合、または公式ハイライト(videoId)がある＝ハブを建てる根拠。J1等の動画ファースト（スコア非公開）にも対応。
+try { for(const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){ const j=JSON.parse(readFileSync(`data/${f}`,'utf8')); if(j.code && (j.matches||[]).some(m=> (m.finished && /^\d+\s*-\s*\d+$/.test(m.score||'')) || m.videoId )) LEAGUE_HAS_DATA.add(j.code); } } catch(e){}
 const esc = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const escA = s => (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');
 
@@ -2062,7 +2063,7 @@ function buildLeague(h){
   graph.push(itemListLd(ms));
   // 「○○ ハイライト」「○○ 動画」は実クエリで11〜20位（あと一歩）に多いため、titleは「ハイライト動画」を
   // リーグ名の直後（先頭寄り）に置いて完全一致度を上げる（旧: 順位表・得点王が先でハイライトが後ろに埋没）。
-  const head=HEAD({ title:`${h.name} ハイライト動画・順位表${scList.length?'・得点王':''}｜最新結果`, ogtitle:`${h.name} 順位表・ハイライト動画`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+  const head=HEAD({ title:`${h.name} ハイライト動画${stand.length?'・順位表':''}${scList.length?'・得点王':''}｜最新結果`, ogtitle:`${h.name} ハイライト動画${stand.length?'・順位表':''}`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
