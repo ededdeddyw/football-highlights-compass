@@ -16,6 +16,8 @@
 // ★ 使い方（Node 18以降が必要。リポジトリのルートで実行）
 //   node scripts/fetch-unext-pl.mjs                # プレミアリーグ（既定）を更新
 //   node scripts/fetch-unext-pl.mjs --league=cl    # チャンピオンズリーグを更新（配信元は自動でWOWOW @wowowsoccer）
+//   node scripts/fetch-unext-pl.mjs --league=j1    # J1リーグ（DAZN @DAZNJapan）。日程APIが無いため
+//                                                  # ハイライトのタイトルから試合を生成する（動画ファースト）。
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
 //   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoIdを消す（初回の掃除用）
@@ -34,7 +36,19 @@ const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった�
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 // 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
-const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ' };
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ' };
+// 動画ファースト（日程APIが無いリーグ）：DAZN等のハイライト・タイトルから試合を生成する。
+const VIDEO_FIRST = new Set(['j1']);
+// J1クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
+const J1_SLUGS = [
+  ['北海道コンサドーレ札幌','sapporo'],['コンサドーレ札幌','sapporo'],['鹿島アントラーズ','kashima'],['浦和レッズ','urawa'],
+  ['柏レイソル','kashiwa'],['FC東京','fc-tokyo'],['東京ヴェルディ','tokyo-verdy'],['FC町田ゼルビア','machida'],['町田ゼルビア','machida'],
+  ['川崎フロンターレ','kawasaki'],['横浜F・マリノス','yokohama-fm'],['横浜FC','yokohama-fc'],['湘南ベルマーレ','shonan'],
+  ['アルビレックス新潟','niigata'],['名古屋グランパス','nagoya'],['ジュビロ磐田','iwata'],['清水エスパルス','shimizu'],
+  ['京都サンガ','kyoto'],['ガンバ大阪','gamba-osaka'],['セレッソ大阪','cerezo-osaka'],['ヴィッセル神戸','kobe'],
+  ['サンフレッチェ広島','hiroshima'],['アビスパ福岡','fukuoka'],['サガン鳥栖','tosu'],['ファジアーノ岡山','okayama'],
+  ['V・ファーレン長崎','nagasaki'],['ヴァンフォーレ甲府','kofu'],['ジェフ千葉','chiba'],['大分トリニータ','oita'],['モンテディオ山形','yamagata'],
+];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
 //   PL/ラ・リーガ/エールディビジ: U-NEXT（@UNEXT_football）
@@ -44,6 +58,7 @@ const CHANNELS = {
   laliga:     { handle: '@UNEXT_football', author: 'unext' },
   eredivisie: { handle: '@UNEXT_football', author: 'unext' },
   cl:         { handle: '@wowowsoccer',    author: 'wowow' },
+  j1:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ1（DAZN Japan公式）
 };
 const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
 const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
@@ -100,6 +115,7 @@ async function channelVideos() {
 // U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
 function detectLeague(t) {
   if (/女子|women/i.test(t)) return null;   // 女子CL等は対象外（男子リーグの日程表に無い）
+  if (/明治安田J1|J1リーグ|J1\s*LEAGUE/i.test(t)) return 'j1';   // JリーグJ1（DAZN Japan）
   if (/チャンピオンズリーグ|champions\s*league|UEFA\s*CL|欧州CL|ＵＥＦＡ/i.test(t)) return 'cl';
   if (/プレミアリーグ|premier\s*league/i.test(t)) return 'pl';
   if (/ラ・?リーガ|la\s*liga/i.test(t)) return 'laliga';
@@ -142,6 +158,26 @@ if (parsed.length === 0 && vids.length) {
   // どのリーグの動画が何本あるかも表示（U-NEXTがそのリーグを配信しているかの判断材料）
   const byLg = {}; for (const v of vids) { const lg = parseTitle(v.title).league || '(不明)'; byLg[lg] = (byLg[lg]||0)+1; }
   console.log('  [診断] チャンネル内のリーグ別本数:', JSON.stringify(byLg));
+}
+
+// ---- 動画ファースト（日程APIが無いリーグ：J1等）：タイトルから試合を生成して data を作る ----
+if (VIDEO_FIRST.has(LEAGUE_ARG)) {
+  const slugFor = jp => { const n = nsp(jp); let best = 'x-' + n.slice(0, 10), bl = 0; for (const [k, v] of J1_SLUGS) { const kn = nsp(k); if (kn && n.includes(kn) && kn.length > bl) { best = v; bl = kn.length; } } return best; };
+  const byKey = new Map();   // home|away|md → 試合（同一カードは最初の1本）
+  for (const v of parsed) {
+    const hs = slugFor(v.p.home), as = slugFor(v.p.away);
+    const key = `${hs}|${as}|${v.p.md || ''}`;
+    if (byKey.has(key)) continue;
+    byKey.set(key, { matchday: v.p.md, dateUTC: '', home: v.p.home, away: v.p.away, homeSlug: hs, awaySlug: as, finished: true, score: '', videoId: v.id });
+  }
+  const matches = [...byKey.values()].sort((a, b) => (a.matchday || 0) - (b.matchday || 0) || String(a.home).localeCompare(String(b.home), 'ja'));
+  const path = `data/league-${LEAGUE_ARG}-${CUR_START}.json`;
+  if (!DRY) writeFileSync(path, JSON.stringify({ code: LEAGUE_ARG, jp: LG_LABEL, season: String(CUR_START), updated: '', matches }, null, 2) + '\n');
+  const unslugged = matches.filter(m => m.homeSlug.startsWith('x-') || m.awaySlug.startsWith('x-'));
+  console.log(`${path}: ${matches.length}試合を生成（動画ファースト）`);
+  if (unslugged.length) { console.log(`  ⚠ スラッグ未登録のクラブを含む試合 ${unslugged.length}件（J1_SLUGS に追記推奨）:`); [...new Set(unslugged.flatMap(m => [m.home, m.away]).filter(n => slugFor(n).startsWith('x-')))].forEach(n => console.log(`     ${n}`)); }
+  console.log(DRY ? '\n(--dry-run: 書き込みなし)' : '\n書き込み完了。git add/commit/push で本番反映されます。');
+  process.exit(0);
 }
 
 const files = readdirSync('data').filter(n => new RegExp(`^league-${LEAGUE_ARG}-\\d{4}\\.json$`).test(n))
