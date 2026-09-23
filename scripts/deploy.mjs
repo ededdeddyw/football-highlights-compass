@@ -68,7 +68,17 @@ async function uploadAll() {
   const hashes = {}; const targets = [];
   for (const rel of files) { const h = md5('site/' + rel); hashes[rel] = h; if (man[rel] !== h) targets.push(rel); }
   changedTail = new Set(targets.filter(r => TAIL.includes(r)));   // tail保証は「今回変わったtailファイル」だけ
-  console.log(`アップロード先: ${env.FTP_DIR} ／ 全${files.length}中 ${targets.length}ファイルが変更（差分）${FULL ? ' [FULL]' : ''}`);
+  // 新規/重要コンテンツを優先アップロード。1接続・逐次で数千ファイルはタイムアウトしがちなので、
+  // 価値の高いページ（ハブ・サイトマップ→新規リーグの試合）から先に上げ、途中で打ち切られても本番に反映済みにする。
+  // 既存ページのフッターリンク更新など大量の低優先ファイルは最後（次回以降に持ち越しても実害が小さい）。
+  const NEW_LEAGUES = (process.env.DEPLOY_PRIORITY_LEAGUES || 'j1,eredivisie').split(',').map(s=>s.trim()).filter(Boolean);
+  const prio = (rel) => {
+    if (rel === 'index.html' || rel === 'sitemap.xml' || rel === 'robots.txt' || rel.startsWith('league/') || rel.startsWith('schedule')) return 0; // ハブ・ナビ・サイトマップ
+    for (let i=0;i<NEW_LEAGUES.length;i++){ const c=NEW_LEAGUES[i]; if (rel.startsWith(`match/${c}-`) || rel.startsWith(`matchday/${c}-`)) return 1+i; } // 新規リーグの試合・節ページ
+    return 100; // 既存ページ（フッターのリンク更新など）
+  };
+  targets.sort((a,b) => prio(a) - prio(b) || (a < b ? -1 : a > b ? 1 : 0));   // 同一優先度内はパス順＝ディレクトリまとまりを保ちFTPのCWDを減らす
+  console.log(`アップロード先: ${env.FTP_DIR} ／ 全${files.length}中 ${targets.length}ファイルが変更（差分）${FULL ? ' [FULL]' : ''} ／ 優先: ${targets.filter(r=>prio(r)<100).length}件先行`);
   if (!targets.length) { writeFileSync(MANIFEST, JSON.stringify(hashes)); return { total: files.length, done: 0, failed: [], skipped: files.length }; }
   const newMan = { ...man };
   let c = await connectRetry();
