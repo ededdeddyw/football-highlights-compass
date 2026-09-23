@@ -18,7 +18,10 @@
 //   node scripts/fetch-unext-pl.mjs --league=cl    # チャンピオンズリーグを更新（配信元は自動でWOWOW @wowowsoccer）
 //   node scripts/fetch-unext-pl.mjs --league=j1    # J1リーグ（DAZN @DAZNJapan）。日程APIが無いため
 //                                                  # ハイライトのタイトルから試合を生成する（動画ファースト）。
+//   node scripts/fetch-unext-pl.mjs --league=j2    # J2リーグ（DAZN @DAZNJapan・動画ファースト）
+//   node scripts/fetch-unext-pl.mjs --league=j3    # J3リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
+//   ※動画ファーストは取得0件のとき既存データを保護（空で上書きしない）。意図的に空へ戻すときだけ --force。
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
 //   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoIdを消す（初回の掃除用）
 //   ※チャンネル取得は全リーグ横断。候補0本時は「チャンネル内のリーグ別本数」を表示するので、
@@ -31,15 +34,17 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry-run');
+const FORCE = args.includes('--force');   // 動画ファーストで取得0件でも既存を上書きする（安全ガード解除）
 const KEEP = args.includes('--keep-existing');   // 後方互換（既定でクリアしなくなったため実質no-op）
 const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった既存videoId（NBC等）を消す。既定はOFF（消さない）
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 // 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
-const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ' };
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ' };
 // 動画ファースト（日程APIが無いリーグ）：DAZN等のハイライト・タイトルから試合を生成する。
-const VIDEO_FIRST = new Set(['j1']);
-// J1クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
+const VIDEO_FIRST = new Set(['j1', 'j2', 'j3']);
+// Jリーグ（J1/J2/J3）クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
+// 全クラブを1表にまとめる（tier非依存）。J2/J3の試合ハイライトでも同じ表からスラッグを付ける。
 const J1_SLUGS = [
   ['北海道コンサドーレ札幌','sapporo'],['コンサドーレ札幌','sapporo'],['鹿島アントラーズ','kashima'],['浦和レッズ','urawa'],
   ['柏レイソル','kashiwa'],['FC東京','fc-tokyo'],['東京ヴェルディ','tokyo-verdy'],['FC町田ゼルビア','machida'],['町田ゼルビア','machida'],
@@ -51,6 +56,17 @@ const J1_SLUGS = [
   ['大分トリニータ','oita'],['モンテディオ山形','yamagata'],['水戸ホーリーホック','mito'],['いわきFC','iwaki'],
   ['ロアッソ熊本','kumamoto'],['レノファ山口','yamaguchi'],['徳島ヴォルティス','tokushima'],['ザスパ群馬','gunma'],
   ['ブラウブリッツ秋田','akita'],['藤枝MYFC','fujieda'],['愛媛FC','ehime'],['RB大宮アルディージャ','omiya'],['大宮アルディージャ','omiya'],
+  // --- J2で見かけるクラブ ---
+  ['ベガルタ仙台','sendai'],['栃木SC','tochigi'],['カターレ富山','toyama'],['鹿児島ユナイテッド','kagoshima'],
+  ['ジェフユナイテッド市原・千葉','chiba'],['東京ヴェルディ1969','tokyo-verdy'],['ザスパクサツ群馬','gunma'],
+  ['ツエーゲン金沢','kanazawa'],['FC岐阜','gifu'],['ファジアーノ岡山ネクスト','okayama'],['大分','oita'],
+  // --- J3で見かけるクラブ ---
+  ['ヴァンラーレ八戸','hachinohe'],['いわてグルージャ盛岡','iwate'],['福島ユナイテッド','fukushima'],
+  ['Y.S.C.C.横浜','yscc'],['YSCC横浜','yscc'],['SC相模原','sagamihara'],['松本山雅','matsumoto'],
+  ['AC長野パルセイロ','nagano'],['長野パルセイロ','nagano'],['アスルクラロ沼津','numazu'],['ガイナーレ鳥取','tottori'],
+  ['カマタマーレ讃岐','sanuki'],['FC今治','imabari'],['ギラヴァンツ北九州','kitakyushu'],['テゲバジャーロ宮崎','miyazaki'],
+  ['FC琉球','ryukyu'],['奈良クラブ','nara'],['栃木シティ','tochigi-city'],['高知ユナイテッド','kochi'],
+  ['アトレチコ鈴鹿','suzuka'],['鈴鹿ポイントゲッターズ','suzuka'],
 ];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
@@ -62,6 +78,8 @@ const CHANNELS = {
   eredivisie: { handle: '@UNEXT_football', author: 'unext' },
   cl:         { handle: '@wowowsoccer',    author: 'wowow' },
   j1:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ1（DAZN Japan公式）
+  j2:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ2（DAZN Japan公式）
+  j3:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ3（DAZN Japan公式）
 };
 const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
 const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
@@ -119,6 +137,8 @@ async function channelVideos() {
 function detectLeague(t) {
   if (/女子|women/i.test(t)) return null;   // 女子CL等は対象外（男子リーグの日程表に無い）
   if (/明治安田J1|J1リーグ|J1\s*LEAGUE/i.test(t)) return 'j1';   // JリーグJ1（DAZN Japan）
+  if (/明治安田J2|J2リーグ|J2\s*LEAGUE/i.test(t)) return 'j2';   // JリーグJ2（DAZN Japan）
+  if (/明治安田J3|J3リーグ|J3\s*LEAGUE/i.test(t)) return 'j3';   // JリーグJ3（DAZN Japan）
   if (/チャンピオンズリーグ|champions\s*league|UEFA\s*CL|欧州CL|ＵＥＦＡ/i.test(t)) return 'cl';
   if (/プレミアリーグ|premier\s*league/i.test(t)) return 'pl';
   if (/ラ・?リーガ|la\s*liga/i.test(t)) return 'laliga';
@@ -175,6 +195,16 @@ if (VIDEO_FIRST.has(LEAGUE_ARG)) {
   }
   const matches = [...byKey.values()].sort((a, b) => (a.matchday || 0) - (b.matchday || 0) || String(a.home).localeCompare(String(b.home), 'ja'));
   const path = `data/league-${LEAGUE_ARG}-${CUR_START}.json`;
+  // 安全ガード：取得0件のとき既存の非空データを空で上書きしない（YouTubeがconsent画面等を返した場合の誤消去を防ぐ）。
+  // 意図的に空へ戻す場合だけ --force を付ける。
+  if (matches.length === 0 && !FORCE) {
+    let existing = 0;
+    try { existing = (JSON.parse(readFileSync(path, 'utf8')).matches || []).length; } catch {}
+    if (existing > 0) {
+      console.error(`  ⛔ 取得0件のため書き込みを中止（既存 ${existing}件を保護）。ネットワーク/consent画面の可能性。空で上書きするなら --force。`);
+      process.exit(2);
+    }
+  }
   if (!DRY) writeFileSync(path, JSON.stringify({ code: LEAGUE_ARG, jp: LG_LABEL, season: String(CUR_START), updated: '', matches }, null, 2) + '\n');
   const unslugged = matches.filter(m => m.homeSlug.startsWith('x-') || m.awaySlug.startsWith('x-'));
   console.log(`${path}: ${matches.length}試合を生成（動画ファースト）`);
