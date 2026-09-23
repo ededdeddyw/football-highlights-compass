@@ -43,6 +43,20 @@ try { if (existsSync('data/club-news.json')) CLUB_NEWS = JSON.parse(readFileSync
 // 出典明示（CC BY-SA）でWikipediaへリンクしつつクラブページのGEO/滞在時間を底上げする。
 let CLUB_INFO = {};
 try { if (existsSync('data/club-info.json')) CLUB_INFO = JSON.parse(readFileSync('data/club-info.json','utf8')); } catch(e){ console.warn('club-info読込失敗:', e.message); }
+// 選手別ニュース（Google News RSS／scripts/fetch-player-news.mjs）。slug→{name,updated,items:[{t,u,src,d}]}。
+let PLAYER_NEWS = {};
+try { if (existsSync('data/player-news.json')) PLAYER_NEWS = JSON.parse(readFileSync('data/player-news.json','utf8')); } catch(e){ console.warn('player-news読込失敗:', e.message); }
+// クラブ/選手ニュースの折りたたみ節を組み立てる共通ヘルパ（結果注意ラベル＋既定折りたたみ＋外部リンク）。
+function newsBlock(title, rec){
+  if(!rec || !rec.items || !rec.items.length) return '';
+  const rel = iso => { if(!iso) return ''; const d=Math.floor((Date.now()-new Date(iso).getTime())/86400000); if(isNaN(d))return''; return d<=0?'今日':d===1?'昨日':d<7?`${d}日前`:d<30?`${Math.floor(d/7)}週間前`:`${Math.floor(d/30)}か月前`; };
+  const rows = rec.items.slice(0,8).map(it=>`<li class="clnews-i"><a href="${escA(it.u)}" target="_blank" rel="noopener nofollow">${esc(it.t)}</a><span class="clnews-m">${it.src?esc(it.src):''}${it.d?` ・ ${rel(it.d)}`:''}</span></li>`).join('');
+  const upd = rec.updated ? new Date(rec.updated).toISOString().slice(0,10) : '';
+  const css = `<style>.clnews-list{list-style:none;margin:12px 0 4px;padding:0}.clnews-i{padding:9px 2px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:3px}.clnews-i a{color:var(--accent);text-decoration:none;font-weight:700;font-size:14px;line-height:1.5}.clnews-i a:hover{text-decoration:underline}.clnews-m{color:var(--muted);font-size:11.5px}.clnews-warn{font-size:11px;font-weight:600;color:#b45309;background:#fef3c7;border-radius:4px;padding:1px 7px;margin-left:2px}:root:not([data-theme="light"]) .clnews-warn{background:#3a2c07;color:#fcd34d}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .clnews-warn{background:#3a2c07;color:#fcd34d}}:root[data-theme="dark"] .clnews-warn{background:#3a2c07;color:#fcd34d}</style>`;
+  return `${css}<div class="cl-wrap" style="margin-top:20px"><details class="m-collapse clnews"><summary>📰 ${esc(title)} <span class="clnews-warn">結果・スコアに触れる場合あり</span><span class="mc-ico"></span></summary>
+    <ul class="clnews-list">${rows}</ul>
+    <p class="stand-note">出典: Google ニュース（各媒体の見出し・リンク）。見出しは外部サイトへ移動します。${upd?`更新: ${upd}`:''}</p></details></div>`;
+}
 // 監督の系譜・師弟マップ（師弟関係は歴史的事実で安定／『現在』は時点つき）。data/lineage.json。
 let LINEAGE = { trees: [] }, LINEAGE_UPDATED = '';
 try { if (existsSync('data/lineage.json')) { const lj = JSON.parse(readFileSync('data/lineage.json','utf8')); LINEAGE = { trees: lj.trees||[] }; LINEAGE_UPDATED = lj.updated||''; } } catch(e){ console.warn('lineage読込失敗:', e.message); }
@@ -1900,6 +1914,7 @@ function buildPlayer(p){
   ${timeline}
   ${AD}
   ${clubLink}
+  ${newsBlock(p.name+'の最新ニュース', PLAYER_NEWS[p.slug])}
   ${teammates}
   ${leagueLink}
   ${relatedPlayers}

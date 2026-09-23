@@ -23,15 +23,17 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
 
-      - name: ニュース取得
-        run: node scripts/fetch-club-news.mjs --per=6
+      - name: クラブ・選手ニュース取得
+        run: |
+          node scripts/fetch-club-news.mjs --per=6
+          node scripts/fetch-player-news.mjs --per=6
 
       - name: 変化があればコミット
         id: commit
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/club-news.json
+          git add data/club-news.json data/player-news.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "ニュースに変化なし。"
