@@ -14,11 +14,14 @@
 //   現行シーズンが揃わないと採用しない。
 //
 // ★ 使い方（Node 18以降が必要。リポジトリのルートで実行）
-//   node scripts/fetch-unext-pl.mjs                # 現行シーズンを自動判定して更新
+//   node scripts/fetch-unext-pl.mjs                # プレミアリーグ（既定）を更新
+//   node scripts/fetch-unext-pl.mjs --league=cl    # チャンピオンズリーグを更新（データは data/league-cl-<season>.json）
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
-//   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示
-//   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoId(NBC等)を消す（初回の掃除用）
-//   ※既定では既存videoIdは消しません（過去に埋めたU-NEXT動画を守るため）。初回のNBC一掃だけ --purge を付けてください。
+//   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
+//   node scripts/fetch-unext-pl.mjs --purge        # U-NEXTで拾えなかった既存videoIdを消す（初回の掃除用）
+//   ※チャンネル取得は全リーグ横断。候補0本時は「チャンネル内のリーグ別本数」を表示するので、
+//     U-NEXTがそのリーグ（例: cl）を配信しているかを判断できます。
+//   ※既定では既存videoIdは消しません（過去に埋めたU-NEXT動画を守るため）。初回の掃除だけ --purge を付けてください。
 //   ※試合の finished 状態は問いません（ハイライトがある＝実施済み。スコアは次回のリーグ取得で自動で埋まります）。
 //   実行後: git add data/league-pl-*.json && git commit && git push で本番に反映されます。
 // ============================================================================
@@ -29,6 +32,10 @@ const DRY = args.includes('--dry-run');
 const KEEP = args.includes('--keep-existing');   // 後方互換（既定でクリアしなくなったため実質no-op）
 const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった既存videoId（NBC等）を消す。既定はOFF（消さない）
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
+// 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
+const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ' };
+const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 const HANDLE = '@UNEXT_football';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
@@ -81,6 +88,7 @@ async function channelVideos() {
 // ---- タイトル解析：実タイトル例「【<煽り文>｜HOME v AWAY｜ショートハイライト】プレミアリーグ2026/27 第N節」----
 // U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
 function detectLeague(t) {
+  if (/チャンピオンズリーグ|champions\s*league|UEFA\s*CL|欧州CL|ＵＥＦＡ/i.test(t)) return 'cl';
   if (/プレミアリーグ|premier\s*league/i.test(t)) return 'pl';
   if (/ラ・?リーガ|la\s*liga/i.test(t)) return 'laliga';
   if (/セリエ\s*a|serie\s*a/i.test(t)) return 'sa';
@@ -113,16 +121,19 @@ const vids = await channelVideos();
 console.log(`U-NEXT(@UNEXT_football) 投稿取得: ${vids.length}本`);
 const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
   .filter(v => nsp(v.author || '').includes('unext'))   // U-NEXT自身の投稿だけ（ページ内の関連動画等を除外）
-  .filter(v => v.p.league === 'pl' && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
-console.log(`うちプレミア・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
+  .filter(v => v.p.league === LEAGUE_ARG && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));
+console.log(`うち${LG_LABEL}・現行シーズン(${CUR_START}/${String((CUR_START + 1) % 100).padStart(2, '0')})のハイライト候補: ${parsed.length}本`);
 if (parsed.length === 0 && vids.length) {
   console.log('  [診断] 候補0件のため、取得動画の先頭20本を表示します（author ｜ title ｜ 解析結果）:');
   vids.slice(0, 20).forEach(v => { const p = parseTitle(v.title); console.log(`     ${v.author} ｜ ${v.title} ｜ league=${p.league} Hi=${p.isHi} home=${p.home} away=${p.away} md=${p.md} season=${p.seasonStart}`); });
+  // どのリーグの動画が何本あるかも表示（U-NEXTがそのリーグを配信しているかの判断材料）
+  const byLg = {}; for (const v of vids) { const lg = parseTitle(v.title).league || '(不明)'; byLg[lg] = (byLg[lg]||0)+1; }
+  console.log('  [診断] チャンネル内のリーグ別本数:', JSON.stringify(byLg));
 }
 
-const files = readdirSync('data').filter(n => /^league-pl-\d{4}\.json$/.test(n))
+const files = readdirSync('data').filter(n => new RegExp(`^league-${LEAGUE_ARG}-\\d{4}\\.json$`).test(n))
   .filter(n => n.endsWith(`-${CUR_START}.json`));
-if (!files.length) { console.error(`対象ファイルが見つかりません（data/league-pl-${CUR_START}.json）。--season を確認してください。`); process.exit(1); }
+if (!files.length) { console.error(`対象ファイルが見つかりません（data/league-${LEAGUE_ARG}-${CUR_START}.json）。--season / --league を確認してください。`); process.exit(1); }
 
 let filled = 0, replaced = 0, cleared = 0; const used = new Set(); const unmatchedVids = [];
 for (const f of files) {
