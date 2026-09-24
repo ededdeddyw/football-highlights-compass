@@ -21,6 +21,9 @@
 //   node scripts/fetch-unext-pl.mjs --league=j2    # J2リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --league=j3    # J3リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --league=belgium # ベルギー・プロリーグ（DAZN @DAZNJapan・日本人選手多数）
+//   ※環境変数 YOUTUBE_API_KEY を設定すると YouTube Data API v3（無料枠）で取得する。
+//     APIはconsent画面に当たらないため、クラウド/GitHub Actions でも確実に取得できる（自動更新の要）。
+//     未設定時は従来のWebスクレイプにフォールバック（ローカル実行向け）。
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
 //   ※動画ファーストは取得0件のとき既存データを保護（空で上書きしない）。意図的に空へ戻すときだけ --force。
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
@@ -117,7 +120,43 @@ const grabIds = txt => { const seen = new Set(), out = []; for (const m of (txt 
 async function oembed(id) {
   try { const r = await fetch(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`); if (!r.ok) return null; const j = await r.json(); return { title: j.title || '', author: j.author_name || '' }; } catch { return null; }
 }
+// ---- YouTube Data API v3 経由の取得（推奨）----
+// 無料枠（1日1万ユニット）で十分。APIなのでconsent画面に当たらず、クラウド/CIから確実に取得できる。
+// YOUTUBE_API_KEY があればこちらを使い、無ければ従来のスクレイプにフォールバックする。
+const API_KEY = process.env.YOUTUBE_API_KEY || '';
+async function channelVideosApi(handle) {
+  const h = handle.startsWith('@') ? handle : '@' + handle;
+  // 1) ハンドル→アップロード用プレイリストID
+  const cr = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails,snippet&forHandle=${encodeURIComponent(h)}&key=${API_KEY}`);
+  if (!cr.ok) throw new Error(`channels.list HTTP ${cr.status}`);
+  const cj = await cr.json();
+  const ch = (cj.items || [])[0];
+  if (!ch) throw new Error(`チャンネルが見つかりません: ${h}`);
+  const uploads = ch.contentDetails.relatedPlaylists.uploads;
+  const author = (ch.snippet && ch.snippet.title) || '';
+  // 2) アップロード一覧をページング取得（最大約250本）
+  const out = []; let pageToken = '', pages = 0;
+  while (pages < 5) {
+    pages++;
+    const u = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploads}&maxResults=50&key=${API_KEY}${pageToken ? `&pageToken=${pageToken}` : ''}`;
+    const r = await fetch(u);
+    if (!r.ok) throw new Error(`playlistItems.list HTTP ${r.status}`);
+    const j = await r.json();
+    for (const it of (j.items || [])) {
+      const s = it.snippet || {}; const vid = s.resourceId && s.resourceId.videoId;
+      if (vid && s.title && s.title !== 'Private video' && s.title !== 'Deleted video') out.push({ id: vid, title: s.title, author: s.channelTitle || author });
+    }
+    pageToken = j.nextPageToken || '';
+    if (!pageToken) break;
+  }
+  console.log(`  [診断] YouTube Data API 取得: チャンネル ${author} / 動画 ${out.length}件`);
+  return out;
+}
 async function channelVideos() {
+  if (API_KEY) {
+    try { return await channelVideosApi(HANDLE); }
+    catch (e) { console.error(`  ⚠ API取得失敗（${e.message}）→ スクレイプにフォールバック`); }
+  }
   const r = await fetch(`https://www.youtube.com/${HANDLE}/videos?hl=ja&gl=JP`, { headers: HDRS });
   const html = r.ok ? await r.text() : '';
   const idset = new Set(grabIds(html));
