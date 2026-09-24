@@ -49,6 +49,9 @@ try { if (existsSync('data/player-news.json')) PLAYER_NEWS = JSON.parse(readFile
 // 選手概要（Wikipedia日本語版導入部）。scripts/fetch-player-info.mjs。slug→{title,wikiUrl,extract,updated}。
 let PLAYER_INFO = {};
 try { if (existsSync('data/player-info.json')) PLAYER_INFO = JSON.parse(readFileSync('data/player-info.json','utf8')); } catch(e){ console.warn('player-info読込失敗:', e.message); }
+// リーグ概要（Wikipedia日本語版導入部）。scripts/fetch-league-info.mjs。code→{jp,title,wikiUrl,extract,updated}。
+let LEAGUE_INFO = {};
+try { if (existsSync('data/league-info.json')) LEAGUE_INFO = JSON.parse(readFileSync('data/league-info.json','utf8')); } catch(e){ console.warn('league-info読込失敗:', e.message); }
 // Wikipedia概要の折りたたみ節（クラブ/選手共用）。出典＋リンク必須（CC BY-SA）。
 function aboutBlock(name, rec, factsHtml){
   if(!rec || !rec.extract || rec.extract.length < 30) return '';
@@ -2149,6 +2152,7 @@ function buildLeague(h){
   ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
   ${AD}
   ${ms.length?collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms)):''}
+  ${aboutBlock(h.name, LEAGUE_INFO[h.code])}
   ${faqBlock(faqItems)}
   ${cross}
   ` + FOOTER();
