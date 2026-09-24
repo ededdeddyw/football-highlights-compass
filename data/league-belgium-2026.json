@@ -1,0 +1,96 @@
+{
+  "code": "belgium",
+  "jp": "ベルギー・プロリーグ",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "アンデルレヒト",
+      "away": "ヘンク",
+      "homeSlug": "anderlecht",
+      "awaySlug": "genk",
+      "finished": true,
+      "score": "",
+      "videoId": "Cc5W5zeyiB4"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "クルブ・ブルッヘ",
+      "away": "アントワープ",
+      "homeSlug": "club-brugge",
+      "awaySlug": "antwerp",
+      "finished": true,
+      "score": "",
+      "videoId": "_IYI91n2ZIs"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "ベフェレン",
+      "away": "シント=トロイデン",
+      "homeSlug": "x-ベフェレン",
+      "awaySlug": "sint-truiden",
+      "finished": true,
+      "score": "",
+      "videoId": "OqxgTBcPBuk"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "ヘンク",
+      "away": "ヘント",
+      "homeSlug": "genk",
+      "awaySlug": "gent",
+      "finished": true,
+      "score": "",
+      "videoId": "mypr0xrRQyQ"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "メヘレン",
+      "away": "アンデルレヒト",
+      "homeSlug": "mechelen",
+      "awaySlug": "anderlecht",
+      "finished": true,
+      "score": "",
+      "videoId": "LETLvacxCcg"
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "",
+      "home": "アントワープ",
+      "away": "ユニオン・サン・ジロワーズ",
+      "homeSlug": "antwerp",
+      "awaySlug": "union-sg",
+      "finished": true,
+      "score": "",
+      "videoId": "X9-xjktk0YU"
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "",
+      "home": "クルブ・ブルッヘ",
+      "away": "ヘンク",
+      "homeSlug": "club-brugge",
+      "awaySlug": "genk",
+      "finished": true,
+      "score": "",
+      "videoId": "6G2r5nmBOys"
+    },
+    {
+      "matchday": 7,
+      "dateUTC": "",
+      "home": "シント=トロイデン",
+      "away": "ウェステルロー",
+      "homeSlug": "sint-truiden",
+      "awaySlug": "westerlo",
+      "finished": true,
+      "score": "",
+      "videoId": "hyHiaEiIgDY"
+    }
+  ]
+}
