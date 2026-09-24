@@ -996,33 +996,33 @@
     },
     {
       "matchday": 10,
+      "dateUTC": "2026-11-06T20:00:00Z",
+      "home": "エバートン",
+      "away": "コベントリー",
+      "homeSlug": "everton",
+      "awaySlug": "coventry-city",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "2026-11-07T12:30:00Z",
+      "home": "リーズ",
+      "away": "トッテナム",
+      "homeSlug": "leeds-united",
+      "awaySlug": "tottenham",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 10,
       "dateUTC": "2026-11-07T15:00:00Z",
       "home": "アーセナル",
       "away": "ハル・シティ",
       "homeSlug": "arsenal",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
-      "home": "ノッティンガム・フォレスト",
-      "away": "マンチェスター・シティ",
-      "homeSlug": "nottingham",
-      "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
-      "home": "リーズ",
-      "away": "トッテナム",
-      "homeSlug": "leeds-united",
-      "awaySlug": "tottenham",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1040,18 +1040,18 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
-      "home": "エバートン",
-      "away": "コベントリー",
-      "homeSlug": "everton",
-      "awaySlug": "coventry-city",
+      "dateUTC": "2026-11-07T17:30:00Z",
+      "home": "ノッティンガム・フォレスト",
+      "away": "マンチェスター・シティ",
+      "homeSlug": "nottingham",
+      "awaySlug": "man-city",
       "finished": false,
       "score": "",
       "videoId": ""
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
+      "dateUTC": "2026-11-08T14:00:00Z",
       "home": "クリスタル・パレス",
       "away": "リバプール",
       "homeSlug": "crystal-palace",
@@ -1062,7 +1062,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
+      "dateUTC": "2026-11-08T14:00:00Z",
       "home": "サンダーランド",
       "away": "チェルシー",
       "homeSlug": "sunderland",
@@ -1073,7 +1073,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
+      "dateUTC": "2026-11-08T14:00:00Z",
       "home": "イプスウィッチ",
       "away": "ボーンマス",
       "homeSlug": "ipswich-town",
@@ -1084,7 +1084,7 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
+      "dateUTC": "2026-11-08T14:00:00Z",
       "home": "ブライトン",
       "away": "ブレントフォード",
       "homeSlug": "brighton-hove",
@@ -1095,11 +1095,22 @@
     },
     {
       "matchday": 10,
-      "dateUTC": "2026-11-07T15:00:00Z",
+      "dateUTC": "2026-11-08T16:30:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "アストン・ヴィラ",
       "homeSlug": "man-united",
       "awaySlug": "aston-villa",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-21T12:30:00Z",
+      "home": "マンチェスター・シティ",
+      "away": "フラム",
+      "homeSlug": "man-city",
+      "awaySlug": "fulham",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1118,43 +1129,10 @@
     {
       "matchday": 11,
       "dateUTC": "2026-11-21T15:00:00Z",
-      "home": "マンチェスター・シティ",
-      "away": "フラム",
-      "homeSlug": "man-city",
-      "awaySlug": "fulham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 11,
-      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "アストン・ヴィラ",
       "away": "サンダーランド",
       "homeSlug": "aston-villa",
       "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 11,
-      "dateUTC": "2026-11-21T15:00:00Z",
-      "home": "リバプール",
-      "away": "マンチェスター・ユナイテッド",
-      "homeSlug": "liverpool",
-      "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 11,
-      "dateUTC": "2026-11-21T15:00:00Z",
-      "home": "ハル・シティ",
-      "away": "ブライトン",
-      "homeSlug": "hull-city",
-      "awaySlug": "brighton-hove",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1184,17 +1162,6 @@
     {
       "matchday": 11,
       "dateUTC": "2026-11-21T15:00:00Z",
-      "home": "ブレントフォード",
-      "away": "エバートン",
-      "homeSlug": "brentford",
-      "awaySlug": "everton",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 11,
-      "dateUTC": "2026-11-21T15:00:00Z",
       "home": "コベントリー",
       "away": "クリスタル・パレス",
       "homeSlug": "coventry-city",
@@ -1205,11 +1172,55 @@
     },
     {
       "matchday": 11,
-      "dateUTC": "2026-11-21T15:00:00Z",
+      "dateUTC": "2026-11-21T17:30:00Z",
       "home": "ニューカッスル",
       "away": "アーセナル",
       "homeSlug": "newcastle",
       "awaySlug": "arsenal",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-22T14:00:00Z",
+      "home": "ハル・シティ",
+      "away": "ブライトン",
+      "homeSlug": "hull-city",
+      "awaySlug": "brighton-hove",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-22T16:30:00Z",
+      "home": "リバプール",
+      "away": "マンチェスター・ユナイテッド",
+      "homeSlug": "liverpool",
+      "awaySlug": "man-united",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "2026-11-23T20:00:00Z",
+      "home": "ブレントフォード",
+      "away": "エバートン",
+      "homeSlug": "brentford",
+      "awaySlug": "everton",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-11-27T20:00:00Z",
+      "home": "ノッティンガム・フォレスト",
+      "away": "チェルシー",
+      "homeSlug": "nottingham",
+      "awaySlug": "chelsea",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1228,28 +1239,6 @@
     {
       "matchday": 12,
       "dateUTC": "2026-11-28T15:00:00Z",
-      "home": "イプスウィッチ",
-      "away": "アストン・ヴィラ",
-      "homeSlug": "ipswich-town",
-      "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
-      "home": "アーセナル",
-      "away": "マンチェスター・シティ",
-      "homeSlug": "arsenal",
-      "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
       "home": "マンチェスター・ユナイテッド",
       "away": "ブレントフォード",
       "homeSlug": "man-united",
@@ -1260,7 +1249,18 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
+      "dateUTC": "2026-11-28T17:30:00Z",
+      "home": "イプスウィッチ",
+      "away": "アストン・ヴィラ",
+      "homeSlug": "ipswich-town",
+      "awaySlug": "aston-villa",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-11-29T12:00:00Z",
       "home": "エバートン",
       "away": "リバプール",
       "homeSlug": "everton",
@@ -1271,7 +1271,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
+      "dateUTC": "2026-11-29T14:05:00Z",
       "home": "フラム",
       "away": "ボーンマス",
       "homeSlug": "fulham",
@@ -1282,18 +1282,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
-      "home": "ノッティンガム・フォレスト",
-      "away": "チェルシー",
-      "homeSlug": "nottingham",
-      "awaySlug": "chelsea",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
+      "dateUTC": "2026-11-29T14:05:00Z",
       "home": "ブライトン",
       "away": "ニューカッスル",
       "homeSlug": "brighton-hove",
@@ -1304,7 +1293,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
+      "dateUTC": "2026-11-29T14:05:00Z",
       "home": "サンダーランド",
       "away": "トッテナム",
       "homeSlug": "sunderland",
@@ -1315,11 +1304,22 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-11-28T15:00:00Z",
+      "dateUTC": "2026-11-29T14:05:00Z",
       "home": "クリスタル・パレス",
       "away": "ハル・シティ",
       "homeSlug": "crystal-palace",
       "awaySlug": "hull-city",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-11-29T16:30:00Z",
+      "home": "アーセナル",
+      "away": "マンチェスター・シティ",
+      "homeSlug": "arsenal",
+      "awaySlug": "man-city",
       "finished": false,
       "score": "",
       "videoId": ""
