@@ -555,11 +555,6 @@ function subSideNav(){
     <a href="../guide/minamino-takumi-highlights.html">南野拓実 ハイライトまとめ</a>
     <a href="../guide/doan-ritsu-highlights.html">堂安律 ハイライトまとめ</a>
   </nav>
-  <nav class="nav-guides" aria-label="選手">
-    <div class="ng-h">👤 日本人選手</div>
-    <a href="../player/">選手プロフィール一覧</a>
-    ${Object.keys(PLAYER_NEWS).length?`<a href="../player/news.html">📰 日本人選手の最新ニュース</a>`:''}
-  </nav>
   <nav class="nav-guides nav-wc" aria-label="ワールドカップ26">
     <div class="ng-h">⚽ ワールドカップ26</div>
     <a class="wc-ko" href="../group/knockout.html">🏆 決勝トーナメント（進出国・日程）</a>
