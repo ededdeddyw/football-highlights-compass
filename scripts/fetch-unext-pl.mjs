@@ -20,6 +20,7 @@
 //                                                  # ハイライトのタイトルから試合を生成する（動画ファースト）。
 //   node scripts/fetch-unext-pl.mjs --league=j2    # J2リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --league=j3    # J3リーグ（DAZN @DAZNJapan・動画ファースト）
+//   node scripts/fetch-unext-pl.mjs --league=belgium # ベルギー・プロリーグ（DAZN @DAZNJapan・日本人選手多数）
 //   node scripts/fetch-unext-pl.mjs --season=2026  # シーズン開始年を明示（2026=2026/27）
 //   ※動画ファーストは取得0件のとき既存データを保護（空で上書きしない）。意図的に空へ戻すときだけ --force。
 //   node scripts/fetch-unext-pl.mjs --dry-run      # 書き込まず結果だけ表示（まず --dry-run で候補数を確認）
@@ -40,9 +41,9 @@ const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった�
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 // 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
-const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ' };
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ', belgium:'ベルギー・プロリーグ' };
 // 動画ファースト（日程APIが無いリーグ）：DAZN等のハイライト・タイトルから試合を生成する。
-const VIDEO_FIRST = new Set(['j1', 'j2', 'j3']);
+const VIDEO_FIRST = new Set(['j1', 'j2', 'j3', 'belgium']);
 // Jリーグ（J1/J2/J3）クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
 // 全クラブを1表にまとめる（tier非依存）。J2/J3の試合ハイライトでも同じ表からスラッグを付ける。
 const J1_SLUGS = [
@@ -67,6 +68,16 @@ const J1_SLUGS = [
   ['カマタマーレ讃岐','sanuki'],['FC今治','imabari'],['ギラヴァンツ北九州','kitakyushu'],['テゲバジャーロ宮崎','miyazaki'],
   ['FC琉球','ryukyu'],['奈良クラブ','nara'],['栃木シティ','tochigi-city'],['高知ユナイテッド','kochi'],
   ['アトレチコ鈴鹿','suzuka'],['鈴鹿ポイントゲッターズ','suzuka'],
+  // --- ベルギー・プロリーグ（表記ゆれ・略称も網羅） ---
+  ['クラブ・ブルッヘ','club-brugge'],['クルブ・ブルッヘ','club-brugge'],['セルクル・ブルッヘ','cercle-brugge'],
+  ['KRCヘンク','genk'],['ヘンク','genk'],['ロイヤル・アントワープ','antwerp'],['アントワープ','antwerp'],
+  ['ユニオン・サン・ジロワーズ','union-sg'],['ユニオン・サン=ジロワーズ','union-sg'],['ユニオン・サン＝ジロワーズ','union-sg'],['ユニオンSG','union-sg'],
+  ['シント＝トロイデン','sint-truiden'],['シント=トロイデン','sint-truiden'],['シントトロイデン','sint-truiden'],['STVV','sint-truiden'],
+  ['ウェステルロー','westerlo'],['RSCアンデルレヒト','anderlecht'],['アンデルレヒト','anderlecht'],
+  ['KAAヘント','gent'],['ヘント','gent'],['スタンダール・リエージュ','standard-liege'],['スタンダール','standard-liege'],
+  ['シャルルロワ','charleroi'],['OHルーヴェン','oh-leuven'],['ルーヴェン','oh-leuven'],
+  ['KVメヘレン','mechelen'],['メヘレン','mechelen'],['デンデル','dender'],['ラ・ルヴィエール','la-louviere'],
+  ['ズルテ・ワレヘム','zulte-waregem'],['ズルテ・ヴァレヘム','zulte-waregem'],['RWDモランベーク','rwdm'],
 ];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
@@ -80,6 +91,7 @@ const CHANNELS = {
   j1:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ1（DAZN Japan公式）
   j2:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ2（DAZN Japan公式）
   j3:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ3（DAZN Japan公式）
+  belgium:    { handle: '@DAZNJapan',      author: 'dazn' },   // ベルギー・プロリーグ（DAZN Japan公式）
 };
 const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
 const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
@@ -146,6 +158,7 @@ function detectLeague(t) {
   if (/ブンデスリーガ|bundesliga/i.test(t)) return 'bl';
   if (/リーグ\s*アン|ligue\s*1/i.test(t)) return 'ligue1';
   if (/エールディヴィジ|eredivisie/i.test(t)) return 'eredivisie';
+  if (/ベルギーリーグ|ジュピラー|jupiler|belgian\s*pro\s*league|pro\s*league/i.test(t)) return 'belgium';   // ベルギー・プロリーグ（DAZN Japan・日本人選手多数）
   return null;
 }
 function parseTitle(title) {
