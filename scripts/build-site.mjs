@@ -1953,7 +1953,7 @@ function buildPlayerIndex(){
   const secs = order.filter(l=>byLeague[l]).map(l=>{
     const hub = LEAGUE_LIST.find(h=>h.clubLabel===l);
     const heading = hub?`<h2>${esc(l)} <a href="../league/${hub.slug}.html" style="font-size:13px;font-weight:600;opacity:.85">試合一覧 →</a></h2>`:`<h2>${esc(l)}</h2>`;
-    return `${heading}<div class="chips">${byLeague[l].map(p=>`<a href="./${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`;
+    return `${heading}<div class="chips">${byLeague[l].map(p=>`<a href="./${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}${p.club?` ・ ${esc(p.club)}`:''}</small></a>`).join('')}</div>`;
   }).join('');
   const url=`${DOMAIN}/player/`;
   const desc = `日本人サッカー選手のプロフィール一覧。海外組・Jリーグの選手を、ポジション・経歴・プレースタイルからネタバレなしで紹介。所属クラブの最新ハイライトへもすぐ。`.slice(0,120);
