@@ -1,0 +1,64 @@
+name: Update highlights (ハイライト自動更新)
+
+# 各リーグの公式ハイライト動画IDを取得して data/league-*.json を更新し、変化があれば本番デプロイする。
+# YouTube Data API v3（無料枠）を使うため、クラウド/CIでも consent 画面に当たらず確実に取得できる。
+# 事前に Secret「YOUTUBE_API_KEY」を登録すること（未登録だとスクレイプにフォールバックし、CIでは0件になる）。
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 毎日 13:00 JST（04:00 UTC）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update-highlights
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: APIキー確認
+        run: |
+          if [ -z "$YOUTUBE_API_KEY" ]; then
+            echo "::warning::Secret YOUTUBE_API_KEY が未設定です。CIではYouTube取得が0件になります（README/手順参照）。"
+          fi
+
+      - name: 全リーグのハイライト取得
+        run: |
+          for lg in pl laliga sa bl ligue1 cl eredivisie j1 j2 belgium; do
+            echo "== $lg =="
+            node scripts/fetch-unext-pl.mjs --league=$lg || echo "  ($lg はスキップ/失敗)"
+          done
+
+      - name: 変化があればコミット
+        id: commit
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/league-*.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "ハイライトに変化なし。"; exit 0
+          fi
+          git commit -m "data(highlights): 各リーグの公式ハイライトを自動更新"
+          git pull --rebase --autostash || true
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 本番デプロイを起動（変化時のみ）
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-diff.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy-diff.yml をディスパッチしました。"
