@@ -1,0 +1,19 @@
+{
+  "_note": "有名なダービー/ライバル関係のキュレーション。[クラブslug a, クラブslug b, 呼称]。build-site.mjs が両クラブページに相互リンクで表示する。",
+  "derbies": [
+    ["real-madrid", "fc-barcelona", "エル・クラシコ"],
+    ["real-madrid", "atletico-madrid", "マドリード・ダービー"],
+    ["sevilla", "real-betis-balompie", "セビリア・ダービー"],
+    ["athletic", "real-sociedad", "バスク・ダービー"],
+    ["manchester-city", "manchester-united", "マンチェスター・ダービー"],
+    ["arsenal", "tottenham-hotspur", "ノース・ロンドン・ダービー"],
+    ["liverpool", "everton", "マージーサイド・ダービー"],
+    ["liverpool", "manchester-united", "ノース・ウェスト・ダービー"],
+    ["ac-milan", "inter", "ミラノ・ダービー（デルビー・デラ・マドンニーナ）"],
+    ["as-roma", "lazio", "ローマ・ダービー（デルビー・デラ・カピターレ）"],
+    ["juventus", "torino", "トリノ・ダービー（デルビー・デラ・モーレ）"],
+    ["juventus", "inter", "イタリア・ダービー（デルビー・ディタリア）"],
+    ["bayern-munich", "borussia-dortmund", "デア・クラシカー"],
+    ["psg", "marseille", "ル・クラシコ"]
+  ]
+}

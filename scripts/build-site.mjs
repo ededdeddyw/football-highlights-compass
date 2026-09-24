@@ -52,6 +52,17 @@ try { if (existsSync('data/player-info.json')) PLAYER_INFO = JSON.parse(readFile
 // リーグ概要（Wikipedia日本語版導入部）。scripts/fetch-league-info.mjs。code→{jp,title,wikiUrl,extract,updated}。
 let LEAGUE_INFO = {};
 try { if (existsSync('data/league-info.json')) LEAGUE_INFO = JSON.parse(readFileSync('data/league-info.json','utf8')); } catch(e){ console.warn('league-info読込失敗:', e.message); }
+// 有名ダービー/ライバル（data/club-derbies.json）。slug→[{opp, name}] に展開（相互）。クラブページに表示。
+const DERBIES_BY_SLUG = {};
+try {
+  const SLUG2NAME = {}; for(const [n,i] of Object.entries(CLUBS)) SLUG2NAME[i.slug] = n;
+  const dj = existsSync('data/club-derbies.json') ? JSON.parse(readFileSync('data/club-derbies.json','utf8')) : {};
+  for(const [a,b,name] of (dj.derbies||[])){
+    if(!SLUG2NAME[a] || !SLUG2NAME[b]) continue;   // 掲載クラブに無いペアは除外
+    (DERBIES_BY_SLUG[a]=DERBIES_BY_SLUG[a]||[]).push({ opp:b, oppName:SLUG2NAME[b], name });
+    (DERBIES_BY_SLUG[b]=DERBIES_BY_SLUG[b]||[]).push({ opp:a, oppName:SLUG2NAME[a], name });
+  }
+} catch(e){ console.warn('club-derbies読込失敗:', e.message); }
 // Wikipedia概要の折りたたみ節（クラブ/選手共用）。出典＋リンク必須（CC BY-SA）。
 function aboutBlock(name, rec, factsHtml){
   if(!rec || !rec.extract || rec.extract.length < 30) return '';
@@ -543,6 +554,11 @@ function subSideNav(){
     <a href="../guide/suzuki-zion-highlights.html">鈴木彩艶 ハイライトまとめ</a>
     <a href="../guide/minamino-takumi-highlights.html">南野拓実 ハイライトまとめ</a>
     <a href="../guide/doan-ritsu-highlights.html">堂安律 ハイライトまとめ</a>
+  </nav>
+  <nav class="nav-guides" aria-label="選手">
+    <div class="ng-h">👤 日本人選手</div>
+    <a href="../player/">選手プロフィール一覧</a>
+    ${Object.keys(PLAYER_NEWS).length?`<a href="../player/news.html">📰 日本人選手の最新ニュース</a>`:''}
   </nav>
   <nav class="nav-guides nav-wc" aria-label="ワールドカップ26">
     <div class="ng-h">⚽ ワールドカップ26</div>
@@ -1726,6 +1742,11 @@ function buildClub(name, info){
       <p class="clabout-body">${esc(cinfo.extract)}</p>${factLine}
       <p class="stand-note">出典: <a href="${escA(cinfo.wikiUrl)}" target="_blank" rel="noopener">Wikipedia「${esc(cinfo.title)}」</a>（CC BY-SA）。最新の詳細はリンク先で。</p></details></div>`;
   })() : '';
+  // ライバル・ダービー（data/club-derbies.json）。相手クラブページへ相互リンク。
+  const derbies = DERBIES_BY_SLUG[slug] || [];
+  const derbySection = derbies.length ? `<div class="cl-wrap" style="margin-top:20px"><h2 class="lined">ライバル・ダービー</h2>
+    <ul style="list-style:none;margin:8px 0 2px;padding:0">${derbies.map(d=>`<li style="padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px"><b>${esc(d.name)}</b> — <a href="../club/${d.opp}.html">${esc(d.oppName)}</a></li>`).join('')}</ul></div>` : '';
+  if(derbies.length){ cfaq.push({ q:`${name}のライバル（ダービー）は？`, a:`${derbies.map(d=>`${d.oppName}戦（${d.name}）`).join('、')}が知られています。` }); }
   if(cfaq.length) clgraph.push(faqLd(cfaq));
   // titleは検索結果でのピクセル幅切れ防止のためブランド名サフィックスを外し簡潔に（og:titleは従来通り）
   const head = HEAD({ title:`${name} 試合結果・順位・ハイライト動画｜${info.league}`, ogtitle:`${name}｜${info.league} 試合結果・ハイライト`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:clgraph });
@@ -1777,6 +1798,7 @@ function buildClub(name, info){
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
   ${ownerSection}
   ${infoSection}
+  ${derbySection}
   ${newsSection}
   ${related?`<div class="cl-wrap" style="margin-top:20px">${related}</div>`:''}
   ${cfaq.length?`<div class="cl-wrap" style="margin-top:18px">${FAQ_STYLE}${faqBlock(cfaq)}</div>`:''}
@@ -1808,6 +1830,7 @@ function buildClub(name, info){
   ${list}
   ${ownerSection}
   ${infoSection}
+  ${derbySection}
   ${newsSection}
   ${cfaq.length?`${FAQ_STYLE}${faqBlock(cfaq)}`:''}
   ` + FOOTER();
@@ -1962,10 +1985,38 @@ function buildPlayerIndex(){
   ${crumb([{label:'トップ',href:'../'},{label:'選手'}])}
   <h1>選手プロフィール</h1>
   <p class="dek">日本人選手を中心に、ポジション・経歴・プレースタイルをネタバレなしで紹介します。顔写真は権利に配慮し、公式・ライセンス取得後に掲載予定です。</p>
+  ${Object.keys(PLAYER_NEWS).length?`<p style="margin:2px 0 14px"><a href="./news.html" style="font-weight:700">📰 日本人選手の最新ニュースまとめ →</a></p>`:''}
   ${secs}
   ${AD}
   </div></article>` + FOOTER();
   writeFileSync('site/player/index.html', out);
+}
+// 日本人選手の最新ニュースまとめ（全選手のニュースを時系列にマージした「ウォッチ」フィード）。
+// data/player-news.json を使用。結果に触れ得るため上部に注意バナーを置く。
+function buildJpPlayersNews(){
+  const feed = [];
+  for(const p of PLAYERS){ const rec = PLAYER_NEWS[p.slug]; if(!rec||!rec.items) continue;
+    for(const it of rec.items.slice(0,4)) feed.push({ ...it, player:p.name, slug:p.slug, club:p.club||'' }); }
+  feed.sort((a,b)=>(b.d||'').localeCompare(a.d||''));
+  const top = feed.slice(0,60);
+  const url=`${DOMAIN}/player/news.html`;
+  const rel = iso => { if(!iso) return ''; const dd=Math.floor((Date.now()-new Date(iso).getTime())/86400000); if(isNaN(dd))return''; return dd<=0?'今日':dd===1?'昨日':dd<7?`${dd}日前`:dd<30?`${Math.floor(dd/7)}週間前`:`${Math.floor(dd/30)}か月前`; };
+  const rows = top.map(it=>`<li class="jpn-i"><a class="jpn-t" href="${escA(it.u)}" target="_blank" rel="noopener nofollow">${esc(it.t)}</a><div class="jpn-m"><a class="jpn-p" href="./${it.slug}.html">${esc(it.player)}</a>${it.club?`<span class="jpn-c">${esc(it.club)}</span>`:''}<span class="jpn-s">${esc(it.src||'')}${it.d?` ・ ${rel(it.d)}`:''}</span></div></li>`).join('');
+  const css = `<style>.jpn-warn{font-size:12.5px;font-weight:600;color:#b45309;background:#fef3c7;border-radius:8px;padding:8px 12px;margin:10px 0 16px}:root:not([data-theme="light"]) .jpn-warn{background:#3a2c07;color:#fcd34d}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .jpn-warn{background:#3a2c07;color:#fcd34d}}:root[data-theme="dark"] .jpn-warn{background:#3a2c07;color:#fcd34d}.jpn-list{list-style:none;margin:0;padding:0}.jpn-i{padding:12px 2px;border-bottom:1px solid var(--line)}.jpn-t{color:var(--accent);text-decoration:none;font-weight:700;font-size:15px;line-height:1.5}.jpn-t:hover{text-decoration:underline}.jpn-m{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;margin-top:5px;font-size:12px}.jpn-p{color:var(--ink);font-weight:700;text-decoration:none}.jpn-p:hover{text-decoration:underline}.jpn-c{color:var(--muted)}.jpn-s{color:var(--muted)}</style>`;
+  const desc = `久保建英・三笘薫ら日本人サッカー選手の最新ニュースをまとめて掲載。各選手の直近の話題を一覧で、出典元へすぐ移動できます。`.slice(0,120);
+  const upd = TODAY;
+  const head = HEAD({ title:`日本人選手 最新ニュースまとめ｜Football Highlights Compass`, ogtitle:`日本人選手 最新ニュースまとめ`, desc, url, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:[crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:'最新ニュース',url}])] });
+  const out = head + TOPBAR + `<article class="post entity"><div class="cl-wrap">
+  ${crumb([{label:'トップ',href:'../'},{label:'選手',href:'./'},{label:'最新ニュース'}])}
+  ${css}
+  <h1>日本人選手 最新ニュース</h1>
+  <p class="dek">海外組・Jリーグの日本人選手の直近ニュースをまとめました（新しい順）。見出しは各媒体の外部サイトへ移動します。</p>
+  <div class="jpn-warn">⚠️ 見出しに試合結果・スコアが含まれる場合があります。ネタバレを避けたい方はご注意ください。</div>
+  <ul class="jpn-list">${rows}</ul>
+  <p class="stand-note">出典: Google ニュース（各媒体の見出し・リンク）。更新: ${upd}。毎日自動更新。</p>
+  ${AD}
+  </div></article>` + FOOTER();
+  writeFileSync('site/player/news.html', out);
 }
 
 // ========================= 集客記事（ガイド）の定義（エンティティ生成より前に。関連ガイドの文脈リンク用） =========================
@@ -2060,7 +2111,7 @@ function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.lengt
 let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
 for(const [name,info] of Object.entries(CLUBS)){ buildClub(name,info); ncl++; }
-let npl=0; for(const p of PLAYERS){ buildPlayer(p); npl++; } if(PLAYERS.length) buildPlayerIndex();
+let npl=0; for(const p of PLAYERS){ buildPlayer(p); npl++; } if(PLAYERS.length){ buildPlayerIndex(); if(Object.keys(PLAYER_NEWS).length) buildJpPlayersNews(); }
 
 // ========================= 欧州リーグ ハブページ =========================
 mkdirSync('site/league', { recursive:true });
@@ -2608,7 +2659,7 @@ for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmo
 for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
 for(const m of (typeof matchdayUrls!=='undefined'?matchdayUrls:[])){ if(!m.played) continue; sm += `  <url><loc>${m.url}</loc><lastmod>${(m.date||'').slice(0,10)||TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
 for(const p of new Set(Object.values(ENTITY_PAGES))) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
-if(PLAYERS.length){ sm += `  <url><loc>${DOMAIN}/player/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; for(const p of PLAYERS) sm += `  <url><loc>${DOMAIN}/player/${p.slug}.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
+if(PLAYERS.length){ sm += `  <url><loc>${DOMAIN}/player/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; if(Object.keys(PLAYER_NEWS).length) sm += `  <url><loc>${DOMAIN}/player/news.html</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>\n`; for(const p of PLAYERS) sm += `  <url><loc>${DOMAIN}/player/${p.slug}.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
 const matchById = new Map(data.map(m=>[m.id,m]));
 const lastmodOf = id => { const mm=matchById.get(id); const s=mm&&schedFor(mm); return ((s?.koUTC||s?.dateLocal||'').slice(0,10)) || TODAY; };
 for(const s of slugs){
