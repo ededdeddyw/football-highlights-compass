@@ -23,17 +23,18 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
 
-      - name: クラブ・選手概要取得（Wikipedia/Wikidata）
+      - name: クラブ・選手・リーグ概要取得（Wikipedia/Wikidata）
         run: |
           node scripts/fetch-club-info.mjs
           node scripts/fetch-player-info.mjs
+          node scripts/fetch-league-info.mjs
 
       - name: 変化があればコミット
         id: commit
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/club-info.json data/player-info.json
+          git add data/club-info.json data/player-info.json data/league-info.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"; echo "変化なし。"; exit 0
           fi
