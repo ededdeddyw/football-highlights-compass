@@ -241,6 +241,19 @@ function parseTitle(title) {
 // ---- 実行 ----
 const vids = await channelVideos();
 console.log(`配信元(${HANDLE}) 投稿取得: ${vids.length}本`);
+
+// ---- 診断モード：このチャンネルの「ハイライト動画」を大会別に一覧（未対応＝(未対応)に集約）。網羅拡張の材料。 ----
+if (args.includes('--diagnose') || process.env.DIAGNOSE) {
+  const hi = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
+    .filter(v => nsp(v.author || '').includes(AUTHOR_TOKEN) && v.p.isHi);
+  const byLg = {}; for (const v of hi) { const lg = v.p.league || '(未対応)'; (byLg[lg] = byLg[lg] || []).push(v.title); }
+  console.log(`\n=== [診断] ${HANDLE} のハイライト動画（${hi.length}本）を大会別に表示 ===`);
+  for (const [lg, ts] of Object.entries(byLg).sort((a, b) => b[1].length - a[1].length)) {
+    console.log(`\n■ ${lg}（${ts.length}本）`);
+    ts.slice(0, 20).forEach(t => console.log('   ' + t));
+  }
+  process.exit(0);
+}
 const parsed = vids.map(v => ({ ...v, p: parseTitle(v.title) }))
   .filter(v => nsp(v.author || '').includes(AUTHOR_TOKEN))   // 配信元チャンネル自身の投稿だけ（ページ内の関連動画等を除外）
   .filter(v => v.p.league === LEAGUE_ARG && v.p.isHi && v.p.home && v.p.away && (v.p.seasonStart == null || v.p.seasonStart === CUR_START));

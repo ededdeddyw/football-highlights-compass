@@ -1,0 +1,22 @@
+name: Diagnose channels (配信チャンネルの大会診断)
+
+# 各配信チャンネル（DAZN/U-NEXT/WOWOW）にどんな大会のハイライトがあるかを一覧する。
+# 「(未対応)」に出た大会が、これから網羅を広げる候補。手動実行のみ・コミットもデプロイもしない。
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: DAZN Japan
+        run: node scripts/fetch-unext-pl.mjs --channel=@DAZNJapan --author=dazn --diagnose || true
+      - name: U-NEXT
+        run: node scripts/fetch-unext-pl.mjs --channel=@UNEXT_football --author=unext --diagnose || true
+      - name: WOWOW
+        run: node scripts/fetch-unext-pl.mjs --channel=@wowowsoccer --author=wowow --diagnose || true
