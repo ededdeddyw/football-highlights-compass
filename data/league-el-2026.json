@@ -1,0 +1,52 @@
+{
+  "code": "el",
+  "jp": "UEFAヨーロッパリーグ",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "アンデルレヒト",
+      "away": "リヨン",
+      "homeSlug": "anderlecht",
+      "awaySlug": "olympique-lyonnais",
+      "finished": true,
+      "score": "",
+      "videoId": "PGusGVE5uDs"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "クリスタル・パレス",
+      "away": "レフ・ポズナン",
+      "homeSlug": "crystal-palace",
+      "awaySlug": "x-レフポズナン",
+      "finished": true,
+      "score": "",
+      "videoId": "ooOcXZ9Z1AM"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "ミラン",
+      "away": "ベンフィカ",
+      "homeSlug": "ac-milan",
+      "awaySlug": "benfica",
+      "finished": true,
+      "score": "",
+      "videoId": "8f6-pMmF2eY"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "レアル・ソシエダ",
+      "away": "ボーンマス",
+      "homeSlug": "real-sociedad",
+      "awaySlug": "bournemouth",
+      "finished": true,
+      "score": "",
+      "videoId": "p4cNKngs6hg"
+    }
+  ]
+}

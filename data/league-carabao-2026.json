@@ -1,0 +1,63 @@
+{
+  "code": "carabao",
+  "jp": "EFLカップ（カラバオ）",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "イプスウィッチ",
+      "away": "アーセナル",
+      "homeSlug": "x-イプスウィッチ",
+      "awaySlug": "arsenal",
+      "finished": true,
+      "score": "",
+      "videoId": "6vdHRVJFI1A"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "コヴェントリー",
+      "away": "アストン・ヴィラ",
+      "homeSlug": "x-コヴェントリー",
+      "awaySlug": "aston-villa",
+      "finished": true,
+      "score": "",
+      "videoId": "nTm2mcveXRQ"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "マンチェスター・シティ",
+      "away": "ノリッジ",
+      "homeSlug": "manchester-city",
+      "awaySlug": "x-ノリッジ",
+      "finished": true,
+      "score": "",
+      "videoId": "JLP-ohfw_10"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "マンチェスター・ユナイテッド",
+      "away": "ブライトン",
+      "homeSlug": "manchester-united",
+      "awaySlug": "brighton-and-hove-albion",
+      "finished": true,
+      "score": "",
+      "videoId": "p-fXrbm_QyY"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "リヴァプール",
+      "away": "トッテナム",
+      "homeSlug": "x-リヴァプール",
+      "awaySlug": "tottenham-hotspur",
+      "finished": true,
+      "score": "",
+      "videoId": "jbO3C2mXJPg"
+    }
+  ]
+}

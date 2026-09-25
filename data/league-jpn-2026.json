@@ -1,0 +1,19 @@
+{
+  "code": "jpn",
+  "jp": "日本代表",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "日本",
+      "away": "ウルグアイ",
+      "homeSlug": "japan",
+      "awaySlug": "uruguay",
+      "finished": true,
+      "score": "",
+      "videoId": "HFZ6-xk4-I4"
+    }
+  ]
+}

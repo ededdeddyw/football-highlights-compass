@@ -282,6 +282,17 @@
     {
       "matchday": 8,
       "dateUTC": "",
+      "home": "ファジアーノ岡山",
+      "away": "京都サンガF.C.",
+      "homeSlug": "okayama",
+      "awaySlug": "kyoto-sanga",
+      "finished": true,
+      "score": "",
+      "videoId": "Z3nuISG-RG0"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
       "home": "浦和レッズ",
       "away": "東京ヴェルディ",
       "homeSlug": "urawa",

@@ -1,0 +1,74 @@
+{
+  "code": "acl",
+  "jp": "AFCチャンピオンズリーグ",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "ガンバ大阪",
+      "away": "コンアン・ハノイ",
+      "homeSlug": "gamba-osaka",
+      "awaySlug": "x-コンアンハノイ",
+      "finished": true,
+      "score": "",
+      "videoId": "24WdH0_dp5U"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "ポートFC",
+      "away": "ヴィッセル神戸",
+      "homeSlug": "x-ポートfc",
+      "awaySlug": "kobe",
+      "finished": true,
+      "score": "",
+      "videoId": "BaOL6VBYTWQ"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "鹿島アントラーズ",
+      "away": "ニューカッスル・ジェッツ",
+      "homeSlug": "kashima",
+      "awaySlug": "newcastle-united",
+      "finished": true,
+      "score": "",
+      "videoId": "WqssgzDpZp4"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "全北",
+      "away": "柏レイソル",
+      "homeSlug": "x-全北",
+      "awaySlug": "kashiwa",
+      "finished": true,
+      "score": "",
+      "videoId": "yihEp4zItCw"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "大田ハナ・シチズン",
+      "away": "京都サンガF.C.",
+      "homeSlug": "x-大田ハナシチズン",
+      "awaySlug": "kyoto-sanga",
+      "finished": true,
+      "score": "",
+      "videoId": "UH188-KLJ1U"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "町田ゼルビア",
+      "away": "PRKスヴァイリエン",
+      "homeSlug": "machida",
+      "awaySlug": "x-prkスヴァイリエ",
+      "finished": true,
+      "score": "",
+      "videoId": "BjVBsUcJM9c"
+    }
+  ]
+}
