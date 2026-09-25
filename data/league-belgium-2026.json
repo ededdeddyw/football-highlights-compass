@@ -5,6 +5,17 @@
   "updated": "",
   "matches": [
     {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "アンデルレヒト",
+      "away": "ヘンク",
+      "homeSlug": "anderlecht",
+      "awaySlug": "genk",
+      "finished": true,
+      "score": "",
+      "videoId": "Cc5W5zeyiB4"
+    },
+    {
       "matchday": 6,
       "dateUTC": "",
       "home": "クルブ・ブルッヘ",
@@ -20,7 +31,7 @@
       "dateUTC": "",
       "home": "ベフェレン",
       "away": "シント=トロイデン",
-      "homeSlug": "x-ベフェレン",
+      "homeSlug": "beveren",
       "awaySlug": "sint-truiden",
       "finished": true,
       "score": "",
@@ -36,6 +47,17 @@
       "finished": true,
       "score": "",
       "videoId": "mypr0xrRQyQ"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "メヘレン",
+      "away": "アンデルレヒト",
+      "homeSlug": "mechelen",
+      "awaySlug": "anderlecht",
+      "finished": true,
+      "score": "",
+      "videoId": "LETLvacxCcg"
     },
     {
       "matchday": 7,

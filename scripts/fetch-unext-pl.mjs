@@ -81,6 +81,7 @@ const J1_SLUGS = [
   ['シャルルロワ','charleroi'],['OHルーヴェン','oh-leuven'],['ルーヴェン','oh-leuven'],
   ['KVメヘレン','mechelen'],['メヘレン','mechelen'],['デンデル','dender'],['ラ・ルヴィエール','la-louviere'],
   ['ズルテ・ワレヘム','zulte-waregem'],['ズルテ・ヴァレヘム','zulte-waregem'],['RWDモランベーク','rwdm'],
+  ['ベフェレン','beveren'],['SKベフェレン','beveren'],
 ];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
@@ -238,15 +239,20 @@ if (parsed.length === 0 && vids.length) {
 // ---- 動画ファースト（日程APIが無いリーグ：J1等）：タイトルから試合を生成して data を作る ----
 if (VIDEO_FIRST.has(LEAGUE_ARG)) {
   const slugFor = jp => { const n = nsp(jp); let best = 'x-' + n.slice(0, 10), bl = 0; for (const [k, v] of J1_SLUGS) { const kn = nsp(k); if (kn && n.includes(kn) && kn.length > bl) { best = v; bl = kn.length; } } return best; };
-  const byKey = new Map();   // home|away|md → 試合（同一カードは最初の1本）
+  const path = `data/league-${LEAGUE_ARG}-${CUR_START}.json`;
+  const byKey = new Map();   // homeSlug|awaySlug|md → 試合
+  // 蓄積型：まず既存データを読み込む。動画ファーストは配信元チャンネルの「直近ウィンドウ」しか取れないため、
+  // 毎回作り直すと古い試合が抜け落ちて減っていく。過去分を保持し、新規のみ足して積み上げる（サイトが育つ）。
+  try { for (const m of (JSON.parse(readFileSync(path, 'utf8')).matches || [])) { byKey.set(`${m.homeSlug}|${m.awaySlug}|${m.matchday || ''}`, m); } } catch {}
+  const before = byKey.size;
   for (const v of parsed) {
     const hs = slugFor(v.p.home), as = slugFor(v.p.away);
     const key = `${hs}|${as}|${v.p.md || ''}`;
-    if (byKey.has(key)) continue;
-    byKey.set(key, { matchday: v.p.md, dateUTC: '', home: v.p.home, away: v.p.away, homeSlug: hs, awaySlug: as, finished: true, score: '', videoId: v.id });
+    if (!byKey.has(key)) byKey.set(key, { matchday: v.p.md, dateUTC: '', home: v.p.home, away: v.p.away, homeSlug: hs, awaySlug: as, finished: true, score: '', videoId: v.id });
+    else { const ex = byKey.get(key); if (v.id && !ex.videoId) ex.videoId = v.id; }   // 既存は保持、videoId未設定なら補完
   }
+  const added = byKey.size - before;
   const matches = [...byKey.values()].sort((a, b) => (a.matchday || 0) - (b.matchday || 0) || String(a.home).localeCompare(String(b.home), 'ja'));
-  const path = `data/league-${LEAGUE_ARG}-${CUR_START}.json`;
   // 安全ガード：取得0件のとき既存の非空データを空で上書きしない（YouTubeがconsent画面等を返した場合の誤消去を防ぐ）。
   // 意図的に空へ戻す場合だけ --force を付ける。
   if (matches.length === 0 && !FORCE) {
@@ -259,7 +265,7 @@ if (VIDEO_FIRST.has(LEAGUE_ARG)) {
   }
   if (!DRY) writeFileSync(path, JSON.stringify({ code: LEAGUE_ARG, jp: LG_LABEL, season: String(CUR_START), updated: '', matches }, null, 2) + '\n');
   const unslugged = matches.filter(m => m.homeSlug.startsWith('x-') || m.awaySlug.startsWith('x-'));
-  console.log(`${path}: ${matches.length}試合を生成（動画ファースト）`);
+  console.log(`${path}: ${matches.length}試合（動画ファースト・蓄積）／今回新規 ${added}件・既存 ${before}件`);
   if (unslugged.length) { console.log(`  ⚠ スラッグ未登録のクラブを含む試合 ${unslugged.length}件（J1_SLUGS に追記推奨）:`); [...new Set(unslugged.flatMap(m => [m.home, m.away]).filter(n => slugFor(n).startsWith('x-')))].forEach(n => console.log(`     ${n}`)); }
   console.log(DRY ? '\n(--dry-run: 書き込みなし)' : '\n書き込み完了。git add/commit/push で本番反映されます。');
   process.exit(0);
