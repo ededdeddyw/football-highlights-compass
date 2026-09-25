@@ -188,12 +188,26 @@ const KO_SORT_DATE = { r32:'2026-06-30', r16:'2026-07-05', qf:'2026-07-10', sf:'
 // 実効日付：スケジュール日付を優先、無ければ決勝Tの合成日付
 function effDate(m){ const s=schedFor(m); const d=(s&&(s.koUTC||s.dateLocal)||'').slice(0,10); if(d) return d; if(m&&m.id&&KO_ROUND_BY_VID.has(m.id)) return KO_SORT_DATE[KO_ROUND_BY_VID.get(m.id)]||''; return ''; }
 // DAZN訴求CTA。アフィリリンク設定時は rel="sponsored"＋「PR」表記（ステマ規制対応）。未設定時は公式リンク(nofollow)。
-function daznCta(context){
-  const aff = (AFFILIATE.daznUrl||'').trim();
-  const url = aff || 'https://www.dazn.com/ja-JP/';
+function daznCta(context){ return streamCta('_dazn', context); }
+// 配信サービス（日本で当該大会を配信＝視聴導線）。アフィリンクがあれば成果リンク＋PR、無ければ公式リンク(nofollow)。
+const STREAM = {
+  dazn:  { name:'DAZN',   key:'daznUrl',  official:'https://www.dazn.com/ja-JP/' },
+  unext: { name:'U-NEXT', key:'unextUrl', official:'https://video.unext.jp/' },
+  wowow: { name:'WOWOW',  key:'wowowUrl', official:'https://www.wowow.co.jp/' },
+};
+// 大会コード → 日本での主要配信サービス。
+const LEAGUE_SERVICE = { pl:'unext', laliga:'unext', eredivisie:'unext', cl:'wowow', sa:'dazn', bl:'dazn', ligue1:'dazn', j1:'dazn', j2:'dazn', j3:'dazn', belgium:'dazn', nations:'dazn' };
+// クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
+let _label2code = null;
+function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
+function streamCta(codeOrService, context){
+  const svcId = codeOrService==='_dazn' ? 'dazn' : (LEAGUE_SERVICE[codeOrService] || 'dazn');
+  const s = STREAM[svcId];
+  const aff = (AFFILIATE[s.key]||'').trim();
+  const url = aff || s.official;
   const rel = aff ? 'sponsored nofollow noopener' : 'nofollow noopener';
   const pr = aff ? '<span class="dc-pr">PR</span>' : '';
-  return `<aside class="dazn-cta">${pr}<div class="dc-txt"><b>フル・見逃し配信を観るなら</b><span>${esc(context||'ハイライトの先は、DAZNで全試合フル＆見逃し配信。')}</span></div><a class="dc-btn" href="${url}" target="_blank" rel="${rel}">▶ DAZNで観る</a></aside>`;
+  return `<aside class="dazn-cta">${pr}<div class="dc-txt"><b>フル・見逃し配信を観るなら</b><span>${esc(context||`ハイライトの先は、${s.name}で全試合フル＆見逃し配信。`)}</span></div><a class="dc-btn" href="${url}" target="_blank" rel="${rel}">▶ ${s.name}で観る</a></aside>`;
 }
 
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
@@ -1669,7 +1683,7 @@ function buildCountry(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<h2 class="lined">${esc(name)}代表の歴史とW杯の歩み</h2><p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,false)}
     </div>
-    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}${clubBridge}</aside>
+    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${streamCta(labelToCode(info.league)||'_dazn')}${related}${clubBridge}</aside>
   </div>
   ${AD}
   ${list}
@@ -1793,6 +1807,7 @@ function buildClub(name, info){
   ${richBody}
   ${AD}
   ${list?`<div class="cl-wrap" style="margin-top:26px">${list}</div>`:''}
+  <div class="cl-wrap" style="margin-top:18px">${streamCta(labelToCode(info.league)||'_dazn')}</div>
   ${ownerSection}
   ${infoSection}
   ${derbySection}
@@ -1821,7 +1836,7 @@ function buildClub(name, info){
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<p>${esc(SECTIONS[name])}</p>`:''}</div>
       ${deepSection(name,true)}
     </div>
-    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${daznCta()}${related}</aside>
+    <aside class="ent-side">${factHtml}${guideLinksFor(name)}${streamCta(labelToCode(info.league)||'_dazn')}${related}</aside>
   </div>
   ${AD}
   ${list}
@@ -2197,7 +2212,7 @@ function buildLeague(h){
   ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
-  ${daznCta(h.name+'のフル・見逃し配信もDAZNで。')}
+  ${streamCta(h.code)}
   ${AD}
   ${ms.length?collapsible(`${esc(h.name)}の公式ハイライト（${ms.length}試合）`, cardGrid(ms)):''}
   ${aboutBlock(h.name, LEAGUE_INFO[h.code])}
@@ -2283,7 +2298,7 @@ try {
   <p class="mdnote">※ 日付は日本時間。スコアはネタバレ防止で既定は非表示です。公式ハイライトは公開・権利元の映像のみを掲載しています。</p>
   ${nav}
   ${L.hub?`<p style="margin:10px 2px 0"><a href="../${L.hub}">▶ ${esc(L.jp)}の順位表・得点ランキング・全節</a></p>`:''}
-  ${daznCta(`${L.jp}のフル・見逃し配信はDAZNで。`)}
+  ${streamCta(L.code)}
   ${AD}
   ${faqBlock(mfaq)}
   ` + FOOTER() + NAVJS + `</body></html>`;

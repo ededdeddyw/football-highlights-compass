@@ -1,4 +1,6 @@
 {
-  "_note": "アフィリエイトリンク設定。daznUrl にASP（A8.net等）で取得した成果リンクを入れる。空の間は通常のDAZN公式リンク(nofollow)にフォールバックし、PR表記も出さない。",
-  "daznUrl": ""
+  "_note": "配信サービスのアフィリエイトリンク。各URLにASP（A8.net/バリューコマース等）で取得した成果リンクを入れる。空の間は各社公式リンク(nofollow)にフォールバックし、PR表記も出さない。大会別に最適なサービスを出し分ける（build-site.mjs の LEAGUE_SERVICE）。",
+  "daznUrl": "",
+  "unextUrl": "",
+  "wowowUrl": ""
 }
