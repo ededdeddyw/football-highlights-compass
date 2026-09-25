@@ -36,6 +36,7 @@
 //   実行後: git add data/league-pl-*.json && git commit && git push で本番に反映されます。
 // ============================================================================
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { CLUBS, COUNTRIES } from './entities.mjs';   // 欧州クラブ・代表の日本語名→slug をスラッグ解決に流用（EL/ACL/代表戦など）
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry-run');
@@ -45,9 +46,9 @@ const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった�
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 // 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
-const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ', belgium:'ベルギー・プロリーグ', nations:'UEFAネーションズリーグ' };
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ', belgium:'ベルギー・プロリーグ', nations:'UEFAネーションズリーグ', el:'UEFAヨーロッパリーグ', conference:'UEFAカンファレンスリーグ', acl:'AFCチャンピオンズリーグ', jpn:'日本代表', carabao:'EFLカップ（カラバオ）' };
 // 動画ファースト（日程APIが無いリーグ）：DAZN等のハイライト・タイトルから試合を生成する。
-const VIDEO_FIRST = new Set(['j1', 'j2', 'j3', 'belgium', 'nations']);
+const VIDEO_FIRST = new Set(['j1', 'j2', 'j3', 'belgium', 'nations', 'el', 'conference', 'acl', 'jpn', 'carabao']);
 // Jリーグ（J1/J2/J3）クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
 // 全クラブを1表にまとめる（tier非依存）。J2/J3の試合ハイライトでも同じ表からスラッグを付ける。
 const J1_SLUGS = [
@@ -95,6 +96,13 @@ const J1_SLUGS = [
   ['イスラエル','israel'],['コソボ','kosovo'],['アルメニア','armenia'],['アゼルバイジャン','azerbaijan'],['キプロス','cyprus'],
   ['ルクセンブルク','luxembourg'],['カザフスタン','kazakhstan'],['ベラルーシ','belarus'],['エストニア','estonia'],['ラトビア','latvia'],['リトアニア','lithuania'],['モルドバ','moldova'],['マルタ','malta'],
 ];
+// EL/ACL/代表戦など欧州クラブ・各国代表を含む大会のため、CLUBS(欧州クラブ)とCOUNTRIES(代表)の日本語名→slugも候補に統合。
+// J1_SLUGS を先頭に置き、同長キーの衝突時は明示定義(J1_SLUGS)を優先する。
+const ALL_SLUGS = [
+  ...J1_SLUGS,
+  ...Object.entries(CLUBS).map(([name, i]) => [name, i.slug]),
+  ...Object.entries(COUNTRIES).map(([name, i]) => [name, i.slug]),
+];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
 //   PL/ラ・リーガ/エールディビジ: U-NEXT（@UNEXT_football）
@@ -112,6 +120,11 @@ const CHANNELS = {
   j3:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ3（DAZN Japan公式）
   belgium:    { handle: '@DAZNJapan',      author: 'dazn' },   // ベルギー・プロリーグ（DAZN Japan公式）
   nations:    { handle: '@DAZNJapan',      author: 'dazn' },   // UEFAネーションズリーグ（DAZN Japan公式・代表）
+  el:         { handle: '@wowowsoccer',    author: 'wowow' },  // UEFAヨーロッパリーグ（WOWOW）
+  conference: { handle: '@wowowsoccer',    author: 'wowow' },  // UEFAカンファレンスリーグ（WOWOW）
+  acl:        { handle: '@DAZNJapan',      author: 'dazn' },   // AFCチャンピオンズリーグ（DAZN・J-clubs）
+  jpn:        { handle: '@DAZNJapan',      author: 'dazn' },   // 日本代表（キリンカップ等・DAZN）
+  carabao:    { handle: '@DAZNJapan',      author: 'dazn' },   // EFLカップ（カラバオ・DAZN）
 };
 const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
 const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
@@ -203,7 +216,12 @@ async function channelVideos() {
 // ---- タイトル解析：実タイトル例「【<煽り文>｜HOME v AWAY｜ショートハイライト】プレミアリーグ2026/27 第N節」----
 // U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
 function detectLeague(t) {
-  if (/女子|women/i.test(t)) return null;   // 女子CL等は対象外（男子リーグの日程表に無い）
+  if (/女子|women|WSL|なでしこ/i.test(t)) return null;   // 女子は対象外
+  if (/キリンチャレンジカップ|キリンカップ/i.test(t)) return 'jpn';         // 日本代表（キリンカップ）
+  if (/AFCチャンピオンズ|ACLエリート|AFC\s*champions/i.test(t)) return 'acl'; // AFC-CL（※UEFA CLより前）
+  if (/ヨーロッパリーグ|europa\s*league/i.test(t)) return 'el';             // UEFAヨーロッパリーグ
+  if (/カンファレンスリーグ|conference\s*league/i.test(t)) return 'conference'; // UEFAカンファレンスリーグ
+  if (/カラバオ|EFLカップ/i.test(t)) return 'carabao';                      // EFLカップ（カラバオ）
   if (/ネーションズリーグ|nations\s*league/i.test(t)) return 'nations';   // UEFAネーションズリーグ（代表・DAZN Japan）
   if (/明治安田J1|J1リーグ|J1\s*LEAGUE/i.test(t)) return 'j1';   // JリーグJ1（DAZN Japan）
   if (/明治安田J2|J2リーグ|J2\s*LEAGUE/i.test(t)) return 'j2';   // JリーグJ2（DAZN Japan）
@@ -268,7 +286,7 @@ if (parsed.length === 0 && vids.length) {
 
 // ---- 動画ファースト（日程APIが無いリーグ：J1等）：タイトルから試合を生成して data を作る ----
 if (VIDEO_FIRST.has(LEAGUE_ARG)) {
-  const slugFor = jp => { const n = nsp(jp); let best = 'x-' + n.slice(0, 10), bl = 0; for (const [k, v] of J1_SLUGS) { const kn = nsp(k); if (kn && n.includes(kn) && kn.length > bl) { best = v; bl = kn.length; } } return best; };
+  const slugFor = jp => { const n = nsp(jp); let best = 'x-' + n.slice(0, 10), bl = 0; for (const [k, v] of ALL_SLUGS) { const kn = nsp(k); if (kn && n.includes(kn) && kn.length > bl) { best = v; bl = kn.length; } } return best; };
   const path = `data/league-${LEAGUE_ARG}-${CUR_START}.json`;
   const byKey = new Map();   // homeSlug|awaySlug|md → 試合
   // 蓄積型：まず既存データを読み込む。動画ファーストは配信元チャンネルの「直近ウィンドウ」しか取れないため、

@@ -34,7 +34,7 @@ jobs:
 
       - name: 全リーグのハイライト取得
         run: |
-          for lg in pl laliga sa bl ligue1 cl eredivisie j1 j2 belgium nations; do
+          for lg in pl laliga sa bl ligue1 cl eredivisie j1 j2 belgium nations el conference acl jpn carabao; do
             echo "== $lg =="
             node scripts/fetch-unext-pl.mjs --league=$lg || echo "  ($lg はスキップ/失敗)"
           done
