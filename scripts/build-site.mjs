@@ -196,7 +196,7 @@ const STREAM = {
   wowow: { name:'WOWOW',  key:'wowowUrl', official:'https://www.wowow.co.jp/' },
 };
 // 大会コード → 日本での主要配信サービス。
-const LEAGUE_SERVICE = { pl:'unext', laliga:'unext', eredivisie:'unext', cl:'wowow', sa:'dazn', bl:'dazn', ligue1:'dazn', j1:'dazn', j2:'dazn', j3:'dazn', belgium:'dazn', nations:'dazn' };
+const LEAGUE_SERVICE = { pl:'unext', laliga:'unext', eredivisie:'unext', cl:'wowow', el:'wowow', conference:'wowow', sa:'dazn', bl:'dazn', ligue1:'dazn', j1:'dazn', j2:'dazn', j3:'dazn', belgium:'dazn', nations:'dazn', acl:'dazn', jpn:'dazn', carabao:'dazn' };
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -243,6 +243,11 @@ const LEAGUE_HUBS = [
   { name:'J3リーグ', slug:'j3-league', code:'j3', clubLabel:'J3リーグ', country:'日本', blurb:'明治安田J3リーグ（日本3部）。DAZN公式ハイライトを掲載します。' },
   { name:'ベルギー・プロリーグ', slug:'belgian-pro-league', code:'belgium', clubLabel:'ベルギー・プロリーグ', country:'ベルギー', blurb:'ベルギー・プロリーグ（ジュピラー・プロリーグ）。伊東純也ら日本人選手が多数在籍。DAZN公式ハイライトを掲載します。' },
   { name:'UEFAネーションズリーグ', slug:'nations-league', code:'nations', clubLabel:'UEFAネーションズリーグ', country:'ヨーロッパ', blurb:'UEFAネーションズリーグ（欧州各国代表）。DAZN公式ハイライトを掲載します。' },
+  { name:'UEFAヨーロッパリーグ', slug:'europa-league', code:'el', clubLabel:'UEFAヨーロッパリーグ', country:'ヨーロッパ', blurb:'UEFAヨーロッパリーグ（欧州2番手のクラブ大会）。久保建英ら日本人選手も出場。WOWOW公式ハイライトを掲載します。' },
+  { name:'UEFAカンファレンスリーグ', slug:'conference-league', code:'conference', clubLabel:'UEFAカンファレンスリーグ', country:'ヨーロッパ', blurb:'UEFAカンファレンスリーグ（欧州3番手のクラブ大会）。WOWOW公式ハイライトを掲載します。' },
+  { name:'AFCチャンピオンズリーグ', slug:'afc-champions-league', code:'acl', clubLabel:'AFCチャンピオンズリーグ', country:'アジア', blurb:'AFCチャンピオンズリーグ（アジア王者決定戦）。Jリーグ勢が出場。DAZN公式ハイライトを掲載します。' },
+  { name:'日本代表', slug:'japan-national-team', code:'jpn', clubLabel:'日本代表', country:'日本', blurb:'日本代表（キリンカップ・国際親善試合）。DAZN公式ハイライトを掲載します。' },
+  { name:'EFLカップ（カラバオ）', slug:'carabao-cup', code:'carabao', clubLabel:'EFLカップ（カラバオ）', country:'イングランド', blurb:'EFLカップ（カラバオカップ）。イングランドのカップ戦。DAZN公式ハイライトを掲載します。' },
 ];
 // リーグJSONに「結果確定済み（スコア入り）」の試合があるコード集合。順位表を出せる＝ハブを建てる根拠にする。
 // （byTeamの旧試合が無いPLも、league-pl-*.json に結果があればハブを生成できるようにする）
@@ -1206,6 +1211,11 @@ const LEAGUE_META = {
   j3:     { jp: 'J3リーグ',       hub: 'league/j3-league.html' },
   belgium:{ jp: 'ベルギー・プロリーグ', hub: 'league/belgian-pro-league.html' },
   nations:{ jp: 'UEFAネーションズリーグ', hub: 'league/nations-league.html' },
+  el:     { jp: 'UEFAヨーロッパリーグ', hub: 'league/europa-league.html' },
+  conference:{ jp: 'UEFAカンファレンスリーグ', hub: 'league/conference-league.html' },
+  acl:    { jp: 'AFCチャンピオンズリーグ', hub: 'league/afc-champions-league.html' },
+  jpn:    { jp: '日本代表', hub: 'league/japan-national-team.html' },
+  carabao:{ jp: 'EFLカップ（カラバオ）', hub: 'league/carabao-cup.html' },
 };
 const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
@@ -2202,7 +2212,7 @@ function buildLeague(h){
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
-  <p class="dek">${esc(h.blurb)}${(h.code==='cl'||h.code==='nations')?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  <p class="dek">${esc(h.blurb)}${['cl','nations','el','conference','acl','jpn','carabao'].includes(h.code)?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
   ${scorerBlock}
