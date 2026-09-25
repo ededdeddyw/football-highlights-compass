@@ -103,6 +103,9 @@ const CHANNELS = {
   pl:         { handle: '@UNEXT_football', author: 'unext' },
   laliga:     { handle: '@UNEXT_football', author: 'unext' },
   eredivisie: { handle: '@UNEXT_football', author: 'unext' },
+  sa:         { handle: '@DAZNJapan',      author: 'dazn' },   // セリエA（DAZN Japanが配信・ハイライト投稿）
+  bl:         { handle: '@DAZNJapan',      author: 'dazn' },   // ブンデスリーガ（DAZN Japan）
+  ligue1:     { handle: '@DAZNJapan',      author: 'dazn' },   // リーグアン（DAZN Japan）
   cl:         { handle: '@wowowsoccer',    author: 'wowow' },
   j1:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ1（DAZN Japan公式）
   j2:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ2（DAZN Japan公式）
