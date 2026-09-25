@@ -84,6 +84,16 @@ const J1_SLUGS = [
   ['KVメヘレン','mechelen'],['メヘレン','mechelen'],['デンデル','dender'],['ラ・ルヴィエール','la-louviere'],
   ['ズルテ・ワレヘム','zulte-waregem'],['ズルテ・ヴァレヘム','zulte-waregem'],['RWDモランベーク','rwdm'],
   ['ベフェレン','beveren'],['SKベフェレン','beveren'],
+  // --- 表記ゆれ・EL/カラバオ/ACLで出る未収録クラブ ---
+  ['リヴァプール','liverpool'],['イプスウィッチ','ipswich-town'],['コヴェントリー','coventry-city'],['ノリッジ','norwich-city'],
+  ['レフ・ポズナン','lech-poznan'],['ブラガ','braga'],['シャフタール・ドネツク','shakhtar'],['フェネルバフチェ','fenerbahce'],
+  ['レフ','lech-poznan'],
+  // --- ACL（アジアのクラブ） ---
+  ['全北','jeonbuk'],['大田ハナ・シチズン','daejeon-hana'],['大田ハナ','daejeon-hana'],['ポートFC','port-fc'],
+  ['コンアン・ハノイ','cong-an-hanoi'],['PRKスヴァイリエン','svay-rieng'],['スヴァイリエン','svay-rieng'],
+  ['ニューカッスル・ジェッツ','newcastle-jets'],['浦項','pohang'],['蔚山','ulsan'],['上海海港','shanghai-port'],
+  ['光州','gwangju'],['川崎','kawasaki'],['横浜FM','yokohama-fm'],['ブリーラム','buriram'],['メルボルン・シティ','melbourne-city'],
+  ['セントラルコースト','central-coast'],['ジョホール','johor'],
   // --- UEFAネーションズリーグ（代表）。※長い名称を先に（北アイルランド>アイルランド等の誤マッチ回避＝最長一致） ---
   ['北アイルランド','northern-ireland'],['北マケドニア','north-macedonia'],['ボスニア・ヘルツェゴビナ','bosnia'],
   ['ポルトガル','portugal'],['ウェールズ','wales'],['スペイン','spain'],['フランス','france'],['ドイツ','germany'],
