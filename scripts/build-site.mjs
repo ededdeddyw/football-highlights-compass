@@ -228,6 +228,7 @@ const LEAGUE_HUBS = [
   { name:'J2リーグ', slug:'j2-league', code:'j2', clubLabel:'J2リーグ', country:'日本', blurb:'明治安田J2リーグ（日本2部）。DAZN公式ハイライトを掲載します。' },
   { name:'J3リーグ', slug:'j3-league', code:'j3', clubLabel:'J3リーグ', country:'日本', blurb:'明治安田J3リーグ（日本3部）。DAZN公式ハイライトを掲載します。' },
   { name:'ベルギー・プロリーグ', slug:'belgian-pro-league', code:'belgium', clubLabel:'ベルギー・プロリーグ', country:'ベルギー', blurb:'ベルギー・プロリーグ（ジュピラー・プロリーグ）。伊東純也ら日本人選手が多数在籍。DAZN公式ハイライトを掲載します。' },
+  { name:'UEFAネーションズリーグ', slug:'nations-league', code:'nations', clubLabel:'UEFAネーションズリーグ', country:'ヨーロッパ', blurb:'UEFAネーションズリーグ（欧州各国代表）。DAZN公式ハイライトを掲載します。' },
 ];
 // リーグJSONに「結果確定済み（スコア入り）」の試合があるコード集合。順位表を出せる＝ハブを建てる根拠にする。
 // （byTeamの旧試合が無いPLも、league-pl-*.json に結果があればハブを生成できるようにする）
@@ -1190,6 +1191,7 @@ const LEAGUE_META = {
   j2:     { jp: 'J2リーグ',       hub: 'league/j2-league.html' },
   j3:     { jp: 'J3リーグ',       hub: 'league/j3-league.html' },
   belgium:{ jp: 'ベルギー・プロリーグ', hub: 'league/belgian-pro-league.html' },
+  nations:{ jp: 'UEFAネーションズリーグ', hub: 'league/nations-league.html' },
 };
 const TEAM_SLUG = { 'バイエルン':'bayern','レバークーゼン':'leverkusen','フランクフルト':'frankfurt','ドルトムント':'dortmund','ライプツィヒ':'leipzig','シュツットガルト':'stuttgart','フライブルク':'freiburg','ボルシアMG':'gladbach','ウォルフスブルク':'wolfsburg','マインツ':'mainz','アウクスブルク':'augsburg','ブレーメン':'bremen','ホッフェンハイム':'hoffenheim','ウニオン・ベルリン':'union-berlin','ハイデンハイム':'heidenheim','ザンクトパウリ':'st-pauli','ケルン':'koln','ハンブルガーSV':'hamburg' };
 const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'x';
@@ -2185,7 +2187,7 @@ function buildLeague(h){
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
-  <p class="dek">${esc(h.blurb)}${h.code==='cl'?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  <p class="dek">${esc(h.blurb)}${(h.code==='cl'||h.code==='nations')?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
   ${scorerBlock}

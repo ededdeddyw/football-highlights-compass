@@ -21,6 +21,7 @@
 //   node scripts/fetch-unext-pl.mjs --league=j2    # J2リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --league=j3    # J3リーグ（DAZN @DAZNJapan・動画ファースト）
 //   node scripts/fetch-unext-pl.mjs --league=belgium # ベルギー・プロリーグ（DAZN @DAZNJapan・日本人選手多数）
+//   node scripts/fetch-unext-pl.mjs --league=nations # UEFAネーションズリーグ（DAZN @DAZNJapan・代表）
 //   ※環境変数 YOUTUBE_API_KEY を設定すると YouTube Data API v3（無料枠）で取得する。
 //     APIはconsent画面に当たらないため、クラウド/GitHub Actions でも確実に取得できる（自動更新の要）。
 //     未設定時は従来のWebスクレイプにフォールバック（ローカル実行向け）。
@@ -44,9 +45,9 @@ const PURGE = args.includes('--purge') && !KEEP; // U-NEXTで拾えなかった�
 const SEASON_ARG = (args.find(a => a.startsWith('--season=')) || '').split('=')[1] || '';
 // 対象リーグ（既定 pl）。例: --league=cl でチャンピオンズリーグ。データは data/league-<LEAGUE>-<season>.json。
 const LEAGUE_ARG = ((args.find(a => a.startsWith('--league=')) || '').split('=')[1] || 'pl').toLowerCase();
-const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ', belgium:'ベルギー・プロリーグ' };
+const LEAGUE_JP = { pl:'プレミアリーグ', laliga:'ラ・リーガ', sa:'セリエA', bl:'ブンデスリーガ', ligue1:'リーグアン', cl:'チャンピオンズリーグ', eredivisie:'エールディヴィジ', j1:'J1リーグ', j2:'J2リーグ', j3:'J3リーグ', belgium:'ベルギー・プロリーグ', nations:'UEFAネーションズリーグ' };
 // 動画ファースト（日程APIが無いリーグ）：DAZN等のハイライト・タイトルから試合を生成する。
-const VIDEO_FIRST = new Set(['j1', 'j2', 'j3', 'belgium']);
+const VIDEO_FIRST = new Set(['j1', 'j2', 'j3', 'belgium', 'nations']);
 // Jリーグ（J1/J2/J3）クラブ 日本語名→URLスラッグ（長いキー優先の包含マッチで表記ゆれを吸収）。
 // 全クラブを1表にまとめる（tier非依存）。J2/J3の試合ハイライトでも同じ表からスラッグを付ける。
 const J1_SLUGS = [
@@ -82,6 +83,17 @@ const J1_SLUGS = [
   ['KVメヘレン','mechelen'],['メヘレン','mechelen'],['デンデル','dender'],['ラ・ルヴィエール','la-louviere'],
   ['ズルテ・ワレヘム','zulte-waregem'],['ズルテ・ヴァレヘム','zulte-waregem'],['RWDモランベーク','rwdm'],
   ['ベフェレン','beveren'],['SKベフェレン','beveren'],
+  // --- UEFAネーションズリーグ（代表）。※長い名称を先に（北アイルランド>アイルランド等の誤マッチ回避＝最長一致） ---
+  ['北アイルランド','northern-ireland'],['北マケドニア','north-macedonia'],['ボスニア・ヘルツェゴビナ','bosnia'],
+  ['ポルトガル','portugal'],['ウェールズ','wales'],['スペイン','spain'],['フランス','france'],['ドイツ','germany'],
+  ['イングランド','england'],['イタリア','italy'],['オランダ','netherlands'],['ベルギー','belgium'],['クロアチア','croatia'],
+  ['デンマーク','denmark'],['スイス','switzerland'],['ポーランド','poland'],['ハンガリー','hungary'],['オーストリア','austria'],
+  ['スコットランド','scotland'],['セルビア','serbia'],['チェコ','czech'],['トルコ','turkey'],['ウクライナ','ukraine'],
+  ['スウェーデン','sweden'],['ノルウェー','norway'],['アイルランド','ireland'],['ギリシャ','greece'],['ルーマニア','romania'],
+  ['スロベニア','slovenia'],['スロヴェニア','slovenia'],['スロバキア','slovakia'],['スロヴァキア','slovakia'],['フィンランド','finland'],
+  ['アイスランド','iceland'],['ジョージア','georgia'],['アルバニア','albania'],['モンテネグロ','montenegro'],['ブルガリア','bulgaria'],
+  ['イスラエル','israel'],['コソボ','kosovo'],['アルメニア','armenia'],['アゼルバイジャン','azerbaijan'],['キプロス','cyprus'],
+  ['ルクセンブルク','luxembourg'],['カザフスタン','kazakhstan'],['ベラルーシ','belarus'],['エストニア','estonia'],['ラトビア','latvia'],['リトアニア','lithuania'],['モルドバ','moldova'],['マルタ','malta'],
 ];
 const LG_LABEL = LEAGUE_JP[LEAGUE_ARG] || LEAGUE_ARG;
 // リーグごとの配信元チャンネル（日本で視聴可能な公式ハイライトを出しているYouTubeチャンネル）。
@@ -96,6 +108,7 @@ const CHANNELS = {
   j2:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ2（DAZN Japan公式）
   j3:         { handle: '@DAZNJapan',      author: 'dazn' },   // JリーグJ3（DAZN Japan公式）
   belgium:    { handle: '@DAZNJapan',      author: 'dazn' },   // ベルギー・プロリーグ（DAZN Japan公式）
+  nations:    { handle: '@DAZNJapan',      author: 'dazn' },   // UEFAネーションズリーグ（DAZN Japan公式・代表）
 };
 const CH = CHANNELS[LEAGUE_ARG] || CHANNELS.pl;
 const HANDLE = (args.find(a => a.startsWith('--channel=')) || '').split('=')[1] || CH.handle;   // 配信元チャンネル（--channel=@handle で上書き可）
@@ -188,6 +201,7 @@ async function channelVideos() {
 // U-NEXTは複数リーグを同一チャンネルで配信するため、リーグ判定→プレミアだけ採用する。
 function detectLeague(t) {
   if (/女子|women/i.test(t)) return null;   // 女子CL等は対象外（男子リーグの日程表に無い）
+  if (/ネーションズリーグ|nations\s*league/i.test(t)) return 'nations';   // UEFAネーションズリーグ（代表・DAZN Japan）
   if (/明治安田J1|J1リーグ|J1\s*LEAGUE/i.test(t)) return 'j1';   // JリーグJ1（DAZN Japan）
   if (/明治安田J2|J2リーグ|J2\s*LEAGUE/i.test(t)) return 'j2';   // JリーグJ2（DAZN Japan）
   if (/明治安田J3|J3リーグ|J3\s*LEAGUE/i.test(t)) return 'j3';   // JリーグJ3（DAZN Japan）
