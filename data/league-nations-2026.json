@@ -1,0 +1,41 @@
+{
+  "code": "nations",
+  "jp": "UEFAネーションズリーグ",
+  "season": "2026",
+  "updated": "",
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "オランダ",
+      "away": "ドイツ",
+      "homeSlug": "netherlands",
+      "awaySlug": "germany",
+      "finished": true,
+      "score": "",
+      "videoId": "9MiNSAi0WpI"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "ノルウェー",
+      "away": "デンマーク",
+      "homeSlug": "norway",
+      "awaySlug": "denmark",
+      "finished": true,
+      "score": "",
+      "videoId": "EmQ7s1-Sz7k"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "ポルトガル",
+      "away": "ウェールズ",
+      "homeSlug": "portugal",
+      "awaySlug": "wales",
+      "finished": true,
+      "score": "",
+      "videoId": "OjVEDdHcxqA"
+    }
+  ]
+}
