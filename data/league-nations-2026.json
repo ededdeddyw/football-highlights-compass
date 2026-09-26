@@ -7,6 +7,17 @@
     {
       "matchday": 1,
       "dateUTC": "",
+      "home": "イタリア",
+      "away": "ベルギー",
+      "homeSlug": "italy",
+      "awaySlug": "belgium",
+      "finished": true,
+      "score": "",
+      "videoId": "zFkpgy0ltjE"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
       "home": "オランダ",
       "away": "ドイツ",
       "homeSlug": "netherlands",
@@ -14,6 +25,17 @@
       "finished": true,
       "score": "",
       "videoId": "9MiNSAi0WpI"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "トルコ",
+      "away": "フランス",
+      "homeSlug": "turkey",
+      "awaySlug": "france",
+      "finished": true,
+      "score": "",
+      "videoId": "CgaDLtan9p8"
     },
     {
       "matchday": 1,
