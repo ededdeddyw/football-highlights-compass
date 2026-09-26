@@ -1658,6 +1658,12 @@ function buildCountry(name, info){
   // 国FAQ（GEO：歴代最高成績・連盟・ハイライト所在を事実Q&Aで。「〈国〉 ワールドカップ 最高成績」等のinformationalクエリ向け）
   const cfaq = [];
   cfaq.push({ q:`${name}代表のワールドカップ最高成績は？`, a:`${name}代表のW杯最高成績は${info.peak}です。所属連盟は${info.confed}${info.talent?`、主なタレントは${info.talent}`:''}。` });
+  // 優勝経験国は「〈国〉 ワールドカップ 優勝回数」等の質問形クエリが急増することがあるため、文言に完全一致するFAQを追加
+  const peakWinMatch = info.peak.match(/^優勝(\d+)?回?（(.+)）$/);
+  if(peakWinMatch){
+    const winCount = peakWinMatch[1] ? Number(peakWinMatch[1]) : 1;
+    cfaq.push({ q:`${name}代表はワールドカップで何回優勝していますか？`, a:`${name}代表はこれまでにFIFAワールドカップで${winCount}回優勝しています（${peakWinMatch[2]}）。` });
+  }
   if(ms.length) cfaq.push({ q:`${name}代表のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元が公開している${name}代表のFIFAワールドカップ2026ハイライト（全${ms.length}試合）を、スコアを隠したネタバレ防止表示でまとめています。` });
   cgraph.push(faqLd(cfaq));
   // W杯2026は閉幕済み。検索需要は「日程（これから）」→「結果・歴代・振り返り」へ移行しているため、titleから"試合日程"を外し
