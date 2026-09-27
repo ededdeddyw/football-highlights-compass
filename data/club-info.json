@@ -8,7 +8,7 @@
     "stadium": "エスタディオ・アノエタ",
     "capacity": 40000,
     "website": "https://www.realsociedad.eus/",
-    "updated": "2026-09-25T07:55:17.960Z"
+    "updated": "2026-09-27T20:05:36.796Z"
   },
   "parma": {
     "name": "パルマ",
@@ -19,7 +19,7 @@
     "stadium": "スタディオ・エンニオ・タルディーニ",
     "capacity": 22352,
     "website": "https://www.parmacalcio1913.com",
-    "updated": "2026-09-25T07:55:20.456Z"
+    "updated": "2026-09-27T20:05:39.290Z"
   },
   "as-monaco": {
     "name": "モナコ",
@@ -30,7 +30,7 @@
     "stadium": "スタッド・ルイ・ドゥ",
     "capacity": 18523,
     "website": "https://asmonaco.com",
-    "updated": "2026-09-25T07:55:22.950Z"
+    "updated": "2026-09-27T20:05:41.796Z"
   },
   "sporting-cp": {
     "name": "スポルティング",
@@ -41,7 +41,7 @@
     "stadium": "エスタディオ・ジョゼ・アルヴァラーデ",
     "capacity": 52095,
     "website": "https://www.sporting.pt/",
-    "updated": "2026-09-25T07:55:25.452Z"
+    "updated": "2026-09-27T20:05:44.285Z"
   },
   "eintracht-frankfurt": {
     "name": "フランクフルト",
@@ -52,7 +52,7 @@
     "stadium": "ヴァルトシュタディオン",
     "capacity": 51500,
     "website": "https://www.eintracht.de/",
-    "updated": "2026-09-25T07:55:27.961Z"
+    "updated": "2026-09-27T20:05:46.799Z"
   },
   "mainz-05": {
     "name": "マインツ",
@@ -63,7 +63,7 @@
     "stadium": "コファス・アレーナ",
     "capacity": 34034,
     "website": "https://www.mainz05.de/",
-    "updated": "2026-09-25T07:55:30.458Z"
+    "updated": "2026-09-27T20:05:49.290Z"
   },
   "werder-bremen": {
     "name": "ブレーメン",
@@ -74,7 +74,7 @@
     "stadium": "ヴェーザーシュタディオン",
     "capacity": 42500,
     "website": "https://www.werder.de/",
-    "updated": "2026-09-25T07:55:33.100Z"
+    "updated": "2026-09-27T20:05:51.925Z"
   },
   "bayern-munich": {
     "name": "バイエルン",
@@ -85,7 +85,7 @@
     "stadium": "グリュンヴァルター・シュタディオン",
     "capacity": 15000,
     "website": "https://fcbayern.com",
-    "updated": "2026-09-25T07:55:35.510Z"
+    "updated": "2026-09-27T20:05:54.345Z"
   },
   "rb-leipzig": {
     "name": "ライプツィヒ",
@@ -96,7 +96,7 @@
     "stadium": "ツェントラールシュタディオン",
     "capacity": 42000,
     "website": "https://rbleipzig.com/",
-    "updated": "2026-09-25T07:55:38.008Z"
+    "updated": "2026-09-27T20:05:56.860Z"
   },
   "leverkusen": {
     "name": "レバークーゼン",
@@ -107,7 +107,7 @@
     "stadium": "バイ・アレーナ",
     "capacity": 30210,
     "website": "https://www.bayer04.de/",
-    "updated": "2026-09-25T07:55:40.506Z"
+    "updated": "2026-09-27T20:05:59.331Z"
   },
   "stuttgart": {
     "name": "シュツットガルト",
@@ -118,7 +118,7 @@
     "stadium": "MHPアレーナ",
     "capacity": 60058,
     "website": "http://www.vfb.de/",
-    "updated": "2026-09-25T07:55:43.015Z"
+    "updated": "2026-09-27T20:06:01.853Z"
   },
   "freiburg": {
     "name": "フライブルク",
@@ -129,7 +129,7 @@
     "stadium": "バーデノーヴァ・シュタディオン",
     "capacity": 24000,
     "website": "https://www.scfreiburg.com/",
-    "updated": "2026-09-25T07:55:45.496Z"
+    "updated": "2026-09-27T20:06:04.353Z"
   },
   "gladbach": {
     "name": "ボルシアMG",
@@ -140,7 +140,7 @@
     "stadium": "シュタディオン・イム・ボルシア・パルク",
     "capacity": 59749,
     "website": "https://www.borussia.de/",
-    "updated": "2026-09-25T07:55:47.993Z"
+    "updated": "2026-09-27T20:06:06.835Z"
   },
   "wolfsburg": {
     "name": "ウォルフスブルク",
@@ -151,7 +151,7 @@
     "stadium": "フォルクスワーゲン・アレーナ",
     "capacity": 30000,
     "website": "https://www.vfl-wolfsburg.de/",
-    "updated": "2026-09-25T07:55:50.509Z"
+    "updated": "2026-09-27T20:06:09.349Z"
   },
   "augsburg": {
     "name": "アウクスブルク",
@@ -162,7 +162,7 @@
     "stadium": "WWKアレーナ",
     "capacity": 30660,
     "website": "https://fcaugsburg.de/",
-    "updated": "2026-09-25T07:55:53.133Z"
+    "updated": "2026-09-27T20:06:11.844Z"
   },
   "hoffenheim": {
     "name": "ホッフェンハイム",
@@ -173,7 +173,7 @@
     "stadium": "ライン・ネッカー・アレーナ",
     "capacity": 30150,
     "website": "https://www.achtzehn99.de/",
-    "updated": "2026-09-25T07:55:55.547Z"
+    "updated": "2026-09-27T20:06:14.345Z"
   },
   "union-berlin": {
     "name": "ウニオン・ベルリン",
@@ -184,7 +184,7 @@
     "stadium": "シュタディオン・アン・デア・アルテン・フォーシュテライ",
     "capacity": 21704,
     "website": "https://www.fc-union-berlin.de/",
-    "updated": "2026-09-25T07:55:58.058Z"
+    "updated": "2026-09-27T20:06:16.838Z"
   },
   "heidenheim": {
     "name": "ハイデンハイム",
@@ -195,7 +195,7 @@
     "stadium": "アルプシュターディオン",
     "capacity": 10001,
     "website": "https://www.fc-heidenheim.de/",
-    "updated": "2026-09-25T07:56:00.543Z"
+    "updated": "2026-09-27T20:06:19.342Z"
   },
   "st-pauli": {
     "name": "ザンクトパウリ",
@@ -206,7 +206,7 @@
     "stadium": "ミラントア・シュタディオン",
     "capacity": 29546,
     "website": "https://www.fcstpauli.com/",
-    "updated": "2026-09-25T07:56:03.044Z"
+    "updated": "2026-09-27T20:06:21.844Z"
   },
   "koln": {
     "name": "ケルン",
@@ -217,7 +217,7 @@
     "stadium": "ラインエネルギーシュタディオン",
     "capacity": 46195,
     "website": "https://fc.de/",
-    "updated": "2026-09-25T07:56:05.545Z"
+    "updated": "2026-09-27T20:06:24.349Z"
   },
   "hamburg": {
     "name": "ハンブルガーSV",
@@ -228,7 +228,7 @@
     "stadium": "フォルクスパルクシュタディオン",
     "capacity": 57000,
     "website": "https://www.hsv.de/",
-    "updated": "2026-09-25T07:56:08.057Z"
+    "updated": "2026-09-27T20:06:26.877Z"
   },
   "arsenal": {
     "name": "アーセナル",
@@ -239,7 +239,7 @@
     "stadium": "エミレーツ・スタジアム",
     "capacity": 60338,
     "website": "https://www.arsenal.com/",
-    "updated": "2026-09-25T07:56:10.561Z"
+    "updated": "2026-09-27T20:06:29.369Z"
   },
   "aston-villa": {
     "name": "アストン・ヴィラ",
@@ -250,7 +250,7 @@
     "stadium": "ヴィラ・パーク",
     "capacity": 42640,
     "website": "https://www.avfc.co.uk/",
-    "updated": "2026-09-25T07:56:13.045Z"
+    "updated": "2026-09-27T20:06:31.856Z"
   },
   "bournemouth": {
     "name": "ボーンマス",
@@ -261,7 +261,7 @@
     "stadium": "ディーン・コート",
     "capacity": 12000,
     "website": "https://www.afcb.co.uk/",
-    "updated": "2026-09-25T07:56:15.574Z"
+    "updated": "2026-09-27T20:06:34.481Z"
   },
   "brentford": {
     "name": "ブレントフォード",
@@ -272,7 +272,7 @@
     "stadium": "グリフィン・パーク",
     "capacity": 14863,
     "website": "https://www.brentfordfc.com/",
-    "updated": "2026-09-25T07:56:18.067Z"
+    "updated": "2026-09-27T20:06:36.905Z"
   },
   "brighton-and-hove-albion": {
     "name": "ブライトン",
@@ -283,7 +283,7 @@
     "stadium": "ファルマー・スタジアム",
     "capacity": 31800,
     "website": "https://www.brightonandhovealbion.com/",
-    "updated": "2026-09-25T07:56:20.566Z"
+    "updated": "2026-09-27T20:06:39.409Z"
   },
   "burnley": {
     "name": "バーンリー",
@@ -294,7 +294,7 @@
     "stadium": "ターフ・ムーア",
     "capacity": 22546,
     "website": "http://www.burnleyfootballclub.com/",
-    "updated": "2026-09-25T07:56:42.677Z"
+    "updated": "2026-09-27T20:06:41.908Z"
   },
   "chelsea": {
     "name": "チェルシー",
@@ -305,7 +305,7 @@
     "stadium": "スタンフォード・ブリッジ",
     "capacity": 41875,
     "website": "https://www.chelseafc.com/",
-    "updated": "2026-09-25T07:56:45.180Z"
+    "updated": "2026-09-27T20:06:44.450Z"
   },
   "crystal-palace": {
     "name": "クリスタル・パレス",
@@ -316,7 +316,7 @@
     "stadium": "セルハースト・パーク",
     "capacity": 26255,
     "website": "https://www.cpfc.co.uk/",
-    "updated": "2026-09-25T07:56:47.688Z"
+    "updated": "2026-09-27T20:06:46.944Z"
   },
   "everton": {
     "name": "エバートン",
@@ -327,7 +327,7 @@
     "stadium": "エヴァートン・スタジアム",
     "capacity": 52769,
     "website": "http://www.evertonfc.com/",
-    "updated": "2026-09-25T07:56:50.191Z"
+    "updated": "2026-09-27T20:06:49.455Z"
   },
   "fulham": {
     "name": "フラム",
@@ -338,7 +338,7 @@
     "stadium": "クレイヴン・コテージ",
     "capacity": 25700,
     "website": "https://www.fulhamfc.com/",
-    "updated": "2026-09-25T07:56:52.685Z"
+    "updated": "2026-09-27T20:06:51.942Z"
   },
   "leeds-united": {
     "name": "リーズ",
@@ -349,7 +349,7 @@
     "stadium": "エランド・ロード",
     "capacity": 37890,
     "website": "https://www.leedsunited.com/",
-    "updated": "2026-09-25T07:56:55.182Z"
+    "updated": "2026-09-27T20:06:54.454Z"
   },
   "liverpool": {
     "name": "リバプール",
@@ -360,7 +360,7 @@
     "stadium": "アンフィールド",
     "capacity": 53394,
     "website": "https://www.liverpoolfc.com",
-    "updated": "2026-09-25T07:56:57.690Z"
+    "updated": "2026-09-27T20:06:56.988Z"
   },
   "manchester-city": {
     "name": "マンチェスター・シティ",
@@ -371,7 +371,7 @@
     "stadium": "シティ・オブ・マンチェスター・スタジアム",
     "capacity": 55017,
     "website": "https://mancity.com",
-    "updated": "2026-09-25T07:57:00.198Z"
+    "updated": "2026-09-27T20:06:59.698Z"
   },
   "manchester-united": {
     "name": "マンチェスター・ユナイテッド",
@@ -382,7 +382,7 @@
     "stadium": "オールド・トラッフォード",
     "capacity": 75731,
     "website": "https://www.manutd.com",
-    "updated": "2026-09-25T07:57:02.694Z"
+    "updated": "2026-09-27T20:07:02.197Z"
   },
   "newcastle-united": {
     "name": "ニューカッスル",
@@ -393,7 +393,7 @@
     "stadium": "セント・ジェームズ・パーク",
     "capacity": 52305,
     "website": "https://www.nufc.co.uk/",
-    "updated": "2026-09-25T07:57:05.202Z"
+    "updated": "2026-09-27T20:07:04.700Z"
   },
   "nottingham-forest": {
     "name": "ノッティンガム・フォレスト",
@@ -404,7 +404,7 @@
     "stadium": "シティ・グラウンド",
     "capacity": 30404,
     "website": "https://nottinghamforest.co.uk",
-    "updated": "2026-09-25T07:57:07.691Z"
+    "updated": "2026-09-27T20:07:07.188Z"
   },
   "sunderland": {
     "name": "サンダーランド",
@@ -415,7 +415,7 @@
     "stadium": "スタジアム・オブ・ライト",
     "capacity": 48339,
     "website": "https://www.safc.com/",
-    "updated": "2026-09-25T07:57:10.191Z"
+    "updated": "2026-09-27T20:07:09.693Z"
   },
   "tottenham-hotspur": {
     "name": "トッテナム",
@@ -426,7 +426,7 @@
     "stadium": "トッテナム・ホットスパースタジアム",
     "capacity": 62850,
     "website": "https://www.tottenhamhotspur.com/",
-    "updated": "2026-09-25T07:57:12.695Z"
+    "updated": "2026-09-27T20:07:12.206Z"
   },
   "west-ham-united": {
     "name": "ウェストハム",
@@ -437,7 +437,7 @@
     "stadium": "ロンドン・スタジアム",
     "capacity": 62500,
     "website": "http://www.whufc.com/",
-    "updated": "2026-09-25T07:57:15.214Z"
+    "updated": "2026-09-27T20:07:14.705Z"
   },
   "wolverhampton-wanderers": {
     "name": "ウォルバーハンプトン",
@@ -448,7 +448,7 @@
     "stadium": "モリニュー・スタジアム",
     "capacity": 30852,
     "website": "https://www.wolves.co.uk/",
-    "updated": "2026-09-25T07:57:17.706Z"
+    "updated": "2026-09-27T20:07:17.199Z"
   },
   "lille": {
     "name": "リール",
@@ -459,7 +459,7 @@
     "stadium": "ベル・ビュー",
     "capacity": 3000,
     "website": "https://www.rhylfc.co.uk/",
-    "updated": "2026-09-25T07:57:20.203Z"
+    "updated": "2026-09-27T20:07:19.709Z"
   },
   "nice": {
     "name": "ニース",
@@ -470,7 +470,7 @@
     "stadium": "グラン・スタッド・ドゥ・ニース",
     "capacity": 36178,
     "website": "https://www.ogcnice.com",
-    "updated": "2026-09-25T07:57:22.704Z"
+    "updated": "2026-09-27T20:07:22.212Z"
   },
   "olympique-lyonnais": {
     "name": "リヨン",
@@ -481,7 +481,7 @@
     "stadium": "スタッド・デ・リュミエール",
     "capacity": 59286,
     "website": "https://www.ol.fr",
-    "updated": "2026-09-25T07:57:25.194Z"
+    "updated": "2026-09-27T20:07:24.707Z"
   },
   "racing-lens": {
     "name": "ランス",
@@ -492,7 +492,7 @@
     "stadium": "スタッド・フェリックス・ボラール",
     "capacity": 38058,
     "website": "https://www.rclens.fr",
-    "updated": "2026-09-25T07:57:27.704Z"
+    "updated": "2026-09-27T20:07:27.267Z"
   },
   "stade-rennais": {
     "name": "レンヌ",
@@ -503,7 +503,7 @@
     "stadium": "ロアゾン・パルク",
     "capacity": 31127,
     "website": "https://www.staderennais.com",
-    "updated": "2026-09-25T07:57:30.213Z"
+    "updated": "2026-09-27T20:07:29.703Z"
   },
   "stade-brestois": {
     "name": "ブレスト",
@@ -514,7 +514,7 @@
     "stadium": "スタッド・フランシス＝ル・ブレ",
     "capacity": 15097,
     "website": "https://www.sb29.bzh",
-    "updated": "2026-09-25T07:57:32.696Z"
+    "updated": "2026-09-27T20:07:32.204Z"
   },
   "strasbourg-alsace": {
     "name": "ストラスブール",
@@ -525,7 +525,7 @@
     "stadium": "スタッド・ドゥ・ラ・メノ",
     "capacity": 26109,
     "website": "https://www.rcstrasbourgalsace.fr",
-    "updated": "2026-09-25T07:57:35.237Z"
+    "updated": "2026-09-27T20:07:34.715Z"
   },
   "toulouse": {
     "name": "トゥールーズ",
@@ -536,7 +536,7 @@
     "stadium": "スタジアム",
     "capacity": 33150,
     "website": "https://www.toulousefc.com",
-    "updated": "2026-09-25T07:57:37.724Z"
+    "updated": "2026-09-27T20:07:37.207Z"
   },
   "nantes": {
     "name": "ナント",
@@ -547,7 +547,7 @@
     "stadium": "スタッド・ドゥ・ラ・ボージョワール",
     "capacity": 35318,
     "website": "https://www.fcnantes.com",
-    "updated": "2026-09-25T07:57:40.209Z"
+    "updated": "2026-09-27T20:07:39.706Z"
   },
   "auxerre": {
     "name": "オセール",
@@ -558,7 +558,7 @@
     "stadium": "スタッド・ドゥ・ラベ・デシャン",
     "capacity": 18541,
     "website": "https://www.aja.fr",
-    "updated": "2026-09-25T07:57:42.700Z"
+    "updated": "2026-09-27T20:07:42.203Z"
   },
   "angers": {
     "name": "アンジェ",
@@ -569,7 +569,7 @@
     "stadium": "スタッド・レイモン・コパ",
     "capacity": 18000,
     "website": "https://angers-sco.fr",
-    "updated": "2026-09-25T07:57:45.456Z"
+    "updated": "2026-09-27T20:07:44.717Z"
   },
   "le-havre": {
     "name": "ルアーブル",
@@ -580,7 +580,7 @@
     "stadium": "スタッド・オセアン",
     "capacity": 25178,
     "website": "https://hac.football",
-    "updated": "2026-09-25T07:57:47.947Z"
+    "updated": "2026-09-27T20:07:47.221Z"
   },
   "lorient": {
     "name": "ロリアン",
@@ -591,7 +591,7 @@
     "stadium": "スタッド・ドゥ・ムストワ",
     "capacity": 18500,
     "website": "https://www.fclorient.bzh",
-    "updated": "2026-09-25T07:57:50.430Z"
+    "updated": "2026-09-27T20:07:49.719Z"
   },
   "metz": {
     "name": "メス",
@@ -602,7 +602,7 @@
     "stadium": "スタッド・サン＝サンフォリアン",
     "capacity": 26671,
     "website": "https://fcmetz.com",
-    "updated": "2026-09-25T07:57:52.927Z"
+    "updated": "2026-09-27T20:07:52.217Z"
   },
   "paris": {
     "name": "パリFC",
@@ -613,7 +613,7 @@
     "stadium": "スタッド・セバスティアン・シャルレティ",
     "capacity": 20000,
     "website": "https://parisfc.fr",
-    "updated": "2026-09-25T07:57:55.626Z"
+    "updated": "2026-09-27T20:07:54.937Z"
   },
   "kashima-antlers": {
     "name": "鹿島アントラーズ",
@@ -624,7 +624,7 @@
     "stadium": "茨城県立カシマサッカースタジアム",
     "capacity": 40728,
     "website": "http://www.so-net.ne.jp/antlers/",
-    "updated": "2026-09-25T07:57:58.127Z"
+    "updated": "2026-09-27T20:07:57.428Z"
   },
   "urawa-reds": {
     "name": "浦和レッズ",
@@ -635,7 +635,7 @@
     "stadium": "埼玉スタジアム2002",
     "capacity": 63700,
     "website": "https://www.urawa-reds.co.jp/",
-    "updated": "2026-09-25T07:58:00.629Z"
+    "updated": "2026-09-27T20:07:59.944Z"
   },
   "kawasaki-frontale": {
     "name": "川崎フロンターレ",
@@ -646,7 +646,7 @@
     "stadium": "等々力陸上競技場",
     "capacity": 25000,
     "website": "http://www.frontale.co.jp",
-    "updated": "2026-09-25T07:58:03.114Z"
+    "updated": "2026-09-27T20:08:02.443Z"
   },
   "fc-tokyo": {
     "name": "FC東京",
@@ -657,7 +657,7 @@
     "stadium": "東京スタジアム",
     "capacity": 48013,
     "website": "https://www.fctokyo.co.jp/",
-    "updated": "2026-09-25T07:58:05.816Z"
+    "updated": "2026-09-27T20:08:04.951Z"
   },
   "tokyo-verdy": {
     "name": "東京ヴェルディ",
@@ -668,7 +668,7 @@
     "stadium": "東京スタジアム",
     "capacity": 48013,
     "website": "https://www.verdy.co.jp/",
-    "updated": "2026-09-25T07:58:08.314Z"
+    "updated": "2026-09-27T20:08:07.439Z"
   },
   "yokohama-f-marinos": {
     "name": "横浜F・マリノス",
@@ -679,7 +679,7 @@
     "stadium": "横浜国際総合競技場",
     "capacity": 72327,
     "website": "https://www.f-marinos.com/",
-    "updated": "2026-09-25T07:58:10.830Z"
+    "updated": "2026-09-27T20:08:09.950Z"
   },
   "vissel-kobe": {
     "name": "ヴィッセル神戸",
@@ -690,7 +690,7 @@
     "stadium": "御崎公園球技場",
     "capacity": 30132,
     "website": "https://www.vissel-kobe.co.jp/",
-    "updated": "2026-09-25T07:58:16.436Z"
+    "updated": "2026-09-27T20:08:12.463Z"
   },
   "kyoto-sanga": {
     "name": "京都サンガF.C.",
@@ -701,7 +701,7 @@
     "stadium": "京都市西京極総合運動公園陸上競技場兼球技場",
     "capacity": 20588,
     "website": "http://www.sanga-fc.jp/",
-    "updated": "2026-09-25T07:58:18.941Z"
+    "updated": "2026-09-27T20:08:14.977Z"
   },
   "gamba-osaka": {
     "name": "ガンバ大阪",
@@ -712,7 +712,7 @@
     "stadium": "市立吹田サッカースタジアム",
     "capacity": 39694,
     "website": "http://www.gamba-osaka.net",
-    "updated": "2026-09-25T07:58:22.092Z"
+    "updated": "2026-09-27T20:08:17.449Z"
   },
   "cerezo-osaka": {
     "name": "セレッソ大阪",
@@ -723,7 +723,7 @@
     "stadium": "大阪市長居球技場",
     "capacity": 20500,
     "website": "https://www.cerezo.jp/",
-    "updated": "2026-09-25T07:58:24.581Z"
+    "updated": "2026-09-27T20:08:19.961Z"
   },
   "sanfrecce-hiroshima": {
     "name": "サンフレッチェ広島",
@@ -734,7 +734,7 @@
     "stadium": "広島広域公園陸上競技場",
     "capacity": 50000,
     "website": "http://www.sanfrecce.co.jp/",
-    "updated": "2026-09-25T07:58:27.183Z"
+    "updated": "2026-09-27T20:08:22.470Z"
   },
   "nagoya-grampus": {
     "name": "名古屋グランパス",
@@ -745,7 +745,7 @@
     "stadium": "名古屋市瑞穂公園陸上競技場",
     "capacity": 27000,
     "website": "https://nagoya-grampus.jp/",
-    "updated": "2026-09-25T07:58:29.689Z"
+    "updated": "2026-09-27T20:08:24.944Z"
   },
   "kashiwa-reysol": {
     "name": "柏レイソル",
@@ -756,7 +756,7 @@
     "stadium": "日立柏サッカー場",
     "capacity": 15900,
     "website": "https://www.reysol.co.jp/",
-    "updated": "2026-09-25T07:58:32.180Z"
+    "updated": "2026-09-27T20:08:27.441Z"
   },
   "shimizu-s-pulse": {
     "name": "清水エスパルス",
@@ -767,7 +767,7 @@
     "stadium": "静岡市清水日本平運動公園球技場",
     "capacity": 20339,
     "website": "https://www.s-pulse.co.jp/",
-    "updated": "2026-09-25T07:58:34.681Z"
+    "updated": "2026-09-27T20:08:29.956Z"
   },
   "albirex-niigata": {
     "name": "アルビレックス新潟",
@@ -778,7 +778,7 @@
     "stadium": "新潟スタジアム",
     "capacity": 42300,
     "website": "https://www.albirex.co.jp/",
-    "updated": "2026-09-25T07:58:37.181Z"
+    "updated": "2026-09-27T20:08:32.444Z"
   },
   "jubilo-iwata": {
     "name": "ジュビロ磐田",
@@ -789,7 +789,7 @@
     "stadium": "ヤマハスタジアム",
     "capacity": 15165,
     "website": "https://www.jubilo-iwata.co.jp/",
-    "updated": "2026-09-25T07:58:39.836Z"
+    "updated": "2026-09-27T20:08:34.953Z"
   },
   "fc-barcelona": {
     "name": "バルセロナ",
@@ -797,10 +797,10 @@
     "wikiUrl": "https://ja.wikipedia.org/wiki/FC%E3%83%90%E3%83%AB%E3%82%BB%E3%83%AD%E3%83%8A",
     "extract": "FCバルセロナ（スペイン語: Fútbol Club Barcelona、カタルーニャ語: Futbol Club Barcelona）は、スペイン・カタルーニャ州バルセロナに本拠地を置くサッカークラブ。スペイン1部リーグであるラ・リーガに所属している。 スペイン国内においては通算82ものタイトルを獲得しており、同リーグにおいて29回の優勝を記録しているほか、コパ・デル・レイとスーペルコパ・デ・エスパーニャにおいては最多優勝記録を持つ。レアル・マドリードとアスレティック・ビルバオと並んで1929年のリーガ・エスパニョーラの創立以来、一度もプリメーラ・ディビシオン（1部）から降格したことがない。",
     "founded": 1899,
-    "stadium": "エスタディ・オリンピック・リュイス・コンパニス",
-    "capacity": 55926,
+    "stadium": "Velòdrom de la Bonanova",
+    "capacity": null,
     "website": "https://www.fcbarcelona.cat/en/football/first-team",
-    "updated": "2026-09-25T07:58:42.336Z"
+    "updated": "2026-09-27T20:08:37.587Z"
   },
   "atletico-madrid": {
     "name": "アトレティコ",
@@ -811,7 +811,7 @@
     "stadium": "Estadio Metropolitano de Madrid",
     "capacity": 35800,
     "website": "https://www.atleticodemadrid.com/",
-    "updated": "2026-09-25T07:58:44.838Z"
+    "updated": "2026-09-27T20:08:40.084Z"
   },
   "valencia": {
     "name": "バレンシア",
@@ -822,7 +822,7 @@
     "stadium": "エスタディオ・デ・メスタージャ",
     "capacity": 49430,
     "website": "https://www.valenciacf.com",
-    "updated": "2026-09-25T07:58:47.363Z"
+    "updated": "2026-09-27T20:08:42.584Z"
   },
   "napoli": {
     "name": "ナポリ",
@@ -833,7 +833,7 @@
     "stadium": "スタディオ・ディエゴ・アルマンド・マラドーナ",
     "capacity": 76000,
     "website": "https://sscnapoli.it",
-    "updated": "2026-09-25T07:58:49.878Z"
+    "updated": "2026-09-27T20:08:45.084Z"
   },
   "as-roma": {
     "name": "ローマ",
@@ -844,7 +844,7 @@
     "stadium": "スタディオ・オリンピコ・ディ・ローマ",
     "capacity": 70634,
     "website": "https://www.asroma.com",
-    "updated": "2026-09-25T07:58:52.376Z"
+    "updated": "2026-09-27T20:08:47.596Z"
   },
   "ac-milan": {
     "name": "ミラン",
@@ -855,7 +855,7 @@
     "stadium": "スタディオ・ジュゼッペ・メアッツァ",
     "capacity": 75817,
     "website": "https://www.acmilan.com",
-    "updated": "2026-09-25T07:58:55.733Z"
+    "updated": "2026-09-27T20:08:50.083Z"
   },
   "juventus": {
     "name": "ユベントス",
@@ -866,7 +866,7 @@
     "stadium": "ユヴェントス・アリーナ",
     "capacity": 41689,
     "website": "https://www.juventus.com",
-    "updated": "2026-09-25T07:58:58.225Z"
+    "updated": "2026-09-27T20:08:52.592Z"
   },
   "inter": {
     "name": "インテル",
@@ -877,7 +877,7 @@
     "stadium": "スタディオ・ジュゼッペ・メアッツァ",
     "capacity": 75817,
     "website": "https://www.inter.it",
-    "updated": "2026-09-25T07:59:00.768Z"
+    "updated": "2026-09-27T20:08:55.120Z"
   },
   "lazio": {
     "name": "ラツィオ",
@@ -888,7 +888,7 @@
     "stadium": "スタディオ・オリンピコ・ディ・ローマ",
     "capacity": 70634,
     "website": "https://www.sslazio.it",
-    "updated": "2026-09-25T07:59:03.226Z"
+    "updated": "2026-09-27T20:08:57.627Z"
   },
   "atalanta": {
     "name": "アタランタ",
@@ -899,7 +899,7 @@
     "stadium": "スタディオ・アトレティ・アズーリ・ディターリア",
     "capacity": 24950,
     "website": "https://www.atalanta.it",
-    "updated": "2026-09-25T07:59:05.738Z"
+    "updated": "2026-09-27T20:09:00.101Z"
   },
   "fiorentina": {
     "name": "フィオレンティーナ",
@@ -910,7 +910,7 @@
     "stadium": "スタディオ・アルテミオ・フランキ",
     "capacity": 43325,
     "website": "https://www.acffiorentina.com",
-    "updated": "2026-09-25T07:59:08.242Z"
+    "updated": "2026-09-27T20:09:02.610Z"
   },
   "bologna": {
     "name": "ボローニャ",
@@ -921,7 +921,7 @@
     "stadium": "スタディオ・レナート・ダッラーラ",
     "capacity": 36462,
     "website": "https://www.bolognafc.it",
-    "updated": "2026-09-25T07:59:10.746Z"
+    "updated": "2026-09-27T20:09:05.108Z"
   },
   "torino": {
     "name": "トリノ",
@@ -932,7 +932,7 @@
     "stadium": "スタディオ・オリンピコ・ディ・トリノ",
     "capacity": 27958,
     "website": "https://www.torinofc.it",
-    "updated": "2026-09-25T07:59:13.258Z"
+    "updated": "2026-09-27T20:09:07.604Z"
   },
   "genoa": {
     "name": "ジェノア",
@@ -943,7 +943,7 @@
     "stadium": "スタディオ・ルイジ・フェッラーリス",
     "capacity": 33205,
     "website": "https://genoacfc.it",
-    "updated": "2026-09-25T07:59:15.746Z"
+    "updated": "2026-09-27T20:09:10.123Z"
   },
   "udinese": {
     "name": "ウディネーゼ",
@@ -954,7 +954,7 @@
     "stadium": "スタディオ・フリウーリ",
     "capacity": 25312,
     "website": "https://www.udinese.it",
-    "updated": "2026-09-25T07:59:18.249Z"
+    "updated": "2026-09-27T20:09:12.619Z"
   },
   "lecce": {
     "name": "レッチェ",
@@ -965,7 +965,7 @@
     "stadium": "スタディオ・ヴィア・デル・マーレ",
     "capacity": 31461,
     "website": "https://uslecce.it",
-    "updated": "2026-09-25T07:59:20.738Z"
+    "updated": "2026-09-27T20:09:15.114Z"
   },
   "cagliari": {
     "name": "カリアリ",
@@ -976,7 +976,7 @@
     "stadium": "ユニポール ドムス",
     "capacity": 16416,
     "website": "https://cagliaricalcio.com",
-    "updated": "2026-09-25T07:59:23.246Z"
+    "updated": "2026-09-27T20:09:17.602Z"
   },
   "hellas-verona": {
     "name": "ヴェローナ",
@@ -987,7 +987,7 @@
     "stadium": "スタディオ・マルカントニオ・ベンテゴディ",
     "capacity": 31045,
     "website": "https://hellasverona.it",
-    "updated": "2026-09-25T07:59:25.741Z"
+    "updated": "2026-09-27T20:09:20.100Z"
   },
   "como": {
     "name": "コモ",
@@ -998,7 +998,7 @@
     "stadium": "スタディオ・ジュゼッペ・シニガーリャ",
     "capacity": 13602,
     "website": "https://comofootball.com",
-    "updated": "2026-09-25T07:59:28.233Z"
+    "updated": "2026-09-27T20:09:22.633Z"
   },
   "sassuolo": {
     "name": "サッスオーロ",
@@ -1009,7 +1009,7 @@
     "stadium": "マペイ・スタジアム＝チッタ・デル・トリコローレ",
     "capacity": 21525,
     "website": "https://www.sassuolocalcio.it",
-    "updated": "2026-09-25T07:59:30.745Z"
+    "updated": "2026-09-27T20:09:25.113Z"
   },
   "pisa": {
     "name": "ピサ",
@@ -1020,7 +1020,7 @@
     "stadium": "アレーナ・ガリバルディ - スタディオ・ロメオ・アンコネターニ",
     "capacity": 10442,
     "website": "https://pisasportingclub.com",
-    "updated": "2026-09-25T07:59:33.247Z"
+    "updated": "2026-09-27T20:09:27.982Z"
   },
   "cremonese": {
     "name": "クレモネーゼ",
@@ -1031,7 +1031,7 @@
     "stadium": "スタディオ・ジョヴァンニ・ツィーニ",
     "capacity": 15191,
     "website": "https://uscremonese.it",
-    "updated": "2026-09-25T07:59:35.742Z"
+    "updated": "2026-09-27T20:09:30.477Z"
   },
   "real-madrid": {
     "name": "レアル・マドリード",
@@ -1042,7 +1042,7 @@
     "stadium": "エスタディオ・サンティアゴ・ベルナベウ",
     "capacity": 83186,
     "website": "https://www.realmadrid.com/",
-    "updated": "2026-09-25T07:59:38.255Z"
+    "updated": "2026-09-27T20:09:33.015Z"
   },
   "athletic": {
     "name": "アスレティック・ビルバオ",
@@ -1053,7 +1053,7 @@
     "stadium": "サン・マメス・バリア",
     "capacity": 53289,
     "website": "https://www.athletic-club.eus/",
-    "updated": "2026-09-25T07:59:40.743Z"
+    "updated": "2026-09-27T20:09:35.524Z"
   },
   "sevilla": {
     "name": "セビージャ",
@@ -1064,7 +1064,7 @@
     "stadium": "エスタディオ・ラモン・サンチェス・ピスフアン",
     "capacity": 43751,
     "website": "https://www.sevillafc.es/",
-    "updated": "2026-09-25T07:59:43.247Z"
+    "updated": "2026-09-27T20:09:38.036Z"
   },
   "real-betis-balompie": {
     "name": "ベティス",
@@ -1075,7 +1075,7 @@
     "stadium": "エスタディオ・ベニート・ビジャマリン",
     "capacity": 60721,
     "website": "http://www.realbetisbalompie.es/",
-    "updated": "2026-09-25T07:59:45.750Z"
+    "updated": "2026-09-27T20:09:40.504Z"
   },
   "girona": {
     "name": "ジローナ",
@@ -1086,7 +1086,7 @@
     "stadium": "エスタディ・モンティリビ",
     "capacity": 14624,
     "website": "https://www.gironafc.cat/",
-    "updated": "2026-09-25T07:59:48.249Z"
+    "updated": "2026-09-27T20:09:43.010Z"
   },
   "celta-vigo": {
     "name": "セルタ",
@@ -1097,7 +1097,7 @@
     "stadium": "エスタディオ・デ・バライードス",
     "capacity": 24870,
     "website": "http://www.rccelta.es/",
-    "updated": "2026-09-25T07:59:50.740Z"
+    "updated": "2026-09-27T20:09:45.526Z"
   },
   "villarreal": {
     "name": "ビジャレアル",
@@ -1108,7 +1108,7 @@
     "stadium": "エスタディオ・デ・ラ・セラミカ",
     "capacity": 24891,
     "website": "https://villarrealcf.es/",
-    "updated": "2026-09-25T07:59:53.244Z"
+    "updated": "2026-09-27T20:09:48.034Z"
   },
   "getafe": {
     "name": "ヘタフェ",
@@ -1119,7 +1119,7 @@
     "stadium": "コリセウム・アルフォンソ・ペレス",
     "capacity": 16500,
     "website": "https://www.getafecf.com/",
-    "updated": "2026-09-25T07:59:55.768Z"
+    "updated": "2026-09-27T20:09:50.514Z"
   },
   "osasuna": {
     "name": "オサスナ",
@@ -1130,7 +1130,7 @@
     "stadium": "エスタディオ・レイノ・デ・ナバーラ",
     "capacity": 23576,
     "website": "https://www.osasuna.es/",
-    "updated": "2026-09-25T07:59:58.261Z"
+    "updated": "2026-09-27T20:09:53.018Z"
   },
   "mallorca": {
     "name": "マヨルカ",
@@ -1141,7 +1141,7 @@
     "stadium": "イベロスター・エスタディ",
     "capacity": 23142,
     "website": "https://www.rcdmallorca.es/",
-    "updated": "2026-09-25T08:00:00.773Z"
+    "updated": "2026-09-27T20:09:55.515Z"
   },
   "rayo-vallecano-madrid": {
     "name": "ラーヨ・バジェカーノ",
@@ -1152,7 +1152,7 @@
     "stadium": "カンポ・デ・フトボル・デ・バジェカス",
     "capacity": 14708,
     "website": "http://www.rayovallecano.es/",
-    "updated": "2026-09-25T08:00:03.269Z"
+    "updated": "2026-09-27T20:09:58.020Z"
   },
   "deportivo-alaves": {
     "name": "アラベス",
@@ -1163,7 +1163,7 @@
     "stadium": "エスタディオ・デ・メンディソロツァ",
     "capacity": 19840,
     "website": "https://www.deportivoalaves.com/",
-    "updated": "2026-09-25T08:00:05.765Z"
+    "updated": "2026-09-27T20:10:00.529Z"
   },
   "elche": {
     "name": "エルチェ",
@@ -1174,7 +1174,7 @@
     "stadium": "エスタディオ・マヌエル・マルティネス・バレーロ",
     "capacity": 31388,
     "website": "https://www.elchecf.es/",
-    "updated": "2026-09-25T08:00:08.438Z"
+    "updated": "2026-09-27T20:10:03.023Z"
   },
   "levante": {
     "name": "レバンテ",
@@ -1185,7 +1185,7 @@
     "stadium": "エスタディオ・シウダ・デ・バレンシア",
     "capacity": 26354,
     "website": "https://www.levanteud.com/",
-    "updated": "2026-09-25T08:00:11.018Z"
+    "updated": "2026-09-27T20:10:05.672Z"
   },
   "espanyol-barcelona": {
     "name": "エスパニョール",
@@ -1196,7 +1196,7 @@
     "stadium": "エスタディ・コルネリャ＝エル・プラット",
     "capacity": 40500,
     "website": "https://www.rcdespanyol.com/",
-    "updated": "2026-09-25T08:00:13.520Z"
+    "updated": "2026-09-27T20:10:08.181Z"
   },
   "real-oviedo": {
     "name": "オビエド",
@@ -1207,7 +1207,7 @@
     "stadium": "エスタディオ・カルロス・タルティエレ",
     "capacity": 30500,
     "website": "https://www.realoviedo.es/",
-    "updated": "2026-09-25T08:00:16.807Z"
+    "updated": "2026-09-27T20:10:10.676Z"
   },
   "psg": {
     "name": "PSG",
@@ -1218,7 +1218,7 @@
     "stadium": "パルク・デ・プランス",
     "capacity": 47930,
     "website": "https://www.psg.fr",
-    "updated": "2026-09-25T08:00:19.309Z"
+    "updated": "2026-09-27T20:10:13.212Z"
   },
   "marseille": {
     "name": "マルセイユ",
@@ -1229,7 +1229,7 @@
     "stadium": "スタッド・ヴェロドローム",
     "capacity": 67394,
     "website": "https://www.om.fr",
-    "updated": "2026-09-25T08:00:21.812Z"
+    "updated": "2026-09-27T20:10:15.700Z"
   },
   "borussia-dortmund": {
     "name": "ドルトムント",
@@ -1240,7 +1240,7 @@
     "stadium": "ヴェストファーレンシュタディオン",
     "capacity": 81359,
     "website": "https://www.bvb.de/",
-    "updated": "2026-09-25T08:00:24.314Z"
+    "updated": "2026-09-27T20:10:18.213Z"
   },
   "benfica": {
     "name": "ベンフィカ",
@@ -1251,7 +1251,7 @@
     "stadium": "エスタディオ・ダ・ルス",
     "capacity": 68100,
     "website": "https://www.slbenfica.pt/",
-    "updated": "2026-09-25T08:00:26.803Z"
+    "updated": "2026-09-27T20:10:20.698Z"
   },
   "fc-porto": {
     "name": "ポルト",
@@ -1262,6 +1262,6 @@
     "stadium": "エスタディオ・ド・ドラゴン",
     "capacity": 50033,
     "website": "https://www.fcporto.pt/",
-    "updated": "2026-09-25T08:00:29.318Z"
+    "updated": "2026-09-27T20:10:23.204Z"
   }
 }
