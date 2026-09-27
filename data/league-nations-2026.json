@@ -18,6 +18,28 @@
     {
       "matchday": 1,
       "dateUTC": "",
+      "home": "イングランド",
+      "away": "スペイン",
+      "homeSlug": "england",
+      "awaySlug": "spain",
+      "finished": true,
+      "score": "",
+      "videoId": "balvaCTvic8"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "オーストリア",
+      "away": "イスラエル",
+      "homeSlug": "austria",
+      "awaySlug": "israel",
+      "finished": true,
+      "score": "",
+      "videoId": "kLYK0j58FIk"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
       "home": "オランダ",
       "away": "ドイツ",
       "homeSlug": "netherlands",
@@ -25,6 +47,28 @@
       "finished": true,
       "score": "",
       "videoId": "9MiNSAi0WpI"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "コソボ",
+      "away": "アイルランド",
+      "homeSlug": "kosovo",
+      "awaySlug": "ireland",
+      "finished": true,
+      "score": "",
+      "videoId": "Z7mm3NOxNzE"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "チェコ",
+      "away": "クロアチア",
+      "homeSlug": "czech",
+      "awaySlug": "croatia",
+      "finished": true,
+      "score": "",
+      "videoId": "G3i9hXwNm-Y"
     },
     {
       "matchday": 1,
