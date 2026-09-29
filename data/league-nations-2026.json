@@ -205,6 +205,61 @@
     {
       "matchday": 2,
       "dateUTC": "",
+      "home": "イスラエル",
+      "away": "アイルランド",
+      "homeSlug": "israel",
+      "awaySlug": "ireland",
+      "finished": true,
+      "score": "",
+      "videoId": "VUnIUAb7T9k"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "オーストリア",
+      "away": "コソボ",
+      "homeSlug": "austria",
+      "awaySlug": "kosovo",
+      "finished": true,
+      "score": "",
+      "videoId": "ZSxvxdZ6HP8"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ジブラルタル",
+      "away": "アンドラ",
+      "homeSlug": "x-ジブラルタル",
+      "awaySlug": "x-アンドラ",
+      "finished": true,
+      "score": "",
+      "videoId": "GKDUWA4bYQk"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "セルビア",
+      "away": "オランダ",
+      "homeSlug": "serbia",
+      "awaySlug": "netherlands",
+      "finished": true,
+      "score": "",
+      "videoId": "BWuCgIDffds"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "デンマーク",
+      "away": "ウェールズ",
+      "homeSlug": "denmark",
+      "awaySlug": "wales",
+      "finished": true,
+      "score": "",
+      "videoId": "nGzcTQKBuqI"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
       "home": "ドイツ",
       "away": "ギリシャ",
       "homeSlug": "germany",
@@ -216,6 +271,17 @@
     {
       "matchday": 2,
       "dateUTC": "",
+      "home": "トルコ",
+      "away": "イタリア",
+      "homeSlug": "turkey",
+      "awaySlug": "italy",
+      "finished": true,
+      "score": "",
+      "videoId": "ufvkLXJ8j8k"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
       "home": "ノルウェー",
       "away": "ポルトガル",
       "homeSlug": "norway",
@@ -223,6 +289,28 @@
       "finished": true,
       "score": "",
       "videoId": "0ddiJxfbqTk"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ベルギー",
+      "away": "フランス",
+      "homeSlug": "belgium",
+      "awaySlug": "france",
+      "finished": true,
+      "score": "",
+      "videoId": "nFa7NVdBWrw"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "リトアニア",
+      "away": "アゼルバイジャン",
+      "homeSlug": "lithuania",
+      "awaySlug": "azerbaijan",
+      "finished": true,
+      "score": "",
+      "videoId": "vrqdufOY_Gs"
     }
   ]
 }
