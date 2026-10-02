@@ -421,6 +421,39 @@
       "finished": true,
       "score": "",
       "videoId": "vrqdufOY_Gs"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "ギリシャ",
+      "away": "オランダ",
+      "homeSlug": "greece",
+      "awaySlug": "netherlands",
+      "finished": true,
+      "score": "",
+      "videoId": "JEMccb0fmMA"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "デンマーク",
+      "away": "ポルトガル",
+      "homeSlug": "denmark",
+      "awaySlug": "portugal",
+      "finished": true,
+      "score": "",
+      "videoId": "DiR7yj5FTb8"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "ドイツ",
+      "away": "セルビア",
+      "homeSlug": "germany",
+      "awaySlug": "serbia",
+      "finished": true,
+      "score": "",
+      "videoId": "lwYLwmtY1nE"
     }
   ]
 }
