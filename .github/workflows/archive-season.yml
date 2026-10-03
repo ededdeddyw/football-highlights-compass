@@ -1,0 +1,72 @@
+name: Archive past season (過去シーズンのハイライトを保存)
+
+# 配信チャンネルに残っている「過去シーズン」の公式ハイライトを data/league-<code>-<season>.json に
+# 取り込む（通常の日次更新は現行シーズンのみを対象にするため、昨季のノックアウト等は拾われない）。
+# 主な用途：カンファレンス/ヨーロッパ/チャンピオンズの昨季決勝〜ノックアウトなど、ハブに載せたい歴史的名勝負。
+# 手動実行のみ。既定は 2025-26 シーズンの WOWOW カップ戦（conference el cl）。
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン開始年（例: 2025 = 2025-26）'
+        required: true
+        default: '2025'
+      leagues:
+        description: '対象リーグコード（スペース区切り。動画ファーストのカップ戦向け）'
+        required: true
+        default: 'conference el'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: archive-season
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: APIキー確認
+        run: |
+          if [ -z "$YOUTUBE_API_KEY" ]; then
+            echo "::warning::Secret YOUTUBE_API_KEY が未設定です。CIでは取得が0件になります。"
+          fi
+
+      - name: 過去シーズンのハイライト取得
+        run: |
+          for lg in ${{ github.event.inputs.leagues }}; do
+            echo "== $lg (season ${{ github.event.inputs.season }}) =="
+            node scripts/fetch-unext-pl.mjs --league=$lg --season=${{ github.event.inputs.season }} || echo "  ($lg はスキップ/失敗)"
+          done
+
+      - name: 変化があればコミット
+        id: commit
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/league-*.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "過去シーズンに変化なし。"; exit 0
+          fi
+          git commit -m "data(highlights): 過去シーズンの公式ハイライトをアーカイブ（season ${{ github.event.inputs.season }}）"
+          git pull --rebase --autostash || true
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 本番デプロイを起動（変化時のみ）
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-diff.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy-diff.yml をディスパッチしました。"

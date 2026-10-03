@@ -2327,6 +2327,122 @@ try {
 
 for(const h of LEAGUE_LIST) buildLeague(h);
 
+// ========================= サイト内検索（全エンティティ横断） =========================
+// クラブ・選手・リーグ・大会・代表の全ページを1つの search-index.json にまとめ、
+// 専用ページ /search.html と（別途）トップのオートコンプリートから横断検索できるようにする。
+// 従来のトップ検索は「トップに表示中の試合カードに出てくる名前」しか引けなかった＝
+// ページはあるのに検索で辿り着けないクラブ/選手/リーグが多数あった。それを全件インデックス化して回遊性を底上げする。
+function searchPageHtml(count){
+  const pageUrl = `${DOMAIN}/search.html`;
+  const title = 'サイト内検索｜クラブ・選手・リーグ・代表を横断検索 - Football Highlights Compass';
+  const desc = 'クラブ・選手・リーグ・大会・代表チームのページを横断検索。チーム名・選手名・ローマ字（barcelona, kubo など）でも探せます。公式ハイライトまとめサイトの検索ページ。';
+  return `<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+${CANON_REDIRECT}<title>${esc(title)}</title>
+<meta name="description" content="${escA(desc)}">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<link rel="canonical" href="${pageUrl}">
+${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://flagcdn.com"><link rel="dns-prefetch" href="https://r2.thesportsdb.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="${escA('サイト内検索｜クラブ・選手・リーグ・代表')}"><meta property="og:description" content="${escA(desc)}">
+<meta property="og:url" content="${pageUrl}"><meta property="og:image" content="${DOMAIN}/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA('サイト内検索｜Football Highlights Compass')}"><meta name="twitter:image" content="${DOMAIN}/og.png">
+<script type="application/ld+json">${JSON.stringify(ld([{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":DOMAIN+"/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":DOMAIN+"/"},{"@type":"ListItem","position":2,"name":"サイト内検索","item":pageUrl}]}]))}</script>
+<link rel="stylesheet" href="article.css?v=${CSS_VER}">
+<style>
+  .srch-wrap{max-width:780px;margin:0 auto;padding:16px 16px 70px}
+  .srch-top{display:flex;align-items:center;gap:10px;margin:4px 0 14px}
+  .srch-top a.home{font-weight:700;color:var(--accent);text-decoration:none;font-size:13px;white-space:nowrap}
+  .srch-h{font-size:21px;font-weight:900;margin:2px 0 14px;color:var(--ink)}
+  .srch-box{position:relative}
+  .srch-box input{width:100%;box-sizing:border-box;font-size:17px;font-weight:600;padding:14px 16px 14px 46px;border:2px solid var(--line2);border-radius:12px;background:var(--paper);color:var(--ink)}
+  .srch-box input:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 3px rgba(39,70,201,.2)}
+  .srch-box .ic{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.55}
+  .srch-count{color:var(--muted);font-size:12px;margin:10px 2px 2px}
+  .srch-sec{margin:18px 0 2px;font-size:13px;font-weight:800;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:5px}
+  .srch-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:8px 0}
+  a.srch-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:inherit;background:var(--paper)}
+  a.srch-item:hover{background:var(--card2);border-color:var(--accent2)}
+  a.srch-item .si-ic{flex:0 0 auto;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:17px}
+  a.srch-item .si-ic img{max-width:28px;max-height:28px;object-fit:contain;border-radius:2px}
+  a.srch-item .si-tx{min-width:0}
+  a.srch-item .si-nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+  a.srch-item .si-sub{color:var(--muted);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .srch-empty{color:var(--muted);padding:34px 0;text-align:center;line-height:1.8}
+  .srch-hint{color:var(--muted);font-size:12.5px;margin:16px 2px;line-height:1.75}
+</style>
+</head><body>
+<div class="srch-wrap">
+  <div class="srch-top"><a class="home" href="./">← トップへ戻る</a></div>
+  <h1 class="srch-h">🔍 サイト内検索</h1>
+  <div class="srch-box"><span class="ic">🔎</span><input id="sq" type="search" placeholder="チーム・選手・リーグ・代表を検索（例：バルセロナ / 久保 / プレミア）" autocomplete="off" autofocus></div>
+  <div class="srch-count" id="scount"></div>
+  <div id="sresults"></div>
+  <p class="srch-hint">クラブ・選手・リーグ・大会・代表チームの全ページ（${count}件）から横断検索します。ローマ字（例：barcelona, kubo, premier）でも探せます。各ページから公式ハイライト・順位表・日程へ辿れます。</p>
+</div>
+<script>
+(function(){
+  var KIND={league:'リーグ・大会',club:'クラブ',player:'選手',country:'代表チーム'};
+  var KORDER=['league','club','player','country'];
+  var IDX=[], input=document.getElementById('sq'), out=document.getElementById('sresults'), cnt=document.getElementById('scount');
+  function nrm(s){return String(s||'').replace(/\\s+/g,'').toLowerCase();}
+  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':'🛡️'; }
+  function render(raw){
+    var q=nrm(raw);
+    var list = !q ? IDX.slice() : IDX.filter(function(x){return x.kw.indexOf(q)>=0;});
+    if(q) list.sort(function(a,b){ var ap=a.kw.indexOf(q)===0?0:1, bp=b.kw.indexOf(q)===0?0:1; if(ap!==bp) return ap-bp; return (a.t||'').length-(b.t||'').length; });
+    cnt.textContent = q ? (list.length+' 件が一致') : (IDX.length+' 件のページ');
+    if(!list.length){ out.innerHTML='<p class="srch-empty">「'+esc(raw||'')+'」に一致するページがありません。<br>別のキーワードでお試しください。</p>'; return; }
+    var by={}; list.forEach(function(x){ (by[x.k]=by[x.k]||[]).push(x); });
+    var html='';
+    KORDER.forEach(function(k){ if(!by[k]) return; var items=by[k].slice(0,80);
+      html+='<div class="srch-sec">'+KIND[k]+'（'+by[k].length+'）</div><div class="srch-list">'+items.map(function(x){
+        return '<a class="srch-item" href="'+esc(x.u)+'"><span class="si-ic">'+icon(x)+'</span><span class="si-tx"><span class="si-nm">'+esc(x.t)+'</span>'+(x.s?'<span class="si-sub">'+esc(x.s)+'</span>':'')+'</span></a>';
+      }).join('')+'</div>';
+    });
+    out.innerHTML=html;
+  }
+  fetch('search-index.json').then(function(r){return r.json();}).then(function(d){ IDX=d||[]; var q=''; try{q=new URLSearchParams(location.search).get('q')||'';}catch(e){} if(q){input.value=q;} render(q); }).catch(function(){ out.innerHTML='<p class="srch-empty">検索データの読み込みに失敗しました。時間をおいて再度お試しください。</p>'; });
+  input.addEventListener('input', function(){ render(input.value); });
+})();
+</script>
+</body></html>`;
+}
+try {
+  const SIDX = [];
+  const nrmKw = s => String(s||'').replace(/\s+/g,'').toLowerCase();
+  const kwOf = arr => arr.filter(Boolean).map(nrmKw).join(' ');
+  // リーグ・大会（ハブが実際に生成されたものだけ）
+  for(const h of LEAGUE_LIST){
+    if(!leagueUrls.some(u=>u.endsWith(`/league/${h.slug}.html`))) continue;
+    SIDX.push({ t:h.name, u:`league/${h.slug}.html`, k:'league', s:h.country||'', kw: kwOf([h.name, h.slug, (h.slug||'').replace(/-/g,' '), h.country, h.clubLabel]) });
+  }
+  // クラブ（全クラブにページあり）
+  for(const [name,info] of Object.entries(CLUBS)){
+    if(!info || !info.slug) continue;
+    SIDX.push({ t:name, u:`club/${info.slug}.html`, k:'club', s:[info.league,info.country].filter(Boolean).join('・'), kw: kwOf([name, info.slug, (info.slug||'').replace(/-/g,' '), info.league, info.country]), img: CREST[info.slug]||'' });
+  }
+  // 選手
+  for(const p of PLAYERS){
+    if(!p || !p.slug) continue;
+    SIDX.push({ t:p.name, u:`player/${p.slug}.html`, k:'player', s:[p.club,p.pos].filter(Boolean).join('・'), kw: kwOf([p.name, p.slug, (p.slug||'').replace(/-/g,' '), p.club, p.pos]) });
+  }
+  // 代表（matchがある＝ページ生成済みの国のみ）
+  for(const [name,info] of Object.entries(COUNTRIES)){
+    if(!info || !info.slug || !entityMatches(name).length) continue;
+    SIDX.push({ t:name+'代表', u:`country/${info.slug}.html`, k:'country', s:info.confed||'', kw: kwOf([name, name+'代表', info.slug, (info.slug||'').replace(/-/g,' '), info.confed]), iso: info.iso||'' });
+  }
+  writeFileSync('site/search-index.json', JSON.stringify(SIDX));
+  writeFileSync('site/search.html', searchPageHtml(SIDX.length));
+  console.log(`サイト内検索: ${SIDX.length}件をインデックス化 → site/search.html, site/search-index.json`);
+} catch(e){ console.warn('検索インデックス生成でエラー:', e.message); }
+
 // ========================= 全リーグ横断「今週の試合日程」ページ =========================
 // 欧州5大リーグの未消化試合を日本時間の日付でまとめる。「今日/今週の試合」系の広い検索需要＋日次の再訪動線。
 let scheduleUrl = '';
@@ -2680,6 +2796,7 @@ const LEAGUE_MATCHES_HTML = (()=>{
 
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
+if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;

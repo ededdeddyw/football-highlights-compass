@@ -80,6 +80,8 @@
   .col-right .ac-wrap input::placeholder{color:var(--muted); font-weight:500}
   .col-right .ac-wrap input::-webkit-search-cancel-button{-webkit-appearance:none}
   .col-right .ac-wrap input:focus{outline:none; border-color:var(--accent2); box-shadow:0 0 0 3px rgba(39,70,201,.15)}
+  .allsearch-link{display:block; margin:8px 2px 2px; font-size:12.5px; font-weight:700; color:var(--accent2); text-decoration:none}
+  .allsearch-link:hover{text-decoration:underline}
   .sort-sel{width:100%; box-sizing:border-box; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:var(--card2); color:var(--text); font-size:14px; font-weight:700; cursor:pointer; -webkit-appearance:none; appearance:none; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a93b5' stroke-width='2.5' stroke-linecap='round'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat:no-repeat; background-position:right 12px center}
   .sort-sel:focus{outline:none; border-color:var(--accent2)}
   .nav-backdrop{display:none; position:fixed; inset:0; background:rgba(8,14,40,.5); z-index:55}
@@ -391,6 +393,7 @@
     <aside class="col-right">
       <div class="side-h" style="margin-top:2px">検索</div>
       <div class="ac-wrap"><input id="q" type="search" placeholder="チーム・選手・大会名で検索" autocomplete="off"><div class="ac-list" id="qList"></div></div>
+      <a class="allsearch-link" href="search.html">🔍 クラブ・選手・リーグを全件検索 →</a>
       <button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>
       <div class="side-h">リーグ・大会で絞り込み</div>
       <div class="chips" id="league-chips"></div>
@@ -1432,6 +1435,7 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
 // ===== 検索・絞り込み（全カード横断・チーム/リーグ/日本人選手） =====
 (function(){
   var CANON = ['久保建英','鈴木彩艶','南野拓実','堂安律','守田英正','佐野海舟','伊藤洋輝','菅原由勢','藤田譲瑠チマ','川﨑颯太','長田澪','鎌田大地','上田綺世','伊東純也'];
+  var FULL_IDX = [];   // search-index.json（全クラブ/選手/リーグ/代表ページ）を遅延ロードしてオートコンプリートを拡張
   function leagueOf(t){
     if(/グループ|ワールドカップ/.test(t)) return ['wc','W杯26'];
     if(/Jリーグ|オールスター/.test(t)) return ['jl','Jリーグ'];
@@ -1579,6 +1583,14 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     var CC=(typeof CLUB_CRESTS!=='undefined')?CLUB_CRESTS:{};
     Object.keys(clubs).forEach(function(tm){ if(tm.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0){ var ci=CC[tm]?'<img class="cr" src="'+CC[tm]+'" alt="">':'🛡️'; add(EP[tm]?{ic:ci,tx:tm,tag:'クラブページ',href:EP[tm]}:{ic:ci,tx:tm,tag:'クラブ',act:function(){setSearch(tm);}}); } });
     matchList.forEach(function(m){ if(m.ttl.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'▶',tx:m.ttl,tag:'試合',href:'match/'+m.id+'.html'}); });
+    // 全件インデックス（search-index.json）からも補完：トップに表示中の試合に出てこないクラブ/選手/リーグ/代表のページも拾う
+    if(s.length<9 && FULL_IDX.length){
+      var seen={}; s.forEach(function(o){ if(o.href) seen[o.href]=1; });
+      var TAG={league:'リーグ',club:'クラブページ',player:'選手',country:'代表ページ'};
+      var hits=FULL_IDX.filter(function(x){ return x.kw.indexOf(q)>=0 && !seen[x.u]; });
+      hits.sort(function(a,b){ var ap=a.kw.indexOf(q)===0?0:1, bp=b.kw.indexOf(q)===0?0:1; return ap-bp; });
+      hits.forEach(function(x){ var ic = x.img ? '<img class="cr" src="'+x.img+'" alt="">' : (x.k==='country'&&x.iso ? '<img class="flag" src="https://flagcdn.com/w20/'+x.iso+'.png" alt="">' : (x.k==='player'?'⚽':x.k==='league'?'🏆':'🛡️')); add({ic:ic,tx:x.t,tag:TAG[x.k]||'',href:x.u}); });
+    }
     return s.slice(0,9);
   }
   function attachAC(input, list){
@@ -1617,6 +1629,8 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
   var mBack=document.getElementById('navBackdrop'); if(mBack) mBack.addEventListener('click', closeMenu);
 
   apply();
+  // 全件検索インデックスを遅延ロード（失敗してもオートコンプリートはカード由来の候補で動作継続）
+  try{ fetch('search-index.json').then(function(r){return r.json();}).then(function(d){ FULL_IDX = Array.isArray(d)?d:[]; }).catch(function(){}); }catch(e){}
 })();
 </script>
 
