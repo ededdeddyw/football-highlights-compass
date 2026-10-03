@@ -2443,6 +2443,107 @@ try {
   console.log(`サイト内検索: ${SIDX.length}件をインデックス化 → site/search.html, site/search-index.json`);
 } catch(e){ console.warn('検索インデックス生成でエラー:', e.message); }
 
+// ========================= 英語版（着手：英語トップページ /en/） =========================
+// 海外からの検索流入向けの英語ランディング。「公式ハイライトのネタバレ防止まとめ」という価値を英語で提示し、
+// 直近のハイライト（CL/5大リーグ/EL等）を英語チーム名のカードで見せて試合ページ・検索へ送る。
+// フル英語化（全ハブ・全試合）は規模が大きいため、まずトップのMVPから着手。hreflangで日本語版と相互リンクする。
+try {
+  mkdirSync('site/en', { recursive: true });
+  // JAチーム名 → 英語表記：クラブ/国の英語スラッグを整形して利用（例 real-sociedad → Real Sociedad）。未登録は原名のまま。
+  const EN_TOKEN = { fc:'FC', cf:'CF', sc:'SC', ac:'AC', rc:'RC', rb:'RB', afc:'AFC', psv:'PSV', psg:'PSG', vfb:'VfB', vfl:'VfL', bsc:'BSC', ssc:'SSC', us:'US', ud:'UD', cd:'CD', rcd:'RCD', fsv:'FSV', tsg:'TSG', az:'AZ' };
+  const prettySlug = slug => String(slug||'').split('-').map(w => EN_TOKEN[w] || (w ? w.charAt(0).toUpperCase()+w.slice(1) : w)).join(' ');
+  const SLUG_BY_JA = {};
+  for (const [n,i] of Object.entries(CLUBS)) if(i && i.slug) SLUG_BY_JA[n] = i.slug;
+  for (const [n,i] of Object.entries(COUNTRIES)) if(i && i.slug && !SLUG_BY_JA[n]) SLUG_BY_JA[n] = i.slug;
+  // 解決順：データ側の日本語名→slug（最も確実）→ CLUBS/COUNTRIESキー→slug。どれも無ければ原名のまま。
+  const enTeam = ja => { const s = DATA_SLUG_BY_JA[ja] || SLUG_BY_JA[ja]; return s ? prettySlug(s) : ja; };
+  const LEAGUE_EN = { pl:'Premier League', laliga:'La Liga', sa:'Serie A', bl:'Bundesliga', ligue1:'Ligue 1', cl:'Champions League', el:'Europa League', conference:'Conference League', eredivisie:'Eredivisie', primeira:'Primeira Liga', belgium:'Belgian Pro League', j1:'J1 League', j2:'J2 League', j3:'J3 League', nations:'Nations League', acl:'AFC Champions League', jpn:'Japan NT', carabao:'Carabao Cup' };
+  const EN_ORDER = ['cl','pl','laliga','sa','bl','ligue1','el','eredivisie','conference','nations'];
+  const enItems = [];
+  for (const code of EN_ORDER) for (const r of (LEAGUE_RECENT[code]||[])) if (r.videoId && r.home && r.away) enItems.push({ code, home:r.home, away:r.away, md:r.matchday, vid:r.videoId, date:(r.dateUTC||'').slice(0,10) });
+  enItems.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const enCards = enItems.slice(0,60).map(it => {
+    const meta = `${LEAGUE_EN[it.code]||it.code}${it.md!=null?` · MD ${it.md}`:''}`;
+    return `<a class="encard" href="../match/${it.vid}.html"><span class="enthumb"><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="" loading="lazy"><span class="enplay">▶</span></span><span class="entx"><span class="enttl">${esc(enTeam(it.home))} vs ${esc(enTeam(it.away))}</span><span class="enmeta">${esc(meta)}</span></span></a>`;
+  }).join('');
+  const coveredEn = [...new Set(EN_ORDER.filter(c=>(LEAGUE_RECENT[c]||[]).some(r=>r.videoId)).map(c=>LEAGUE_EN[c]))];
+  const enUrl = `${DOMAIN}/en/`;
+  const enTitle = 'Football Highlights Compass｜Official, Spoiler-Free Match Highlights';
+  const enDesc = 'A spoiler-free hub of official football highlights — Champions League, Premier League, La Liga, Serie A, Bundesliga, Ligue 1 and more. Only official/rights-holder videos, scores hidden by default.';
+  const enHtml = `<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+${CANON_REDIRECT}<title>${esc(enTitle)}</title>
+<meta name="description" content="${escA(enDesc)}">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<link rel="canonical" href="${enUrl}">
+<link rel="alternate" hreflang="ja" href="${DOMAIN}/"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${DOMAIN}/">
+${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com"><link rel="dns-prefetch" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:title" content="${escA(enTitle)}"><meta property="og:description" content="${escA(enDesc)}"><meta property="og:url" content="${enUrl}"><meta property="og:image" content="${DOMAIN}/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA('Football Highlights Compass')}"><meta name="twitter:image" content="${DOMAIN}/og.png"><meta name="twitter:description" content="${escA(enDesc)}">
+<script type="application/ld+json">${JSON.stringify(ld([{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/","inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":DOMAIN+"/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}]))}</script>
+<link rel="stylesheet" href="../article.css?v=${CSS_VER}">
+<style>
+  .en-wrap{max-width:1040px;margin:0 auto;padding:16px 16px 70px}
+  .en-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 18px;flex-wrap:wrap}
+  .en-brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--accent);font-weight:800;font-size:15px}
+  .en-brand img{width:26px;height:26px}
+  .en-lang{font-size:12.5px;font-weight:700;color:var(--accent2);text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:5px 12px}
+  .en-lang:hover{background:var(--card2)}
+  .en-hero{margin:4px 0 18px}
+  .en-hero h1{font-size:25px;line-height:1.3;font-weight:900;margin:0 0 10px;color:var(--ink)}
+  .en-hero p{font-size:14.5px;line-height:1.8;color:var(--ink2);margin:0 0 12px;max-width:72ch}
+  .en-cta{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 2px}
+  .en-cta a{font-size:13.5px;font-weight:700;text-decoration:none;border-radius:10px;padding:10px 16px}
+  .en-cta .primary{background:var(--accent2);color:#fff}
+  .en-cta .ghost{border:1px solid var(--line2);color:var(--accent2)}
+  .en-leagues{color:var(--muted);font-size:12.5px;margin:12px 2px 0;line-height:1.7}
+  .en-sec{font-size:15px;font-weight:800;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:6px;margin:26px 0 12px}
+  .engrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  a.encard{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
+  a.encard:hover{border-color:var(--accent2);box-shadow:0 2px 10px rgba(20,30,90,.08)}
+  .enthumb{position:relative;display:block;aspect-ratio:16/9;background:#0b1020}
+  .enthumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .enplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:rgba(12,22,87,.82);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px}
+  .entx{display:block;padding:10px 12px}
+  .enttl{display:block;font-weight:700;font-size:13.5px;line-height:1.4;color:var(--ink)}
+  .enmeta{display:block;color:var(--muted);font-size:11.5px;margin-top:4px}
+  .en-foot{margin:34px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.8}
+  .en-foot a{color:var(--accent2);text-decoration:none}
+</style>
+</head><body>
+<div class="en-wrap">
+  <div class="en-top">
+    <a class="en-brand" href="../"><img src="../favicon.svg" alt="">Football Highlights Compass</a>
+    <a class="en-lang" href="../">日本語版 →</a>
+  </div>
+  <div class="en-hero">
+    <h1>Official, spoiler-free football highlights — all in one place</h1>
+    <p>Football Highlights Compass gathers only <strong>official and rights-holder</strong> highlight videos across Europe's top competitions, with scores hidden by default so you can catch up without spoilers. No pirated clips, no reuploads — just the official video for each match.</p>
+    <div class="en-cta">
+      <a class="primary" href="../search.html">🔍 Search clubs, players &amp; competitions</a>
+      <a class="ghost" href="#latest">Latest highlights ↓</a>
+    </div>
+    ${coveredEn.length?`<p class="en-leagues">Covering: ${coveredEn.map(esc).join(' · ')} and more.</p>`:''}
+  </div>
+  <h2 class="en-sec" id="latest">Latest highlights</h2>
+  ${enCards?`<div class="engrid">${enCards}</div>`:'<p class="en-leagues">New highlights are added daily.</p>'}
+  <div class="en-foot">
+    <p>Match pages are currently in Japanese, but the video players and scores are universal. Scores are hidden by default (spoiler-free); toggle them on any match page.</p>
+    <p>Looking for the full experience? Visit the <a href="../">Japanese site</a> for standings, fixtures, club &amp; player pages and news.</p>
+    <p>Highlights are embedded from official YouTube channels of the respective rights holders. This site does not host any video.</p>
+  </div>
+</div>
+</body></html>`;
+  writeFileSync('site/en/index.html', enHtml);
+  console.log(`英語版トップ: site/en/index.html（直近ハイライト ${Math.min(enItems.length,60)}件）`);
+} catch(e){ console.warn('英語版生成でエラー:', e.message); }
+
 // ========================= 全リーグ横断「今週の試合日程」ページ =========================
 // 欧州5大リーグの未消化試合を日本時間の日付でまとめる。「今日/今週の試合」系の広い検索需要＋日次の再訪動線。
 let scheduleUrl = '';
@@ -2797,6 +2898,7 @@ const LEAGUE_MATCHES_HTML = (()=>{
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
+if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
