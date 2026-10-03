@@ -1150,7 +1150,7 @@ function buildMatch(m){
   // ネタバレON/OFFはページ上部に固定（スクロール追従）。「この試合」タグは動画の上へ。見どころは右カラムへ。
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const bingeNext = NEXT[m.id] || '';
-  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span><a href="../?league=${m.league}">${esc(lg||'試合')}の一覧</a><a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a><a href="../">他の試合を探す</a></div>`;
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span><a href="../?league=${m.league}">${esc(lg||'試合')}の一覧</a><a href="../group/knockout.html">🏆 W杯 決勝トーナメント</a><a href="../search.html">🔍 検索</a><a href="../">他の試合を探す</a></div>`;
   const sideRead = renderPreview(m.id);                 // 右カラムに置く見どころ（あれば）
   const sideContent = sideRead || relHtml || '';        // 見どころが無い試合は関連試合を右に
   const bottomRel = sideRead ? relHtml : '';            // 見どころがある試合は関連を下に残す
@@ -1260,7 +1260,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   const resultRow = (mt.finished && mt.score) ? `<tr class="spoiler-cover"><th>結果</th><td>${esc(mt.home)} ${esc(mt.score.replace('-','−'))} ${esc(mt.away)}</td></tr>` : '';
   const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}${resultRow}</table></div>`;
   const hubHref = L.hub ? `<a href="../${L.hub}">${esc(L.jp)}の一覧</a>` : '';
-  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${hubHref}<a href="../">他の試合を探す</a></div>`;
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${hubHref}<a href="../search.html">🔍 検索</a><a href="../">他の試合を探す</a></div>`;
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   // 試合ページFAQ（FAQPageリッチリザルト＝SERP占有面積UPでCTR底上げ。回答はネタバレ配慮でスコアは出さない）
@@ -1363,7 +1363,7 @@ function buildPreseasonMatch(mt, season){
   const factHtml = `<div class="factcard"><table>${facts.map(f=>`<tr><th>${esc(f[0])}</th><td>${esc(String(f[1]))}</td></tr>`).join('')}${resultRow}</table></div>`;
   // 追跡中クラブなら関連クラブページへのリンク
   const clubLinks = [mt.home, mt.away].filter(n=>CLUBS[n]).map(n=>`<a href="../club/${CLUBS[n].slug}.html">${esc(n)}のクラブページ</a>`).join(' ／ ');
-  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${clubLinks?`<span>${clubLinks}</span>`:''}<a href="../">他の試合を探す</a></div>`;
+  const matchTags = `<div class="match-tags"><span class="mt-h">この試合</span>${clubLinks?`<span>${clubLinks}</span>`:''}<a href="../search.html">🔍 検索</a><a href="../">他の試合を探す</a></div>`;
   const spoilerToggleBtn = `<button id="spoilerToggle" class="spoiler-toggle" type="button" aria-pressed="true">🟢 ネタバレ防止：ON</button>`;
   const sideRead = renderPreview(slug);
   const head = HEAD({
@@ -2157,7 +2157,7 @@ function buildLeague(h){
   const path=`league/${h.slug}.html`, url=`${DOMAIN}/${path}`;
   const clubChips = clubsIn.filter(c=>CLUBS[c]).map(c=>{ const cr=CREST[CLUBS[c].slug]; return `<a class="clubchip" href="../club/${CLUBS[c].slug}.html">${cr?`<img src="${cr}" alt="" loading="lazy">`:'🛡️'}${esc(c)}</a>`; }).join('');
   const others = LEAGUE_LIST.filter(x=>x.slug!==h.slug);
-  const cross = others.length?`<h2 class="lined">他の欧州リーグ</h2><div class="chips">${others.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('')}</div>`:'';
+  const cross = others.length?`<h2 class="lined">他の欧州リーグ</h2><div class="chips">${others.map(x=>`<a href="../league/${x.slug}.html">${esc(x.name)}</a>`).join('')}<a href="../search.html">🔍 クラブ・選手・大会を検索</a></div>`:`<div class="chips"><a href="../search.html">🔍 クラブ・選手・大会を検索</a></div>`;
   // このリーグに所属する日本人選手 → 選手プロフィールへ相互リンク（リーグ→選手。新シーズンの検索需要に噛み合わせ、選手ページの内部リンクを増やす）
   const leaguePlayers = PLAYERS.filter(p=>p.club && CLUBS[p.club] && CLUBS[p.club].league===h.clubLabel);
   const playerChips = leaguePlayers.length?`<h2 class="lined">注目の日本人選手</h2><div class="chips">${leaguePlayers.slice(0,12).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`:'';
