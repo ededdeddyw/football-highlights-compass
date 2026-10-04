@@ -207,7 +207,11 @@ function streamCta(codeOrService, context){
   const url = aff || s.official;
   const rel = aff ? 'sponsored nofollow noopener' : 'nofollow noopener';
   const pr = aff ? '<span class="dc-pr">PR</span>' : '';
-  return `<aside class="dazn-cta">${pr}<div class="dc-txt"><b>フル・見逃し配信を観るなら</b><span>${esc(context||`ハイライトの先は、${s.name}で全試合フル＆見逃し配信。`)}</span></div><a class="dc-btn" href="${url}" target="_blank" rel="${rel}">▶ ${s.name}で観る</a></aside>`;
+  // GA4クリック計測：提携リンク導入前から「どの大会・サービスのCTAが押されているか」を可視化し、収益化の判断材料にする。
+  // 自己完結のonclick（gtag未読込でも握りつぶす）＝どのページ種別のCTAでも確実に発火する。
+  const ctx = String(codeOrService||'').replace(/[^a-z0-9_]/gi,'') || 'other';
+  const track = `onclick="try{if(window.gtag)gtag('event','stream_cta_click',{service:'${svcId}',competition:'${ctx}',affiliate:${aff?'true':'false'}});}catch(e){}"`;
+  return `<aside class="dazn-cta">${pr}<div class="dc-txt"><b>フル・見逃し配信を観るなら</b><span>${esc(context||`ハイライトの先は、${s.name}で全試合フル＆見逃し配信。`)}</span></div><a class="dc-btn" href="${url}" target="_blank" rel="${rel}" data-svc="${svcId}" data-ctx="${esc(ctx)}" ${track}>▶ ${s.name}で観る</a></aside>`;
 }
 
 // ---------- 構造化データ（JSON-LD）ヘルパ ----------
@@ -1313,7 +1317,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   <p class="dek">${esc(dek)}</p>
   ${matchTags}
   <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
-  ${daznCta('見逃し配信・フルマッチはDAZNで。')}
+  ${streamCta(L.code)}
   ${AD}
   ${factHtml}
   ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
