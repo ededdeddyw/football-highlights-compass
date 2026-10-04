@@ -1267,6 +1267,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   const mfaq = [
     { q:`${teamsTxt}のハイライト動画はどこで見られる？`, a:`公式・権利元がYouTube等で公開している「${teamsTxt}」（${L.jp} ${nara}）のハイライトを、この試合ページにまとめています。公式映像のみ・ネタバレ防止表示に対応。` },
     { q:`${teamsTxt}（${L.jp} ${nara}）の試合結果・スコアは？`, a:`結果はこの試合ページに掲載しています。スコアは既定ではネタバレ防止のため非表示ですが、ページ上部の「ネタバレ防止：ON/OFF」で表示に切り替えられます。` },
+    { q:`${teamsTxt}の試合経過・速報は？`, a:`${teamsTxt}（${L.jp} ${nara}）の結果・スコアはこの試合ページで確認できます（「ネタバレ防止：OFF」に切り替えると一覧でも表示）。公式ハイライト動画で試合の流れも振り返れます。` },
   ];
   if(dateTxt) mfaq.push({ q:`${teamsTxt}の試合はいつ開催？`, a:`${dateTxt}に${mt.finished?'開催されました':'開催予定です'}（${L.jp} ${nara}・${seasonLbl}）。` });
   // 対戦クラブの図鑑ページへの内部リンク（在庫がある場合＝内部リンク網の強化）
@@ -1456,7 +1457,7 @@ try {
       if (as && mt.away) DATA_SLUG_BY_JA[mt.away] = as;
       if (mt.videoId){
         const ms = leagueSlug(mt, L);
-        (LEAGUE_RECENT[code]=LEAGUE_RECENT[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC||'', videoId:mt.videoId, ms });
+        (LEAGUE_RECENT[code]=LEAGUE_RECENT[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC||'', videoId:mt.videoId, ms, group:mt.group||'' });
         if (hs) (CLUB_HL[hs]=CLUB_HL[hs]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.away, ha:'H', ms });
         if (as) (CLUB_HL[as]=CLUB_HL[as]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.home, ha:'A', ms });
       }
@@ -2200,6 +2201,23 @@ function buildLeague(h){
   <p class="stand-note">※ 出典: football-data.org（${TODAY}時点の集計）。選手名は原語表記。</p>` : '';
   // 最新ハイライト（動画あり試合、新しい順）→ 各試合ページへ内部リンク
   const recentBlock = recent.length ? `<h2 class="lined">最新のハイライト</h2><div class="chips">${recent.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>` : '';
+  // リーグ・グループ別（ネーションズリーグ等、matchにgroup（例"A1"）がある場合のみ）。「ネーションズリーグ リーグA グループ」系クエリ＋回遊・網羅感を強化。
+  let groupBlock = '';
+  {
+    const withGrp = (LEAGUE_RECENT[h.code]||[]).filter(r=>r.group && r.ms);
+    if(withGrp.length){
+      const byTier = {};
+      for(const r of withGrp){ const tier=r.group[0], num=r.group.slice(1); (byTier[tier]=byTier[tier]||{}); (byTier[tier][num]=byTier[tier][num]||[]).push(r); }
+      const sections = ['A','B','C','D'].filter(t=>byTier[t]).map(t=>{
+        const grps = Object.keys(byTier[t]).sort((a,b)=>(+a)-(+b)).map(n=>{
+          const ms2 = byTier[t][n].slice().sort((a,b)=>(a.matchday||0)-(b.matchday||0));
+          return `<div class="nlg-grp"><div class="nlg-gh">グループ${esc(n)}</div><div class="chips">${ms2.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div></div>`;
+        }).join('');
+        return `<div class="nlg-tier"><h3 class="nlg-th">リーグ${esc(t)}</h3>${grps}</div>`;
+      }).join('');
+      groupBlock = `<h2 class="lined">リーグ・グループ別で見る</h2><style>.nlg-tier{margin:10px 0 6px}.nlg-th{font-size:14px;font-weight:800;color:var(--accent);margin:12px 0 4px}.nlg-grp{margin:6px 0 10px}.nlg-gh{font-size:12px;font-weight:700;color:var(--muted);margin:4px 2px}</style>${sections}`;
+    }
+  }
   // 節別ページへのナビ（第1節〜）＝各節まとめページへの内部リンク網。現行シーズンの全節を列挙。
   const mdn = (typeof MDNAV!=='undefined') ? MDNAV[h.code] : null;
   const mdNavBlock = (mdn && mdn.mds && mdn.mds.length) ? `<h2 class="lined">節別で見る（${mdn.season}-${String((mdn.season+1)%100).padStart(2,'0')}）</h2><div class="chips">${mdn.mds.map(n=>`<a href="../matchday/${h.code}-${mdn.season}-md${n}.html">第${n}節</a>`).join('')}</div>` : '';
@@ -2225,6 +2243,7 @@ function buildLeague(h){
   ${rankBlock}
   ${fixTable}
   ${recentBlock}
+  ${groupBlock}
   ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}

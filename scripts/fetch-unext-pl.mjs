@@ -256,6 +256,9 @@ function parseTitle(title) {
   let sm = title.match(/20(\d\d)\s*[\/\-]\s*(?:20)?\d{2}/);          // 2026/27, 2026/2027
   if (sm) seasonStart = 2000 + (+sm[1]);
   else { sm = title.match(/(?<!\d)(\d{2})\s*[\/\-]\s*(\d{2})(?!\d)/); if (sm) seasonStart = 2000 + (+sm[1]); } // 26/27
+  // ネーションズリーグの「リーグA・グループ1」→ グループ識別子（例 "A1"）。全角A-Dも吸収。それ以外のリーグでは空。
+  const gm = title.match(/リーグ\s*([A-DＡ-Ｄ])\s*[・･]\s*グループ\s*0*(\d+)/);
+  const grp = gm ? (gm[1].normalize('NFKC') + gm[2]) : '';
   // 「HOME v AWAY」を含むセグメントを探す（｜ 【 】 [ ] で分割し、対戦表記のある区切りだけ拾う）
   let home = null, away = null;
   for (const seg of title.split(/[｜|【】\[\]]/)) {
@@ -263,7 +266,7 @@ function parseTitle(title) {
           || seg.match(/^\s*([^｜|]+?)\s*(?:×|✕|ｖｓ|対)\s*([^｜|]+?)\s*$/);
     if (m && m[1] && m[2]) { home = m[1].trim(); away = m[2].trim(); break; }
   }
-  return { league, isHi, md: md ? +md : null, seasonStart, home, away };
+  return { league, isHi, md: md ? +md : null, seasonStart, home, away, grp };
 }
 
 // ---- 実行 ----
@@ -306,8 +309,8 @@ if (VIDEO_FIRST.has(LEAGUE_ARG)) {
   for (const v of parsed) {
     const hs = slugFor(v.p.home), as = slugFor(v.p.away);
     const key = `${hs}|${as}|${v.p.md || ''}`;
-    if (!byKey.has(key)) byKey.set(key, { matchday: v.p.md, dateUTC: '', home: v.p.home, away: v.p.away, homeSlug: hs, awaySlug: as, finished: true, score: '', videoId: v.id });
-    else { const ex = byKey.get(key); if (v.id && !ex.videoId) ex.videoId = v.id; }   // 既存は保持、videoId未設定なら補完
+    if (!byKey.has(key)) byKey.set(key, { matchday: v.p.md, dateUTC: '', home: v.p.home, away: v.p.away, homeSlug: hs, awaySlug: as, finished: true, score: '', videoId: v.id, ...(v.p.grp ? { group: v.p.grp } : {}) });
+    else { const ex = byKey.get(key); if (v.id && !ex.videoId) ex.videoId = v.id; if (v.p.grp && !ex.group) ex.group = v.p.grp; }   // 既存は保持、videoId/groupは未設定なら補完
   }
   const added = byKey.size - before;
   const matches = [...byKey.values()].sort((a, b) => (a.matchday || 0) - (b.matchday || 0) || String(a.home).localeCompare(String(b.home), 'ja'));
