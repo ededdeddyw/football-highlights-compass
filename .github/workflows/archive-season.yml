@@ -2,8 +2,8 @@ name: Archive past season (過去シーズンのハイライトを保存)
 
 # 配信チャンネルに残っている「過去シーズン」の公式ハイライトを data/league-<code>-<season>.json に
 # 取り込む（通常の日次更新は現行シーズンのみを対象にするため、昨季のノックアウト等は拾われない）。
-# 主な用途：カンファレンス/ヨーロッパ/チャンピオンズの昨季決勝〜ノックアウトなど、ハブに載せたい歴史的名勝負。
-# 手動実行のみ。既定は 2025-26 シーズンの WOWOW カップ戦（conference el cl）。
+# 主な用途：カンファレンス/ヨーロッパの昨季決勝〜ノックアウトなど、ハブに載せたい歴史的名勝負。
+# 手動実行のみ。既定は 2025-26 シーズンの WOWOW カップ戦（動画ファーストの conference el）。
 on:
   workflow_dispatch:
     inputs:
@@ -41,10 +41,21 @@ jobs:
           fi
 
       - name: 過去シーズンのハイライト取得
+        env:
+          IN_LEAGUES: ${{ github.event.inputs.leagues }}
+          IN_SEASON: ${{ github.event.inputs.season }}
         run: |
-          for lg in ${{ github.event.inputs.leagues }}; do
-            echo "== $lg (season ${{ github.event.inputs.season }}) =="
-            node scripts/fetch-unext-pl.mjs --league=$lg --season=${{ github.event.inputs.season }} || echo "  ($lg はスキップ/失敗)"
+          # 入力はenv経由で受け、シェル展開による任意コマンド実行（インジェクション）を防ぐ。
+          # リーグコードは英数字のみ許可、シーズンは4桁数字のみ許可。
+          if ! printf '%s' "$IN_SEASON" | grep -qE '^[0-9]{4}$'; then
+            echo "::error::season は4桁の数字で指定してください（例: 2025）。入力: $IN_SEASON"; exit 1
+          fi
+          for lg in $IN_LEAGUES; do
+            if ! printf '%s' "$lg" | grep -qE '^[a-z0-9]+$'; then
+              echo "::warning::不正なリーグコードをスキップ: $lg"; continue
+            fi
+            echo "== $lg (season $IN_SEASON) =="
+            node scripts/fetch-unext-pl.mjs --league="$lg" --season="$IN_SEASON" || echo "  ($lg はスキップ/失敗)"
           done
 
       - name: 変化があればコミット

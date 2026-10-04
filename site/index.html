@@ -1586,11 +1586,12 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     matchList.forEach(function(m){ if(m.ttl.replace(/\s+/g,'').toLowerCase().indexOf(q)>=0) add({ic:'▶',tx:m.ttl,tag:'試合',href:'match/'+m.id+'.html'}); });
     // 全件インデックス（search-index.json）からも補完：トップに表示中の試合に出てこないクラブ/選手/リーグ/代表のページも拾う
     if(s.length<9 && FULL_IDX.length){
-      var seen={}; s.forEach(function(o){ if(o.href) seen[o.href]=1; });
+      // 既出候補はURLと表示名の両方で重複排除（カード由来の候補はhrefを持たない場合があるため表示名でも照合）
+      var seen={}; s.forEach(function(o){ if(o.href) seen[o.href]=1; if(o.tx) seen['t:'+o.tx]=1; });
       var TAG={league:'リーグ',club:'クラブページ',player:'選手',country:'代表ページ'};
-      var hits=FULL_IDX.filter(function(x){ return x.kw.indexOf(q)>=0 && !seen[x.u]; });
+      var hits=FULL_IDX.filter(function(x){ return x.kw.indexOf(q)>=0 && !seen[x.u] && !seen['t:'+x.t]; });
       hits.sort(function(a,b){ var ap=a.kw.indexOf(q)===0?0:1, bp=b.kw.indexOf(q)===0?0:1; return ap-bp; });
-      hits.forEach(function(x){ var ic = x.img ? '<img class="cr" src="'+x.img+'" alt="">' : (x.k==='country'&&x.iso ? '<img class="flag" src="https://flagcdn.com/w20/'+x.iso+'.png" alt="">' : (x.k==='player'?'⚽':x.k==='league'?'🏆':'🛡️')); add({ic:ic,tx:x.t,tag:TAG[x.k]||'',href:x.u}); });
+      hits.forEach(function(x){ var ic = x.img ? '<img class="cr" src="'+x.img+'" alt="">' : (x.k==='country'&&x.iso ? '<img class="flag" src="https://flagcdn.com/w20/'+x.iso+'.png" alt="">' : (x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':'🛡️')); add({ic:ic,tx:x.t,tag:TAG[x.k]||'',href:x.u}); });
     }
     return s.slice(0,9);
   }

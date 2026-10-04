@@ -2370,8 +2370,7 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
   a.srch-item:hover{background:var(--card2);border-color:var(--accent2)}
   a.srch-item .si-ic{flex:0 0 auto;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:17px}
   a.srch-item .si-ic img{max-width:28px;max-height:28px;object-fit:contain;border-radius:2px}
-  a.srch-item .si-tx{min-width:0}
-  a.srch-item .si-tx{display:flex;flex-direction:column;gap:1px}
+  a.srch-item .si-tx{min-width:0;display:flex;flex-direction:column;gap:1px}
   a.srch-item .si-nm{display:block;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
   a.srch-item .si-sub{display:block;color:var(--muted);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .srch-empty{color:var(--muted);padding:34px 0;text-align:center;line-height:1.8}
@@ -2393,7 +2392,7 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
   var IDX=[], input=document.getElementById('sq'), out=document.getElementById('sresults'), cnt=document.getElementById('scount');
   function nrm(s){return String(s||'').replace(/\\s+/g,'').toLowerCase();}
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':'🛡️'; }
+  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':'🛡️'; }
   function render(raw){
     var q=nrm(raw);
     var list = !q ? IDX.slice() : IDX.filter(function(x){return x.kw.indexOf(q)>=0;});
