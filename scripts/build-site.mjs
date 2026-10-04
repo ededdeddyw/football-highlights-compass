@@ -2443,12 +2443,13 @@ try {
   console.log(`サイト内検索: ${SIDX.length}件をインデックス化 → site/search.html, site/search-index.json`);
 } catch(e){ console.warn('検索インデックス生成でエラー:', e.message); }
 
-// ========================= 英語版（着手：英語トップページ /en/） =========================
-// 海外からの検索流入向けの英語ランディング。「公式ハイライトのネタバレ防止まとめ」という価値を英語で提示し、
-// 直近のハイライト（CL/5大リーグ/EL等）を英語チーム名のカードで見せて試合ページ・検索へ送る。
-// フル英語化（全ハブ・全試合）は規模が大きいため、まずトップのMVPから着手。hreflangで日本語版と相互リンクする。
+// ========================= 英語版（/en/ トップ＋リーグハブ16枚） =========================
+// 海外からの検索流入向けの英語セクション。「公式ハイライトのネタバレ防止まとめ」という価値を英語で提示し、
+// 直近ハイライト（英語チーム名）と順位表を見せて試合ページ・検索へ送る。hreflangとsitemapで日本語版と相互リンク。
+const enLeagueUrls = [];
 try {
   mkdirSync('site/en', { recursive: true });
+  mkdirSync('site/en/league', { recursive: true });
   // JAチーム名 → 英語表記：クラブ/国の英語スラッグを整形して利用（例 real-sociedad → Real Sociedad）。未登録は原名のまま。
   const EN_TOKEN = { fc:'FC', cf:'CF', sc:'SC', ac:'AC', rc:'RC', rb:'RB', afc:'AFC', psv:'PSV', psg:'PSG', vfb:'VfB', vfl:'VfL', bsc:'BSC', ssc:'SSC', us:'US', ud:'UD', cd:'CD', rcd:'RCD', fsv:'FSV', tsg:'TSG', az:'AZ' };
   const prettySlug = slug => String(slug||'').split('-').map(w => EN_TOKEN[w] || (w ? w.charAt(0).toUpperCase()+w.slice(1) : w)).join(' ');
@@ -2458,43 +2459,34 @@ try {
   // 解決順：データ側の日本語名→slug（最も確実）→ CLUBS/COUNTRIESキー→slug。どれも無ければ原名のまま。
   const enTeam = ja => { const s = DATA_SLUG_BY_JA[ja] || SLUG_BY_JA[ja]; return s ? prettySlug(s) : ja; };
   const LEAGUE_EN = { pl:'Premier League', laliga:'La Liga', sa:'Serie A', bl:'Bundesliga', ligue1:'Ligue 1', cl:'Champions League', el:'Europa League', conference:'Conference League', eredivisie:'Eredivisie', primeira:'Primeira Liga', belgium:'Belgian Pro League', j1:'J1 League', j2:'J2 League', j3:'J3 League', nations:'Nations League', acl:'AFC Champions League', jpn:'Japan NT', carabao:'Carabao Cup' };
-  const EN_ORDER = ['cl','pl','laliga','sa','bl','ligue1','el','eredivisie','conference','nations'];
-  const enItems = [];
-  for (const code of EN_ORDER) for (const r of (LEAGUE_RECENT[code]||[])) if (r.videoId && r.home && r.away) enItems.push({ code, home:r.home, away:r.away, md:r.matchday, vid:r.videoId, date:(r.dateUTC||'').slice(0,10) });
-  enItems.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  const enCards = enItems.slice(0,60).map(it => {
-    const meta = `${LEAGUE_EN[it.code]||it.code}${it.md!=null?` · MD ${it.md}`:''}`;
-    return `<a class="encard" href="../match/${it.vid}.html"><span class="enthumb"><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="" loading="lazy"><span class="enplay">▶</span></span><span class="entx"><span class="enttl">${esc(enTeam(it.home))} vs ${esc(enTeam(it.away))}</span><span class="enmeta">${esc(meta)}</span></span></a>`;
-  }).join('');
-  const coveredEn = [...new Set(EN_ORDER.filter(c=>(LEAGUE_RECENT[c]||[]).some(r=>r.videoId)).map(c=>LEAGUE_EN[c]))];
-  const enUrl = `${DOMAIN}/en/`;
-  const enTitle = 'Football Highlights Compass｜Official, Spoiler-Free Match Highlights';
-  const enDesc = 'A spoiler-free hub of official football highlights — Champions League, Premier League, La Liga, Serie A, Bundesliga, Ligue 1 and more. Only official/rights-holder videos, scores hidden by default.';
-  const enHtml = `<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-${CANON_REDIRECT}<title>${esc(enTitle)}</title>
-<meta name="description" content="${escA(enDesc)}">
-<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
-<link rel="canonical" href="${enUrl}">
-<link rel="alternate" hreflang="ja" href="${DOMAIN}/"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${DOMAIN}/">
-${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://i.ytimg.com"><link rel="dns-prefetch" href="https://i.ytimg.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ja_JP">
-<meta property="og:title" content="${escA(enTitle)}"><meta property="og:description" content="${escA(enDesc)}"><meta property="og:url" content="${enUrl}"><meta property="og:image" content="${DOMAIN}/og.png">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA('Football Highlights Compass')}"><meta name="twitter:image" content="${DOMAIN}/og.png"><meta name="twitter:description" content="${escA(enDesc)}">
-<script type="application/ld+json">${JSON.stringify(ld([{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/","inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":DOMAIN+"/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}]))}</script>
-<link rel="stylesheet" href="../article.css?v=${CSS_VER}">
-<style>
+  const LEAGUE_BLURB_EN = {
+    pl:"England's top flight — the most-watched league in the world, packed with pace, power and drama.",
+    laliga:"Spain's top division, home to technical football and historic giants Real Madrid and Barcelona.",
+    sa:"Italy's Serie A, famed for tactical discipline and a rich defensive tradition.",
+    bl:"Germany's Bundesliga, known for attacking football, young talent and electric atmospheres.",
+    ligue1:"France's Ligue 1, a league of rising stars and champions Paris Saint-Germain.",
+    cl:"Europe's elite club competition — the UEFA Champions League.",
+    el:"The UEFA Europa League, Europe's second-tier club competition.",
+    conference:"The UEFA Europa Conference League, Europe's third-tier club competition.",
+    eredivisie:"The Netherlands' Eredivisie, famed for youth development and attacking play.",
+    primeira:"Portugal's Primeira Liga.",
+    belgium:"Belgium's Pro League (Jupiler Pro League).",
+    nations:"The UEFA Nations League — competitive fixtures between European national teams.",
+    j1:"Japan's top division, the Meiji Yasuda J1 League.",
+    j2:"Japan's second division, the Meiji Yasuda J2 League.",
+    acl:"The AFC Champions League Elite — Asia's premier club competition.",
+    jpn:"Japan national team fixtures and friendlies.",
+    carabao:"England's EFL Cup (Carabao Cup)."
+  };
+  const EN_STYLE = `
   .en-wrap{max-width:1040px;margin:0 auto;padding:16px 16px 70px}
   .en-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 18px;flex-wrap:wrap}
   .en-brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--accent);font-weight:800;font-size:15px}
   .en-brand img{width:26px;height:26px}
   .en-lang{font-size:12.5px;font-weight:700;color:var(--accent2);text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:5px 12px}
   .en-lang:hover{background:var(--card2)}
+  .en-crumb{font-size:12px;color:var(--muted);margin:0 0 10px}
+  .en-crumb a{color:var(--accent2);text-decoration:none}
   .en-hero{margin:4px 0 18px}
   .en-hero h1{font-size:25px;line-height:1.3;font-weight:900;margin:0 0 10px;color:var(--ink)}
   .en-hero p{font-size:14.5px;line-height:1.8;color:var(--ink2);margin:0 0 12px;max-width:72ch}
@@ -2503,6 +2495,7 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
   .en-cta .primary{background:var(--accent2);color:#fff}
   .en-cta .ghost{border:1px solid var(--line2);color:var(--accent2)}
   .en-leagues{color:var(--muted);font-size:12.5px;margin:12px 2px 0;line-height:1.7}
+  .en-leagues a{color:var(--accent2);text-decoration:none}
   .en-sec{font-size:15px;font-weight:800;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:6px;margin:26px 0 12px}
   .engrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
   a.encard{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
@@ -2513,11 +2506,111 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
   .entx{display:block;padding:10px 12px}
   .enttl{display:block;font-weight:700;font-size:13.5px;line-height:1.4;color:var(--ink)}
   .enmeta{display:block;color:var(--muted);font-size:11.5px;margin-top:4px}
+  .en-standwrap{overflow-x:auto;margin:6px 0 2px}
+  .en-stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}
+  .en-stand th,.en-stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}
+  .en-stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}
+  .en-stand td.tm{text-align:left;font-weight:700;white-space:nowrap;color:var(--ink)}
+  .en-stand td.rk{color:var(--muted);width:2em}
+  .en-stand td.pts{font-weight:800}
+  .en-chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+  .en-chips a{font-size:12.5px;font-weight:700;color:var(--accent2);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  .en-chips a:hover{background:var(--card2)}
   .en-foot{margin:34px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.8}
-  .en-foot a{color:var(--accent2);text-decoration:none}
-</style>
-</head><body>
-<div class="en-wrap">
+  .en-foot a{color:var(--accent2);text-decoration:none}`;
+  // 英語ページ共通シェル。base = サイトルートへの相対プレフィックス（トップ='../'、ハブ='../../'）。
+  function enShell({ title, desc, canonical, jaAlt, enAlt, base, jsonld, body }){
+    return `<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+${CANON_REDIRECT}<title>${esc(title)}</title>
+<meta name="description" content="${escA(desc)}">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<link rel="canonical" href="${canonical}">
+<link rel="alternate" hreflang="ja" href="${jaAlt}"><link rel="alternate" hreflang="en" href="${enAlt}"><link rel="alternate" hreflang="x-default" href="${jaAlt}">
+${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com"><link rel="dns-prefetch" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="${base}favicon.svg"><link rel="apple-touch-icon" href="${base}apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Football Highlights Compass"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:title" content="${escA(title)}"><meta property="og:description" content="${escA(desc)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${DOMAIN}/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escA(title)}"><meta name="twitter:image" content="${DOMAIN}/og.png"><meta name="twitter:description" content="${escA(desc)}">
+${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</script>`:''}
+<link rel="stylesheet" href="${base}article.css?v=${CSS_VER}">
+<style>${EN_STYLE}</style>
+</head><body>${body}</body></html>`;
+  }
+  // 英語版フッター（共通）
+  const enFoot = base => `<div class="en-foot">
+    <p>Match pages are currently in Japanese, but the video players are universal and scores are hidden by default (spoiler-free) — toggle them on any match page.</p>
+    <p>For standings, fixtures, club &amp; player pages and news, visit the <a href="${base}">Japanese site</a>.</p>
+    <p>Highlights are embedded from the official YouTube channels of the respective rights holders. This site does not host any video.</p>
+  </div>`;
+  // 1試合カード（英語）。リンク先は試合ページのスラッグ(ms)で、サムネイルは動画ID(vid)。
+  const enCard = (it, base) => {
+    const meta = `${LEAGUE_EN[it.code]||it.code}${it.md!=null?` · MD ${it.md}`:''}`;
+    return `<a class="encard" href="${base}match/${it.ms}.html"><span class="enthumb"><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="" loading="lazy"><span class="enplay">▶</span></span><span class="entx"><span class="enttl">${esc(enTeam(it.home))} vs ${esc(enTeam(it.away))}</span><span class="enmeta">${esc(meta)}</span></span></a>`;
+  };
+  // 試合ページのファイル名は leagueSlug(ms)。実在するページにだけリンクして死リンクを防ぐ。
+  const recentOf = code => (LEAGUE_RECENT[code]||[]).filter(r=>r.videoId && r.home && r.away && r.ms && existsSync(`site/match/${r.ms}.html`)).map(r=>({ code, home:r.home, away:r.away, md:r.matchday, vid:r.videoId, ms:r.ms, date:(r.dateUTC||'').slice(0,10) }));
+
+  // ---- 英語リーグハブ（LEAGUE_LIST のうち、実在する試合ページ or 順位表があるリーグだけ）----
+  // 先に「英語ハブを建てるリーグ集合」を確定させ、ハブ間の相互リンクが死リンクにならないようにする。
+  const enBuilt = LEAGUE_LIST.filter(h => recentOf(h.code).length || (RAIL_TABLE[h.code]||[]).length);
+  const enHubs = [];   // {code, slug, name} 生成済みハブ（トップのリンク用）
+  for (const h of enBuilt) {
+    const items = recentOf(h.code).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    const stand = RAIL_TABLE[h.code] || [];
+    const name = LEAGUE_EN[h.code] || h.name;
+    const slug = h.slug;
+    const path = `en/league/${slug}.html`;
+    const canonical = `${DOMAIN}/en/league/${slug}.html`;
+    const jaAlt = `${DOMAIN}/league/${slug}.html`;
+    const cards = items.slice(0,24).map(it=>enCard(it,'../../')).join('');
+    const standHtml = stand.length ? `<h2 class="en-sec">${esc(name)} table</h2><div class="en-standwrap"><table class="en-stand"><thead><tr><th>#</th><th>Club</th><th>P</th><th>GD</th><th>Pts</th></tr></thead><tbody>${stand.map(r=>`<tr><td class="rk">${r.pos}</td><td class="tm">${esc(prettySlug(r.slug))}</td><td>${r.played}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`).join('')}</tbody></table></div>${RAIL_UPDATED[h.code]?`<p class="en-leagues">Updated ${esc(String(RAIL_UPDATED[h.code]).slice(0,10))} · from results published on this site.</p>`:''}` : '';
+    const others = enBuilt.filter(x=>x.slug!==slug);
+    const otherChips = `<h2 class="en-sec">Other competitions</h2><div class="en-chips">${others.map(x=>`<a href="${x.slug}.html">${esc(LEAGUE_EN[x.code]||x.name)}</a>`).join('')}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
+    const blurb = LEAGUE_BLURB_EN[h.code] || `Official highlights from ${name}.`;
+    const title = `${name} Highlights & Table｜Spoiler-Free Official Videos`;
+    const desc = `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
+    const jsonld = [
+      {"@type":"CollectionPage","name":`${name} Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":name,"item":canonical}]}
+    ];
+    const body = `<div class="en-wrap">
+  <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a><a class="en-lang" href="${jaAlt.replace(DOMAIN,'../..')}">日本語版 →</a></div>
+  <div class="en-crumb"><a href="../">Home</a> › ${esc(name)}</div>
+  <div class="en-hero">
+    <h1>${esc(name)} — official highlights</h1>
+    <p>${esc(blurb)} We gather only <strong>official and rights-holder</strong> highlight videos, with scores hidden by default so you can catch up spoiler-free.</p>
+    <div class="en-cta"><a class="primary" href="../../search.html">🔍 Search clubs &amp; players</a><a class="ghost" href="#latest">Latest highlights ↓</a></div>
+  </div>
+  <h2 class="en-sec" id="latest">Latest ${esc(name)} highlights</h2>
+  ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  ${standHtml}
+  ${otherChips}
+  ${enFoot('../../')}
+</div>`;
+    writeFileSync(`site/${path}`, enShell({ title, desc, canonical, jaAlt, enAlt:canonical, base:'../../', jsonld, body }));
+    enLeagueUrls.push(canonical);
+    enHubs.push({ code:h.code, slug, name });
+  }
+
+  // ---- 英語トップ ----
+  const EN_ORDER = ['cl','pl','laliga','sa','bl','ligue1','el','eredivisie','conference','nations'];
+  const enItems = [];
+  for (const code of EN_ORDER) for (const it of recentOf(code)) enItems.push(it);
+  enItems.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const enCards = enItems.slice(0,60).map(it=>enCard(it,'../')).join('');
+  // Covering: 生成済み英語ハブへリンク（EN_ORDER順＋残り）
+  const hubByCode = {}; for (const x of enHubs) hubByCode[x.code] = x;
+  const coverOrder = [...EN_ORDER.filter(c=>hubByCode[c]), ...enHubs.map(x=>x.code).filter(c=>!EN_ORDER.includes(c))];
+  const coveringHtml = coverOrder.length ? `Browse competitions: ${coverOrder.map(c=>`<a href="league/${hubByCode[c].slug}.html">${esc(LEAGUE_EN[c]||hubByCode[c].name)}</a>`).join(' · ')}.` : '';
+  const enUrl = `${DOMAIN}/en/`;
+  const enTitle = 'Football Highlights Compass｜Official, Spoiler-Free Match Highlights';
+  const enDesc = 'A spoiler-free hub of official football highlights — Champions League, Premier League, La Liga, Serie A, Bundesliga, Ligue 1 and more. Only official/rights-holder videos, scores hidden by default.';
+  const enHomeBody = `<div class="en-wrap">
   <div class="en-top">
     <a class="en-brand" href="../"><img src="../favicon.svg" alt="">Football Highlights Compass</a>
     <a class="en-lang" href="../">日本語版 →</a>
@@ -2529,19 +2622,18 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
       <a class="primary" href="../search.html">🔍 Search clubs, players &amp; competitions</a>
       <a class="ghost" href="#latest">Latest highlights ↓</a>
     </div>
-    ${coveredEn.length?`<p class="en-leagues">Covering: ${coveredEn.map(esc).join(' · ')} and more.</p>`:''}
+    ${coveringHtml?`<p class="en-leagues">${coveringHtml}</p>`:''}
   </div>
   <h2 class="en-sec" id="latest">Latest highlights</h2>
   ${enCards?`<div class="engrid">${enCards}</div>`:'<p class="en-leagues">New highlights are added daily.</p>'}
-  <div class="en-foot">
-    <p>Match pages are currently in Japanese, but the video players and scores are universal. Scores are hidden by default (spoiler-free); toggle them on any match page.</p>
-    <p>Looking for the full experience? Visit the <a href="../">Japanese site</a> for standings, fixtures, club &amp; player pages and news.</p>
-    <p>Highlights are embedded from official YouTube channels of the respective rights holders. This site does not host any video.</p>
-  </div>
-</div>
-</body></html>`;
-  writeFileSync('site/en/index.html', enHtml);
-  console.log(`英語版トップ: site/en/index.html（直近ハイライト ${Math.min(enItems.length,60)}件）`);
+  ${enFoot('../')}
+</div>`;
+  writeFileSync('site/en/index.html', enShell({
+    title:enTitle, desc:enDesc, canonical:enUrl, jaAlt:`${DOMAIN}/`, enAlt:enUrl, base:'../',
+    jsonld:[{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/","inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":DOMAIN+"/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}],
+    body:enHomeBody
+  }));
+  console.log(`英語版: site/en/index.html ＋ 英語リーグハブ ${enHubs.length}枚（直近ハイライト トップ${Math.min(enItems.length,60)}件）`);
 } catch(e){ console.warn('英語版生成でエラー:', e.message); }
 
 // ========================= 全リーグ横断「今週の試合日程」ページ =========================
@@ -2899,6 +2991,7 @@ const LEAGUE_MATCHES_HTML = (()=>{
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
+for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
