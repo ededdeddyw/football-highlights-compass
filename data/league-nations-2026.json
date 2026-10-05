@@ -13,7 +13,8 @@
       "awaySlug": "estonia",
       "finished": true,
       "score": "",
-      "videoId": "qPlAl_SR3FE"
+      "videoId": "qPlAl_SR3FE",
+      "group": "C4"
     },
     {
       "matchday": 1,
@@ -24,7 +25,8 @@
       "awaySlug": "belarus",
       "finished": true,
       "score": "",
-      "videoId": "u7jEykP3-jM"
+      "videoId": "u7jEykP3-jM",
+      "group": "C1"
     },
     {
       "matchday": 1,
@@ -35,7 +37,8 @@
       "awaySlug": "latvia",
       "finished": true,
       "score": "",
-      "videoId": "g0F-JBTsZ1w"
+      "videoId": "g0F-JBTsZ1w",
+      "group": "C2"
     },
     {
       "matchday": 1,
@@ -46,7 +49,8 @@
       "awaySlug": "malta",
       "finished": true,
       "score": "",
-      "videoId": "x_lz-x8uSIc"
+      "videoId": "x_lz-x8uSIc",
+      "group": "D1"
     },
     {
       "matchday": 1,
@@ -57,7 +61,8 @@
       "awaySlug": "belgium",
       "finished": true,
       "score": "",
-      "videoId": "zFkpgy0ltjE"
+      "videoId": "zFkpgy0ltjE",
+      "group": "A1"
     },
     {
       "matchday": 1,
@@ -68,7 +73,8 @@
       "awaySlug": "spain",
       "finished": true,
       "score": "",
-      "videoId": "balvaCTvic8"
+      "videoId": "balvaCTvic8",
+      "group": "A3"
     },
     {
       "matchday": 1,
@@ -79,7 +85,8 @@
       "awaySlug": "israel",
       "finished": true,
       "score": "",
-      "videoId": "kLYK0j58FIk"
+      "videoId": "kLYK0j58FIk",
+      "group": "B3"
     },
     {
       "matchday": 1,
@@ -90,7 +97,8 @@
       "awaySlug": "germany",
       "finished": true,
       "score": "",
-      "videoId": "9MiNSAi0WpI"
+      "videoId": "9MiNSAi0WpI",
+      "group": "A2"
     },
     {
       "matchday": 1,
@@ -101,7 +109,8 @@
       "awaySlug": "ireland",
       "finished": true,
       "score": "",
-      "videoId": "Z7mm3NOxNzE"
+      "videoId": "Z7mm3NOxNzE",
+      "group": "B3"
     },
     {
       "matchday": 1,
@@ -112,7 +121,8 @@
       "awaySlug": "finland",
       "finished": true,
       "score": "",
-      "videoId": "dQrIagv028E"
+      "videoId": "dQrIagv028E",
+      "group": "C1"
     },
     {
       "matchday": 1,
@@ -123,7 +133,8 @@
       "awaySlug": "northern-ireland",
       "finished": true,
       "score": "",
-      "videoId": "sS-UfecdZ7s"
+      "videoId": "sS-UfecdZ7s",
+      "group": "B2"
     },
     {
       "matchday": 1,
@@ -134,7 +145,8 @@
       "awaySlug": "romania",
       "finished": true,
       "score": "",
-      "videoId": "KPwhk_LDHBk"
+      "videoId": "KPwhk_LDHBk",
+      "group": "B4"
     },
     {
       "matchday": 1,
@@ -145,7 +157,8 @@
       "awaySlug": "moldova",
       "finished": true,
       "score": "",
-      "videoId": "DQlzYm0CxP0"
+      "videoId": "DQlzYm0CxP0",
+      "group": "C4"
     },
     {
       "matchday": 1,
@@ -156,7 +169,8 @@
       "awaySlug": "scotland",
       "finished": true,
       "score": "",
-      "videoId": "vLj7ggz7UwQ"
+      "videoId": "vLj7ggz7UwQ",
+      "group": "B1"
     },
     {
       "matchday": 1,
@@ -167,7 +181,8 @@
       "awaySlug": "greece",
       "finished": true,
       "score": "",
-      "videoId": "AgUGxGRugUI"
+      "videoId": "AgUGxGRugUI",
+      "group": "A2"
     },
     {
       "matchday": 1,
@@ -178,7 +193,8 @@
       "awaySlug": "croatia",
       "finished": true,
       "score": "",
-      "videoId": "G3i9hXwNm-Y"
+      "videoId": "G3i9hXwNm-Y",
+      "group": "A3"
     },
     {
       "matchday": 1,
@@ -189,7 +205,8 @@
       "awaySlug": "france",
       "finished": true,
       "score": "",
-      "videoId": "CgaDLtan9p8"
+      "videoId": "CgaDLtan9p8",
+      "group": "A1"
     },
     {
       "matchday": 1,
@@ -200,7 +217,8 @@
       "awaySlug": "denmark",
       "finished": true,
       "score": "",
-      "videoId": "EmQ7s1-Sz7k"
+      "videoId": "EmQ7s1-Sz7k",
+      "group": "A4"
     },
     {
       "matchday": 1,
@@ -211,7 +229,8 @@
       "awaySlug": "ukraine",
       "finished": true,
       "score": "",
-      "videoId": "jZG4dC-M_R8"
+      "videoId": "jZG4dC-M_R8",
+      "group": "B2"
     },
     {
       "matchday": 1,
@@ -222,7 +241,8 @@
       "awaySlug": "kazakhstan",
       "finished": true,
       "score": "",
-      "videoId": "yBGWy1r6ZcU"
+      "videoId": "yBGWy1r6ZcU",
+      "group": "C3"
     },
     {
       "matchday": 1,
@@ -233,7 +253,8 @@
       "awaySlug": "luxembourg",
       "finished": true,
       "score": "",
-      "videoId": "CQRfAF2X-3s"
+      "videoId": "CQRfAF2X-3s",
+      "group": "C4"
     },
     {
       "matchday": 1,
@@ -244,7 +265,8 @@
       "awaySlug": "bosnia",
       "finished": true,
       "score": "",
-      "videoId": "t79z06S8wUg"
+      "videoId": "t79z06S8wUg",
+      "group": "B4"
     },
     {
       "matchday": 1,
@@ -255,7 +277,8 @@
       "awaySlug": "wales",
       "finished": true,
       "score": "",
-      "videoId": "OjVEDdHcxqA"
+      "videoId": "OjVEDdHcxqA",
+      "group": "A4"
     },
     {
       "matchday": 1,
@@ -266,7 +289,8 @@
       "awaySlug": "cyprus",
       "finished": true,
       "score": "",
-      "videoId": "R2qXsIl2JSU"
+      "videoId": "R2qXsIl2JSU",
+      "group": "C2"
     },
     {
       "matchday": 1,
@@ -277,7 +301,8 @@
       "awaySlug": "lithuania",
       "finished": true,
       "score": "",
-      "videoId": "zS5nwJWigQo"
+      "videoId": "zS5nwJWigQo",
+      "group": "D1"
     },
     {
       "matchday": 1,
@@ -288,7 +313,8 @@
       "awaySlug": "switzerland",
       "finished": true,
       "score": "",
-      "videoId": "QxNbsXMdVHc"
+      "videoId": "QxNbsXMdVHc",
+      "group": "B1"
     },
     {
       "matchday": 2,
@@ -299,7 +325,8 @@
       "awaySlug": "montenegro",
       "finished": true,
       "score": "",
-      "videoId": "_TGk9juZ7AU"
+      "videoId": "_TGk9juZ7AU",
+      "group": "C2"
     },
     {
       "matchday": 2,
@@ -310,7 +337,8 @@
       "awaySlug": "ireland",
       "finished": true,
       "score": "",
-      "videoId": "VUnIUAb7T9k"
+      "videoId": "VUnIUAb7T9k",
+      "group": "B3"
     },
     {
       "matchday": 2,
@@ -321,7 +349,8 @@
       "awaySlug": "kosovo",
       "finished": true,
       "score": "",
-      "videoId": "ZSxvxdZ6HP8"
+      "videoId": "ZSxvxdZ6HP8",
+      "group": "B3"
     },
     {
       "matchday": 2,
@@ -332,7 +361,8 @@
       "awaySlug": "albania",
       "finished": true,
       "score": "",
-      "videoId": "72IqWSc7iCQ"
+      "videoId": "72IqWSc7iCQ",
+      "group": "C1"
     },
     {
       "matchday": 2,
@@ -343,7 +373,8 @@
       "awaySlug": "x-アンドラ",
       "finished": true,
       "score": "",
-      "videoId": "GKDUWA4bYQk"
+      "videoId": "GKDUWA4bYQk",
+      "group": "D1"
     },
     {
       "matchday": 2,
@@ -354,7 +385,8 @@
       "awaySlug": "ukraine",
       "finished": true,
       "score": "",
-      "videoId": "9SY21mzLclA"
+      "videoId": "9SY21mzLclA",
+      "group": "B2"
     },
     {
       "matchday": 2,
@@ -365,7 +397,8 @@
       "awaySlug": "poland",
       "finished": true,
       "score": "",
-      "videoId": "0djlBC9Uo-0"
+      "videoId": "0djlBC9Uo-0",
+      "group": "B4"
     },
     {
       "matchday": 2,
@@ -376,7 +409,8 @@
       "awaySlug": "switzerland",
       "finished": true,
       "score": "",
-      "videoId": "B8BXF2mrKg0"
+      "videoId": "B8BXF2mrKg0",
+      "group": "B1"
     },
     {
       "matchday": 2,
@@ -387,7 +421,8 @@
       "awaySlug": "croatia",
       "finished": true,
       "score": "",
-      "videoId": "vvUej90zb4M"
+      "videoId": "vvUej90zb4M",
+      "group": "A3"
     },
     {
       "matchday": 2,
@@ -398,7 +433,8 @@
       "awaySlug": "kazakhstan",
       "finished": true,
       "score": "",
-      "videoId": "ra27WFmOwsM"
+      "videoId": "ra27WFmOwsM",
+      "group": "C3"
     },
     {
       "matchday": 2,
@@ -409,7 +445,8 @@
       "awaySlug": "north-macedonia",
       "finished": true,
       "score": "",
-      "videoId": "PHJzugcLeBM"
+      "videoId": "PHJzugcLeBM",
+      "group": "B1"
     },
     {
       "matchday": 2,
@@ -420,7 +457,8 @@
       "awaySlug": "netherlands",
       "finished": true,
       "score": "",
-      "videoId": "BWuCgIDffds"
+      "videoId": "BWuCgIDffds",
+      "group": "A2"
     },
     {
       "matchday": 2,
@@ -431,7 +469,8 @@
       "awaySlug": "england",
       "finished": true,
       "score": "",
-      "videoId": "sKudiCWyLFM"
+      "videoId": "sKudiCWyLFM",
+      "group": "A3"
     },
     {
       "matchday": 2,
@@ -442,7 +481,8 @@
       "awaySlug": "wales",
       "finished": true,
       "score": "",
-      "videoId": "nGzcTQKBuqI"
+      "videoId": "nGzcTQKBuqI",
+      "group": "A4"
     },
     {
       "matchday": 2,
@@ -453,7 +493,8 @@
       "awaySlug": "greece",
       "finished": true,
       "score": "",
-      "videoId": "_69DL1SDpgw"
+      "videoId": "_69DL1SDpgw",
+      "group": "A2"
     },
     {
       "matchday": 2,
@@ -464,7 +505,8 @@
       "awaySlug": "italy",
       "finished": true,
       "score": "",
-      "videoId": "ufvkLXJ8j8k"
+      "videoId": "ufvkLXJ8j8k",
+      "group": "A1"
     },
     {
       "matchday": 2,
@@ -475,7 +517,8 @@
       "awaySlug": "portugal",
       "finished": true,
       "score": "",
-      "videoId": "0ddiJxfbqTk"
+      "videoId": "0ddiJxfbqTk",
+      "group": "A4"
     },
     {
       "matchday": 2,
@@ -486,7 +529,8 @@
       "awaySlug": "belarus",
       "finished": true,
       "score": "",
-      "videoId": "Lqz26Ux162g"
+      "videoId": "Lqz26Ux162g",
+      "group": "C1"
     },
     {
       "matchday": 2,
@@ -497,7 +541,8 @@
       "awaySlug": "estonia",
       "finished": true,
       "score": "",
-      "videoId": "Sja3E4LfhIA"
+      "videoId": "Sja3E4LfhIA",
+      "group": "C4"
     },
     {
       "matchday": 2,
@@ -508,7 +553,8 @@
       "awaySlug": "france",
       "finished": true,
       "score": "",
-      "videoId": "nFa7NVdBWrw"
+      "videoId": "nFa7NVdBWrw",
+      "group": "A1"
     },
     {
       "matchday": 2,
@@ -519,7 +565,8 @@
       "awaySlug": "x-フェロー諸島",
       "finished": true,
       "score": "",
-      "videoId": "A6jOhwoWBb0"
+      "videoId": "A6jOhwoWBb0",
+      "group": "C3"
     },
     {
       "matchday": 2,
@@ -530,7 +577,8 @@
       "awaySlug": "cyprus",
       "finished": true,
       "score": "",
-      "videoId": "gl9XYdp9d8w"
+      "videoId": "gl9XYdp9d8w",
+      "group": "C2"
     },
     {
       "matchday": 2,
@@ -541,7 +589,8 @@
       "awaySlug": "azerbaijan",
       "finished": true,
       "score": "",
-      "videoId": "vrqdufOY_Gs"
+      "videoId": "vrqdufOY_Gs",
+      "group": "D1"
     },
     {
       "matchday": 2,
@@ -552,7 +601,8 @@
       "awaySlug": "bosnia",
       "finished": true,
       "score": "",
-      "videoId": "apLn68XI7bA"
+      "videoId": "apLn68XI7bA",
+      "group": "B4"
     },
     {
       "matchday": 2,
@@ -563,7 +613,8 @@
       "awaySlug": "iceland",
       "finished": true,
       "score": "",
-      "videoId": "DMkeaLuxhqY"
+      "videoId": "DMkeaLuxhqY",
+      "group": "C4"
     },
     {
       "matchday": 2,
@@ -574,7 +625,8 @@
       "awaySlug": "hungary",
       "finished": true,
       "score": "",
-      "videoId": "4owx8ht6Wzs"
+      "videoId": "4owx8ht6Wzs",
+      "group": "B2"
     },
     {
       "matchday": 3,
@@ -585,7 +637,8 @@
       "awaySlug": "bulgaria",
       "finished": true,
       "score": "",
-      "videoId": "ow9pl2XgeJE"
+      "videoId": "ow9pl2XgeJE",
+      "group": "C4"
     },
     {
       "matchday": 3,
@@ -596,7 +649,8 @@
       "awaySlug": "austria",
       "finished": true,
       "score": "",
-      "videoId": "PbGdlJMv-Tg"
+      "videoId": "PbGdlJMv-Tg",
+      "group": "B3"
     },
     {
       "matchday": 3,
@@ -607,7 +661,8 @@
       "awaySlug": "x-リヒテンシュタイン",
       "finished": true,
       "score": "",
-      "videoId": "TLGxQgLGJkM"
+      "videoId": "TLGxQgLGJkM",
+      "group": "D2"
     },
     {
       "matchday": 3,
@@ -618,7 +673,8 @@
       "awaySlug": "kosovo",
       "finished": true,
       "score": "",
-      "videoId": "vKOGISxQTNI"
+      "videoId": "vKOGISxQTNI",
+      "group": "B3"
     },
     {
       "matchday": 3,
@@ -629,7 +685,8 @@
       "awaySlug": "norway",
       "finished": true,
       "score": "",
-      "videoId": "h3lys-0zJi4"
+      "videoId": "h3lys-0zJi4",
+      "group": "A4"
     },
     {
       "matchday": 3,
@@ -640,7 +697,8 @@
       "awaySlug": "northern-ireland",
       "finished": true,
       "score": "",
-      "videoId": "qASj8xZDe4k"
+      "videoId": "qASj8xZDe4k",
+      "group": "B2"
     },
     {
       "matchday": 3,
@@ -651,7 +709,8 @@
       "awaySlug": "luxembourg",
       "finished": true,
       "score": "",
-      "videoId": "k6kvPJpQQ9s"
+      "videoId": "k6kvPJpQQ9s",
+      "group": "C4"
     },
     {
       "matchday": 3,
@@ -662,7 +721,8 @@
       "awaySlug": "moldova",
       "finished": true,
       "score": "",
-      "videoId": "zVWbcAbufok"
+      "videoId": "zVWbcAbufok",
+      "group": "C3"
     },
     {
       "matchday": 3,
@@ -673,7 +733,8 @@
       "awaySlug": "armenia",
       "finished": true,
       "score": "",
-      "videoId": "SeDcruhnKWk"
+      "videoId": "SeDcruhnKWk",
+      "group": "C2"
     },
     {
       "matchday": 3,
@@ -684,7 +745,8 @@
       "awaySlug": "netherlands",
       "finished": true,
       "score": "",
-      "videoId": "JEMccb0fmMA"
+      "videoId": "JEMccb0fmMA",
+      "group": "A2"
     },
     {
       "matchday": 3,
@@ -695,7 +757,8 @@
       "awaySlug": "england",
       "finished": true,
       "score": "",
-      "videoId": "7G4j1zvjO-o"
+      "videoId": "7G4j1zvjO-o",
+      "group": "A3"
     },
     {
       "matchday": 3,
@@ -706,7 +769,8 @@
       "awaySlug": "slovenia",
       "finished": true,
       "score": "",
-      "videoId": "LDvTksiCek4"
+      "videoId": "LDvTksiCek4",
+      "group": "B1"
     },
     {
       "matchday": 3,
@@ -717,7 +781,8 @@
       "awaySlug": "czech",
       "finished": true,
       "score": "",
-      "videoId": "aGz68LrIbOw"
+      "videoId": "aGz68LrIbOw",
+      "group": "A3"
     },
     {
       "matchday": 3,
@@ -728,7 +793,8 @@
       "awaySlug": "portugal",
       "finished": true,
       "score": "",
-      "videoId": "DiR7yj5FTb8"
+      "videoId": "DiR7yj5FTb8",
+      "group": "A4"
     },
     {
       "matchday": 3,
@@ -739,7 +805,8 @@
       "awaySlug": "serbia",
       "finished": true,
       "score": "",
-      "videoId": "lwYLwmtY1nE"
+      "videoId": "lwYLwmtY1nE",
+      "group": "A2"
     },
     {
       "matchday": 3,
@@ -750,7 +817,8 @@
       "awaySlug": "georgia",
       "finished": true,
       "score": "",
-      "videoId": "Q7mRB0muEbA"
+      "videoId": "Q7mRB0muEbA",
+      "group": "B2"
     },
     {
       "matchday": 3,
@@ -761,7 +829,8 @@
       "awaySlug": "albania",
       "finished": true,
       "score": "",
-      "videoId": "ZPXuCY4yiWY"
+      "videoId": "ZPXuCY4yiWY",
+      "group": "C1"
     },
     {
       "matchday": 3,
@@ -772,7 +841,8 @@
       "awaySlug": "slovakia",
       "finished": true,
       "score": "",
-      "videoId": "1EBOxcBZ77o"
+      "videoId": "1EBOxcBZ77o",
+      "group": "C3"
     },
     {
       "matchday": 3,
@@ -783,7 +853,8 @@
       "awaySlug": "italy",
       "finished": true,
       "score": "",
-      "videoId": "ZArLu3FIjKg"
+      "videoId": "ZArLu3FIjKg",
+      "group": "A1"
     },
     {
       "matchday": 3,
@@ -794,7 +865,8 @@
       "awaySlug": "x-サンマリノ",
       "finished": true,
       "score": "",
-      "videoId": "r3txI74O5f8"
+      "videoId": "r3txI74O5f8",
+      "group": "C1"
     },
     {
       "matchday": 3,
@@ -805,7 +877,8 @@
       "awaySlug": "turkey",
       "finished": true,
       "score": "",
-      "videoId": "4helDaQeFkE"
+      "videoId": "4helDaQeFkE",
+      "group": "A1"
     },
     {
       "matchday": 3,
@@ -816,7 +889,8 @@
       "awaySlug": "romania",
       "finished": true,
       "score": "",
-      "videoId": "XqtncV2b3Cw"
+      "videoId": "XqtncV2b3Cw",
+      "group": "B4"
     },
     {
       "matchday": 3,
@@ -827,7 +901,8 @@
       "awaySlug": "sweden",
       "finished": true,
       "score": "",
-      "videoId": "2rD864CIoXg"
+      "videoId": "2rD864CIoXg",
+      "group": "B4"
     },
     {
       "matchday": 3,
@@ -838,7 +913,8 @@
       "awaySlug": "x-ジブラルタル",
       "finished": true,
       "score": "",
-      "videoId": "PU8jUCFS938"
+      "videoId": "PU8jUCFS938",
+      "group": "D1"
     },
     {
       "matchday": 3,
@@ -849,7 +925,8 @@
       "awaySlug": "montenegro",
       "finished": true,
       "score": "",
-      "videoId": "WbBIlEIdrrg"
+      "videoId": "WbBIlEIdrrg",
+      "group": "C2"
     },
     {
       "matchday": 3,
@@ -860,7 +937,8 @@
       "awaySlug": "scotland",
       "finished": true,
       "score": "",
-      "videoId": "FiJT3wsia3s"
+      "videoId": "FiJT3wsia3s",
+      "group": "B1"
     },
     {
       "matchday": 4,
@@ -871,7 +949,8 @@
       "awaySlug": "israel",
       "finished": true,
       "score": "",
-      "videoId": "mQPY9-xAebY"
+      "videoId": "mQPY9-xAebY",
+      "group": "B3"
     },
     {
       "matchday": 4,
@@ -882,7 +961,8 @@
       "awaySlug": "denmark",
       "finished": true,
       "score": "",
-      "videoId": "VEX8DcDMqm4"
+      "videoId": "VEX8DcDMqm4",
+      "group": "A4"
     },
     {
       "matchday": 4,
@@ -893,7 +973,8 @@
       "awaySlug": "serbia",
       "finished": true,
       "score": "",
-      "videoId": "OUmEnrwtJyo"
+      "videoId": "OUmEnrwtJyo",
+      "group": "A2"
     },
     {
       "matchday": 4,
@@ -904,7 +985,8 @@
       "awaySlug": "germany",
       "finished": true,
       "score": "",
-      "videoId": "LYF1J9FW44Q"
+      "videoId": "LYF1J9FW44Q",
+      "group": "A2"
     },
     {
       "matchday": 4,
@@ -915,7 +997,8 @@
       "awaySlug": "norway",
       "finished": true,
       "score": "",
-      "videoId": "1ZqOcdMzym8"
+      "videoId": "1ZqOcdMzym8",
+      "group": "A4"
     }
   ]
 }
