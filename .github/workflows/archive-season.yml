@@ -1,0 +1,83 @@
+name: Archive past season (過去シーズンのハイライトを保存)
+
+# 配信チャンネルに残っている「過去シーズン」の公式ハイライトを data/league-<code>-<season>.json に
+# 取り込む（通常の日次更新は現行シーズンのみを対象にするため、昨季のノックアウト等は拾われない）。
+# 主な用途：カンファレンス/ヨーロッパの昨季決勝〜ノックアウトなど、ハブに載せたい歴史的名勝負。
+# 手動実行のみ。既定は 2025-26 シーズンの WOWOW カップ戦（動画ファーストの conference el）。
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン開始年（例: 2025 = 2025-26）'
+        required: true
+        default: '2025'
+      leagues:
+        description: '対象リーグコード（スペース区切り。動画ファーストのカップ戦向け）'
+        required: true
+        default: 'conference el'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: archive-season
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: APIキー確認
+        run: |
+          if [ -z "$YOUTUBE_API_KEY" ]; then
+            echo "::warning::Secret YOUTUBE_API_KEY が未設定です。CIでは取得が0件になります。"
+          fi
+
+      - name: 過去シーズンのハイライト取得
+        env:
+          IN_LEAGUES: ${{ github.event.inputs.leagues }}
+          IN_SEASON: ${{ github.event.inputs.season }}
+        run: |
+          # 入力はenv経由で受け、シェル展開による任意コマンド実行（インジェクション）を防ぐ。
+          # リーグコードは英数字のみ許可、シーズンは4桁数字のみ許可。
+          if ! printf '%s' "$IN_SEASON" | grep -qE '^[0-9]{4}$'; then
+            echo "::error::season は4桁の数字で指定してください（例: 2025）。入力: $IN_SEASON"; exit 1
+          fi
+          for lg in $IN_LEAGUES; do
+            if ! printf '%s' "$lg" | grep -qE '^[a-z0-9]+$'; then
+              echo "::warning::不正なリーグコードをスキップ: $lg"; continue
+            fi
+            echo "== $lg (season $IN_SEASON) =="
+            node scripts/fetch-unext-pl.mjs --league="$lg" --season="$IN_SEASON" || echo "  ($lg はスキップ/失敗)"
+          done
+
+      - name: 変化があればコミット
+        id: commit
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/league-*.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "過去シーズンに変化なし。"; exit 0
+          fi
+          git commit -m "data(highlights): 過去シーズンの公式ハイライトをアーカイブ（season ${{ github.event.inputs.season }}）"
+          git pull --rebase --autostash || true
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 本番デプロイを起動（変化時のみ）
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-diff.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy-diff.yml をディスパッチしました。"
