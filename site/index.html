@@ -1589,10 +1589,10 @@ if(c=document.getElementById('cnt-club')) c.textContent = 14 + EXTRA_CLUB.length
     if(s.length<9 && FULL_IDX.length){
       // 既出候補はURLと表示名の両方で重複排除（カード由来の候補はhrefを持たない場合があるため表示名でも照合）
       var seen={}; s.forEach(function(o){ if(o.href) seen[o.href]=1; if(o.tx) seen['t:'+o.tx]=1; });
-      var TAG={league:'リーグ',club:'クラブページ',player:'選手',country:'代表ページ'};
+      var TAG={league:'リーグ',club:'クラブページ',player:'選手',country:'代表ページ',match:'試合'};
       var hits=FULL_IDX.filter(function(x){ return x.kw.indexOf(q)>=0 && !seen[x.u] && !seen['t:'+x.t]; });
       hits.sort(function(a,b){ var ap=a.kw.indexOf(q)===0?0:1, bp=b.kw.indexOf(q)===0?0:1; return ap-bp; });
-      hits.forEach(function(x){ var ic = x.img ? '<img class="cr" src="'+x.img+'" alt="">' : (x.k==='country'&&x.iso ? '<img class="flag" src="https://flagcdn.com/w20/'+x.iso+'.png" alt="">' : (x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':'🛡️')); add({ic:ic,tx:x.t,tag:TAG[x.k]||'',href:x.u}); });
+      hits.forEach(function(x){ var ic = x.img ? '<img class="cr" src="'+x.img+'" alt="">' : (x.k==='country'&&x.iso ? '<img class="flag" src="https://flagcdn.com/w20/'+x.iso+'.png" alt="">' : (x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':x.k==='match'?'▶':'🛡️')); add({ic:ic,tx:x.t,tag:TAG[x.k]||'',href:x.u}); });
     }
     return s.slice(0,9);
   }
