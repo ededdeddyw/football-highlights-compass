@@ -1302,6 +1302,8 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。FAQPageも付与しSERP占有UP。
     jsonld:[
       ...(mt.videoId ? [{"@type":"VideoObject","name":`${teamsTxt}｜${L.jp} ${nara} 公式ハイライト`,"description":desc,"thumbnailUrl":ogimg,"uploadDate":(mt.dateUTC||`${TODAY}T12:00:00+09:00`),"embedUrl":`https://www.youtube.com/embed/${mt.videoId}`,"contentUrl":url,"publisher":ORG}] : []),
+      // SportsEvent：どの代表/クラブが・いつ・どの大会で対戦したかを機械可読に（AIアシスタント・検索の試合理解＋「○○対○○」系クエリに有効）。スコアは含めずネタバレ配慮。
+      ...(mt.dateUTC ? [{"@type":"SportsEvent","name":`${mt.home} vs ${mt.away}`,"sport":"Association football","startDate":mt.dateUTC,"url":url,"homeTeam":{"@type":"SportsTeam","name":mt.home},"awayTeam":{"@type":"SportsTeam","name":mt.away},"superEvent":{"@type":"SportsEvent","name":`${L.jp} ${seasonLbl}`}}] : []),
       crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]),
       faqLd(mfaq)
     ]
