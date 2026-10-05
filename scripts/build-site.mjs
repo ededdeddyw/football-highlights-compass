@@ -3041,6 +3041,35 @@ for(const s of slugs){
 }
 sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
 
+// ===== RSS フィード（最新ハイライト・新着順）＝フィードリーダー購読・AI/アグリゲーターの新着発見・再訪動線 =====
+try {
+  const esX = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const items = [];
+  for(const code in LEAGUE_RECENT){
+    const jp = (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+    for(const r of (LEAGUE_RECENT[code]||[])){
+      if(!r.videoId || !r.ms || !r.home || !r.away) continue;
+      if(!existsSync(`site/match/${r.ms}.html`)) continue;   // 実在する試合ページのみ（死リンク防止）
+      items.push({ title:`${r.home} vs ${r.away}｜${jp}${r.matchday!=null?` 第${r.matchday}節`:''}`, url:`${DOMAIN}/match/${r.ms}.html`, date:r.dateUTC||'', jp });
+    }
+  }
+  items.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  const top = items.slice(0,50);
+  const now = new Date().toUTCString();
+  const toRfc822 = d => { const t=new Date(d); return isNaN(t.getTime())?now:t.toUTCString(); };
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>\n`
+    + `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n`
+    + `<title>Football Highlights Compass｜最新の公式サッカーハイライト</title>\n`
+    + `<link>${DOMAIN}/</link>\n`
+    + `<atom:link href="${DOMAIN}/feed.xml" rel="self" type="application/rss+xml"/>\n`
+    + `<description>欧州5大リーグ・チャンピオンズリーグ・ネーションズリーグ等の公式・権利元ハイライト動画の新着。公式映像のみ・ネタバレ防止。</description>\n`
+    + `<language>ja</language>\n<lastBuildDate>${now}</lastBuildDate>\n`
+    + top.map(it=>`<item><title>${esX(it.title)}</title><link>${it.url}</link><guid isPermaLink="true">${it.url}</guid>${it.date?`<pubDate>${toRfc822(it.date)}</pubDate>`:''}<category>${esX(it.jp)}</category><description>${esX(it.title+' の公式ハイライト。ネタバレ防止表示に対応。')}</description></item>`).join('\n')
+    + `\n</channel>\n</rss>\n`;
+  writeFileSync('site/feed.xml', rss);
+  console.log(`RSSフィード: site/feed.xml（最新${top.length}件）`);
+} catch(e){ console.warn('RSS生成でエラー:', e.message); }
+
 // ===== llms.txt（AI検索/クローラー向けの案内。GEO：ChatGPT/Perplexity等が要点を把握しやすく）=====
 {
   const L = [];
@@ -3051,6 +3080,7 @@ sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
   L.push('- 掲載するのは公式・権利元がYouTube等で公開している映像のみ（無断アップロードは扱いません）。');
   L.push('- スコアや結果は既定で隠し、利用者の操作で表示（ネタバレ防止）。');
   L.push(`- サイトマップ: ${DOMAIN}/sitemap.xml`);
+  if(existsSync('site/feed.xml')) L.push(`- 最新ハイライトのRSS: ${DOMAIN}/feed.xml`);
   L.push('');
   L.push('## 主要ページ');
   if(scheduleUrl) L.push(`- [今週の試合日程（欧州5大リーグ・日本時間）](${scheduleUrl}): 全リーグ横断の直近の試合日程。`);
