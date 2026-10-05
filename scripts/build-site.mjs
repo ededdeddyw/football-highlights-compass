@@ -1302,6 +1302,8 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。FAQPageも付与しSERP占有UP。
     jsonld:[
       ...(mt.videoId ? [{"@type":"VideoObject","name":`${teamsTxt}｜${L.jp} ${nara} 公式ハイライト`,"description":desc,"thumbnailUrl":ogimg,"uploadDate":(mt.dateUTC||`${TODAY}T12:00:00+09:00`),"embedUrl":`https://www.youtube.com/embed/${mt.videoId}`,"contentUrl":url,"publisher":ORG}] : []),
+      // SportsEvent：どの代表/クラブが・いつ・どの大会で対戦したかを機械可読に（AIアシスタント・検索の試合理解＋「○○対○○」系クエリに有効）。スコアは含めずネタバレ配慮。
+      ...(mt.dateUTC ? [{"@type":"SportsEvent","name":`${mt.home} vs ${mt.away}`,"sport":"Association football","startDate":mt.dateUTC,"url":url,"homeTeam":{"@type":"SportsTeam","name":mt.home},"awayTeam":{"@type":"SportsTeam","name":mt.away},"superEvent":{"@type":"SportsEvent","name":`${L.jp} ${seasonLbl}`}}] : []),
       crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:L.jp,url:`${DOMAIN}/${L.hub||''}`},{name:teamsTxt,url}]),
       faqLd(mfaq)
     ]
@@ -3052,6 +3054,8 @@ sm += `</urlset>\n`; writeFileSync('site/sitemap.xml', sm);
   L.push('');
   L.push('## 主要ページ');
   if(scheduleUrl) L.push(`- [今週の試合日程（欧州5大リーグ・日本時間）](${scheduleUrl}): 全リーグ横断の直近の試合日程。`);
+  if(existsSync('site/search.html')) L.push(`- [サイト内検索](${DOMAIN}/search.html): クラブ・選手・リーグ・代表を横断検索（ローマ字可）。`);
+  if(existsSync('site/en/index.html')) L.push(`- [English version](${DOMAIN}/en/): Official spoiler-free football highlights in English (Champions League, Premier League, La Liga and more).`);
   for(const h of LEAGUE_LIST) L.push(`- [${h.name}](${DOMAIN}/league/${h.slug}.html): ${h.name}の順位表・試合日程・次の試合・公式ハイライト。`);
   L.push('');
   // 今季の最新事実（首位・得点王）をAI検索が引用しやすい形で明示。出典と時点を併記。
