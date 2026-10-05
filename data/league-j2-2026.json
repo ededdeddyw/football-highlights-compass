@@ -414,6 +414,50 @@
     {
       "matchday": 9,
       "dateUTC": "",
+      "home": "ヴァンラーレ八戸",
+      "away": "横浜FC",
+      "homeSlug": "hachinohe",
+      "awaySlug": "yokohama-fc",
+      "finished": true,
+      "score": "",
+      "videoId": "Db1ZiiBY5EY"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "テゲバジャーロ宮崎",
+      "away": "RB大宮アルディージャ",
+      "homeSlug": "miyazaki",
+      "awaySlug": "omiya",
+      "finished": true,
+      "score": "",
+      "videoId": "FyG7pQBXhVo"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "ブラウブリッツ秋田",
+      "away": "サガン鳥栖",
+      "homeSlug": "akita",
+      "awaySlug": "tosu",
+      "finished": true,
+      "score": "",
+      "videoId": "Y6q3CMPVVB0"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "ベガルタ仙台",
+      "away": "ジュビロ磐田",
+      "homeSlug": "sendai",
+      "awaySlug": "iwata",
+      "finished": true,
+      "score": "",
+      "videoId": "ICYICzWmwbI"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
       "home": "大分トリニータ",
       "away": "モンテディオ山形",
       "homeSlug": "oita",
@@ -443,6 +487,17 @@
       "finished": true,
       "score": "",
       "videoId": "Gval7b9K5Kw"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "北海道コンサドーレ札幌",
+      "away": "いわきFC",
+      "homeSlug": "sapporo",
+      "awaySlug": "iwaki",
+      "finished": true,
+      "score": "",
+      "videoId": "7qlKBo1dyyk"
     }
   ]
 }
