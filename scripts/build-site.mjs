@@ -2412,12 +2412,12 @@ ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/
 </div>
 <script>
 (function(){
-  var KIND={league:'リーグ・大会',club:'クラブ',player:'選手',country:'代表チーム'};
-  var KORDER=['league','club','player','country'];
+  var KIND={league:'リーグ・大会',club:'クラブ',player:'選手',country:'代表チーム',match:'試合'};
+  var KORDER=['league','club','player','country','match'];
   var IDX=[], input=document.getElementById('sq'), out=document.getElementById('sresults'), cnt=document.getElementById('scount');
   function nrm(s){return String(s||'').replace(/\\s+/g,'').toLowerCase();}
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':'🛡️'; }
+  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':x.k==='match'?'▶':'🛡️'; }
   function render(raw){
     var q=nrm(raw);
     var list = !q ? IDX.slice() : IDX.filter(function(x){return x.kw.indexOf(q)>=0;});
@@ -2462,6 +2462,22 @@ try {
   for(const [name,info] of Object.entries(COUNTRIES)){
     if(!info || !info.slug || !entityMatches(name).length) continue;
     SIDX.push({ t:name+'代表', u:`country/${info.slug}.html`, k:'country', s:info.confed||'', kw: kwOf([name, name+'代表', info.slug, (info.slug||'').replace(/-/g,' '), info.confed]), iso: info.iso||'' });
+  }
+  // 試合（動画あり・実在ページのみ・新着順の上位）：特定の対戦（例「バルセロナ バイエルン」）を検索で直接見つけられるように。
+  {
+    const mItems = [];
+    for(const code in LEAGUE_RECENT){
+      const jp = (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+      for(const r of (LEAGUE_RECENT[code]||[])){
+        if(!r.videoId || !r.ms || !r.home || !r.away) continue;
+        if(!existsSync(`site/match/${r.ms}.html`)) continue;
+        mItems.push({ home:r.home, away:r.away, md:r.matchday, ms:r.ms, date:r.dateUTC||'', jp });
+      }
+    }
+    mItems.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+    for(const m of mItems.slice(0,300)){
+      SIDX.push({ t:`${m.home} vs ${m.away}`, u:`match/${m.ms}.html`, k:'match', s:`${m.jp}${m.md!=null?` 第${m.md}節`:''}`, kw: kwOf([m.home, m.away, m.jp]) });
+    }
   }
   writeFileSync('site/search-index.json', JSON.stringify(SIDX));
   writeFileSync('site/search.html', searchPageHtml(SIDX.length));
