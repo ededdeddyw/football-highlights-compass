@@ -2857,7 +2857,7 @@ let scheduleUrl = '';
     const recentBlock = recent24.length ? `<h2 class="lined">直近のハイライト（全リーグ・ネタバレ防止）</h2><p class="sc-note">最近終わった試合の公式ハイライト。スコアは各ページで隠しています。</p><ul class="sc-list">${recent24.map(r=>{
       const lg=(LEAGUE_META[r.code]||{}).jp||'';
       return `<li class="sc-row"><span class="sc-t">${esc(mmdd(r.dateUTC))}</span><span class="sc-lg">${esc(lg)}</span><span class="sc-m"><a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}</a></span><span class="sc-md">▶ ハイライト</span></li>`;
-    }).join('')}</ul>` : '';
+    }).join('')}</ul><p style="margin:6px 2px 0"><a href="../latest/">▶ すべての最新ハイライトを新着順で見る</a></p>` : '';
     // 各リーグの「最新節まとめ」ページへの導線（新設の節ページを高権威ページから発見可能に）
     const mdLinks = LEAGUE_LIST.map(x=>{ const n=(typeof MDNAV!=='undefined')?MDNAV[x.code]:null; if(!n||n.lastPlayed==null) return ''; return `<a href="../matchday/${x.code}-${n.season}-md${n.lastPlayed}.html">${esc(x.name)} 第${n.lastPlayed}節</a>`; }).filter(Boolean).join('');
     const mdBlock = mdLinks ? `<h2 class="lined">最新節のまとめ（全試合・結果・ハイライト）</h2><p class="sc-note">各リーグの直近の節の全試合を1ページで。結果はネタバレ防止です。</p><div class="chips">${mdLinks}</div>` : '';
@@ -3157,6 +3157,7 @@ const LEAGUE_MATCHES_HTML = (()=>{
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
 if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
+if(existsSync('site/latest/index.html')) sm += `  <url><loc>${DOMAIN}/latest/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>\n`;
 if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
 for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
@@ -3214,6 +3215,66 @@ try {
   console.log(`RSSフィード: site/feed.xml（最新${top.length}件）`);
 } catch(e){ console.warn('RSS生成でエラー:', e.message); }
 
+// ===== 最新ハイライト一覧ページ /latest/（全大会・新着順）=====
+// RSS(feed.xml)のHTML版。「サッカー ハイライト 最新/今日/新着」系クエリの受け皿＋再訪動線＋強力な回遊ハブ。
+// 既存データ（LEAGUE_RECENT）から毎ビルド自動生成＝常に鮮度があり、多数の試合ページへ内部リンクする。
+try {
+  const jstMD = iso => { const t=new Date(iso); if(isNaN(t.getTime()))return ''; const d=new Date(t.getTime()+9*3600*1000); const w='日月火水木金土'[d.getUTCDay()]; return `${d.getUTCFullYear()}/${d.getUTCMonth()+1}/${d.getUTCDate()}(${w})`; };
+  const litems = [];
+  for(const code in LEAGUE_RECENT){
+    const jp = (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+    for(const r of (LEAGUE_RECENT[code]||[])){
+      if(!r.videoId || !r.ms || !r.home || !r.away) continue;
+      if(!existsSync(`site/match/${r.ms}.html`)) continue;   // 実在ページのみ（死リンク防止）
+      litems.push({ home:r.home, away:r.away, ms:r.ms, date:r.dateUTC||'', jp, code, md:r.matchday });
+    }
+  }
+  litems.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  const ltop = litems.slice(0, 90);
+  if(ltop.length){
+    mkdirSync('site/latest', { recursive:true });
+    const lurl = `${DOMAIN}/latest/`;
+    const logimg = `${DOMAIN}/og.png`;
+    const ldesc = `欧州5大リーグ・チャンピオンズリーグ・ネーションズリーグ・Jリーグなどの最新の公式サッカーハイライトを新着順で一覧。公式映像のみ・ネタバレ防止（スコアは各ページで非表示）。`.slice(0,120);
+    // 大会別の内訳チップ（回遊：各ハブへ送客）
+    const lbyLg = {};
+    for(const it of ltop){ (lbyLg[it.code]=lbyLg[it.code]||{jp:it.jp,hub:(LEAGUE_META[it.code]||{}).hub,n:0}).n++; }
+    const lChips = Object.entries(lbyLg).sort((a,b)=>b[1].n-a[1].n).map(([c,v])=> v.hub?`<a href="../${v.hub}">${esc(v.jp)}<small style="opacity:.6"> ${v.n}</small></a>`:'').filter(Boolean).join('');
+    // 日付（日本時間）ごとにグルーピング
+    const lgroups = []; const lseen = {};
+    for(const it of ltop){ const d=jstMD(it.date)||'日付不明'; if(!lseen[d]){ lseen[d]={label:d,rows:[]}; lgroups.push(lseen[d]); } lseen[d].rows.push(it); }
+    const lbody = lgroups.map(g=>`<div class="sc-day">${esc(g.label)}</div><ul class="sc-list">${g.rows.map(it=>`<li class="sc-row"><span class="sc-lg">${esc(it.jp)}${it.md!=null?` 第${it.md}節`:''}</span><span class="sc-m"><a href="../match/${it.ms}.html">${esc(it.home)} vs ${esc(it.away)}</a></span><span class="sc-md">▶ ハイライト</span></li>`).join('')}</ul>`).join('');
+    const lfaq = [
+      { q:`最新のサッカーハイライトはどこで見られる？`, a:`このページに、欧州5大リーグ・チャンピオンズリーグ・ネーションズリーグ・Jリーグなどの最新の公式ハイライトを新着順でまとめています。公式・権利元が公開する映像のみを掲載し、スコアは既定で隠すネタバレ防止表示です。` },
+      { q:`ネタバレせずに最新ハイライトを楽しめますか？`, a:`はい。各試合ページではスコア・結果を既定で非表示にしており、見たいときだけ「ネタバレ防止：OFF」で表示できます。動画のサムネイルやタイトルに結果が映る場合に備え、動画も既定で隠しています。` },
+      { q:`ハイライトはどのくらいの頻度で更新されますか？`, a:`公式・権利元が新しいハイライトを公開するたびに自動で取り込み、このページの新着順に反映します。RSS（/feed.xml）でも最新ハイライトを購読できます。` },
+    ];
+    const lgraph = [
+      {"@type":"CollectionPage","name":"最新のサッカーハイライト（新着順）","url":lurl,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}},
+      crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'最新ハイライト',url:lurl}]),
+      {"@type":"ItemList","itemListElement":ltop.slice(0,30).map((it,i)=>({"@type":"ListItem","position":i+1,"name":`${it.home} vs ${it.away}｜${it.jp}`,"item":`${DOMAIN}/match/${it.ms}.html`}))},
+      faqLd(lfaq)
+    ];
+    const lhead = HEAD({ title:`最新のサッカーハイライト（全大会・新着順）｜ネタバレ防止 - Football Highlights Compass`, ogtitle:`最新のサッカーハイライト（全大会・新着順）`, desc:ldesc, url:lurl, ogimg:logimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:lgraph });
+    const lcss = `<style>.sc-day{margin:16px 0 6px;font-size:14px;font-weight:800;padding-bottom:4px;border-bottom:2px solid var(--accent)}.sc-list{list-style:none;margin:0 0 6px;padding:0}.sc-row{display:flex;gap:10px;align-items:baseline;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}.sc-lg{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:1px 7px;white-space:nowrap}.sc-m{font-weight:700;flex:1}.sc-m a{color:var(--accent);text-decoration:none}.sc-m a:hover{text-decoration:underline}.sc-md{font-size:11px;color:var(--muted)}.sc-note{font-size:12px;color:var(--muted);margin:2px 2px 8px}</style>`;
+    const lout = lhead + TOPBAR + lcss + `<article class="post">
+    ${crumb([{label:'トップ',href:'../'},{label:'最新ハイライト'}])}
+    <p class="kicker">⚽ 新着</p>
+    <h1 class="headline">最新のサッカーハイライト</h1>
+    <p class="dek">欧州5大リーグ・チャンピオンズリーグ・ネーションズリーグ・Jリーグなどの最新の公式ハイライトを新着順で一覧。公式映像のみ・ネタバレ防止（スコアは各ページで非表示）です。</p>
+    <p style="margin:2px 2px 10px;font-size:13px"><a href="../feed.xml">📶 RSSで購読</a> ／ <a href="../search.html">🔍 クラブ・選手で探す</a></p>
+    ${lChips?`<h2 class="lined">大会で絞る</h2><div class="chips">${lChips}</div>`:''}
+    ${AD}
+    <h2 class="lined">新着ハイライト（${ltop.length}件）</h2>
+    <p class="sc-note">最近公開された公式ハイライト。スコアは各ページで隠しています（ネタバレ防止）。日時は日本時間。</p>
+    ${lbody}
+    ${FAQ_STYLE}${faqBlock(lfaq)}
+    ` + FOOTER();
+    writeFileSync('site/latest/index.html', lout);
+    console.log(`最新ハイライト一覧: site/latest/index.html（${ltop.length}件・${lgroups.length}日分）`);
+  }
+} catch(e){ console.warn('最新ハイライトページ生成でエラー:', e.message); }
+
 // ===== llms.txt（AI検索/クローラー向けの案内。GEO：ChatGPT/Perplexity等が要点を把握しやすく）=====
 {
   const L = [];
@@ -3228,6 +3289,7 @@ try {
   L.push('');
   L.push('## 主要ページ');
   if(scheduleUrl) L.push(`- [今週の試合日程（欧州5大リーグ・日本時間）](${scheduleUrl}): 全リーグ横断の直近の試合日程。`);
+  if(existsSync('site/latest/index.html')) L.push(`- [最新のサッカーハイライト（新着順）](${DOMAIN}/latest/): 全大会の最新公式ハイライトを新着順で一覧（ネタバレ防止）。`);
   if(existsSync('site/search.html')) L.push(`- [サイト内検索](${DOMAIN}/search.html): クラブ・選手・リーグ・代表を横断検索（ローマ字可）。`);
   if(existsSync('site/en/index.html')) L.push(`- [English version](${DOMAIN}/en/): Official spoiler-free football highlights in English (Champions League, Premier League, La Liga and more).`);
   for(const h of LEAGUE_LIST) L.push(`- [${h.name}](${DOMAIN}/league/${h.slug}.html): ${h.name}の順位表・試合日程・次の試合・公式ハイライト。`);
