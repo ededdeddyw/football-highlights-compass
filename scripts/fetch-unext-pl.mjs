@@ -105,6 +105,8 @@ const J1_SLUGS = [
   ['アイスランド','iceland'],['ジョージア','georgia'],['アルバニア','albania'],['モンテネグロ','montenegro'],['ブルガリア','bulgaria'],
   ['イスラエル','israel'],['コソボ','kosovo'],['アルメニア','armenia'],['アゼルバイジャン','azerbaijan'],['キプロス','cyprus'],
   ['ルクセンブルク','luxembourg'],['カザフスタン','kazakhstan'],['ベラルーシ','belarus'],['エストニア','estonia'],['ラトビア','latvia'],['リトアニア','lithuania'],['モルドバ','moldova'],['マルタ','malta'],
+  // ネーションズリーグ リーグD等の小国代表（未登録だと 'x-<日本語名>' の汚いスラッグになるため明示）
+  ['アンドラ','andorra'],['サンマリノ','san-marino'],['フェロー諸島','faroe-islands'],['リヒテンシュタイン','liechtenstein'],['ジブラルタル','gibraltar'],
 ];
 // EL/ACL/代表戦など欧州クラブ・各国代表を含む大会のため、CLUBS(欧州クラブ)とCOUNTRIES(代表)の日本語名→slugも候補に統合。
 // J1_SLUGS を先頭に置き、同長キーの衝突時は明示定義(J1_SLUGS)を優先する。
