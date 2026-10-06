@@ -86,5 +86,45 @@
     "wikiUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%E3%83%BB%E3%83%96%E3%83%B3%E3%83%87%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%AC%20(%E3%83%89%E3%82%A4%E3%83%84)",
     "extract": "ブンデスリーガ（独: Fußball-Bundesliga, ドイツ語: [ˈbʊndəsˌliːɡa] ( 音声ファイル); 直訳: 連邦リーグ）は、ドイツにおけるプロサッカーの最上位リーグである。18チームで構成されており、2. ブンデスリーガとの昇降格制を採用している。 プロリーグであるドイツの1部リーグと2部リーグはDFLドイツ・フースバル・リーガが運営しており、「ブンデスリーガ」の商標もDFLが所有している。したがって「ブンデスリーガ」の名称が使用されているのはDFLが運営する1部リーグおよび2部リーグのみとなる。",
     "updated": "2026-10-04T20:47:42.481Z"
+  },
+  "nations": {
+    "code": "nations",
+    "jp": "UEFAネーションズリーグ",
+    "title": "UEFAネーションズリーグ",
+    "wikiUrl": "https://ja.wikipedia.org/wiki/UEFA%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA%E3%83%AA%E3%83%BC%E3%82%B0",
+    "extract": "UEFAネーションズリーグ（英: UEFA Nations League）は、欧州サッカー連盟（UEFA）が主催する、ナショナルチームによるサッカーの国際大会である。この大会は、フレンドリーマッチを最小限に抑え、各国が同等ランクのチームと対戦できる機会を提供されるように考案された。",
+    "updated": "2026-10-06T02:03:23.255Z"
+  },
+  "el": {
+    "code": "el",
+    "jp": "UEFAヨーロッパリーグ",
+    "title": "UEFAヨーロッパリーグ",
+    "wikiUrl": "https://ja.wikipedia.org/wiki/UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0",
+    "extract": "UEFAヨーロッパリーグ（ウエファヨーロッパリーグ、略称：UEL、英: UEFA Europa League）は、欧州サッカー連盟（UEFA）が主催する、ヨーロッパのクラブチームによるサッカーの国際大会である。この大会への参加資格は、各国のリーグ戦やカップ戦での成績に基づいている。 UEFAカップウィナーズカップが廃止される前の1971年から1999年までは\"第3層\"であったが、現在はUEFAチャンピオンズリーグの下、UEFAカンファレンスリーグの上に位置する\"第2層\"の大会である。",
+    "updated": "2026-10-06T02:03:24.237Z"
+  },
+  "conference": {
+    "code": "conference",
+    "jp": "UEFAカンファレンスリーグ",
+    "title": "UEFAカンファレンスリーグ",
+    "wikiUrl": "https://ja.wikipedia.org/wiki/UEFA%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%B0",
+    "extract": "UEFAカンファレンスリーグ（ウエファカンファレンスリーグ、略称：UECL、ECL、英: UEFA Conference League）は、欧州サッカー連盟（UEFA）が主催する、ヨーロッパのクラブチームによるサッカーの国際大会である。2023-24シーズンまではUEFAヨーロッパカンファレンスリーグ（英: UEFA Europa Conference League）という大会名であった。この大会への参加資格は、各国のリーグ戦やカップ戦での成績に基づいている。 UEFAチャンピオンズリーグ、UEFAヨーロッパリーグに次ぐ、ヨーロッパのクラブサッカーの第3層の大会である。",
+    "updated": "2026-10-06T02:03:25.200Z"
+  },
+  "acl": {
+    "code": "acl",
+    "jp": "AFCチャンピオンズリーグ",
+    "title": "AFCチャンピオンズリーグエリート",
+    "wikiUrl": "https://ja.wikipedia.org/wiki/AFC%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%83%AA%E3%83%BC%E3%82%B0%E3%82%A8%E3%83%AA%E3%83%BC%E3%83%88",
+    "extract": "AFCチャンピオンズリーグエリート（英: AFC Champions League Elite）は、アジアサッカー連盟（AFC）が主催する、クラブチームによるサッカーの大陸選手権大会。個別の大会は年度を付加して“AFCチャンピオンズリーグエリート [年度]”（英: AFC CHAMPIONS LEAGUE Elite[year]）などのように呼称される。略称は『ACLエリート』『ACLE』。 本記事では同大会の前身であるアジアクラブ選手権およびAFCチャンピオンズリーグ（英: AFC Champions League；略称ACL、2023/24年大会まで）についてもあわせて記述する。",
+    "updated": "2026-10-06T02:03:26.186Z"
+  },
+  "carabao": {
+    "code": "carabao",
+    "jp": "EFLカップ（カラバオ）",
+    "title": "EFLカップ",
+    "wikiUrl": "https://ja.wikipedia.org/wiki/EFL%E3%82%AB%E3%83%83%E3%83%97",
+    "extract": "EFLカップ（英: EFL Cup、略称: リーグカップ）は、イングランドにおけるサッカーのカップ戦である。 飲料メーカーのカラバオ社に命名権が買い取られ、カラバオ・カップ（英: Carabao Cup）と冠されている。",
+    "updated": "2026-10-06T02:03:56.804Z"
   }
 }

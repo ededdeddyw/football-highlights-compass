@@ -25,9 +25,14 @@ const LEAGUES = {
   j2:        { jp: 'J2リーグ',             wiki: 'J2リーグ' },
   j3:        { jp: 'J3リーグ',             wiki: 'J3リーグ' },
   belgium:   { jp: 'ベルギー・プロリーグ', wiki: 'ベルギー・ファースト・ディビジョンA' },
+  nations:   { jp: 'UEFAネーションズリーグ', wiki: 'UEFAネーションズリーグ' },
+  el:        { jp: 'UEFAヨーロッパリーグ',   wiki: 'UEFAヨーロッパリーグ' },
+  conference:{ jp: 'UEFAカンファレンスリーグ', wiki: 'UEFAヨーロッパカンファレンスリーグ' },
+  acl:       { jp: 'AFCチャンピオンズリーグ', wiki: 'AFCチャンピオンズリーグエリート' },
+  carabao:   { jp: 'EFLカップ（カラバオ）',   wiki: 'EFLカップ' },
 };
 // サッカーリーグ/大会を表す Wikidata クラス（P31 許容値）
-const LEAGUE_CLASS = new Set(['Q15991303', 'Q15089', 'Q18543742', 'Q623109', 'Q1478437', 'Q15991290', 'Q34542757', 'Q135641761']);
+const LEAGUE_CLASS = new Set(['Q15991303', 'Q15089', 'Q18543742', 'Q623109', 'Q1478437', 'Q15991290', 'Q34542757', 'Q135641761', 'Q1824674']);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let _last = 0;
