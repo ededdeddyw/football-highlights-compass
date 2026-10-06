@@ -197,6 +197,14 @@ const STREAM = {
 };
 // 大会コード → 日本での主要配信サービス。
 const LEAGUE_SERVICE = { pl:'unext', laliga:'unext', eredivisie:'unext', cl:'wowow', el:'wowow', conference:'wowow', sa:'dazn', bl:'dazn', ligue1:'dazn', j1:'dazn', j2:'dazn', j3:'dazn', belgium:'dazn', nations:'dazn', acl:'dazn', jpn:'dazn', carabao:'dazn' };
+// 大会コード → 大会固有の補足FAQ（仕組み・方式など安定した事実のみ。ハブFAQ＝可視ブロック＋FAQPage構造化データに合流）。
+// 「ネーションズリーグとは」「リーグA B C」等の情報系クエリ・AI引用の受け皿を厚くする（最大流入ページ対策）。
+const LEAGUE_FAQ = {
+  nations: [
+    { q:'UEFAネーションズリーグとは？仕組みを教えて', a:'UEFAネーションズリーグは、欧州各国代表が実力の近いチーム同士で戦えるようUEFAが創設した公式の国際大会です。参加国はランクに応じてリーグA・B・C・Dに分かれ、各リーグ内のグループでホーム・アンド・アウェーの総当たりを行います。中身の薄い親善試合に代わる真剣勝負の場として、2018-19シーズンに始まりました。' },
+    { q:'ネーションズリーグに昇格・降格はある？リーグA/B/C/Dの違いは？', a:'あります。リーグA（最上位）からD（最下位）まで実力別に分かれ、各大会の成績に応じて上位リーグへの昇格・下位リーグへの降格が行われます。最上位リーグAの各グループ首位国は決勝ラウンド（準々決勝〜準決勝・決勝）に進み、大会の優勝国を決めます。' },
+  ],
+};
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2232,6 +2240,7 @@ function buildLeague(h){
   if(stand.length){ const t=stand[0]; faqItems.push({ q:`${h.name}の首位はどこ？（現在の順位表）`, a:`${TODAY}時点で首位は${t.name}（勝点${t.pts}・${t.played}試合）。当サイト掲載の結果から集計した最新順位表を${h.name}ページに掲載しています。` }); }
   if(scList.length){ const t=scList[0]; faqItems.push({ q:`${h.name}の得点ランキング1位は？（今季）`, a:`${TODAY}時点の得点ランキング首位は${t.name}（${t.team}）で${t.goals}ゴールです。上位10名を${h.name}ページの得点ランキングに掲載しています。出典: football-data.org。` }); }
   if(fixtures.length){ const n=fixtures[0]; faqItems.push({ q:`${h.name}の次の試合はいつ？`, a:`直近は${fixtureJst(n.dateUTC)}（日本時間）に${n.home} vs ${n.away}${upMd!=null?`ほか第${upMd}節`:''}が予定されています。全リーグ横断の日程は /schedule/ でも確認できます。` }); }
+  if(LEAGUE_FAQ[h.code]) for(const it of LEAGUE_FAQ[h.code]) faqItems.push(it);   // 大会固有の仕組み系FAQ（安定した事実）
   faqItems.push({ q:`${h.name}のハイライト動画はどこで見られる？`, a:`Football Highlights Compassが、公式・権利元がYouTube等で公開している${h.name}のハイライトのみを、スコアを隠したネタバレ防止表示でまとめています。試合ページから公式映像へ移動できます。` });
   const graph=[{"@type":"CollectionPage","name":h.name,"url":url,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}}, crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'欧州リーグ',url:DOMAIN+'/'},{name:h.name,url}]), faqLd(faqItems)];
   graph.push(itemListLd(ms));
