@@ -1,9 +1,14 @@
 name: Enrich matches (独自記事の生成)
 
 # 試合ページの独自記事（ネタバレなしの前フリ）をClaudeで生成し data/match-previews.json に反映する。
-# 手動実行のみ。limit で一度に生成する件数を絞る（サンプル確認→段階展開のため）。
-# 生成物(site/)はCIで作られるため、ここでは build→enrich→build→データのみコミット。本番反映は deploy-ftp を別途実行。
+# 記事が付くとその試合ページが再index対象になる（AdSense「有用性の低いコンテンツ」対策＋SEO）。
+# 自動運用: 毎日 05:00 UTC（14:00 JST）に主要大会優先で最大80件を補充。翌 06:00 UTC の season-refresh が
+#   build→本番反映するため、生成した見どころは同日中に公開される（enrich自身はデプロイしない）。
+#   未生成の試合が尽きると「生成対象なし」で即終了するため、バックログ消化後のコストはほぼゼロに収束する。
+# 手動実行時は limit / ids で対象を絞れる（サンプル確認→段階展開）。生成物(site/)はCIで作られる。
 on:
+  schedule:
+    - cron: '0 5 * * *'   # 毎日 14:00 JST（05:00 UTC）。見どころ記事を日次補充（nations→cl→el優先）。cron時は limit=80。
   workflow_dispatch:
     inputs:
       limit:
