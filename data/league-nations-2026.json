@@ -955,6 +955,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "イタリア",
+      "away": "トルコ",
+      "homeSlug": "italy",
+      "awaySlug": "turkey",
+      "finished": true,
+      "score": "",
+      "videoId": "5dJ1fWPLXc0",
+      "group": "A1"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "ウェールズ",
       "away": "デンマーク",
       "homeSlug": "wales",
@@ -987,6 +999,18 @@
       "score": "",
       "videoId": "LYF1J9FW44Q",
       "group": "A2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "フランス",
+      "away": "ベルギー",
+      "homeSlug": "france",
+      "awaySlug": "belgium",
+      "finished": true,
+      "score": "",
+      "videoId": "VicPP99Ns88",
+      "group": "A1"
     },
     {
       "matchday": 4,
