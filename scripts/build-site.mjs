@@ -3089,6 +3089,20 @@ const PICKUP_HTML = (()=>{
   //   需要＝日本人所属クラブを最優先、著名クラブ（図鑑掲載）を加点、CL・人気リーグを加点。
   //   直近45日を優先プールにし、その中で需要の高い順→新しい順で上位8枚（＝「新規かつ需要がありそう」なカードだけ）。
   const demandScore = (home,away,code)=>{ let s=0; if(clubHasJP(home)||clubHasJP(away)) s+=4; if(CLUBS[home]) s+=1; if(CLUBS[away]) s+=1; if(code==='cl') s+=2; else if(code==='pl'||code==='laliga') s+=1; return s; };
+  // サムネ右上の理由ラベル用。世界的な強豪クラブ（完全一致＝ハル・シティ等の誤検出回避）。
+  const BIG_CLUBS = new Set(['レアル・マドリード','バルセロナ','マンチェスター・シティ','マンチェスター・ユナイテッド','リバプール','アーセナル','チェルシー','トッテナム','バイエルン','ドルトムント','パリ・サンジェルマン','PSG','ユベントス','インテル','ミラン','ナポリ','アトレティコ・マドリード']);
+  // 「なぜ注目か」を短く：日本人選手の出場を最優先（当サイトの主役）、次に強豪対決・CL。
+  const reasonOf = (home,away,code)=>{
+    const jps=[]; for(const t of [home,away]) for(const p of jpPlayersFor(t)) if(p && p.slug && !jps.some(x=>x.slug===p.slug)) jps.push(p);
+    if(jps.length===1) return `${jps[0].name} 出場`;
+    if(jps.length===2) return `${jps[0].name}・${jps[1].name} 出場`;
+    if(jps.length>=3) return `日本人${jps.length}名 出場`;
+    const bH=BIG_CLUBS.has(home), bA=BIG_CLUBS.has(away);
+    if(bH && bA) return '強豪同士の対戦';
+    if(code==='cl') return 'CL 注目の一戦';
+    if(bH || bA) return '強豪クラブが登場';
+    return '';
+  };
   const pkCutoffMs = new Date(`${TODAY}T00:00:00+09:00`).getTime() - 45*24*3600*1000;
   const leagueItems=[];
   for(const code in LEAGUE_RECENT){
@@ -3098,7 +3112,7 @@ const PICKUP_HTML = (()=>{
       leagueItems.push({ code, url:`match/${r.ms}.html`, vid:r.videoId, date:(r.dateUTC||'').slice(0,10),
         t:(new Date(r.dateUTC||0).getTime()||0), score:demandScore(r.home,r.away,code),
         comp:`${LG_JP(code)}${r.matchday!=null?` 第${r.matchday}節`:''}`,
-        line:`${esc(r.home)} vs ${esc(r.away)}`, alt:`${r.home} vs ${r.away}`, badge: jp?'🇯🇵 注目':(code==='cl'?'🏆 CL':'⚡ 注目の試合') });
+        line:`${esc(r.home)} vs ${esc(r.away)}`, alt:`${r.home} vs ${r.away}`, badge: jp?'🇯🇵 注目':(code==='cl'?'🏆 CL':'⚡ 注目の試合'), reason: reasonOf(r.home, r.away, code) });
     }
   }
   // 直近45日を優先プール（8枚に満たなければ全体から）。需要スコア→新しさ の順に。
@@ -3125,7 +3139,7 @@ const PICKUP_HTML = (()=>{
     withId.filter(isKO).sort(byD).slice(0,4).forEach(m=>push(toItem(m,'🏆 W杯 名勝負')));
   }
   const PICK=items.slice(0,8);
-  return PICK.map(it=>`<a class="pcard cf-card" href="${it.url}"><div class="thumb"><span class="pbadge">${it.badge}</span><img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="${escA(it.alt)}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(it.comp)}</span><span class="pmatch">${it.line}</span></div></a>`).join('\n      ');
+  return PICK.map(it=>`<a class="pcard cf-card" href="${it.url}"><div class="thumb"><span class="pbadge">${it.badge}</span>${it.reason?`<span class="preason">${esc(it.reason)}</span>`:''}<img src="https://i.ytimg.com/vi/${it.vid}/hqdefault.jpg" alt="${escA(it.alt)}" loading="lazy"><span class="play">▶</span></div><div class="pt"><span class="pcomp">${esc(it.comp)}</span><span class="pmatch">${it.line}</span></div></a>`).join('\n      ');
 })();
 
 // 「動画一覧」グリッドに現行クラブシーズンの最新ハイライトを注入（details.match スタブ）。
