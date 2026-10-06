@@ -1248,7 +1248,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   const bingeNext = NEXT[slug] || '';
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
   LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`${mt.matchday!=null?`第${mt.matchday}節 / `:''}${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
-  if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex。記事or動画があれば充実ページとして指数化
+  if (!hasPreview(slug)) noindexSlugs.add(slug);   // 独自の見どころ記事が無い試合ページ（動画＋定型文のみ）はnoindex＝大量生成・低品質コンテンツ対策（AdSense「有用性の低いコンテンツ」対応）。見どころ記事が付けば指数化
   // teamsTxt: 「対」区切り。実クエリは「○○ 対 ○○」表記が主流（「vs」だと高表示でもスニペット一致度が下がりCTRが伸びない例を確認：
   // laliga-2526-md32-atletico-madrid-athletic＝表示979・クリック0、query「アスレティック・ビルバオ 対 アトレティコ・マドリード 試合経過」＝表示943・クリック0、いずれも平均順位7〜8位）。
   const teamsTxt = `${mt.home} 対 ${mt.away}`;
@@ -1313,7 +1313,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   const head = HEAD({
     title:`${teamsTxt} 試合経過・結果とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
-    robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
+    robots:hasPreview(slug)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     // 動画付きの試合ページには VideoObject を付与＝Google の動画リッチ結果（検索にサムネイル表示）の対象にしCTRを底上げ。FAQPageも付与しSERP占有UP。
     jsonld:[
       ...(mt.videoId ? [{"@type":"VideoObject","name":`${teamsTxt}｜${L.jp} ${nara} 公式ハイライト`,"description":desc,"thumbnailUrl":ogimg,"uploadDate":(mt.dateUTC||`${TODAY}T12:00:00+09:00`),"embedUrl":`https://www.youtube.com/embed/${mt.videoId}`,"contentUrl":url,"publisher":ORG}] : []),
@@ -1362,7 +1362,7 @@ function buildPreseasonMatch(mt, season){
   const slug = preseasonSlug(mt, season);
   if (slugs.includes(slug)) return; slugs.push(slug); preseasonCount++;
   LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:'preseason', leagueName:'プレシーズン', meta:'親善試合', players:[], hasPreview:hasPreview(slug) });
-  if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex
+  if (!hasPreview(slug)) noindexSlugs.add(slug);   // 独自の見どころ記事が無い親善試合ページはnoindex（動画＋定型のみ＝薄い。AdSense対応）
   const teamsTxt = `${mt.home} 対 ${mt.away}`;   // 「対」区切り＝実クエリ表記に合わせCTR改善（buildLeagueMatch同様）
   const url = `${DOMAIN}/match/${slug}.html`;
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
@@ -1391,7 +1391,7 @@ function buildPreseasonMatch(mt, season){
   const head = HEAD({
     title:`${teamsTxt} 結果・ハイライト｜プレシーズン親善試合 - Football Highlights Compass`,
     ogtitle:`${teamsTxt} 結果・ハイライト｜プレシーズン親善試合`, desc, url, ogimg, ogtype:'video.other',
-    robots:(hasPreview(slug)||mt.videoId)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
+    robots:hasPreview(slug)?undefined:'noindex,follow', published:`${TODAY}T12:00:00+09:00`, modified:`${TODAY}T12:00:00+09:00`,
     jsonld:[ crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:teamsTxt,url}]) ]
   });
   const out = head + TOPBAR_NAV
