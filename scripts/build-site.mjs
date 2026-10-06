@@ -2488,6 +2488,7 @@ try {
 // 海外からの検索流入向けの英語セクション。「公式ハイライトのネタバレ防止まとめ」という価値を英語で提示し、
 // 直近ハイライト（英語チーム名）と順位表を見せて試合ページ・検索へ送る。hreflangとsitemapで日本語版と相互リンク。
 const enLeagueUrls = [];
+const enClubUrls = [];
 try {
   mkdirSync('site/en', { recursive: true });
   mkdirSync('site/en/league', { recursive: true });
@@ -2599,6 +2600,58 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   // ---- 英語リーグハブ（LEAGUE_LIST のうち、実在する試合ページ or 順位表があるリーグだけ）----
   // 先に「英語ハブを建てるリーグ集合」を確定させ、ハブ間の相互リンクが死リンクにならないようにする。
   const enBuilt = LEAGUE_LIST.filter(h => recentOf(h.code).length || (RAIL_TABLE[h.code]||[]).length);
+
+  // ---- 英語クラブページ（ハイライト or 順位表があるクラブのみ）----
+  // 海外からの「<club> highlights」系クエリの受け皿。ハブ(リーグ)→クラブ→試合 の英語回遊を完成させる。
+  mkdirSync('site/en/club', { recursive: true });
+  const enClubSet = new Set();   // en club ページを持つ info.slug（ハブのクラブchip用）
+  const ordinal = n => { const s=['th','st','nd','rd'], v=n%100; return n + (s[(v-20)%10] || s[v] || s[0]); };
+  for (const [cname, info] of Object.entries(CLUBS)) {
+    if(!info || !info.slug) continue;
+    const ds = railSlug(info.slug);
+    const hl = (CLUB_HL[ds]||[]).filter(r => r.ms && r.videoId && existsSync(`site/match/${r.ms}.html`));
+    const code = SLUG2LEAGUE[ds];
+    const row = code ? (RAIL_TABLE[code]||[]).find(r => r.slug===ds) : null;
+    if(!hl.length && !row) continue;   // 中身が無ければ建てない（薄いページ回避）
+    const enName = prettySlug(info.slug);
+    const leagueEn = LEAGUE_EN[code] || info.league || '';
+    const hubSlug = (enBuilt.find(x => x.code===code) || {}).slug;
+    const crest = CREST[info.slug] ? `<img src="${CREST[info.slug]}" alt="" style="width:30px;height:30px;object-fit:contain;vertical-align:middle;margin-right:8px">` : '';
+    const clubCard = r => { const me=enTeam(cname), opp=enTeam(r.opp); const hh=r.ha==='H'?me:opp, aa=r.ha==='H'?opp:me; return `<a class="encard" href="../../match/${r.ms}.html"><span class="enthumb"><img src="https://i.ytimg.com/vi/${r.videoId}/hqdefault.jpg" alt="" loading="lazy"><span class="enplay">▶</span></span><span class="entx"><span class="enttl">${esc(hh)} vs ${esc(aa)}</span><span class="enmeta">${esc(leagueEn)}</span></span></a>`; };
+    const cards = hl.slice(0,24).map(clubCard).join('');
+    const standLine = row ? `<p class="en-leagues">${esc(enName)} are currently <strong>${ordinal(row.pos)}</strong> in ${esc(leagueEn)} with ${row.pts} points (${row.played} played).</p>` : '';
+    const path = `en/club/${info.slug}.html`;
+    const canonical = `${DOMAIN}/en/club/${info.slug}.html`;
+    const jaAlt = `${DOMAIN}/club/${info.slug}.html`;
+    const title = `${enName} Highlights｜Official, Spoiler-Free Videos`;
+    const desc = `Official, spoiler-free ${enName} highlights${leagueEn?` from ${leagueEn}`:''}. Only official/rights-holder videos, with scores hidden by default.`;
+    const crumbItems = [{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"}];
+    if(hubSlug) crumbItems.push({"@type":"ListItem","position":2,"name":leagueEn,"item":`${DOMAIN}/en/league/${hubSlug}.html`});
+    crumbItems.push({"@type":"ListItem","position":hubSlug?3:2,"name":enName,"item":canonical});
+    const jsonld = [
+      {"@type":"CollectionPage","name":`${enName} Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
+      {"@type":"SportsTeam","name":enName,"sport":"Association football"},
+      {"@type":"BreadcrumbList","itemListElement":crumbItems}
+    ];
+    const navChips = `<div class="en-chips">${hubSlug?`<a href="../league/${hubSlug}.html">${esc(leagueEn)} hub</a>`:''}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
+    const body = `<div class="en-wrap">
+  <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a><a class="en-lang" href="../../club/${info.slug}.html">日本語版 →</a></div>
+  <div class="en-crumb"><a href="../">Home</a>${hubSlug?` › <a href="../league/${hubSlug}.html">${esc(leagueEn)}</a>`:''} › ${esc(enName)}</div>
+  <div class="en-hero">
+    <h1>${crest}${esc(enName)} — official highlights</h1>
+    <p>Official, spoiler-free ${esc(enName)} highlights${leagueEn?` from ${esc(leagueEn)}`:''}. We gather only <strong>official and rights-holder</strong> videos, with scores hidden by default.</p>
+    ${standLine}
+    <div class="en-cta"><a class="primary" href="../../search.html">🔍 Search clubs &amp; players</a><a class="ghost" href="#latest">Latest highlights ↓</a></div>
+  </div>
+  <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
+  ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  <h2 class="en-sec">More</h2>${navChips}
+  ${enFoot('../../')}
+</div>`;
+    writeFileSync(`site/${path}`, enShell({ title, desc, canonical, jaAlt, enAlt:canonical, base:'../../', jsonld, body }));
+    enClubUrls.push(canonical); enClubSet.add(info.slug);
+  }
+
   const enHubs = [];   // {code, slug, name} 生成済みハブ（トップのリンク用）
   for (const h of enBuilt) {
     const items = recentOf(h.code).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
@@ -2612,6 +2665,9 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     const standHtml = stand.length ? `<h2 class="en-sec">${esc(name)} table</h2><div class="en-standwrap"><table class="en-stand"><thead><tr><th>#</th><th>Club</th><th>P</th><th>GD</th><th>Pts</th></tr></thead><tbody>${stand.map(r=>`<tr><td class="rk">${r.pos}</td><td class="tm">${esc(prettySlug(r.slug))}</td><td>${r.played}</td><td>${r.gd>0?'+':''}${r.gd}</td><td class="pts">${r.pts}</td></tr>`).join('')}</tbody></table></div>${RAIL_UPDATED[h.code]?`<p class="en-leagues">Updated ${esc(String(RAIL_UPDATED[h.code]).slice(0,10))} · from results published on this site.</p>`:''}` : '';
     const others = enBuilt.filter(x=>x.slug!==slug);
     const otherChips = `<h2 class="en-sec">Other competitions</h2><div class="en-chips">${others.map(x=>`<a href="${x.slug}.html">${esc(LEAGUE_EN[x.code]||x.name)}</a>`).join('')}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
+    // このリーグに属し、英語クラブページを持つクラブへのチップ（ハブ→クラブの英語回遊）
+    const leagueClubs = Object.entries(CLUBS).filter(([,i]) => i && i.league===h.clubLabel && enClubSet.has(i.slug));
+    const clubChips = leagueClubs.length ? `<h2 class="en-sec">Clubs</h2><div class="en-chips">${leagueClubs.map(([,i])=>`<a href="../club/${i.slug}.html">${esc(prettySlug(i.slug))}</a>`).join('')}</div>` : '';
     const blurb = LEAGUE_BLURB_EN[h.code] || `Official highlights from ${name}.`;
     const title = `${name} Highlights & Table｜Spoiler-Free Official Videos`;
     const desc = `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
@@ -2630,6 +2686,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   <h2 class="en-sec" id="latest">Latest ${esc(name)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
   ${standHtml}
+  ${clubChips}
   ${otherChips}
   ${enFoot('../../')}
 </div>`;
@@ -3033,6 +3090,7 @@ let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.site
 if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
 for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
+for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
