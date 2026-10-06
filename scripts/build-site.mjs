@@ -1226,18 +1226,18 @@ const teamSlug = ja => TEAM_SLUG[ja] || String(ja).toLowerCase().replace(/[^a-z0
 let leagueCount = 0;
 const LEAGUE_IDX = [];   // enrich（見どころ生成）用：リーグ試合もmatches-indexに載せる
 const LEAGUE_SITEMAP = new Map();   // sitemap用：slug → {videoId, date, title}
-function leagueSlug(mt, L){ const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away); return `${L.code}-2526-md${mt.matchday}-${hs}-${as}`; }
+function leagueSlug(mt, L){ const hs = mt.homeSlug || teamSlug(mt.home), as = mt.awaySlug || teamSlug(mt.away); return `${L.code}-2526-${mt.matchday!=null?`md${mt.matchday}-`:''}${hs}-${as}`; }
 function buildLeagueMatch(mt, L, seasonLbl, allMatches){
-  if (mt.matchday == null || !mt.home || !mt.away) return;
+  if (!mt.home || !mt.away) return;   // matchday無し（キリンカップ等のカップ戦）もページ化する。節番号はnaraで出し分け。
   const slug = leagueSlug(mt, L);
   const bingeNext = NEXT[slug] || '';
   if (slugs.includes(slug)) return; slugs.push(slug); leagueCount++;
-  LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`第${mt.matchday}節 / ${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
+  LEAGUE_IDX.push({ id:slug, teams:[mt.home, mt.away], league:L.code, leagueName:L.jp, meta:`${mt.matchday!=null?`第${mt.matchday}節 / `:''}${seasonLbl}`, players:[], hasPreview:hasPreview(slug) });
   if (!hasPreview(slug) && !mt.videoId) noindexSlugs.add(slug);   // 見どころ記事も動画も無い薄いページだけnoindex。記事or動画があれば充実ページとして指数化
   // teamsTxt: 「対」区切り。実クエリは「○○ 対 ○○」表記が主流（「vs」だと高表示でもスニペット一致度が下がりCTRが伸びない例を確認：
   // laliga-2526-md32-atletico-madrid-athletic＝表示979・クリック0、query「アスレティック・ビルバオ 対 アトレティコ・マドリード 試合経過」＝表示943・クリック0、いずれも平均順位7〜8位）。
   const teamsTxt = `${mt.home} 対 ${mt.away}`;
-  const nara = `第${mt.matchday}節`;
+  const nara = mt.matchday!=null ? `第${mt.matchday}節` : '';
   const url = `${DOMAIN}/match/${slug}.html`;
   const ogimg = mt.videoId ? `https://i.ytimg.com/vi/${mt.videoId}/hqdefault.jpg` : `${DOMAIN}/og.png`;
   LEAGUE_SITEMAP.set(slug, { videoId: mt.videoId || '', date: (mt.dateUTC || '').slice(0, 10) || TODAY, title: `${teamsTxt}｜${L.jp} ${nara}` });
@@ -1294,7 +1294,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
     .join('');
   // 「第N節まとめ」ページへの内部リンク（節の全試合・結果へ着地）
   const seasonStart = parseInt(seasonLbl, 10);
-  const mdHref = Number.isFinite(seasonStart) ? `../matchday/${L.code}-${seasonStart}-md${mt.matchday}.html` : '';
+  const mdHref = (Number.isFinite(seasonStart) && mt.matchday!=null) ? `../matchday/${L.code}-${seasonStart}-md${mt.matchday}.html` : '';
   const head = HEAD({
     title:`${teamsTxt} 試合経過・結果とハイライト動画｜${L.jp} ${nara}`,
     ogtitle:`${teamsTxt} 試合結果・ハイライト｜${L.jp} ${nara}`, desc, url, ogimg, ogtype:'video.other',
