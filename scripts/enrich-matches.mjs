@@ -36,6 +36,13 @@ const PREVIEWS = readJson(OUT_FILE, {});
 // 対象: まだ記事が無く、両チームが分かる試合（文脈が書けるもの）。--ids 指定時はそれを優先。
 let pending = INDEX.filter(m => m && m.id && Array.isArray(m.teams) && m.teams.length >= 1 && !PREVIEWS[m.id]);
 if (ONLY_IDS) pending = INDEX.filter(m => m && ONLY_IDS.has(m.id));
+// 生成優先度: 流入・価値の高い大会（ネーションズリーグ・CL・EL）から先に記事化する。
+// 記事が付くとその試合ページが再indexされるため、主要大会のnoindex解消を最短化する（AdSense/SEO対策）。
+if (!ONLY_IDS) {
+  const PRIORITY = ['nations', 'cl', 'el'];
+  const prio = m => { const i = PRIORITY.indexOf(m.league); return i < 0 ? PRIORITY.length : i; };
+  pending.sort((a, b) => prio(a) - prio(b));   // stable sort: 同優先度は元の順序を保つ
+}
 pending = pending.slice(0, LIMIT);
 
 if (!pending.length) { console.log('enrich-matches: 生成対象なし。終了。'); process.exit(0); }
