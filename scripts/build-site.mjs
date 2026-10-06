@@ -2041,6 +2041,7 @@ function buildPlayerIndex(){
   ${crumb([{label:'トップ',href:'../'},{label:'選手'}])}
   <h1>選手プロフィール</h1>
   <p class="dek">日本人選手を中心に、ポジション・経歴・プレースタイルをネタバレなしで紹介します。顔写真は権利に配慮し、公式・ライセンス取得後に掲載予定です。</p>
+  <p style="margin:2px 0 6px"><a href="./latest.html" style="font-weight:700">🇯🇵 日本人選手の最新ハイライト（出場試合・新着順）→</a></p>
   ${Object.keys(PLAYER_NEWS).length?`<p style="margin:2px 0 14px"><a href="./news.html" style="font-weight:700">📰 日本人選手の最新ニュースまとめ →</a></p>`:''}
   ${secs}
   ${AD}
@@ -3159,6 +3160,8 @@ let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.site
 if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
 // /latest/ はこの後（RSSの後）に生成されるため existsSync では判定できない。生成条件（動画ありの最新試合が1件以上）で判定する。
 if(Object.values(LEAGUE_RECENT).some(a=>a&&a.some(r=>r&&r.videoId&&r.ms))) sm += `  <url><loc>${DOMAIN}/latest/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>\n`;
+// /player/latest.html（海外組の最新ハイライト）も後続生成のため生成条件（日本人選手が出場の最新試合が1件以上）で判定。
+if(Object.values(LEAGUE_RECENT).some(a=>a&&a.some(r=>r&&r.videoId&&r.ms&&(jpPlayersFor(r.home).length||jpPlayersFor(r.away).length)))) sm += `  <url><loc>${DOMAIN}/player/latest.html</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
 if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
 for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
@@ -3263,7 +3266,7 @@ try {
     <p class="kicker">⚽ 新着</p>
     <h1 class="headline">最新のサッカーハイライト</h1>
     <p class="dek">欧州5大リーグ・チャンピオンズリーグ・ネーションズリーグ・Jリーグなどの最新の公式ハイライトを新着順で一覧。公式映像のみ・ネタバレ防止（スコアは各ページで非表示）です。</p>
-    <p style="margin:2px 2px 10px;font-size:13px"><a href="../feed.xml">📶 RSSで購読</a> ／ <a href="../search.html">🔍 クラブ・選手で探す</a></p>
+    <p style="margin:2px 2px 10px;font-size:13px"><a href="../player/latest.html">🇯🇵 日本人選手の最新ハイライト</a> ／ <a href="../feed.xml">📶 RSSで購読</a> ／ <a href="../search.html">🔍 クラブ・選手で探す</a></p>
     ${lChips?`<h2 class="lined">大会で絞る</h2><div class="chips">${lChips}</div>`:''}
     ${AD}
     <h2 class="lined">新着ハイライト（${ltop.length}件）</h2>
@@ -3275,6 +3278,66 @@ try {
     console.log(`最新ハイライト一覧: site/latest/index.html（${ltop.length}件・${lgroups.length}日分）`);
   }
 } catch(e){ console.warn('最新ハイライトページ生成でエラー:', e.message); }
+
+// ===== 海外組 日本人選手の最新ハイライト /player/latest.html =====
+// 日本人選手が出場した最新試合のハイライトを新着順で集約。中核の集客源（海外組）向けの再訪・回遊ハブ。
+// 既存の jpPlayersFor（クラブ→日本人選手）と LEAGUE_RECENT から毎ビルド自動生成。
+try {
+  const jpMD = iso => { const t=new Date(iso); if(isNaN(t.getTime()))return ''; const d=new Date(t.getTime()+9*3600*1000); const w='日月火水木金土'[d.getUTCDay()]; return `${d.getUTCFullYear()}/${d.getUTCMonth()+1}/${d.getUTCDate()}(${w})`; };
+  const jitems = []; const jseen = new Set();
+  for(const code in LEAGUE_RECENT){
+    const jp = (LEAGUE_META[code]||{}).jp || (LG[code]||code);
+    for(const r of (LEAGUE_RECENT[code]||[])){
+      if(!r.videoId || !r.ms || !r.home || !r.away) continue;
+      if(!existsSync(`site/match/${r.ms}.html`)) continue;
+      const pls = [];
+      for(const t of [r.home, r.away]) for(const p of jpPlayersFor(t)) if(p && p.slug && !pls.some(x=>x.slug===p.slug)) pls.push(p);
+      if(!pls.length) continue;                 // 日本人選手が関与する試合のみ
+      if(jseen.has(r.ms)) continue; jseen.add(r.ms);
+      jitems.push({ home:r.home, away:r.away, ms:r.ms, date:r.dateUTC||'', jp, md:r.matchday, players:pls });
+    }
+  }
+  jitems.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  const jtop = jitems.slice(0, 60);
+  if(jtop.length){
+    const jurl = `${DOMAIN}/player/latest.html`;
+    const jdesc = `久保建英・三笘薫・堂安律ら海外組の日本人選手が出場した最新試合の公式ハイライトを新着順でまとめて掲載。公式映像のみ・ネタバレ防止（スコアは各ページで非表示）。`.slice(0,120);
+    // 登場した選手チップ（プロフィールへ送客）
+    const jpl = {};
+    for(const it of jtop) for(const p of it.players){ jpl[p.slug]=jpl[p.slug]||{name:p.name,n:0}; jpl[p.slug].n++; }
+    const jChips = Object.entries(jpl).sort((a,b)=>b[1].n-a[1].n).map(([slug,v])=>`<a href="${slug}.html">${esc(v.name)}<small style="opacity:.6"> ${v.n}</small></a>`).join('');
+    const jgroups = []; const jgseen = {};
+    for(const it of jtop){ const d=jpMD(it.date)||'日付不明'; if(!jgseen[d]){ jgseen[d]={label:d,rows:[]}; jgroups.push(jgseen[d]); } jgseen[d].rows.push(it); }
+    const jbody = jgroups.map(g=>`<div class="sc-day">${esc(g.label)}</div><ul class="sc-list">${g.rows.map(it=>`<li class="sc-row"><span class="sc-lg">${esc(it.jp)}${it.md!=null?` 第${it.md}節`:''}</span><span class="sc-m"><a href="../match/${it.ms}.html">${esc(it.home)} vs ${esc(it.away)}</a></span><span class="sc-pl">${it.players.map(p=>`<a href="${p.slug}.html">${esc(p.name)}</a>`).join('、')}</span></li>`).join('')}</ul>`).join('');
+    const jfaq = [
+      { q:`海外組（日本人選手）の最新ハイライトはどこで見られる？`, a:`このページに、久保建英・三笘薫・堂安律ら海外でプレーする日本人選手が出場した最新試合の公式ハイライトを新着順でまとめています。公式・権利元が公開する映像のみ・ネタバレ防止表示です。` },
+      { q:`どの選手のハイライトが載っていますか？`, a:`欧州5大リーグや各国リーグでプレーする日本代表クラスの選手を中心に、出場した試合のハイライトを掲載しています。各選手名から選手プロフィール（経歴・持ち味・関連ハイライト）にも移動できます。` },
+    ];
+    const jgraph = [
+      {"@type":"CollectionPage","name":"海外組 日本人選手の最新ハイライト","url":jurl,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}},
+      crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'日本人選手',url:`${DOMAIN}/player/`},{name:'最新ハイライト',url:jurl}]),
+      {"@type":"ItemList","itemListElement":jtop.slice(0,30).map((it,i)=>({"@type":"ListItem","position":i+1,"name":`${it.home} vs ${it.away}（${it.players.map(p=>p.name).join('・')}）`,"item":`${DOMAIN}/match/${it.ms}.html`}))},
+      faqLd(jfaq)
+    ];
+    const jhead = HEAD({ title:`海外組 日本人選手の最新ハイライト｜久保・三笘・堂安ら - Football Highlights Compass`, ogtitle:`海外組 日本人選手の最新ハイライト（新着順）`, desc:jdesc, url:jurl, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:jgraph });
+    const jcss = `<style>.sc-day{margin:16px 0 6px;font-size:14px;font-weight:800;padding-bottom:4px;border-bottom:2px solid var(--accent)}.sc-list{list-style:none;margin:0 0 6px;padding:0}.sc-row{display:flex;gap:8px 12px;align-items:baseline;padding:9px 4px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}.sc-lg{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:1px 7px;white-space:nowrap}.sc-m{font-weight:700}.sc-m a{color:var(--accent);text-decoration:none}.sc-m a:hover{text-decoration:underline}.sc-pl{font-size:12px;color:var(--muted);flex:1;min-width:140px}.sc-pl a{color:var(--ink);font-weight:700;text-decoration:none}.sc-pl a:hover{text-decoration:underline}.sc-note{font-size:12px;color:var(--muted);margin:2px 2px 8px}</style>`;
+    const jout = jhead + TOPBAR + jcss + `<article class="post">
+    ${crumb([{label:'トップ',href:'../'},{label:'日本人選手',href:'./'},{label:'最新ハイライト'}])}
+    <p class="kicker">🇯🇵 海外組</p>
+    <h1 class="headline">日本人選手の最新ハイライト</h1>
+    <p class="dek">久保建英・三笘薫・堂安律ら、海外でプレーする日本人選手が出場した最新試合の公式ハイライトを新着順でまとめて掲載。公式映像のみ・ネタバレ防止（スコアは各ページで非表示）です。</p>
+    <p style="margin:2px 2px 10px;font-size:13px"><a href="./">👤 選手プロフィール一覧</a> ／ <a href="../latest/">▶ 全大会の最新ハイライト</a></p>
+    ${jChips?`<h2 class="lined">選手で絞る</h2><div class="chips">${jChips}</div>`:''}
+    ${AD}
+    <h2 class="lined">新着（${jtop.length}試合）</h2>
+    <p class="sc-note">日本人選手が出場した最近の試合の公式ハイライト。スコアは各ページで隠しています（ネタバレ防止）。日時は日本時間。</p>
+    ${jbody}
+    ${FAQ_STYLE}${faqBlock(jfaq)}
+    ` + FOOTER();
+    writeFileSync('site/player/latest.html', jout);
+    console.log(`日本人選手の最新ハイライト: site/player/latest.html（${jtop.length}試合）`);
+  }
+} catch(e){ console.warn('日本人選手ハイライトページ生成でエラー:', e.message); }
 
 // ===== llms.txt（AI検索/クローラー向けの案内。GEO：ChatGPT/Perplexity等が要点を把握しやすく）=====
 {
@@ -3291,6 +3354,7 @@ try {
   L.push('## 主要ページ');
   if(scheduleUrl) L.push(`- [今週の試合日程（欧州5大リーグ・日本時間）](${scheduleUrl}): 全リーグ横断の直近の試合日程。`);
   if(existsSync('site/latest/index.html')) L.push(`- [最新のサッカーハイライト（新着順）](${DOMAIN}/latest/): 全大会の最新公式ハイライトを新着順で一覧（ネタバレ防止）。`);
+  if(existsSync('site/player/latest.html')) L.push(`- [海外組 日本人選手の最新ハイライト](${DOMAIN}/player/latest.html): 久保・三笘・堂安ら日本人選手が出場した最新試合の公式ハイライト（新着順・ネタバレ防止）。`);
   if(existsSync('site/search.html')) L.push(`- [サイト内検索](${DOMAIN}/search.html): クラブ・選手・リーグ・代表を横断検索（ローマ字可）。`);
   if(existsSync('site/en/index.html')) L.push(`- [English version](${DOMAIN}/en/): Official spoiler-free football highlights in English (Champions League, Premier League, La Liga and more).`);
   for(const h of LEAGUE_LIST) L.push(`- [${h.name}](${DOMAIN}/league/${h.slug}.html): ${h.name}の順位表・試合日程・次の試合・公式ハイライト。`);
