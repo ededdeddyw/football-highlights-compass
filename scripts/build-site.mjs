@@ -2489,6 +2489,7 @@ try {
 // 直近ハイライト（英語チーム名）と順位表を見せて試合ページ・検索へ送る。hreflangとsitemapで日本語版と相互リンク。
 const enLeagueUrls = [];
 const enClubUrls = [];
+const enCountryUrls = [];
 try {
   mkdirSync('site/en', { recursive: true });
   mkdirSync('site/en/league', { recursive: true });
@@ -2652,6 +2653,48 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     enClubUrls.push(canonical); enClubSet.add(info.slug);
   }
 
+  // ---- 英語 代表（ナショナルチーム）ページ（代表ハイライトがある国のみ）----
+  // 最大流入源のネーションズリーグに直結。「<country> highlights / national team」系クエリの受け皿。
+  mkdirSync('site/en/country', { recursive: true });
+  const enCountrySet = new Set();
+  for (const [cname, info] of Object.entries(COUNTRIES)) {
+    if(!info || !info.slug) continue;
+    const hl = (CLUB_HL[info.slug]||[]).filter(r => r.ms && r.videoId && existsSync(`site/match/${r.ms}.html`));
+    if(!hl.length) continue;   // 代表ハイライトが無ければ建てない（実在する試合ページがある国のみ）
+    const enName = prettySlug(info.slug);
+    const flag = info.iso ? `<img src="https://flagcdn.com/w40/${info.iso}.png" alt="" style="width:30px;height:auto;vertical-align:middle;margin-right:8px;border-radius:2px">` : '';
+    const natCard = r => { const me=enName, opp=enTeam(r.opp); const hh=r.ha==='H'?me:opp, aa=r.ha==='H'?opp:me; const comp=LEAGUE_EN[String(r.ms).split('-')[0]]||'International'; return `<a class="encard" href="../../match/${r.ms}.html"><span class="enthumb"><img src="https://i.ytimg.com/vi/${r.videoId}/hqdefault.jpg" alt="" loading="lazy"><span class="enplay">▶</span></span><span class="entx"><span class="enttl">${esc(hh)} vs ${esc(aa)}</span><span class="enmeta">${esc(comp)}</span></span></a>`; };
+    const cards = hl.slice(0,24).map(natCard).join('');
+    const nlHub = (enBuilt.find(x => x.code==='nations') || {}).slug;
+    const path = `en/country/${info.slug}.html`;
+    const canonical = `${DOMAIN}/en/country/${info.slug}.html`;
+    const jaAlt = `${DOMAIN}/country/${info.slug}.html`;
+    const jaExists = existsSync(`site/country/${info.slug}.html`);
+    const title = `${enName} National Team Highlights｜Official, Spoiler-Free Videos`;
+    const desc = `Official, spoiler-free ${enName} national team highlights (UEFA Nations League and internationals). Only official/rights-holder videos, scores hidden by default.`;
+    const jsonld = [
+      {"@type":"CollectionPage","name":`${enName} National Team Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
+      {"@type":"SportsTeam","name":`${enName} national football team`,"sport":"Association football"},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":`${enName} NT`,"item":canonical}]}
+    ];
+    const navChips = `<div class="en-chips">${nlHub?`<a href="../league/${nlHub}.html">Nations League</a>`:''}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
+    const body = `<div class="en-wrap">
+  <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a>${jaExists?`<a class="en-lang" href="../../country/${info.slug}.html">日本語版 →</a>`:''}</div>
+  <div class="en-crumb"><a href="../">Home</a> › ${esc(enName)} NT</div>
+  <div class="en-hero">
+    <h1>${flag}${esc(enName)} — national team highlights</h1>
+    <p>Official, spoiler-free ${esc(enName)} national team highlights (UEFA Nations League &amp; internationals). We gather only <strong>official and rights-holder</strong> videos, with scores hidden by default.</p>
+    <div class="en-cta"><a class="primary" href="../../search.html">🔍 Search clubs &amp; players</a><a class="ghost" href="#latest">Latest highlights ↓</a></div>
+  </div>
+  <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
+  ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  <h2 class="en-sec">More</h2>${navChips}
+  ${enFoot('../../')}
+</div>`;
+    writeFileSync(`site/${path}`, enShell({ title, desc, canonical, jaAlt:jaExists?jaAlt:canonical, enAlt:canonical, base:'../../', jsonld, body }));
+    enCountryUrls.push({ u:canonical, ja:jaExists }); enCountrySet.add(info.slug);
+  }
+
   const enHubs = [];   // {code, slug, name} 生成済みハブ（トップのリンク用）
   for (const h of enBuilt) {
     const items = recentOf(h.code).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
@@ -2668,6 +2711,9 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     // このリーグに属し、英語クラブページを持つクラブへのチップ（ハブ→クラブの英語回遊）
     const leagueClubs = Object.entries(CLUBS).filter(([,i]) => i && i.league===h.clubLabel && enClubSet.has(i.slug));
     const clubChips = leagueClubs.length ? `<h2 class="en-sec">Clubs</h2><div class="en-chips">${leagueClubs.map(([,i])=>`<a href="../club/${i.slug}.html">${esc(prettySlug(i.slug))}</a>`).join('')}</div>` : '';
+    // 代表大会（ネーションズリーグ等）のハブには、英語代表ページへの導線を付ける
+    const natTeams = (h.code==='nations' || h.code==='jpn') ? Object.entries(COUNTRIES).filter(([,i]) => i && i.slug && enCountrySet.has(i.slug)) : [];
+    const teamChips = natTeams.length ? `<h2 class="en-sec">National teams</h2><div class="en-chips">${natTeams.map(([,i])=>`<a href="../country/${i.slug}.html">${esc(prettySlug(i.slug))}</a>`).join('')}</div>` : '';
     const blurb = LEAGUE_BLURB_EN[h.code] || `Official highlights from ${name}.`;
     const title = `${name} Highlights & Table｜Spoiler-Free Official Videos`;
     const desc = `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
@@ -2687,6 +2733,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
   ${standHtml}
   ${clubChips}
+  ${teamChips}
   ${otherChips}
   ${enFoot('../../')}
 </div>`;
@@ -3091,6 +3138,7 @@ if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc
 if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${DOMAIN}/"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${DOMAIN}/en/"/></url>\n`;
 for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
+for(const c of enCountryUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/country/','/country/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>${alt}</url>\n`; }
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
