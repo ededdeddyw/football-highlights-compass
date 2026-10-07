@@ -218,6 +218,8 @@ const LEAGUE_FAQ = {
     { q:'カラバオカップ（EFLカップ）とは？', a:'カラバオカップは、正式名称をEFLカップというイングランドのカップ戦です（スポンサー名からカラバオカップと呼ばれます）。プレミアリーグとEFL所属クラブが参加する一発勝負のノックアウト方式で、勝ち上がったクラブが優勝を争います。' },
   ],
 };
+// リーグコード → 詳説ガイドの slug（ハブページから「完全ガイド」へ内部リンク）。GUIDES に対応エントリがあること。
+const LEAGUE_GUIDE = { nations:'uefa-nations-league-guide' };
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2166,6 +2168,83 @@ const GUIDES = [
       ${daznCta('見逃し配信でじっくり観るならDAZN。観るまでは通知オフが安心。')}
       <p style="margin-top:14px"><a href="../">▶ トップでチーム・選手からハイライトを探す</a></p>`;
     } },
+  { slug:'uefa-nations-league-guide',
+    title:'UEFAネーションズリーグ完全ガイド｜仕組み・リーグABCD・決勝ラウンド・日本から観る方法',
+    h1:'UEFAネーションズリーグ 完全ガイド',
+    dek:'リーグA〜Dの仕組み、昇格・降格、決勝ラウンド（準々決勝〜決勝）、開催時期、W杯予選との関係、そして日本から公式ハイライトを観る方法まで、ネーションズリーグのすべてを1ページに整理しました。',
+    desc:'UEFAネーションズリーグの仕組みを完全解説。リーグA/B/C/Dの違い、昇格・降格、決勝ラウンド、歴代優勝国、W杯予選との関係、日本から公式ハイライトを観る方法まで。公式映像のみ・ネタバレ防止。',
+    body(){
+      const rec = (LEAGUE_RECENT['nations']||[]).filter(r=>r.ms).slice(0,12);
+      const natPicks = ['ポルトガル','スペイン','フランス','イングランド','ドイツ','イタリア','オランダ','ベルギー','クロアチア'].filter(n=>PAGE_OF[n]);
+      return `<div class="post-body">
+        <p>UEFAネーションズリーグ（UEFA Nations League）は、欧州各国代表が<strong>実力の近いチーム同士で真剣勝負</strong>を行えるようにUEFA（欧州サッカー連盟）が創設した国際大会です。中身の薄くなりがちな親善試合に代わる公式戦として、<strong>2018-19シーズン</strong>に始まり、以後は2年に一度（偶数年の秋にグループステージ、翌奇数年に決勝ラウンド）のサイクルで開催されています。</p>
+        <p>当サイトでは、この大会の公式ハイライトを<strong>ネタバレ防止</strong>（スコアは既定で非表示）でまとめています。本ガイドでは、はじめて観る方にもわかるように大会の仕組みを整理します。</p>
+      </div>
+
+      <h2 class="lined">リーグA・B・C・Dとは？（実力別の4階層）</h2>
+      <div class="post-body">
+        <p>ネーションズリーグ最大の特徴は、参加する欧州の全代表を<strong>ランク（実力）に応じて4つのリーグに分ける</strong>点です。</p>
+        <ul>
+          <li><strong>リーグA</strong>：最上位。欧州の強豪国が集まり、大会の優勝を争います。</li>
+          <li><strong>リーグB</strong>：中上位。</li>
+          <li><strong>リーグC</strong>：中位。</li>
+          <li><strong>リーグD</strong>：最下位。比較的小規模な協会の代表が中心です。</li>
+        </ul>
+        <p>各リーグはさらに<strong>複数のグループ</strong>（おおむね1グループ4か国）に分かれ、グループ内で<strong>ホーム・アンド・アウェーの総当たり</strong>を戦います。同じくらいの実力同士でぶつかるため、どの階層でも競った好ゲームになりやすいのが狙いです。</p>
+      </div>
+
+      <h2 class="lined">昇格・降格の仕組み</h2>
+      <div class="post-body">
+        <p>ネーションズリーグには<strong>昇格と降格</strong>があります。各グループの成績上位国は一つ上のリーグへ昇格し、下位国は一つ下のリーグへ降格します（大会ごとに細かいルールの調整はあります）。これにより、好成績を収めればより強い相手と戦える階層へ上がっていける仕組みになっています。リーグAとBの間など、隣り合う階層の間で<strong>昇降格プレーオフ</strong>が行われる大会もあります。</p>
+      </div>
+
+      <h2 class="lined">決勝ラウンド（準々決勝〜決勝）</h2>
+      <div class="post-body">
+        <p>大会の王者は、最上位<strong>リーグAのグループ</strong>を勝ち上がった国によって決まります。2024-25大会からは、リーグAの各グループ首位・2位による<strong>準々決勝（ホーム&アウェーの2試合制）</strong>が翌年3月に行われ、勝ち上がった4か国が<strong>「ファイナル4」（準決勝・決勝を集中開催）</strong>に進んで優勝を争う方式になりました。決勝ラウンドは例年<strong>6月</strong>に開催されます。</p>
+      </div>
+
+      <h2 class="lined">開催時期（カレンダー）</h2>
+      <div class="post-body">
+        <p>ネーションズリーグは2年サイクルで、おおまかに次のように進みます。</p>
+        <ul>
+          <li><strong>偶数年の9月〜11月</strong>：グループステージ（各国のインターナショナルマッチ期間に実施）。</li>
+          <li><strong>翌・奇数年の3月</strong>：リーグA準々決勝、各階層の昇降格プレーオフ。</li>
+          <li><strong>翌・奇数年の6月</strong>：決勝ラウンド（ファイナル4）。</li>
+        </ul>
+        <p>クラブの公式戦が止まる代表ウィーク（いわゆるインターナショナルブレーク）に組み込まれるため、所属クラブで活躍する選手たちが各国代表のユニフォームで対戦する点も見どころです。</p>
+      </div>
+
+      <h2 class="lined">歴代優勝国</h2>
+      <div class="post-body">
+        <ul>
+          <li><strong>2018-19</strong>：ポルトガル</li>
+          <li><strong>2020-21</strong>：フランス</li>
+          <li><strong>2022-23</strong>：スペイン</li>
+          <li><strong>2024-25</strong>：ポルトガル</li>
+        </ul>
+      </div>
+
+      <h2 class="lined">W杯・EURO予選との関係</h2>
+      <div class="post-body">
+        <p>ネーションズリーグの成績は、ワールドカップ予選やEURO（欧州選手権）予選の<strong>プレーオフ出場権</strong>に結びつく仕組みが用意されています。通常の予選でストレートに本大会出場を決められなかった国にとって、ネーションズリーグでの好成績が<strong>敗者復活の“救済ルート”</strong>になり得ます。単なる親善試合ではなく、本大会への道にもつながる真剣勝負だということです。</p>
+      </div>
+
+      <h2 class="lined">日本代表は出場する？</h2>
+      <div class="post-body">
+        <p>ネーションズリーグは<strong>UEFA（欧州）加盟国の大会</strong>であり、アジア（AFC）に所属する<strong>日本代表は出場しません</strong>。ただし、欧州のクラブでプレーする日本人選手にとっては、チームメイトや対戦相手の代表選手が出場する大会でもあります。日本代表の試合は<a href="../league/japan-national-team.html">日本代表ページ</a>、欧州クラブの日本人選手は<a href="../player/latest.html">日本人選手の最新ハイライト</a>からどうぞ。</p>
+      </div>
+
+      ${rec.length?`<h2 class="lined">ネーションズリーグ 最新のハイライト</h2><div class="chips">${rec.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>`:''}
+      ${natPicks.length?`<h2 class="lined">注目の代表チーム（日程・ハイライト）</h2><div class="chips">${natPicks.map(n=>`<a href="../${PAGE_OF[n]}">${flagImg(n)}${esc(n)}代表</a>`).join('')}</div>`:''}
+
+      <h2 class="lined">公式ハイライトの観かた（ネタバレ防止）</h2>
+      <div class="post-body">
+        <p>当サイトは<strong>公式・権利元がYouTube等で公開するハイライトのみ</strong>を掲載し、スコアを隠した<strong>ネタバレ防止表示</strong>で整理しています。結果を知りたくないときは一覧・試合ページのスコアが伏せられ、好きなタイミングだけ表示できます。日本国内での代表戦のライブ・見逃し配信は主に<strong>DAZN</strong>が扱います。</p>
+        <p style="margin-top:6px">まずは大会トップから、観たい試合だけを開いてみてください。</p>
+      </div>
+      ${daznCta('ネーションズリーグを含む代表戦の配信はDAZNで。観るまでは通知オフが安心。')}
+      <p style="margin-top:14px"><a href="../league/nations-league.html">▶ UEFAネーションズリーグ（順位・最新ハイライト・グループ別）</a> ／ <a href="../country/latest.html">▶ 代表・ネーションズリーグの最新ハイライト</a></p>`;
+    } },
 ];
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
@@ -2279,6 +2358,7 @@ function buildLeague(h){
   ${fixTable}
   ${recentBlock}
   ${groupBlock}
+  ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code]}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（リーグABCD・昇降格・決勝ラウンド）</a></p>`:''}
   ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
