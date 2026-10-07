@@ -967,6 +967,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "イングランド",
+      "away": "チェコ",
+      "homeSlug": "england",
+      "awaySlug": "czech",
+      "finished": true,
+      "score": "",
+      "videoId": "zary3O-x_RE",
+      "group": "A3"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "ウェールズ",
       "away": "デンマーク",
       "homeSlug": "wales",
@@ -999,6 +1011,18 @@
       "score": "",
       "videoId": "LYF1J9FW44Q",
       "group": "A2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "クロアチア",
+      "away": "スペイン",
+      "homeSlug": "croatia",
+      "awaySlug": "spain",
+      "finished": true,
+      "score": "",
+      "videoId": "NUMTZaxeVCc",
+      "group": "A3"
     },
     {
       "matchday": 4,
