@@ -2406,6 +2406,54 @@ const GUIDES = [
       ${streamCta('el')}
       <p style="margin-top:14px"><a href="../league/europa-league.html">▶ UEFAヨーロッパリーグ（順位・最新ハイライト）</a> ／ <a href="../league/champions-league.html">▶ UEFAチャンピオンズリーグ</a></p>`;
     } },
+  { slug:'world-cup-winners-history', entities:['ブラジル','ドイツ','ウルグアイ','スペイン','イングランド'],
+    title:'FIFAワールドカップ歴代優勝国一覧｜優勝回数ランキング・年度別の王者（1930〜）',
+    h1:'FIFAワールドカップ 歴代優勝国 完全ガイド',
+    dek:'FIFAワールドカップの歴代優勝国を、優勝回数ランキングと年度別一覧で整理しました。「どの国が何回優勝している？」「○○年の王者は？」がひと目でわかります。',
+    desc:'FIFAワールドカップの歴代優勝国を完全網羅。優勝回数ランキング（ブラジル5回、ドイツ・イタリア4回ほか）と1930〜2022年の年度別優勝国一覧。各代表の公式ハイライトへも。',
+    body(){
+      // 優勝回数ランキング（1930〜2022の確定した歴史的事実）。pageが在庫にある国は代表ページへ内部リンク。
+      const RANK = [
+        { n:'ブラジル', c:5, yrs:'1958・1962・1970・1994・2002' },
+        { n:'ドイツ', c:4, yrs:'1954・1974・1990・2014', note:'1954・1974・1990は西ドイツ' },
+        { n:'イタリア', c:4, yrs:'1934・1938・1982・2006' },
+        { n:'アルゼンチン', c:3, yrs:'1978・1986・2022' },
+        { n:'ウルグアイ', c:2, yrs:'1930・1950' },
+        { n:'フランス', c:2, yrs:'1998・2018' },
+        { n:'イングランド', c:1, yrs:'1966' },
+        { n:'スペイン', c:1, yrs:'2010' },
+      ];
+      // 年度別の優勝国（第1回1930〜2022）。西ドイツ時代は注記つき。
+      const YEARS = [
+        ['1930','ウルグアイ'],['1934','イタリア'],['1938','イタリア'],['1950','ウルグアイ'],
+        ['1954','西ドイツ'],['1958','ブラジル'],['1962','ブラジル'],['1966','イングランド'],
+        ['1970','ブラジル'],['1974','西ドイツ'],['1978','アルゼンチン'],['1982','イタリア'],
+        ['1986','アルゼンチン'],['1990','西ドイツ'],['1994','ブラジル'],['1998','フランス'],
+        ['2002','ブラジル'],['2006','イタリア'],['2010','スペイン'],['2014','ドイツ'],
+        ['2018','フランス'],['2022','アルゼンチン'],
+      ];
+      const cLink = nm => { const base = nm==='西ドイツ' ? 'ドイツ' : nm; const info = COUNTRIES[base]; return (info && info.slug && existsSync(`site/country/${info.slug}.html`)) ? `<a href="../country/${info.slug}.html">${flagImg(base)}${esc(nm)}</a>` : `${flagImg(base)}${esc(nm)}`; };
+      const css = `<style>.wcw{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}.wcw th,.wcw td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}.wcw th{color:var(--muted);font-weight:700;font-size:12px}.wcw td.c{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}.wcy{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}.wcy th,.wcy td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left}.wcy td.y{font-weight:800;font-variant-numeric:tabular-nums;width:4.5em}</style>`;
+      return css + `<div class="post-body">
+        <p>FIFAワールドカップ（W杯）は1930年の第1回大会から、4年に一度開催されてきたサッカーの世界一決定戦です。これまでに優勝したのは<strong>わずか8か国</strong>。本ガイドでは、<strong>優勝回数ランキング</strong>と<strong>年度別の優勝国一覧</strong>で、歴代の王者をまとめます（1930〜2022年の確定した記録）。</p>
+      </div>
+
+      <h2 class="lined">優勝回数ランキング</h2>
+      <table class="wcw"><thead><tr><th>国</th><th>優勝回数</th><th>優勝年</th></tr></thead><tbody>
+      ${RANK.map(r=>`<tr><td>${cLink(r.n)}</td><td class="c">${r.c}回</td><td>${esc(r.yrs)}${r.note?`<small style="opacity:.65"> ※${esc(r.note)}</small>`:''}</td></tr>`).join('')}
+      </tbody></table>
+      <p class="post-body" style="font-size:12.5px;opacity:.75">※ 現在のドイツは、1954・1974・1990年の西ドイツ時代の優勝を含めて通算4回としています。</p>
+
+      <h2 class="lined">年度別の優勝国（1930〜2022）</h2>
+      <table class="wcy"><thead><tr><th>開催年</th><th>優勝国</th></tr></thead><tbody>
+      ${YEARS.map(([y,n])=>`<tr><td class="y">${y}</td><td>${cLink(n)}</td></tr>`).join('')}
+      </tbody></table>
+
+      <h2 class="lined">各代表の公式ハイライト</h2>
+      <div class="post-body"><p>当サイトでは、公式・権利元が公開する各代表の公式ハイライトを、スコアを隠した<strong>ネタバレ防止表示</strong>でまとめています。代表ページから、歴代成績や公式ハイライトをご覧いただけます。</p></div>
+      <div class="chips">${[...new Set(RANK.map(r=>r.n))].map(cLink).join('')}</div>
+      <p style="margin-top:14px"><a href="../?league=wc">▶ FIFAワールドカップ26の試合一覧・ハイライト</a> ／ <a href="../guide/world-cup-2026-how-to-watch.html">▶ W杯26を日本から観る方法</a></p>`;
+    } },
 ];
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
