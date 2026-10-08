@@ -30,6 +30,7 @@ site/country/
 site/club/
 site/style.css
 site/article.css
+site/match-redirects.json
 
 # Python
 __pycache__/
