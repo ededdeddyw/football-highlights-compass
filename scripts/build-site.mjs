@@ -219,7 +219,10 @@ const LEAGUE_FAQ = {
   ],
 };
 // リーグコード → 詳説ガイドの slug（ハブページから「完全ガイド」へ内部リンク）。GUIDES に対応エントリがあること。
-const LEAGUE_GUIDE = { nations:'uefa-nations-league-guide' };
+const LEAGUE_GUIDE = {
+  nations:{ slug:'uefa-nations-league-guide', tag:'リーグABCD・昇降格・決勝ラウンド' },
+  cl:     { slug:'uefa-champions-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・歴代王者' },
+};
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2253,6 +2256,78 @@ const GUIDES = [
       ${daznCta('ネーションズリーグを含む代表戦の配信はDAZNで。観るまでは通知オフが安心。')}
       <p style="margin-top:14px"><a href="../league/nations-league.html">▶ UEFAネーションズリーグ（順位・最新ハイライト・グループ別）</a> ／ <a href="../country/latest.html">▶ 代表・ネーションズリーグの最新ハイライト</a></p>`;
     } },
+  { slug:'uefa-champions-league-guide',
+    title:'UEFAチャンピオンズリーグ完全ガイド｜新方式リーグフェーズ・決勝トーナメント・日本から観る方法',
+    h1:'UEFAチャンピオンズリーグ 完全ガイド',
+    dek:'2024-25シーズンから変わった新方式「リーグフェーズ」（36クラブ・1つの順位表）、決勝トーナメント、開催時期、歴代優勝クラブ、そして日本から公式ハイライトを観る方法まで、チャンピオンズリーグのすべてを1ページに整理しました。',
+    desc:'UEFAチャンピオンズリーグの仕組みを完全解説。新方式リーグフェーズ（36クラブ・8試合・単一順位表）、決勝トーナメント、歴代優勝クラブ、日本から公式ハイライトを観る方法まで。公式映像のみ・ネタバレ防止。',
+    body(){
+      const rec = (LEAGUE_RECENT['cl']||[]).filter(r=>r.ms).slice(0,12);
+      const clubPicks = ['レアル・マドリード','バルセロナ','マンチェスター・シティ','リバプール','アーセナル','バイエルン','パリ・サンジェルマン','インテル','ミラン'].filter(n=>CLUBS[n]);
+      return `<div class="post-body">
+        <p>UEFAチャンピオンズリーグ（UEFA Champions League、CL）は、欧州各国のリーグ上位クラブが集う<strong>ヨーロッパ最高峰のクラブ大会</strong>です。世界最高峰の選手が所属クラブのユニフォームで激突する、1年でもっとも注目を集める舞台のひとつです。</p>
+        <p>当サイトでは、この大会の公式ハイライトを<strong>ネタバレ防止</strong>（スコアは既定で非表示）でまとめています。本ガイドでは、2024-25シーズンから大きく変わった新方式も含め、仕組みをわかりやすく整理します。</p>
+      </div>
+
+      <h2 class="lined">新方式「リーグフェーズ」とは？（2024-25〜）</h2>
+      <div class="post-body">
+        <p>2024-25シーズンから、チャンピオンズリーグは従来の「グループステージ（4チーム×8組）」を廃止し、<strong>36クラブによる「リーグフェーズ」</strong>に生まれ変わりました。ポイントは次の通りです。</p>
+        <ul>
+          <li>参加クラブが<strong>32→36</strong>に増加。</li>
+          <li>各クラブは<strong>異なる8クラブと対戦</strong>（ホーム4試合・アウェー4試合）。総当たりではありません。</li>
+          <li>全36クラブを<strong>1つの順位表</strong>で争います（グループ分けなし）。</li>
+        </ul>
+      </div>
+
+      <h2 class="lined">決勝トーナメント進出のルール</h2>
+      <div class="post-body">
+        <p>リーグフェーズ（第1〜8節）の最終順位によって、その後の進み方が決まります。</p>
+        <ul>
+          <li><strong>1〜8位</strong>：決勝トーナメント（ベスト16）へ<strong>自動進出</strong>。</li>
+          <li><strong>9〜24位</strong>：<strong>プレーオフ（2試合制）</strong>に回り、勝てばベスト16へ。</li>
+          <li><strong>25〜36位</strong>：敗退（この大会での戦いを終えます）。</li>
+        </ul>
+        <p>ベスト16以降は、ベスト16 → 準々決勝 → 準決勝（いずれもホーム&アウェーの2試合制）を経て、<strong>決勝は中立地の1試合</strong>で王者が決まります。</p>
+      </div>
+
+      <h2 class="lined">開催時期（カレンダー）</h2>
+      <div class="post-body">
+        <ul>
+          <li><strong>9月〜翌1月</strong>：リーグフェーズ（第1〜8節）。</li>
+          <li><strong>2月</strong>：プレーオフ（9〜24位）。</li>
+          <li><strong>3月〜5月</strong>：決勝トーナメント（ベスト16〜準決勝）。</li>
+          <li><strong>5月下旬〜6月</strong>：決勝（中立地開催）。</li>
+        </ul>
+        <p>多くの試合が日本時間の深夜〜早朝に行われるため、<strong>後から公式ハイライトで振り返る</strong>楽しみ方とも相性のよい大会です。</p>
+      </div>
+
+      <h2 class="lined">歴代優勝クラブ（近年）</h2>
+      <div class="post-body">
+        <p>通算優勝回数では<strong>レアル・マドリード</strong>が群を抜いて最多で、「CLといえばマドリー」と語られるほどの存在です。近年の優勝クラブは次の通りです。</p>
+        <ul>
+          <li><strong>2021-22</strong>：レアル・マドリード</li>
+          <li><strong>2022-23</strong>：マンチェスター・シティ</li>
+          <li><strong>2023-24</strong>：レアル・マドリード</li>
+          <li><strong>2024-25</strong>：パリ・サンジェルマン（クラブ史上初）</li>
+        </ul>
+      </div>
+
+      <h2 class="lined">ヨーロッパリーグ（EL）との違い</h2>
+      <div class="post-body">
+        <p>チャンピオンズリーグが欧州<strong>1番手</strong>のクラブ大会なのに対し、<a href="../league/europa-league.html">UEFAヨーロッパリーグ（EL）</a>は<strong>2番手</strong>の大会です。ELも2024-25シーズンから36クラブのリーグフェーズ制に変わりました。ELの優勝クラブは、翌シーズンのチャンピオンズリーグ出場権を得られます。</p>
+      </div>
+
+      ${rec.length?`<h2 class="lined">チャンピオンズリーグ 最新のハイライト</h2><div class="chips">${rec.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>`:''}
+      ${clubPicks.length?`<h2 class="lined">注目のクラブ（日程・ハイライト）</h2><div class="chips">${clubPicks.map(n=>`<a href="../club/${CLUBS[n].slug}.html">${esc(n)}</a>`).join('')}</div>`:''}
+
+      <h2 class="lined">日本から観る方法・公式ハイライト（ネタバレ防止）</h2>
+      <div class="post-body">
+        <p>日本国内でのチャンピオンズリーグのライブ・見逃し配信は主に<strong>WOWOW</strong>が扱います。当サイトは<strong>公式・権利元がYouTube等で公開するハイライトのみ</strong>を掲載し、スコアを隠した<strong>ネタバレ防止表示</strong>で整理しています。結果を知りたくないときは一覧・試合ページのスコアが伏せられ、好きなタイミングだけ表示できます。</p>
+        <p style="margin-top:6px">まずは大会トップから、観たい試合だけを開いてみてください。</p>
+      </div>
+      ${streamCta('cl')}
+      <p style="margin-top:14px"><a href="../league/champions-league.html">▶ UEFAチャンピオンズリーグ（順位・最新ハイライト）</a> ／ <a href="../league/europa-league.html">▶ UEFAヨーロッパリーグ</a></p>`;
+    } },
 ];
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
@@ -2366,7 +2441,7 @@ function buildLeague(h){
   ${fixTable}
   ${recentBlock}
   ${groupBlock}
-  ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code]}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（リーグABCD・昇降格・決勝ラウンド）</a></p>`:''}
+  ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code].slug}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（${esc(LEAGUE_GUIDE[h.code].tag)}）</a></p>`:''}
   ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
