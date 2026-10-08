@@ -955,6 +955,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "アゼルバイジャン",
+      "away": "リトアニア",
+      "homeSlug": "azerbaijan",
+      "awaySlug": "lithuania",
+      "finished": true,
+      "score": "",
+      "videoId": "2YOInlBUELo",
+      "group": "D2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "イタリア",
       "away": "トルコ",
       "homeSlug": "italy",
@@ -1027,6 +1039,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "コソボ",
+      "away": "オーストリア",
+      "homeSlug": "kosovo",
+      "awaySlug": "austria",
+      "finished": true,
+      "score": "",
+      "videoId": "6J5HhW5uJWo",
+      "group": "B3"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "フランス",
       "away": "ベルギー",
       "homeSlug": "france",
@@ -1047,6 +1071,42 @@
       "score": "",
       "videoId": "1ZqOcdMzym8",
       "group": "A4"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "マルタ",
+      "away": "アンドラ",
+      "homeSlug": "malta",
+      "awaySlug": "andorra",
+      "finished": true,
+      "score": "",
+      "videoId": "14Uqah7r6mM",
+      "group": "D1"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "モンテネグロ",
+      "away": "アルメニア",
+      "homeSlug": "montenegro",
+      "awaySlug": "armenia",
+      "finished": true,
+      "score": "",
+      "videoId": "lUw2sU7JMC4",
+      "group": "C2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "北アイルランド",
+      "away": "ジョージア",
+      "homeSlug": "northern-ireland",
+      "awaySlug": "georgia",
+      "finished": true,
+      "score": "",
+      "videoId": "oqgPYhCB1Pk",
+      "group": "B2"
     }
   ]
 }
