@@ -222,6 +222,7 @@ const LEAGUE_FAQ = {
 const LEAGUE_GUIDE = {
   nations:{ slug:'uefa-nations-league-guide', tag:'リーグABCD・昇降格・決勝ラウンド' },
   cl:     { slug:'uefa-champions-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・歴代王者' },
+  el:     { slug:'uefa-europa-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・CLとの違い' },
 };
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
@@ -2327,6 +2328,83 @@ const GUIDES = [
       </div>
       ${streamCta('cl')}
       <p style="margin-top:14px"><a href="../league/champions-league.html">▶ UEFAチャンピオンズリーグ（順位・最新ハイライト）</a> ／ <a href="../league/europa-league.html">▶ UEFAヨーロッパリーグ</a></p>`;
+    } },
+  { slug:'uefa-europa-league-guide',
+    title:'UEFAヨーロッパリーグ完全ガイド｜新方式リーグフェーズ・決勝トーナメント・日本から観る方法',
+    h1:'UEFAヨーロッパリーグ 完全ガイド',
+    dek:'2024-25シーズンから変わった新方式「リーグフェーズ」（36クラブ・1つの順位表）、決勝トーナメント、CLとの違い、優勝のメリット、日本人選手、そして日本から公式ハイライトを観る方法まで、ヨーロッパリーグのすべてを1ページに整理しました。',
+    desc:'UEFAヨーロッパリーグの仕組みを完全解説。新方式リーグフェーズ（36クラブ・単一順位表）、決勝トーナメント、CLとの違い、優勝でCL出場権、歴代優勝クラブ、日本から観る方法まで。公式映像のみ・ネタバレ防止。',
+    body(){
+      const rec = (LEAGUE_RECENT['el']||[]).filter(r=>r.ms).slice(0,12);
+      // EL出場クラブ（＝EL試合に登場するチーム）に所属する日本人選手を導出（国内リーグ名では判定できないため）
+      const elPlayers = []; { const seen=new Set();
+        for(const r of (LEAGUE_RECENT['el']||[])) for(const t of [r.home,r.away]) for(const p of jpPlayersFor(t)) if(p&&p.slug&&!seen.has(p.slug)){ seen.add(p.slug); elPlayers.push(p); } }
+      return `<div class="post-body">
+        <p>UEFAヨーロッパリーグ（UEFA Europa League、EL）は、<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ</a>に次ぐ<strong>欧州2番手のクラブ大会</strong>です。各国リーグの上位〜中位クラブや、チャンピオンズリーグの予選・リーグフェーズで敗退したクラブなどが参加し、ヨーロッパの舞台で優勝を争います。</p>
+        <p>当サイトでは、この大会の公式ハイライトを<strong>ネタバレ防止</strong>（スコアは既定で非表示）でまとめています。本ガイドでは、2024-25シーズンから変わった新方式も含め、仕組みをわかりやすく整理します。</p>
+      </div>
+
+      <h2 class="lined">新方式「リーグフェーズ」とは？（2024-25〜）</h2>
+      <div class="post-body">
+        <p>ヨーロッパリーグもチャンピオンズリーグと同様、2024-25シーズンから従来のグループステージを廃止し、<strong>36クラブによる「リーグフェーズ」</strong>に変わりました。</p>
+        <ul>
+          <li>各クラブは<strong>異なる8クラブと対戦</strong>（ホーム4試合・アウェー4試合）。総当たりではありません。</li>
+          <li>全36クラブを<strong>1つの順位表</strong>で争います（グループ分けなし）。</li>
+        </ul>
+      </div>
+
+      <h2 class="lined">決勝トーナメント進出のルール</h2>
+      <div class="post-body">
+        <p>リーグフェーズ（第1〜8節）の最終順位によって、その後の進み方が決まります（チャンピオンズリーグと同じ枠組みです）。</p>
+        <ul>
+          <li><strong>1〜8位</strong>：決勝トーナメント（ベスト16）へ<strong>自動進出</strong>。</li>
+          <li><strong>9〜24位</strong>：<strong>プレーオフ（2試合制）</strong>に回り、勝てばベスト16へ。</li>
+          <li><strong>25〜36位</strong>：敗退（この大会での戦いを終えます）。</li>
+        </ul>
+        <p>ベスト16以降はホーム&アウェーの2試合制で勝ち上がり、<strong>決勝は中立地の1試合</strong>で王者が決まります。</p>
+      </div>
+
+      <h2 class="lined">チャンピオンズリーグとの違い・優勝のメリット</h2>
+      <div class="post-body">
+        <p>ELはCLに次ぐ2番手の大会ですが、見どころとメリットは大きい大会です。</p>
+        <ul>
+          <li><strong>優勝クラブは、翌シーズンのチャンピオンズリーグ出場権</strong>を得られます。リーグ戦で上位に届かなかったクラブにとって、ELは“CLへの近道”にもなります。</li>
+          <li>名門クラブの参戦も多く、好カードが揃います。</li>
+        </ul>
+        <p>CLの仕組みは<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ完全ガイド</a>で詳しく解説しています。</p>
+      </div>
+
+      <h2 class="lined">開催時期（カレンダー）</h2>
+      <div class="post-body">
+        <ul>
+          <li><strong>9月〜翌1月</strong>：リーグフェーズ（第1〜8節）。</li>
+          <li><strong>2月</strong>：プレーオフ（9〜24位）。</li>
+          <li><strong>3月〜5月</strong>：決勝トーナメント（ベスト16〜準決勝）。</li>
+          <li><strong>5月下旬</strong>：決勝（中立地開催）。</li>
+        </ul>
+      </div>
+
+      <h2 class="lined">歴代優勝クラブ（近年）</h2>
+      <div class="post-body">
+        <p>通算優勝回数では<strong>セビージャ</strong>が最多で、EL（旧UEFAカップ時代を含む）を得意とするクラブとして知られます。近年の優勝クラブは次の通りです。</p>
+        <ul>
+          <li><strong>2021-22</strong>：アイントラハト・フランクフルト</li>
+          <li><strong>2022-23</strong>：セビージャ</li>
+          <li><strong>2023-24</strong>：アタランタ</li>
+          <li><strong>2024-25</strong>：トッテナム</li>
+        </ul>
+      </div>
+
+      ${elPlayers.length?`<h2 class="lined">ヨーロッパリーグの日本人選手</h2><div class="chips">${elPlayers.slice(0,10).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos||'')}</small></a>`).join('')}</div>`:''}
+      ${rec.length?`<h2 class="lined">ヨーロッパリーグ 最新のハイライト</h2><div class="chips">${rec.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div>`:''}
+
+      <h2 class="lined">日本から観る方法・公式ハイライト（ネタバレ防止）</h2>
+      <div class="post-body">
+        <p>日本国内でのヨーロッパリーグのライブ・見逃し配信は主に<strong>WOWOW</strong>が扱います。当サイトは<strong>公式・権利元がYouTube等で公開するハイライトのみ</strong>を掲載し、スコアを隠した<strong>ネタバレ防止表示</strong>で整理しています。結果を知りたくないときは一覧・試合ページのスコアが伏せられ、好きなタイミングだけ表示できます。</p>
+        <p style="margin-top:6px">まずは大会トップから、観たい試合だけを開いてみてください。</p>
+      </div>
+      ${streamCta('el')}
+      <p style="margin-top:14px"><a href="../league/europa-league.html">▶ UEFAヨーロッパリーグ（順位・最新ハイライト）</a> ／ <a href="../league/champions-league.html">▶ UEFAチャンピオンズリーグ</a></p>`;
     } },
 ];
 const guidesByEntity = {};
