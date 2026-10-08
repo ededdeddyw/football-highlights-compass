@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){try{if(location.hostname==='ededdeddyw.github.io'){var p=location.pathname.replace(/^\/football-highlights-compass/,'')||'/';location.replace('https://highlight-compass.com'+p+location.search+location.hash);}}catch(e){}})();</script>
+<script>(function(){try{if(location.hostname==='ededdeddyw.github.io'){var p=location.pathname.replace(/^\/football-highlights-compass/,'')||'/';location.replace('https://highlight-compass.com'+p+location.search+location.hash);return;}
+// 旧「/match/<videoId>.html」URL（索引・ブックマーク由来）は、現在はクリーンslug（例 /match/bl-2526-md4-…）に統一済み。
+// リダイレクトマップを参照し、該当すれば正規ページへ自動で飛ばす（無ければ通常の404表示）。
+var m=location.pathname.match(/\/match\/([A-Za-z0-9_-]{6,})\.html$/);
+if(m){var id=m[1];fetch('/match-redirects.json').then(function(r){return r.ok?r.json():null;}).then(function(map){if(map&&map[id]){location.replace('/match/'+map[id]+'.html');}}).catch(function(){});}
+}catch(e){}})();</script>
 <title>ページが見つかりません（404） - Football Highlights Compass</title>
 <meta name="robots" content="noindex,follow">
 <meta name="theme-color" content="#0c1657">
@@ -24,10 +29,11 @@
   <div class="box">
     <p class="code">404</p>
     <h1>ページが見つかりません</h1>
-    <p>お探しのページは移動または削除された可能性があります。<br>トップから、ワールドカップ26・Jリーグ・日本人所属クラブの公式ハイライトを探せます。</p>
+    <p>お探しのページは移動または削除された可能性があります。<br>トップやサイト内検索から、公式ハイライト（5大リーグ・CL/EL・代表・Jリーグ など）を探せます。</p>
     <div class="btns">
       <a class="btn primary" href="/">▶ トップで試合を探す</a>
-      <a class="btn ghost" href="/about.html">このサイトについて</a>
+      <a class="btn ghost" href="/search.html">🔍 サイト内検索</a>
+      <a class="btn ghost" href="/latest/">🆕 最新ハイライト</a>
     </div>
   </div>
 </body></html>

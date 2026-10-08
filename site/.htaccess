@@ -1,0 +1,3 @@
+# Football Highlights Compass — サーバ設定（StarServer / Apache・LiteSpeed）
+# 自前の404ページを配信する（未設定だとレンタルサーバ既定の素っ気ない404が出るため）。
+ErrorDocument 404 /404.html

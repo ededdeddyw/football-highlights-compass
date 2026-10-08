@@ -1476,6 +1476,7 @@ const DATA_SLUG_BY_JA = {};
 const RAIL_UPDATED = {};
 const LEAGUE_RECENT = {};   // code -> 動画あり試合（新しい順）。リーグハブの「最新ハイライト」用
 const LEAGUE_UPCOMING = {}; // code -> 未消化試合（日付昇順）。リーグハブの「次節の試合日程」用
+const MATCH_REDIR = {};     // videoId -> クリーンslug。旧「/match/<videoId>.html」URL（索引・ブックマーク由来）を正規ページへ404ページから誘導する
 try {
   for (const f of readdirSync('data').filter(n=>/^league-[a-z0-9]+-\d{4}\.json$/.test(n))){
     let j; try { j = JSON.parse(readFileSync(`data/${f}`,'utf8')); } catch(e){ continue; }
@@ -1492,6 +1493,7 @@ try {
       if (as && mt.away) DATA_SLUG_BY_JA[mt.away] = as;
       if (mt.videoId){
         const ms = leagueSlug(mt, L);
+        if(!MATCH_REDIR[mt.videoId]) MATCH_REDIR[mt.videoId] = ms;   // 旧videoId URL → 正規クリーンslug（404ページの自動リダイレクト用）
         (LEAGUE_RECENT[code]=LEAGUE_RECENT[code]||[]).push({ home:mt.home, away:mt.away, matchday:mt.matchday, dateUTC:mt.dateUTC||'', videoId:mt.videoId, ms, group:mt.group||'' });
         if (hs) (CLUB_HL[hs]=CLUB_HL[hs]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.away, ha:'H', ms });
         if (as) (CLUB_HL[as]=CLUB_HL[as]||[]).push({ videoId:mt.videoId, dateUTC:mt.dateUTC||'', opp:mt.home, ha:'A', ms });
@@ -1525,6 +1527,12 @@ try {
       if (m.awaySlug && !CLUB_NEXT[m.awaySlug]) CLUB_NEXT[m.awaySlug] = { opp:m.home, ha:'A', dateUTC:m.dateUTC, matchday:m.matchday, code:c };
     } }
 } catch(e){ console.warn('サイドレール用データ計算でエラー:', e.message); }
+
+// 旧「/match/<videoId>.html」URL → 正規クリーンslug のリダイレクトマップを書き出す。
+// 五大リーグ等の試合は過去にvideoId形式URLで存在した経緯があり、現在はクリーンslug（例 bl-2526-md4-…）に統一済み。
+// 索引・ブックマーク由来の旧URLへのアクセスを 404ページ（site/404.html）が参照して正規ページへ自動誘導する。
+try { writeFileSync('site/match-redirects.json', JSON.stringify(MATCH_REDIR)+'\n'); }
+catch(e){ console.warn('match-redirects書込失敗:', e.message); }
 
 // 得点王ランキング（data/topscorers-<code>.json ＝ fetch-scorers.mjs が football-data から取得）。code -> [{rank,name,team,goals,assists,apps,nat}]
 const TOPSCORERS = {};
