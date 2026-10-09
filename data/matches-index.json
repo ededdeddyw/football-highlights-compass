@@ -2948,7 +2948,7 @@
     "leagueName": "Jリーグ2026",
     "meta": "Jリーグ 2026・プレーオフ 1-2位決定戦 第2戦・神戸が王者",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "dO0f-a5AegE",
@@ -3931,7 +3931,7 @@
     "players": [
       "佐野海舟"
     ],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "pKWnFYZ3NgY",
@@ -4340,7 +4340,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md1-port-fc-kobe",
@@ -4376,7 +4376,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md1-daejeon-hana-kyoto-sanga",
@@ -4388,7 +4388,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md1-machida-svay-rieng",
@@ -4400,7 +4400,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md5-anderlecht-genk",
@@ -4412,7 +4412,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md6-club-brugge-antwerp",
@@ -4424,7 +4424,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md6-beveren-sint-truiden",
@@ -4436,7 +4436,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md6-genk-gent",
@@ -4448,7 +4448,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md6-mechelen-anderlecht",
@@ -4460,7 +4460,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md7-antwerp-union-sg",
@@ -4472,7 +4472,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md7-club-brugge-genk",
@@ -4484,7 +4484,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md7-sint-truiden-westerlo",
@@ -4496,7 +4496,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-bayern-leipzig",
@@ -8204,7 +8204,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-1-fc-union-berlin-eintracht-frankfurt",
@@ -8216,7 +8216,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-1-fc-koln-tsg-hoffenheim",
@@ -13472,7 +13472,7 @@
     "leagueName": "チャンピオンズリーグ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "cl-2526-md8-psg-galatasaray",
@@ -13484,7 +13484,7 @@
     "leagueName": "チャンピオンズリーグ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "cl-2526-md8-liverpool-rc-lens",
@@ -13640,7 +13640,7 @@
     "leagueName": "UEFAヨーロッパリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "el-2526-md1-crystal-palace-lech-poznan",
@@ -34724,7 +34724,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md1-albania-belarus",
@@ -34820,7 +34820,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第1節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md1-san-marino-finland",
@@ -35711,10 +35711,34 @@
     "hasPreview": true
   },
   {
+    "id": "nations-2526-md4-ukraine-hungary",
+    "teams": [
+      "ウクライナ",
+      "ハンガリー"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "nations-2526-md4-netherlands-serbia",
     "teams": [
       "オランダ",
       "セルビア"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "nations-2526-md4-cyprus-latvia",
+    "teams": [
+      "キプロス",
+      "ラトビア"
     ],
     "league": "nations",
     "leagueName": "UEFAネーションズリーグ",
@@ -35771,6 +35795,18 @@
     "hasPreview": true
   },
   {
+    "id": "nations-2526-md4-bosnia-poland",
+    "teams": [
+      "ボスニア・ヘルツェゴビナ",
+      "ポーランド"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "nations-2526-md4-portugal-norway",
     "teams": [
       "ポルトガル",
@@ -35804,7 +35840,19 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第4節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
+  },
+  {
+    "id": "nations-2526-md4-romania-sweden",
+    "teams": [
+      "ルーマニア",
+      "スウェーデン"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md4-northern-ireland-georgia",
@@ -35816,7 +35864,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第4節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "pl-2526-md1-liverpool-bournemouth",
