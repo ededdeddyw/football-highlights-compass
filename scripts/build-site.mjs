@@ -55,6 +55,9 @@ try { if (existsSync('data/league-info.json')) LEAGUE_INFO = JSON.parse(readFile
 // 代表（ナショナルチーム）の歴史・概要（Wikipedia日本語版・fetch-country-info.mjs が生成）。name→{title,wikiUrl,extract,updated}。出典明記で掲載。
 let COUNTRY_INFO = {};
 try { if (existsSync('data/country-info.json')) COUNTRY_INFO = JSON.parse(readFileSync('data/country-info.json','utf8')); } catch(e){ console.warn('country-info読込失敗:', e.message); }
+// 代表の概要（英語・en.wikipedia）。英語版 /en/ 代表ページ用。slug→{title,wikiUrl,extract,updated}。
+let COUNTRY_INFO_EN = {};
+try { if (existsSync('data/country-info-en.json')) COUNTRY_INFO_EN = JSON.parse(readFileSync('data/country-info-en.json','utf8')); } catch(e){ console.warn('country-info-en読込失敗:', e.message); }
 // 有名ダービー/ライバル（data/club-derbies.json）。slug→[{opp, name}] に展開（相互）。クラブページに表示。
 const DERBIES_BY_SLUG = {};
 try {
@@ -2862,6 +2865,9 @@ try {
   .en-leagues{color:var(--muted);font-size:12.5px;margin:12px 2px 0;line-height:1.7}
   .en-leagues a{color:var(--accent2);text-decoration:none}
   .en-sec{font-size:15px;font-weight:800;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:6px;margin:26px 0 12px}
+  .en-about{font-size:14px;line-height:1.85;color:var(--ink);margin:4px 2px 6px}
+  .en-src{font-size:12px;color:var(--muted);margin:2px 2px 0}
+  .en-src a{color:var(--accent2);text-decoration:none}
   .engrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
   a.encard{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
   a.encard:hover{border-color:var(--accent2);box-shadow:0 2px 10px rgba(20,30,90,.08)}
@@ -3010,6 +3016,9 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   </div>
   <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  ${(()=>{ const ci=COUNTRY_INFO_EN[info.slug]; if(!ci||!ci.extract||ci.extract.length<30) return ''; return `<h2 class="en-sec">About the ${esc(enName)} national team</h2>
+  <p class="en-about">${esc(ci.extract)}</p>
+  <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>`; })()}
   <h2 class="en-sec">More</h2>${navChips}
   ${enFoot('../../')}
 </div>`;
