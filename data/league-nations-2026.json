@@ -1003,6 +1003,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "ウクライナ",
+      "away": "ハンガリー",
+      "homeSlug": "ukraine",
+      "awaySlug": "hungary",
+      "finished": true,
+      "score": "",
+      "videoId": "fR8oIU8DupA",
+      "group": "B2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "オランダ",
       "away": "セルビア",
       "homeSlug": "netherlands",
@@ -1011,6 +1023,18 @@
       "score": "",
       "videoId": "OUmEnrwtJyo",
       "group": "A2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "キプロス",
+      "away": "ラトビア",
+      "homeSlug": "cyprus",
+      "awaySlug": "latvia",
+      "finished": true,
+      "score": "",
+      "videoId": "3QSe37VCf5s",
+      "group": "C2"
     },
     {
       "matchday": 4,
@@ -1063,6 +1087,18 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "ボスニア・ヘルツェゴビナ",
+      "away": "ポーランド",
+      "homeSlug": "bosnia",
+      "awaySlug": "poland",
+      "finished": true,
+      "score": "",
+      "videoId": "i-xI0o-T3Ec",
+      "group": "B4"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "ポルトガル",
       "away": "ノルウェー",
       "homeSlug": "portugal",
@@ -1095,6 +1131,18 @@
       "score": "",
       "videoId": "lUw2sU7JMC4",
       "group": "C2"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "ルーマニア",
+      "away": "スウェーデン",
+      "homeSlug": "romania",
+      "awaySlug": "sweden",
+      "finished": true,
+      "score": "",
+      "videoId": "7tq565Xi88M",
+      "group": "B4"
     },
     {
       "matchday": 4,
