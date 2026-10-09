@@ -52,6 +52,9 @@ try { if (existsSync('data/player-info.json')) PLAYER_INFO = JSON.parse(readFile
 // リーグ概要（Wikipedia日本語版導入部）。scripts/fetch-league-info.mjs。code→{jp,title,wikiUrl,extract,updated}。
 let LEAGUE_INFO = {};
 try { if (existsSync('data/league-info.json')) LEAGUE_INFO = JSON.parse(readFileSync('data/league-info.json','utf8')); } catch(e){ console.warn('league-info読込失敗:', e.message); }
+// 代表（ナショナルチーム）の歴史・概要（Wikipedia日本語版・fetch-country-info.mjs が生成）。name→{title,wikiUrl,extract,updated}。出典明記で掲載。
+let COUNTRY_INFO = {};
+try { if (existsSync('data/country-info.json')) COUNTRY_INFO = JSON.parse(readFileSync('data/country-info.json','utf8')); } catch(e){ console.warn('country-info読込失敗:', e.message); }
 // 有名ダービー/ライバル（data/club-derbies.json）。slug→[{opp, name}] に展開（相互）。クラブページに表示。
 const DERBIES_BY_SLUG = {};
 try {
@@ -1745,6 +1748,7 @@ function buildCountry(name, info){
   <div class="ent-grid">
     <div class="ent-main">
       <div class="post-body">${info.blurb.slice(1).map(p=>`<p>${esc(p)}</p>`).join('')}${SECTIONS[name]?`<h2 class="lined">${esc(name)}代表の歴史とW杯の歩み</h2><p>${esc(SECTIONS[name])}</p>`:''}</div>
+      ${aboutBlock(name+'代表', COUNTRY_INFO[name])}
       ${deepSection(name,false)}
     </div>
     <aside class="ent-side">${factHtml}${guideLinksFor(name)}${streamCta(labelToCode(info.league)||'_dazn')}${related}${clubBridge}</aside>
