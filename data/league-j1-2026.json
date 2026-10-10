@@ -333,6 +333,28 @@
       "finished": true,
       "score": "",
       "videoId": "8kKU4ZGyqpI"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "鹿島アントラーズ",
+      "away": "ガンバ大阪",
+      "homeSlug": "kashima",
+      "awaySlug": "gamba-osaka",
+      "finished": true,
+      "score": "",
+      "videoId": "eb27shXohkY"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "柏レイソル",
+      "away": "ヴィッセル神戸",
+      "homeSlug": "kashiwa",
+      "awaySlug": "kobe",
+      "finished": true,
+      "score": "",
+      "videoId": "JHxBc5zNy6Q"
     }
   ]
 }
