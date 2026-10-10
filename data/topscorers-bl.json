@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "scorers": [
     {
       "rank": 1,
@@ -46,6 +46,16 @@
     },
     {
       "rank": 5,
+      "name": "Niclas Füllkrug",
+      "team": "ブレーメン",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Germany"
+    },
+    {
+      "rank": 6,
       "name": "Phillip Tietz",
       "team": "マインツ",
       "goals": 4,
@@ -55,7 +65,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 3,
@@ -65,7 +75,7 @@
       "nat": "Croatia"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 3,
@@ -73,16 +83,6 @@
       "pens": null,
       "apps": 4,
       "nat": "Austria"
-    },
-    {
-      "rank": 8,
-      "name": "Niclas Füllkrug",
-      "team": "ブレーメン",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Germany"
     },
     {
       "rank": 9,

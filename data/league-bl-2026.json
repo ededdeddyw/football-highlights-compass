@@ -407,9 +407,9 @@
       "away": "ブレーメン",
       "homeSlug": "borussia-dortmund",
       "awaySlug": "sv-werder-bremen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "9joESXZVfa8"
     },
     {
       "matchday": 5,

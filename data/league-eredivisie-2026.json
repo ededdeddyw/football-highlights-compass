@@ -704,8 +704,8 @@
       "away": "ヘーレンフェーン",
       "homeSlug": "psv",
       "awaySlug": "heerenveen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "SP7DZtoEh_o"
     },
     {

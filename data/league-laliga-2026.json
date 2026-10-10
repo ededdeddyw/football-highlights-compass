@@ -781,8 +781,8 @@
       "away": "エスパニョール",
       "homeSlug": "malaga",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "gHZtCASvTzE"
     },
     {

@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "scorers": [
     {
       "rank": 1,
@@ -59,9 +59,9 @@
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 3,
-      "assists": 3,
+      "assists": 5,
       "pens": 3,
-      "apps": 5,
+      "apps": 6,
       "nat": "France"
     },
     {
@@ -111,7 +111,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Ghana"
     },
     {
@@ -141,7 +141,7 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Austria"
     },
     {

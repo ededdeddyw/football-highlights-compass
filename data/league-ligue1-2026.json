@@ -506,8 +506,8 @@
       "away": "リヨン",
       "homeSlug": "rc-lens",
       "awaySlug": "olympique-lyon",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "1z5IyS9F8pU"
     },
     {
