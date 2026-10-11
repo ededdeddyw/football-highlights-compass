@@ -91,6 +91,39 @@
       "finished": true,
       "score": "",
       "videoId": "hyHiaEiIgDY"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
+      "home": "セルクル・ブルッヘ",
+      "away": "アンデルレヒト",
+      "homeSlug": "cercle-brugge",
+      "awaySlug": "anderlecht",
+      "finished": true,
+      "score": "",
+      "videoId": "9Vs1QAf3upo"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
+      "home": "ヘンク",
+      "away": "コルトレイク",
+      "homeSlug": "genk",
+      "awaySlug": "x-コルトレイク",
+      "finished": true,
+      "score": "",
+      "videoId": "pjZ7UTQh9eA"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
+      "home": "ラ・ルヴィエール",
+      "away": "クルブ・ブルッヘ",
+      "homeSlug": "la-louviere",
+      "awaySlug": "club-brugge",
+      "finished": true,
+      "score": "",
+      "videoId": "W-lpE0_haaM"
     }
   ]
 }

@@ -337,6 +337,50 @@
     {
       "matchday": 9,
       "dateUTC": "",
+      "home": "FC東京",
+      "away": "浦和レッズ",
+      "homeSlug": "fc-tokyo",
+      "awaySlug": "urawa",
+      "finished": true,
+      "score": "",
+      "videoId": "qJLP7BhCOOw"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "アビスパ福岡",
+      "away": "ファジアーノ岡山",
+      "homeSlug": "fukuoka",
+      "awaySlug": "okayama",
+      "finished": true,
+      "score": "",
+      "videoId": "0xegKi9ovdo"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "セレッソ大阪",
+      "away": "横浜F・マリノス",
+      "homeSlug": "cerezo-osaka",
+      "awaySlug": "yokohama-fm",
+      "finished": true,
+      "score": "",
+      "videoId": "T0SpSrf_kN8"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "京都サンガF.C.",
+      "away": "FC町田ゼルビア",
+      "homeSlug": "kyoto-sanga",
+      "awaySlug": "machida",
+      "finished": true,
+      "score": "",
+      "videoId": "1mGy80YuZag"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
       "home": "鹿島アントラーズ",
       "away": "ガンバ大阪",
       "homeSlug": "kashima",
