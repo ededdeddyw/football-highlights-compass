@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "scorers": [
     {
       "rank": 1,
@@ -31,7 +31,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Italy"
     },
     {
@@ -41,11 +41,31 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Argentina"
     },
     {
       "rank": 5,
+      "name": "Hakan Çalhanoğlu",
+      "team": "インテル",
+      "goals": 3,
+      "assists": null,
+      "pens": 1,
+      "apps": 4,
+      "nat": "Turkey"
+    },
+    {
+      "rank": 6,
+      "name": "Kevin De Bruyne",
+      "team": "ナポリ",
+      "goals": 3,
+      "assists": 1,
+      "pens": 1,
+      "apps": 6,
+      "nat": "Belgium"
+    },
+    {
+      "rank": 7,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
       "goals": 3,
@@ -55,17 +75,37 @@
       "nat": "Italy"
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "name": "Milutin Osmajić",
+      "team": "ジェノア",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Montenegro"
+    },
+    {
+      "rank": 9,
+      "name": "Marcus Thuram-Ulien",
+      "team": "インテル",
+      "goals": 3,
+      "assists": 2,
+      "pens": null,
+      "apps": 6,
+      "nat": "France"
+    },
+    {
+      "rank": 10,
       "name": "Giorgi Kvernadze",
       "team": "フロジノーネ",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Georgia"
     },
     {
-      "rank": 7,
+      "rank": 11,
       "name": "Vasilije Adzic",
       "team": "サッスオーロ",
       "goals": 3,
@@ -75,7 +115,7 @@
       "nat": "Montenegro"
     },
     {
-      "rank": 8,
+      "rank": 12,
       "name": "Daniel Maldini",
       "team": "カリアリ",
       "goals": 3,
@@ -85,17 +125,17 @@
       "nat": "Italy"
     },
     {
-      "rank": 9,
+      "rank": 13,
       "name": "Franco Mastantuono",
       "team": "フィオレンティーナ",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Argentina"
     },
     {
-      "rank": 10,
+      "rank": 14,
       "name": "Diego Moreira",
       "team": "ミラン",
       "goals": 3,
@@ -105,7 +145,7 @@
       "nat": "Belgium"
     },
     {
-      "rank": 11,
+      "rank": 15,
       "name": "Hassane Kamara",
       "team": "ウディネーゼ",
       "goals": 2,
@@ -113,46 +153,6 @@
       "pens": null,
       "apps": 5,
       "nat": "Ivory Coast"
-    },
-    {
-      "rank": 12,
-      "name": "Anastasios Douvikas",
-      "team": "コモ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Greece"
-    },
-    {
-      "rank": 13,
-      "name": "Hakan Çalhanoğlu",
-      "team": "インテル",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 3,
-      "nat": "Turkey"
-    },
-    {
-      "rank": 14,
-      "name": "Francesco Esposito",
-      "team": "インテル",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 5,
-      "nat": "Italy"
-    },
-    {
-      "rank": 15,
-      "name": "Bremer",
-      "team": "ユベントス",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Brazil"
     }
   ]
 }

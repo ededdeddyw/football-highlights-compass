@@ -2,37 +2,37 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "scorers": [
     {
       "rank": 1,
+      "name": "Patrik Schick",
+      "team": "レバークーゼン",
+      "goals": 5,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "Czech Republic"
+    },
+    {
+      "rank": 2,
       "name": "Michael Olise",
       "team": "バイエルン",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "France"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Younes Ebnoutalib",
       "team": "フランクフルト",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
-    },
-    {
-      "rank": 3,
-      "name": "Patrik Schick",
-      "team": "レバークーゼン",
-      "goals": 4,
-      "assists": 1,
-      "pens": null,
-      "apps": 4,
-      "nat": "Czech Republic"
     },
     {
       "rank": 4,
@@ -61,11 +61,31 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     },
     {
       "rank": 7,
+      "name": "Christopher Nkunku",
+      "team": "ライプツィヒ",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 5,
+      "nat": "France"
+    },
+    {
+      "rank": 8,
+      "name": "Antonio Nusa",
+      "team": "ライプツィヒ",
+      "goals": 3,
+      "assists": 3,
+      "pens": null,
+      "apps": 5,
+      "nat": "Norway"
+    },
+    {
+      "rank": 9,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 3,
@@ -75,83 +95,63 @@
       "nat": "Croatia"
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Austria"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Maurice Krattenmacher",
       "team": "エルファースベルク",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Jonathan Burkardt",
       "team": "フランクフルト",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     },
     {
-      "rank": 11,
+      "rank": 13,
+      "name": "Robin Fellhauer",
+      "team": "アウクスブルク",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Germany"
+    },
+    {
+      "rank": 14,
       "name": "Harry Kane",
       "team": "バイエルン",
       "goals": 3,
-      "assists": null,
+      "assists": 2,
       "pens": 1,
-      "apps": 4,
+      "apps": 5,
       "nat": "England"
     },
     {
-      "rank": 12,
+      "rank": 15,
       "name": "Josha Vagnoman",
       "team": "シュツットガルト",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 4,
-      "nat": "Germany"
-    },
-    {
-      "rank": 13,
-      "name": "Ridle Baku",
-      "team": "ライプツィヒ",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
-      "nat": "Germany"
-    },
-    {
-      "rank": 14,
-      "name": "Antonio Nusa",
-      "team": "ライプツィヒ",
-      "goals": 2,
-      "assists": 2,
-      "pens": null,
-      "apps": 4,
-      "nat": "Norway"
-    },
-    {
-      "rank": 15,
-      "name": "Tim Skarke",
-      "team": "ウニオン・ベルリン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Germany"
     }
   ]

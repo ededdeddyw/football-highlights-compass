@@ -715,8 +715,8 @@
       "away": "スパルタ・ロッテルダム",
       "homeSlug": "go-ahead",
       "awaySlug": "sparta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-3",
       "videoId": ""
     },
     {
@@ -726,8 +726,8 @@
       "away": "AZアルクマール",
       "homeSlug": "feyenoord",
       "awaySlug": "az",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": ""
     },
     {
@@ -737,8 +737,8 @@
       "away": "トゥエンテ",
       "homeSlug": "sittard",
       "awaySlug": "twente",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -748,8 +748,8 @@
       "away": "NECナイメヘン",
       "homeSlug": "ajax",
       "awaySlug": "nec",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {

@@ -2,10 +2,20 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "scorers": [
     {
       "rank": 1,
+      "name": "João Pedro",
+      "team": "チェルシー",
+      "goals": 5,
+      "assists": 3,
+      "pens": null,
+      "apps": 5,
+      "nat": "Brazil"
+    },
+    {
+      "rank": 2,
       "name": "Erling Haaland",
       "team": "マンチェスター・シティ",
       "goals": 5,
@@ -15,7 +25,17 @@
       "nat": "Norway"
     },
     {
-      "rank": 2,
+      "rank": 3,
+      "name": "Morgan Rogers",
+      "team": "チェルシー",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 6,
+      "nat": "England"
+    },
+    {
+      "rank": 4,
       "name": "Alexander Isak",
       "team": "リバプール",
       "goals": 4,
@@ -25,43 +45,23 @@
       "nat": "Sweden"
     },
     {
-      "rank": 3,
+      "rank": 5,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 5,
+      "apps": 6,
       "nat": "England"
     },
     {
-      "rank": 4,
+      "rank": 6,
       "name": "Marcus Tavernier",
       "team": "ボーンマス",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
-      "nat": "England"
-    },
-    {
-      "rank": 5,
-      "name": "João Pedro",
-      "team": "チェルシー",
-      "goals": 3,
-      "assists": 3,
-      "pens": null,
-      "apps": 4,
-      "nat": "Brazil"
-    },
-    {
-      "rank": 6,
-      "name": "Morgan Rogers",
-      "team": "チェルシー",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "England"
     },
     {
@@ -79,9 +79,9 @@
       "name": "Pascal Groß",
       "team": "ブライトン",
       "goals": 3,
-      "assists": 3,
+      "assists": 4,
       "pens": 1,
-      "apps": 5,
+      "apps": 6,
       "nat": "Germany"
     },
     {
@@ -91,7 +91,7 @@
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Germany"
     },
     {
@@ -101,11 +101,21 @@
       "goals": 3,
       "assists": 1,
       "pens": 1,
-      "apps": 5,
+      "apps": 6,
       "nat": "Portugal"
     },
     {
       "rank": 11,
+      "name": "Bryan Mbeumo",
+      "team": "マンチェスター・ユナイテッド",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 6,
+      "nat": "Cameroon"
+    },
+    {
+      "rank": 12,
       "name": "Brian Brobbey",
       "team": "サンダーランド",
       "goals": 3,
@@ -115,44 +125,34 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Kai Havertz",
       "team": "アーセナル",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Germany"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Martin Ødegaard",
       "team": "アーセナル",
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Norway"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Emersonn",
       "team": "イプスウィッチ",
       "goals": 2,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Brazil"
-    },
-    {
-      "rank": 15,
-      "name": "Thierno Barry",
-      "team": "エバートン",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "France"
     }
   ]
 }

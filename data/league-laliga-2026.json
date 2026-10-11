@@ -803,8 +803,8 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "alaves",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "d1-fOZ2nHYk"
     },
     {
@@ -814,8 +814,8 @@
       "away": "ヘタフェ",
       "homeSlug": "barca",
       "awaySlug": "getafe",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "gZpIzFFh2es"
     },
     {
@@ -825,8 +825,8 @@
       "away": "ビジャレアル",
       "homeSlug": "real-madrid",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "a7Mu6QdicbU"
     },
     {

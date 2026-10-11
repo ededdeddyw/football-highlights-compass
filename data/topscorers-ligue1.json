@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "scorers": [
     {
       "rank": 1,
@@ -16,36 +16,46 @@
     },
     {
       "rank": 2,
+      "name": "Louis Mafouta",
+      "team": "ルマン",
+      "goals": 4,
+      "assists": null,
+      "pens": 1,
+      "apps": 6,
+      "nat": "Central African Republic"
+    },
+    {
+      "rank": 3,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 5,
+      "apps": 6,
       "nat": "Mali"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Spain"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Lassine Sinayoko",
       "team": "パリFC",
       "goals": 4,
       "assists": 1,
       "pens": 2,
-      "apps": 5,
+      "apps": 6,
       "nat": "Mali"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Paris Brunner",
       "team": "モナコ",
       "goals": 4,
@@ -55,7 +65,17 @@
       "nat": "Germany"
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "Casper Tengstedt",
+      "team": "トゥールーズ",
+      "goals": 4,
+      "assists": 1,
+      "pens": 2,
+      "apps": 4,
+      "nat": "Denmark"
+    },
+    {
+      "rank": 8,
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 3,
@@ -65,17 +85,7 @@
       "nat": "France"
     },
     {
-      "rank": 7,
-      "name": "Louis Mafouta",
-      "team": "ルマン",
-      "goals": 3,
-      "assists": null,
-      "pens": 1,
-      "apps": 5,
-      "nat": "Central African Republic"
-    },
-    {
-      "rank": 8,
+      "rank": 9,
       "name": "Esteban Lepaul",
       "team": "レンヌ",
       "goals": 3,
@@ -85,17 +95,17 @@
       "nat": "France"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Marquinhos",
       "team": "パリ・サンジェルマン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Brazil"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Cameron Archer",
       "team": "オセール",
       "goals": 3,
@@ -105,7 +115,7 @@
       "nat": "England"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Ernest Nuamah",
       "team": "リヨン",
       "goals": 3,
@@ -115,7 +125,7 @@
       "nat": "Ghana"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Adil Bourabaa",
       "team": "ルマン",
       "goals": 3,
@@ -123,16 +133,6 @@
       "pens": null,
       "apps": 5,
       "nat": "Algeria"
-    },
-    {
-      "rank": 13,
-      "name": "Casper Tengstedt",
-      "team": "トゥールーズ",
-      "goals": 3,
-      "assists": null,
-      "pens": 1,
-      "apps": 3,
-      "nat": "Denmark"
     },
     {
       "rank": 14,
@@ -151,7 +151,7 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Portugal"
     }
   ]
