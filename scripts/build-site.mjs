@@ -2927,6 +2927,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   }
   // 英語版フッター（共通）
   const enFoot = base => `<div class="en-foot">
+    <p><strong>Guides:</strong> <a href="${base}en/guide/uefa-champions-league-guide.html">Champions League</a> · <a href="${base}en/guide/uefa-europa-league-guide.html">Europa League</a> · <a href="${base}en/guide/uefa-nations-league-guide.html">Nations League</a> · <a href="${base}en/guide/world-cup-winners-history.html">World Cup winners</a></p>
     <p>Match pages are currently in Japanese, but the video players are universal and scores are hidden by default (spoiler-free) — toggle them on any match page.</p>
     <p>For standings, fixtures, club &amp; player pages and news, visit the <a href="${base}">Japanese site</a>.</p>
     <p>Highlights are embedded from the official YouTube channels of the respective rights holders. This site does not host any video.</p>
