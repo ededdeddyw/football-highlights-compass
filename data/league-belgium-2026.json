@@ -95,6 +95,17 @@
     {
       "matchday": 8,
       "dateUTC": "",
+      "home": "スタンダール・リエージュ",
+      "away": "シャルルロワ",
+      "homeSlug": "standard-liege",
+      "awaySlug": "charleroi",
+      "finished": true,
+      "score": "",
+      "videoId": "hP6yXX-1KqQ"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
       "home": "セルクル・ブルッヘ",
       "away": "アンデルレヒト",
       "homeSlug": "cercle-brugge",
@@ -113,6 +124,17 @@
       "finished": true,
       "score": "",
       "videoId": "pjZ7UTQh9eA"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "",
+      "home": "メヘレン",
+      "away": "シント＝トロイデン",
+      "homeSlug": "mechelen",
+      "awaySlug": "sint-truiden",
+      "finished": true,
+      "score": "",
+      "videoId": "h2yr3-Z4eWQ"
     },
     {
       "matchday": 8,
