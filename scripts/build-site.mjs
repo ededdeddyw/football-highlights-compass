@@ -1711,7 +1711,7 @@ function buildCountry(name, info){
   const hook = hookSentence.length>68 ? hookSentence.slice(0,68)+'…' : hookSentence;
   const desc = `${hook}W杯2026 全${ms.length}試合の結果とハイライトを、公式映像のみ・ネタバレ防止で振り返れます。`.slice(0,120);
   const cgraph = [
-    {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed}},
+    {"@type":"SportsTeam","name":name+"代表","sport":"Soccer","memberOf":{"@type":"SportsOrganization","name":info.confed},"sameAs":COUNTRY_INFO[name]?COUNTRY_INFO[name].wikiUrl:undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'国（ワールドカップ）',url:`${DOMAIN}/?league=wc`},{name:name+'代表',url}])
   ];
   if(ms.length) cgraph.push(itemListLd(ms));
@@ -1782,7 +1782,7 @@ function buildClub(name, info){
   const hook = hookSentence.length>60 ? hookSentence.slice(0,60)+'…' : hookSentence;
   const desc = `${hook}${info.league}の最新ハイライト動画・試合結果・順位表を、公式映像のみ・ネタバレ防止で。`.slice(0,120);
   const clgraph = [
-    {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country},
+    {"@type":"SportsTeam","name":name,"sport":"Soccer","foundingDate":String(info.founded),"location":info.country,"sameAs":CLUB_INFO[slug]?CLUB_INFO[slug].wikiUrl:undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'クラブ',url:DOMAIN+'/'},{name:name,url}])
   ];
   if(ms.length) clgraph.push(itemListLd(ms));
@@ -1978,7 +1978,7 @@ function buildPlayer(p){
     ${sk.signature?`<p style="margin:10px 0 2px"><b>代表的なスーパープレー：</b>${esc(sk.signature)}</p>`:''}</div>` : '';
   if(sk){ pfaq.push({ q:`${p.name}のプレースタイル・強みは？`, a:`${sk.style||''}${Array.isArray(sk.strengths)&&sk.strengths.length?'強みは'+sk.strengths.join('、')+'。':''}${sk.signature?'代表的なプレーは'+sk.signature+'。':''}` }); }
   const jsonld = [
-    {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined},
+    {"@type":"Person","name":p.name,"alternateName":p.en||undefined,"nationality":"Japan","jobTitle":"サッカー選手","affiliation":club||undefined,"sameAs":PLAYER_INFO[slug]?PLAYER_INFO[slug].wikiUrl:undefined},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'選手',url:DOMAIN+'/player/'},{name:p.name,url}])
   ];
   if(pfaq.length) jsonld.push(faqLd(pfaq));
@@ -2972,7 +2972,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     crumbItems.push({"@type":"ListItem","position":hubSlug?3:2,"name":enName,"item":canonical});
     const jsonld = [
       {"@type":"CollectionPage","name":`${enName} Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
-      {"@type":"SportsTeam","name":enName,"sport":"Association football"},
+      {"@type":"SportsTeam","name":enName,"sport":"Association football","sameAs":CLUB_INFO_EN[info.slug]?CLUB_INFO_EN[info.slug].wikiUrl:undefined},
       {"@type":"BreadcrumbList","itemListElement":crumbItems}
     ];
     const navChips = `<div class="en-chips">${hubSlug?`<a href="../league/${hubSlug}.html">${esc(leagueEn)} hub</a>`:''}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
@@ -3019,7 +3019,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     const desc = `Official, spoiler-free ${enName} national team highlights (UEFA Nations League and internationals). Only official/rights-holder videos, scores hidden by default.`;
     const jsonld = [
       {"@type":"CollectionPage","name":`${enName} National Team Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
-      {"@type":"SportsTeam","name":`${enName} national football team`,"sport":"Association football"},
+      {"@type":"SportsTeam","name":`${enName} national football team`,"sport":"Association football","sameAs":COUNTRY_INFO_EN[info.slug]?COUNTRY_INFO_EN[info.slug].wikiUrl:undefined},
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":`${enName} NT`,"item":canonical}]}
     ];
     const navChips = `<div class="en-chips">${nlHub?`<a href="../league/${nlHub}.html">Nations League</a>`:''}<a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
