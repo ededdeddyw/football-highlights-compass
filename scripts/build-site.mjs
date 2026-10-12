@@ -61,6 +61,9 @@ try { if (existsSync('data/country-info-en.json')) COUNTRY_INFO_EN = JSON.parse(
 // クラブの概要（英語・en.wikipedia）。英語版 /en/ クラブページ用。slug→{title,wikiUrl,extract,updated}。
 let CLUB_INFO_EN = {};
 try { if (existsSync('data/club-info-en.json')) CLUB_INFO_EN = JSON.parse(readFileSync('data/club-info-en.json','utf8')); } catch(e){ console.warn('club-info-en読込失敗:', e.message); }
+// 選手の概要（英語・en.wikipedia）。英語版 /en/ 選手ページ用。slug→{title,wikiUrl,extract,updated}。
+let PLAYER_INFO_EN = {};
+try { if (existsSync('data/player-info-en.json')) PLAYER_INFO_EN = JSON.parse(readFileSync('data/player-info-en.json','utf8')); } catch(e){ console.warn('player-info-en読込失敗:', e.message); }
 // 有名ダービー/ライバル（data/club-derbies.json）。slug→[{opp, name}] に展開（相互）。クラブページに表示。
 const DERBIES_BY_SLUG = {};
 try {
@@ -1986,6 +1989,7 @@ function buildPlayer(p){
     <div style="display:flex;gap:10px;align-items:center;font-size:13px;opacity:.9">${flag}<span>日本 ／ ${esc(posJa)}</span>${club?`<span>／ ${esc(clubLeague)}</span>`:''}</div>
     <h1 style="margin:6px 0 2px;font-size:clamp(28px,6.4vw,44px);line-height:1.05">${esc(p.name)}</h1>
     <div style="opacity:.85;font-size:14px">${esc(p.kana||'')}${p.en?` ／ ${esc(p.en)}`:''}</div>
+    ${PLAYER_INFO_EN[slug]?`<div style="margin-top:8px;font-size:13px"><a href="../en/player/${slug}.html" style="color:#fff;opacity:.92">🌐 English page →</a></div>`:''}
     <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px">
       ${p.number?`<span class="pl-badge" style="background:${c2};color:#0a0a0a">背番号 ${esc(String(p.number))}</span>`:''}
       <span class="pl-badge" style="background:rgba(255,255,255,.18)">${esc(p.pos)}${p.posDetail?`・${esc(p.posDetail)}`:''}</span>
@@ -2818,6 +2822,7 @@ try {
 const enLeagueUrls = [];
 const enClubUrls = [];
 const enCountryUrls = [];
+const enPlayerUrls = [];
 try {
   mkdirSync('site/en', { recursive: true });
   mkdirSync('site/en/league', { recursive: true });
@@ -2871,6 +2876,10 @@ try {
   .en-about{font-size:14px;line-height:1.85;color:var(--ink);margin:4px 2px 6px}
   .en-src{font-size:12px;color:var(--muted);margin:2px 2px 0}
   .en-src a{color:var(--accent2);text-decoration:none}
+  .en-facts{border-collapse:collapse;width:100%;font-size:14px;margin:4px 0 6px}
+  .en-facts th,.en-facts td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+  .en-facts th{color:var(--muted);font-weight:700;width:38%;white-space:nowrap}
+  .en-facts td a{color:var(--accent2);text-decoration:none}
   .engrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
   a.encard{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
   a.encard:hover{border-color:var(--accent2);box-shadow:0 2px 10px rgba(20,30,90,.08)}
@@ -3030,6 +3039,58 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
 </div>`;
     writeFileSync(`site/${path}`, enShell({ title, desc, canonical, jaAlt:jaExists?jaAlt:canonical, enAlt:canonical, base:'../../', jsonld, body }));
     enCountryUrls.push({ u:canonical, ja:jaExists }); enCountrySet.add(info.slug);
+  }
+
+  // ===== 英語版 選手ページ /en/player/<slug>.html（日本人選手のプロフィール＋英語概要＋クラブのハイライト導線） =====
+  mkdirSync('site/en/player', { recursive: true });
+  const POS_EN = { GK:'Goalkeeper', DF:'Defender', MF:'Midfielder', FW:'Forward' };
+  for (const p of PLAYERS) {
+    const ci = PLAYER_INFO_EN[p.slug];
+    if (!ci || !ci.extract || ci.extract.length < 30) continue;   // 英語概要がある選手のみ（薄ページ防止）
+    const enName = p.en || prettySlug(p.slug);
+    const flag = p.iso ? `<img src="https://flagcdn.com/w40/${p.iso}.png" alt="" style="width:30px;height:auto;vertical-align:middle;margin-right:8px;border-radius:2px">` : '';
+    const clubName = p.club && CLUBS[p.club] ? p.club : '';
+    const clubSlug = clubName ? CLUBS[clubName].slug : '';
+    const clubEn = clubSlug ? prettySlug(clubSlug) : '';
+    const clubEnExists = clubSlug && existsSync(`site/en/club/${clubSlug}.html`);
+    const posEn = POS_EN[p.posKey] || POS_EN[p.pos] || p.pos || '';
+    const path = `en/player/${p.slug}.html`;
+    const canonical = `${DOMAIN}/en/player/${p.slug}.html`;
+    const jaAlt = `${DOMAIN}/player/${p.slug}.html`;
+    const jaExists = existsSync(`site/player/${p.slug}.html`);
+    const title = `${enName} — Profile & Highlights｜Football Highlights Compass`;
+    const desc = `${enName}${posEn?`, ${posEn}`:''}${clubEn?` at ${clubEn}`:''}. Profile and official, spoiler-free highlights. Only official/rights-holder videos.`.slice(0,160);
+    const jsonld = [
+      {"@type":"Person","name":enName,"nationality":"Japan","jobTitle":"Association footballer","affiliation":clubEn||undefined,"sameAs":ci.wikiUrl},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":enName,"item":canonical}]}
+    ];
+    const facts = [];
+    if (posEn) facts.push(['Position', posEn]);
+    if (clubEn) facts.push(['Club', clubEnExists ? `<a href="../club/${clubSlug}.html">${esc(clubEn)}</a>` : esc(clubEn)]);
+    if (p.number) facts.push(['Shirt number', String(p.number)]);
+    facts.push(['Nationality', 'Japan']);
+    const factHtml = `<table class="en-facts"><tbody>${facts.map(f=>`<tr><th>${f[0]}</th><td>${f[1]}</td></tr>`).join('')}</tbody></table>`;
+    const watch = clubEnExists
+      ? `<div class="en-chips"><a href="../club/${clubSlug}.html">▶ ${esc(clubEn)} highlights</a><a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`
+      : `<div class="en-chips"><a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`;
+    const body = `<div class="en-wrap">
+  <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a>${jaExists?`<a class="en-lang" href="../../player/${p.slug}.html">日本語版 →</a>`:''}</div>
+  <div class="en-crumb"><a href="../">Home</a> › ${esc(enName)}</div>
+  <div class="en-hero">
+    <h1>${flag}${esc(enName)}</h1>
+    <p>${esc(enName)}${posEn?` is a Japanese ${posEn.toLowerCase()}`:' is a Japanese footballer'}${clubEn?` playing for ${esc(clubEn)}`:''}. Below are official, spoiler-free highlights and a short profile — only <strong>official and rights-holder</strong> videos, with scores hidden by default.</p>
+  </div>
+  <h2 class="en-sec">Profile</h2>
+  ${factHtml}
+  <h2 class="en-sec">About ${esc(enName)}</h2>
+  <p class="en-about">${esc(ci.extract)}</p>
+  <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>
+  <h2 class="en-sec">Watch highlights</h2>
+  ${watch}
+  ${enFoot('../../')}
+</div>`;
+    writeFileSync(`site/${path}`, enShell({ title, desc, canonical, jaAlt:jaExists?jaAlt:canonical, enAlt:canonical, base:'../../', jsonld, body }));
+    enPlayerUrls.push({ u:canonical, ja:jaExists });
   }
 
   const enHubs = [];   // {code, slug, name} 生成済みハブ（トップのリンク用）
@@ -3529,6 +3590,7 @@ if(existsSync('site/en/index.html')) sm += `  <url><loc>${DOMAIN}/en/</loc><last
 for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const c of enCountryUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/country/','/country/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>${alt}</url>\n`; }
+for(const c of enPlayerUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/player/','/player/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>${alt}</url>\n`; }
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
