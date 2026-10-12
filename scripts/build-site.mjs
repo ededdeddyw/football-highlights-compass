@@ -2549,9 +2549,10 @@ function buildLeague(h){
           const ms2 = byTier[t][n].slice().sort((a,b)=>(a.matchday||0)-(b.matchday||0));
           return `<div class="nlg-grp"><div class="nlg-gh">グループ${esc(n)}</div><div class="chips">${ms2.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div></div>`;
         }).join('');
-        return `<div class="nlg-tier"><h3 class="nlg-th">リーグ${esc(t)}</h3>${grps}</div>`;
+        return `<div class="nlg-tier" id="nl-tier-${esc(t)}"><h3 class="nlg-th">リーグ${esc(t)}</h3>${grps}</div>`;
       }).join('');
-      groupBlock = `<h2 class="lined">リーグ・グループ別で見る</h2><style>.nlg-tier{margin:10px 0 6px}.nlg-th{font-size:14px;font-weight:800;color:var(--accent);margin:12px 0 4px}.nlg-grp{margin:6px 0 10px}.nlg-gh{font-size:12px;font-weight:700;color:var(--muted);margin:4px 2px}</style>${sections}`;
+      const tierNav = ['A','B','C','D'].filter(t=>byTier[t]).map(t=>`<a href="#nl-tier-${t}">リーグ${t}</a>`).join('');
+      groupBlock = `<h2 class="lined">リーグ・グループ別で見る</h2><style>.nlg-tier{margin:10px 0 6px;scroll-margin-top:70px}.nlg-th{font-size:14px;font-weight:800;color:var(--accent);margin:12px 0 4px}.nlg-grp{margin:6px 0 10px}.nlg-gh{font-size:12px;font-weight:700;color:var(--muted);margin:4px 2px}.nlg-nav{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.nlg-nav a{font-weight:800;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none}.nlg-nav a:hover{background:var(--card2)}</style>${tierNav?`<div class="nlg-nav">${tierNav}</div>`:''}${sections}`;
     }
   }
   // 節別ページへのナビ（第1節〜）＝各節まとめページへの内部リンク網。現行シーズンの全節を列挙。
