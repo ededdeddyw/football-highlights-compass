@@ -1,0 +1,807 @@
+{
+  "urawa-reds": {
+    "slug": "urawa-reds",
+    "title": "Urawa Red Diamonds",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Urawa%20Red%20Diamonds",
+    "extract": "The Urawa Red Diamonds (浦和レッドダイヤモンズ, Urawa Reddo Daiyamonzu) or simply the Urawa Reds (浦和レッズ, Urawa Rezzu), also known as Mitsubishi Urawa Football Club (三菱浦和フットボールクラブ, Mitsubishi Urawa futoobōru Kurabu) from April 1992 to January 1996, are a professional football club in the city of Saitama, part of the Greater Tokyo Area in Japan, who play in the J1 League, the top tier of Japanese football.",
+    "updated": "2026-10-12T05:44:40.861Z"
+  },
+  "arsenal": {
+    "slug": "arsenal",
+    "title": "Arsenal F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Arsenal%20F.C.",
+    "extract": "The Arsenal Football Club, otherwise known as simply Arsenal, is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football. Domestically, Arsenal have won 14 league titles (including one unbeaten), a record 14 FA Cups, 2 League Cups, 18 FA Community Shields and a Football League Centenary Trophy.",
+    "updated": "2026-10-12T05:43:47.266Z"
+  },
+  "bayern-munich": {
+    "slug": "bayern-munich",
+    "title": "FC Bayern Munich",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Bayern%20Munich",
+    "extract": "Fußball-Club Bayern München e. V. (FCB, German: [ˈfuːsbalˌklʊp ˈbaɪɐn ˈmʏnçn̩]), commonly known as Bayern Munich (German: Bayern München), FC Bayern (German: [ˌɛft͡seː ˈbaɪɐn] ) or simply Bayern, is a professional sports club based in Munich, Germany. They are most known for their men's professional football team, who play in the Bundesliga, the top tier of the German football league system.",
+    "updated": "2026-10-12T05:43:25.704Z"
+  },
+  "real-sociedad": {
+    "slug": "real-sociedad",
+    "title": "Real Sociedad",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Real%20Sociedad",
+    "extract": "Real Sociedad de Fútbol, S.A.D., commonly known as La Real or Real Sociedad (pronounced [reˈal soθjeˈðað] es ; lit. 'Royal Society') in English and Erreala or Reala in Basque, is a Spanish professional sports club based in the city of San Sebastián, Basque Country. The club was founded on 7 September 1909 and is best known for its football team, which plays home matches at the 40,000-capacity Anoeta Stadium.",
+    "updated": "2026-10-12T05:43:15.304Z"
+  },
+  "parma": {
+    "slug": "parma",
+    "title": "Parma Calcio 1913",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Parma%20Calcio%201913",
+    "extract": "Parma Calcio 1913 (Italian pronunciation: [ˈparma]) is an Italian professional football club based in Parma, Emilia-Romagna, which competes in Serie A, the top tier of the Italian football league system. Parma Football Club was originally founded in December 1913, while the current society dates back to 2015.",
+    "updated": "2026-10-12T05:43:16.708Z"
+  },
+  "as-monaco": {
+    "slug": "as-monaco",
+    "title": "AS Monaco FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AS%20Monaco%20FC",
+    "extract": "Association Sportive de Monaco Football Club, commonly referred to as AS Monaco (French pronunciation: [ɑ.ɛs mɔnako]), is a professional football club based in Fontvieille, Monaco. Although not in France, due to the small size of Monaco, they are a member of the French Football Federation (FFF) and currently compete in Ligue 1, the top tier of French football.",
+    "updated": "2026-10-12T05:43:18.209Z"
+  },
+  "sporting-cp": {
+    "slug": "sporting-cp",
+    "title": "Sporting CP",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sporting%20CP",
+    "extract": "Sporting Clube de Portugal (Portuguese pronunciation: [sɨˈpɔɾtĩg ˈkluβɨ ðɨ puɾtuˈɣal]), otherwise referred to as Sporting CP, is a Portuguese sports club based in Lisbon. Having various sports departments and sporting disciplines, it is best known for its men's professional football team playing in the Primeira Liga, the top flight of Portuguese football.",
+    "updated": "2026-10-12T05:43:19.733Z"
+  },
+  "eintracht-frankfurt": {
+    "slug": "eintracht-frankfurt",
+    "title": "Eintracht Frankfurt",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Eintracht%20Frankfurt",
+    "extract": "Eintracht Frankfurt e.V. (German pronunciation: [ˈaɪntʁaxt ˈfʁaŋkfʊʁt] ) is a German professional sports club based in Frankfurt, Hesse. It is best known for its football club, which was founded on 8 March 1899. The club currently plays in the Bundesliga, the top tier of the German football league system.",
+    "updated": "2026-10-12T05:43:21.233Z"
+  },
+  "mainz-05": {
+    "slug": "mainz-05",
+    "title": "1. FSV Mainz 05",
+    "wikiUrl": "https://en.wikipedia.org/wiki/1.%20FSV%20Mainz%2005",
+    "extract": "1. Fußball- und Sport-Verein Mainz 05 e. V., usually shortened to 1. FSV Mainz 05 or simply Mainz 05 (German pronunciation: [ˌmaɪnts nʊl ˈfʏnf] ), is a German professional sports club, founded in 1905 and based in Mainz, Rhineland-Palatinate. Mainz 05 play in the Bundesliga, the top tier of the German football league system, having most recently been promoted ahead of the 2009–10 season.",
+    "updated": "2026-10-12T05:43:22.703Z"
+  },
+  "werder-bremen": {
+    "slug": "werder-bremen",
+    "title": "SV Werder Bremen",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SV%20Werder%20Bremen",
+    "extract": "Sportverein Werder Bremen von 1899 e. V. (German pronunciation: [ɛs faʊ̯ ˌvɛʁdɐ ˈbʁeːmən] ), commonly known as Werder Bremen, Werder or simply Bremen, is a German professional sports club based in Bremen. Founded on 4 February 1899, Werder are best known for their professional association football team, who compete in the Bundesliga, the first tier of the German football league system.",
+    "updated": "2026-10-12T05:43:24.203Z"
+  },
+  "rb-leipzig": {
+    "slug": "rb-leipzig",
+    "title": "RB Leipzig",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RB%20Leipzig",
+    "extract": "RasenBallsport Leipzig e.V. (lit. 'Lawn Ball Sports Leipzig'), commonly known as RB Leipzig  or informally as Red Bull Leipzig, or simply Leipzig, is a German professional football club based in Leipzig, Saxony.",
+    "updated": "2026-10-12T05:43:27.222Z"
+  },
+  "leverkusen": {
+    "slug": "leverkusen",
+    "title": "Bayer 04 Leverkusen",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bayer%2004%20Leverkusen",
+    "extract": "Bayer 04 Leverkusen, officially known as Bayer 04 Leverkusen Fußball GmbH (German: [ˌbaɪ̯ɐ ˈleːvɐˌkuːzn̩]) and commonly known as Bayer Leverkusen or simply Leverkusen, is a German professional football club based in Leverkusen, North Rhine-Westphalia. It competes in the Bundesliga, the top tier of German football, and plays its home matches at the BayArena.",
+    "updated": "2026-10-12T05:43:28.721Z"
+  },
+  "stuttgart": {
+    "slug": "stuttgart",
+    "title": "VfB Stuttgart",
+    "wikiUrl": "https://en.wikipedia.org/wiki/VfB%20Stuttgart",
+    "extract": "Verein für Bewegungsspiele Stuttgart 1893 e. V. (lit. 'Association for Movement Games Stuttgart 1893'), commonly known as VfB Stuttgart (German pronunciation: [faʊ̯ɛfˈbeː ˈʃtʊtɡaʁt] ), is a German professional sports club based in Stuttgart, Baden-Württemberg. The club's football team is currently part of Germany's first division, the Bundesliga.",
+    "updated": "2026-10-12T05:43:30.236Z"
+  },
+  "freiburg": {
+    "slug": "freiburg",
+    "title": "SC Freiburg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SC%20Freiburg",
+    "extract": "Sport-Club Freiburg e.V., commonly known as SC Freiburg (German pronunciation: [ʔɛs ˈtseː ˈfʁaɪbʊɐ̯k]), is a German professional football club, based in the city of Freiburg im Breisgau, Baden-Württemberg. It plays in the Bundesliga, having been promoted as champions from the 2. Bundesliga in 2016.",
+    "updated": "2026-10-12T05:43:31.733Z"
+  },
+  "gladbach": {
+    "slug": "gladbach",
+    "title": "Borussia Mönchengladbach",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Borussia%20M%C3%B6nchengladbach",
+    "extract": "Borussia Verein für Leibesübungen 1900 e.V. Mönchengladbach, better known as Borussia Mönchengladbach (German: [boˈʁʊsi̯a mœnçn̩ˈɡlatbax] ) and colloquially known as just Gladbach, is a professional football club based in Mönchengladbach, North Rhine-Westphalia, Germany. The club plays in the Bundesliga, the top flight of German football.",
+    "updated": "2026-10-12T05:43:33.766Z"
+  },
+  "wolfsburg": {
+    "slug": "wolfsburg",
+    "title": "VfL Wolfsburg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/VfL%20Wolfsburg",
+    "extract": "Verein für Leibesübungen Wolfsburg e. V., commonly known as VfL Wolfsburg (pronounced [ˌfaʊ ʔɛf ʔɛl ˈvɔlfsbʊɐ̯k]), is a German professional sports club based in Wolfsburg, Lower Saxony. The club grew out of a multi-sports club for Volkswagen workers in the city of Wolfsburg. It is best known for its football department, but other departments include badminton, handball and athletics.",
+    "updated": "2026-10-12T05:43:35.334Z"
+  },
+  "augsburg": {
+    "slug": "augsburg",
+    "title": "FC Augsburg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Augsburg",
+    "extract": "Fußball-Club Augsburg 1907 e. V., commonly known as FC Augsburg (German pronunciation: [ɛfˌt͡seː ˈaʊ̯ksbʊʁk] ), is a German professional football club based in Augsburg, Bavaria. FC Augsburg play in the Bundesliga, the top tier of the German football league system. The team was founded as Fußball-Klub Alemannia Augsburg in 1907 and played as BC Augsburg from 1921 to 1969.",
+    "updated": "2026-10-12T05:43:36.758Z"
+  },
+  "hoffenheim": {
+    "slug": "hoffenheim",
+    "title": "TSG 1899 Hoffenheim",
+    "wikiUrl": "https://en.wikipedia.org/wiki/TSG%201899%20Hoffenheim",
+    "extract": "Turn- und Sportgemeinschaft 1899 Hoffenheim e.V. (pronounced [ˈtʊʁn ʔʊnt ˈʃpɔʁtɡəˌmaɪnʃaft ˌʔaxtseːnˈhʊndɐt ˌnɔʏnʔʊntˈnɔʏntsɪç ˈhɔfn̩haɪm]), commonly known as TSG Hoffenheim (pronounced [ˌteːʔɛsˈɡeː ˈhɔfn̩haɪm]), are a German professional football club based in Sinsheim. Originally founded in 1899 as a gymnastics club, Hoffenheim came into being in their modern form in 1945.",
+    "updated": "2026-10-12T05:43:38.271Z"
+  },
+  "union-berlin": {
+    "slug": "union-berlin",
+    "title": "1. FC Union Berlin",
+    "wikiUrl": "https://en.wikipedia.org/wiki/1.%20FC%20Union%20Berlin",
+    "extract": "1. Fußballclub Union Berlin e. V., commonly known as Union Berlin (pronounced [ˈeːɐ̯stɐ ʔɛfˈt͡seː ʔuˈni̯oːn bɛʁˈliːn] ), is a professional German football club based in Berlin. The club's origins can be traced to 1906, when its predecessor FC Olympia Oberschöneweide was founded. During the Cold War, Union was based in East Berlin, joining the German league structure upon the reunification of the country in 1990.",
+    "updated": "2026-10-12T05:43:39.758Z"
+  },
+  "heidenheim": {
+    "slug": "heidenheim",
+    "title": "1. FC Heidenheim",
+    "wikiUrl": "https://en.wikipedia.org/wiki/1.%20FC%20Heidenheim",
+    "extract": "1. FC Heidenheim 1846 is a German professional association football club from the town of Heidenheim, Baden-Württemberg. The club currently plays in the 2. Bundesliga, the second tier of the German football league system. They're also the oldest professional football club in Germany.",
+    "updated": "2026-10-12T05:43:41.264Z"
+  },
+  "st-pauli": {
+    "slug": "st-pauli",
+    "title": "FC St. Pauli",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20St.%20Pauli",
+    "extract": "Fußball-Club St. Pauli von 1910 e.V., commonly known as simply St. Pauli (German pronunciation: [ɛfˌtseː zaŋkt ˈpaʊli] ), is a German professional football club based in the St. Pauli district of Hamburg. The team will play in the 2. Bundesliga for the 2026–27 season following relegation from the Bundesliga in 2025–26.",
+    "updated": "2026-10-12T05:43:42.757Z"
+  },
+  "koln": {
+    "slug": "koln",
+    "title": "1. FC Köln",
+    "wikiUrl": "https://en.wikipedia.org/wiki/1.%20FC%20K%C3%B6ln",
+    "extract": "1. Fußball-Club Köln 01/07 e. V., better known as simply 1. FC Köln (German pronunciation: [ɛf ˈt͡seː ˈkœln] ) or FC Cologne in English, is a German professional football club based in Cologne, North Rhine-Westphalia. It was formed in 1948 as a merger of the clubs Kölner Ballspiel-Club 1901 and SpVgg Sülz 07.",
+    "updated": "2026-10-12T05:43:44.285Z"
+  },
+  "hamburg": {
+    "slug": "hamburg",
+    "title": "Hamburger SV",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Hamburger%20SV",
+    "extract": "Hamburger Sport-Verein e.V. (German: [ˈhambʊʁɡɐ ˈʃpɔʁtfɛɐ̯ˌʔaɪ̯n] ), commonly known as Hamburger SV (pronounced [ˈhambʊʁɡɐ ʔɛsˈfaʊ] ) or Hamburg (pronounced [ˈhambʊʁk] ), or HSV (pronounced [ˌhaːʔɛsˈfaʊ] ), is a German sports club based in Hamburg, with its largest branch being its football department, which plays in the Bundesliga, the top tier of the German football league system.",
+    "updated": "2026-10-12T05:43:45.778Z"
+  },
+  "aston-villa": {
+    "slug": "aston-villa",
+    "title": "Aston Villa F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Aston%20Villa%20F.C.",
+    "extract": "Aston Villa Football Club is a professional football club based in Aston, Birmingham, England. Founded in 1874, it competes in the Premier League, the top tier of English football, and has played at its home ground, Villa Park, since 1897.",
+    "updated": "2026-10-12T05:43:48.801Z"
+  },
+  "bournemouth": {
+    "slug": "bournemouth",
+    "title": "AFC Bournemouth",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AFC%20Bournemouth",
+    "extract": "AFC Bournemouth (  BORN-məth) is a professional football club based in Kings Park, Boscombe, a suburb of Bournemouth, Dorset, England. The club competes in the Premier League, the top tier of English football. Formed in 1899 as Boscombe, the club adopted their current name in 1971. Nicknamed \"The Cherries\", and commonly referred to as Bournemouth, they have played their home games at Dean Court since 1910.",
+    "updated": "2026-10-12T05:43:50.284Z"
+  },
+  "brentford": {
+    "slug": "brentford",
+    "title": "Brentford F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Brentford%20F.C.",
+    "extract": "Brentford Football Club is a professional association football club based in Brentford, London, England. The team competes in the Premier League, the top tier of English football. Nicknamed \"The Bees\", the club was founded in 1889 and played home matches at Griffin Park from 1904 before moving to the Brentford Community Stadium in 2020.",
+    "updated": "2026-10-12T05:43:51.784Z"
+  },
+  "brighton-and-hove-albion": {
+    "slug": "brighton-and-hove-albion",
+    "title": "Brighton & Hove Albion F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Brighton%20%26%20Hove%20Albion%20F.C.",
+    "extract": "Brighton & Hove Albion Football Club, commonly referred to as Brighton, is a professional football club based in Brighton and Hove, East Sussex, England.  The club competes in the Premier League, the top tier of English football. Their home ground has been Falmer Stadium since 2011, having played at the Goldstone Ground for most of the 20th century.",
+    "updated": "2026-10-12T05:43:53.291Z"
+  },
+  "burnley": {
+    "slug": "burnley",
+    "title": "Burnley F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Burnley%20F.C.",
+    "extract": "Burnley Football Club () is a professional football club based in Burnley, Lancashire, England. The team compete in the EFL Championship, the second tier of English football, following relegation from the Premier League in the 2025–26 season. Founded in 1882, Burnley were one of the first to become professional (in 1883) and subsequently put pressure on the Football Association to permit payments to players.",
+    "updated": "2026-10-12T05:43:54.777Z"
+  },
+  "crystal-palace": {
+    "slug": "crystal-palace",
+    "title": "Crystal Palace F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Crystal%20Palace%20F.C.",
+    "extract": "Crystal Palace Football Club, often referred to simply as Palace, is a professional football club based in Selhurst, South London, England, which competes in the Premier League, the highest level of English football. The club was established as a professional outfit in 1905 at the Crystal Palace exhibition building, but has origins as far back as 1861.",
+    "updated": "2026-10-12T05:43:57.297Z"
+  },
+  "everton": {
+    "slug": "everton",
+    "title": "Everton F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Everton%20F.C.",
+    "extract": "Everton Football Club () is a professional association football club based in Liverpool, England. The club competes in the Premier League, the top tier of English football. Founded in 1878, the club was a founding member of the Football League in 1888, and was a founding member of the Premier League in 1992, one of just three clubs to have been a founding member of both leagues.",
+    "updated": "2026-10-12T05:43:58.795Z"
+  },
+  "fulham": {
+    "slug": "fulham",
+    "title": "Fulham F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fulham%20F.C.",
+    "extract": "Fulham Football Club is a professional football club based in West London, England. The club competes in the Premier League, the top tier of English football. Founded in 1879, they have played home games at Craven Cottage since 1896. Fulham contest West London derby rivalries with Chelsea, Brentford and Queens Park Rangers.",
+    "updated": "2026-10-12T05:44:00.280Z"
+  },
+  "leeds-united": {
+    "slug": "leeds-united",
+    "title": "Leeds United F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leeds%20United%20F.C.",
+    "extract": "Leeds United Football Club is a professional football club based in Leeds, West Yorkshire, England. The club competes in the Premier League, the top tier of English football. Leeds United have won three top-flight league titles, one FA Cup, one League Cup, two Charity Shields and two Inter-Cities Fairs Cups.",
+    "updated": "2026-10-12T05:44:01.810Z"
+  },
+  "liverpool": {
+    "slug": "liverpool",
+    "title": "Liverpool F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Liverpool%20F.C.",
+    "extract": "Liverpool Football Club is a professional football club based in Liverpool, Merseyside, England. The club competes in the Premier League, the top tier of English football. Founded in 1892, the club joined the Football League the following year and has played its home games at Anfield since its formation.",
+    "updated": "2026-10-12T05:44:03.293Z"
+  },
+  "manchester-city": {
+    "slug": "manchester-city",
+    "title": "Manchester City F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Manchester%20City%20F.C.",
+    "extract": "Manchester City Football Club, commonly referred to as Man City or simply City, is a professional football club based in Manchester, England, that competes in the Premier League, the top flight of English football. Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club in 1887 and Manchester City in 1894.",
+    "updated": "2026-10-12T05:44:04.816Z"
+  },
+  "manchester-united": {
+    "slug": "manchester-united",
+    "title": "Manchester United F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Manchester%20United%20F.C.",
+    "extract": "Manchester United Football Club, commonly referred to as Man United (often stylised as Man Utd) or simply United, is a professional football club based in Old Trafford, Stretford, Greater Manchester, England. They compete in the Premier League, the top tier of English football. Manchester United are among the most successful football clubs in England, as well as one of the most successful football clubs in the world.",
+    "updated": "2026-10-12T05:44:06.301Z"
+  },
+  "newcastle-united": {
+    "slug": "newcastle-united",
+    "title": "Newcastle United F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Newcastle%20United%20F.C.",
+    "extract": "Newcastle United Football Club is a professional association football club based in Newcastle upon Tyne, Tyne and Wear, England. The club competes in the Premier League, the top tier of English football. Founded in 1881 as Stanley F.C., the club took on its present guise in 1892 after absorbing the assets of defunct local rivals Newcastle West End, including their home stadium St.",
+    "updated": "2026-10-12T05:44:07.816Z"
+  },
+  "nottingham-forest": {
+    "slug": "nottingham-forest",
+    "title": "Nottingham Forest F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nottingham%20Forest%20F.C.",
+    "extract": "Nottingham Forest Football Club is a professional football club based in West Bridgford, Nottinghamshire, England. The club competes in the Premier League, the top tier of English football. Founded in 1865, Nottingham Forest have played their home games at the City Ground since 1898.",
+    "updated": "2026-10-12T05:44:09.300Z"
+  },
+  "sunderland": {
+    "slug": "sunderland",
+    "title": "Sunderland A.F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sunderland%20A.F.C.",
+    "extract": "Sunderland Association Football Club is a professional football club based in Sunderland, Tyne and Wear, England. The club competes in the Premier League, the top tier of the English football league system. Formed in 1879, the club has won six top-flight titles (1892, 1893, 1895, 1902, 1913, and 1936) in the First Division, and finished runners-up five times.",
+    "updated": "2026-10-12T05:44:10.815Z"
+  },
+  "tottenham-hotspur": {
+    "slug": "tottenham-hotspur",
+    "title": "Tottenham Hotspur F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tottenham%20Hotspur%20F.C.",
+    "extract": "Tottenham Hotspur Football Club, commonly referred to as simply Tottenham (  TOT-ən-əm) or Spurs, is a professional football club based in Tottenham, North London, England. They compete in the Premier League, the top tier of English football. Since 2019, the team have played their home matches in the Tottenham Hotspur Stadium.",
+    "updated": "2026-10-12T05:44:12.316Z"
+  },
+  "west-ham-united": {
+    "slug": "west-ham-united",
+    "title": "West Ham United F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/West%20Ham%20United%20F.C.",
+    "extract": "West Ham United Football Club is a professional football club based in Stratford, East London, England. The club currently competes in the EFL Championship in the 2026–27 season following relegation from the Premier League. The club plays at the London Stadium, having moved from their former home, the Boleyn Ground, in 2016.",
+    "updated": "2026-10-12T05:44:13.803Z"
+  },
+  "wolverhampton-wanderers": {
+    "slug": "wolverhampton-wanderers",
+    "title": "Wolverhampton Wanderers F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Wolverhampton%20Wanderers%20F.C.",
+    "extract": "Wolverhampton Wanderers Football Club (  WUUL-vər-HAMP-tən), commonly referred to as Wolves, is a professional football club based in Wolverhampton, England. The club competes in the EFL Championship, the second tier of English football. The club has played at Molineux Stadium since moving from Dudley Road in 1889.",
+    "updated": "2026-10-12T05:44:15.337Z"
+  },
+  "lille": {
+    "slug": "lille",
+    "title": "Rhyl F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rhyl%20F.C.",
+    "extract": "Rhyl Football Club (Welsh: Clwb Pêl Droed Y Rhyl) was a Welsh football club based in Rhyl, a seaside resort town located in Denbighshire. It withdrew from footballing activities in April 2020 and had its entire footballing record for the 2019–20 season expunged. It was formally dissolved 18 months later in October 2021.",
+    "updated": "2026-10-12T05:44:16.839Z"
+  },
+  "nice": {
+    "slug": "nice",
+    "title": "OGC Nice",
+    "wikiUrl": "https://en.wikipedia.org/wiki/OGC%20Nice",
+    "extract": "Olympique Gymnaste Club de Nice (French pronunciation: [ɔlɛ̃pik ʒimnast klœb də nis]), commonly referred to as OGC Nice or simply Nice, is a French professional football club based in Nice. The club was founded in 1904 and currently plays in Ligue 1, the top tier of French football. Nice plays its home matches at the Allianz Riviera.",
+    "updated": "2026-10-12T05:44:18.323Z"
+  },
+  "olympique-lyonnais": {
+    "slug": "olympique-lyonnais",
+    "title": "Olympique Lyonnais",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Olympique%20Lyonnais",
+    "extract": "Olympique Lyonnais (French: Olympique lyonnais; French pronunciation: [ɔlɛ̃pik ljɔnɛ]), commonly referred to as simply Lyon (French pronunciation: [ljɔ̃]) or OL, is a men's professional football club based in Lyon, Auvergne-Rhône-Alpes, France. With origins dating back to 1899, they were founded in 1950.",
+    "updated": "2026-10-12T05:44:19.808Z"
+  },
+  "racing-lens": {
+    "slug": "racing-lens",
+    "title": "RC Lens",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RC%20Lens",
+    "extract": "Racing Club de Lens (French pronunciation: [ʁasiŋ klœb də lɑ̃s]), commonly referred to as RC Lens or simply as Lens, is a French professional football club based in the northern city of Lens in the department of Pas-de-Calais. The club's nickname, Les Sang et Or (transl. The Blood and Gold), comes from its traditional colours of red and gold.",
+    "updated": "2026-10-12T05:44:21.330Z"
+  },
+  "stade-rennais": {
+    "slug": "stade-rennais",
+    "title": "Stade Rennais FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Stade%20Rennais%20FC",
+    "extract": "Stade Rennais Football Club (French: Stade rennais Football Club, SRFC; French pronunciation: [stad ʁɛnɛ]), commonly referred to as Stade Rennais (Breton: Stad Roazhon) or simply Rennes, is a French professional football club based in Rennes, Brittany. It competes in Ligue 1, the top tier of French football, and plays its home matches at the Roazhon Park.",
+    "updated": "2026-10-12T05:44:22.811Z"
+  },
+  "stade-brestois": {
+    "slug": "stade-brestois",
+    "title": "Stade Brestois 29",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Stade%20Brestois%2029",
+    "extract": "Stade Brestois 29 (French: Stade brestois 29), commonly known as Stade Brestois or simply Brest, is a Breton professional football club based in Brest. It was founded in 1950 following the merger of five local patronages, including Armoricaine de Brest, founded in 1903. The club has competed in Ligue 1, the top division of French football, ever since being promoted to the top flight during the 2018–19 season.",
+    "updated": "2026-10-12T05:44:24.326Z"
+  },
+  "strasbourg-alsace": {
+    "slug": "strasbourg-alsace",
+    "title": "RC Strasbourg Alsace",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RC%20Strasbourg%20Alsace",
+    "extract": "Racing Club de Strasbourg Alsace, commonly known as RC Strasbourg (Alemannic German: RC Stroßburg, German: RC Straßburg; RCS) or simply just Racing, is a French professional association football club founded in 1906 and based in the city of Strasbourg, Alsace. It became a professional club in 1933, and is currently playing in Ligue 1, the top tier of French football, having won the 2016–17 Ligue 2 championship.",
+    "updated": "2026-10-12T05:44:25.821Z"
+  },
+  "toulouse": {
+    "slug": "toulouse",
+    "title": "Toulouse FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Toulouse%20FC",
+    "extract": "Toulouse Football Club (Occitan: Tolosa Fotbòl Club) is a French professional football club based in Toulouse. The club was founded in 1970 and currently plays in Ligue 1, the first division of French football. Toulouse plays its home matches at the Stadium de Toulouse located within the city. Les Violets won the Coupe de France in 2023, and have won the second tier Ligue 2 on three occasions.",
+    "updated": "2026-10-12T05:44:27.325Z"
+  },
+  "nantes": {
+    "slug": "nantes",
+    "title": "FC Nantes",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Nantes",
+    "extract": "Football Club de Nantes, commonly referred to as FC Nantes or simply Nantes (French: [nɑ̃t] ; Breton: Naoned [ˈnãwnət]; Gallo: Naunnt), is a French professional football club based in Nantes in Pays de la Loire. The club was founded on 21 April 1943, during World War II, through a merger of five smaller local clubs based in the city.",
+    "updated": "2026-10-12T05:44:28.847Z"
+  },
+  "auxerre": {
+    "slug": "auxerre",
+    "title": "AJ Auxerre",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AJ%20Auxerre",
+    "extract": "Association de la Jeunesse Auxerroise (French pronunciation: [asɔsjɑsjɔ̃ də la ʒœnɛs osɛʁwaz]), commonly known as AJ Auxerre or by the abbreviation AJA, is a professional football club based in Auxerre, Bourgogne-Franche-Comté, France. The club currently competes in Ligue 1, the top division of French football.",
+    "updated": "2026-10-12T05:44:30.337Z"
+  },
+  "angers": {
+    "slug": "angers",
+    "title": "Angers SCO",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Angers%20SCO",
+    "extract": "Angers Sporting Club de l'Ouest, commonly referred to as Angers SCO (French pronunciation: [ɑ̃ʒe]), is a French professional football club based in Angers in Pays de la Loire in western France. The club was founded in 1919 and plays in Ligue 1, the first division of Football in France. It plays its home matches at the Stade Raymond Kopa.",
+    "updated": "2026-10-12T05:44:31.822Z"
+  },
+  "le-havre": {
+    "slug": "le-havre",
+    "title": "Le Havre AC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Le%20Havre%20AC",
+    "extract": "Le Havre Athletic Club (French pronunciation: [lə ɑvʁ]) is a French professional association football club based in Le Havre, Normandy. The football club was founded in 1894 as a section of the sports club of the same name, founded in 1884.",
+    "updated": "2026-10-12T05:44:33.347Z"
+  },
+  "lorient": {
+    "slug": "lorient",
+    "title": "FC Lorient",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Lorient",
+    "extract": "Football Club Lorient (French pronunciation: [lɔʁjɑ̃ bʁətaɲ syd];), commonly referred to as FC Lorient (Breton: An Oriant), is a French professional association football club based in Lorient, Brittany. The club was founded in 1926 and currently competes in Ligue 1, having been promoted from Ligue 2 at the end of the 2024–25 season.",
+    "updated": "2026-10-12T05:44:34.845Z"
+  },
+  "metz": {
+    "slug": "metz",
+    "title": "FC Metz",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Metz",
+    "extract": "Football Club de Metz (French pronunciation: [mɛs] ) is a French association football club based in Metz, Lorraine. Founded in 1919, the club competes in the Ligue 2, following relegation from the Ligue 1 in the 2025-26 season. They play their home matches at Stade Saint-Symphorien located within the city.",
+    "updated": "2026-10-12T05:44:36.325Z"
+  },
+  "paris": {
+    "slug": "paris",
+    "title": "Paris FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Paris%20FC",
+    "extract": "Paris Football Club (French pronunciation: [paʁi futbol klœb]), commonly referred to as Paris FC, PFC or Paris, are a French professional football club based in Paris, France, which competes in Ligue 1, the top division of French football. Founded in 1969, the club merged with Stade Saint-Germain to form Paris Saint-Germain (PSG) in 1970, but it spun off in 1972.",
+    "updated": "2026-10-12T05:44:37.836Z"
+  },
+  "kashima-antlers": {
+    "slug": "kashima-antlers",
+    "title": "Kashima Antlers",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kashima%20Antlers",
+    "extract": "The Kashima Antlers (鹿島アントラーズ, Kashima Antorāzu) are a professional football club based in Kashima, Ibaraki, Japan. They currently play in the J1 League, the top tier of Japanese professional football leagues. The club has financial backing from Mercari, a Japanese e-commerce company.",
+    "updated": "2026-10-12T05:44:39.344Z"
+  },
+  "kawasaki-frontale": {
+    "slug": "kawasaki-frontale",
+    "title": "Kawasaki Frontale",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kawasaki%20Frontale",
+    "extract": "Kawasaki Frontale (川崎フロンターレ, Kawasaki Furontāre) is a Japanese professional football club based in Kawasaki, Kanagawa Prefecture, south of Tokyo. The club currently compete in the J1 League, which is the top tier of football in the country. Their home stadium is Kawasaki Todoroki Stadium in Nakahara Ward, located in the central area of Kawasaki.",
+    "updated": "2026-10-12T05:44:42.334Z"
+  },
+  "fc-tokyo": {
+    "slug": "fc-tokyo",
+    "title": "FC Tokyo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Tokyo",
+    "extract": "Football Club Tokyo (フットボールクラブ東京, Futtobōru Kurabu Tōkyō), commonly known as FC Tokyo (FC東京, Efushī Tōkyō), is a Japanese professional football club based in Tokyo. The club plays in the J1 League, the top tier of football in the country.",
+    "updated": "2026-10-12T05:44:43.850Z"
+  },
+  "tokyo-verdy": {
+    "slug": "tokyo-verdy",
+    "title": "Tokyo Verdy",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tokyo%20Verdy",
+    "extract": "Tokyo Verdy (東京ヴェルディ, Tōkyō Berudi) is a Japanese professional football club based in Tokyo. The club competes in the J1 League, the top tier of Japanese football, and were the inaugural champions of the J1 League in 1993. Tokyo Verdy are one of the most successful clubs in the country winning 2 J1 League, 5 Emperor's Cup, 3 J.League Cup and 4 Japanese Super Cup.",
+    "updated": "2026-10-12T05:44:45.349Z"
+  },
+  "yokohama-f-marinos": {
+    "slug": "yokohama-f-marinos",
+    "title": "Yokohama F. Marinos",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Yokohama%20F.%20Marinos",
+    "extract": "Yokohama F. Marinos (横浜F・マリノス, Yokohama Efu Marinosu), stylised as Yokohama F·Marinos, is a Japanese professional football club based in Yokohama, Kanagawa Prefecture, part of the Greater Tokyo Area. The club competes in the J1 League, which is the top tier of football in the country. Having won the J-League title five times and finishing second twice, they are one of the most successful J-League clubs.",
+    "updated": "2026-10-12T05:44:46.850Z"
+  },
+  "vissel-kobe": {
+    "slug": "vissel-kobe",
+    "title": "Vissel Kobe",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vissel%20Kobe",
+    "extract": "Vissel Kobe (ヴィッセル神戸, Visseru Kōbe) is a Japanese professional football club based in Kobe, Hyōgo Prefecture. The club plays in the J1 League, which is the top tier of football in the country. The club's home stadium is Noevir Stadium Kobe, in Hyōgo-ku, though some home matches are played at Kobe Universiade Memorial Stadium in Suma-ku.",
+    "updated": "2026-10-12T05:44:48.337Z"
+  },
+  "kyoto-sanga": {
+    "slug": "kyoto-sanga",
+    "title": "Kyoto Sanga FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kyoto%20Sanga%20FC",
+    "extract": "Kyoto Sanga (京都サンガ) is a Japanese professional football club based in Kyoto. The club plays in the J1 League, the top tier of football in the country. Its name \"Sanga\" comes from the Sanskrit word sangha, a term meaning \"group\" or \"club\" and often used to denote the Buddhist priesthood, associating the club with Kyoto's many Buddhist temples.",
+    "updated": "2026-10-12T05:44:49.874Z"
+  },
+  "gamba-osaka": {
+    "slug": "gamba-osaka",
+    "title": "Gamba Osaka",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gamba%20Osaka",
+    "extract": "Gamba Osaka (ガンバ大阪, Ganba Ōsaka) is a Japanese professional football club based in Osaka. The club plays in the J1 League, which is the top tier of football in the country. The club's home stadium is Panasonic Stadium Suita. They form a local rivalry with Osaka city-based Cerezo Osaka.",
+    "updated": "2026-10-12T05:44:51.365Z"
+  },
+  "cerezo-osaka": {
+    "slug": "cerezo-osaka",
+    "title": "Cerezo Osaka",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Cerezo%20Osaka",
+    "extract": "Cerezo Osaka (セレッソ大阪, Seresso Ōsaka) is a Japanese professional football club based in Osaka. The club currently plays in the J1 League, which is the top tier of football in the country. The club's name (Spanish: Cerezo, lit. 'cherry blossom') also represents the flower of the city of Osaka. The official hometowns of the club are Osaka and Sakai.",
+    "updated": "2026-10-12T05:44:52.855Z"
+  },
+  "sanfrecce-hiroshima": {
+    "slug": "sanfrecce-hiroshima",
+    "title": "Sanfrecce Hiroshima",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sanfrecce%20Hiroshima",
+    "extract": "Sanfrecce Hiroshima (Japanese: サンフレッチェ広島, romanized: Sanfuretche Hiroshima) is a Japanese professional football club based in Hiroshima. The club competes in the J1 League, top flight of the Japanese football league system. Sanfrecce is one of the most successful clubs in Japan.",
+    "updated": "2026-10-12T05:44:54.363Z"
+  },
+  "nagoya-grampus": {
+    "slug": "nagoya-grampus",
+    "title": "Nagoya Grampus",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nagoya%20Grampus",
+    "extract": "Nagoya Grampus is a Japanese association football club based in Nagoya, Aichi. The club plays in the J1 League, and has been in the league for all but one season since the league's inauguration, following promotion from the J2 League in 2017. It was founded as the company team of the Toyota Motor Corp.",
+    "updated": "2026-10-12T05:44:55.874Z"
+  },
+  "kashiwa-reysol": {
+    "slug": "kashiwa-reysol",
+    "title": "Kashiwa Reysol",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kashiwa%20Reysol",
+    "extract": "Kashiwa Reysol (柏レイソル, Kashiwa Reisoru) is a Japanese professional football club based in Kashiwa, Chiba Prefecture, part of the Greater Tokyo Area. The club currently plays in the J1 League, which is the top tier league in the country. Their home stadium is Sankyo Frontier Kashiwa Stadium, also known as \"Hitachidai\".",
+    "updated": "2026-10-12T05:44:57.345Z"
+  },
+  "shimizu-s-pulse": {
+    "slug": "shimizu-s-pulse",
+    "title": "Shimizu S-Pulse",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Shimizu%20S-Pulse",
+    "extract": "Shimizu S-Pulse (清水エスパルス, Shimizu Esuparusu) is a Japanese professional football club located in Shimizu-ku, Shizuoka, Shizuoka Prefecture. S-Pulse is going to compete in the J1 League for the 2025 Season, after winning promotion from the Japanese second tier of professional league football, the J2 League in the 2024 season.",
+    "updated": "2026-10-12T05:44:58.858Z"
+  },
+  "albirex-niigata": {
+    "slug": "albirex-niigata",
+    "title": "Albirex Niigata",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Albirex%20Niigata",
+    "extract": "Albirex Niigata (アルビレックス新潟, Arubirekkusu Nīgata) is a professional football club based in Niigata, Japan. Formed in 1955 as Niigata Eleven SC, it was renamed Albireo Niigata in 1995, and Albirex Niigata in 1997. They currently compete in J2 League, the second division in the Japanese football league pyramid.",
+    "updated": "2026-10-12T05:45:00.359Z"
+  },
+  "jubilo-iwata": {
+    "slug": "jubilo-iwata",
+    "title": "Júbilo Iwata",
+    "wikiUrl": "https://en.wikipedia.org/wiki/J%C3%BAbilo%20Iwata",
+    "extract": "Júbilo Iwata (Japanese: ジュビロ磐田, Hepburn: Jubiro Iwata) is a Japanese professional football team based in Iwata, located in Shizuoka Prefecture. The club competes in J2 League following relegation from J1 League in 2024.",
+    "updated": "2026-10-12T05:45:01.873Z"
+  },
+  "atletico-madrid": {
+    "slug": "atletico-madrid",
+    "title": "Atlético Madrid",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Atl%C3%A9tico%20Madrid",
+    "extract": "Club Atlético de Madrid, S.A.D. (Spanish pronunciation: [ˈkluβ aˈtletiko ðe maˈðɾið]; meaning \"Athletic Club of Madrid\"), commonly referred to in English as Atlético Madrid or simply Atlético and colloquially as Atleti, is a Spanish professional football club based in Madrid that plays in La Liga. The club play their home games at the Riyadh Air Metropolitano, which has a capacity of 70,813.",
+    "updated": "2026-10-12T05:45:04.367Z"
+  },
+  "valencia": {
+    "slug": "valencia",
+    "title": "Valencia CF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Valencia%20CF",
+    "extract": "Valencia Club de Fútbol, S. A. D. (Spanish: [baˈlenθja ˈkluβ ðe ˈfuðβol]; Valencian: València Club de Futbol [vaˈlensi.a ˈklub de fubˈbɔl]), commonly known as Valencia CF or simply Valencia, is a Spanish professional football club based in Valencia. The team currently competes in La Liga, the highest tier of the Spanish league system.",
+    "updated": "2026-10-12T05:45:05.877Z"
+  },
+  "napoli": {
+    "slug": "napoli",
+    "title": "SSC Napoli",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SSC%20Napoli",
+    "extract": "Società Sportiva Calcio Napoli (pronounced [sotʃeˈta sporˈtiːva ˈkaltʃo ˈnaːpoli]), commonly known as SSC Napoli or simply Napoli, is an Italian professional football club based in Naples, Campania, that plays in Serie A, the top league of Italian football. They are among the most successful clubs in the nation, with four league titles, six Coppe Italia, three Supercoppe Italiane, and one UEFA Cup.",
+    "updated": "2026-10-12T05:45:07.378Z"
+  },
+  "as-roma": {
+    "slug": "as-roma",
+    "title": "AS Roma",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AS%20Roma",
+    "extract": "Associazione Sportiva Roma (Rome Sport Association; Italian pronunciation: [ˈroːma]) is a professional football club based in Rome, Italy. Founded by a merger in 1927, Roma has participated in the top tier of Italian football for all of its existence, except for the 1951–52 season. Roma has won Serie A three times, in 1941–42, 1982–83 and 2000–01, as well as nine Coppa Italia titles and two Supercoppa Italiana titles.",
+    "updated": "2026-10-12T05:45:08.889Z"
+  },
+  "ac-milan": {
+    "slug": "ac-milan",
+    "title": "AC Milan",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AC%20Milan",
+    "extract": "Associazione Calcio Milan (Italian pronunciation: [assotʃatˈtsjoːne ˈkaltʃo ˈmiːlan]), commonly referred to as AC Milan or simply Milan (Italian pronunciation: [ˈmiːlan]) mainly outside of Italy, is an Italian professional football club based in Milan, Lombardy. Founded in 1899, the club competes in Serie A, the top tier of Italian football.",
+    "updated": "2026-10-12T05:45:10.376Z"
+  },
+  "juventus": {
+    "slug": "juventus",
+    "title": "Juventus FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Juventus%20FC",
+    "extract": "Juventus Football Club ( yoo-VEN-təs; Italian: [juˈvɛntus]; from iuventūs, Latin for 'youth'), commonly known as Juventus or colloquially as Juve (Italian: [ˈjuːve]), is a professional football club based in Turin, Piedmont, Italy. They compete in Serie A, the top tier of Italian football.",
+    "updated": "2026-10-12T05:45:11.882Z"
+  },
+  "inter": {
+    "slug": "inter",
+    "title": "Inter Milan",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Inter%20Milan",
+    "extract": "Football Club Internazionale Milano, widely referred to as Internazionale (pronounced [internattsjoˈnaːle]) or simply Inter (Italian pronunciation: [ˈinter]), and commonly known as Inter Milan in English-speaking countries, is an Italian professional football club based in Milan, Lombardy.",
+    "updated": "2026-10-12T05:45:13.378Z"
+  },
+  "lazio": {
+    "slug": "lazio",
+    "title": "SS Lazio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SS%20Lazio",
+    "extract": "Società Sportiva Lazio (Italian pronunciation: [sotʃeˈta sporˈtiːva ˈlattsjo]; BIT: SSL; Lazio Sport Club), commonly known as SS Lazio or simply Lazio, is an Italian professional sports club based in Rome, most known for its football activity. Founded in 1900, the club plays in the Serie A and has spent most of its history in the top tier of Italian football.",
+    "updated": "2026-10-12T05:45:14.883Z"
+  },
+  "atalanta": {
+    "slug": "atalanta",
+    "title": "Atalanta BC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Atalanta%20BC",
+    "extract": "Atalanta Bergamasca Calcio (Italian: [ataˈlanta berɡaˈmaska ˈkaltʃo]), commonly referred to as Atalanta, is a professional football club based in Bergamo, Lombardy, Italy, that competes in Serie A, the top tier of the Italian football league system.",
+    "updated": "2026-10-12T05:45:16.381Z"
+  },
+  "fiorentina": {
+    "slug": "fiorentina",
+    "title": "ACF Fiorentina",
+    "wikiUrl": "https://en.wikipedia.org/wiki/ACF%20Fiorentina",
+    "extract": "Associazione Calcio Firenze Fiorentina, commonly referred to as Fiorentina (pronounced [fjorenˈtiːna]), is an Italian professional football club based in Florence, Tuscany. The original team was founded by a merger in August 1926, while the current club was refounded in August 2002 following bankruptcy.",
+    "updated": "2026-10-12T05:45:17.889Z"
+  },
+  "bologna": {
+    "slug": "bologna",
+    "title": "Bologna FC 1909",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bologna%20FC%201909",
+    "extract": "Bologna Football Club 1909, commonly referred to as Bologna (Italian pronunciation: [boˈloɲɲa]), is an Italian professional football club based in Bologna, Emilia-Romagna that plays in Serie A, the top flight of Italian football. The club have won seven top-flight titles, three Coppa Italia titles, and one UEFA Intertoto Cup.",
+    "updated": "2026-10-12T05:45:19.393Z"
+  },
+  "torino": {
+    "slug": "torino",
+    "title": "Torino FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Torino%20FC",
+    "extract": "Torino Football Club (Italian pronunciation: [toˈriːno]), colloquially referred to as Toro, is a professional football club based in Turin, Piedmont, Italy, that plays in Serie A, the top tier of the Italian football league system.",
+    "updated": "2026-10-12T05:45:20.870Z"
+  },
+  "genoa": {
+    "slug": "genoa",
+    "title": "Genoa CFC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Genoa%20CFC",
+    "extract": "Genoa Cricket and Football Club (Italian pronunciation: [ˈdʒɛːnoa]) is an Italian professional football club based in Genoa, Liguria. The team competes in Serie A, the top division of the Italian football league system. Established in 1893, Genoa is Italy's oldest existing football team.",
+    "updated": "2026-10-12T05:45:22.371Z"
+  },
+  "udinese": {
+    "slug": "udinese",
+    "title": "Udinese Calcio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Udinese%20Calcio",
+    "extract": "Udinese Calcio (Italian pronunciation: [udiˈneːze ˈkaltʃo, -eːse -]; \"Udinese Football\") is a professional football club based in Udine, Friuli-Venezia Giulia, Italy. The team currently competes in Serie A, the first tier of Italian football. It was founded on 30 November 1896 as a sports club, and on 5 July 1911 as a football club.",
+    "updated": "2026-10-12T05:45:23.888Z"
+  },
+  "lecce": {
+    "slug": "lecce",
+    "title": "US Lecce",
+    "wikiUrl": "https://en.wikipedia.org/wiki/US%20Lecce",
+    "extract": "Unione Sportiva Lecce (Italian pronunciation: [ˈlettʃe]) is a professional Italian football club based in Lecce, Apulia. The club plays in Serie A for the 2026-27, the top level of the Italian football pyramid. Lecce plays its home games at Stadio Via del Mare, which has a capacity of 31,533 spectators.",
+    "updated": "2026-10-12T05:45:25.460Z"
+  },
+  "cagliari": {
+    "slug": "cagliari",
+    "title": "Cagliari Calcio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Cagliari%20Calcio",
+    "extract": "Cagliari Calcio, commonly referred to as Cagliari (Italian: [ˈkaʎʎari] ), is a professional Italian football club based in Cagliari, Sardinia, that plays in Serie A, the first tier of Italian football. The club currently plays home matches at the 16,416-seat Unipol Domus. Founded in 1920, they won their only Scudetto in 1969–70, when they were led by the Italian national team's all-time leading scorer, Gigi Riva.",
+    "updated": "2026-10-12T05:45:27.034Z"
+  },
+  "hellas-verona": {
+    "slug": "hellas-verona",
+    "title": "Hellas Verona FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Hellas%20Verona%20FC",
+    "extract": "Hellas Verona Football Club, commonly referred to as simply Hellas Verona (Italian: [ˈɛllaz veˈroːna]), is an Italian professional football club based in Verona, Veneto. The club will compete in Serie B, following relegation from Serie A.",
+    "updated": "2026-10-12T05:45:28.379Z"
+  },
+  "como": {
+    "slug": "como",
+    "title": "Como 1907",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Como%201907",
+    "extract": "Como 1907 (Italian pronunciation: [ˈkɔːmo]) is an Italian professional football club based in Como, Lombardy, that competes in Serie A, the top flight of the Italian football system. Founded in 1907 as Como Foot-Ball Club, the team traditionally plays in royal blue and has hosted home matches at the Stadio Giuseppe Sinigaglia since 1928.",
+    "updated": "2026-10-12T05:45:29.894Z"
+  },
+  "sassuolo": {
+    "slug": "sassuolo",
+    "title": "US Sassuolo Calcio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/US%20Sassuolo%20Calcio",
+    "extract": "Unione Sportiva Sassuolo Calcio, commonly known as Sassuolo (Italian pronunciation: [sasˈswɔːlo]), is a professional football club based in Sassuolo, Emilia-Romagna, Italy. The team's colours are black and green, which have earned them the nickname Neroverdi (\"black and greens\"). Sassuolo competes in Serie A, the highest division in the Italian football league system.",
+    "updated": "2026-10-12T05:45:31.392Z"
+  },
+  "pisa": {
+    "slug": "pisa",
+    "title": "Pisa SC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Pisa%20SC",
+    "extract": "Pisa Sporting Club, commonly referred to as Pisa, is an Italian professional football club based in Pisa, Tuscany. The club  will compete in Serie B, following relegation from Serie A. The club was founded in 1909 as Pisa Sporting Club and refounded in 1994 as Pisa Calcio (and registered in Eccellenza, the regional football division in Italy), after the partial liquidation of the former because of economical troubles.",
+    "updated": "2026-10-12T05:45:32.897Z"
+  },
+  "cremonese": {
+    "slug": "cremonese",
+    "title": "US Cremonese",
+    "wikiUrl": "https://en.wikipedia.org/wiki/US%20Cremonese",
+    "extract": "Unione Sportiva Cremonese, commonly referred to as Cremonese, is an Italian professional football club based in Cremona, Lombardy, which plays in Serie B, following their relegation from Serie A in the 2025–26 season.",
+    "updated": "2026-10-12T05:45:34.403Z"
+  },
+  "real-madrid": {
+    "slug": "real-madrid",
+    "title": "Real Madrid CF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Real%20Madrid%20CF",
+    "extract": "Real Madrid Club de Fútbol (Spanish pronunciation: [reˈal maˈðɾið ˈkluβ ðe ˈfuðβol] ) is a Spanish professional association football club based in Madrid. The club competes in La Liga, the top tier of Spanish football. Founded in 1902 as Madrid Football Club, the club has traditionally worn a white home kit.",
+    "updated": "2026-10-12T05:45:35.903Z"
+  },
+  "athletic": {
+    "slug": "athletic",
+    "title": "Athletic Bilbao",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Athletic%20Bilbao",
+    "extract": "Athletic Club (Basque: Athletic Kluba; Spanish: Athletic Club), commonly known as Athletic Bilbao (Spanish: Athletic de Bilbao), or simply Athletic, is a professional football club based in the city of Bilbao, Spain. They are known as Lehoiak (The Lions) because their stadium was built near a church called San Mamés, which was named after Saint Mammes, an early Christian thrown to the lions by the Romans.",
+    "updated": "2026-10-12T05:45:37.398Z"
+  },
+  "sevilla": {
+    "slug": "sevilla",
+    "title": "Sevilla FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sevilla%20FC",
+    "extract": "Sevilla Fútbol Club (Spanish pronunciation: [seˈβiʎa ˈfuðβol ˈkluβ]) is a Spanish professional football club based in Seville, Andalusia, that competes in La Liga, the top flight of Spanish football. The club was formed on 25 January 1890, making it Spain's second oldest sporting club solely devoted to football, after Recreativo de Huelva.",
+    "updated": "2026-10-12T05:45:38.883Z"
+  },
+  "real-betis-balompie": {
+    "slug": "real-betis-balompie",
+    "title": "Real Betis",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Real%20Betis",
+    "extract": "Real Betis Balompié, S.A.D., known as Real Betis (pronounced [reˈal ˈbetis]), is a professional football club based in Seville, Andalusia, Spain. They compete in La Liga, the top flight of Spanish football. Traditionally, Real Betis play home matches at Estadio Benito Villamarín.",
+    "updated": "2026-10-12T05:45:40.399Z"
+  },
+  "girona": {
+    "slug": "girona",
+    "title": "Girona FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Girona%20FC",
+    "extract": "Girona Futbol Club, S.A.D. (Catalan: [ʒiˈɾonə]  zhi-RO-nuh) is a Spanish professional football club based in Girona, Catalonia, Spain. Founded on 23 July 1930, the team plays in the Segunda División, following relegation from the 2025–26 La Liga season. Girona holds its home matches at the 14,624-capacity Estadi Montilivi.",
+    "updated": "2026-10-12T05:45:41.902Z"
+  },
+  "celta-vigo": {
+    "slug": "celta-vigo",
+    "title": "RC Celta de Vigo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RC%20Celta%20de%20Vigo",
+    "extract": "Real Club Celta de Vigo (Galician pronunciation: [reˈal ˈkluβ ˈθeltɐ ðɪ ˈβiɣʊ]; lit. 'Royal Celtic Club of Vigo'), commonly known as Celta Vigo or just Celta, is a Spanish professional football club based in Vigo, Galicia, that competes in La Liga, the top tier of Spanish football.",
+    "updated": "2026-10-12T05:45:43.441Z"
+  },
+  "villarreal": {
+    "slug": "villarreal",
+    "title": "Villarreal CF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Villarreal%20CF",
+    "extract": "Villarreal Club de Fútbol, S.A.D., usually abbreviated to Villarreal CF, is a Spanish professional football club based in Villarreal, in the Castellón province of eastern Spain, that plays in La Liga, the top flight of Spanish football. Founded in 1923, the club spent much time of its history in the lower divisions of Spanish football and began in La Liga in 1998.",
+    "updated": "2026-10-12T05:45:44.895Z"
+  },
+  "getafe": {
+    "slug": "getafe",
+    "title": "Getafe CF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Getafe%20CF",
+    "extract": "Getafe Club de Fútbol, S.A.D. (Spanish pronunciation: [xeˈtafe ˈkluβ ðe ˈfuðβol]) is a Spanish professional football club based in Getafe, a city in the Community of Madrid. They compete in La Liga, the top tier of the Spanish football. The team has played its home matches in the 16,500-capacity Estadio Coliseum since 1998.",
+    "updated": "2026-10-12T05:45:46.418Z"
+  },
+  "osasuna": {
+    "slug": "osasuna",
+    "title": "CA Osasuna",
+    "wikiUrl": "https://en.wikipedia.org/wiki/CA%20Osasuna",
+    "extract": "Club Atlético Osasuna (Spanish: [ˈkluβ aðˈletiko osaˈsuna], Osasuna Athletic Club), or simply Osasuna or CAO, is a Spanish professional football club based in Pamplona, Navarre. It was founded on 24 October 1920 and plays in La Liga, the top division of Spanish football. The team's home ground is the 23,516-capacity El Sadar Stadium.",
+    "updated": "2026-10-12T05:45:47.894Z"
+  },
+  "mallorca": {
+    "slug": "mallorca",
+    "title": "RCD Mallorca",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RCD%20Mallorca",
+    "extract": "Real Club Deportivo Mallorca, S.A.D. (Spanish: [reˈal ˈkluβ ðepoɾˈtiβo maˈʎoɾka], Catalan: Reial Club Deportiu Mallorca [rəˈjal ˈklub dəpuɾˈtiw məˈʎɔɾkə], Royal Sporting Club Mallorca), commonly known as Real Mallorca or RCD Mallorca, is a Spanish professional football club based in Palma on the island of Mallorca in the Balearic Islands.",
+    "updated": "2026-10-12T05:45:49.413Z"
+  },
+  "rayo-vallecano-madrid": {
+    "slug": "rayo-vallecano-madrid",
+    "title": "Rayo Vallecano",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rayo%20Vallecano",
+    "extract": "Rayo Vallecano de Madrid, S.A.D. (Spanish pronunciation: [ˈraʝo βaʎeˈkano ðe maˈðɾið]), often abbreviated to Rayo (Spanish for \"lightning bolt\"), is a professional football club based in the Puente de Vallecas district of Madrid, Spain. The club competes in La Liga, the top flight of Spanish football.",
+    "updated": "2026-10-12T05:45:50.895Z"
+  },
+  "deportivo-alaves": {
+    "slug": "deportivo-alaves",
+    "title": "Deportivo Alavés",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Deportivo%20Alav%C3%A9s",
+    "extract": "Deportivo Alavés, S.A.D. (Spanish pronunciation: [depoɾˈtiβo alaˈβes]; Sporting Alavés), usually known as Alavés, is a Spanish football club based in Vitoria-Gasteiz, Álava, in the autonomous community of the Basque Country. Founded on 23 January 1921 as Sport Friends Club, the club competes in La Liga, the top flight of Spanish football.",
+    "updated": "2026-10-12T05:45:52.412Z"
+  },
+  "elche": {
+    "slug": "elche",
+    "title": "Elche CF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Elche%20CF",
+    "extract": "Elche Club de Fútbol, S.A.D. (Valencian: Elx Club de Futbol, S.A.D.) is a Spanish professional football club based in Elche, Province of Alicante, in the Valencian Community, Spain. Founded in 1923, the club competes in La Liga, holding home matches at the Estadio Martínez Valero, with a capacity of 33,732 seats.",
+    "updated": "2026-10-12T05:45:53.933Z"
+  },
+  "levante": {
+    "slug": "levante",
+    "title": "Levante UD",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Levante%20UD",
+    "extract": "Levante Unión Deportiva, S.A.D. (Spanish: [leˈβante wˈnjon depoɾˈtiβa]) is a Spanish professional association football club in Valencia, in the Valencian Community. The club competes in La Liga, the top flight of Spanish professional football. Founded on 6 September 1909, the club competes in La Liga for the 2026-27 season, holding home games at Ciutat de València Stadium.",
+    "updated": "2026-10-12T05:45:55.419Z"
+  },
+  "espanyol-barcelona": {
+    "slug": "espanyol-barcelona",
+    "title": "RCD Espanyol",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RCD%20Espanyol",
+    "extract": "Reial Club Deportiu Espanyol de Barcelona, S.A.D. (Catalan: [rəˈjal ˈklub dəpuɾˈtiw əspəˈɲɔl də βəɾsəˈlonə]; \"Royal Spanish Sports Club of Barcelona\"), commonly known as RCD Espanyol, is a Spanish professional sports club based in the province of Barcelona, Catalonia. The club competes in La Liga, the top tier of Spanish football.",
+    "updated": "2026-10-12T05:45:56.926Z"
+  },
+  "real-oviedo": {
+    "slug": "real-oviedo",
+    "title": "Real Oviedo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Real%20Oviedo",
+    "extract": "Real Oviedo (Spanish: [reˈal oˈβjeðo]; Asturian: Real Uviéu [reˈal uˈβjew]) is a Spanish professional football club based in Oviedo, Asturias. Founded on 26 March 1926, the club plays in the Segunda División, the second level of the Spanish football league system. The club plays at the Estadio Carlos Tartiere, opened on 30 September 2000, and is the largest sports stadium in Asturias.",
+    "updated": "2026-10-12T05:45:58.419Z"
+  },
+  "psg": {
+    "slug": "psg",
+    "title": "Paris Saint-Germain FC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Paris%20Saint-Germain%20FC",
+    "extract": "Paris Saint-Germain Football Club, commonly referred to as Paris Saint-Germain (French: [paʁi sɛ̃ʒɛʁmɛ̃],  ult. ref. \"Saint Germanus\"), PSG, Paris, or Paris SG, is a French professional football club based in Paris. Founded in 1970 through the merger of Paris FC and Stade Saint-Germain, the club competes in Ligue 1, the highest division of French football, and plays its home matches at the Parc des Princes.",
+    "updated": "2026-10-12T05:45:59.912Z"
+  },
+  "marseille": {
+    "slug": "marseille",
+    "title": "Olympique de Marseille",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Olympique%20de%20Marseille",
+    "extract": "Olympique de Marseille (French: [ɔlɛ̃pik də maʁsɛj], locally [olɛ̃ˈpikə də maχˈsɛjə]; Occitan: Olimpic de Marselha, pronounced [ulimˈpi de maʀˈsejɔ]), also known simply as Marseille, or by the abbreviation OM ([oɛm], locally [oˈɛmə]), is a French professional football club based in Marseille which competes in Ligue 1, the top flight of French football.",
+    "updated": "2026-10-12T05:46:01.427Z"
+  },
+  "borussia-dortmund": {
+    "slug": "borussia-dortmund",
+    "title": "Borussia Dortmund",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Borussia%20Dortmund",
+    "extract": "Ballspielverein Borussia 09 e. V. Dortmund, often known simply as Borussia Dortmund (German pronunciation: [boˈʁʊsi̯a ˈdɔʁtmʊnt] ) or by its initialism BVB (pronounced [ˌbeːfaʊ̯ˈbeː] ), or just Dortmund by international fans, is a German professional sports club based in Dortmund, North Rhine-Westphalia.",
+    "updated": "2026-10-12T05:46:02.973Z"
+  },
+  "benfica": {
+    "slug": "benfica",
+    "title": "S.L. Benfica",
+    "wikiUrl": "https://en.wikipedia.org/wiki/S.L.%20Benfica",
+    "extract": "Sport Lisboa e Benfica (Portuguese pronunciation: [ˈspɔɾ(tɨ) liʒˈβoɐ i βɐ̃jˈfikɐ, sɨˈpor(tɨ)] ), commonly known as Benfica, is a professional football club based in Lisbon, Portugal, that competes in the Primeira Liga, the top flight of Portuguese football.",
+    "updated": "2026-10-12T05:46:04.466Z"
+  },
+  "fc-porto": {
+    "slug": "fc-porto",
+    "title": "FC Porto",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Porto",
+    "extract": "Futebol Clube do Porto, MHIH, OM (Portuguese pronunciation: [futɨˈβɔl ˈkluβɨ ðu ˈpoɾtu]), commonly known as FC Porto, or simply Porto, is a Portuguese professional sports club based in Porto. It is best known for the professional football team playing in the Primeira Liga, the top flight of Portuguese football.",
+    "updated": "2026-10-12T05:46:05.929Z"
+  },
+  "chelsea": {
+    "slug": "chelsea",
+    "title": "Chelsea F.C.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Chelsea%20F.C.",
+    "extract": "Chelsea Football Club is a professional association football club based in Fulham, West London, England. They compete in the Premier League, the top tier of English football, and rank among the most successful clubs in English football history. Domestically, the club has secured six top flight league titles, eight FA Cups, five League Cups, four FA Community Shields, and two Full Members' Cups.",
+    "updated": "2026-10-12T05:46:55.685Z"
+  },
+  "fc-barcelona": {
+    "slug": "fc-barcelona",
+    "title": "FC Barcelona",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FC%20Barcelona",
+    "extract": "Futbol Club Barcelona (Catalan pronunciation: [fudˈbɔl ˈklub bəɾsəˈlonə] ), commonly known as FC Barcelona and colloquially as Barça ([ˈbaɾsə]), is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top division of Spanish football.",
+    "updated": "2026-10-12T05:46:57.115Z"
+  }
+}
