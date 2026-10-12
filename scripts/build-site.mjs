@@ -2469,6 +2469,18 @@ const GUIDES = [
       <p style="margin-top:14px"><a href="../?league=wc">▶ FIFAワールドカップ26の試合一覧・ハイライト</a> ／ <a href="../guide/world-cup-2026-how-to-watch.html">▶ W杯26を日本から観る方法</a></p>`;
     } },
 ];
+// データ駆動の独自記事（原稿は data/articles.json に分離＝build-site.mjs を肥大化させない）。
+// 各記事は {slug,title,h1,dek,desc,body(HTML),entities?} で、GUIDES と同じ仕組みで /guide/<slug>.html に生成する。
+try {
+  if (existsSync('data/articles.json')) {
+    const arts = JSON.parse(readFileSync('data/articles.json','utf8'));
+    for (const a of (Array.isArray(arts) ? arts : (arts.articles||[]))) {
+      if (!a || !a.slug || !a.h1 || !a.body) continue;
+      if (GUIDES.some(g => g.slug === a.slug)) continue;   // slug衝突は既存GUIDESを優先
+      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], body(){ return a.body; } });
+    }
+  }
+} catch(e){ console.warn('articles.json読込失敗:', e.message); }
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
 function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.length?`<div class="side-guides"><div class="side-h">関連ガイド</div>${gs.map(x=>`<a class="guide-link" href="../guide/${x.slug}.html">📘 ${esc(x.h1)}</a>`).join('')}</div>`:''; }
@@ -3434,6 +3446,26 @@ for(const g of GUIDES){
   ` + FOOTER();
   writeFileSync(`site/guide/${g.slug}.html`, out);
   guideUrls.push(url);
+}
+// ガイド一覧ハブ /guide/（独自editorialを束ねる“読み物”の入口。内部リンク・回遊・サイトの体裁強化）
+{
+  const idxUrl = `${DOMAIN}/guide/`;
+  const cards = GUIDES.map(g=>`<a class="gd-card" href="${g.slug}.html"><span class="gd-t">📘 ${esc(g.h1)}</span>${g.dek?`<span class="gd-d">${esc(String(g.dek).slice(0,110))}</span>`:''}</a>`).join('');
+  const gcss = `<style>.gd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:10px 0}.gd-card{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;background:var(--card2,rgba(127,127,127,.04))}.gd-card:hover{border-color:var(--accent)}.gd-t{font-weight:800;font-size:14.5px;color:var(--accent);line-height:1.4}.gd-d{font-size:12.5px;color:var(--muted);line-height:1.7}</style>`;
+  const ild = [ {"@type":"CollectionPage","name":"ガイド・解説記事一覧","url":idxUrl,"inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+'/'}},
+    {"@type":"ItemList","itemListElement":GUIDES.map((g,i)=>({"@type":"ListItem","position":i+1,"url":`${DOMAIN}/guide/${g.slug}.html`,"name":g.h1}))},
+    crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド一覧',url:idxUrl}]) ];
+  const ihead = HEAD({ title:`サッカーのガイド・解説記事一覧（${GUIDES.length}本）｜Football Highlights Compass`, ogtitle:'サッカーのガイド・解説記事一覧', desc:`リーグの仕組み、ルール（オフサイド・VAR）、フォーメーション、各大会の解説、観戦ガイドなど、サッカーがもっと面白くなる独自記事を${GUIDES.length}本掲載。`, url:idxUrl, ogimg:`${DOMAIN}/og.png`, modified:`${TODAY}T12:00:00+09:00`, jsonld:ild });
+  const iout = ihead + TOPBAR + `<article class="post">
+  ${crumb([{label:'トップ',href:'../'},{label:'ガイド一覧'}])}
+  <p class="kicker">📚 ガイド・解説</p>
+  <h1 class="headline">サッカーのガイド・解説記事一覧</h1>
+  <p class="dek">リーグの仕組み、ルール、フォーメーション、各大会の解説、観戦ガイドなど、サッカーがもっと面白くなる独自記事をまとめています（全${GUIDES.length}本）。</p>
+  ${gcss}<div class="gd-grid">${cards}</div>
+  ${AD}
+  ` + FOOTER();
+  writeFileSync('site/guide/index.html', iout);
+  guideUrls.push(idxUrl);
 }
 
 // ========================= W杯 グループ個別ページ（展望・暫定順位・日程・ハイライト・国リンク） =========================
