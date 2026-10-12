@@ -58,6 +58,9 @@ try { if (existsSync('data/country-info.json')) COUNTRY_INFO = JSON.parse(readFi
 // 代表の概要（英語・en.wikipedia）。英語版 /en/ 代表ページ用。slug→{title,wikiUrl,extract,updated}。
 let COUNTRY_INFO_EN = {};
 try { if (existsSync('data/country-info-en.json')) COUNTRY_INFO_EN = JSON.parse(readFileSync('data/country-info-en.json','utf8')); } catch(e){ console.warn('country-info-en読込失敗:', e.message); }
+// クラブの概要（英語・en.wikipedia）。英語版 /en/ クラブページ用。slug→{title,wikiUrl,extract,updated}。
+let CLUB_INFO_EN = {};
+try { if (existsSync('data/club-info-en.json')) CLUB_INFO_EN = JSON.parse(readFileSync('data/club-info-en.json','utf8')); } catch(e){ console.warn('club-info-en読込失敗:', e.message); }
 // 有名ダービー/ライバル（data/club-derbies.json）。slug→[{opp, name}] に展開（相互）。クラブページに表示。
 const DERBIES_BY_SLUG = {};
 try {
@@ -2974,6 +2977,9 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   </div>
   <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  ${(()=>{ const ci=CLUB_INFO_EN[info.slug]; if(!ci||!ci.extract||ci.extract.length<30) return ''; return `<h2 class="en-sec">About ${esc(enName)}</h2>
+  <p class="en-about">${esc(ci.extract)}</p>
+  <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>`; })()}
   <h2 class="en-sec">More</h2>${navChips}
   ${enFoot('../../')}
 </div>`;
