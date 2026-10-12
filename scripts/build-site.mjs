@@ -2988,6 +2988,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   </div>
   <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  ${(()=>{ const rows=[]; if(leagueEn) rows.push(['League', esc(leagueEn)]); if(info.founded) rows.push(['Founded', String(info.founded)]); return rows.length?`<h2 class="en-sec">Quick facts</h2><table class="en-facts"><tbody>${rows.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')}</tbody></table>`:''; })()}
   ${(()=>{ const ci=CLUB_INFO_EN[info.slug]; if(!ci||!ci.extract||ci.extract.length<30) return ''; return `<h2 class="en-sec">About ${esc(enName)}</h2>
   <p class="en-about">${esc(ci.extract)}</p>
   <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>`; })()}
