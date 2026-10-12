@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "scorers": [
     {
       "rank": 1,
@@ -41,7 +41,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Japan"
     },
     {
@@ -91,7 +91,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "Croatia"
     },
     {
@@ -116,6 +116,16 @@
     },
     {
       "rank": 12,
+      "name": "Maximilian Eggestein",
+      "team": "フライブルク",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Germany"
+    },
+    {
+      "rank": 13,
       "name": "Jonathan Burkardt",
       "team": "フランクフルト",
       "goals": 3,
@@ -125,7 +135,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Robin Fellhauer",
       "team": "アウクスブルク",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Harry Kane",
       "team": "バイエルン",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": 1,
       "apps": 5,
       "nat": "England"
-    },
-    {
-      "rank": 15,
-      "name": "Josha Vagnoman",
-      "team": "シュツットガルト",
-      "goals": 2,
-      "assists": 1,
-      "pens": null,
-      "apps": 5,
-      "nat": "Germany"
     }
   ]
 }

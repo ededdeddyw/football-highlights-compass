@@ -572,8 +572,8 @@
       "away": "ストラスブール",
       "homeSlug": "nice",
       "awaySlug": "strasbourg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "r2JXnEF5080"
     },
     {
@@ -583,8 +583,8 @@
       "away": "オセール",
       "homeSlug": "stade-rennais",
       "awaySlug": "auxerre",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": "pab7HFJ6zto"
     },
     {
@@ -594,8 +594,8 @@
       "away": "マルセイユ",
       "homeSlug": "troyes",
       "awaySlug": "marseille",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "bymjjrSNF44"
     },
     {

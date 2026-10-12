@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "scorers": [
     {
       "rank": 1,
@@ -36,6 +36,16 @@
     },
     {
       "rank": 4,
+      "name": "Yassir Zabiri",
+      "team": "ラシン・サンタンデール",
+      "goals": 7,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "Morocco"
+    },
+    {
+      "rank": 5,
       "name": "Lamine Yamal",
       "team": "バルセロナ",
       "goals": 7,
@@ -45,7 +55,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Roberto Fernández",
       "team": "エスパニョール",
       "goals": 6,
@@ -55,17 +65,17 @@
       "nat": "Spain"
     },
     {
-      "rank": 6,
-      "name": "Yassir Zabiri",
-      "team": "ラシン・サンタンデール",
+      "rank": 7,
+      "name": "Ante Budimir",
+      "team": "オサスナ",
       "goals": 6,
       "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "Morocco"
+      "pens": 3,
+      "apps": 8,
+      "nat": "Croatia"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Pierre-Emerick Aubameyang",
       "team": "デポルティボ",
       "goals": 5,
@@ -75,23 +85,13 @@
       "nat": "Gabon"
     },
     {
-      "rank": 8,
-      "name": "Ante Budimir",
-      "team": "オサスナ",
-      "goals": 5,
-      "assists": null,
-      "pens": 3,
-      "apps": 7,
-      "nat": "Croatia"
-    },
-    {
       "rank": 9,
       "name": "Fer Niño",
       "team": "エルチェ",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Spain"
     },
     {
