@@ -2469,6 +2469,18 @@ const GUIDES = [
       <p style="margin-top:14px"><a href="../?league=wc">▶ FIFAワールドカップ26の試合一覧・ハイライト</a> ／ <a href="../guide/world-cup-2026-how-to-watch.html">▶ W杯26を日本から観る方法</a></p>`;
     } },
 ];
+// データ駆動の独自記事（原稿は data/articles.json に分離＝build-site.mjs を肥大化させない）。
+// 各記事は {slug,title,h1,dek,desc,body(HTML),entities?} で、GUIDES と同じ仕組みで /guide/<slug>.html に生成する。
+try {
+  if (existsSync('data/articles.json')) {
+    const arts = JSON.parse(readFileSync('data/articles.json','utf8'));
+    for (const a of (Array.isArray(arts) ? arts : (arts.articles||[]))) {
+      if (!a || !a.slug || !a.h1 || !a.body) continue;
+      if (GUIDES.some(g => g.slug === a.slug)) continue;   // slug衝突は既存GUIDESを優先
+      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], body(){ return a.body; } });
+    }
+  }
+} catch(e){ console.warn('articles.json読込失敗:', e.message); }
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
 function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.length?`<div class="side-guides"><div class="side-h">関連ガイド</div>${gs.map(x=>`<a class="guide-link" href="../guide/${x.slug}.html">📘 ${esc(x.h1)}</a>`).join('')}</div>`:''; }
