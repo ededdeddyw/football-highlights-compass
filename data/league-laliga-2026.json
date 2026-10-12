@@ -836,8 +836,8 @@
       "away": "セルタ",
       "homeSlug": "elche",
       "awaySlug": "celta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "tcRjd9sQoJk"
     },
     {
@@ -847,9 +847,9 @@
       "away": "デポルティボ",
       "homeSlug": "real-sociedad",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "bBvRoXaxkeQ"
     },
     {
       "matchday": 8,
@@ -858,8 +858,8 @@
       "away": "オサスナ",
       "homeSlug": "real-betis",
       "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-2",
       "videoId": "9BccJr8aIhM"
     },
     {
@@ -869,8 +869,8 @@
       "away": "バレンシア",
       "homeSlug": "santander",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "RAFT-BwmQa0"
     },
     {

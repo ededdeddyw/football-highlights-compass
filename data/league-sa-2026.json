@@ -594,8 +594,8 @@
       "away": "ローマ",
       "homeSlug": "como-1907",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "AMFi8Wy31lw"
     },
     {
@@ -605,8 +605,8 @@
       "away": "ボローニャ",
       "homeSlug": "lecce",
       "awaySlug": "bologna",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "UZ8lzbDJ8xU"
     },
     {
@@ -616,8 +616,8 @@
       "away": "モンツァ",
       "homeSlug": "lazio",
       "awaySlug": "monza",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "wB_kbXBOr4c"
     },
     {
@@ -627,8 +627,8 @@
       "away": "ミラン",
       "homeSlug": "sassuolo",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "Ss9SbGkUS_A"
     },
     {
@@ -638,9 +638,9 @@
       "away": "ユベントス",
       "homeSlug": "cagliari",
       "awaySlug": "juventus",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "BIxpk9MMVCg"
     },
     {
       "matchday": 6,

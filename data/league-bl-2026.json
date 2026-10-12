@@ -442,7 +442,7 @@
       "awaySlug": "bayer-04-leverkusen",
       "finished": true,
       "score": "3-4",
-      "videoId": ""
+      "videoId": "qBn50tVlVaM"
     },
     {
       "matchday": 5,
@@ -453,7 +453,7 @@
       "awaySlug": "sv-07-elversberg",
       "finished": true,
       "score": "1-0",
-      "videoId": ""
+      "videoId": "st5fl3cwzOY"
     },
     {
       "matchday": 5,
@@ -464,7 +464,7 @@
       "awaySlug": "vfb-stuttgart",
       "finished": true,
       "score": "0-2",
-      "videoId": ""
+      "videoId": "WeswZ9KChr8"
     },
     {
       "matchday": 5,
@@ -484,8 +484,8 @@
       "away": "ボルシアMG",
       "homeSlug": "1-fc-koln",
       "awaySlug": "borussia-monchengladbach",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "vF8SRS46Beo"
     },
     {
@@ -495,8 +495,8 @@
       "away": "シャルケ",
       "homeSlug": "sc-freiburg",
       "awaySlug": "fc-schalke-04",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "gKY3vZ_gTiw"
     },
     {
