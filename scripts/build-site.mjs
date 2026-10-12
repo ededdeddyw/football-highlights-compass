@@ -3002,6 +3002,8 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   // 最大流入源のネーションズリーグに直結。「<country> highlights / national team」系クエリの受け皿。
   mkdirSync('site/en/country', { recursive: true });
   const enCountrySet = new Set();
+  // 日本語の連盟表記 → 英語（先頭トークンで判定。括弧内の地域名は英語へ）
+  const confedEn = jp => { const s=String(jp||''); if(s.startsWith('UEFA'))return'UEFA (Europe)'; if(s.startsWith('CONMEBOL'))return'CONMEBOL (South America)'; if(s.startsWith('CONCACAF'))return'CONCACAF (North &amp; Central America)'; if(s.startsWith('CAF'))return'CAF (Africa)'; if(s.startsWith('AFC'))return'AFC (Asia)'; if(s.startsWith('OFC'))return'OFC (Oceania)'; return ''; };
   for (const [cname, info] of Object.entries(COUNTRIES)) {
     if(!info || !info.slug) continue;
     const hl = (CLUB_HL[info.slug]||[]).filter(r => r.ms && r.videoId && existsSync(`site/match/${r.ms}.html`));
@@ -3033,9 +3035,12 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   </div>
   <h2 class="en-sec" id="latest">Latest ${esc(enName)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
+  ${(()=>{ const ce=confedEn(info.confed); return ce?`<h2 class="en-sec">Quick facts</h2><table class="en-facts"><tbody><tr><th>Confederation</th><td>${ce}</td></tr></tbody></table>`:''; })()}
   ${(()=>{ const ci=COUNTRY_INFO_EN[info.slug]; if(!ci||!ci.extract||ci.extract.length<30) return ''; return `<h2 class="en-sec">About the ${esc(enName)} national team</h2>
   <p class="en-about">${esc(ci.extract)}</p>
   <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>`; })()}
+  <h2 class="en-sec">Guides</h2>
+  <div class="en-chips">${String(info.confed||'').startsWith('UEFA')?`<a href="../guide/uefa-nations-league-guide.html">Nations League explained</a>`:''}<a href="../guide/world-cup-winners-history.html">World Cup winners</a></div>
   <h2 class="en-sec">More</h2>${navChips}
   ${enFoot('../../')}
 </div>`;
