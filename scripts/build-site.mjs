@@ -1223,7 +1223,7 @@ function buildMatch(m){
   ${matchTags}
   <div class="post-body">${bodyHtml}</div>
   ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
-  ${AD}
+  ${hasPreview(m.id)?AD:''}
   ${factHtml}
   ${teamHtml}
   ${playerHtml}
@@ -1365,7 +1365,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   ${matchTags}
   <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
   ${streamCta(L.code)}
-  ${AD}
+  ${hasPreview(slug)?AD:''}
   ${factHtml}
   ${clubChips?`<h2 class="lined">クラブを深掘り</h2><div class="chips">${clubChips}</div>`:''}
   ${playerChips?`<h2 class="lined">この試合に関わる日本人選手</h2><div class="chips">${playerChips}</div>`:''}
@@ -1436,7 +1436,7 @@ function buildPreseasonMatch(mt, season){
   ${matchTags}
   <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
   ${daznCta('シーズン開幕後のフルマッチ・見逃し配信もDAZNで。')}
-  ${AD}
+  ${hasPreview(slug)?AD:''}
   ${factHtml}
   ${footer1()}
   </article></main>
