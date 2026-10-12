@@ -2823,6 +2823,7 @@ const enLeagueUrls = [];
 const enClubUrls = [];
 const enCountryUrls = [];
 const enPlayerUrls = [];
+const enGuideUrls = [];
 try {
   mkdirSync('site/en', { recursive: true });
   mkdirSync('site/en/league', { recursive: true });
@@ -2989,6 +2990,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   ${(()=>{ const ci=CLUB_INFO_EN[info.slug]; if(!ci||!ci.extract||ci.extract.length<30) return ''; return `<h2 class="en-sec">About ${esc(enName)}</h2>
   <p class="en-about">${esc(ci.extract)}</p>
   <p class="en-src">Source: <a href="${escA(ci.wikiUrl)}" target="_blank" rel="noopener">Wikipedia "${esc(ci.title)}"</a> (CC BY-SA).</p>`; })()}
+  ${(()=>{ const ps=(PLAYERS_BY_CLUB[cname]||[]).filter(p=>PLAYER_INFO_EN[p.slug]); return ps.length?`<h2 class="en-sec">Japanese players</h2><div class="en-chips">${ps.map(p=>`<a href="../player/${p.slug}.html">${esc(p.en||prettySlug(p.slug))}</a>`).join('')}</div>`:''; })()}
   <h2 class="en-sec">More</h2>${navChips}
   ${enFoot('../../')}
 </div>`;
@@ -3093,6 +3095,107 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     enPlayerUrls.push({ u:canonical, ja:jaExists });
   }
 
+  // ===== 英語版 ガイド /en/guide/<slug>.html（大会解説。日本語版と同一slugで hreflang 相互リンク） =====
+  mkdirSync('site/en/guide', { recursive: true });
+  const enGuideByCode = {};   // code -> en guide slug（英語ハブからの導線用）
+  const EN_GUIDES = [
+    { slug:'uefa-nations-league-guide', code:'nations', hub:'nations-league',
+      title:'UEFA Nations League Explained｜Format, Leagues A–D, Finals, How to Watch',
+      h1:'UEFA Nations League — Complete Guide',
+      dek:'How the UEFA Nations League works: Leagues A–D, promotion and relegation, the finals, the calendar, and how to find official spoiler-free highlights.',
+      desc:'A complete guide to the UEFA Nations League: Leagues A–D, promotion/relegation, the Final Four, past winners, and its link to World Cup qualifying. Official videos only, spoiler-free.',
+      body(){ return `
+  <h2 class="en-sec">What is the UEFA Nations League?</h2>
+  <p class="en-about">The UEFA Nations League is an official competition created by UEFA so that European national teams play competitive matches against opponents of a similar level, replacing many low-stakes friendlies. It began in the 2018–19 season and runs on a two-year cycle (group stage in autumn of even years, finals the following year).</p>
+  <h2 class="en-sec">Leagues A, B, C and D</h2>
+  <p class="en-about">All participating nations are split by strength into four tiers — League A (top) down to League D. Each league is divided into groups (usually four teams) that play home-and-away round robins, so every tier produces competitive, closely matched games.</p>
+  <h2 class="en-sec">Promotion and relegation</h2>
+  <p class="en-about">Top teams in each group are promoted to the league above, while bottom teams are relegated. Some editions also include promotion/relegation play-offs between adjacent leagues.</p>
+  <h2 class="en-sec">The finals (quarter-finals to final)</h2>
+  <p class="en-about">The champion comes from League A. Since 2024–25, the League A group winners and runners-up meet in two-legged quarter-finals in March, and the four winners advance to the "Final Four" (semi-finals and final) held in June.</p>
+  <h2 class="en-sec">Past winners</h2>
+  <p class="en-about">2018–19: Portugal · 2020–21: France · 2022–23: Spain · 2024–25: Portugal.</p>
+  <h2 class="en-sec">Link to World Cup &amp; EURO qualifying</h2>
+  <p class="en-about">Nations League results feed into play-off places for World Cup and EURO qualifying, giving teams a second route to major tournaments. It is competitive football, not just friendlies.</p>
+  <h2 class="en-sec">Watch official highlights (spoiler-free)</h2>
+  <p class="en-about">We gather only official, rights-holder highlights and hide scores by default. Open the Nations League hub below to browse match highlights.</p>
+  <div class="en-chips"><a href="../league/nations-league.html">Nations League hub</a><a href="../">All highlights</a><a href="../../search.html">🔍 Search</a></div>`; } },
+    { slug:'uefa-champions-league-guide', code:'cl', hub:'champions-league',
+      title:'UEFA Champions League Explained｜New League Phase, Knockouts, How to Watch',
+      h1:'UEFA Champions League — Complete Guide',
+      dek:'How the Champions League works since 2024–25: the 36-team league phase, the knockout rounds, the calendar, past winners, and how to find official spoiler-free highlights.',
+      desc:'A complete guide to the UEFA Champions League: the new 36-team league phase, how teams reach the knockouts (1–8 direct, 9–24 play-off, 25–36 out), past winners, and how to watch. Official videos only, spoiler-free.',
+      body(){ return `
+  <h2 class="en-sec">What is the Champions League?</h2>
+  <p class="en-about">The UEFA Champions League is Europe's premier club competition, bringing together the top clubs from each national league. It is one of the most watched tournaments in world football.</p>
+  <h2 class="en-sec">The new "league phase" (2024–25 onwards)</h2>
+  <p class="en-about">From 2024–25, the old group stage was replaced by a 36-team league phase. Each club plays eight different opponents (four home, four away), and all 36 clubs are ranked in a single table — there are no groups.</p>
+  <h2 class="en-sec">How clubs reach the knockouts</h2>
+  <p class="en-about">After the eight league-phase rounds: clubs ranked 1–8 advance directly to the round of 16; clubs 9–24 enter a two-legged play-off; clubs 25–36 are eliminated. From the round of 16 the competition is a two-legged knockout, with a single-venue final.</p>
+  <h2 class="en-sec">Calendar</h2>
+  <p class="en-about">League phase runs September–January, play-offs in February, knockouts March–May, and the final in late May or early June.</p>
+  <h2 class="en-sec">Recent winners</h2>
+  <p class="en-about">Real Madrid are the record champions. Recent winners: 2021–22 Real Madrid · 2022–23 Manchester City · 2023–24 Real Madrid · 2024–25 Paris Saint-Germain (their first).</p>
+  <h2 class="en-sec">Watch official highlights (spoiler-free)</h2>
+  <p class="en-about">We gather only official, rights-holder highlights and hide scores by default.</p>
+  <div class="en-chips"><a href="../league/champions-league.html">Champions League hub</a><a href="../guide/uefa-europa-league-guide.html">Europa League guide</a><a href="../../search.html">🔍 Search</a></div>`; } },
+    { slug:'uefa-europa-league-guide', code:'el', hub:'europa-league',
+      title:'UEFA Europa League Explained｜League Phase, Knockouts, vs Champions League',
+      h1:'UEFA Europa League — Complete Guide',
+      dek:'How the Europa League works: the 36-team league phase, the knockout rounds, how it differs from the Champions League, past winners, and official spoiler-free highlights.',
+      desc:'A complete guide to the UEFA Europa League: the new 36-team league phase, how to reach the knockouts, the Champions League spot for the winner, past winners, and how to watch. Official videos only, spoiler-free.',
+      body(){ return `
+  <h2 class="en-sec">What is the Europa League?</h2>
+  <p class="en-about">The UEFA Europa League is Europe's second-tier club competition, below the <a href="../guide/uefa-champions-league-guide.html">Champions League</a>. It features strong clubs from across the continent competing for a European trophy.</p>
+  <h2 class="en-sec">The new "league phase" (2024–25 onwards)</h2>
+  <p class="en-about">Like the Champions League, the Europa League switched to a 36-team league phase in 2024–25: each club plays eight different opponents in a single combined table, with no groups.</p>
+  <h2 class="en-sec">How clubs reach the knockouts</h2>
+  <p class="en-about">Clubs ranked 1–8 advance directly to the round of 16; clubs 9–24 enter a two-legged play-off; clubs 25–36 are eliminated. From the round of 16 it is a two-legged knockout, with a single-venue final.</p>
+  <h2 class="en-sec">Why it matters — a route to the Champions League</h2>
+  <p class="en-about">The Europa League winner earns a place in the following season's Champions League, making it a real shortcut to Europe's top table for clubs that miss out through their domestic league.</p>
+  <h2 class="en-sec">Recent winners</h2>
+  <p class="en-about">Sevilla are the record champions. Recent winners: 2021–22 Eintracht Frankfurt · 2022–23 Sevilla · 2023–24 Atalanta · 2024–25 Tottenham Hotspur.</p>
+  <h2 class="en-sec">Watch official highlights (spoiler-free)</h2>
+  <p class="en-about">We gather only official, rights-holder highlights and hide scores by default.</p>
+  <div class="en-chips"><a href="../league/europa-league.html">Europa League hub</a><a href="../league/champions-league.html">Champions League hub</a><a href="../../search.html">🔍 Search</a></div>`; } },
+    { slug:'world-cup-winners-history',
+      title:'FIFA World Cup Winners｜Complete List by Year & Titles (1930–2022)',
+      h1:'FIFA World Cup Winners — Complete Guide',
+      dek:'Every FIFA World Cup winner, ranked by titles and listed year by year from 1930 to 2022.',
+      desc:'Complete list of FIFA World Cup winners: titles ranking (Brazil 5, Germany & Italy 4, and more) and the champion of every tournament from 1930 to 2022.',
+      body(){
+        const RANK = [['Brazil',5,'1958, 1962, 1970, 1994, 2002'],['Germany',4,'1954, 1974, 1990, 2014'],['Italy',4,'1934, 1938, 1982, 2006'],['Argentina',3,'1978, 1986, 2022'],['Uruguay',2,'1930, 1950'],['France',2,'1998, 2018'],['England',1,'1966'],['Spain',1,'2010']];
+        const YEARS = [['1930','Uruguay'],['1934','Italy'],['1938','Italy'],['1950','Uruguay'],['1954','West Germany'],['1958','Brazil'],['1962','Brazil'],['1966','England'],['1970','Brazil'],['1974','West Germany'],['1978','Argentina'],['1982','Italy'],['1986','Argentina'],['1990','West Germany'],['1994','Brazil'],['1998','France'],['2002','Brazil'],['2006','Italy'],['2010','Spain'],['2014','Germany'],['2018','France'],['2022','Argentina']];
+        return `
+  <p class="en-about">The FIFA World Cup has been won by only eight nations since the first tournament in 1930. Below is the titles ranking and the champion of every edition up to 2022.</p>
+  <h2 class="en-sec">Titles ranking</h2>
+  <table class="en-facts"><tbody>${RANK.map(r=>`<tr><th>${esc(r[0])}</th><td><strong>${r[1]}</strong> — ${esc(r[2])}</td></tr>`).join('')}</tbody></table>
+  <p class="en-src">Germany's total includes West Germany's titles in 1954, 1974 and 1990.</p>
+  <h2 class="en-sec">Champions by year (1930–2022)</h2>
+  <table class="en-facts"><tbody>${YEARS.map(y=>`<tr><th>${y[0]}</th><td>${esc(y[1])}</td></tr>`).join('')}</tbody></table>
+  <div class="en-chips">${[['uruguay','Uruguay'],['spain','Spain'],['england','England'],['germany','Germany']].filter(([s])=>existsSync(`site/en/country/${s}.html`)).map(([s,n])=>`<a href="../country/${s}.html">${n} NT</a>`).join('')}<a href="../">All highlights</a></div>`;
+      } },
+  ];
+  for (const g of EN_GUIDES) {
+    const canonical = `${DOMAIN}/en/guide/${g.slug}.html`;
+    const jaAlt = `${DOMAIN}/guide/${g.slug}.html`;
+    const jaExists = existsSync(`site/guide/${g.slug}.html`);
+    const jsonld = [
+      {"@type":"Article","headline":g.h1,"description":g.desc,"inLanguage":"en","author":ORG,"publisher":ORG,"datePublished":TODAY,"dateModified":TODAY,"mainEntityOfPage":canonical},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":g.h1,"item":canonical}]}
+    ];
+    const body = `<div class="en-wrap">
+  <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a>${jaExists?`<a class="en-lang" href="../../guide/${g.slug}.html">日本語版 →</a>`:''}</div>
+  <div class="en-crumb"><a href="../">Home</a> › Guide › ${esc(g.h1)}</div>
+  <div class="en-hero"><h1>${esc(g.h1)}</h1><p>${esc(g.dek)}</p></div>
+  ${g.body()}
+  ${enFoot('../../')}
+</div>`;
+    writeFileSync(`site/en/guide/${g.slug}.html`, enShell({ title:g.title, desc:g.desc, canonical, jaAlt:jaExists?jaAlt:canonical, enAlt:canonical, base:'../../', jsonld, body }));
+    enGuideUrls.push({ u:canonical, ja:jaExists });
+    if (g.code) enGuideByCode[g.code] = g.slug;
+  }
+
   const enHubs = [];   // {code, slug, name} 生成済みハブ（トップのリンク用）
   for (const h of enBuilt) {
     const items = recentOf(h.code).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
@@ -3112,6 +3215,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     // 代表大会（ネーションズリーグ等）のハブには、英語代表ページへの導線を付ける
     const natTeams = (h.code==='nations' || h.code==='jpn') ? Object.entries(COUNTRIES).filter(([,i]) => i && i.slug && enCountrySet.has(i.slug)) : [];
     const teamChips = natTeams.length ? `<h2 class="en-sec">National teams</h2><div class="en-chips">${natTeams.map(([,i])=>`<a href="../country/${i.slug}.html">${esc(prettySlug(i.slug))}</a>`).join('')}</div>` : '';
+    const guideChip = enGuideByCode[h.code] ? `<p class="en-leagues" style="margin-top:10px"><a href="../guide/${enGuideByCode[h.code]}.html">📘 ${esc(name)} explained — format, knockouts &amp; winners</a></p>` : '';
     const blurb = LEAGUE_BLURB_EN[h.code] || `Official highlights from ${name}.`;
     const title = `${name} Highlights & Table｜Spoiler-Free Official Videos`;
     const desc = `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
@@ -3130,6 +3234,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   <h2 class="en-sec" id="latest">Latest ${esc(name)} highlights</h2>
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
   ${standHtml}
+  ${guideChip}
   ${clubChips}
   ${teamChips}
   ${otherChips}
@@ -3169,6 +3274,8 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   </div>
   <h2 class="en-sec" id="latest">Latest highlights</h2>
   ${enCards?`<div class="engrid">${enCards}</div>`:'<p class="en-leagues">New highlights are added daily.</p>'}
+  ${EN_GUIDES.length?`<h2 class="en-sec">Guides</h2><div class="en-chips">${EN_GUIDES.map(g=>`<a href="guide/${g.slug}.html">${esc(g.h1.replace(/ — .*/,''))}</a>`).join('')}</div>`:''}
+  ${(()=>{ const ps=PLAYERS.filter(p=>PLAYER_INFO_EN[p.slug]); return ps.length?`<h2 class="en-sec">Japanese players</h2><div class="en-chips">${ps.map(p=>`<a href="player/${p.slug}.html">${esc(p.en||prettySlug(p.slug))}</a>`).join('')}</div>`:''; })()}
   ${enFoot('../')}
 </div>`;
   writeFileSync('site/en/index.html', enShell({
@@ -3591,6 +3698,7 @@ for(const u of enLeagueUrls){ const ja=u.replace('/en/league/','/league/'); sm +
 for(const u of enClubUrls){ const ja=u.replace('/en/club/','/club/'); sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${ja}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${u}"/></url>\n`; }
 for(const c of enCountryUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/country/','/country/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>${alt}</url>\n`; }
 for(const c of enPlayerUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/player/','/player/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>${alt}</url>\n`; }
+for(const c of enGuideUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="${c.u.replace('/en/guide/','/guide/')}"/><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="${c.u}"/>` : ''; sm += `  <url><loc>${c.u}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>${alt}</url>\n`; }
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
