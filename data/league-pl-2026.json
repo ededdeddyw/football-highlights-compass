@@ -561,9 +561,9 @@
       "away": "リーズ",
       "homeSlug": "arsenal",
       "awaySlug": "leeds-united",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "t4QHP775wZE"
     },
     {
       "matchday": 6,
@@ -572,9 +572,9 @@
       "away": "ブライトン",
       "homeSlug": "sunderland",
       "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "eerthOjYwAY"
     },
     {
       "matchday": 6,
@@ -583,9 +583,9 @@
       "away": "ボーンマス",
       "homeSlug": "chelsea",
       "awaySlug": "bournemouth",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-1",
+      "videoId": "RhiLe-o7eec"
     },
     {
       "matchday": 6,
@@ -594,9 +594,9 @@
       "away": "フラム",
       "homeSlug": "ipswich-town",
       "awaySlug": "fulham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "RbQjTxnDRhI"
     },
     {
       "matchday": 6,
@@ -605,9 +605,9 @@
       "away": "ブレントフォード",
       "homeSlug": "aston-villa",
       "awaySlug": "brentford",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "-R2qn5bdeTA"
     },
     {
       "matchday": 6,
@@ -616,9 +616,9 @@
       "away": "トッテナム",
       "homeSlug": "man-united",
       "awaySlug": "tottenham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "eZ2w6rt-BGE"
     },
     {
       "matchday": 6,
@@ -629,7 +629,7 @@
       "awaySlug": "everton",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "WpylslqB60Y"
     },
     {
       "matchday": 6,
@@ -640,7 +640,7 @@
       "awaySlug": "nottingham",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "SLRLRmOgfew"
     },
     {
       "matchday": 6,
@@ -651,7 +651,7 @@
       "awaySlug": "man-city",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "1VhZ7PPR9t0"
     },
     {
       "matchday": 6,

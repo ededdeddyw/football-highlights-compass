@@ -506,9 +506,9 @@
       "away": "リヨン",
       "homeSlug": "rc-lens",
       "awaySlug": "olympique-lyon",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "1z5IyS9F8pU"
     },
     {
       "matchday": 6,
@@ -517,9 +517,9 @@
       "away": "ルアーブル",
       "homeSlug": "lille",
       "awaySlug": "le-havre",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "9i3GUAjKEYM"
     },
     {
       "matchday": 6,
@@ -528,9 +528,9 @@
       "away": "アンジェ",
       "homeSlug": "brest",
       "awaySlug": "angers-sco",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "5-1",
+      "videoId": "F8OXhrUPVk8"
     },
     {
       "matchday": 6,
@@ -539,9 +539,9 @@
       "away": "パリFC",
       "homeSlug": "lorient",
       "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "yqAKkXaIbqA"
     },
     {
       "matchday": 6,
@@ -550,9 +550,9 @@
       "away": "ルマン",
       "homeSlug": "psg",
       "awaySlug": "le-mans",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "2DT9Fyml0Bs"
     },
     {
       "matchday": 6,
@@ -561,9 +561,9 @@
       "away": "トゥールーズ",
       "homeSlug": "monaco",
       "awaySlug": "toulouse",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-2",
+      "videoId": "r6p8wvh1ke4"
     },
     {
       "matchday": 6,
@@ -574,7 +574,7 @@
       "awaySlug": "strasbourg",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "r2JXnEF5080"
     },
     {
       "matchday": 6,
@@ -585,7 +585,7 @@
       "awaySlug": "auxerre",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "pab7HFJ6zto"
     },
     {
       "matchday": 6,
@@ -596,7 +596,7 @@
       "awaySlug": "marseille",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "bymjjrSNF44"
     },
     {
       "matchday": 7,

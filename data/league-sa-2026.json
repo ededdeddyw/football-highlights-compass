@@ -561,9 +561,9 @@
       "away": "フィオレンティーナ",
       "homeSlug": "genoa",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "nbqw752-GrA"
     },
     {
       "matchday": 6,
@@ -572,9 +572,9 @@
       "away": "パルマ",
       "homeSlug": "inter",
       "awaySlug": "parma",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "1M80Ebg2w9A"
     },
     {
       "matchday": 6,
@@ -583,9 +583,9 @@
       "away": "フロジノーネ",
       "homeSlug": "napoli",
       "awaySlug": "frosinone",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "pGxBb-HpZtM"
     },
     {
       "matchday": 6,
@@ -596,7 +596,7 @@
       "awaySlug": "roma",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "AMFi8Wy31lw"
     },
     {
       "matchday": 6,
@@ -607,7 +607,7 @@
       "awaySlug": "bologna",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "UZ8lzbDJ8xU"
     },
     {
       "matchday": 6,
@@ -618,7 +618,7 @@
       "awaySlug": "monza",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "wB_kbXBOr4c"
     },
     {
       "matchday": 6,
@@ -629,7 +629,7 @@
       "awaySlug": "milan",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "Ss9SbGkUS_A"
     },
     {
       "matchday": 6,

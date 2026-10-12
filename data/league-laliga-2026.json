@@ -781,9 +781,9 @@
       "away": "エスパニョール",
       "homeSlug": "malaga",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "gHZtCASvTzE"
     },
     {
       "matchday": 8,
@@ -803,9 +803,9 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "alaves",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "d1-fOZ2nHYk"
     },
     {
       "matchday": 8,
@@ -814,9 +814,9 @@
       "away": "ヘタフェ",
       "homeSlug": "barca",
       "awaySlug": "getafe",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "gZpIzFFh2es"
     },
     {
       "matchday": 8,
@@ -825,9 +825,9 @@
       "away": "ビジャレアル",
       "homeSlug": "real-madrid",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "a7Mu6QdicbU"
     },
     {
       "matchday": 8,
@@ -838,7 +838,7 @@
       "awaySlug": "celta",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "tcRjd9sQoJk"
     },
     {
       "matchday": 8,
@@ -860,7 +860,7 @@
       "awaySlug": "osasuna",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "9BccJr8aIhM"
     },
     {
       "matchday": 8,
@@ -871,7 +871,7 @@
       "awaySlug": "valencia",
       "finished": false,
       "score": "",
-      "videoId": ""
+      "videoId": "RAFT-BwmQa0"
     },
     {
       "matchday": 8,
