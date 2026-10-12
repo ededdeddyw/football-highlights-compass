@@ -3192,7 +3192,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   ${enFoot('../../')}
 </div>`;
     writeFileSync(`site/en/guide/${g.slug}.html`, enShell({ title:g.title, desc:g.desc, canonical, jaAlt:jaExists?jaAlt:canonical, enAlt:canonical, base:'../../', jsonld, body }));
-    enGuideUrls.push({ u:canonical, ja:jaExists });
+    enGuideUrls.push({ u:canonical, ja:jaExists, h1:g.h1 });
     if (g.code) enGuideByCode[g.code] = g.slug;
   }
 
@@ -4024,6 +4024,7 @@ try {
     }
   }
   if(guideUrls.length){ L.push('## ガイド'); for(let i=0;i<GUIDES.length && i<guideUrls.length;i++) L.push(`- [${GUIDES[i].h1}](${guideUrls[i]})`); L.push(''); }
+  if(typeof enGuideUrls!=='undefined' && enGuideUrls.length){ L.push('## English guides'); for(const g of enGuideUrls) L.push(`- [${g.h1}](${g.u})`); L.push(''); }
   L.push('## サイトについて');
   L.push('- 運営: Football Highlights Compass');
   L.push('- 目的: サッカーのあらゆる情報（ハイライト・結果・順位・日程）を、ネタバレ防止で一か所から探せるようにすること。');
