@@ -1,5 +1,53 @@
 [
   {
+    "id": "1XvBdNnLn5c",
+    "teams": [
+      "レバンテ",
+      "セビージャ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "yQK5PNnD1dg",
+    "teams": [
+      "コベントリー",
+      "ニューカッスル"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "プレミアリーグ 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "k0XVFdFSNBE",
+    "teams": [
+      "トリノ",
+      "ウディネーゼ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "C4gHv6h5AOA",
+    "teams": [
+      "アタランタ",
+      "ヴェネツィア"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "gKY3vZ_gTiw",
     "teams": [
       "フライブルク",
@@ -40,6 +88,18 @@
     "teams": [
       "ベティス",
       "オサスナ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bBvRoXaxkeQ",
+    "teams": [
+      "レアル・ソシエダ",
+      "デポルティボ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -132,6 +192,18 @@
     "hasPreview": false
   },
   {
+    "id": "BIxpk9MMVCg",
+    "teams": [
+      "カリアリ",
+      "ユベントス"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第6節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "Ss9SbGkUS_A",
     "teams": [
       "サッスオーロ",
@@ -208,6 +280,42 @@
     "teams": [
       "アウクスブルク",
       "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "qBn50tVlVaM",
+    "teams": [
+      "マインツ",
+      "レバークーゼン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "st5fl3cwzOY",
+    "teams": [
+      "ウニオン・ベルリン",
+      "エルファースベルク"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "WeswZ9KChr8",
+    "teams": [
+      "パーダーボルン",
+      "シュツットガルト"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
@@ -848,114 +956,6 @@
     "league": "ligue1",
     "leagueName": "リーグアン",
     "meta": "リーグアン 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "vKxQmgB3iW8",
-    "teams": [
-      "アンジェ",
-      "トロワ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "5MAePtK-zqk",
-    "teams": [
-      "リヨン",
-      "レンヌ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "Gs-OuCmX8cI",
-    "teams": [
-      "パリFC",
-      "ストラスブール"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "8VzafviK9E8",
-    "teams": [
-      "ノッティンガム・フォレスト",
-      "コベントリー"
-    ],
-    "league": "other",
-    "leagueName": "",
-    "meta": "プレミアリーグ 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "Now_Sy2jLAU",
-    "teams": [
-      "エバートン",
-      "イプスウィッチ"
-    ],
-    "league": "other",
-    "leagueName": "",
-    "meta": "プレミアリーグ 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "eFZMv5yhtnM",
-    "teams": [
-      "ブライトン",
-      "アーセナル"
-    ],
-    "league": "other",
-    "leagueName": "",
-    "meta": "プレミアリーグ 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "o2Y3NS4VUGw",
-    "teams": [
-      "ニューカッスル",
-      "ハル・シティ"
-    ],
-    "league": "other",
-    "leagueName": "",
-    "meta": "プレミアリーグ 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "WsxGxp1C6vw",
-    "teams": [
-      "トッテナム",
-      "アストン・ヴィラ"
-    ],
-    "league": "other",
-    "leagueName": "",
-    "meta": "プレミアリーグ 第5節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "EHCNscWrUHA",
-    "teams": [
-      "ヴェネツィア",
-      "ラツィオ"
-    ],
-    "league": "seriea",
-    "leagueName": "セリエA",
-    "meta": "セリエA 第5節",
     "players": [],
     "hasPreview": false
   },
@@ -4652,7 +4652,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第1節 / 2025-26",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-gladbach-hamburg",
@@ -9800,7 +9800,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md15-hamburger-sv-bayer-04-leverkusen",
@@ -10568,7 +10568,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第22節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md22-sv-werder-bremen-borussia-dortmund",
@@ -10580,7 +10580,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第22節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md22-fc-schalke-04-sc-freiburg",
@@ -10592,7 +10592,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第22節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md22-sv-07-elversberg-1-fc-union-berlin",
@@ -10604,7 +10604,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第22節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-borussia-dortmund-1-fc-union-berlin",
@@ -10616,7 +10616,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-rb-leipzig-fc-bayern-munchen",
@@ -10628,7 +10628,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-vfb-stuttgart-hamburger-sv",
@@ -10640,7 +10640,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-tsg-hoffenheim-borussia-monchengladbach",
@@ -10652,7 +10652,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-sc-freiburg-bayer-04-leverkusen",
@@ -10664,7 +10664,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-fc-augsburg-sv-07-elversberg",
@@ -10676,7 +10676,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-1-fsv-mainz-05-fc-schalke-04",
@@ -10688,7 +10688,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-1-fc-koln-eintracht-frankfurt",
@@ -10700,7 +10700,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md23-sc-paderborn-07-sv-werder-bremen",
@@ -10712,7 +10712,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第23節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-fc-bayern-munchen-sc-freiburg",
@@ -10724,7 +10724,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-bayer-04-leverkusen-tsg-hoffenheim",
@@ -10736,7 +10736,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-eintracht-frankfurt-borussia-dortmund",
@@ -10748,7 +10748,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-1-fc-union-berlin-fc-augsburg",
@@ -10760,7 +10760,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-borussia-monchengladbach-vfb-stuttgart",
@@ -10772,7 +10772,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-hamburger-sv-sc-paderborn-07",
@@ -10784,7 +10784,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-sv-werder-bremen-1-fsv-mainz-05",
@@ -10796,7 +10796,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-fc-schalke-04-1-fc-koln",
@@ -10808,7 +10808,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md24-sv-07-elversberg-rb-leipzig",
@@ -10820,7 +10820,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第24節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-borussia-dortmund-fc-bayern-munchen",
@@ -10832,7 +10832,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-rb-leipzig-fc-schalke-04",
@@ -10844,7 +10844,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-vfb-stuttgart-bayer-04-leverkusen",
@@ -10856,7 +10856,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-tsg-hoffenheim-sv-werder-bremen",
@@ -10868,7 +10868,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-sc-freiburg-fc-augsburg",
@@ -10880,7 +10880,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-1-fsv-mainz-05-sv-07-elversberg",
@@ -10892,7 +10892,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-hamburger-sv-eintracht-frankfurt",
@@ -10904,7 +10904,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-1-fc-koln-1-fc-union-berlin",
@@ -10916,7 +10916,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第25節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md25-sc-paderborn-07-borussia-monchengladbach",
@@ -10940,7 +10940,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-bayer-04-leverkusen-1-fc-koln",
@@ -10952,7 +10952,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-eintracht-frankfurt-sc-paderborn-07",
@@ -10964,7 +10964,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-fc-augsburg-rb-leipzig",
@@ -10976,7 +10976,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-1-fc-union-berlin-sc-freiburg",
@@ -10988,7 +10988,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-borussia-monchengladbach-hamburger-sv",
@@ -11000,7 +11000,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-sv-werder-bremen-vfb-stuttgart",
@@ -11012,7 +11012,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-fc-schalke-04-tsg-hoffenheim",
@@ -11024,7 +11024,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md26-sv-07-elversberg-borussia-dortmund",
@@ -11036,7 +11036,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第26節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-borussia-dortmund-borussia-monchengladbach",
@@ -11048,7 +11048,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-rb-leipzig-1-fc-union-berlin",
@@ -11060,7 +11060,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-vfb-stuttgart-fc-schalke-04",
@@ -11072,7 +11072,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-tsg-hoffenheim-eintracht-frankfurt",
@@ -11084,7 +11084,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-sc-freiburg-sv-07-elversberg",
@@ -11096,7 +11096,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-1-fsv-mainz-05-fc-augsburg",
@@ -11108,7 +11108,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-hamburger-sv-sv-werder-bremen",
@@ -11120,7 +11120,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-1-fc-koln-fc-bayern-munchen",
@@ -11132,7 +11132,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md27-sc-paderborn-07-bayer-04-leverkusen",
@@ -11144,7 +11144,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第27節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-fc-bayern-munchen-hamburger-sv",
@@ -11156,7 +11156,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-rb-leipzig-sc-freiburg",
@@ -11168,7 +11168,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-bayer-04-leverkusen-borussia-dortmund",
@@ -11180,7 +11180,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-eintracht-frankfurt-vfb-stuttgart",
@@ -11192,7 +11192,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-fc-augsburg-tsg-hoffenheim",
@@ -11204,7 +11204,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-1-fc-union-berlin-1-fsv-mainz-05",
@@ -11216,7 +11216,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-borussia-monchengladbach-sv-werder-bremen",
@@ -11228,7 +11228,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-fc-schalke-04-sc-paderborn-07",
@@ -11240,7 +11240,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md28-sv-07-elversberg-1-fc-koln",
@@ -11252,7 +11252,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第28節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-borussia-dortmund-fc-schalke-04",
@@ -11264,7 +11264,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-vfb-stuttgart-sv-07-elversberg",
@@ -11276,7 +11276,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-tsg-hoffenheim-sc-freiburg",
@@ -11288,7 +11288,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-1-fsv-mainz-05-rb-leipzig",
@@ -11300,7 +11300,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-borussia-monchengladbach-bayer-04-leverkusen",
@@ -11312,7 +11312,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-hamburger-sv-1-fc-union-berlin",
@@ -11324,7 +11324,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-1-fc-koln-fc-augsburg",
@@ -11336,7 +11336,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-sv-werder-bremen-eintracht-frankfurt",
@@ -11348,7 +11348,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md29-sc-paderborn-07-fc-bayern-munchen",
@@ -11360,7 +11360,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第29節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-fc-bayern-munchen-tsg-hoffenheim",
@@ -11372,7 +11372,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-rb-leipzig-1-fc-koln",
@@ -11384,7 +11384,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-bayer-04-leverkusen-sv-werder-bremen",
@@ -11396,7 +11396,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-sc-freiburg-1-fsv-mainz-05",
@@ -11408,7 +11408,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-eintracht-frankfurt-borussia-monchengladbach",
@@ -11420,7 +11420,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-fc-augsburg-borussia-dortmund",
@@ -11432,7 +11432,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "第30節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md30-1-fc-union-berlin-vfb-stuttgart",
