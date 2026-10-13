@@ -759,8 +759,8 @@
       "away": "ウィレムII",
       "homeSlug": "utrecht",
       "awaySlug": "willem-ii",
-      "finished": true,
-      "score": "3-1",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -770,8 +770,8 @@
       "away": "カンブール",
       "homeSlug": "zwolle",
       "awaySlug": "cambuur",
-      "finished": true,
-      "score": "0-1",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -781,8 +781,8 @@
       "away": "ADOデンハーグ",
       "homeSlug": "telstar",
       "awaySlug": "den-haag",
-      "finished": true,
-      "score": "2-2",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {
@@ -792,8 +792,8 @@
       "away": "フローニンゲン",
       "homeSlug": "excelsior",
       "awaySlug": "groningen",
-      "finished": true,
-      "score": "1-5",
+      "finished": false,
+      "score": "",
       "videoId": ""
     },
     {

@@ -649,8 +649,8 @@
       "away": "ヴェネツィア",
       "homeSlug": "atalanta",
       "awaySlug": "venezia-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "C4gHv6h5AOA"
     },
     {
@@ -660,8 +660,8 @@
       "away": "ウディネーゼ",
       "homeSlug": "torino",
       "awaySlug": "udinese",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "k0XVFdFSNBE"
     },
     {
