@@ -209,8 +209,8 @@
       "away": "スポルティングCP",
       "homeSlug": "rc-lens",
       "awaySlug": "sporting-cp",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "hYAIMaCQcrE"
     },
     {
@@ -220,8 +220,8 @@
       "away": "スラヴィア・プラハ",
       "homeSlug": "sabah-fk",
       "awaySlug": "slavia-praha",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": ""
     },
     {
@@ -231,8 +231,8 @@
       "away": "クラブ・ブルッヘ",
       "homeSlug": "inter",
       "awaySlug": "club-brugge",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-4",
       "videoId": ""
     },
     {
@@ -242,8 +242,8 @@
       "away": "バルセロナ",
       "homeSlug": "galatasaray",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-4",
       "videoId": "-KexQHb76qM"
     },
     {
@@ -253,8 +253,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "atleti",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "8KvMfEgw-Q4"
     },
     {
@@ -264,8 +264,8 @@
       "away": "リール",
       "homeSlug": "arsenal",
       "awaySlug": "lille",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "cfHsN52WROE"
     },
     {
@@ -275,8 +275,8 @@
       "away": "バイエルン",
       "homeSlug": "viking",
       "awaySlug": "bayern",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-3",
       "videoId": "DlAi66hxV5I"
     },
     {
@@ -286,8 +286,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "rb-leipzig",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "w5oJ2fAluXI"
     },
     {
@@ -297,8 +297,8 @@
       "away": "ナポリ",
       "homeSlug": "villarreal",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
