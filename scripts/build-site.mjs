@@ -236,6 +236,32 @@ const LEAGUE_GUIDE = {
   cl:     { slug:'uefa-champions-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・歴代王者' },
   el:     { slug:'uefa-europa-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・CLとの違い' },
 };
+// リーグコード → 関連する解説記事（複数）。ハブ（流入面）から関連記事へ内部リンクし、話題クラスタの網羅性・回遊・順位を強化する。
+// slug は data/articles.json / インラインGUIDES に実在する必要がある（存在チェックは描画側で行う）。
+const LEAGUE_RELATED_GUIDES = {
+  nations: [
+    { slug:'nations-league-past-winners', label:'ネーションズリーグ 歴代優勝国' },
+    { slug:'world-cup-qualifying-europe', label:'ワールドカップ欧州予選の仕組み（NL連動）' },
+    { slug:'fifa-international-match-calendar', label:'代表ウィーク（国際マッチデー）とは' },
+  ],
+  cl: [
+    { slug:'champions-league-past-winners', label:'チャンピオンズリーグ 歴代優勝クラブ' },
+  ],
+  jpn: [
+    { slug:'japan-world-cup-history', label:'日本代表 ワールドカップの歴史' },
+    { slug:'fifa-ranking-explained', label:'FIFAランキングとは' },
+  ],
+  pl: [
+    { slug:'premier-league-big-six', label:'プレミアリーグの「ビッグ6」とは' },
+    { slug:'famous-derbies-world', label:'世界の有名なダービー' },
+  ],
+  laliga: [
+    { slug:'famous-derbies-world', label:'世界の有名なダービー（エル・クラシコ）' },
+  ],
+  sa: [
+    { slug:'famous-derbies-world', label:'世界の有名なダービー（ミラノダービー）' },
+  ],
+};
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2484,6 +2510,8 @@ try {
 const guidesByEntity = {};
 for(const g of GUIDES) (g.entities||[]).forEach(e=>{ (guidesByEntity[e]=guidesByEntity[e]||[]).push({slug:g.slug, h1:g.h1}); });
 function guideLinksFor(name){ const gs=guidesByEntity[name]||[]; return gs.length?`<div class="side-guides"><div class="side-h">関連ガイド</div>${gs.map(x=>`<a class="guide-link" href="../guide/${x.slug}.html">📘 ${esc(x.h1)}</a>`).join('')}</div>`:''; }
+// 実在するガイド slug の集合（リーグハブの関連記事リンクの存在チェック用。デッドリンク防止）。
+const GUIDE_SLUGS = new Set(GUIDES.map(g=>g.slug));
 
 let nc=0, ncl=0;
 for(const [name,info] of Object.entries(COUNTRIES)){ if(entityMatches(name).length){ buildCountry(name,info); nc++; } }
@@ -2595,6 +2623,7 @@ function buildLeague(h){
   ${recentBlock}
   ${groupBlock}
   ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code].slug}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（${esc(LEAGUE_GUIDE[h.code].tag)}）</a></p>`:''}
+  ${(()=>{ const rel=(LEAGUE_RELATED_GUIDES[h.code]||[]).filter(g=>GUIDE_SLUGS.has(g.slug)); return rel.length?`<div class="hub-guides"><h2 class="lined">関連する解説記事</h2><div class="chips">${rel.map(g=>`<a href="../guide/${g.slug}.html">📘 ${esc(g.label)}</a>`).join('')}</div></div>`:''; })()}
   ${mdNavBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
