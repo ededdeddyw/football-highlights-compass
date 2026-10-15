@@ -308,8 +308,8 @@
       "away": "リバプール",
       "homeSlug": "lask",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-6",
       "videoId": "DHiLHScom2c"
     },
     {
@@ -319,8 +319,8 @@
       "away": "コモ",
       "homeSlug": "feyenoord",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "XzF4zxpm6OY"
     },
     {
@@ -330,8 +330,8 @@
       "away": "レアル・マドリード",
       "homeSlug": "roma",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-4",
       "videoId": "sD01IcwbjOs"
     },
     {
@@ -341,8 +341,8 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "man-city",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-4",
       "videoId": "Px-1A-_mWZk"
     },
     {
@@ -352,8 +352,8 @@
       "away": "ドルトムント",
       "homeSlug": "bod-glimt",
       "awaySlug": "dortmund",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "OSiVEzRpiz4"
     },
     {
@@ -363,8 +363,8 @@
       "away": "フェネルバフチェ",
       "homeSlug": "aston-villa",
       "awaySlug": "fenerbahce",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "6-0",
       "videoId": "lit72zD0sVo"
     },
     {
@@ -374,8 +374,8 @@
       "away": "ポルト",
       "homeSlug": "real-betis",
       "awaySlug": "porto",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": ""
     },
     {
@@ -385,8 +385,8 @@
       "away": "AEKアテネ",
       "homeSlug": "shaktar",
       "awaySlug": "pae-aek",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
@@ -396,8 +396,8 @@
       "away": "シュツットガルト",
       "homeSlug": "sl-bratislava",
       "awaySlug": "stuttgart",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": ""
     },
     {
