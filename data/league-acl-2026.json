@@ -73,6 +73,17 @@
     {
       "matchday": 2,
       "dateUTC": "",
+      "home": "ヴィッセル神戸",
+      "away": "全北",
+      "homeSlug": "kobe",
+      "awaySlug": "jeonbuk",
+      "finished": true,
+      "score": "",
+      "videoId": "_XJB3E07_SI"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
       "home": "コンアン・ハノイ",
       "away": "鹿島アントラーズ",
       "homeSlug": "cong-an-hanoi",
@@ -102,6 +113,17 @@
       "finished": true,
       "score": "",
       "videoId": "DbRSWs6XykI"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "柏レイソル",
+      "away": "ポートFC",
+      "homeSlug": "kashiwa",
+      "awaySlug": "port-fc",
+      "finished": true,
+      "score": "",
+      "videoId": "xbhdTBo6GCI"
     }
   ]
 }
