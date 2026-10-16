@@ -2,16 +2,16 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-10-15
+> 最終更新: 2026-10-16
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **21** ↓1
-- 表示(7日): **5909** ↓218
-- 平均順位(7日): **10.7** ↓0.1（数字が小さいほど上位）
-- CTR(7日): **0.4%**
+- クリック(7日): **20** ↓1
+- 表示(7日): **6242** ↑333
+- 平均順位(7日): **10.9** ↑0.2（数字が小さいほど上位）
+- CTR(7日): **0.3%**
 - サイトマップ indexed: **0** / submitted 4811 →
   - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。
-- GA ユーザー(28日): **405** / セッション 496
+- GA ユーザー(28日): **417** / セッション 509
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
@@ -20,12 +20,12 @@
 | uefaネーションズリーグ ハイライト | 6 | 96 | 7.3 |
 | ネーションズリーグサッカーハイライト | 4 | 34 | 7.1 |
 | サッカーハイライト | 4 | 14 | 15.4 |
-| 浦和レッズ | 2 | 1050 | 11.2 |
+| 浦和レッズ | 3 | 1132 | 11.1 |
+| 浦和レッドダイヤモンズ | 1 | 68 | 12.2 |
 | ウルグアイ 優勝 | 1 | 60 | 10.1 |
-| 浦和レッドダイヤモンズ | 1 | 38 | 10.9 |
 | ベルギー代表 歴代 | 1 | 13 | 9.2 |
+| jupiler pro league highlights | 1 | 5 | 9.4 |
 | la liga highlights | 1 | 5 | 36.8 |
-| jupiler pro league highlights | 1 | 4 | 9.5 |
 | 浦和レッズ 今日 の試合 | 1 | 3 | 20.7 |
 | uefaチャンピオンズリーグ | 1 | 1 | 66.0 |
 | サッカー | 1 | 1 | 1.0 |
@@ -35,55 +35,52 @@
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| /league/nations-league.html | 59 | 466 | 6.5 |
-| / | 9 | 72 | 11.7 |
-| /country/uruguay.html | 4 | 3923 | 9.0 |
-| /club/urawa-reds.html | 4 | 1150 | 11.8 |
-| /country/belgium.html | 2 | 199 | 10.2 |
-| /country/mexico.html | 2 | 80 | 7.7 |
-| /club/napoli.html | 2 | 77 | 15.1 |
+| /league/nations-league.html | 60 | 471 | 6.7 |
+| / | 9 | 73 | 11.7 |
+| /club/urawa-reds.html | 5 | 1269 | 11.8 |
+| /country/uruguay.html | 4 | 3925 | 9.0 |
+| /country/belgium.html | 2 | 207 | 10.1 |
+| /club/napoli.html | 2 | 90 | 16.7 |
+| /country/mexico.html | 2 | 82 | 7.7 |
 | /matchday/nations-2026-md1.html | 2 | 33 | 10.8 |
-| /en/league/laliga.html | 2 | 18 | 30.7 |
+| /en/league/laliga.html | 2 | 21 | 30.4 |
 | /league/premier-league.html | 2 | 18 | 23.2 |
 | /matchday/nations-2026-md2.html | 2 | 12 | 6.5 |
 | /league/j2-league.html | 2 | 6 | 7.3 |
-| /country/morocco.html | 1 | 54 | 37.6 |
-| /country/austria.html | 1 | 41 | 18.6 |
-| /league/bundesliga.html | 1 | 36 | 13.0 |
+| /country/morocco.html | 1 | 54 | 38.0 |
+| /country/austria.html | 1 | 42 | 18.4 |
+| /league/bundesliga.html | 1 | 34 | 10.6 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Organic Search | 351 | 204 | 136 |
-| Direct | 89 | 36 | 233 |
-| Cross-network | 27 | 1 | 1573 |
-| AI Assistant | 24 | 14 | 470 |
-| Unassigned | 20 | 0 | 7 |
+| Organic Search | 398 | 227 | 229 |
+| Direct | 92 | 38 | 227 |
+| AI Assistant | 18 | 12 | 522 |
 | Referral | 1 | 0 | 0 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
 | /league/nations-league.html | 118 | 78 | 1521 |
-| / | 110 | 42 | 1808 |
+| / | 111 | 44 | 1790 |
 | /matchday/nations-2026-md2.html | 32 | 12 | 387 |
 | /matchday/nations-2026-md1.html | 31 | 17 | 330 |
+| /match/laliga-2526-md27-villarreal-elche.html | 28 | 28 | 0 |
 | /match/nations-2526-md1-england-spain.html | 26 | 23 | 280 |
-| /match/laliga-2526-md27-villarreal-elche.html | 25 | 25 | 0 |
 | /matchday/nations-2026-md3.html | 21 | 4 | 246 |
+| /league/champions-league.html | 17 | 6 | 208 |
 | /match/pl-2526-md5-tottenham-aston-villa.html | 16 | 9 | 26 |
-| /league/champions-league.html | 15 | 5 | 208 |
 | /match/nations-2526-md1-italy-belgium.html | 15 | 13 | 119 |
-| /match/pl-2526-md35-aston-villa-tottenham-hotspur.html | 14 | 14 | 131 |
 | /league/premier-league.html | 13 | 9 | 204 |
-| /match/cl-2526-md2-inter-club-brugge.html | 12 | 9 | 87 |
+| /match/cl-2526-md2-inter-club-brugge.html | 13 | 9 | 87 |
+| /match/pl-2526-md35-aston-villa-tottenham-hotspur.html | 13 | 13 | 116 |
 | /country/uruguay.html | 11 | 9 | 97 |
 | /league/japan-national-team.html | 11 | 3 | 64 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-10-06 | 22 | 1050 | 18.1 | 0 | 265 |
 | 2026-10-07 | 7 | 827 | 19.6 | 0 | 280 |
 | 2026-10-08 | 7 | 1000 | 21.0 | 0 | 290 |
 | 2026-10-09 | 7 | 795 | 20.8 | 0 | 300 |
@@ -93,16 +90,16 @@
 | 2026-10-13 | 20 | 6040 | 10.6 | 0 | 354 |
 | 2026-10-14 | 22 | 6127 | 10.8 | 0 | 376 |
 | 2026-10-15 | 21 | 5909 | 10.7 | 0 | 405 |
+| 2026-10-16 | 20 | 6242 | 10.9 | 0 | 417 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 892 | 17 | 1.9% |
-| W杯国別（/country/） | 327 | 0 | 0.0% |
+| クラブ/リーグ（/club/・/league/） | 1035 | 16 | 1.5% |
+| W杯国別（/country/） | 329 | 0 | 0.0% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
-| 2026-10-06 | 431 | 331 |
 | 2026-10-07 | 300 | 273 |
 | 2026-10-08 | 361 | 335 |
 | 2026-10-09 | 296 | 257 |
@@ -112,4 +109,5 @@
 | 2026-10-13 | 1821 | 324 |
 | 2026-10-14 | 1868 | 330 |
 | 2026-10-15 | 892 | 327 |
+| 2026-10-16 | 1035 | 329 |
 
