@@ -4427,6 +4427,18 @@
     "hasPreview": true
   },
   {
+    "id": "acl-2526-md2-x-タンピネス-machida",
+    "teams": [
+      "タンピネス",
+      "FC町田ゼルビア"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "acl-2526-md2-newcastle-jets-gamba-osaka",
     "teams": [
       "ニューカッスル・ジェッツ",
@@ -11984,7 +11996,7 @@
     "leagueName": "EFLカップ（カラバオ）",
     "meta": "2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "carabao-2526-manchester-city-norwich-city",
@@ -13751,6 +13763,30 @@
     "hasPreview": true
   },
   {
+    "id": "conference-2526-md1-x-cskaソフィア-as-monaco",
+    "teams": [
+      "CSKAソフィア",
+      "モナコ"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第1節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "conference-2526-md1-freiburg-x-ヤブロネツ",
+    "teams": [
+      "フライブルク",
+      "ヤブロネツ"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第1節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "el-2526-md1-anderlecht-olympique-lyonnais",
     "teams": [
       "アンデルレヒト",
@@ -13795,6 +13831,54 @@
     "league": "el",
     "leagueName": "UEFAヨーロッパリーグ",
     "meta": "第1節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "el-2526-md2-x-ザルツブルク-ac-milan",
+    "teams": [
+      "ザルツブルク",
+      "ミラン"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "el-2526-md2-celta-vigo-x-ユヴェントス",
+    "teams": [
+      "セルタ",
+      "ユヴェントス"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md2-union-sg-real-sociedad",
+    "teams": [
+      "ユニオン・サン=ジロワーズ",
+      "レアル・ソシエダ"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "el-2526-md2-olympique-lyonnais-crystal-palace",
+    "teams": [
+      "リヨン",
+      "クリスタル・パレス"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第2節 / 2026-27",
     "players": [],
     "hasPreview": true
   },
@@ -14060,7 +14144,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第3節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md3-psv-groningen",
@@ -14384,7 +14468,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md6-cambuur-nec",
@@ -14468,7 +14552,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md7-sparta-heerenveen",
@@ -14504,7 +14588,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md7-feyenoord-utrecht",
@@ -14576,7 +14660,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md8-feyenoord-az",
@@ -14876,7 +14960,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-feyenoord-sittard",
@@ -14888,7 +14972,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-heerenveen-nec",
@@ -14900,7 +14984,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-psv-willem-ii",
@@ -14912,7 +14996,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-cambuur-go-ahead",
@@ -14924,7 +15008,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-ajax-az",
@@ -14936,7 +15020,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-zwolle-den-haag",
@@ -14948,7 +15032,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-telstar-utrecht",
@@ -14960,7 +15044,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-excelsior-twente",
@@ -14972,7 +15056,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md11-groningen-sparta",
@@ -14984,7 +15068,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-willem-ii-zwolle",
@@ -14996,7 +15080,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-sittard-telstar",
@@ -15008,7 +15092,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-den-haag-sparta",
@@ -15032,7 +15116,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-heerenveen-feyenoord",
@@ -15044,7 +15128,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-twente-ajax",
@@ -15056,7 +15140,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-az-groningen",
@@ -15068,7 +15152,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-cambuur-psv",
@@ -15080,7 +15164,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md12-utrecht-nec",
@@ -15092,7 +15176,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第12節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-nec-psv",
@@ -15104,7 +15188,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-feyenoord-excelsior",
@@ -15116,7 +15200,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-utrecht-cambuur",
@@ -15128,7 +15212,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-telstar-zwolle",
@@ -15140,7 +15224,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-groningen-heerenveen",
@@ -15152,7 +15236,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-twente-willem-ii",
@@ -15164,7 +15248,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-sparta-az",
@@ -15176,7 +15260,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-ajax-den-haag",
@@ -15188,7 +15272,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md13-go-ahead-sittard",
@@ -15200,7 +15284,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第13節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-groningen-willem-ii",
@@ -15212,7 +15296,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-excelsior-telstar",
@@ -15224,7 +15308,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-psv-go-ahead",
@@ -15236,7 +15320,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-cambuur-sparta",
@@ -15248,7 +15332,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-den-haag-utrecht",
@@ -15260,7 +15344,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-sittard-heerenveen",
@@ -15272,7 +15356,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-feyenoord-ajax",
@@ -15284,7 +15368,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-zwolle-az",
@@ -15296,7 +15380,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md14-nec-twente",
@@ -15308,7 +15392,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-telstar-groningen",
@@ -15320,7 +15404,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-willem-ii-feyenoord",
@@ -15332,7 +15416,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-sparta-nec",
@@ -15344,7 +15428,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-az-psv",
@@ -15356,7 +15440,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-sittard-zwolle",
@@ -15368,7 +15452,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-heerenveen-cambuur",
@@ -15380,7 +15464,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-ajax-utrecht",
@@ -15392,7 +15476,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-go-ahead-twente",
@@ -15404,7 +15488,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md15-den-haag-excelsior",
@@ -15416,7 +15500,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-utrecht-sittard",
@@ -15428,7 +15512,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-heerenveen-go-ahead",
@@ -15440,7 +15524,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-zwolle-excelsior",
@@ -15452,7 +15536,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-psv-telstar",
@@ -15464,7 +15548,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-groningen-feyenoord",
@@ -15476,7 +15560,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-willem-ii-den-haag",
@@ -15488,7 +15572,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-az-nec",
@@ -15500,7 +15584,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-ajax-cambuur",
@@ -15512,7 +15596,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第16節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md16-twente-sparta",
@@ -15536,7 +15620,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第17節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md17-excelsior-az",
@@ -15548,7 +15632,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第17節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md17-sittard-sparta",
@@ -15560,7 +15644,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第17節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md17-utrecht-heerenveen",
@@ -15584,7 +15668,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第17節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md17-cambuur-groningen",
