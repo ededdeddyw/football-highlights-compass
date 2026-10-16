@@ -95,6 +95,17 @@
     {
       "matchday": 2,
       "dateUTC": "",
+      "home": "タンピネス",
+      "away": "FC町田ゼルビア",
+      "homeSlug": "x-タンピネス",
+      "awaySlug": "machida",
+      "finished": true,
+      "score": "",
+      "videoId": "fKH1xKVVYyM"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
       "home": "ニューカッスル・ジェッツ",
       "away": "ガンバ大阪",
       "homeSlug": "newcastle-jets",
