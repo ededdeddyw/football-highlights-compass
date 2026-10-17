@@ -671,8 +671,8 @@
       "away": "サッスオーロ",
       "homeSlug": "frosinone",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-2",
       "videoId": "nbvB62NokVg"
     },
     {

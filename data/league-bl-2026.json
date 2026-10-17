@@ -506,8 +506,8 @@
       "away": "ケルン",
       "homeSlug": "eintracht-frankfurt",
       "awaySlug": "1-fc-koln",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "oFJCPhR9OoA"
     },
     {

@@ -2,10 +2,20 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "scorers": [
     {
       "rank": 1,
+      "name": "Antonio Raimondo",
+      "team": "フロジノーネ",
+      "goals": 7,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Italy"
+    },
+    {
+      "rank": 2,
       "name": "Donyell Malen",
       "team": "ローマ",
       "goals": 6,
@@ -15,7 +25,7 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Gustavo Varela",
       "team": "モンツァ",
       "goals": 4,
@@ -23,16 +33,6 @@
       "pens": 1,
       "apps": 5,
       "nat": "Portugal"
-    },
-    {
-      "rank": 3,
-      "name": "Antonio Raimondo",
-      "team": "フロジノーネ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Italy"
     },
     {
       "rank": 4,
@@ -141,7 +141,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Georgia"
     },
     {
@@ -151,7 +151,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Montenegro"
     }
   ]

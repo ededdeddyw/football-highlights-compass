@@ -891,9 +891,9 @@
       "away": "レバンテ",
       "homeSlug": "deportivo",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "L7DX6NsvkYU"
     },
     {
       "matchday": 9,

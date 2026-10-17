@@ -627,8 +627,8 @@
       "away": "エバートン",
       "homeSlug": "hull-city",
       "awaySlug": "everton",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "WpylslqB60Y"
     },
     {
@@ -638,8 +638,8 @@
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "crystal-palace",
       "awaySlug": "nottingham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "SLRLRmOgfew"
     },
     {
@@ -649,8 +649,8 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "liverpool",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "Ut4kLhGKmjw"
     },
     {
@@ -660,8 +660,8 @@
       "away": "ニューカッスル",
       "homeSlug": "coventry-city",
       "awaySlug": "newcastle",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": "yQK5PNnD1dg"
     },
     {
