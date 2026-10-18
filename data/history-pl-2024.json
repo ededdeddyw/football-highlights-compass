@@ -1,0 +1,365 @@
+{
+  "code": "pl",
+  "season": "2024",
+  "seasonLabel": "2024-25",
+  "champion": "Liverpool",
+  "topScorer": {
+    "name": "Matheus Cunha",
+    "team": "Manchester United",
+    "goals": 30,
+    "assists": 12,
+    "apps": 66
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Liverpool",
+      "played": 38,
+      "win": 25,
+      "draw": 9,
+      "lose": 4,
+      "gf": 86,
+      "ga": 41,
+      "gd": 45,
+      "points": 84
+    },
+    {
+      "rank": 2,
+      "team": "Arsenal",
+      "played": 38,
+      "win": 20,
+      "draw": 14,
+      "lose": 4,
+      "gf": 69,
+      "ga": 34,
+      "gd": 35,
+      "points": 74
+    },
+    {
+      "rank": 3,
+      "team": "Manchester City",
+      "played": 38,
+      "win": 21,
+      "draw": 8,
+      "lose": 9,
+      "gf": 72,
+      "ga": 44,
+      "gd": 28,
+      "points": 71
+    },
+    {
+      "rank": 4,
+      "team": "Chelsea",
+      "played": 38,
+      "win": 20,
+      "draw": 9,
+      "lose": 9,
+      "gf": 64,
+      "ga": 43,
+      "gd": 21,
+      "points": 69
+    },
+    {
+      "rank": 5,
+      "team": "Newcastle",
+      "played": 38,
+      "win": 20,
+      "draw": 6,
+      "lose": 12,
+      "gf": 68,
+      "ga": 47,
+      "gd": 21,
+      "points": 66
+    },
+    {
+      "rank": 6,
+      "team": "Aston Villa",
+      "played": 38,
+      "win": 19,
+      "draw": 9,
+      "lose": 10,
+      "gf": 58,
+      "ga": 51,
+      "gd": 7,
+      "points": 66
+    },
+    {
+      "rank": 7,
+      "team": "Nottingham Forest",
+      "played": 38,
+      "win": 19,
+      "draw": 8,
+      "lose": 11,
+      "gf": 58,
+      "ga": 46,
+      "gd": 12,
+      "points": 65
+    },
+    {
+      "rank": 8,
+      "team": "Brighton",
+      "played": 38,
+      "win": 16,
+      "draw": 13,
+      "lose": 9,
+      "gf": 66,
+      "ga": 59,
+      "gd": 7,
+      "points": 61
+    },
+    {
+      "rank": 9,
+      "team": "Bournemouth",
+      "played": 38,
+      "win": 15,
+      "draw": 11,
+      "lose": 12,
+      "gf": 58,
+      "ga": 46,
+      "gd": 12,
+      "points": 56
+    },
+    {
+      "rank": 10,
+      "team": "Brentford",
+      "played": 38,
+      "win": 16,
+      "draw": 8,
+      "lose": 14,
+      "gf": 66,
+      "ga": 57,
+      "gd": 9,
+      "points": 56
+    },
+    {
+      "rank": 11,
+      "team": "Fulham",
+      "played": 38,
+      "win": 15,
+      "draw": 9,
+      "lose": 14,
+      "gf": 54,
+      "ga": 54,
+      "gd": 0,
+      "points": 54
+    },
+    {
+      "rank": 12,
+      "team": "Crystal Palace",
+      "played": 38,
+      "win": 13,
+      "draw": 14,
+      "lose": 11,
+      "gf": 51,
+      "ga": 51,
+      "gd": 0,
+      "points": 53
+    },
+    {
+      "rank": 13,
+      "team": "Everton",
+      "played": 38,
+      "win": 11,
+      "draw": 15,
+      "lose": 12,
+      "gf": 42,
+      "ga": 44,
+      "gd": -2,
+      "points": 48
+    },
+    {
+      "rank": 14,
+      "team": "West Ham",
+      "played": 38,
+      "win": 11,
+      "draw": 10,
+      "lose": 17,
+      "gf": 46,
+      "ga": 62,
+      "gd": -16,
+      "points": 43
+    },
+    {
+      "rank": 15,
+      "team": "Manchester United",
+      "played": 38,
+      "win": 11,
+      "draw": 9,
+      "lose": 18,
+      "gf": 44,
+      "ga": 54,
+      "gd": -10,
+      "points": 42
+    },
+    {
+      "rank": 16,
+      "team": "Wolves",
+      "played": 38,
+      "win": 12,
+      "draw": 6,
+      "lose": 20,
+      "gf": 54,
+      "ga": 69,
+      "gd": -15,
+      "points": 42
+    },
+    {
+      "rank": 17,
+      "team": "Tottenham",
+      "played": 38,
+      "win": 11,
+      "draw": 5,
+      "lose": 22,
+      "gf": 64,
+      "ga": 65,
+      "gd": -1,
+      "points": 38
+    },
+    {
+      "rank": 18,
+      "team": "Leicester",
+      "played": 38,
+      "win": 6,
+      "draw": 7,
+      "lose": 25,
+      "gf": 33,
+      "ga": 80,
+      "gd": -47,
+      "points": 25
+    },
+    {
+      "rank": 19,
+      "team": "Ipswich",
+      "played": 38,
+      "win": 4,
+      "draw": 10,
+      "lose": 24,
+      "gf": 36,
+      "ga": 82,
+      "gd": -46,
+      "points": 22
+    },
+    {
+      "rank": 20,
+      "team": "Southampton",
+      "played": 38,
+      "win": 2,
+      "draw": 6,
+      "lose": 30,
+      "gf": 26,
+      "ga": 86,
+      "gd": -60,
+      "points": 12
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Matheus Cunha",
+      "team": "Manchester United",
+      "goals": 30,
+      "assists": 12,
+      "apps": 66
+    },
+    {
+      "name": "Mohamed Salah",
+      "team": "Liverpool",
+      "goals": 29,
+      "assists": 18,
+      "apps": 38
+    },
+    {
+      "name": "A. Isak",
+      "team": "Newcastle",
+      "goals": 23,
+      "assists": 6,
+      "apps": 34
+    },
+    {
+      "name": "E. Haaland",
+      "team": "Manchester City",
+      "goals": 22,
+      "assists": 3,
+      "apps": 32
+    },
+    {
+      "name": "C. Wood",
+      "team": "Nottingham Forest",
+      "goals": 20,
+      "assists": 3,
+      "apps": 36
+    },
+    {
+      "name": "B. Mbeumo",
+      "team": "Brentford",
+      "goals": 20,
+      "assists": 7,
+      "apps": 38
+    },
+    {
+      "name": "João Pedro",
+      "team": "Chelsea",
+      "goals": 20,
+      "assists": 12,
+      "apps": 54
+    },
+    {
+      "name": "Y. Wissa",
+      "team": "Brentford",
+      "goals": 19,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "O. Watkins",
+      "team": "Aston Villa",
+      "goals": 16,
+      "assists": 8,
+      "apps": 38
+    },
+    {
+      "name": "C. Palmer",
+      "team": "Chelsea",
+      "goals": 15,
+      "assists": 8,
+      "apps": 37
+    },
+    {
+      "name": "D. Ouattara",
+      "team": "Brentford",
+      "goals": 14,
+      "assists": 8,
+      "apps": 64
+    },
+    {
+      "name": "J. Strand Larsen",
+      "team": "Wolves",
+      "goals": 14,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "J. Mateta",
+      "team": "Crystal Palace",
+      "goals": 14,
+      "assists": 2,
+      "apps": 37
+    },
+    {
+      "name": "L. Díaz",
+      "team": "Liverpool",
+      "goals": 13,
+      "assists": 5,
+      "apps": 36
+    },
+    {
+      "name": "J. Bowen",
+      "team": "West Ham",
+      "goals": 13,
+      "assists": 8,
+      "apps": 34
+    }
+  ],
+  "results": [],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:04:46.433Z"
+}
