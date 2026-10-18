@@ -1,0 +1,63 @@
+name: Fetch 歴代データ (API-Football)
+
+# 過去シーズンの最終順位表・得点王・全試合結果を API-Football から取得し data/history-<code>-<season>.json を更新。
+# 要 Secrets: APIFOOTBALL_KEY。無料プランは過去シーズンのみ対応（取得0件ならプラン制限）。
+# 手動実行のみ。デプロイはアーカイブページ実装後に deploy-diff を別途起動する。
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'シーズン開始年（4桁。例: 2023 = 2023-24）'
+        required: true
+        default: '2023'
+      code:
+        description: 'リーグコード（pl/laliga/sa/bl/ligue1・空で全部）'
+        required: false
+        default: ''
+      no_results:
+        description: '全試合結果を取得しない（順位・得点王のみ）場合は true'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-history
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: 取得
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          IN_SEASON: ${{ github.event.inputs.season }}
+          IN_CODE: ${{ github.event.inputs.code }}
+          IN_NORESULTS: ${{ github.event.inputs.no_results }}
+        run: |
+          # 入力はenv経由で受け、シェル展開によるインジェクションを防ぐ。
+          if ! printf '%s' "$IN_SEASON" | grep -qE '^[0-9]{4}$'; then
+            echo "::error::season は4桁の数字で指定してください。入力: $IN_SEASON"; exit 1
+          fi
+          ARGS="--season=$IN_SEASON"
+          if [ -n "$IN_CODE" ]; then
+            if printf '%s' "$IN_CODE" | grep -qE '^[a-z0-9]+$'; then ARGS="$ARGS --code=$IN_CODE"; else echo "::error::不正なリーグコード: $IN_CODE"; exit 1; fi
+          fi
+          if [ "$IN_NORESULTS" = "true" ]; then ARGS="$ARGS --no-results"; fi
+          echo "run: node scripts/fetch-history.mjs $ARGS"
+          node scripts/fetch-history.mjs $ARGS
+      - name: データをコミット
+        if: always()
+        run: |
+          git config user.name  "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/history-*.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "変更なし（取得0件の可能性）。"; exit 0; fi
+          git commit -m "data(history): 歴代データ取得（season ${{ github.event.inputs.season }}）"
+          git pull --rebase --autostash || true
+          git push
