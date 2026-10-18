@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "scorers": [
     {
       "rank": 1,
@@ -11,11 +11,21 @@
       "goals": 12,
       "assists": 2,
       "pens": 3,
-      "apps": 7,
+      "apps": 8,
       "nat": "Brazil"
     },
     {
       "rank": 2,
+      "name": "Lamine Yamal",
+      "team": "バルセロナ",
+      "goals": 8,
+      "assists": 6,
+      "pens": 1,
+      "apps": 9,
+      "nat": "Spain"
+    },
+    {
+      "rank": 3,
       "name": "Sergio Camello",
       "team": "ラーヨ・バジェカーノ",
       "goals": 7,
@@ -25,7 +35,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Kylian Mbappé",
       "team": "レアル・マドリード",
       "goals": 7,
@@ -35,7 +45,7 @@
       "nat": "France"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Yassir Zabiri",
       "team": "ラシン・サンタンデール",
       "goals": 7,
@@ -45,23 +55,13 @@
       "nat": "Morocco"
     },
     {
-      "rank": 5,
-      "name": "Lamine Yamal",
-      "team": "バルセロナ",
-      "goals": 7,
-      "assists": 5,
-      "pens": 1,
-      "apps": 8,
-      "nat": "Spain"
-    },
-    {
       "rank": 6,
       "name": "Roberto Fernández",
       "team": "エスパニョール",
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Spain"
     },
     {
@@ -86,16 +86,26 @@
     },
     {
       "rank": 9,
+      "name": "Álex Baena",
+      "team": "アトレティコ・マドリード",
+      "goals": 5,
+      "assists": 2,
+      "pens": null,
+      "apps": 9,
+      "nat": "Spain"
+    },
+    {
+      "rank": 10,
       "name": "Fer Niño",
       "team": "エルチェ",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Spain"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Lucas Boyé",
       "team": "アラベス",
       "goals": 5,
@@ -105,23 +115,13 @@
       "nat": "Argentina"
     },
     {
-      "rank": 11,
-      "name": "Álex Baena",
-      "team": "アトレティコ・マドリード",
-      "goals": 4,
-      "assists": 2,
-      "pens": null,
-      "apps": 8,
-      "nat": "Spain"
-    },
-    {
       "rank": 12,
       "name": "Fermín López",
       "team": "バルセロナ",
       "goals": 4,
-      "assists": 2,
+      "assists": 3,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Spain"
     },
     {
@@ -141,7 +141,7 @@
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Senegal"
     },
     {

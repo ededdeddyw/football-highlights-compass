@@ -814,8 +814,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "den-haag",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "h244bpNVf7E"
     },
     {
@@ -825,8 +825,8 @@
       "away": "フェイエノールト",
       "homeSlug": "telstar",
       "awaySlug": "feyenoord",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-4",
       "videoId": ""
     },
     {
@@ -836,8 +836,8 @@
       "away": "ウィレムII",
       "homeSlug": "sparta",
       "awaySlug": "willem-ii",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": ""
     },
     {

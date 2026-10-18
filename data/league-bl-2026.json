@@ -517,8 +517,8 @@
       "away": "ドルトムント",
       "homeSlug": "1-fc-union-berlin",
       "awaySlug": "borussia-dortmund",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "CkwAi_lPb3I"
     },
     {
@@ -528,9 +528,9 @@
       "away": "シュツットガルト",
       "homeSlug": "hamburger-sv",
       "awaySlug": "vfb-stuttgart",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "9mUMOCIsCDA"
     },
     {
       "matchday": 6,
@@ -539,8 +539,8 @@
       "away": "パーダーボルン",
       "homeSlug": "sv-werder-bremen",
       "awaySlug": "sc-paderborn-07",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "jwPBq453tuM"
     },
     {
@@ -550,8 +550,8 @@
       "away": "マインツ",
       "homeSlug": "fc-schalke-04",
       "awaySlug": "1-fsv-mainz-05",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "pj4w_dhKIeY"
     },
     {
@@ -561,9 +561,9 @@
       "away": "アウクスブルク",
       "homeSlug": "sv-07-elversberg",
       "awaySlug": "fc-augsburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-3",
+      "videoId": "RshxNNkjlRo"
     },
     {
       "matchday": 6,
@@ -572,8 +572,8 @@
       "away": "ライプツィヒ",
       "homeSlug": "fc-bayern-munchen",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "6-1",
       "videoId": "VhEZikrfPug"
     },
     {

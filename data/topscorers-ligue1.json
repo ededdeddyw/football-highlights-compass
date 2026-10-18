@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "scorers": [
     {
       "rank": 1,
@@ -41,7 +41,7 @@
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "Mali"
     },
     {
@@ -59,9 +59,9 @@
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Spain"
     },
     {
@@ -99,9 +99,9 @@
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 3,
-      "assists": 5,
+      "assists": 7,
       "pens": 3,
-      "apps": 6,
+      "apps": 7,
       "nat": "France"
     },
     {
@@ -141,18 +141,18 @@
       "goals": 2,
       "assists": null,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Austria"
     },
     {
       "rank": 15,
-      "name": "Tiago Santos",
+      "name": "Olivier Giroud",
       "team": "リール",
       "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Portugal"
+      "assists": 2,
+      "pens": 1,
+      "apps": 7,
+      "nat": "France"
     }
   ]
 }

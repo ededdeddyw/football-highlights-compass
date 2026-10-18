@@ -2,10 +2,30 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "scorers": [
     {
       "rank": 1,
+      "name": "Niclas Füllkrug",
+      "team": "ブレーメン",
+      "goals": 6,
+      "assists": null,
+      "pens": 1,
+      "apps": 6,
+      "nat": "Germany"
+    },
+    {
+      "rank": 2,
+      "name": "Michael Olise",
+      "team": "バイエルン",
+      "goals": 5,
+      "assists": 2,
+      "pens": null,
+      "apps": 6,
+      "nat": "France"
+    },
+    {
+      "rank": 3,
       "name": "Younes Ebnoutalib",
       "team": "フランクフルト",
       "goals": 5,
@@ -15,7 +35,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 2,
+      "rank": 4,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
       "goals": 5,
@@ -25,17 +45,27 @@
       "nat": "Czech Republic"
     },
     {
-      "rank": 3,
-      "name": "Michael Olise",
+      "rank": 5,
+      "name": "Phillip Tietz",
+      "team": "マインツ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 6,
+      "nat": "Germany"
+    },
+    {
+      "rank": 6,
+      "name": "Luis Díaz",
       "team": "バイエルン",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 5,
-      "nat": "France"
+      "apps": 6,
+      "nat": "Colombia"
     },
     {
-      "rank": 4,
+      "rank": 7,
       "name": "Yuito Suzuki",
       "team": "フライブルク",
       "goals": 4,
@@ -45,47 +75,47 @@
       "nat": "Japan"
     },
     {
-      "rank": 5,
-      "name": "Niclas Füllkrug",
-      "team": "ブレーメン",
+      "rank": 8,
+      "name": "Michael Gregoritsch",
+      "team": "アウクスブルク",
       "goals": 4,
       "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Germany"
+      "pens": 1,
+      "apps": 6,
+      "nat": "Austria"
     },
     {
-      "rank": 6,
-      "name": "Phillip Tietz",
-      "team": "マインツ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Germany"
-    },
-    {
-      "rank": 7,
+      "rank": 9,
       "name": "Christopher Nkunku",
       "team": "ライプツィヒ",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "France"
     },
     {
-      "rank": 8,
+      "rank": 10,
+      "name": "Harry Kane",
+      "team": "バイエルン",
+      "goals": 4,
+      "assists": 4,
+      "pens": 1,
+      "apps": 6,
+      "nat": "England"
+    },
+    {
+      "rank": 11,
       "name": "Antonio Nusa",
       "team": "ライプツィヒ",
       "goals": 3,
       "assists": 3,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Norway"
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 3,
@@ -95,27 +125,17 @@
       "nat": "Croatia"
     },
     {
-      "rank": 10,
-      "name": "Michael Gregoritsch",
-      "team": "アウクスブルク",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Austria"
-    },
-    {
-      "rank": 11,
+      "rank": 13,
       "name": "Maurice Krattenmacher",
       "team": "エルファースベルク",
       "goals": 3,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Germany"
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "Maximilian Eggestein",
       "team": "フライブルク",
       "goals": 3,
@@ -125,7 +145,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "Jonathan Burkardt",
       "team": "フランクフルト",
       "goals": 3,
@@ -133,26 +153,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Germany"
-    },
-    {
-      "rank": 14,
-      "name": "Robin Fellhauer",
-      "team": "アウクスブルク",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Germany"
-    },
-    {
-      "rank": 15,
-      "name": "Harry Kane",
-      "team": "バイエルン",
-      "goals": 3,
-      "assists": 2,
-      "pens": 1,
-      "apps": 5,
-      "nat": "England"
     }
   ]
 }
