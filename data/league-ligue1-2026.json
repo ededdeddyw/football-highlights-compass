@@ -605,9 +605,9 @@
       "away": "トゥールーズ",
       "homeSlug": "le-mans",
       "awaySlug": "toulouse",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-3",
+      "videoId": "Auz3S1DPSPM"
     },
     {
       "matchday": 7,

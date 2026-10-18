@@ -671,9 +671,9 @@
       "away": "サッスオーロ",
       "homeSlug": "frosinone",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-2",
+      "videoId": "nbvB62NokVg"
     },
     {
       "matchday": 7,

@@ -47,6 +47,50 @@
       "finished": true,
       "score": "",
       "videoId": "p4cNKngs6hg"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ザルツブルク",
+      "away": "ミラン",
+      "homeSlug": "x-ザルツブルク",
+      "awaySlug": "ac-milan",
+      "finished": true,
+      "score": "",
+      "videoId": "8E-gLmRwiaw"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "セルタ",
+      "away": "ユヴェントス",
+      "homeSlug": "celta-vigo",
+      "awaySlug": "x-ユヴェントス",
+      "finished": true,
+      "score": "",
+      "videoId": "OMx2txxR_Qo"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ユニオン・サン=ジロワーズ",
+      "away": "レアル・ソシエダ",
+      "homeSlug": "union-sg",
+      "awaySlug": "real-sociedad",
+      "finished": true,
+      "score": "",
+      "videoId": "MHiuhwC7Rcg"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "リヨン",
+      "away": "クリスタル・パレス",
+      "homeSlug": "olympique-lyonnais",
+      "awaySlug": "crystal-palace",
+      "finished": true,
+      "score": "",
+      "videoId": "mM2I42p3Sbk"
     }
   ]
 }

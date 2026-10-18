@@ -3,5 +3,28 @@
   "jp": "UEFAカンファレンスリーグ",
   "season": "2026",
   "updated": "",
-  "matches": []
+  "matches": [
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "CSKAソフィア",
+      "away": "モナコ",
+      "homeSlug": "x-cskaソフィア",
+      "awaySlug": "as-monaco",
+      "finished": true,
+      "score": "",
+      "videoId": "C40FcoIE2rg"
+    },
+    {
+      "matchday": 1,
+      "dateUTC": "",
+      "home": "フライブルク",
+      "away": "ヤブロネツ",
+      "homeSlug": "freiburg",
+      "awaySlug": "x-ヤブロネツ",
+      "finished": true,
+      "score": "",
+      "videoId": "R-Wm4hrwczo"
+    }
+  ]
 }

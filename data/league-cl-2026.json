@@ -209,9 +209,9 @@
       "away": "スポルティングCP",
       "homeSlug": "rc-lens",
       "awaySlug": "sporting-cp",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "hYAIMaCQcrE"
     },
     {
       "matchday": 2,
@@ -220,8 +220,8 @@
       "away": "スラヴィア・プラハ",
       "homeSlug": "sabah-fk",
       "awaySlug": "slavia-praha",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": ""
     },
     {
@@ -231,8 +231,8 @@
       "away": "クラブ・ブルッヘ",
       "homeSlug": "inter",
       "awaySlug": "club-brugge",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-4",
       "videoId": ""
     },
     {
@@ -242,9 +242,9 @@
       "away": "バルセロナ",
       "homeSlug": "galatasaray",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-4",
+      "videoId": "-KexQHb76qM"
     },
     {
       "matchday": 2,
@@ -253,9 +253,9 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "atleti",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "8KvMfEgw-Q4"
     },
     {
       "matchday": 2,
@@ -264,9 +264,9 @@
       "away": "リール",
       "homeSlug": "arsenal",
       "awaySlug": "lille",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "cfHsN52WROE"
     },
     {
       "matchday": 2,
@@ -275,9 +275,9 @@
       "away": "バイエルン",
       "homeSlug": "viking",
       "awaySlug": "bayern",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-3",
+      "videoId": "DlAi66hxV5I"
     },
     {
       "matchday": 2,
@@ -286,9 +286,9 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "rb-leipzig",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "w5oJ2fAluXI"
     },
     {
       "matchday": 2,
@@ -297,8 +297,8 @@
       "away": "ナポリ",
       "homeSlug": "villarreal",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
@@ -308,9 +308,9 @@
       "away": "リバプール",
       "homeSlug": "lask",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-6",
+      "videoId": "DHiLHScom2c"
     },
     {
       "matchday": 2,
@@ -319,9 +319,9 @@
       "away": "コモ",
       "homeSlug": "feyenoord",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-2",
+      "videoId": "XzF4zxpm6OY"
     },
     {
       "matchday": 2,
@@ -330,9 +330,9 @@
       "away": "レアル・マドリード",
       "homeSlug": "roma",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-4",
+      "videoId": "sD01IcwbjOs"
     },
     {
       "matchday": 2,
@@ -341,9 +341,9 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "man-city",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-4",
+      "videoId": "Px-1A-_mWZk"
     },
     {
       "matchday": 2,
@@ -352,9 +352,9 @@
       "away": "ドルトムント",
       "homeSlug": "bod-glimt",
       "awaySlug": "dortmund",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "OSiVEzRpiz4"
     },
     {
       "matchday": 2,
@@ -363,9 +363,9 @@
       "away": "フェネルバフチェ",
       "homeSlug": "aston-villa",
       "awaySlug": "fenerbahce",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "6-0",
+      "videoId": "lit72zD0sVo"
     },
     {
       "matchday": 2,
@@ -374,8 +374,8 @@
       "away": "ポルト",
       "homeSlug": "real-betis",
       "awaySlug": "porto",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": ""
     },
     {
@@ -385,8 +385,8 @@
       "away": "AEKアテネ",
       "homeSlug": "shaktar",
       "awaySlug": "pae-aek",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
@@ -396,8 +396,8 @@
       "away": "シュツットガルト",
       "homeSlug": "sl-bratislava",
       "awaySlug": "stuttgart",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": ""
     },
     {

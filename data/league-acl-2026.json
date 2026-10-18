@@ -69,6 +69,72 @@
       "finished": true,
       "score": "",
       "videoId": "BjVBsUcJM9c"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ヴィッセル神戸",
+      "away": "全北",
+      "homeSlug": "kobe",
+      "awaySlug": "jeonbuk",
+      "finished": true,
+      "score": "",
+      "videoId": "_XJB3E07_SI"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "コンアン・ハノイ",
+      "away": "鹿島アントラーズ",
+      "homeSlug": "cong-an-hanoi",
+      "awaySlug": "kashima",
+      "finished": true,
+      "score": "",
+      "videoId": "fFlJ_9jSPL0"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "タンピネス",
+      "away": "FC町田ゼルビア",
+      "homeSlug": "x-タンピネス",
+      "awaySlug": "machida",
+      "finished": true,
+      "score": "",
+      "videoId": "fKH1xKVVYyM"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ニューカッスル・ジェッツ",
+      "away": "ガンバ大阪",
+      "homeSlug": "newcastle-jets",
+      "awaySlug": "gamba-osaka",
+      "finished": true,
+      "score": "",
+      "videoId": "TFnIpHrX-Ag"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "京都サンガF.C.",
+      "away": "ラーチャブリー",
+      "homeSlug": "kyoto-sanga",
+      "awaySlug": "x-ラーチャブリー",
+      "finished": true,
+      "score": "",
+      "videoId": "DbRSWs6XykI"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "柏レイソル",
+      "away": "ポートFC",
+      "homeSlug": "kashiwa",
+      "awaySlug": "port-fc",
+      "finished": true,
+      "score": "",
+      "videoId": "xbhdTBo6GCI"
     }
   ]
 }
