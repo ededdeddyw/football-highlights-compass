@@ -1,0 +1,2806 @@
+{
+  "code": "ligue1",
+  "season": "2023",
+  "seasonLabel": "2023-24",
+  "champion": "Paris Saint Germain",
+  "topScorer": {
+    "name": "Kylian Mbappé",
+    "team": "Paris Saint Germain",
+    "goals": 27,
+    "assists": 7,
+    "apps": 29
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Paris Saint Germain",
+      "played": 34,
+      "win": 22,
+      "draw": 10,
+      "lose": 2,
+      "gf": 81,
+      "ga": 33,
+      "gd": 48,
+      "points": 76
+    },
+    {
+      "rank": 2,
+      "team": "Monaco",
+      "played": 34,
+      "win": 20,
+      "draw": 7,
+      "lose": 7,
+      "gf": 68,
+      "ga": 42,
+      "gd": 26,
+      "points": 67
+    },
+    {
+      "rank": 3,
+      "team": "ブレスト",
+      "played": 34,
+      "win": 17,
+      "draw": 10,
+      "lose": 7,
+      "gf": 53,
+      "ga": 34,
+      "gd": 19,
+      "points": 61
+    },
+    {
+      "rank": 4,
+      "team": "Lille",
+      "played": 34,
+      "win": 16,
+      "draw": 11,
+      "lose": 7,
+      "gf": 52,
+      "ga": 34,
+      "gd": 18,
+      "points": 59
+    },
+    {
+      "rank": 5,
+      "team": "Nice",
+      "played": 34,
+      "win": 15,
+      "draw": 10,
+      "lose": 9,
+      "gf": 40,
+      "ga": 29,
+      "gd": 11,
+      "points": 55
+    },
+    {
+      "rank": 6,
+      "team": "Lyon",
+      "played": 34,
+      "win": 16,
+      "draw": 5,
+      "lose": 13,
+      "gf": 49,
+      "ga": 55,
+      "gd": -6,
+      "points": 53
+    },
+    {
+      "rank": 7,
+      "team": "Lens",
+      "played": 34,
+      "win": 14,
+      "draw": 9,
+      "lose": 11,
+      "gf": 45,
+      "ga": 37,
+      "gd": 8,
+      "points": 51
+    },
+    {
+      "rank": 8,
+      "team": "Marseille",
+      "played": 34,
+      "win": 13,
+      "draw": 11,
+      "lose": 10,
+      "gf": 52,
+      "ga": 41,
+      "gd": 11,
+      "points": 50
+    },
+    {
+      "rank": 9,
+      "team": "Reims",
+      "played": 34,
+      "win": 13,
+      "draw": 8,
+      "lose": 13,
+      "gf": 42,
+      "ga": 47,
+      "gd": -5,
+      "points": 47
+    },
+    {
+      "rank": 10,
+      "team": "Rennes",
+      "played": 34,
+      "win": 12,
+      "draw": 10,
+      "lose": 12,
+      "gf": 53,
+      "ga": 46,
+      "gd": 7,
+      "points": 46
+    },
+    {
+      "rank": 11,
+      "team": "Toulouse",
+      "played": 34,
+      "win": 11,
+      "draw": 10,
+      "lose": 13,
+      "gf": 42,
+      "ga": 46,
+      "gd": -4,
+      "points": 43
+    },
+    {
+      "rank": 12,
+      "team": "Montpellier",
+      "played": 34,
+      "win": 10,
+      "draw": 12,
+      "lose": 12,
+      "gf": 43,
+      "ga": 48,
+      "gd": -5,
+      "points": 41
+    },
+    {
+      "rank": 13,
+      "team": "Strasbourg",
+      "played": 34,
+      "win": 10,
+      "draw": 9,
+      "lose": 15,
+      "gf": 38,
+      "ga": 50,
+      "gd": -12,
+      "points": 39
+    },
+    {
+      "rank": 14,
+      "team": "Nantes",
+      "played": 34,
+      "win": 9,
+      "draw": 6,
+      "lose": 19,
+      "gf": 30,
+      "ga": 55,
+      "gd": -25,
+      "points": 33
+    },
+    {
+      "rank": 15,
+      "team": "LE Havre",
+      "played": 34,
+      "win": 7,
+      "draw": 11,
+      "lose": 16,
+      "gf": 34,
+      "ga": 45,
+      "gd": -11,
+      "points": 32
+    },
+    {
+      "rank": 16,
+      "team": "Metz",
+      "played": 34,
+      "win": 8,
+      "draw": 5,
+      "lose": 21,
+      "gf": 35,
+      "ga": 58,
+      "gd": -23,
+      "points": 29
+    },
+    {
+      "rank": 17,
+      "team": "Lorient",
+      "played": 34,
+      "win": 7,
+      "draw": 8,
+      "lose": 19,
+      "gf": 43,
+      "ga": 66,
+      "gd": -23,
+      "points": 29
+    },
+    {
+      "rank": 18,
+      "team": "Clermont Foot",
+      "played": 34,
+      "win": 5,
+      "draw": 10,
+      "lose": 19,
+      "gf": 26,
+      "ga": 60,
+      "gd": -34,
+      "points": 25
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Kylian Mbappé",
+      "team": "Paris Saint Germain",
+      "goals": 27,
+      "assists": 7,
+      "apps": 29
+    },
+    {
+      "name": "J. David",
+      "team": "Lille",
+      "goals": 19,
+      "assists": 4,
+      "apps": 34
+    },
+    {
+      "name": "A. Lacazette",
+      "team": "Lyon",
+      "goals": 19,
+      "assists": 2,
+      "apps": 29
+    },
+    {
+      "name": "P. Aubameyang",
+      "team": "Marseille",
+      "goals": 17,
+      "assists": 8,
+      "apps": 34
+    },
+    {
+      "name": "W. Ben Yedder",
+      "team": "Monaco",
+      "goals": 16,
+      "assists": 2,
+      "apps": 32
+    },
+    {
+      "name": "T. Dallinga",
+      "team": "Toulouse",
+      "goals": 14,
+      "assists": 2,
+      "apps": 33
+    },
+    {
+      "name": "Gonçalo Ramos",
+      "team": "Paris Saint Germain",
+      "goals": 11,
+      "assists": 1,
+      "apps": 29
+    },
+    {
+      "name": "T. Moffi",
+      "team": "Nice",
+      "goals": 11,
+      "assists": 2,
+      "apps": 30
+    },
+    {
+      "name": "A. Kalimuendo",
+      "team": "Rennes",
+      "goals": 10,
+      "assists": 1,
+      "apps": 30
+    },
+    {
+      "name": "T. Minamino",
+      "team": "Monaco",
+      "goals": 9,
+      "assists": 6,
+      "apps": 30
+    },
+    {
+      "name": "E. Wahi",
+      "team": "Montpellier",
+      "goals": 9,
+      "assists": 6,
+      "apps": 28
+    },
+    {
+      "name": "T. Savanier",
+      "team": "Montpellier",
+      "goals": 9,
+      "assists": 7,
+      "apps": 32
+    },
+    {
+      "name": "B. Bourigeaud",
+      "team": "Rennes",
+      "goals": 9,
+      "assists": 6,
+      "apps": 32
+    },
+    {
+      "name": "A. Adams",
+      "team": "Montpellier",
+      "goals": 8,
+      "assists": 1,
+      "apps": 32
+    },
+    {
+      "name": "E. Emegha",
+      "team": "Strasbourg",
+      "goals": 8,
+      "assists": 1,
+      "apps": 28
+    }
+  ],
+  "results": [
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-11",
+      "home": "Nice",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-12",
+      "home": "Marseille",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-12",
+      "home": "Paris Saint Germain",
+      "away": "Lorient",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "ブレスト",
+      "away": "Lens",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "Montpellier",
+      "away": "Le Havre",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "Nantes",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "Clermont Foot",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "Rennes",
+      "away": "Metz",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2023-08-13",
+      "home": "Strasbourg",
+      "away": "Lyon",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-18",
+      "home": "Metz",
+      "away": "Marseille",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-19",
+      "home": "Lyon",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-19",
+      "home": "Toulouse",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Lille",
+      "away": "Nantes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Reims",
+      "away": "Clermont Foot",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Lorient",
+      "away": "Nice",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Le Havre",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Monaco",
+      "away": "Strasbourg",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2023-08-20",
+      "home": "Lens",
+      "away": "Rennes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-25",
+      "home": "Nantes",
+      "away": "Monaco",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-26",
+      "home": "Marseille",
+      "away": "ブレスト",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-26",
+      "home": "Paris Saint Germain",
+      "away": "Lens",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Rennes",
+      "away": "Le Havre",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Montpellier",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Strasbourg",
+      "away": "Toulouse",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Clermont Foot",
+      "away": "Metz",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Lorient",
+      "away": "Lille",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2023-08-27",
+      "home": "Nice",
+      "away": "Lyon",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-01",
+      "home": "Nantes",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-02",
+      "home": "ブレスト",
+      "away": "Rennes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-02",
+      "home": "Monaco",
+      "away": "Lens",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Toulouse",
+      "away": "Clermont Foot",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Lille",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Le Havre",
+      "away": "Lorient",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Metz",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Nice",
+      "away": "Strasbourg",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2023-09-03",
+      "home": "Lyon",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-15",
+      "home": "Paris Saint Germain",
+      "away": "Nice",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-16",
+      "home": "Rennes",
+      "away": "Lille",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-16",
+      "home": "Lens",
+      "away": "Metz",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Lorient",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Reims",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Strasbourg",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Clermont Foot",
+      "away": "Nantes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Marseille",
+      "away": "Toulouse",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2023-09-17",
+      "home": "Lyon",
+      "away": "Le Havre",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-22",
+      "home": "Monaco",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-23",
+      "home": "Nantes",
+      "away": "Lorient",
+      "hg": 5,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-23",
+      "home": "ブレスト",
+      "away": "Lyon",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-24",
+      "home": "Metz",
+      "away": "Strasbourg",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-24",
+      "home": "Le Havre",
+      "away": "Clermont Foot",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-24",
+      "home": "Lens",
+      "away": "Toulouse",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-24",
+      "home": "Montpellier",
+      "away": "Rennes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-24",
+      "home": "Paris Saint Germain",
+      "away": "Marseille",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2023-09-26",
+      "home": "Lille",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-09-29",
+      "home": "Strasbourg",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-09-30",
+      "home": "Clermont Foot",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-09-30",
+      "home": "Monaco",
+      "away": "Marseille",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Reims",
+      "away": "Lyon",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Nice",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Toulouse",
+      "away": "Metz",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Le Havre",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Lorient",
+      "away": "Montpellier",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2023-10-01",
+      "home": "Rennes",
+      "away": "Nantes",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-06",
+      "home": "Strasbourg",
+      "away": "Nantes",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-07",
+      "home": "Metz",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-07",
+      "home": "Reims",
+      "away": "Monaco",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-08",
+      "home": "Marseille",
+      "away": "Le Havre",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-08",
+      "home": "Lyon",
+      "away": "Lorient",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-08",
+      "home": "ブレスト",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-08",
+      "home": "Lens",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-10-08",
+      "home": "Rennes",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-20",
+      "home": "Le Havre",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-21",
+      "home": "Paris Saint Germain",
+      "away": "Strasbourg",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-21",
+      "home": "Nice",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Lorient",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Lille",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Nantes",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Toulouse",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Monaco",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2023-10-22",
+      "home": "Lyon",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-27",
+      "home": "Clermont Foot",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-28",
+      "home": "Reims",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-28",
+      "home": "Lens",
+      "away": "Nantes",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-29",
+      "home": "ブレスト",
+      "away": "Paris Saint Germain",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-29",
+      "home": "Lille",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-29",
+      "home": "Montpellier",
+      "away": "Toulouse",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-29",
+      "home": "Metz",
+      "away": "Le Havre",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-10-29",
+      "home": "Rennes",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-03",
+      "home": "Paris Saint Germain",
+      "away": "Montpellier",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-04",
+      "home": "Lorient",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-04",
+      "home": "Marseille",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Lyon",
+      "away": "Metz",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Nantes",
+      "away": "Reims",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Strasbourg",
+      "away": "Clermont Foot",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Toulouse",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Monaco",
+      "away": "ブレスト",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2023-11-05",
+      "home": "Nice",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-10",
+      "home": "Montpellier",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-11",
+      "home": "Reims",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-11",
+      "home": "Le Havre",
+      "away": "Monaco",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-12",
+      "home": "Lille",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-12",
+      "home": "Clermont Foot",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-12",
+      "home": "Metz",
+      "away": "Nantes",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-12",
+      "home": "Rennes",
+      "away": "Lyon",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-11-12",
+      "home": "Lens",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-24",
+      "home": "Paris Saint Germain",
+      "away": "Monaco",
+      "hg": 5,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-25",
+      "home": "Clermont Foot",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-25",
+      "home": "Strasbourg",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Nice",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Montpellier",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Nantes",
+      "away": "Le Havre",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Lorient",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Rennes",
+      "away": "Reims",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2023-11-26",
+      "home": "Lyon",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2023-11-29",
+      "home": "Montpellier",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-01",
+      "home": "Reims",
+      "away": "Strasbourg",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-02",
+      "home": "Lens",
+      "away": "Lyon",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-02",
+      "home": "Nantes",
+      "away": "Nice",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "Le Havre",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "Monaco",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "Toulouse",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "ブレスト",
+      "away": "Clermont Foot",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "Lille",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2023-12-03",
+      "home": "Marseille",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2023-12-06",
+      "home": "Marseille",
+      "away": "Lyon",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2023-12-07",
+      "home": "ブレスト",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-08",
+      "home": "Montpellier",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-09",
+      "home": "Rennes",
+      "away": "Monaco",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-09",
+      "home": "Paris Saint Germain",
+      "away": "Nantes",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Nice",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Strasbourg",
+      "away": "Le Havre",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Clermont Foot",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Metz",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Lyon",
+      "away": "Toulouse",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2023-12-10",
+      "home": "Lorient",
+      "away": "Marseille",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-15",
+      "home": "Monaco",
+      "away": "Lyon",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-16",
+      "home": "Le Havre",
+      "away": "Nice",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-16",
+      "home": "Lens",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Nantes",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Toulouse",
+      "away": "Rennes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Lorient",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Metz",
+      "away": "Montpellier",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Marseille",
+      "away": "Clermont Foot",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2023-12-17",
+      "home": "Lille",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Lyon",
+      "away": "Nantes",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Montpellier",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Nice",
+      "away": "Lens",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Paris Saint Germain",
+      "away": "Metz",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Reims",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Strasbourg",
+      "away": "Lille",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Toulouse",
+      "away": "Monaco",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "Clermont Foot",
+      "away": "Rennes",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2023-12-20",
+      "home": "ブレスト",
+      "away": "Lorient",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-12",
+      "home": "Marseille",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-13",
+      "home": "Monaco",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-13",
+      "home": "Rennes",
+      "away": "Nice",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "Lille",
+      "away": "Lorient",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "Nantes",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "ブレスト",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "Metz",
+      "away": "Toulouse",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "Le Havre",
+      "away": "Lyon",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-01-14",
+      "home": "Lens",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-26",
+      "home": "Lyon",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-27",
+      "home": "Nice",
+      "away": "Metz",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-27",
+      "home": "Marseille",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Montpellier",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Reims",
+      "away": "Nantes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Lorient",
+      "away": "Le Havre",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Clermont Foot",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Toulouse",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-01-28",
+      "home": "Paris Saint Germain",
+      "away": "ブレスト",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-02",
+      "home": "Strasbourg",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-03",
+      "home": "Rennes",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-03",
+      "home": "Nantes",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "Monaco",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "Lille",
+      "away": "Clermont Foot",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "Reims",
+      "away": "Toulouse",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "Metz",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "ブレスト",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2024-02-04",
+      "home": "Lyon",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-09",
+      "home": "Marseille",
+      "away": "Metz",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-10",
+      "home": "Lens",
+      "away": "Strasbourg",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-10",
+      "home": "Paris Saint Germain",
+      "away": "Lille",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Le Havre",
+      "away": "Rennes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Toulouse",
+      "away": "Nantes",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Lorient",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Clermont Foot",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Montpellier",
+      "away": "Lyon",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2024-02-11",
+      "home": "Nice",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-16",
+      "home": "Lyon",
+      "away": "Nice",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-17",
+      "home": "Lille",
+      "away": "Le Havre",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-17",
+      "home": "Nantes",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "Strasbourg",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "Montpellier",
+      "away": "Metz",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "Monaco",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "Rennes",
+      "away": "Clermont Foot",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "Reims",
+      "away": "Lens",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2024-02-18",
+      "home": "ブレスト",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-23",
+      "home": "Metz",
+      "away": "Lyon",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-24",
+      "home": "Lorient",
+      "away": "Nantes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-24",
+      "home": "Strasbourg",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Lens",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Nice",
+      "away": "Clermont Foot",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Toulouse",
+      "away": "Lille",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Le Havre",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Paris Saint Germain",
+      "away": "Rennes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2024-02-25",
+      "home": "Marseille",
+      "away": "Montpellier",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-01",
+      "home": "Monaco",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-02",
+      "home": "Reims",
+      "away": "Lille",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-02",
+      "home": "Clermont Foot",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "Toulouse",
+      "away": "Nice",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "Montpellier",
+      "away": "Strasbourg",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "Nantes",
+      "away": "Metz",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "ブレスト",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "Rennes",
+      "away": "Lorient",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2024-03-03",
+      "home": "Lyon",
+      "away": "Lens",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-08",
+      "home": "Nice",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-09",
+      "home": "Lorient",
+      "away": "Lyon",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-09",
+      "home": "Lens",
+      "away": "ブレスト",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Paris Saint Germain",
+      "away": "Reims",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Strasbourg",
+      "away": "Monaco",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Le Havre",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Metz",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Lille",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2024-03-10",
+      "home": "Marseille",
+      "away": "Nantes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-15",
+      "home": "Toulouse",
+      "away": "Lyon",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-16",
+      "home": "Nantes",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-16",
+      "home": "Lens",
+      "away": "Nice",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "ブレスト",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "Monaco",
+      "away": "Lorient",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "Reims",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "Clermont Foot",
+      "away": "Le Havre",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "Rennes",
+      "away": "Marseille",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2024-03-17",
+      "home": "Montpellier",
+      "away": "Paris Saint Germain",
+      "hg": 2,
+      "ag": 6
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-29",
+      "home": "Lille",
+      "away": "Lens",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-30",
+      "home": "Metz",
+      "away": "Monaco",
+      "hg": 2,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-30",
+      "home": "Lyon",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Lorient",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Nice",
+      "away": "Nantes",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Clermont Foot",
+      "away": "Toulouse",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Le Havre",
+      "away": "Montpellier",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Strasbourg",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2024-03-31",
+      "home": "Marseille",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-05",
+      "home": "Lille",
+      "away": "Marseille",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-06",
+      "home": "Lens",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-06",
+      "home": "Paris Saint Germain",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "ブレスト",
+      "away": "Metz",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "Montpellier",
+      "away": "Lorient",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "Reims",
+      "away": "Nice",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "Toulouse",
+      "away": "Strasbourg",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "Monaco",
+      "away": "Rennes",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2024-04-07",
+      "home": "Nantes",
+      "away": "Lyon",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-12",
+      "home": "Metz",
+      "away": "Lens",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-13",
+      "home": "Strasbourg",
+      "away": "Reims",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-13",
+      "home": "Rennes",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-14",
+      "home": "Le Havre",
+      "away": "Nantes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-14",
+      "home": "Clermont Foot",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-14",
+      "home": "Lyon",
+      "away": "ブレスト",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-19",
+      "home": "Nice",
+      "away": "Lorient",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-20",
+      "home": "Nantes",
+      "away": "Rennes",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-20",
+      "home": "Lens",
+      "away": "Clermont Foot",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "Lille",
+      "away": "Strasbourg",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "Reims",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "Le Havre",
+      "away": "Metz",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "ブレスト",
+      "away": "Monaco",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "Toulouse",
+      "away": "Marseille",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2024-04-21",
+      "home": "Paris Saint Germain",
+      "away": "Lyon",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-24",
+      "home": "Lorient",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-24",
+      "home": "Marseille",
+      "away": "Nice",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2024-04-24",
+      "home": "Monaco",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-26",
+      "home": "Montpellier",
+      "away": "Nantes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-27",
+      "home": "Paris Saint Germain",
+      "away": "Le Havre",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Metz",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Strasbourg",
+      "away": "Nice",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Lorient",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Clermont Foot",
+      "away": "Reims",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Rennes",
+      "away": "ブレスト",
+      "hg": 4,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Lyon",
+      "away": "Monaco",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2024-04-28",
+      "home": "Marseille",
+      "away": "Lens",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-03",
+      "home": "Toulouse",
+      "away": "Montpellier",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-03",
+      "home": "Lens",
+      "away": "Lorient",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-04",
+      "home": "Le Havre",
+      "away": "Strasbourg",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-04",
+      "home": "Monaco",
+      "away": "Clermont Foot",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-04",
+      "home": "Metz",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-04",
+      "home": "ブレスト",
+      "away": "Nantes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-06",
+      "home": "Lille",
+      "away": "Lyon",
+      "hg": 3,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-10",
+      "home": "Nice",
+      "away": "Le Havre",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-10",
+      "home": "ブレスト",
+      "away": "Reims",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Marseille",
+      "away": "Lorient",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Montpellier",
+      "away": "Monaco",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Nantes",
+      "away": "Lille",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Paris Saint Germain",
+      "away": "Toulouse",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Rennes",
+      "away": "Lens",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Strasbourg",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2024-05-12",
+      "home": "Clermont Foot",
+      "away": "Lyon",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-15",
+      "home": "Nice",
+      "away": "Paris Saint Germain",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2024-05-15",
+      "home": "Reims",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Lille",
+      "away": "Nice",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Lyon",
+      "away": "Strasbourg",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Monaco",
+      "away": "Nantes",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Reims",
+      "away": "Rennes",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Toulouse",
+      "away": "ブレスト",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Lorient",
+      "away": "Clermont Foot",
+      "hg": 5,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Le Havre",
+      "away": "Marseille",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Metz",
+      "away": "Paris Saint Germain",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2024-05-19",
+      "home": "Lens",
+      "away": "Montpellier",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Relegation Round",
+      "date": "2024-05-30",
+      "home": "Saint Etienne",
+      "away": "Metz",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Relegation Round",
+      "date": "2024-06-02",
+      "home": "Metz",
+      "away": "Saint Etienne",
+      "hg": 2,
+      "ag": 2
+    }
+  ],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:07:04.844Z"
+}
