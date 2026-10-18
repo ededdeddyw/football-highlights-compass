@@ -249,6 +249,7 @@ const LEAGUE_RELATED_GUIDES = {
   ],
   jpn: [
     { slug:'japan-world-cup-history', label:'日本代表 ワールドカップの歴史' },
+    { slug:'asian-cup-explained', label:'AFCアジアカップとは（日本最多4回優勝）' },
     { slug:'fifa-ranking-explained', label:'FIFAランキングとは' },
   ],
   pl: [
