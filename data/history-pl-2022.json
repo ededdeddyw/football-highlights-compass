@@ -1,0 +1,365 @@
+{
+  "code": "pl",
+  "season": "2022",
+  "seasonLabel": "2022-23",
+  "champion": "Manchester City",
+  "topScorer": {
+    "name": "E. Haaland",
+    "team": "Manchester City",
+    "goals": 36,
+    "assists": 8,
+    "apps": 36
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Manchester City",
+      "played": 38,
+      "win": 28,
+      "draw": 5,
+      "lose": 5,
+      "gf": 94,
+      "ga": 33,
+      "gd": 61,
+      "points": 89
+    },
+    {
+      "rank": 2,
+      "team": "Arsenal",
+      "played": 38,
+      "win": 26,
+      "draw": 6,
+      "lose": 6,
+      "gf": 88,
+      "ga": 43,
+      "gd": 45,
+      "points": 84
+    },
+    {
+      "rank": 3,
+      "team": "Manchester United",
+      "played": 38,
+      "win": 23,
+      "draw": 6,
+      "lose": 9,
+      "gf": 58,
+      "ga": 43,
+      "gd": 15,
+      "points": 75
+    },
+    {
+      "rank": 4,
+      "team": "Newcastle",
+      "played": 38,
+      "win": 19,
+      "draw": 14,
+      "lose": 5,
+      "gf": 68,
+      "ga": 33,
+      "gd": 35,
+      "points": 71
+    },
+    {
+      "rank": 5,
+      "team": "Liverpool",
+      "played": 38,
+      "win": 19,
+      "draw": 10,
+      "lose": 9,
+      "gf": 75,
+      "ga": 47,
+      "gd": 28,
+      "points": 67
+    },
+    {
+      "rank": 6,
+      "team": "Brighton",
+      "played": 38,
+      "win": 18,
+      "draw": 8,
+      "lose": 12,
+      "gf": 72,
+      "ga": 53,
+      "gd": 19,
+      "points": 62
+    },
+    {
+      "rank": 7,
+      "team": "Aston Villa",
+      "played": 38,
+      "win": 18,
+      "draw": 7,
+      "lose": 13,
+      "gf": 51,
+      "ga": 46,
+      "gd": 5,
+      "points": 61
+    },
+    {
+      "rank": 8,
+      "team": "Tottenham",
+      "played": 38,
+      "win": 18,
+      "draw": 6,
+      "lose": 14,
+      "gf": 70,
+      "ga": 63,
+      "gd": 7,
+      "points": 60
+    },
+    {
+      "rank": 9,
+      "team": "Brentford",
+      "played": 38,
+      "win": 15,
+      "draw": 14,
+      "lose": 9,
+      "gf": 58,
+      "ga": 46,
+      "gd": 12,
+      "points": 59
+    },
+    {
+      "rank": 10,
+      "team": "Fulham",
+      "played": 38,
+      "win": 15,
+      "draw": 7,
+      "lose": 16,
+      "gf": 55,
+      "ga": 53,
+      "gd": 2,
+      "points": 52
+    },
+    {
+      "rank": 11,
+      "team": "Crystal Palace",
+      "played": 38,
+      "win": 11,
+      "draw": 12,
+      "lose": 15,
+      "gf": 40,
+      "ga": 49,
+      "gd": -9,
+      "points": 45
+    },
+    {
+      "rank": 12,
+      "team": "Chelsea",
+      "played": 38,
+      "win": 11,
+      "draw": 11,
+      "lose": 16,
+      "gf": 38,
+      "ga": 47,
+      "gd": -9,
+      "points": 44
+    },
+    {
+      "rank": 13,
+      "team": "Wolves",
+      "played": 38,
+      "win": 11,
+      "draw": 8,
+      "lose": 19,
+      "gf": 31,
+      "ga": 58,
+      "gd": -27,
+      "points": 41
+    },
+    {
+      "rank": 14,
+      "team": "West Ham",
+      "played": 38,
+      "win": 11,
+      "draw": 7,
+      "lose": 20,
+      "gf": 42,
+      "ga": 55,
+      "gd": -13,
+      "points": 40
+    },
+    {
+      "rank": 15,
+      "team": "Bournemouth",
+      "played": 38,
+      "win": 11,
+      "draw": 6,
+      "lose": 21,
+      "gf": 37,
+      "ga": 71,
+      "gd": -34,
+      "points": 39
+    },
+    {
+      "rank": 16,
+      "team": "Nottingham Forest",
+      "played": 38,
+      "win": 9,
+      "draw": 11,
+      "lose": 18,
+      "gf": 38,
+      "ga": 68,
+      "gd": -30,
+      "points": 38
+    },
+    {
+      "rank": 17,
+      "team": "Everton",
+      "played": 38,
+      "win": 8,
+      "draw": 12,
+      "lose": 18,
+      "gf": 34,
+      "ga": 57,
+      "gd": -23,
+      "points": 36
+    },
+    {
+      "rank": 18,
+      "team": "Leicester",
+      "played": 38,
+      "win": 9,
+      "draw": 7,
+      "lose": 22,
+      "gf": 51,
+      "ga": 68,
+      "gd": -17,
+      "points": 34
+    },
+    {
+      "rank": 19,
+      "team": "Leeds",
+      "played": 38,
+      "win": 7,
+      "draw": 10,
+      "lose": 21,
+      "gf": 48,
+      "ga": 78,
+      "gd": -30,
+      "points": 31
+    },
+    {
+      "rank": 20,
+      "team": "Southampton",
+      "played": 38,
+      "win": 6,
+      "draw": 7,
+      "lose": 25,
+      "gf": 36,
+      "ga": 73,
+      "gd": -37,
+      "points": 25
+    }
+  ],
+  "scorers": [
+    {
+      "name": "E. Haaland",
+      "team": "Manchester City",
+      "goals": 36,
+      "assists": 8,
+      "apps": 36
+    },
+    {
+      "name": "H. Kane",
+      "team": "Tottenham",
+      "goals": 30,
+      "assists": 3,
+      "apps": 38
+    },
+    {
+      "name": "I. Toney",
+      "team": "Brentford",
+      "goals": 20,
+      "assists": 4,
+      "apps": 33
+    },
+    {
+      "name": "Mohamed Salah",
+      "team": "Liverpool",
+      "goals": 19,
+      "assists": 12,
+      "apps": 38
+    },
+    {
+      "name": "C. Wilson",
+      "team": "Newcastle",
+      "goals": 18,
+      "assists": 5,
+      "apps": 32
+    },
+    {
+      "name": "M. Rashford",
+      "team": "Manchester United",
+      "goals": 17,
+      "assists": 5,
+      "apps": 35
+    },
+    {
+      "name": "M. Ødegaard",
+      "team": "Arsenal",
+      "goals": 15,
+      "assists": 7,
+      "apps": 37
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "team": "Arsenal",
+      "goals": 15,
+      "assists": 5,
+      "apps": 36
+    },
+    {
+      "name": "O. Watkins",
+      "team": "Aston Villa",
+      "goals": 15,
+      "assists": 6,
+      "apps": 37
+    },
+    {
+      "name": "B. Saka",
+      "team": "Arsenal",
+      "goals": 14,
+      "assists": 11,
+      "apps": 38
+    },
+    {
+      "name": "A. Mitrović",
+      "team": "Fulham",
+      "goals": 14,
+      "assists": 1,
+      "apps": 24
+    },
+    {
+      "name": "H. Barnes",
+      "team": "Leicester",
+      "goals": 13,
+      "assists": 1,
+      "apps": 34
+    },
+    {
+      "name": "Rodrigo",
+      "team": "Leeds",
+      "goals": 13,
+      "assists": 1,
+      "apps": 31
+    },
+    {
+      "name": "P. Foden",
+      "team": "Manchester City",
+      "goals": 11,
+      "assists": 5,
+      "apps": 33
+    },
+    {
+      "name": "Roberto Firmino",
+      "team": "Liverpool",
+      "goals": 11,
+      "assists": 4,
+      "apps": 25
+    }
+  ],
+  "results": [],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:05:03.779Z"
+}
