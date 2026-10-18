@@ -1,0 +1,365 @@
+{
+  "code": "pl",
+  "season": "2023",
+  "seasonLabel": "2023-24",
+  "champion": "Manchester City",
+  "topScorer": {
+    "name": "E. Haaland",
+    "team": "Manchester City",
+    "goals": 27,
+    "assists": 5,
+    "apps": 32
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Manchester City",
+      "played": 38,
+      "win": 28,
+      "draw": 7,
+      "lose": 3,
+      "gf": 96,
+      "ga": 34,
+      "gd": 62,
+      "points": 91
+    },
+    {
+      "rank": 2,
+      "team": "Arsenal",
+      "played": 38,
+      "win": 28,
+      "draw": 5,
+      "lose": 5,
+      "gf": 91,
+      "ga": 29,
+      "gd": 62,
+      "points": 89
+    },
+    {
+      "rank": 3,
+      "team": "Liverpool",
+      "played": 38,
+      "win": 24,
+      "draw": 10,
+      "lose": 4,
+      "gf": 86,
+      "ga": 41,
+      "gd": 45,
+      "points": 82
+    },
+    {
+      "rank": 4,
+      "team": "Aston Villa",
+      "played": 38,
+      "win": 20,
+      "draw": 8,
+      "lose": 10,
+      "gf": 76,
+      "ga": 61,
+      "gd": 15,
+      "points": 68
+    },
+    {
+      "rank": 5,
+      "team": "Tottenham",
+      "played": 38,
+      "win": 20,
+      "draw": 6,
+      "lose": 12,
+      "gf": 74,
+      "ga": 61,
+      "gd": 13,
+      "points": 66
+    },
+    {
+      "rank": 6,
+      "team": "Chelsea",
+      "played": 38,
+      "win": 18,
+      "draw": 9,
+      "lose": 11,
+      "gf": 77,
+      "ga": 63,
+      "gd": 14,
+      "points": 63
+    },
+    {
+      "rank": 7,
+      "team": "Newcastle",
+      "played": 38,
+      "win": 18,
+      "draw": 6,
+      "lose": 14,
+      "gf": 85,
+      "ga": 62,
+      "gd": 23,
+      "points": 60
+    },
+    {
+      "rank": 8,
+      "team": "Manchester United",
+      "played": 38,
+      "win": 18,
+      "draw": 6,
+      "lose": 14,
+      "gf": 57,
+      "ga": 58,
+      "gd": -1,
+      "points": 60
+    },
+    {
+      "rank": 9,
+      "team": "West Ham",
+      "played": 38,
+      "win": 14,
+      "draw": 10,
+      "lose": 14,
+      "gf": 60,
+      "ga": 74,
+      "gd": -14,
+      "points": 52
+    },
+    {
+      "rank": 10,
+      "team": "Crystal Palace",
+      "played": 38,
+      "win": 13,
+      "draw": 10,
+      "lose": 15,
+      "gf": 57,
+      "ga": 58,
+      "gd": -1,
+      "points": 49
+    },
+    {
+      "rank": 11,
+      "team": "Brighton",
+      "played": 38,
+      "win": 12,
+      "draw": 12,
+      "lose": 14,
+      "gf": 55,
+      "ga": 62,
+      "gd": -7,
+      "points": 48
+    },
+    {
+      "rank": 12,
+      "team": "Bournemouth",
+      "played": 38,
+      "win": 13,
+      "draw": 9,
+      "lose": 16,
+      "gf": 54,
+      "ga": 67,
+      "gd": -13,
+      "points": 48
+    },
+    {
+      "rank": 13,
+      "team": "Fulham",
+      "played": 38,
+      "win": 13,
+      "draw": 8,
+      "lose": 17,
+      "gf": 55,
+      "ga": 61,
+      "gd": -6,
+      "points": 47
+    },
+    {
+      "rank": 14,
+      "team": "Wolves",
+      "played": 38,
+      "win": 13,
+      "draw": 7,
+      "lose": 18,
+      "gf": 50,
+      "ga": 65,
+      "gd": -15,
+      "points": 46
+    },
+    {
+      "rank": 15,
+      "team": "Everton",
+      "played": 38,
+      "win": 13,
+      "draw": 9,
+      "lose": 16,
+      "gf": 40,
+      "ga": 51,
+      "gd": -11,
+      "points": 40
+    },
+    {
+      "rank": 16,
+      "team": "Brentford",
+      "played": 38,
+      "win": 10,
+      "draw": 9,
+      "lose": 19,
+      "gf": 56,
+      "ga": 65,
+      "gd": -9,
+      "points": 39
+    },
+    {
+      "rank": 17,
+      "team": "Nottingham Forest",
+      "played": 38,
+      "win": 9,
+      "draw": 9,
+      "lose": 20,
+      "gf": 49,
+      "ga": 67,
+      "gd": -18,
+      "points": 32
+    },
+    {
+      "rank": 18,
+      "team": "Luton",
+      "played": 38,
+      "win": 6,
+      "draw": 8,
+      "lose": 24,
+      "gf": 52,
+      "ga": 85,
+      "gd": -33,
+      "points": 26
+    },
+    {
+      "rank": 19,
+      "team": "Burnley",
+      "played": 38,
+      "win": 5,
+      "draw": 9,
+      "lose": 24,
+      "gf": 41,
+      "ga": 78,
+      "gd": -37,
+      "points": 24
+    },
+    {
+      "rank": 20,
+      "team": "Sheffield Utd",
+      "played": 38,
+      "win": 3,
+      "draw": 7,
+      "lose": 28,
+      "gf": 35,
+      "ga": 104,
+      "gd": -69,
+      "points": 16
+    }
+  ],
+  "scorers": [
+    {
+      "name": "E. Haaland",
+      "team": "Manchester City",
+      "goals": 27,
+      "assists": 5,
+      "apps": 32
+    },
+    {
+      "name": "Matheus Cunha",
+      "team": "Manchester United",
+      "goals": 24,
+      "assists": 14,
+      "apps": 64
+    },
+    {
+      "name": "C. Palmer",
+      "team": "Manchester City",
+      "goals": 22,
+      "assists": 22,
+      "apps": 34
+    },
+    {
+      "name": "A. Isak",
+      "team": "Newcastle",
+      "goals": 21,
+      "assists": 2,
+      "apps": 31
+    },
+    {
+      "name": "O. Watkins",
+      "team": "Aston Villa",
+      "goals": 19,
+      "assists": 13,
+      "apps": 37
+    },
+    {
+      "name": "P. Foden",
+      "team": "Manchester City",
+      "goals": 19,
+      "assists": 8,
+      "apps": 37
+    },
+    {
+      "name": "D. Solanke",
+      "team": "Bournemouth",
+      "goals": 19,
+      "assists": 3,
+      "apps": 38
+    },
+    {
+      "name": "Mohamed Salah",
+      "team": "Liverpool",
+      "goals": 18,
+      "assists": 10,
+      "apps": 32
+    },
+    {
+      "name": "João Pedro",
+      "team": "Chelsea",
+      "goals": 18,
+      "assists": 6,
+      "apps": 62
+    },
+    {
+      "name": "Son Heung-Min",
+      "team": "Tottenham",
+      "goals": 17,
+      "assists": 10,
+      "apps": 35
+    },
+    {
+      "name": "J. Bowen",
+      "team": "West Ham",
+      "goals": 16,
+      "assists": 6,
+      "apps": 34
+    },
+    {
+      "name": "J. Mateta",
+      "team": "Crystal Palace",
+      "goals": 16,
+      "assists": 5,
+      "apps": 35
+    },
+    {
+      "name": "B. Saka",
+      "team": "Arsenal",
+      "goals": 16,
+      "assists": 8,
+      "apps": 35
+    },
+    {
+      "name": "A. Garnacho",
+      "team": "Chelsea",
+      "goals": 14,
+      "assists": 8,
+      "apps": 74
+    },
+    {
+      "name": "N. Jackson",
+      "team": "Chelsea",
+      "goals": 14,
+      "assists": 5,
+      "apps": 35
+    }
+  ],
+  "results": [],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:03:30.632Z"
+}
