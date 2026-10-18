@@ -1983,6 +1983,36 @@ function pitchPosSVG(posKey){
   <circle cx="${xy[0]}" cy="${xy[1]}" r="6.5" fill="#ffd400" stroke="#0a0a0a" stroke-width="1.4"/>
 </svg>`;
 }
+// ポジション別の「役割の目安」（個人の能力値ではなく、そのポジションに一般的に求められる要素）。捏造ではなく一般論の可視化。
+const POS_ROLE = {
+  GK: { role: 'ゴールキーパー（守護神）', traits: ['セービング', '反応', 'ハイボール処理', '配球'] },
+  CB: { role: 'センターバック（中央の守備）', traits: ['対人守備', '空中戦', 'カバーリング', 'ビルドアップ'] },
+  RB: { role: 'サイドバック（右）', traits: ['運動量', '守備', '攻撃参加', 'クロス'] },
+  LB: { role: 'サイドバック（左）', traits: ['運動量', '守備', '攻撃参加', 'クロス'] },
+  DM: { role: 'アンカー（中盤の底）', traits: ['ボール奪取', '配球', '展開', 'バランス'] },
+  CM: { role: 'セントラルMF', traits: ['展開力', '運動量', '技術', '攻守の連結'] },
+  AM: { role: '攻撃的MF（司令塔）', traits: ['創造性', 'スルーパス', '得点関与', 'ドリブル'] },
+  RW: { role: '右ウイング', traits: ['ドリブル', 'スピード', '仕掛け', '得点関与'] },
+  LW: { role: '左ウイング', traits: ['ドリブル', 'スピード', '仕掛け', '得点関与'] },
+  ST: { role: 'センターフォワード', traits: ['決定力', '得点感覚', '駆け引き', 'ポストプレー'] },
+  FW: { role: 'フォワード', traits: ['決定力', 'スピード', '得点感覚', '仕掛け'] },
+};
+// 本文用の「ポジションと役割」ビジュアル。拡大したピッチ図＋役割チップ（配色はクラブカラー）。全選手がposKeyを持つので必ず出る。
+function roleViz(p, c1, c2) {
+  const r = POS_ROLE[p.posKey] || POS_ROLE[p.pos] || null;
+  const role = (r && r.role) || p.posDetail || p.pos || '';
+  const traits = (r && r.traits) || [];
+  const big = pitchPosSVG(p.posKey).replace('width="132"', 'width="150"');
+  return `<div class="cl-wrap" style="margin-top:18px"><h2 class="lined">ポジションと役割</h2>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div style="flex:0 0 auto">${big}</div>
+      <div style="flex:1;min-width:210px">
+        <div style="font-weight:800;font-size:15px;margin:0 0 10px">${esc(role)}</div>
+        <div class="chips">${traits.map(t => `<span style="display:inline-block;padding:5px 12px;margin:0 6px 6px 0;border-radius:999px;font-size:12.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,${c1},${c2})">${esc(t)}</span>`).join('')}</div>
+        <p style="font-size:11.5px;color:var(--muted);margin:8px 0 0;line-height:1.6">※ ${esc(p.pos)}（${esc(role)}）に一般的に求められる役割の目安です（個人の能力評価ではありません）。</p>
+      </div>
+    </div></div>`;
+}
 function buildPlayer(p){
   const slug=p.slug; const path=`player/${slug}.html`; const url=`${DOMAIN}/${path}`;
   const flag = flagImg2(p.iso||'jp');
@@ -2070,6 +2100,7 @@ function buildPlayer(p){
   ${hero}
   ${lead}
   ${body}
+  ${roleViz(p, c1, c2)}
   ${skillSection}
   ${timeline}
   ${AD}
