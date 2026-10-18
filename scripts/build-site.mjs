@@ -2013,6 +2013,20 @@ function roleViz(p, c1, c2) {
       </div>
     </div></div>`;
 }
+// 本文に差し込む「最新ハイライト」グリッド（サムネ付き）。所属クラブの公式ハイライト試合ページへリンク。
+// 文字偏重を画像で解消する狙い。試合ページが実在するものだけ（デッドリンク防止）。
+function playerHighlightsBody(p) {
+  const base = p.club && CLUBS[p.club] ? CLUBS[p.club].slug : '';
+  if (!base) return '';
+  const cs = RAIL_ALIAS[base] || base;
+  const hl = (CLUB_HL[cs] || []).filter(h => h && h.ms && h.videoId && existsSync(`site/match/${h.ms}.html`)).slice(0, 6);
+  if (!hl.length) return '';
+  const cards = hl.map(h => `<a class="phl-card" href="../match/${h.ms}.html"><span class="phl-th"><img src="https://i.ytimg.com/vi/${h.videoId}/mqdefault.jpg" alt="" loading="lazy"><span class="phl-play" aria-hidden="true">▶</span></span><span class="phl-m">${h.ha === 'H' ? 'vs' : '@'} ${esc(h.opp)}</span></a>`).join('');
+  const css = `<style>.phl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:8px 0 2px}.phl-card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card2)}.phl-card:hover{border-color:var(--accent)}.phl-th{position:relative;display:block}.phl-th img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}.phl-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}.phl-m{display:block;padding:7px 9px;font-size:12.5px;font-weight:700}</style>`;
+  return `${css}<div class="cl-wrap" style="margin-top:18px"><h2 class="lined">${esc(p.name)}の最新ハイライト</h2>
+    <p style="font-size:12px;color:var(--muted);margin:2px 0 8px">所属クラブ ${esc(p.club)} の公式ハイライト（スコアを隠したネタバレ防止つき）。サムネイルをタップすると試合ページで再生できます。</p>
+    <div class="phl-grid">${cards}</div></div>`;
+}
 function buildPlayer(p){
   const slug=p.slug; const path=`player/${slug}.html`; const url=`${DOMAIN}/${path}`;
   const flag = flagImg2(p.iso||'jp');
@@ -2100,6 +2114,7 @@ function buildPlayer(p){
   ${hero}
   ${lead}
   ${body}
+  ${playerHighlightsBody(p)}
   ${roleViz(p, c1, c2)}
   ${skillSection}
   ${timeline}
