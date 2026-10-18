@@ -2605,6 +2605,9 @@ function buildLeague(h){
   // 節別ページへのナビ（第1節〜）＝各節まとめページへの内部リンク網。現行シーズンの全節を列挙。
   const mdn = (typeof MDNAV!=='undefined') ? MDNAV[h.code] : null;
   const mdNavBlock = (mdn && mdn.mds && mdn.mds.length) ? `<h2 class="lined">節別で見る（${mdn.season}-${String((mdn.season+1)%100).padStart(2,'0')}）</h2><div class="chips">${mdn.mds.map(n=>`<a href="../matchday/${h.code}-${mdn.season}-md${n}.html">第${n}節</a>`).join('')}</div>` : '';
+  // 過去シーズンのアーカイブ（歴代順位・結果・得点王）への内部リンク
+  const histSeasons = (typeof HISTORY_BY_CODE!=='undefined' ? HISTORY_BY_CODE[h.code] : null) || [];
+  const histBlock = histSeasons.length ? `<h2 class="lined">過去シーズン（歴代順位・結果・得点王）</h2><div class="chips">${histSeasons.map(x=>`<a href="../league/${h.slug}-${x.seasonLabel}.html">${esc(x.seasonLabel)} シーズン</a>`).join('')}</div>` : '';
   // FAQ（GEO/AI検索向け＝最新の事実をQ&Aで抽出しやすく。可視ブロック＋FAQPage構造化データ）
   const faqItems = [];
   if(stand.length){ const t=stand[0]; faqItems.push({ q:`${h.name}の首位はどこ？（現在の順位表）`, a:`${TODAY}時点で首位は${t.name}（勝点${t.pts}・${t.played}試合）。当サイト掲載の結果から集計した最新順位表を${h.name}ページに掲載しています。` }); }
@@ -2632,6 +2635,7 @@ function buildLeague(h){
   ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code].slug}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（${esc(LEAGUE_GUIDE[h.code].tag)}）</a></p>`:''}
   ${(()=>{ const rel=(LEAGUE_RELATED_GUIDES[h.code]||[]).filter(g=>GUIDE_SLUGS.has(g.slug)); return rel.length?`<div class="hub-guides"><h2 class="lined">関連する解説記事</h2><div class="chips">${rel.map(g=>`<a href="../guide/${g.slug}.html">📘 ${esc(g.label)}</a>`).join('')}</div></div>`:''; })()}
   ${mdNavBlock}
+  ${histBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
   ${starChips}
@@ -2732,7 +2736,97 @@ try {
   console.log(`節ページ: ${matchdayUrls.length}`);
 } catch(e){ console.warn('節ページ生成でエラー:', e.message); }
 
+// ========================= 歴代データ（過去シーズンのアーカイブ） =========================
+// data/history-<code>-<season>.json（scripts/fetch-history.mjs が API-Football から取得）を
+// /league/<slug>-<seasonLabel>.html に出力する。最終順位表・得点王・全試合結果（スコアは歴代の確定記録）。
+const HISTORY_BY_CODE = {};
+try {
+  for (const f of readdirSync('data')) {
+    const m = f.match(/^history-([a-z0-9]+)-(\d{4})\.json$/);
+    if (!m) continue;
+    try { const d = JSON.parse(readFileSync('data/' + f, 'utf8')); if (d && d.standings) (HISTORY_BY_CODE[m[1]] = HISTORY_BY_CODE[m[1]] || []).push(d); }
+    catch (e) { console.warn('history読込失敗:', f, e.message); }
+  }
+  for (const c in HISTORY_BY_CODE) HISTORY_BY_CODE[c].sort((a, b) => Number(b.season) - Number(a.season));
+} catch (e) {}
+// チーム名 英/独/略称 → 日本語（league-team-aliases.json を逆引き＋league-teams.json）。既に日本語ならそのまま。
+const TEAM_EN2JA = (() => {
+  // 発音記号を除去（München→munchen）し、記号・空白を落として照合キーにする。
+  const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[\s.\-・･'’`()0-9]/g, '');
+  const map = {}; const subs = [];   // subs: 英語別名の正規化キー（部分一致フォールバック用）
+  const add = (alias, ja) => { const k = norm(alias); if (!k) return; map[k] = ja; if (k.length >= 5 && /^[a-z]+$/.test(k)) subs.push({ k, ja }); };
+  try { const al = JSON.parse(readFileSync('data/league-team-aliases.json', 'utf8'));
+    for (const [ja, arr] of Object.entries(al)) { if (ja.startsWith('_') || !Array.isArray(arr)) continue; map[norm(ja)] = ja; for (const a of arr) add(a, ja); } } catch (e) {}
+  try { const lt = JSON.parse(readFileSync('data/league-teams.json', 'utf8'));
+    for (const [src, ja] of Object.entries(lt)) { if (src.startsWith('_') || typeof ja !== 'string') continue; add(src, ja); } } catch (e) {}
+  subs.sort((a, b) => b.k.length - a.k.length);   // 長い別名を優先（誤一致を減らす）
+  return { map, norm, subs };
+})();
+const jaTeamH = name => {
+  if (!name) return '';
+  if (/[぀-ヿ一-龯]/.test(name)) return name;   // 既に日本語
+  const k = TEAM_EN2JA.norm(name);
+  if (TEAM_EN2JA.map[k]) return TEAM_EN2JA.map[k];               // 完全一致
+  for (const s of TEAM_EN2JA.subs) if (k.includes(s.k)) return s.ja;  // 部分一致（長い別名優先）
+  return name;
+};
+const teamCell = ja => { const cs = CLUBS[ja] ? CLUBS[ja].slug : ''; return cs ? `<a href="../club/${cs}.html">${esc(ja)}</a>` : esc(ja); };
+
+const historyUrls = [];
+function buildHistory(code, d) {
+  const hub = LEAGUE_LIST.find(h => h.code === code);
+  const leagueName = hub ? hub.name : code;
+  const slug = hub ? hub.slug : code;
+  const sl = d.seasonLabel;
+  const path = `league/${slug}-${sl}.html`, url = `${DOMAIN}/${path}`;
+  const champ = jaTeamH(d.champion);
+  const ts = d.topScorer;
+  const title = `${leagueName} ${sl} 順位表・結果・得点王｜過去シーズン`;
+  const desc = `${leagueName} ${sl}シーズンの最終順位表・全試合結果・得点ランキングをまとめた歴代データ。優勝は${champ}${ts ? `、得点王は${ts.name}（${ts.goals}ゴール）` : ''}。公式記録ベース。`.slice(0, 120);
+  const faq = [
+    { q: `${leagueName} ${sl}の優勝クラブは？`, a: `${leagueName} ${sl}シーズンの優勝は${champ}です。最終順位表をこのページに掲載しています。` },
+  ];
+  if (ts) faq.push({ q: `${leagueName} ${sl}の得点王は？`, a: `${leagueName} ${sl}シーズンの得点王は${ts.name}（${jaTeamH(ts.team)}）で${ts.goals}ゴールです。` });
+  const graph = [
+    { "@type": "CollectionPage", "name": `${leagueName} ${sl}`, "url": url, "inLanguage": "ja", "isPartOf": { "@type": "WebSite", "name": "Football Highlights Compass", "url": DOMAIN + '/' } },
+    crumbLd([{ name: 'トップ', url: DOMAIN + '/' }, { name: leagueName, url: `${DOMAIN}/league/${slug}.html` }, { name: `${sl} 過去シーズン`, url }]),
+    faqLd(faq),
+  ];
+  const head = HEAD({ title, ogtitle: `${leagueName} ${sl} 順位表・結果・得点王`, desc, url, ogimg: `${DOMAIN}/og.png`, modified: `${TODAY}T12:00:00+09:00`, jsonld: graph });
+  const css = `<style>.hist-sum{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px}.hist-sum .hs{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px}.hist-sum .hs b{font-size:16px}.htab{overflow-x:auto;margin:8px 0}.htab table{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.htab th,.htab td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.htab th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.htab td.tm{text-align:left;font-weight:700;white-space:nowrap}.htab td.tm a{color:var(--accent);text-decoration:none}.htab td.pts{font-weight:800}.htab td.rk{color:var(--muted);width:2em}.hsc{list-style:none;margin:8px 0;padding:0;counter-reset:s}.hsc li{display:flex;gap:8px;align-items:baseline;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:s}.hsc li::before{content:counter(s);color:var(--muted);font-weight:800;min-width:1.4em}.hsc .n{font-weight:700}.hsc .t{color:var(--muted);flex:1;font-size:12px}.hsc .g{font-weight:800}.hres{margin:6px 0}.hrd{font-weight:800;font-size:12.5px;color:var(--accent);margin:12px 0 4px}.hrl{list-style:none;margin:0;padding:0}.hrl li{display:flex;gap:8px;align-items:center;padding:5px 2px;border-bottom:1px solid var(--line);font-size:13px}.hrl .d{color:var(--muted);font-size:11.5px;min-width:5.6em}.hrl .m{flex:1}.hrl .sc{font-weight:800;font-variant-numeric:tabular-nums}</style>`;
+  const standRows = d.standings.map(r => `<tr><td class="rk">${r.rank}</td><td class="tm">${teamCell(jaTeamH(r.team))}</td><td>${r.played ?? ''}</td><td>${r.win ?? ''}</td><td>${r.draw ?? ''}</td><td>${r.lose ?? ''}</td><td>${r.gd > 0 ? '+' : ''}${r.gd ?? ''}</td><td class="pts">${r.points ?? ''}</td></tr>`).join('');
+  const standTable = `<h2 class="lined">${esc(leagueName)} ${esc(sl)} 最終順位表</h2><div class="htab"><table><thead><tr><th>#</th><th>クラブ</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得失</th><th>点</th></tr></thead><tbody>${standRows}</tbody></table></div>`;
+  const scorerBlock = d.scorers && d.scorers.length ? `<h2 class="lined">得点ランキング</h2><ol class="hsc">${d.scorers.slice(0, 15).map(s => `<li><span class="n">${esc(s.name)}</span><span class="t">${teamCell(jaTeamH(s.team))}</span><span class="g">${s.goals ?? ''}<small>G</small></span></li>`).join('')}</ol>` : '';
+  let resultsBlock = '';
+  if (d.results && d.results.length) {
+    const byRound = {};
+    for (const r of d.results) { (byRound[r.round] = byRound[r.round] || []).push(r); }
+    const rounds = Object.keys(byRound);
+    const inner = rounds.map(rd => `<div class="hrd">${esc(rd.replace('Regular Season - ', '第') + (/Regular Season/.test(rd) ? '節' : ''))}</div><ul class="hrl">${byRound[rd].map(r => `<li><span class="d">${esc(r.date)}</span><span class="m">${teamCell(jaTeamH(r.home))} <span class="sc">${r.hg ?? ''}-${r.ag ?? ''}</span> ${teamCell(jaTeamH(r.away))}</span></li>`).join('')}</ul>`).join('');
+    resultsBlock = `<div class="hres">${collapsible(`全試合結果（${d.results.length}試合・スコア表示）`, inner)}</div>`;
+  }
+  const otherSeasons = (HISTORY_BY_CODE[code] || []).filter(x => x.season !== d.season);
+  const otherLinks = otherSeasons.length ? `<h2 class="lined">${esc(leagueName)} の他のシーズン</h2><div class="chips">${otherSeasons.map(x => `<a href="./${slug}-${x.seasonLabel}.html">${esc(x.seasonLabel)}</a>`).join('')}</div>` : '';
+  const out = head + TOPBAR + `<article class="post entity">
+  ${crumb([{ label: 'トップ', href: '../' }, { label: leagueName, href: `./${slug}.html` }, { label: `${sl} 過去シーズン` }])}
+  ${css}
+  <h1 class="headline">${esc(leagueName)} ${esc(sl)} シーズン</h1>
+  <p class="dek">${esc(leagueName)}の${esc(sl)}シーズンの最終順位表・全試合結果・得点ランキングをまとめた歴代データです（スコアは確定記録として表示）。</p>
+  <div class="hist-sum"><div class="hs">🏆 優勝<br><b>${esc(champ)}</b></div>${ts ? `<div class="hs">👟 得点王<br><b>${esc(ts.name)}</b> ${esc(String(ts.goals))}G</div>` : ''}</div>
+  ${standTable}
+  ${AD}
+  ${scorerBlock}
+  ${resultsBlock}
+  <p style="margin:14px 2px 0"><a href="./${slug}.html"><b>🇪🇺 ${esc(leagueName)} の最新（今季の順位・ハイライト）→</b></a></p>
+  ${otherLinks}
+  </article>` + FOOTER() + COLLAPSE_JS;
+  writeFileSync('site/' + path, out);
+  historyUrls.push(url);
+}
+
 for(const h of LEAGUE_LIST) buildLeague(h);
+for (const code in HISTORY_BY_CODE) for (const d of HISTORY_BY_CODE[code]) buildHistory(code, d);
+console.log(`歴代シーズンページ: ${historyUrls.length}`);
 
 // ========================= サイト内検索（全エンティティ横断） =========================
 // クラブ・選手・リーグ・大会・代表の全ページを1つの search-index.json にまとめ、
@@ -3780,6 +3874,7 @@ for(const c of enGuideUrls){ const alt = c.ja ? `<xhtml:link xmlns:xhtml="http:/
 if(scheduleUrl) sm += `  <url><loc>${scheduleUrl}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n`;
 for(const p of ['about.html','privacy.html','contact.html']) sm += `  <url><loc>${DOMAIN}/${p}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n`;
 for(const u of guideUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+for(const u of historyUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>\n`;
 for(const u of groupUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n`;
 for(const u of leagueUrls) sm += `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
 for(const m of (typeof matchdayUrls!=='undefined'?matchdayUrls:[])){ if(!m.played) continue; sm += `  <url><loc>${m.url}</loc><lastmod>${(m.date||'').slice(0,10)||TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`; }
