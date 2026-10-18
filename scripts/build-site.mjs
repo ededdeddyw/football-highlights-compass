@@ -2740,7 +2740,8 @@ function searchPageHtml(count){
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${CANON_REDIRECT}<title>${esc(title)}</title>
 <meta name="description" content="${escA(desc)}">
-<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<!-- サイト内検索はツールページ（本文が薄い）。Google推奨に従いnoindex（follow維持でリンク評価は流す）。AdSenseの薄いページ露出も避ける。 -->
+<meta name="robots" content="noindex,follow"><meta name="theme-color" content="#0c1657">
 <link rel="canonical" href="${pageUrl}">
 ${GA?GA+'\n':''}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3751,7 +3752,7 @@ const LEAGUE_MATCHES_HTML = (()=>{
 
 // ========================= sitemap =========================
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <url><loc>${DOMAIN}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
-if(existsSync('site/search.html')) sm += `  <url><loc>${DOMAIN}/search.html</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
+// search.html は noindex（サイト内検索ツール）のため sitemap からは除外する（インデックス方針と整合）。
 // /latest/ はこの後（RSSの後）に生成されるため existsSync では判定できない。生成条件（動画ありの最新試合が1件以上）で判定する。
 if(Object.values(LEAGUE_RECENT).some(a=>a&&a.some(r=>r&&r.videoId&&r.ms))) sm += `  <url><loc>${DOMAIN}/latest/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>\n`;
 // /player/latest.html（海外組の最新ハイライト）も後続生成のため生成条件（日本人選手が出場の最新試合が1件以上）で判定。
