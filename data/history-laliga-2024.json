@@ -1,0 +1,3406 @@
+{
+  "code": "laliga",
+  "season": "2024",
+  "seasonLabel": "2024-25",
+  "champion": "Barcelona",
+  "topScorer": {
+    "name": "Kylian Mbappé",
+    "team": "Real Madrid",
+    "goals": 31,
+    "assists": 3,
+    "apps": 34
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Barcelona",
+      "played": 38,
+      "win": 28,
+      "draw": 4,
+      "lose": 6,
+      "gf": 102,
+      "ga": 39,
+      "gd": 63,
+      "points": 88
+    },
+    {
+      "rank": 2,
+      "team": "Real Madrid",
+      "played": 38,
+      "win": 26,
+      "draw": 6,
+      "lose": 6,
+      "gf": 78,
+      "ga": 38,
+      "gd": 40,
+      "points": 84
+    },
+    {
+      "rank": 3,
+      "team": "Atletico Madrid",
+      "played": 38,
+      "win": 22,
+      "draw": 10,
+      "lose": 6,
+      "gf": 68,
+      "ga": 30,
+      "gd": 38,
+      "points": 76
+    },
+    {
+      "rank": 4,
+      "team": "アスレティック・ビルバオ",
+      "played": 38,
+      "win": 19,
+      "draw": 13,
+      "lose": 6,
+      "gf": 54,
+      "ga": 29,
+      "gd": 25,
+      "points": 70
+    },
+    {
+      "rank": 5,
+      "team": "Villarreal",
+      "played": 38,
+      "win": 20,
+      "draw": 10,
+      "lose": 8,
+      "gf": 71,
+      "ga": 51,
+      "gd": 20,
+      "points": 70
+    },
+    {
+      "rank": 6,
+      "team": "Real Betis",
+      "played": 38,
+      "win": 16,
+      "draw": 12,
+      "lose": 10,
+      "gf": 57,
+      "ga": 50,
+      "gd": 7,
+      "points": 60
+    },
+    {
+      "rank": 7,
+      "team": "Celta Vigo",
+      "played": 38,
+      "win": 16,
+      "draw": 7,
+      "lose": 15,
+      "gf": 59,
+      "ga": 57,
+      "gd": 2,
+      "points": 55
+    },
+    {
+      "rank": 8,
+      "team": "Rayo Vallecano",
+      "played": 38,
+      "win": 13,
+      "draw": 13,
+      "lose": 12,
+      "gf": 41,
+      "ga": 45,
+      "gd": -4,
+      "points": 52
+    },
+    {
+      "rank": 9,
+      "team": "Osasuna",
+      "played": 38,
+      "win": 12,
+      "draw": 16,
+      "lose": 10,
+      "gf": 48,
+      "ga": 52,
+      "gd": -4,
+      "points": 52
+    },
+    {
+      "rank": 10,
+      "team": "Mallorca",
+      "played": 38,
+      "win": 13,
+      "draw": 9,
+      "lose": 16,
+      "gf": 35,
+      "ga": 44,
+      "gd": -9,
+      "points": 48
+    },
+    {
+      "rank": 11,
+      "team": "Real Sociedad",
+      "played": 38,
+      "win": 13,
+      "draw": 7,
+      "lose": 18,
+      "gf": 35,
+      "ga": 46,
+      "gd": -11,
+      "points": 46
+    },
+    {
+      "rank": 12,
+      "team": "Valencia",
+      "played": 38,
+      "win": 11,
+      "draw": 13,
+      "lose": 14,
+      "gf": 44,
+      "ga": 54,
+      "gd": -10,
+      "points": 46
+    },
+    {
+      "rank": 13,
+      "team": "Getafe",
+      "played": 38,
+      "win": 11,
+      "draw": 9,
+      "lose": 18,
+      "gf": 34,
+      "ga": 39,
+      "gd": -5,
+      "points": 42
+    },
+    {
+      "rank": 14,
+      "team": "Espanyol",
+      "played": 38,
+      "win": 11,
+      "draw": 9,
+      "lose": 18,
+      "gf": 40,
+      "ga": 51,
+      "gd": -11,
+      "points": 42
+    },
+    {
+      "rank": 15,
+      "team": "Alaves",
+      "played": 38,
+      "win": 10,
+      "draw": 12,
+      "lose": 16,
+      "gf": 38,
+      "ga": 48,
+      "gd": -10,
+      "points": 42
+    },
+    {
+      "rank": 16,
+      "team": "Girona",
+      "played": 38,
+      "win": 11,
+      "draw": 8,
+      "lose": 19,
+      "gf": 44,
+      "ga": 60,
+      "gd": -16,
+      "points": 41
+    },
+    {
+      "rank": 17,
+      "team": "Sevilla",
+      "played": 38,
+      "win": 10,
+      "draw": 11,
+      "lose": 17,
+      "gf": 42,
+      "ga": 55,
+      "gd": -13,
+      "points": 41
+    },
+    {
+      "rank": 18,
+      "team": "Leganes",
+      "played": 38,
+      "win": 9,
+      "draw": 13,
+      "lose": 16,
+      "gf": 39,
+      "ga": 56,
+      "gd": -17,
+      "points": 40
+    },
+    {
+      "rank": 19,
+      "team": "Las Palmas",
+      "played": 38,
+      "win": 8,
+      "draw": 8,
+      "lose": 22,
+      "gf": 40,
+      "ga": 61,
+      "gd": -21,
+      "points": 32
+    },
+    {
+      "rank": 20,
+      "team": "Valladolid",
+      "played": 38,
+      "win": 4,
+      "draw": 4,
+      "lose": 30,
+      "gf": 26,
+      "ga": 90,
+      "gd": -64,
+      "points": 16
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Kylian Mbappé",
+      "team": "Real Madrid",
+      "goals": 31,
+      "assists": 3,
+      "apps": 34
+    },
+    {
+      "name": "R. Lewandowski",
+      "team": "Barcelona",
+      "goals": 26,
+      "assists": 2,
+      "apps": 35
+    },
+    {
+      "name": "A. Budimir",
+      "team": "Osasuna",
+      "goals": 21,
+      "assists": 4,
+      "apps": 38
+    },
+    {
+      "name": "A. Sørloth",
+      "team": "Atletico Madrid",
+      "goals": 20,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "Ayoze Pérez",
+      "team": "Villarreal",
+      "goals": 19,
+      "assists": 4,
+      "apps": 30
+    },
+    {
+      "name": "Raphinha",
+      "team": "Barcelona",
+      "goals": 18,
+      "assists": 9,
+      "apps": 36
+    },
+    {
+      "name": "J. Álvarez",
+      "team": "Atletico Madrid",
+      "goals": 17,
+      "assists": 4,
+      "apps": 37
+    },
+    {
+      "name": "Oihan Sancet",
+      "team": "アスレティック・ビルバオ",
+      "goals": 15,
+      "assists": 1,
+      "apps": 30
+    },
+    {
+      "name": "Álex Baena",
+      "team": "Atletico Madrid",
+      "goals": 14,
+      "assists": 18,
+      "apps": 64
+    },
+    {
+      "name": "Kike García",
+      "team": "Alaves",
+      "goals": 13,
+      "assists": 0,
+      "apps": 37
+    },
+    {
+      "name": "Javi Puado",
+      "team": "Espanyol",
+      "goals": 12,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "Borja Iglesias",
+      "team": "Real Betis",
+      "goals": 11,
+      "assists": 6,
+      "apps": 37
+    },
+    {
+      "name": "T. Barry",
+      "team": "Villarreal",
+      "goals": 11,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "D. Lukebakio",
+      "team": "Sevilla",
+      "goals": 11,
+      "assists": 2,
+      "apps": 38
+    },
+    {
+      "name": "Hugo Duro",
+      "team": "Valencia",
+      "goals": 11,
+      "assists": 2,
+      "apps": 31
+    }
+  ],
+  "results": [
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-15",
+      "home": "アスレティック・ビルバオ",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-15",
+      "home": "Real Betis",
+      "away": "Girona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-16",
+      "home": "Celta Vigo",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-16",
+      "home": "Las Palmas",
+      "away": "Sevilla",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "Osasuna",
+      "away": "Leganes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "Valencia",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Real Sociedad",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Mallorca",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-19",
+      "home": "Valladolid",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-19",
+      "home": "Villarreal",
+      "away": "Atletico Madrid",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-23",
+      "home": "Celta Vigo",
+      "away": "Valencia",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-23",
+      "home": "Sevilla",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Osasuna",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Barcelona",
+      "away": "アスレティック・ビルバオ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Espanyol",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Real Madrid",
+      "away": "Valladolid",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Leganes",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Alaves",
+      "away": "Real Betis",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Atletico Madrid",
+      "away": "Girona",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-26",
+      "home": "Villarreal",
+      "away": "Celta Vigo",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-27",
+      "home": "Mallorca",
+      "away": "Sevilla",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-27",
+      "home": "Rayo Vallecano",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-28",
+      "home": "アスレティック・ビルバオ",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-28",
+      "home": "Valladolid",
+      "away": "Leganes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-28",
+      "home": "Atletico Madrid",
+      "away": "Espanyol",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-28",
+      "home": "Real Sociedad",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-29",
+      "home": "Girona",
+      "away": "Osasuna",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-29",
+      "home": "Las Palmas",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-08-31",
+      "home": "Barcelona",
+      "away": "Valladolid",
+      "hg": 7,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-08-31",
+      "home": "アスレティック・ビルバオ",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-08-31",
+      "home": "Espanyol",
+      "away": "Rayo Vallecano",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-08-31",
+      "home": "Valencia",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-08-31",
+      "home": "Leganes",
+      "away": "Mallorca",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-01",
+      "home": "Alaves",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-01",
+      "home": "Osasuna",
+      "away": "Celta Vigo",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-01",
+      "home": "Sevilla",
+      "away": "Girona",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-01",
+      "home": "Getafe",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-01",
+      "home": "Real Madrid",
+      "away": "Real Betis",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-13",
+      "home": "Real Betis",
+      "away": "Leganes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-14",
+      "home": "Mallorca",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-14",
+      "home": "Espanyol",
+      "away": "Alaves",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-14",
+      "home": "Sevilla",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-14",
+      "home": "Real Sociedad",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-15",
+      "home": "Celta Vigo",
+      "away": "Valladolid",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-15",
+      "home": "Girona",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-15",
+      "home": "Las Palmas",
+      "away": "アスレティック・ビルバオ",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-15",
+      "home": "Atletico Madrid",
+      "away": "Valencia",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-16",
+      "home": "Rayo Vallecano",
+      "away": "Osasuna",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-17",
+      "home": "Mallorca",
+      "away": "Real Sociedad",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-18",
+      "home": "Real Betis",
+      "away": "Getafe",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-19",
+      "home": "Leganes",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-20",
+      "home": "Alaves",
+      "away": "Sevilla",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-21",
+      "home": "Valladolid",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-21",
+      "home": "Osasuna",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-21",
+      "home": "Valencia",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-21",
+      "home": "Real Madrid",
+      "away": "Espanyol",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-22",
+      "home": "Getafe",
+      "away": "Leganes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-22",
+      "home": "アスレティック・ビルバオ",
+      "away": "Celta Vigo",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-22",
+      "home": "Villarreal",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-22",
+      "home": "Rayo Vallecano",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-23",
+      "home": "Real Betis",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-24",
+      "home": "Valencia",
+      "away": "Osasuna",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-24",
+      "home": "Sevilla",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-24",
+      "home": "Real Madrid",
+      "away": "Alaves",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-25",
+      "home": "Girona",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-25",
+      "home": "Barcelona",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-26",
+      "home": "Las Palmas",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-26",
+      "home": "Espanyol",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-09-26",
+      "home": "Celta Vigo",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-27",
+      "home": "Valladolid",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-28",
+      "home": "Getafe",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-28",
+      "home": "Rayo Vallecano",
+      "away": "Leganes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-28",
+      "home": "Real Sociedad",
+      "away": "Valencia",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-28",
+      "home": "Osasuna",
+      "away": "Barcelona",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-29",
+      "home": "Celta Vigo",
+      "away": "Girona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-29",
+      "home": "アスレティック・ビルバオ",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-29",
+      "home": "Real Betis",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-29",
+      "home": "Atletico Madrid",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-09-30",
+      "home": "Villarreal",
+      "away": "Las Palmas",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-04",
+      "home": "Leganes",
+      "away": "Valencia",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-05",
+      "home": "Espanyol",
+      "away": "Mallorca",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-05",
+      "home": "Getafe",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-05",
+      "home": "Las Palmas",
+      "away": "Celta Vigo",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-05",
+      "home": "Valladolid",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-05",
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-06",
+      "home": "Girona",
+      "away": "アスレティック・ビルバオ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-06",
+      "home": "Alaves",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-06",
+      "home": "Sevilla",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-06",
+      "home": "Real Sociedad",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-18",
+      "home": "Alaves",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-19",
+      "home": "アスレティック・ビルバオ",
+      "away": "Espanyol",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-19",
+      "home": "Osasuna",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-19",
+      "home": "Girona",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-19",
+      "home": "Celta Vigo",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-20",
+      "home": "Mallorca",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-20",
+      "home": "Atletico Madrid",
+      "away": "Leganes",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-20",
+      "home": "Villarreal",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-20",
+      "home": "Barcelona",
+      "away": "Sevilla",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-21",
+      "home": "Valencia",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-25",
+      "home": "Espanyol",
+      "away": "Sevilla",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-26",
+      "home": "Valladolid",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-26",
+      "home": "Rayo Vallecano",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-26",
+      "home": "Las Palmas",
+      "away": "Girona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-26",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-27",
+      "home": "Leganes",
+      "away": "Celta Vigo",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-27",
+      "home": "Getafe",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-27",
+      "home": "Real Betis",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-27",
+      "home": "Real Sociedad",
+      "away": "Osasuna",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-10-28",
+      "home": "Mallorca",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-01",
+      "home": "Alaves",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-02",
+      "home": "Osasuna",
+      "away": "Valladolid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-02",
+      "home": "Girona",
+      "away": "Leganes",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-03",
+      "home": "Atletico Madrid",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-03",
+      "home": "Barcelona",
+      "away": "Espanyol",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-03",
+      "home": "Sevilla",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-03",
+      "home": "アスレティック・ビルバオ",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-04",
+      "home": "Celta Vigo",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-08",
+      "home": "Rayo Vallecano",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-09",
+      "home": "Real Madrid",
+      "away": "Osasuna",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-09",
+      "home": "Villarreal",
+      "away": "Alaves",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-09",
+      "home": "Leganes",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-10",
+      "home": "Real Betis",
+      "away": "Celta Vigo",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-10",
+      "home": "Mallorca",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-10",
+      "home": "Getafe",
+      "away": "Girona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-10",
+      "home": "Valladolid",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-10",
+      "home": "Real Sociedad",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-22",
+      "home": "Getafe",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-23",
+      "home": "Valencia",
+      "away": "Real Betis",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-23",
+      "home": "Atletico Madrid",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-23",
+      "home": "Las Palmas",
+      "away": "Mallorca",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-23",
+      "home": "Girona",
+      "away": "Espanyol",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-23",
+      "home": "Celta Vigo",
+      "away": "Barcelona",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-24",
+      "home": "Osasuna",
+      "away": "Villarreal",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-24",
+      "home": "Sevilla",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-24",
+      "home": "Leganes",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-24",
+      "home": "アスレティック・ビルバオ",
+      "away": "Real Sociedad",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-11-29",
+      "home": "Mallorca",
+      "away": "Valencia",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-11-30",
+      "home": "Barcelona",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-11-30",
+      "home": "Alaves",
+      "away": "Leganes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-11-30",
+      "home": "Espanyol",
+      "away": "Celta Vigo",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-11-30",
+      "home": "Valladolid",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-01",
+      "home": "Villarreal",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-01",
+      "home": "Real Madrid",
+      "away": "Getafe",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-01",
+      "home": "Rayo Vallecano",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-01",
+      "home": "Real Sociedad",
+      "away": "Real Betis",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-02",
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-12-03",
+      "home": "Mallorca",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2024-12-04",
+      "home": "アスレティック・ビルバオ",
+      "away": "Real Madrid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-06",
+      "home": "Celta Vigo",
+      "away": "Mallorca",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-07",
+      "home": "Las Palmas",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-07",
+      "home": "Real Betis",
+      "away": "Barcelona",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-07",
+      "home": "Valencia",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-07",
+      "home": "Girona",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-08",
+      "home": "Leganes",
+      "away": "Real Sociedad",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-08",
+      "home": "アスレティック・ビルバオ",
+      "away": "Villarreal",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-08",
+      "home": "Osasuna",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-08",
+      "home": "Atletico Madrid",
+      "away": "Sevilla",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-09",
+      "home": "Getafe",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-13",
+      "home": "Valladolid",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-14",
+      "home": "Espanyol",
+      "away": "Osasuna",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-14",
+      "home": "Mallorca",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-14",
+      "home": "Sevilla",
+      "away": "Celta Vigo",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-14",
+      "home": "Rayo Vallecano",
+      "away": "Real Madrid",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-15",
+      "home": "Atletico Madrid",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-15",
+      "home": "Alaves",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-15",
+      "home": "Villarreal",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-15",
+      "home": "Real Sociedad",
+      "away": "Las Palmas",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-15",
+      "home": "Barcelona",
+      "away": "Leganes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-12-18",
+      "home": "Villarreal",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-18",
+      "home": "Espanyol",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-20",
+      "home": "Girona",
+      "away": "Valladolid",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-21",
+      "home": "Getafe",
+      "away": "Mallorca",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-21",
+      "home": "Celta Vigo",
+      "away": "Real Sociedad",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-21",
+      "home": "Osasuna",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-21",
+      "home": "Barcelona",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-22",
+      "home": "Valencia",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-22",
+      "home": "Real Madrid",
+      "away": "Sevilla",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-22",
+      "home": "Las Palmas",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-22",
+      "home": "Leganes",
+      "away": "Villarreal",
+      "hg": 2,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-22",
+      "home": "Real Betis",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2025-01-03",
+      "home": "Valencia",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-10",
+      "home": "Rayo Vallecano",
+      "away": "Celta Vigo",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-11",
+      "home": "Alaves",
+      "away": "Girona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-11",
+      "home": "Valladolid",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-11",
+      "home": "Espanyol",
+      "away": "Leganes",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-11",
+      "home": "Sevilla",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-12",
+      "home": "Las Palmas",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-12",
+      "home": "Atletico Madrid",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-13",
+      "home": "Real Sociedad",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-17",
+      "home": "Espanyol",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-18",
+      "home": "Girona",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-18",
+      "home": "Leganes",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-18",
+      "home": "Real Betis",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-18",
+      "home": "Getafe",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-19",
+      "home": "Celta Vigo",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-19",
+      "home": "Real Madrid",
+      "away": "Las Palmas",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-19",
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-19",
+      "home": "Valencia",
+      "away": "Real Sociedad",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-20",
+      "home": "Villarreal",
+      "away": "Mallorca",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-24",
+      "home": "Las Palmas",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-25",
+      "home": "Mallorca",
+      "away": "Real Betis",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-25",
+      "home": "Atletico Madrid",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-25",
+      "home": "Sevilla",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-25",
+      "home": "Valladolid",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-26",
+      "home": "Rayo Vallecano",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-26",
+      "home": "Real Sociedad",
+      "away": "Getafe",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-26",
+      "home": "アスレティック・ビルバオ",
+      "away": "Leganes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-26",
+      "home": "Barcelona",
+      "away": "Valencia",
+      "hg": 7,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-27",
+      "home": "Alaves",
+      "away": "Celta Vigo",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-31",
+      "home": "Leganes",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-01",
+      "home": "Getafe",
+      "away": "Sevilla",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-01",
+      "home": "Villarreal",
+      "away": "Valladolid",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-01",
+      "home": "Atletico Madrid",
+      "away": "Mallorca",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-01",
+      "home": "Espanyol",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-02",
+      "home": "Barcelona",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-02",
+      "home": "Valencia",
+      "away": "Celta Vigo",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-02",
+      "home": "Osasuna",
+      "away": "Real Sociedad",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-02",
+      "home": "Real Betis",
+      "away": "アスレティック・ビルバオ",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-03",
+      "home": "Girona",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-07",
+      "home": "Rayo Vallecano",
+      "away": "Valladolid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-08",
+      "home": "Celta Vigo",
+      "away": "Real Betis",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-08",
+      "home": "アスレティック・ビルバオ",
+      "away": "Girona",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-08",
+      "home": "Las Palmas",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-08",
+      "home": "Real Madrid",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-09",
+      "home": "Alaves",
+      "away": "Getafe",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-09",
+      "home": "Valencia",
+      "away": "Leganes",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-09",
+      "home": "Real Sociedad",
+      "away": "Espanyol",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-09",
+      "home": "Sevilla",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-10",
+      "home": "Mallorca",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-14",
+      "home": "Girona",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-15",
+      "home": "Leganes",
+      "away": "Alaves",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-15",
+      "home": "Osasuna",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-15",
+      "home": "Atletico Madrid",
+      "away": "Celta Vigo",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-15",
+      "home": "Villarreal",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-16",
+      "home": "Espanyol",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-16",
+      "home": "Valladolid",
+      "away": "Sevilla",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-16",
+      "home": "Mallorca",
+      "away": "Las Palmas",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-16",
+      "home": "Real Betis",
+      "away": "Real Sociedad",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-17",
+      "home": "Barcelona",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-21",
+      "home": "Celta Vigo",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-22",
+      "home": "Alaves",
+      "away": "Espanyol",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-22",
+      "home": "Rayo Vallecano",
+      "away": "Villarreal",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-22",
+      "home": "Valencia",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-22",
+      "home": "Las Palmas",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-23",
+      "home": "アスレティック・ビルバオ",
+      "away": "Valladolid",
+      "hg": 7,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-23",
+      "home": "Real Madrid",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-23",
+      "home": "Getafe",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-23",
+      "home": "Real Sociedad",
+      "away": "Leganes",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-24",
+      "home": "Sevilla",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-28",
+      "home": "Valladolid",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-01",
+      "home": "Girona",
+      "away": "Celta Vigo",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-01",
+      "home": "Rayo Vallecano",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-01",
+      "home": "Real Betis",
+      "away": "Real Madrid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-01",
+      "home": "Atletico Madrid",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-02",
+      "home": "Leganes",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-02",
+      "home": "Barcelona",
+      "away": "Real Sociedad",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-02",
+      "home": "Mallorca",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-02",
+      "home": "Osasuna",
+      "away": "Valencia",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-08",
+      "home": "Celta Vigo",
+      "away": "Leganes",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-08",
+      "home": "Alaves",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-08",
+      "home": "Valencia",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-09",
+      "home": "Getafe",
+      "away": "Atletico Madrid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-09",
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-09",
+      "home": "アスレティック・ビルバオ",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-09",
+      "home": "Real Betis",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-09",
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-10",
+      "home": "Espanyol",
+      "away": "Girona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-14",
+      "home": "Las Palmas",
+      "away": "Alaves",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-15",
+      "home": "Valladolid",
+      "away": "Celta Vigo",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-15",
+      "home": "Mallorca",
+      "away": "Espanyol",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-15",
+      "home": "Villarreal",
+      "away": "Real Madrid",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-15",
+      "home": "Girona",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-16",
+      "home": "Leganes",
+      "away": "Real Betis",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-16",
+      "home": "Sevilla",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-16",
+      "home": "Osasuna",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-16",
+      "home": "Rayo Vallecano",
+      "away": "Real Sociedad",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-16",
+      "home": "Atletico Madrid",
+      "away": "Barcelona",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-27",
+      "home": "Barcelona",
+      "away": "Osasuna",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-29",
+      "home": "Real Sociedad",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-29",
+      "home": "Espanyol",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-29",
+      "home": "Alaves",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-29",
+      "home": "Real Madrid",
+      "away": "Leganes",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-30",
+      "home": "Getafe",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-30",
+      "home": "Barcelona",
+      "away": "Girona",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-30",
+      "home": "アスレティック・ビルバオ",
+      "away": "Osasuna",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-30",
+      "home": "Valencia",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-30",
+      "home": "Real Betis",
+      "away": "Sevilla",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-31",
+      "home": "Celta Vigo",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-04",
+      "home": "Rayo Vallecano",
+      "away": "Espanyol",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-05",
+      "home": "Girona",
+      "away": "Alaves",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-05",
+      "home": "Real Madrid",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-05",
+      "home": "Mallorca",
+      "away": "Celta Vigo",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-05",
+      "home": "Barcelona",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-06",
+      "home": "Las Palmas",
+      "away": "Real Sociedad",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-06",
+      "home": "Sevilla",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-06",
+      "home": "Valladolid",
+      "away": "Getafe",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-06",
+      "home": "Villarreal",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-07",
+      "home": "Leganes",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-11",
+      "home": "Valencia",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-12",
+      "home": "Real Sociedad",
+      "away": "Mallorca",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-12",
+      "home": "Getafe",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-12",
+      "home": "Celta Vigo",
+      "away": "Espanyol",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-12",
+      "home": "Leganes",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-13",
+      "home": "Osasuna",
+      "away": "Girona",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-13",
+      "home": "Alaves",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-13",
+      "home": "Real Betis",
+      "away": "Villarreal",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-13",
+      "home": "アスレティック・ビルバオ",
+      "away": "Rayo Vallecano",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-14",
+      "home": "Atletico Madrid",
+      "away": "Valladolid",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-18",
+      "home": "Espanyol",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-19",
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-19",
+      "home": "Barcelona",
+      "away": "Celta Vigo",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-19",
+      "home": "Mallorca",
+      "away": "Leganes",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-19",
+      "home": "Las Palmas",
+      "away": "Atletico Madrid",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-20",
+      "home": "Valladolid",
+      "away": "Osasuna",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-20",
+      "home": "Villarreal",
+      "away": "Real Sociedad",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-20",
+      "home": "Sevilla",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-20",
+      "home": "Real Madrid",
+      "away": "アスレティック・ビルバオ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-21",
+      "home": "Girona",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-22",
+      "home": "Valencia",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-22",
+      "home": "Barcelona",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "アスレティック・ビルバオ",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Celta Vigo",
+      "away": "Villarreal",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Alaves",
+      "away": "Real Sociedad",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Getafe",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-24",
+      "home": "Leganes",
+      "away": "Girona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-24",
+      "home": "Osasuna",
+      "away": "Sevilla",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-24",
+      "home": "Atletico Madrid",
+      "away": "Rayo Vallecano",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-24",
+      "home": "Real Betis",
+      "away": "Valladolid",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-04-27",
+      "home": "Villarreal",
+      "away": "Espanyol",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-02",
+      "home": "Rayo Vallecano",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-03",
+      "home": "Alaves",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-03",
+      "home": "Villarreal",
+      "away": "Osasuna",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-03",
+      "home": "Las Palmas",
+      "away": "Valencia",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-03",
+      "home": "Valladolid",
+      "away": "Barcelona",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-04",
+      "home": "Real Madrid",
+      "away": "Celta Vigo",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-04",
+      "home": "Sevilla",
+      "away": "Leganes",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-04",
+      "home": "Espanyol",
+      "away": "Real Betis",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-04",
+      "home": "Real Sociedad",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-05",
+      "home": "Girona",
+      "away": "Mallorca",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-09",
+      "home": "Las Palmas",
+      "away": "Rayo Vallecano",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-10",
+      "home": "Valencia",
+      "away": "Getafe",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-10",
+      "home": "Celta Vigo",
+      "away": "Sevilla",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-10",
+      "home": "Girona",
+      "away": "Villarreal",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-10",
+      "home": "Mallorca",
+      "away": "Valladolid",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-10",
+      "home": "Atletico Madrid",
+      "away": "Real Sociedad",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-11",
+      "home": "Leganes",
+      "away": "Espanyol",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-11",
+      "home": "Barcelona",
+      "away": "Real Madrid",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-11",
+      "home": "アスレティック・ビルバオ",
+      "away": "Alaves",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-11",
+      "home": "Real Betis",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-13",
+      "home": "Valladolid",
+      "away": "Girona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-13",
+      "home": "Real Sociedad",
+      "away": "Celta Vigo",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-13",
+      "home": "Sevilla",
+      "away": "Las Palmas",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-14",
+      "home": "Villarreal",
+      "away": "Leganes",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-14",
+      "home": "Alaves",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-14",
+      "home": "Real Madrid",
+      "away": "Mallorca",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-15",
+      "home": "Osasuna",
+      "away": "Atletico Madrid",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-15",
+      "home": "Rayo Vallecano",
+      "away": "Real Betis",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-15",
+      "home": "Espanyol",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-15",
+      "home": "Getafe",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Atletico Madrid",
+      "away": "Real Betis",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Valencia",
+      "away": "アスレティック・ビルバオ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Las Palmas",
+      "away": "Leganes",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Sevilla",
+      "away": "Real Madrid",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Celta Vigo",
+      "away": "Rayo Vallecano",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Real Sociedad",
+      "away": "Girona",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Valladolid",
+      "away": "Alaves",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Osasuna",
+      "away": "Espanyol",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Mallorca",
+      "away": "Getafe",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-23",
+      "home": "Real Betis",
+      "away": "Valencia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Real Madrid",
+      "away": "Real Sociedad",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Leganes",
+      "away": "Valladolid",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Espanyol",
+      "away": "Las Palmas",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Alaves",
+      "away": "Osasuna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Getafe",
+      "away": "Celta Vigo",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Rayo Vallecano",
+      "away": "Mallorca",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Girona",
+      "away": "Atletico Madrid",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Villarreal",
+      "away": "Sevilla",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "アスレティック・ビルバオ",
+      "away": "Barcelona",
+      "hg": 0,
+      "ag": 3
+    }
+  ],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:06:02.036Z"
+}

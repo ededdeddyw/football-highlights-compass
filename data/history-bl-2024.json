@@ -1,0 +1,2806 @@
+{
+  "code": "bl",
+  "season": "2024",
+  "seasonLabel": "2024-25",
+  "champion": "Bayern München",
+  "topScorer": {
+    "name": "H. Kane",
+    "team": "Bayern München",
+    "goals": 26,
+    "assists": 8,
+    "apps": 31
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Bayern München",
+      "played": 34,
+      "win": 25,
+      "draw": 7,
+      "lose": 2,
+      "gf": 99,
+      "ga": 32,
+      "gd": 67,
+      "points": 82
+    },
+    {
+      "rank": 2,
+      "team": "Bayer Leverkusen",
+      "played": 34,
+      "win": 19,
+      "draw": 12,
+      "lose": 3,
+      "gf": 72,
+      "ga": 43,
+      "gd": 29,
+      "points": 69
+    },
+    {
+      "rank": 3,
+      "team": "フランクフルト",
+      "played": 34,
+      "win": 17,
+      "draw": 9,
+      "lose": 8,
+      "gf": 68,
+      "ga": 46,
+      "gd": 22,
+      "points": 60
+    },
+    {
+      "rank": 4,
+      "team": "ドルトムント",
+      "played": 34,
+      "win": 17,
+      "draw": 6,
+      "lose": 11,
+      "gf": 71,
+      "ga": 51,
+      "gd": 20,
+      "points": 57
+    },
+    {
+      "rank": 5,
+      "team": "フライブルク",
+      "played": 34,
+      "win": 16,
+      "draw": 7,
+      "lose": 11,
+      "gf": 49,
+      "ga": 53,
+      "gd": -4,
+      "points": 55
+    },
+    {
+      "rank": 6,
+      "team": "FSV Mainz 05",
+      "played": 34,
+      "win": 14,
+      "draw": 10,
+      "lose": 10,
+      "gf": 55,
+      "ga": 43,
+      "gd": 12,
+      "points": 52
+    },
+    {
+      "rank": 7,
+      "team": "ライプツィヒ",
+      "played": 34,
+      "win": 13,
+      "draw": 12,
+      "lose": 9,
+      "gf": 53,
+      "ga": 48,
+      "gd": 5,
+      "points": 51
+    },
+    {
+      "rank": 8,
+      "team": "Werder Bremen",
+      "played": 34,
+      "win": 14,
+      "draw": 9,
+      "lose": 11,
+      "gf": 54,
+      "ga": 57,
+      "gd": -3,
+      "points": 51
+    },
+    {
+      "rank": 9,
+      "team": "シュツットガルト",
+      "played": 34,
+      "win": 14,
+      "draw": 8,
+      "lose": 12,
+      "gf": 64,
+      "ga": 53,
+      "gd": 11,
+      "points": 50
+    },
+    {
+      "rank": 10,
+      "team": "ボルシアMG",
+      "played": 34,
+      "win": 13,
+      "draw": 6,
+      "lose": 15,
+      "gf": 55,
+      "ga": 57,
+      "gd": -2,
+      "points": 45
+    },
+    {
+      "rank": 11,
+      "team": "ウォルフスブルク",
+      "played": 34,
+      "win": 11,
+      "draw": 10,
+      "lose": 13,
+      "gf": 56,
+      "ga": 54,
+      "gd": 2,
+      "points": 43
+    },
+    {
+      "rank": 12,
+      "team": "アウクスブルク",
+      "played": 34,
+      "win": 11,
+      "draw": 10,
+      "lose": 13,
+      "gf": 35,
+      "ga": 51,
+      "gd": -16,
+      "points": 43
+    },
+    {
+      "rank": 13,
+      "team": "Union Berlin",
+      "played": 34,
+      "win": 10,
+      "draw": 10,
+      "lose": 14,
+      "gf": 35,
+      "ga": 51,
+      "gd": -16,
+      "points": 40
+    },
+    {
+      "rank": 14,
+      "team": "ザンクトパウリ",
+      "played": 34,
+      "win": 8,
+      "draw": 8,
+      "lose": 18,
+      "gf": 28,
+      "ga": 41,
+      "gd": -13,
+      "points": 32
+    },
+    {
+      "rank": 15,
+      "team": "1899 Hoffenheim",
+      "played": 34,
+      "win": 7,
+      "draw": 11,
+      "lose": 16,
+      "gf": 46,
+      "ga": 68,
+      "gd": -22,
+      "points": 32
+    },
+    {
+      "rank": 16,
+      "team": "1. FC Heidenheim",
+      "played": 34,
+      "win": 8,
+      "draw": 5,
+      "lose": 21,
+      "gf": 37,
+      "ga": 64,
+      "gd": -27,
+      "points": 29
+    },
+    {
+      "rank": 17,
+      "team": "Holstein Kiel",
+      "played": 34,
+      "win": 6,
+      "draw": 7,
+      "lose": 21,
+      "gf": 49,
+      "ga": 80,
+      "gd": -31,
+      "points": 25
+    },
+    {
+      "rank": 18,
+      "team": "VfL Bochum",
+      "played": 34,
+      "win": 6,
+      "draw": 7,
+      "lose": 21,
+      "gf": 33,
+      "ga": 67,
+      "gd": -34,
+      "points": 25
+    }
+  ],
+  "scorers": [
+    {
+      "name": "H. Kane",
+      "team": "Bayern München",
+      "goals": 26,
+      "assists": 8,
+      "apps": 31
+    },
+    {
+      "name": "S. Machino",
+      "team": "ボルシアMG",
+      "goals": 22,
+      "assists": 4,
+      "apps": 66
+    },
+    {
+      "name": "P. Schick",
+      "team": "Bayer Leverkusen",
+      "goals": 21,
+      "assists": 0,
+      "apps": 33
+    },
+    {
+      "name": "S. Guirassy",
+      "team": "ドルトムント",
+      "goals": 21,
+      "assists": 4,
+      "apps": 30
+    },
+    {
+      "name": "R. Dōan",
+      "team": "フランクフルト",
+      "goals": 20,
+      "assists": 14,
+      "apps": 68
+    },
+    {
+      "name": "J. Burkardt",
+      "team": "FSV Mainz 05",
+      "goals": 18,
+      "assists": 2,
+      "apps": 29
+    },
+    {
+      "name": "T. Kleindienst",
+      "team": "ボルシアMG",
+      "goals": 16,
+      "assists": 7,
+      "apps": 31
+    },
+    {
+      "name": "E. Demirović",
+      "team": "シュツットガルト",
+      "goals": 15,
+      "assists": 2,
+      "apps": 34
+    },
+    {
+      "name": "H. Ekitike",
+      "team": "フランクフルト",
+      "goals": 15,
+      "assists": 8,
+      "apps": 33
+    },
+    {
+      "name": "Omar Marmoush",
+      "team": "フランクフルト",
+      "goals": 15,
+      "assists": 9,
+      "apps": 17
+    },
+    {
+      "name": "B. Šeško",
+      "team": "ライプツィヒ",
+      "goals": 13,
+      "assists": 5,
+      "apps": 33
+    },
+    {
+      "name": "M. Olise",
+      "team": "Bayern München",
+      "goals": 12,
+      "assists": 15,
+      "apps": 34
+    },
+    {
+      "name": "J. Musiala",
+      "team": "Bayern München",
+      "goals": 12,
+      "assists": 2,
+      "apps": 25
+    },
+    {
+      "name": "N. Woltemade",
+      "team": "シュツットガルト",
+      "goals": 12,
+      "assists": 2,
+      "apps": 28
+    },
+    {
+      "name": "L. Sané",
+      "team": "Bayern München",
+      "goals": 11,
+      "assists": 5,
+      "apps": 30
+    }
+  ],
+  "results": [
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-23",
+      "home": "ボルシアMG",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "フライブルク",
+      "away": "シュツットガルト",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "FSV Mainz 05",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "1899 Hoffenheim",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "アウクスブルク",
+      "away": "Werder Bremen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "ライプツィヒ",
+      "away": "VfL Bochum",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-24",
+      "home": "ドルトムント",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-25",
+      "home": "ウォルフスブルク",
+      "away": "Bayern München",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-25",
+      "home": "ザンクトパウリ",
+      "away": "1. FC Heidenheim",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-30",
+      "home": "Union Berlin",
+      "away": "ザンクトパウリ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "Werder Bremen",
+      "away": "ドルトムント",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "フランクフルト",
+      "away": "1899 Hoffenheim",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "シュツットガルト",
+      "away": "FSV Mainz 05",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "VfL Bochum",
+      "away": "ボルシアMG",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "Holstein Kiel",
+      "away": "ウォルフスブルク",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-31",
+      "home": "Bayer Leverkusen",
+      "away": "ライプツィヒ",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-09-01",
+      "home": "1. FC Heidenheim",
+      "away": "アウクスブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-09-01",
+      "home": "Bayern München",
+      "away": "フライブルク",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-13",
+      "home": "ドルトムント",
+      "away": "1. FC Heidenheim",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "フライブルク",
+      "away": "VfL Bochum",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "ウォルフスブルク",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "ボルシアMG",
+      "away": "シュツットガルト",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "1899 Hoffenheim",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "ライプツィヒ",
+      "away": "Union Berlin",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-14",
+      "home": "Holstein Kiel",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 6
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-15",
+      "home": "アウクスブルク",
+      "away": "ザンクトパウリ",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-15",
+      "home": "FSV Mainz 05",
+      "away": "Werder Bremen",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-20",
+      "home": "アウクスブルク",
+      "away": "FSV Mainz 05",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-21",
+      "home": "Werder Bremen",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-21",
+      "home": "VfL Bochum",
+      "away": "Holstein Kiel",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-21",
+      "home": "1. FC Heidenheim",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-21",
+      "home": "Union Berlin",
+      "away": "1899 Hoffenheim",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-21",
+      "home": "フランクフルト",
+      "away": "ボルシアMG",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-22",
+      "home": "Bayer Leverkusen",
+      "away": "ウォルフスブルク",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-22",
+      "home": "シュツットガルト",
+      "away": "ドルトムント",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-22",
+      "home": "ザンクトパウリ",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-27",
+      "home": "ドルトムント",
+      "away": "VfL Bochum",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "フライブルク",
+      "away": "ザンクトパウリ",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "ウォルフスブルク",
+      "away": "シュツットガルト",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "ボルシアMG",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "FSV Mainz 05",
+      "away": "1. FC Heidenheim",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "ライプツィヒ",
+      "away": "アウクスブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-28",
+      "home": "Bayern München",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-29",
+      "home": "Holstein Kiel",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-29",
+      "home": "1899 Hoffenheim",
+      "away": "Werder Bremen",
+      "hg": 3,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-04",
+      "home": "アウクスブルク",
+      "away": "ボルシアMG",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-05",
+      "home": "Werder Bremen",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-05",
+      "home": "Bayer Leverkusen",
+      "away": "Holstein Kiel",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-05",
+      "home": "VfL Bochum",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-05",
+      "home": "Union Berlin",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-05",
+      "home": "ザンクトパウリ",
+      "away": "FSV Mainz 05",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-06",
+      "home": "1. FC Heidenheim",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-06",
+      "home": "フランクフルト",
+      "away": "Bayern München",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-10-06",
+      "home": "シュツットガルト",
+      "away": "1899 Hoffenheim",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-18",
+      "home": "ドルトムント",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "フライブルク",
+      "away": "アウクスブルク",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "ボルシアMG",
+      "away": "1. FC Heidenheim",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "FSV Mainz 05",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "1899 Hoffenheim",
+      "away": "VfL Bochum",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "Bayer Leverkusen",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-19",
+      "home": "Bayern München",
+      "away": "シュツットガルト",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-20",
+      "home": "Holstein Kiel",
+      "away": "Union Berlin",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-20",
+      "home": "ウォルフスブルク",
+      "away": "Werder Bremen",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-25",
+      "home": "FSV Mainz 05",
+      "away": "ボルシアMG",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-26",
+      "home": "アウクスブルク",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-26",
+      "home": "シュツットガルト",
+      "away": "Holstein Kiel",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-26",
+      "home": "ライプツィヒ",
+      "away": "フライブルク",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-26",
+      "home": "ザンクトパウリ",
+      "away": "ウォルフスブルク",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-26",
+      "home": "Werder Bremen",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-27",
+      "home": "VfL Bochum",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-27",
+      "home": "Union Berlin",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-27",
+      "home": "1. FC Heidenheim",
+      "away": "1899 Hoffenheim",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-01",
+      "home": "Bayer Leverkusen",
+      "away": "シュツットガルト",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "Bayern München",
+      "away": "Union Berlin",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "ウォルフスブルク",
+      "away": "アウクスブルク",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "1899 Hoffenheim",
+      "away": "ザンクトパウリ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "フランクフルト",
+      "away": "VfL Bochum",
+      "hg": 7,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "Holstein Kiel",
+      "away": "1. FC Heidenheim",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-02",
+      "home": "ドルトムント",
+      "away": "ライプツィヒ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-03",
+      "home": "フライブルク",
+      "away": "FSV Mainz 05",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-11-03",
+      "home": "ボルシアMG",
+      "away": "Werder Bremen",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-08",
+      "home": "Union Berlin",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-09",
+      "home": "Werder Bremen",
+      "away": "Holstein Kiel",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-09",
+      "home": "FSV Mainz 05",
+      "away": "ドルトムント",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-09",
+      "home": "VfL Bochum",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-09",
+      "home": "ザンクトパウリ",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-09",
+      "home": "ライプツィヒ",
+      "away": "ボルシアMG",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-10",
+      "home": "アウクスブルク",
+      "away": "1899 Hoffenheim",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-10",
+      "home": "シュツットガルト",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-11-10",
+      "home": "1. FC Heidenheim",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-22",
+      "home": "Bayern München",
+      "away": "アウクスブルク",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "ウォルフスブルク",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "ドルトムント",
+      "away": "フライブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "1899 Hoffenheim",
+      "away": "ライプツィヒ",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "Bayer Leverkusen",
+      "away": "1. FC Heidenheim",
+      "hg": 5,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "シュツットガルト",
+      "away": "VfL Bochum",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-23",
+      "home": "フランクフルト",
+      "away": "Werder Bremen",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-24",
+      "home": "Holstein Kiel",
+      "away": "FSV Mainz 05",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-24",
+      "home": "ボルシアMG",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-29",
+      "home": "ザンクトパウリ",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "フライブルク",
+      "away": "ボルシアMG",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "Werder Bremen",
+      "away": "シュツットガルト",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "アウクスブルク",
+      "away": "VfL Bochum",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "ライプツィヒ",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "Union Berlin",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-30",
+      "home": "ドルトムント",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-12-01",
+      "home": "FSV Mainz 05",
+      "away": "1899 Hoffenheim",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-12-01",
+      "home": "1. FC Heidenheim",
+      "away": "フランクフルト",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-06",
+      "home": "シュツットガルト",
+      "away": "Union Berlin",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "Bayern München",
+      "away": "1. FC Heidenheim",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "Bayer Leverkusen",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "フランクフルト",
+      "away": "アウクスブルク",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "VfL Bochum",
+      "away": "Werder Bremen",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "Holstein Kiel",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-07",
+      "home": "ボルシアMG",
+      "away": "ドルトムント",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-08",
+      "home": "ウォルフスブルク",
+      "away": "FSV Mainz 05",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-12-08",
+      "home": "1899 Hoffenheim",
+      "away": "フライブルク",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-13",
+      "home": "フライブルク",
+      "away": "ウォルフスブルク",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-14",
+      "home": "ボルシアMG",
+      "away": "Holstein Kiel",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-14",
+      "home": "FSV Mainz 05",
+      "away": "Bayern München",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-14",
+      "home": "アウクスブルク",
+      "away": "Bayer Leverkusen",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-14",
+      "home": "Union Berlin",
+      "away": "VfL Bochum",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-14",
+      "home": "ザンクトパウリ",
+      "away": "Werder Bremen",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-15",
+      "home": "1. FC Heidenheim",
+      "away": "シュツットガルト",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-15",
+      "home": "ドルトムント",
+      "away": "1899 Hoffenheim",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-15",
+      "home": "ライプツィヒ",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-20",
+      "home": "Bayern München",
+      "away": "ライプツィヒ",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "Werder Bremen",
+      "away": "Union Berlin",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "1899 Hoffenheim",
+      "away": "ボルシアMG",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "フランクフルト",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "シュツットガルト",
+      "away": "ザンクトパウリ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "Holstein Kiel",
+      "away": "アウクスブルク",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-21",
+      "home": "Bayer Leverkusen",
+      "away": "フライブルク",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-22",
+      "home": "VfL Bochum",
+      "away": "1. FC Heidenheim",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-22",
+      "home": "ウォルフスブルク",
+      "away": "ドルトムント",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-10",
+      "home": "ドルトムント",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "フライブルク",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "FSV Mainz 05",
+      "away": "VfL Bochum",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "1899 Hoffenheim",
+      "away": "ウォルフスブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "1. FC Heidenheim",
+      "away": "Union Berlin",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "ザンクトパウリ",
+      "away": "フランクフルト",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-11",
+      "home": "ボルシアMG",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-12",
+      "home": "ライプツィヒ",
+      "away": "Werder Bremen",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2025-01-12",
+      "home": "アウクスブルク",
+      "away": "シュツットガルト",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-14",
+      "home": "Holstein Kiel",
+      "away": "ドルトムント",
+      "hg": 4,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-14",
+      "home": "ウォルフスブルク",
+      "away": "ボルシアMG",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-14",
+      "home": "Bayer Leverkusen",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-14",
+      "home": "フランクフルト",
+      "away": "フライブルク",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-15",
+      "home": "VfL Bochum",
+      "away": "ザンクトパウリ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-15",
+      "home": "Bayern München",
+      "away": "1899 Hoffenheim",
+      "hg": 5,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-15",
+      "home": "Werder Bremen",
+      "away": "1. FC Heidenheim",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-15",
+      "home": "シュツットガルト",
+      "away": "ライプツィヒ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2025-01-15",
+      "home": "Union Berlin",
+      "away": "アウクスブルク",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-17",
+      "home": "フランクフルト",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "Bayern München",
+      "away": "ウォルフスブルク",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "シュツットガルト",
+      "away": "フライブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "VfL Bochum",
+      "away": "ライプツィヒ",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "1. FC Heidenheim",
+      "away": "ザンクトパウリ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "Holstein Kiel",
+      "away": "1899 Hoffenheim",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-18",
+      "home": "Bayer Leverkusen",
+      "away": "ボルシアMG",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-19",
+      "home": "Union Berlin",
+      "away": "FSV Mainz 05",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2025-01-19",
+      "home": "Werder Bremen",
+      "away": "アウクスブルク",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-24",
+      "home": "ウォルフスブルク",
+      "away": "Holstein Kiel",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "フライブルク",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "FSV Mainz 05",
+      "away": "シュツットガルト",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "ドルトムント",
+      "away": "Werder Bremen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "アウクスブルク",
+      "away": "1. FC Heidenheim",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "ライプツィヒ",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-25",
+      "home": "ボルシアMG",
+      "away": "VfL Bochum",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-26",
+      "home": "1899 Hoffenheim",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-26",
+      "home": "ザンクトパウリ",
+      "away": "Union Berlin",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-31",
+      "home": "Werder Bremen",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "Bayern München",
+      "away": "Holstein Kiel",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "シュツットガルト",
+      "away": "ボルシアMG",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "VfL Bochum",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "1. FC Heidenheim",
+      "away": "ドルトムント",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "ザンクトパウリ",
+      "away": "アウクスブルク",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-01",
+      "home": "Union Berlin",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-02",
+      "home": "フランクフルト",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-02-02",
+      "home": "Bayer Leverkusen",
+      "away": "1899 Hoffenheim",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-07",
+      "home": "Bayern München",
+      "away": "Werder Bremen",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "フライブルク",
+      "away": "1. FC Heidenheim",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "ウォルフスブルク",
+      "away": "Bayer Leverkusen",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "FSV Mainz 05",
+      "away": "アウクスブルク",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "ドルトムント",
+      "away": "シュツットガルト",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "1899 Hoffenheim",
+      "away": "Union Berlin",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-08",
+      "home": "ボルシアMG",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-09",
+      "home": "Holstein Kiel",
+      "away": "VfL Bochum",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-02-09",
+      "home": "ライプツィヒ",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-14",
+      "home": "アウクスブルク",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-15",
+      "home": "シュツットガルト",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-15",
+      "home": "VfL Bochum",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-15",
+      "home": "Union Berlin",
+      "away": "ボルシアMG",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-15",
+      "home": "ザンクトパウリ",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-15",
+      "home": "Bayer Leverkusen",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-16",
+      "home": "Werder Bremen",
+      "away": "1899 Hoffenheim",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-16",
+      "home": "フランクフルト",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-02-16",
+      "home": "1. FC Heidenheim",
+      "away": "FSV Mainz 05",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-21",
+      "home": "フライブルク",
+      "away": "Werder Bremen",
+      "hg": 5,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-22",
+      "home": "ウォルフスブルク",
+      "away": "VfL Bochum",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-22",
+      "home": "ボルシアMG",
+      "away": "アウクスブルク",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-22",
+      "home": "FSV Mainz 05",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-22",
+      "home": "Holstein Kiel",
+      "away": "Bayer Leverkusen",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-22",
+      "home": "ドルトムント",
+      "away": "Union Berlin",
+      "hg": 6,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-23",
+      "home": "ライプツィヒ",
+      "away": "1. FC Heidenheim",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-23",
+      "home": "Bayern München",
+      "away": "フランクフルト",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-23",
+      "home": "1899 Hoffenheim",
+      "away": "シュツットガルト",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-28",
+      "home": "シュツットガルト",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "Werder Bremen",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "ライプツィヒ",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "VfL Bochum",
+      "away": "1899 Hoffenheim",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "1. FC Heidenheim",
+      "away": "ボルシアMG",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "ザンクトパウリ",
+      "away": "ドルトムント",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-01",
+      "home": "フランクフルト",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-02",
+      "home": "Union Berlin",
+      "away": "Holstein Kiel",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-03-02",
+      "home": "アウクスブルク",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-07",
+      "home": "ボルシアMG",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "Bayern München",
+      "away": "VfL Bochum",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "ウォルフスブルク",
+      "away": "ザンクトパウリ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "ドルトムント",
+      "away": "アウクスブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "Bayer Leverkusen",
+      "away": "Werder Bremen",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "Holstein Kiel",
+      "away": "シュツットガルト",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-08",
+      "home": "フライブルク",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-09",
+      "home": "フランクフルト",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-03-09",
+      "home": "1899 Hoffenheim",
+      "away": "1. FC Heidenheim",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-14",
+      "home": "ザンクトパウリ",
+      "away": "1899 Hoffenheim",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-15",
+      "home": "Werder Bremen",
+      "away": "ボルシアMG",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-15",
+      "home": "FSV Mainz 05",
+      "away": "フライブルク",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-15",
+      "home": "アウクスブルク",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-15",
+      "home": "Union Berlin",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-15",
+      "home": "ライプツィヒ",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-16",
+      "home": "VfL Bochum",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-16",
+      "home": "1. FC Heidenheim",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-03-16",
+      "home": "シュツットガルト",
+      "away": "Bayer Leverkusen",
+      "hg": 3,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-28",
+      "home": "Bayer Leverkusen",
+      "away": "VfL Bochum",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "Bayern München",
+      "away": "ザンクトパウリ",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "ウォルフスブルク",
+      "away": "1. FC Heidenheim",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "ボルシアMG",
+      "away": "ライプツィヒ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "1899 Hoffenheim",
+      "away": "アウクスブルク",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "Holstein Kiel",
+      "away": "Werder Bremen",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-29",
+      "home": "フランクフルト",
+      "away": "シュツットガルト",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-30",
+      "home": "フライブルク",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-30",
+      "home": "ドルトムント",
+      "away": "FSV Mainz 05",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-04",
+      "home": "アウクスブルク",
+      "away": "Bayern München",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "フライブルク",
+      "away": "ドルトムント",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "FSV Mainz 05",
+      "away": "Holstein Kiel",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "ライプツィヒ",
+      "away": "1899 Hoffenheim",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "VfL Bochum",
+      "away": "シュツットガルト",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "1. FC Heidenheim",
+      "away": "Bayer Leverkusen",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-05",
+      "home": "Werder Bremen",
+      "away": "フランクフルト",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-06",
+      "home": "ザンクトパウリ",
+      "away": "ボルシアMG",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-04-06",
+      "home": "Union Berlin",
+      "away": "ウォルフスブルク",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-11",
+      "home": "ウォルフスブルク",
+      "away": "ライプツィヒ",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "ボルシアMG",
+      "away": "フライブルク",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "1899 Hoffenheim",
+      "away": "FSV Mainz 05",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "Bayer Leverkusen",
+      "away": "Union Berlin",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "VfL Bochum",
+      "away": "アウクスブルク",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "Holstein Kiel",
+      "away": "ザンクトパウリ",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-12",
+      "home": "Bayern München",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-13",
+      "home": "シュツットガルト",
+      "away": "Werder Bremen",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-04-13",
+      "home": "フランクフルト",
+      "away": "1. FC Heidenheim",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "フライブルク",
+      "away": "1899 Hoffenheim",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "Werder Bremen",
+      "away": "VfL Bochum",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "FSV Mainz 05",
+      "away": "ウォルフスブルク",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "ライプツィヒ",
+      "away": "Holstein Kiel",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "1. FC Heidenheim",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-19",
+      "home": "Union Berlin",
+      "away": "シュツットガルト",
+      "hg": 4,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-20",
+      "home": "アウクスブルク",
+      "away": "フランクフルト",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-20",
+      "home": "ドルトムント",
+      "away": "ボルシアMG",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-04-20",
+      "home": "ザンクトパウリ",
+      "away": "Bayer Leverkusen",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-25",
+      "home": "シュツットガルト",
+      "away": "1. FC Heidenheim",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "Bayern München",
+      "away": "FSV Mainz 05",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "ウォルフスブルク",
+      "away": "フライブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "1899 Hoffenheim",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "Bayer Leverkusen",
+      "away": "アウクスブルク",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "Holstein Kiel",
+      "away": "ボルシアMG",
+      "hg": 4,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-26",
+      "home": "フランクフルト",
+      "away": "ライプツィヒ",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-27",
+      "home": "VfL Bochum",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-27",
+      "home": "Werder Bremen",
+      "away": "ザンクトパウリ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-02",
+      "home": "1. FC Heidenheim",
+      "away": "VfL Bochum",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-03",
+      "home": "ボルシアMG",
+      "away": "1899 Hoffenheim",
+      "hg": 4,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-03",
+      "home": "ライプツィヒ",
+      "away": "Bayern München",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-03",
+      "home": "Union Berlin",
+      "away": "Werder Bremen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-03",
+      "home": "ザンクトパウリ",
+      "away": "シュツットガルト",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-03",
+      "home": "ドルトムント",
+      "away": "ウォルフスブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-04",
+      "home": "アウクスブルク",
+      "away": "Holstein Kiel",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-04",
+      "home": "フライブルク",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-05-04",
+      "home": "FSV Mainz 05",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-09",
+      "home": "ウォルフスブルク",
+      "away": "1899 Hoffenheim",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-10",
+      "home": "Werder Bremen",
+      "away": "ライプツィヒ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-10",
+      "home": "VfL Bochum",
+      "away": "FSV Mainz 05",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-10",
+      "home": "Union Berlin",
+      "away": "1. FC Heidenheim",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-10",
+      "home": "Holstein Kiel",
+      "away": "フライブルク",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-10",
+      "home": "Bayern München",
+      "away": "ボルシアMG",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-11",
+      "home": "Bayer Leverkusen",
+      "away": "ドルトムント",
+      "hg": 2,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-11",
+      "home": "フランクフルト",
+      "away": "ザンクトパウリ",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-05-11",
+      "home": "シュツットガルト",
+      "away": "アウクスブルク",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "フライブルク",
+      "away": "フランクフルト",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "ボルシアMG",
+      "away": "ウォルフスブルク",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "FSV Mainz 05",
+      "away": "Bayer Leverkusen",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "ドルトムント",
+      "away": "Holstein Kiel",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "1899 Hoffenheim",
+      "away": "Bayern München",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "アウクスブルク",
+      "away": "Union Berlin",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "ライプツィヒ",
+      "away": "シュツットガルト",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "1. FC Heidenheim",
+      "away": "Werder Bremen",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-05-17",
+      "home": "ザンクトパウリ",
+      "away": "VfL Bochum",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Relegation Round",
+      "date": "2025-05-22",
+      "home": "1. FC Heidenheim",
+      "away": "SV Elversberg",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Relegation Round",
+      "date": "2025-05-26",
+      "home": "SV Elversberg",
+      "away": "1. FC Heidenheim",
+      "hg": 1,
+      "ag": 2
+    }
+  ],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:06:05.306Z"
+}

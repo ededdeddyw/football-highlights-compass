@@ -1,0 +1,3406 @@
+{
+  "code": "sa",
+  "season": "2024",
+  "seasonLabel": "2024-25",
+  "champion": "Napoli",
+  "topScorer": {
+    "name": "M. Retegui",
+    "team": "Genoa",
+    "goals": 25,
+    "assists": 16,
+    "apps": 36
+  },
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Napoli",
+      "played": 38,
+      "win": 24,
+      "draw": 10,
+      "lose": 4,
+      "gf": 59,
+      "ga": 27,
+      "gd": 32,
+      "points": 82
+    },
+    {
+      "rank": 2,
+      "team": "Inter",
+      "played": 38,
+      "win": 24,
+      "draw": 9,
+      "lose": 5,
+      "gf": 79,
+      "ga": 35,
+      "gd": 44,
+      "points": 81
+    },
+    {
+      "rank": 3,
+      "team": "Atalanta",
+      "played": 38,
+      "win": 22,
+      "draw": 8,
+      "lose": 8,
+      "gf": 78,
+      "ga": 37,
+      "gd": 41,
+      "points": 74
+    },
+    {
+      "rank": 4,
+      "team": "Juventus",
+      "played": 38,
+      "win": 18,
+      "draw": 16,
+      "lose": 4,
+      "gf": 58,
+      "ga": 35,
+      "gd": 23,
+      "points": 70
+    },
+    {
+      "rank": 5,
+      "team": "ローマ",
+      "played": 38,
+      "win": 20,
+      "draw": 9,
+      "lose": 9,
+      "gf": 56,
+      "ga": 35,
+      "gd": 21,
+      "points": 69
+    },
+    {
+      "rank": 6,
+      "team": "Fiorentina",
+      "played": 38,
+      "win": 19,
+      "draw": 8,
+      "lose": 11,
+      "gf": 60,
+      "ga": 41,
+      "gd": 19,
+      "points": 65
+    },
+    {
+      "rank": 7,
+      "team": "Lazio",
+      "played": 38,
+      "win": 18,
+      "draw": 11,
+      "lose": 9,
+      "gf": 61,
+      "ga": 49,
+      "gd": 12,
+      "points": 65
+    },
+    {
+      "rank": 8,
+      "team": "ミラン",
+      "played": 38,
+      "win": 18,
+      "draw": 9,
+      "lose": 11,
+      "gf": 61,
+      "ga": 43,
+      "gd": 18,
+      "points": 63
+    },
+    {
+      "rank": 9,
+      "team": "Bologna",
+      "played": 38,
+      "win": 16,
+      "draw": 14,
+      "lose": 8,
+      "gf": 57,
+      "ga": 47,
+      "gd": 10,
+      "points": 62
+    },
+    {
+      "rank": 10,
+      "team": "Como",
+      "played": 38,
+      "win": 13,
+      "draw": 10,
+      "lose": 15,
+      "gf": 49,
+      "ga": 52,
+      "gd": -3,
+      "points": 49
+    },
+    {
+      "rank": 11,
+      "team": "Torino",
+      "played": 38,
+      "win": 10,
+      "draw": 14,
+      "lose": 14,
+      "gf": 39,
+      "ga": 45,
+      "gd": -6,
+      "points": 44
+    },
+    {
+      "rank": 12,
+      "team": "Udinese",
+      "played": 38,
+      "win": 12,
+      "draw": 8,
+      "lose": 18,
+      "gf": 41,
+      "ga": 56,
+      "gd": -15,
+      "points": 44
+    },
+    {
+      "rank": 13,
+      "team": "Genoa",
+      "played": 38,
+      "win": 10,
+      "draw": 13,
+      "lose": 15,
+      "gf": 37,
+      "ga": 49,
+      "gd": -12,
+      "points": 43
+    },
+    {
+      "rank": 14,
+      "team": "Verona",
+      "played": 38,
+      "win": 10,
+      "draw": 7,
+      "lose": 21,
+      "gf": 34,
+      "ga": 66,
+      "gd": -32,
+      "points": 37
+    },
+    {
+      "rank": 15,
+      "team": "Cagliari",
+      "played": 38,
+      "win": 9,
+      "draw": 9,
+      "lose": 20,
+      "gf": 40,
+      "ga": 56,
+      "gd": -16,
+      "points": 36
+    },
+    {
+      "rank": 16,
+      "team": "Parma",
+      "played": 38,
+      "win": 7,
+      "draw": 15,
+      "lose": 16,
+      "gf": 44,
+      "ga": 58,
+      "gd": -14,
+      "points": 36
+    },
+    {
+      "rank": 17,
+      "team": "Lecce",
+      "played": 38,
+      "win": 8,
+      "draw": 10,
+      "lose": 20,
+      "gf": 27,
+      "ga": 58,
+      "gd": -31,
+      "points": 34
+    },
+    {
+      "rank": 18,
+      "team": "Empoli",
+      "played": 38,
+      "win": 6,
+      "draw": 13,
+      "lose": 19,
+      "gf": 33,
+      "ga": 59,
+      "gd": -26,
+      "points": 31
+    },
+    {
+      "rank": 19,
+      "team": "Venezia",
+      "played": 38,
+      "win": 5,
+      "draw": 14,
+      "lose": 19,
+      "gf": 32,
+      "ga": 56,
+      "gd": -24,
+      "points": 29
+    },
+    {
+      "rank": 20,
+      "team": "Monza",
+      "played": 38,
+      "win": 3,
+      "draw": 9,
+      "lose": 26,
+      "gf": 28,
+      "ga": 69,
+      "gd": -41,
+      "points": 18
+    }
+  ],
+  "scorers": [
+    {
+      "name": "M. Retegui",
+      "team": "Genoa",
+      "goals": 25,
+      "assists": 16,
+      "apps": 36
+    },
+    {
+      "name": "M. Kean",
+      "team": "Fiorentina",
+      "goals": 19,
+      "assists": 3,
+      "apps": 32
+    },
+    {
+      "name": "S. Esposito",
+      "team": "Inter",
+      "goals": 16,
+      "assists": 0,
+      "apps": 67
+    },
+    {
+      "name": "A. Lookman",
+      "team": "Atalanta",
+      "goals": 15,
+      "assists": 5,
+      "apps": 33
+    },
+    {
+      "name": "R. Orsolini",
+      "team": "Bologna",
+      "goals": 15,
+      "assists": 4,
+      "apps": 30
+    },
+    {
+      "name": "M. Thuram",
+      "team": "Inter",
+      "goals": 14,
+      "assists": 4,
+      "apps": 35
+    },
+    {
+      "name": "R. Lukaku",
+      "team": "Napoli",
+      "goals": 14,
+      "assists": 10,
+      "apps": 36
+    },
+    {
+      "name": "S. McTominay",
+      "team": "Napoli",
+      "goals": 12,
+      "assists": 4,
+      "apps": 34
+    },
+    {
+      "name": "Lautaro Martínez",
+      "team": "Inter",
+      "goals": 12,
+      "assists": 3,
+      "apps": 32
+    },
+    {
+      "name": "L. Lucca",
+      "team": "Udinese",
+      "goals": 12,
+      "assists": 1,
+      "apps": 33
+    },
+    {
+      "name": "L. Colombo",
+      "team": "ミラン",
+      "goals": 12,
+      "assists": 4,
+      "apps": 74
+    },
+    {
+      "name": "A. Dovbyk",
+      "team": "ローマ",
+      "goals": 12,
+      "assists": 2,
+      "apps": 35
+    },
+    {
+      "name": "N. Krstović",
+      "team": "Lecce",
+      "goals": 11,
+      "assists": 5,
+      "apps": 37
+    },
+    {
+      "name": "C. Pulišić",
+      "team": "ミラン",
+      "goals": 11,
+      "assists": 9,
+      "apps": 34
+    },
+    {
+      "name": "T. Reijnders",
+      "team": "ミラン",
+      "goals": 10,
+      "assists": 4,
+      "apps": 37
+    }
+  ],
+  "results": [
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "Genoa",
+      "away": "Inter",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "Parma",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "ミラン",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-17",
+      "home": "Empoli",
+      "away": "Monza",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Bologna",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Hellas Verona",
+      "away": "Napoli",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Lazio",
+      "away": "Venezia",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-18",
+      "home": "Cagliari",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-19",
+      "home": "Lecce",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 1",
+      "date": "2024-08-19",
+      "home": "Juventus",
+      "away": "Como",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Udinese",
+      "away": "Lazio",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Parma",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Inter",
+      "away": "Lecce",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-24",
+      "home": "Monza",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Fiorentina",
+      "away": "Venezia",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Torino",
+      "away": "Atalanta",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "Napoli",
+      "away": "Bologna",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-25",
+      "home": "ローマ",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-26",
+      "home": "Cagliari",
+      "away": "Como",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 2",
+      "date": "2024-08-26",
+      "home": "Hellas Verona",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-30",
+      "home": "Venezia",
+      "away": "Torino",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-30",
+      "home": "Inter",
+      "away": "Atalanta",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-31",
+      "home": "Bologna",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-31",
+      "home": "Lecce",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-31",
+      "home": "Lazio",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-08-31",
+      "home": "Napoli",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-01",
+      "home": "Genoa",
+      "away": "Hellas Verona",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-01",
+      "home": "Fiorentina",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-01",
+      "home": "Udinese",
+      "away": "Como",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 3",
+      "date": "2024-09-01",
+      "home": "Juventus",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-14",
+      "home": "Como",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-14",
+      "home": "Empoli",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-14",
+      "home": "ミラン",
+      "away": "Venezia",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-15",
+      "home": "Genoa",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-15",
+      "home": "Atalanta",
+      "away": "Fiorentina",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-15",
+      "home": "Torino",
+      "away": "Lecce",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-15",
+      "home": "Cagliari",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-15",
+      "home": "Monza",
+      "away": "Inter",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-16",
+      "home": "Parma",
+      "away": "Udinese",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 4",
+      "date": "2024-09-16",
+      "home": "Lazio",
+      "away": "Hellas Verona",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-20",
+      "home": "Cagliari",
+      "away": "Empoli",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-20",
+      "home": "Hellas Verona",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-21",
+      "home": "Venezia",
+      "away": "Genoa",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-21",
+      "home": "Juventus",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-21",
+      "home": "Lecce",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-22",
+      "home": "Fiorentina",
+      "away": "Lazio",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-22",
+      "home": "Monza",
+      "away": "Bologna",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-22",
+      "home": "ローマ",
+      "away": "Udinese",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-22",
+      "home": "Inter",
+      "away": "ミラン",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 5",
+      "date": "2024-09-24",
+      "home": "Atalanta",
+      "away": "Como",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-27",
+      "home": "ミラン",
+      "away": "Lecce",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-28",
+      "home": "Udinese",
+      "away": "Inter",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-28",
+      "home": "Genoa",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-28",
+      "home": "Bologna",
+      "away": "Atalanta",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-29",
+      "home": "Torino",
+      "away": "Lazio",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-29",
+      "home": "ローマ",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-29",
+      "home": "Como",
+      "away": "Hellas Verona",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-29",
+      "home": "Empoli",
+      "away": "Fiorentina",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-29",
+      "home": "Napoli",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 6",
+      "date": "2024-09-30",
+      "home": "Parma",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-04",
+      "home": "Napoli",
+      "away": "Como",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-04",
+      "home": "Hellas Verona",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-05",
+      "home": "Udinese",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-05",
+      "home": "Atalanta",
+      "away": "Genoa",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-05",
+      "home": "Inter",
+      "away": "Torino",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-06",
+      "home": "Juventus",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-06",
+      "home": "Lazio",
+      "away": "Empoli",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-06",
+      "home": "Bologna",
+      "away": "Parma",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-06",
+      "home": "Monza",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 7",
+      "date": "2024-10-06",
+      "home": "Fiorentina",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-19",
+      "home": "Genoa",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-19",
+      "home": "Como",
+      "away": "Parma",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-19",
+      "home": "ミラン",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-19",
+      "home": "Juventus",
+      "away": "Lazio",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-20",
+      "home": "Empoli",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-20",
+      "home": "Venezia",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-20",
+      "home": "Lecce",
+      "away": "Fiorentina",
+      "hg": 0,
+      "ag": 6
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-20",
+      "home": "Cagliari",
+      "away": "Torino",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-20",
+      "home": "ローマ",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 8",
+      "date": "2024-10-21",
+      "home": "Hellas Verona",
+      "away": "Monza",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-25",
+      "home": "Udinese",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-25",
+      "home": "Torino",
+      "away": "Como",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-26",
+      "home": "Napoli",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-26",
+      "home": "Atalanta",
+      "away": "Hellas Verona",
+      "hg": 6,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-27",
+      "home": "Parma",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-27",
+      "home": "Lazio",
+      "away": "Genoa",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-27",
+      "home": "Monza",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-27",
+      "home": "Inter",
+      "away": "Juventus",
+      "hg": 4,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2024-10-27",
+      "home": "Fiorentina",
+      "away": "ローマ",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-29",
+      "home": "Cagliari",
+      "away": "Bologna",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-29",
+      "home": "Lecce",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-29",
+      "home": "ミラン",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-30",
+      "home": "Empoli",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-30",
+      "home": "Venezia",
+      "away": "Udinese",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-30",
+      "home": "Juventus",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-30",
+      "home": "Atalanta",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-31",
+      "home": "Genoa",
+      "away": "Fiorentina",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-31",
+      "home": "ローマ",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 10",
+      "date": "2024-10-31",
+      "home": "Como",
+      "away": "Lazio",
+      "hg": 1,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-02",
+      "home": "Bologna",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-02",
+      "home": "Udinese",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-02",
+      "home": "Monza",
+      "away": "ミラン",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-03",
+      "home": "Napoli",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-03",
+      "home": "Torino",
+      "away": "Fiorentina",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-03",
+      "home": "Hellas Verona",
+      "away": "ローマ",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-03",
+      "home": "Inter",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-04",
+      "home": "Empoli",
+      "away": "Como",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-04",
+      "home": "Parma",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 11",
+      "date": "2024-11-04",
+      "home": "Lazio",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-07",
+      "home": "Genoa",
+      "away": "Como",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-08",
+      "home": "Lecce",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-09",
+      "home": "Venezia",
+      "away": "Parma",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-09",
+      "home": "Cagliari",
+      "away": "ミラン",
+      "hg": 3,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-09",
+      "home": "Juventus",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-10",
+      "home": "Atalanta",
+      "away": "Udinese",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-10",
+      "home": "ローマ",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-10",
+      "home": "Fiorentina",
+      "away": "Hellas Verona",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-10",
+      "home": "Monza",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 12",
+      "date": "2024-11-10",
+      "home": "Inter",
+      "away": "Napoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-23",
+      "home": "Hellas Verona",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-23",
+      "home": "ミラン",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-23",
+      "home": "Parma",
+      "away": "Atalanta",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-24",
+      "home": "Genoa",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-24",
+      "home": "Torino",
+      "away": "Monza",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-24",
+      "home": "Como",
+      "away": "Fiorentina",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-24",
+      "home": "Napoli",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-24",
+      "home": "Lazio",
+      "away": "Bologna",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-25",
+      "home": "Empoli",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 13",
+      "date": "2024-11-25",
+      "home": "Venezia",
+      "away": "Lecce",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-29",
+      "home": "Cagliari",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-30",
+      "home": "Como",
+      "away": "Monza",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-30",
+      "home": "ミラン",
+      "away": "Empoli",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-11-30",
+      "home": "Bologna",
+      "away": "Venezia",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-01",
+      "home": "Udinese",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-01",
+      "home": "Torino",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-01",
+      "home": "Parma",
+      "away": "Lazio",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-01",
+      "home": "Lecce",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2024-12-02",
+      "home": "ローマ",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-06",
+      "home": "Inter",
+      "away": "Parma",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-06",
+      "home": "Atalanta",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-07",
+      "home": "Genoa",
+      "away": "Torino",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-07",
+      "home": "Juventus",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-07",
+      "home": "ローマ",
+      "away": "Lecce",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-08",
+      "home": "Fiorentina",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-08",
+      "home": "Hellas Verona",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-08",
+      "home": "Venezia",
+      "away": "Como",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-08",
+      "home": "Napoli",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 15",
+      "date": "2024-12-09",
+      "home": "Monza",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-13",
+      "home": "Empoli",
+      "away": "Torino",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-14",
+      "home": "Cagliari",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-14",
+      "home": "Udinese",
+      "away": "Napoli",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-14",
+      "home": "Juventus",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-15",
+      "home": "Lecce",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-15",
+      "home": "Bologna",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-15",
+      "home": "Parma",
+      "away": "Hellas Verona",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-15",
+      "home": "Como",
+      "away": "ローマ",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-15",
+      "home": "ミラン",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 16",
+      "date": "2024-12-16",
+      "home": "Lazio",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 6
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-20",
+      "home": "Hellas Verona",
+      "away": "ミラン",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-21",
+      "home": "Torino",
+      "away": "Bologna",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-21",
+      "home": "Genoa",
+      "away": "Napoli",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-21",
+      "home": "Lecce",
+      "away": "Lazio",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-22",
+      "home": "ローマ",
+      "away": "Parma",
+      "hg": 5,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-22",
+      "home": "Venezia",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-22",
+      "home": "Atalanta",
+      "away": "Empoli",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-22",
+      "home": "Monza",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-23",
+      "home": "Fiorentina",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 17",
+      "date": "2024-12-23",
+      "home": "Inter",
+      "away": "Como",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-28",
+      "home": "Empoli",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-28",
+      "home": "Parma",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-28",
+      "home": "Cagliari",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-28",
+      "home": "Lazio",
+      "away": "Atalanta",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-29",
+      "home": "Udinese",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-29",
+      "home": "Napoli",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-29",
+      "home": "Juventus",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-29",
+      "home": "ミラン",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-30",
+      "home": "Como",
+      "away": "Lecce",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 18",
+      "date": "2024-12-30",
+      "home": "Bologna",
+      "away": "Hellas Verona",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-04",
+      "home": "Venezia",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-04",
+      "home": "Fiorentina",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-04",
+      "home": "Hellas Verona",
+      "away": "Udinese",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-05",
+      "home": "Monza",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-05",
+      "home": "Lecce",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-05",
+      "home": "Torino",
+      "away": "Parma",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-05",
+      "home": "ローマ",
+      "away": "Lazio",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-10",
+      "home": "Lazio",
+      "away": "Como",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-11",
+      "home": "Udinese",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-11",
+      "home": "Empoli",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-11",
+      "home": "Torino",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-11",
+      "home": "ミラン",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-12",
+      "home": "Genoa",
+      "away": "Parma",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-12",
+      "home": "Venezia",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-12",
+      "home": "Bologna",
+      "away": "ローマ",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-12",
+      "home": "Napoli",
+      "away": "Hellas Verona",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 20",
+      "date": "2025-01-13",
+      "home": "Monza",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-14",
+      "home": "Como",
+      "away": "ミラン",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-14",
+      "home": "Atalanta",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 19",
+      "date": "2025-01-15",
+      "home": "Inter",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-17",
+      "home": "ローマ",
+      "away": "Genoa",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-18",
+      "home": "Bologna",
+      "away": "Monza",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-18",
+      "home": "Juventus",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-18",
+      "home": "Atalanta",
+      "away": "Napoli",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-19",
+      "home": "Fiorentina",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-19",
+      "home": "Cagliari",
+      "away": "Lecce",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-19",
+      "home": "Parma",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-19",
+      "home": "Hellas Verona",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-19",
+      "home": "Inter",
+      "away": "Empoli",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 21",
+      "date": "2025-01-20",
+      "home": "Como",
+      "away": "Udinese",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-24",
+      "home": "Torino",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-25",
+      "home": "Como",
+      "away": "Atalanta",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-25",
+      "home": "Napoli",
+      "away": "Juventus",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-25",
+      "home": "Empoli",
+      "away": "Bologna",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-26",
+      "home": "ミラン",
+      "away": "Parma",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-26",
+      "home": "Udinese",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-26",
+      "home": "Lecce",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-26",
+      "home": "Lazio",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-27",
+      "home": "Venezia",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 22",
+      "date": "2025-01-27",
+      "home": "Genoa",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-01-31",
+      "home": "Parma",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-01",
+      "home": "Udinese",
+      "away": "Venezia",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-01",
+      "home": "Monza",
+      "away": "Hellas Verona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-01",
+      "home": "Atalanta",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-01",
+      "home": "Bologna",
+      "away": "Como",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-02",
+      "home": "Juventus",
+      "away": "Empoli",
+      "hg": 4,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-02",
+      "home": "Fiorentina",
+      "away": "Genoa",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-02",
+      "home": "ミラン",
+      "away": "Inter",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-02",
+      "home": "ローマ",
+      "away": "Napoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 23",
+      "date": "2025-02-03",
+      "home": "Cagliari",
+      "away": "Lazio",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 14",
+      "date": "2025-02-06",
+      "home": "Fiorentina",
+      "away": "Inter",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-07",
+      "home": "Como",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-08",
+      "home": "Hellas Verona",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-08",
+      "home": "Empoli",
+      "away": "ミラン",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-08",
+      "home": "Torino",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-09",
+      "home": "Venezia",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-09",
+      "home": "Lazio",
+      "away": "Monza",
+      "hg": 5,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-09",
+      "home": "Cagliari",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-09",
+      "home": "Lecce",
+      "away": "Bologna",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-09",
+      "home": "Napoli",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 24",
+      "date": "2025-02-10",
+      "home": "Inter",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-14",
+      "home": "Bologna",
+      "away": "Torino",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-15",
+      "home": "Atalanta",
+      "away": "Cagliari",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-15",
+      "home": "Lazio",
+      "away": "Napoli",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-15",
+      "home": "ミラン",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-16",
+      "home": "Fiorentina",
+      "away": "Como",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-16",
+      "home": "Udinese",
+      "away": "Empoli",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-16",
+      "home": "Monza",
+      "away": "Lecce",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-16",
+      "home": "Parma",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-16",
+      "home": "Juventus",
+      "away": "Inter",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 25",
+      "date": "2025-02-17",
+      "home": "Genoa",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-21",
+      "home": "Lecce",
+      "away": "Udinese",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-22",
+      "home": "Venezia",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-22",
+      "home": "Parma",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-22",
+      "home": "Torino",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-22",
+      "home": "Inter",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-23",
+      "home": "Como",
+      "away": "Napoli",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-23",
+      "home": "Hellas Verona",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-23",
+      "home": "Empoli",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 5
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-23",
+      "home": "Cagliari",
+      "away": "Juventus",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 26",
+      "date": "2025-02-24",
+      "home": "ローマ",
+      "away": "Monza",
+      "hg": 4,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 9",
+      "date": "2025-02-27",
+      "home": "Bologna",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-02-28",
+      "home": "Fiorentina",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-01",
+      "home": "Atalanta",
+      "away": "Venezia",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-01",
+      "home": "Napoli",
+      "away": "Inter",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-01",
+      "home": "Udinese",
+      "away": "Parma",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-02",
+      "home": "Monza",
+      "away": "Torino",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-02",
+      "home": "Genoa",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-02",
+      "home": "Bologna",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-02",
+      "home": "ローマ",
+      "away": "Como",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-02",
+      "home": "ミラン",
+      "away": "Lazio",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 27",
+      "date": "2025-03-03",
+      "home": "Juventus",
+      "away": "Hellas Verona",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-07",
+      "home": "Cagliari",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-08",
+      "home": "Parma",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-08",
+      "home": "Como",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-08",
+      "home": "Lecce",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-08",
+      "home": "Inter",
+      "away": "Monza",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-09",
+      "home": "Hellas Verona",
+      "away": "Bologna",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-09",
+      "home": "Napoli",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-09",
+      "home": "Empoli",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-09",
+      "home": "Juventus",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 28",
+      "date": "2025-03-10",
+      "home": "Lazio",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-14",
+      "home": "Genoa",
+      "away": "Lecce",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-15",
+      "home": "Udinese",
+      "away": "Hellas Verona",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-15",
+      "home": "Monza",
+      "away": "Parma",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-15",
+      "home": "ミラン",
+      "away": "Como",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-15",
+      "home": "Torino",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-16",
+      "home": "Venezia",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-16",
+      "home": "Bologna",
+      "away": "Lazio",
+      "hg": 5,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-16",
+      "home": "ローマ",
+      "away": "Cagliari",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-16",
+      "home": "Fiorentina",
+      "away": "Juventus",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 29",
+      "date": "2025-03-16",
+      "home": "Atalanta",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-29",
+      "home": "Venezia",
+      "away": "Bologna",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-29",
+      "home": "Como",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-29",
+      "home": "Juventus",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-29",
+      "home": "Lecce",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-30",
+      "home": "Cagliari",
+      "away": "Monza",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-30",
+      "home": "Fiorentina",
+      "away": "Atalanta",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-30",
+      "home": "Inter",
+      "away": "Udinese",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-30",
+      "home": "Napoli",
+      "away": "ミラン",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-31",
+      "home": "Hellas Verona",
+      "away": "Parma",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 30",
+      "date": "2025-03-31",
+      "home": "Lazio",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-04",
+      "home": "Genoa",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-05",
+      "home": "Monza",
+      "away": "Como",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-05",
+      "home": "Parma",
+      "away": "Inter",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-05",
+      "home": "ミラン",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-06",
+      "home": "Lecce",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-06",
+      "home": "Torino",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-06",
+      "home": "Empoli",
+      "away": "Cagliari",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-06",
+      "home": "Atalanta",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-06",
+      "home": "ローマ",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 31",
+      "date": "2025-04-07",
+      "home": "Bologna",
+      "away": "Napoli",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-11",
+      "home": "Udinese",
+      "away": "ミラン",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-12",
+      "home": "Venezia",
+      "away": "Monza",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-12",
+      "home": "Inter",
+      "away": "Cagliari",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-12",
+      "home": "Juventus",
+      "away": "Lecce",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-13",
+      "home": "Atalanta",
+      "away": "Bologna",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-13",
+      "home": "Fiorentina",
+      "away": "Parma",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-13",
+      "home": "Hellas Verona",
+      "away": "Genoa",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-13",
+      "home": "Como",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-13",
+      "home": "Lazio",
+      "away": "ローマ",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 32",
+      "date": "2025-04-14",
+      "home": "Napoli",
+      "away": "Empoli",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-19",
+      "home": "Lecce",
+      "away": "Como",
+      "hg": 0,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-19",
+      "home": "Monza",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-19",
+      "home": "ローマ",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-20",
+      "home": "Empoli",
+      "away": "Venezia",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-20",
+      "home": "Bologna",
+      "away": "Inter",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-20",
+      "home": "ミラン",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Cagliari",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Genoa",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Torino",
+      "away": "Udinese",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 33",
+      "date": "2025-04-23",
+      "home": "Parma",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Venezia",
+      "away": "ミラン",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Como",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Fiorentina",
+      "away": "Empoli",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Inter",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Juventus",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Napoli",
+      "away": "Torino",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-27",
+      "home": "Atalanta",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-28",
+      "home": "Udinese",
+      "away": "Bologna",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-28",
+      "home": "Lazio",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 34",
+      "date": "2025-04-28",
+      "home": "Hellas Verona",
+      "away": "Cagliari",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-02",
+      "home": "Torino",
+      "away": "Venezia",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-03",
+      "home": "Cagliari",
+      "away": "Udinese",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-03",
+      "home": "Parma",
+      "away": "Como",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-03",
+      "home": "Lecce",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-03",
+      "home": "Inter",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-04",
+      "home": "Empoli",
+      "away": "Lazio",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-04",
+      "home": "Monza",
+      "away": "Atalanta",
+      "hg": 0,
+      "ag": 4
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-04",
+      "home": "ローマ",
+      "away": "Fiorentina",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-04",
+      "home": "Bologna",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 35",
+      "date": "2025-05-05",
+      "home": "Genoa",
+      "away": "ミラン",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-09",
+      "home": "ミラン",
+      "away": "Bologna",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-10",
+      "home": "Como",
+      "away": "Cagliari",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-10",
+      "home": "Lazio",
+      "away": "Juventus",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-10",
+      "home": "Empoli",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-11",
+      "home": "Udinese",
+      "away": "Monza",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-11",
+      "home": "Hellas Verona",
+      "away": "Lecce",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-11",
+      "home": "Torino",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-11",
+      "home": "Napoli",
+      "away": "Genoa",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-12",
+      "home": "Venezia",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 36",
+      "date": "2025-05-12",
+      "home": "Atalanta",
+      "away": "ローマ",
+      "hg": 2,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-17",
+      "home": "Genoa",
+      "away": "Atalanta",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Cagliari",
+      "away": "Venezia",
+      "hg": 3,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Juventus",
+      "away": "Udinese",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "ローマ",
+      "away": "ミラン",
+      "hg": 3,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Fiorentina",
+      "away": "Bologna",
+      "hg": 3,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Hellas Verona",
+      "away": "Como",
+      "hg": 1,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Inter",
+      "away": "Lazio",
+      "hg": 2,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Parma",
+      "away": "Napoli",
+      "hg": 0,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Lecce",
+      "away": "Torino",
+      "hg": 1,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 37",
+      "date": "2025-05-18",
+      "home": "Monza",
+      "away": "Empoli",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-23",
+      "home": "Napoli",
+      "away": "Cagliari",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-23",
+      "home": "Como",
+      "away": "Inter",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "Bologna",
+      "away": "Genoa",
+      "hg": 1,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-24",
+      "home": "ミラン",
+      "away": "Monza",
+      "hg": 2,
+      "ag": 0
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Lazio",
+      "away": "Lecce",
+      "hg": 0,
+      "ag": 1
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Udinese",
+      "away": "Fiorentina",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Atalanta",
+      "away": "Parma",
+      "hg": 2,
+      "ag": 3
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Torino",
+      "away": "ローマ",
+      "hg": 0,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Empoli",
+      "away": "Hellas Verona",
+      "hg": 1,
+      "ag": 2
+    },
+    {
+      "round": "Regular Season - 38",
+      "date": "2025-05-25",
+      "home": "Venezia",
+      "away": "Juventus",
+      "hg": 2,
+      "ag": 3
+    }
+  ],
+  "source": "API-Football (api-sports.io)",
+  "updated": "2026-10-18T08:06:03.716Z"
+}
