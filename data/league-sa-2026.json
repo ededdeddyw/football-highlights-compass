@@ -715,8 +715,8 @@
       "away": "レッチェ",
       "homeSlug": "udinese",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "F9-EFn_m6lA"
     },
     {
@@ -726,8 +726,8 @@
       "away": "コモ",
       "homeSlug": "fiorentina",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-3",
       "videoId": "Isin_YLLsXY"
     },
     {
@@ -737,8 +737,8 @@
       "away": "アタランタ",
       "homeSlug": "milan",
       "awaySlug": "atalanta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "rReGqs6hQJo"
     },
     {
@@ -748,9 +748,9 @@
       "away": "ラツィオ",
       "homeSlug": "juventus",
       "awaySlug": "lazio",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-3",
+      "videoId": "l-HjruOX_hk"
     },
     {
       "matchday": 7,

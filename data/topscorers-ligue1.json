@@ -2,10 +2,40 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "scorers": [
     {
       "rank": 1,
+      "name": "Esteban Lepaul",
+      "team": "レンヌ",
+      "goals": 7,
+      "assists": null,
+      "pens": 4,
+      "apps": 7,
+      "nat": "France"
+    },
+    {
+      "rank": 2,
+      "name": "Lassine Sinayoko",
+      "team": "パリFC",
+      "goals": 6,
+      "assists": 3,
+      "pens": 3,
+      "apps": 7,
+      "nat": "Mali"
+    },
+    {
+      "rank": 3,
+      "name": "Amine Gouiri",
+      "team": "マルセイユ",
+      "goals": 5,
+      "assists": 1,
+      "pens": 1,
+      "apps": 7,
+      "nat": "Algeria"
+    },
+    {
+      "rank": 4,
       "name": "Casper Tengstedt",
       "team": "トゥールーズ",
       "goals": 5,
@@ -15,17 +45,7 @@
       "nat": "Denmark"
     },
     {
-      "rank": 2,
-      "name": "Amine Gouiri",
-      "team": "マルセイユ",
-      "goals": 4,
-      "assists": 1,
-      "pens": 1,
-      "apps": 6,
-      "nat": "Algeria"
-    },
-    {
-      "rank": 3,
+      "rank": 5,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 4,
@@ -35,7 +55,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 4,
+      "rank": 6,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
@@ -45,17 +65,7 @@
       "nat": "Mali"
     },
     {
-      "rank": 5,
-      "name": "Esteban Lepaul",
-      "team": "レンヌ",
-      "goals": 4,
-      "assists": null,
-      "pens": 1,
-      "apps": 6,
-      "nat": "France"
-    },
-    {
-      "rank": 6,
+      "rank": 7,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
@@ -63,16 +73,6 @@
       "pens": null,
       "apps": 7,
       "nat": "Spain"
-    },
-    {
-      "rank": 7,
-      "name": "Lassine Sinayoko",
-      "team": "パリFC",
-      "goals": 4,
-      "assists": 1,
-      "pens": 2,
-      "apps": 6,
-      "nat": "Mali"
     },
     {
       "rank": 8,
@@ -91,7 +91,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 4,
+      "apps": 5,
       "nat": "England"
     },
     {
@@ -106,6 +106,16 @@
     },
     {
       "rank": 11,
+      "name": "Daniel Namaso",
+      "team": "オセール",
+      "goals": 3,
+      "assists": 2,
+      "pens": 1,
+      "apps": 7,
+      "nat": "Cameroon"
+    },
+    {
+      "rank": 12,
       "name": "Marquinhos",
       "team": "パリ・サンジェルマン",
       "goals": 3,
@@ -115,17 +125,17 @@
       "nat": "Brazil"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Ernest Nuamah",
       "team": "リヨン",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Ghana"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Adil Bourabaa",
       "team": "ルマン",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Algeria"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Franjo Ivanovic",
       "team": "ランス",
       "goals": 2,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 7,
       "nat": "Austria"
-    },
-    {
-      "rank": 15,
-      "name": "Olivier Giroud",
-      "team": "リール",
-      "goals": 2,
-      "assists": 2,
-      "pens": 1,
-      "apps": 7,
-      "nat": "France"
     }
   ]
 }

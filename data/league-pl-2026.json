@@ -726,8 +726,8 @@
       "away": "サンダーランド",
       "homeSlug": "bournemouth",
       "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "AugZFVI84kM"
     },
     {
@@ -737,8 +737,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "leeds-united",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "k6hJH19mkG0"
     },
     {
@@ -748,8 +748,8 @@
       "away": "クリスタル・パレス",
       "homeSlug": "brighton-hove",
       "awaySlug": "crystal-palace",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-0",
       "videoId": "AyZeW_jLZ68"
     },
     {
@@ -759,8 +759,8 @@
       "away": "アーセナル",
       "homeSlug": "nottingham",
       "awaySlug": "arsenal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "UFxeFX9bj1k"
     },
     {

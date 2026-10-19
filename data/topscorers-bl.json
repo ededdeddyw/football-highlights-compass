@@ -2,10 +2,20 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "scorers": [
     {
       "rank": 1,
+      "name": "Patrik Schick",
+      "team": "レバークーゼン",
+      "goals": 6,
+      "assists": 2,
+      "pens": null,
+      "apps": 6,
+      "nat": "Czech Republic"
+    },
+    {
+      "rank": 2,
       "name": "Niclas Füllkrug",
       "team": "ブレーメン",
       "goals": 6,
@@ -15,7 +25,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Michael Olise",
       "team": "バイエルン",
       "goals": 5,
@@ -25,7 +35,7 @@
       "nat": "France"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Younes Ebnoutalib",
       "team": "フランクフルト",
       "goals": 5,
@@ -33,16 +43,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Germany"
-    },
-    {
-      "rank": 4,
-      "name": "Patrik Schick",
-      "team": "レバークーゼン",
-      "goals": 5,
-      "assists": 1,
-      "pens": null,
-      "apps": 5,
-      "nat": "Czech Republic"
     },
     {
       "rank": 5,
@@ -121,7 +121,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Croatia"
     },
     {
@@ -141,7 +141,7 @@
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Germany"
     },
     {

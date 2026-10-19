@@ -583,9 +583,9 @@
       "away": "フライブルク",
       "homeSlug": "bayer-04-leverkusen",
       "awaySlug": "sc-freiburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "RJyDJ_bLnBs"
     },
     {
       "matchday": 6,
@@ -594,8 +594,8 @@
       "away": "ホッフェンハイム",
       "homeSlug": "borussia-monchengladbach",
       "awaySlug": "tsg-hoffenheim",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "XiEWe1AfElI"
     },
     {

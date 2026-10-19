@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "scorers": [
     {
       "rank": 1,
@@ -36,6 +36,16 @@
     },
     {
       "rank": 4,
+      "name": "Marcus Tavernier",
+      "team": "ボーンマス",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "England"
+    },
+    {
+      "rank": 5,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 4,
@@ -45,7 +55,7 @@
       "nat": "England"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Rayan Cherki",
       "team": "マンチェスター・シティ",
       "goals": 4,
@@ -55,17 +65,27 @@
       "nat": "France"
     },
     {
-      "rank": 6,
+      "rank": 7,
+      "name": "Bryan Mbeumo",
+      "team": "マンチェスター・ユナイテッド",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Cameroon"
+    },
+    {
+      "rank": 8,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "England"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "Thierno Barry",
       "team": "エバートン",
       "goals": 3,
@@ -75,17 +95,17 @@
       "nat": "France"
     },
     {
-      "rank": 8,
-      "name": "Marcus Tavernier",
-      "team": "ボーンマス",
+      "rank": 10,
+      "name": "Jack Hinshelwood",
+      "team": "ブライトン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 6,
+      "apps": 2,
       "nat": "England"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Pedro Neto",
       "team": "チェルシー",
       "goals": 3,
@@ -95,17 +115,17 @@
       "nat": "Portugal"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Pascal Groß",
       "team": "ブライトン",
       "goals": 3,
       "assists": 4,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "Germany"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Kevin Schade",
       "team": "ブレントフォード",
       "goals": 3,
@@ -115,44 +135,24 @@
       "nat": "Germany"
     },
     {
-      "rank": 12,
+      "rank": 14,
+      "name": "Dominic Calvert-Lewin",
+      "team": "リーズ",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 7,
+      "nat": "England"
+    },
+    {
+      "rank": 15,
       "name": "Bruno Fernandes",
       "team": "マンチェスター・ユナイテッド",
       "goals": 3,
       "assists": 1,
       "pens": 1,
-      "apps": 6,
-      "nat": "Portugal"
-    },
-    {
-      "rank": 13,
-      "name": "Bryan Mbeumo",
-      "team": "マンチェスター・ユナイテッド",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Cameroon"
-    },
-    {
-      "rank": 14,
-      "name": "Mohamed Belloumi",
-      "team": "ハル・シティ",
-      "goals": 3,
-      "assists": 2,
-      "pens": null,
       "apps": 7,
-      "nat": "Algeria"
-    },
-    {
-      "rank": 15,
-      "name": "Brian Brobbey",
-      "team": "サンダーランド",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 5,
-      "nat": "Netherlands"
+      "nat": "Portugal"
     }
   ]
 }
