@@ -623,6 +623,17 @@
     {
       "matchday": 11,
       "dateUTC": "",
+      "home": "いわきFC",
+      "away": "ヴァンフォーレ甲府",
+      "homeSlug": "iwaki",
+      "awaySlug": "kofu",
+      "finished": true,
+      "score": "",
+      "videoId": "9SHsNdR-_ZI"
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "",
       "home": "カターレ富山",
       "away": "湘南ベルマーレ",
       "homeSlug": "toyama",

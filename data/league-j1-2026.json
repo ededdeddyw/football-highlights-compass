@@ -447,6 +447,17 @@
     {
       "matchday": 10,
       "dateUTC": "",
+      "home": "FC町田ゼルビア",
+      "away": "アビスパ福岡",
+      "homeSlug": "machida",
+      "awaySlug": "fukuoka",
+      "finished": true,
+      "score": "",
+      "videoId": "ZUJjXwk1gD4"
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "",
       "home": "サンフレッチェ広島",
       "away": "京都サンガF.C.",
       "homeSlug": "hiroshima",
@@ -476,6 +487,17 @@
       "finished": true,
       "score": "",
       "videoId": "smoB1QAahNw"
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "",
+      "home": "ファジアーノ岡山",
+      "away": "ヴィッセル神戸",
+      "homeSlug": "okayama",
+      "awaySlug": "kobe",
+      "finished": true,
+      "score": "",
+      "videoId": "pmFoy5A6x5I"
     },
     {
       "matchday": 10,
