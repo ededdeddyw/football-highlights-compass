@@ -1607,7 +1607,10 @@ const RAIL_ALIAS = { 'fc-barcelona':'barcelona', 'real-sociedad':'real-sociedad-
   'bayern-munich':'bayern', 'borussia-dortmund':'dortmund', 'rb-leipzig':'leipzig',
   'eintracht-frankfurt':'frankfurt', 'mainz-05':'mainz', 'werder-bremen':'bremen',
   'as-monaco':'monaco', 'psg':'paris-saint-germain', 'marseille':'olympique-marseille',
-  'ac-milan':'milan', 'inter':'internazionale-milano', 'as-roma':'roma', 'fiorentina':'acf-fiorentina' };
+  'ac-milan':'milan', 'inter':'internazionale-milano', 'as-roma':'roma', 'fiorentina':'acf-fiorentina',
+  // J1：クラブ図鑑slug → 試合データ側の短縮slug（ハイライト/次の試合レールと本文グリッドの引き当て用）
+  'vissel-kobe':'kobe', 'urawa-reds':'urawa', 'yokohama-f-marinos':'yokohama-fm',
+  'kawasaki-frontale':'kawasaki', 'sanfrecce-hiroshima':'hiroshima', 'kashiwa-reysol':'kashiwa' };
 // PAGE2DATA: クラブ図鑑slug → データ側slug を自動解決（既存一致→手動別名→日本語名一致 の順）。
 // slug表記ゆれ（例: fc-barcelona→barca, olympique-lyonnais→olympique-lyon）でも順位表・ハイライト・次の試合の各レールが引き当たる。
 const PAGE2DATA = {};
@@ -2016,7 +2019,8 @@ function roleViz(p, c1, c2) {
 // 本文に差し込む「最新ハイライト」グリッド（サムネ付き）。所属クラブの公式ハイライト試合ページへリンク。
 // 文字偏重を画像で解消する狙い。試合ページが実在するものだけ（デッドリンク防止）。
 function playerHighlightsBody(p) {
-  const base = p.club && CLUBS[p.club] ? CLUBS[p.club].slug : '';
+  // 通常はクラブ図鑑slug。CLUBS未登録クラブ（例: ゲンク/イプスウィッチ）は選手ロスターの hlSlug で補う。
+  const base = (p.club && CLUBS[p.club] ? CLUBS[p.club].slug : '') || p.hlSlug || '';
   if (!base) return '';
   const cs = RAIL_ALIAS[base] || base;
   const hl = (CLUB_HL[cs] || []).filter(h => h && h.ms && h.videoId && existsSync(`site/match/${h.ms}.html`)).slice(0, 6);
