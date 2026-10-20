@@ -990,9 +990,9 @@
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "getafe",
       "awaySlug": "rayo-vallecano",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "YLf6yUhju1o"
     },
     {
       "matchday": 10,

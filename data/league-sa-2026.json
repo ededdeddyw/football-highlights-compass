@@ -759,8 +759,8 @@
       "away": "カリアリ",
       "homeSlug": "monza",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": "ShfNy_mRSto"
     },
     {
@@ -770,8 +770,8 @@
       "away": "トリノ",
       "homeSlug": "parma",
       "awaySlug": "torino",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "tTapYZR1-tA"
     },
     {

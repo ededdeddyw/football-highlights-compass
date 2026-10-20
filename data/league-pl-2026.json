@@ -770,8 +770,8 @@
       "away": "コベントリー",
       "homeSlug": "tottenham",
       "awaySlug": "coventry-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "hlAJAHa0S50"
     },
     {

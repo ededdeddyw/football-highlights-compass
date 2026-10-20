@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "scorers": [
     {
       "rank": 1,
@@ -16,6 +16,16 @@
     },
     {
       "rank": 2,
+      "name": "Gustavo Varela",
+      "team": "モンツァ",
+      "goals": 6,
+      "assists": 1,
+      "pens": 1,
+      "apps": 6,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 3,
       "name": "Donyell Malen",
       "team": "ローマ",
       "goals": 6,
@@ -23,16 +33,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Netherlands"
-    },
-    {
-      "rank": 3,
-      "name": "Gustavo Varela",
-      "team": "モンツァ",
-      "goals": 4,
-      "assists": null,
-      "pens": 1,
-      "apps": 5,
-      "nat": "Portugal"
     },
     {
       "rank": 4,
@@ -81,7 +81,7 @@
       "goals": 4,
       "assists": null,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "Italy"
     },
     {
@@ -116,6 +116,16 @@
     },
     {
       "rank": 12,
+      "name": "Che Adams",
+      "team": "トリノ",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 5,
+      "nat": "Scotland"
+    },
+    {
+      "rank": 13,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
       "goals": 3,
@@ -125,7 +135,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Jurgen Ekkelenkamp",
       "team": "ウディネーゼ",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Milutin Osmajić",
       "team": "ジェノア",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Montenegro"
-    },
-    {
-      "rank": 15,
-      "name": "Giorgi Kvernadze",
-      "team": "フロジノーネ",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 7,
-      "nat": "Georgia"
     }
   ]
 }
