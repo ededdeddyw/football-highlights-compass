@@ -407,8 +407,8 @@
       "away": "ドルトムント",
       "homeSlug": "sabah-fk",
       "awaySlug": "dortmund",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": ""
     },
     {
@@ -418,8 +418,8 @@
       "away": "スラヴィア・プラハ",
       "homeSlug": "fenerbahce",
       "awaySlug": "slavia-praha",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "sLdjKwkgcFM"
     },
     {
@@ -429,8 +429,8 @@
       "away": "AEKアテネ",
       "homeSlug": "man-city",
       "awaySlug": "pae-aek",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-1",
       "videoId": "jsYOVJ-O350"
     },
     {
@@ -440,8 +440,8 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "stuttgart",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -451,8 +451,8 @@
       "away": "ビジャレアル",
       "homeSlug": "liverpool",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-3",
       "videoId": "JxszJQSUtTE"
     },
     {
@@ -462,8 +462,8 @@
       "away": "スロヴァン・ブラチスラヴァ",
       "homeSlug": "roma",
       "awaySlug": "sl-bratislava",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {
@@ -473,8 +473,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "porto",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "d7LWU4qZ8kA"
     },
     {
@@ -484,8 +484,8 @@
       "away": "ボドー/グリムト",
       "homeSlug": "napoli",
       "awaySlug": "bod-glimt",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-3",
       "videoId": ""
     },
     {
@@ -495,8 +495,8 @@
       "away": "バルセロナ",
       "homeSlug": "psg",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-2",
       "videoId": "y7uMHnxMlD4"
     },
     {
