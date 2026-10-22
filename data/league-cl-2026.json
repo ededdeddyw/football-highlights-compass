@@ -506,8 +506,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "como-1907",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": "Mo-10vEgxko"
     },
     {
@@ -517,8 +517,8 @@
       "away": "ガラタサライ",
       "homeSlug": "lille",
       "awaySlug": "galatasaray",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-4",
       "videoId": "FX6eJf-GQag"
     },
     {
@@ -528,8 +528,8 @@
       "away": "ライプツィヒ",
       "homeSlug": "real-madrid",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": "9wYWUFK8OFw"
     },
     {
@@ -539,8 +539,8 @@
       "away": "シャフタール・ドネツク",
       "homeSlug": "inter",
       "awaySlug": "shaktar",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "rjrZZG6LdxU"
     },
     {
@@ -550,8 +550,8 @@
       "away": "アーセナル",
       "homeSlug": "bayern",
       "awaySlug": "arsenal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "CFfVItBrWbM"
     },
     {
@@ -561,8 +561,8 @@
       "away": "ランス",
       "homeSlug": "club-brugge",
       "awaySlug": "rc-lens",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": ""
     },
     {
@@ -572,8 +572,8 @@
       "away": "ヴァイキング",
       "homeSlug": "aston-villa",
       "awaySlug": "viking",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "vOHlQtFM7HA"
     },
     {
@@ -583,8 +583,8 @@
       "away": "LASKリンツ",
       "homeSlug": "sporting-cp",
       "awaySlug": "lask",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {
@@ -594,8 +594,8 @@
       "away": "フェイエノールト",
       "homeSlug": "real-betis",
       "awaySlug": "feyenoord",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {

@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "scorers": [
     {
       "rank": 1,
@@ -116,6 +116,16 @@
     },
     {
       "rank": 12,
+      "name": "Brugui",
+      "team": "レバンテ",
+      "goals": 5,
+      "assists": 1,
+      "pens": null,
+      "apps": 8,
+      "nat": "Spain"
+    },
+    {
+      "rank": 13,
       "name": "Fermín López",
       "team": "バルセロナ",
       "goals": 4,
@@ -125,7 +135,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Mariano Díaz",
       "team": "アラベス",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Dominican Republic"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Álvaro García",
       "team": "ラーヨ・バジェカーノ",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 9,
       "nat": "Spain"
-    },
-    {
-      "rank": 15,
-      "name": "Pape Gueye",
-      "team": "ビジャレアル",
-      "goals": 3,
-      "assists": null,
-      "pens": 1,
-      "apps": 9,
-      "nat": "Senegal"
     }
   ]
 }

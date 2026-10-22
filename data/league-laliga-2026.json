@@ -660,8 +660,8 @@
       "away": "アスレティック・ビルバオ",
       "homeSlug": "levante",
       "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
