@@ -25,6 +25,39 @@
       "finished": true,
       "score": "",
       "videoId": "R-Wm4hrwczo"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ツルヴェナ・ズヴェズダ",
+      "away": "コペンハーゲン",
+      "homeSlug": "x-ツルヴェナズヴ",
+      "awaySlug": "x-コペンハーゲン",
+      "finished": true,
+      "score": "",
+      "videoId": "o52OBp1J-Fo"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "ミッティラン",
+      "away": "シント＝トロイデン",
+      "homeSlug": "x-ミッティラン",
+      "awaySlug": "sint-truiden",
+      "finished": true,
+      "score": "",
+      "videoId": "erKCUFZQdS4"
+    },
+    {
+      "matchday": 2,
+      "dateUTC": "",
+      "home": "モナコ",
+      "away": "フライブルク",
+      "homeSlug": "as-monaco",
+      "awaySlug": "freiburg",
+      "finished": true,
+      "score": "",
+      "videoId": "vsN7AZZD64Y"
     }
   ]
 }
