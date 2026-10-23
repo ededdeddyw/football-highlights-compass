@@ -13787,6 +13787,42 @@
     "hasPreview": true
   },
   {
+    "id": "conference-2526-md2-x-ツルヴェナズヴ-x-コペンハーゲン",
+    "teams": [
+      "ツルヴェナ・ズヴェズダ",
+      "コペンハーゲン"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "conference-2526-md2-x-ミッティラン-sint-truiden",
+    "teams": [
+      "ミッティラン",
+      "シント＝トロイデン"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "conference-2526-md2-as-monaco-freiburg",
+    "teams": [
+      "モナコ",
+      "フライブルク"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第2節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "el-2526-md1-anderlecht-olympique-lyonnais",
     "teams": [
       "アンデルレヒト",
@@ -13881,6 +13917,54 @@
     "meta": "第2節 / 2026-27",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "el-2526-md3-x-ベシクタシュ-crystal-palace",
+    "teams": [
+      "ベシクタシュ",
+      "クリスタル・パレス"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md3-hoffenheim-olympique-lyonnais",
+    "teams": [
+      "ホッフェンハイム",
+      "リヨン"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md3-x-ユヴェントス-stade-rennais",
+    "teams": [
+      "ユヴェントス",
+      "レンヌ"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "el-2526-md3-x-リレストロム-real-sociedad",
+    "teams": [
+      "リレストロム",
+      "レアル・ソシエダ"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": false
   },
   {
     "id": "eredivisie-2526-md1-cambuur-excelsior",
@@ -17156,7 +17240,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第31節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "eredivisie-2526-md31-groningen-den-haag",
@@ -17564,7 +17648,7 @@
     "leagueName": "J1リーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md6-kobe-nagasaki",
@@ -17576,7 +17660,7 @@
     "leagueName": "J1リーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md6-chiba-gamba-osaka",
@@ -17924,7 +18008,7 @@
     "leagueName": "J1リーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md9-fukuoka-okayama",
@@ -18176,7 +18260,7 @@
     "leagueName": "J1リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md11-fukuoka-gamba-osaka",
@@ -18188,7 +18272,7 @@
     "leagueName": "J1リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md11-okayama-mito",
@@ -18368,7 +18452,7 @@
     "leagueName": "J2リーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md6-kofu-iwata",
@@ -18404,7 +18488,7 @@
     "leagueName": "J2リーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md6-miyazaki-fujieda",
@@ -18512,7 +18596,7 @@
     "leagueName": "J2リーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md7-yokohama-fc-imabari",
@@ -18524,7 +18608,7 @@
     "leagueName": "J2リーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md7-shonan-akita",
@@ -18548,7 +18632,7 @@
     "leagueName": "J2リーグ",
     "meta": "第7節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md7-tochigi-city-sendai",
@@ -18620,7 +18704,7 @@
     "leagueName": "J2リーグ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md8-iwata-hachinohe",
@@ -18644,7 +18728,7 @@
     "leagueName": "J2リーグ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md8-akita-niigata",
@@ -18668,7 +18752,7 @@
     "leagueName": "J2リーグ",
     "meta": "第8節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md8-oita-fujieda",
@@ -18704,7 +18788,7 @@
     "leagueName": "J2リーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md9-kofu-toyama",
@@ -18728,7 +18812,7 @@
     "leagueName": "J2リーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md9-miyazaki-omiya",
@@ -18800,7 +18884,7 @@
     "leagueName": "J2リーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md9-sapporo-iwaki",
@@ -18812,7 +18896,7 @@
     "leagueName": "J2リーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-omiya-hachinohe",
@@ -18824,7 +18908,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-iwaki-akita",
@@ -18836,7 +18920,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-kofu-tochigi-city",
@@ -18848,7 +18932,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-toyama-miyazaki",
@@ -18872,7 +18956,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-iwata-sapporo",
@@ -18884,7 +18968,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-yamagata-sendai",
@@ -18896,7 +18980,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-yokohama-fc-oita",
@@ -18908,7 +18992,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md10-shonan-niigata",
@@ -18932,7 +19016,7 @@
     "leagueName": "J2リーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-imabari-hachinohe",
@@ -18968,7 +19052,7 @@
     "leagueName": "J2リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-tosu-omiya",
@@ -18980,7 +19064,7 @@
     "leagueName": "J2リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-miyazaki-iwata",
@@ -19004,7 +19088,7 @@
     "leagueName": "J2リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-oita-niigata",
@@ -19016,7 +19100,7 @@
     "leagueName": "J2リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-fujieda-yamagata",
@@ -19028,7 +19112,7 @@
     "leagueName": "J2リーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md11-tochigi-city-yokohama-fc",
@@ -32735,18 +32819,6 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md8-toulouse-troyes",
-    "teams": [
-      "トゥールーズ",
-      "トロワ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第8節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "ligue1-2526-md8-rc-lens-paris-fc",
     "teams": [
       "ランス",
@@ -32799,6 +32871,18 @@
     "teams": [
       "アンジェ",
       "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第8節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md8-toulouse-troyes",
+    "teams": [
+      "トゥールーズ",
+      "トロワ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33263,10 +33347,22 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md13-troyes-olympique-lyon",
+    "id": "ligue1-2526-md13-toulouse-psg",
     "teams": [
-      "トロワ",
-      "リヨン"
+      "トゥールーズ",
+      "パリ・サンジェルマン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md13-lille-auxerre",
+    "teams": [
+      "リール",
+      "オセール"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33299,54 +33395,6 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md13-lille-auxerre",
-    "teams": [
-      "リール",
-      "オセール"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第13節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md13-marseille-nice",
-    "teams": [
-      "マルセイユ",
-      "ニース"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第13節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md13-stade-rennais-brest",
-    "teams": [
-      "レンヌ",
-      "ブレスト"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第13節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md13-toulouse-psg",
-    "teams": [
-      "トゥールーズ",
-      "パリ・サンジェルマン"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第13節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "ligue1-2526-md13-strasbourg-lorient",
     "teams": [
       "ストラスブール",
@@ -33371,10 +33419,46 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md14-nice-rc-lens",
+    "id": "ligue1-2526-md13-troyes-olympique-lyon",
     "teams": [
-      "ニース",
-      "ランス"
+      "トロワ",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md13-stade-rennais-brest",
+    "teams": [
+      "レンヌ",
+      "ブレスト"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md13-marseille-nice",
+    "teams": [
+      "マルセイユ",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第13節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md14-auxerre-toulouse",
+    "teams": [
+      "オセール",
+      "トゥールーズ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33387,6 +33471,18 @@
     "teams": [
       "パリ・サンジェルマン",
       "パリFC"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第14節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md14-nice-rc-lens",
+    "teams": [
+      "ニース",
+      "ランス"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33431,18 +33527,6 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md14-stade-rennais-monaco",
-    "teams": [
-      "レンヌ",
-      "モナコ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第14節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "ligue1-2526-md14-lorient-lille",
     "teams": [
       "ロリアン",
@@ -33455,10 +33539,10 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md14-auxerre-toulouse",
+    "id": "ligue1-2526-md14-stade-rennais-monaco",
     "teams": [
-      "オセール",
-      "トゥールーズ"
+      "レンヌ",
+      "モナコ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33475,18 +33559,6 @@
     "league": "ligue1",
     "leagueName": "リーグアン",
     "meta": "第14節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md15-le-mans-olympique-lyon",
-    "teams": [
-      "ルマン",
-      "リヨン"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第15節 / 2026-27",
     "players": [],
     "hasPreview": false
   },
@@ -33563,6 +33635,18 @@
     "hasPreview": false
   },
   {
+    "id": "ligue1-2526-md15-le-mans-olympique-lyon",
+    "teams": [
+      "ルマン",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "ligue1-2526-md15-lille-strasbourg",
     "teams": [
       "リール",
@@ -33599,22 +33683,10 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md16-olympique-lyon-lorient",
+    "id": "ligue1-2526-md16-angers-sco-psg",
     "teams": [
-      "リヨン",
-      "ロリアン"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第16節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md16-paris-fc-toulouse",
-    "teams": [
-      "パリFC",
-      "トゥールーズ"
+      "アンジェ",
+      "パリ・サンジェルマン"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33671,6 +33743,18 @@
     "hasPreview": false
   },
   {
+    "id": "ligue1-2526-md16-paris-fc-toulouse",
+    "teams": [
+      "パリFC",
+      "トゥールーズ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "ligue1-2526-md16-monaco-brest",
     "teams": [
       "モナコ",
@@ -33683,10 +33767,10 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md16-angers-sco-psg",
+    "id": "ligue1-2526-md16-olympique-lyon-lorient",
     "teams": [
-      "アンジェ",
-      "パリ・サンジェルマン"
+      "リヨン",
+      "ロリアン"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33695,22 +33779,10 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md17-le-havre-stade-rennais",
+    "id": "ligue1-2526-md17-troyes-monaco",
     "teams": [
-      "ルアーブル",
-      "レンヌ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第17節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md17-strasbourg-olympique-lyon",
-    "teams": [
-      "ストラスブール",
-      "リヨン"
+      "トロワ",
+      "モナコ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
@@ -33755,30 +33827,6 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md17-troyes-monaco",
-    "teams": [
-      "トロワ",
-      "モナコ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第17節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md17-lorient-marseille",
-    "teams": [
-      "ロリアン",
-      "マルセイユ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第17節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "ligue1-2526-md17-le-mans-angers-sco",
     "teams": [
       "ルマン",
@@ -33803,74 +33851,38 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md18-paris-fc-auxerre",
+    "id": "ligue1-2526-md17-le-havre-stade-rennais",
     "teams": [
-      "パリFC",
-      "オセール"
+      "ルアーブル",
+      "レンヌ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
+    "meta": "第17節 / 2026-27",
     "players": [],
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md18-olympique-lyon-lille",
+    "id": "ligue1-2526-md17-lorient-marseille",
     "teams": [
-      "リヨン",
-      "リール"
+      "ロリアン",
+      "マルセイユ"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
+    "meta": "第17節 / 2026-27",
     "players": [],
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md18-stade-rennais-lorient",
+    "id": "ligue1-2526-md17-strasbourg-olympique-lyon",
     "teams": [
-      "レンヌ",
-      "ロリアン"
+      "ストラスブール",
+      "リヨン"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md18-le-mans-nice",
-    "teams": [
-      "ルマン",
-      "ニース"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md18-marseille-troyes",
-    "teams": [
-      "マルセイユ",
-      "トロワ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ligue1-2526-md18-angers-sco-le-havre",
-    "teams": [
-      "アンジェ",
-      "ルアーブル"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第18節 / 2026-27",
+    "meta": "第17節 / 2026-27",
     "players": [],
     "hasPreview": false
   },
@@ -33899,10 +33911,82 @@
     "hasPreview": false
   },
   {
+    "id": "ligue1-2526-md18-paris-fc-auxerre",
+    "teams": [
+      "パリFC",
+      "オセール"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-le-mans-nice",
+    "teams": [
+      "ルマン",
+      "ニース"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-angers-sco-le-havre",
+    "teams": [
+      "アンジェ",
+      "ルアーブル"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "ligue1-2526-md18-toulouse-rc-lens",
     "teams": [
       "トゥールーズ",
       "ランス"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-stade-rennais-lorient",
+    "teams": [
+      "レンヌ",
+      "ロリアン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-marseille-troyes",
+    "teams": [
+      "マルセイユ",
+      "トロワ"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md18-olympique-lyon-lille",
+    "teams": [
+      "リヨン",
+      "リール"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",
