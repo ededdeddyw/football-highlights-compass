@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "scorers": [
     {
       "rank": 1,
@@ -61,7 +61,7 @@
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 7,
+      "apps": 8,
       "nat": "Mali"
     },
     {
@@ -126,6 +126,16 @@
     },
     {
       "rank": 13,
+      "name": "Ludovic Ajorque",
+      "team": "ブレスト",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 8,
+      "nat": "France"
+    },
+    {
+      "rank": 14,
       "name": "Ernest Nuamah",
       "team": "リヨン",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "Ghana"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Adil Bourabaa",
       "team": "ルマン",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 5,
       "nat": "Algeria"
-    },
-    {
-      "rank": 15,
-      "name": "Franjo Ivanovic",
-      "team": "ランス",
-      "goals": 2,
-      "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "Austria"
     }
   ]
 }

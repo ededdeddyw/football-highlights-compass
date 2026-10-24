@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "scorers": [
     {
       "rank": 1,
@@ -111,7 +111,7 @@
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Argentina"
     },
     {
@@ -136,23 +136,23 @@
     },
     {
       "rank": 14,
+      "name": "Adrián",
+      "team": "マラガ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 6,
+      "nat": "Spain"
+    },
+    {
+      "rank": 15,
       "name": "Mariano Díaz",
       "team": "アラベス",
       "goals": 3,
       "assists": 4,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Dominican Republic"
-    },
-    {
-      "rank": 15,
-      "name": "Álvaro García",
-      "team": "ラーヨ・バジェカーノ",
-      "goals": 3,
-      "assists": 2,
-      "pens": null,
-      "apps": 9,
-      "nat": "Spain"
     }
   ]
 }

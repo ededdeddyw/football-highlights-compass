@@ -2,10 +2,20 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "scorers": [
     {
       "rank": 1,
+      "name": "Gustavo Varela",
+      "team": "モンツァ",
+      "goals": 7,
+      "assists": 1,
+      "pens": 1,
+      "apps": 7,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 2,
       "name": "Antonio Raimondo",
       "team": "フロジノーネ",
       "goals": 7,
@@ -13,16 +23,6 @@
       "pens": null,
       "apps": 7,
       "nat": "Italy"
-    },
-    {
-      "rank": 2,
-      "name": "Gustavo Varela",
-      "team": "モンツァ",
-      "goals": 6,
-      "assists": 1,
-      "pens": 1,
-      "apps": 6,
-      "nat": "Portugal"
     },
     {
       "rank": 3,
@@ -121,7 +121,7 @@
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Scotland"
     },
     {

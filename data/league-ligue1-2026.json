@@ -704,8 +704,8 @@
       "away": "ニース",
       "homeSlug": "brest",
       "awaySlug": "nice",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "QFMGPD-EVEw"
     },
     {
@@ -787,7 +787,7 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-25T19:45:00Z",
+      "dateUTC": "2026-10-26T19:30:00Z",
       "home": "パリ・サンジェルマン",
       "away": "リヨン",
       "homeSlug": "psg",

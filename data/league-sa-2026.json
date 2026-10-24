@@ -781,8 +781,8 @@
       "away": "モンツァ",
       "homeSlug": "torino",
       "awaySlug": "monza",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "PBvIMLJqQZY"
     },
     {

@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "scorers": [
     {
       "rank": 1,
@@ -126,28 +126,28 @@
     },
     {
       "rank": 13,
-      "name": "Maurice Krattenmacher",
-      "team": "エルファースベルク",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 6,
-      "nat": "Germany"
-    },
-    {
-      "rank": 14,
-      "name": "Maximilian Eggestein",
-      "team": "フライブルク",
+      "name": "Ermedin Demirovic",
+      "team": "シュツットガルト",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 6,
-      "nat": "Germany"
+      "apps": 7,
+      "nat": "Bosnia-Herzegovina"
+    },
+    {
+      "rank": 14,
+      "name": "Joseph Scally",
+      "team": "ボルシアMG",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 7,
+      "nat": "USA"
     },
     {
       "rank": 15,
-      "name": "Jonathan Burkardt",
-      "team": "フランクフルト",
+      "name": "Maurice Krattenmacher",
+      "team": "エルファースベルク",
       "goals": 3,
       "assists": 1,
       "pens": null,

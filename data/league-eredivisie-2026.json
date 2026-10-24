@@ -902,8 +902,8 @@
       "away": "テルスター",
       "homeSlug": "go-ahead",
       "awaySlug": "telstar",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": ""
     },
     {

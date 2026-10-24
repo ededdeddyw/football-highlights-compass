@@ -605,9 +605,9 @@
       "away": "ボルシアMG",
       "homeSlug": "vfb-stuttgart",
       "awaySlug": "borussia-monchengladbach",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-3",
+      "videoId": "ctqMymG523I"
     },
     {
       "matchday": 7,
