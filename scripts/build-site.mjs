@@ -2241,6 +2241,30 @@ function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
 // CL/EL 歴代決勝データ（data/*-finals.json、出典Wikipedia）。クラブ名はjaTeamHで可能な範囲で日本語化。
 const CL_FINALS = (()=>{ try { return existsSync('data/cl-finals.json') ? JSON.parse(readFileSync('data/cl-finals.json','utf8')) : null; } catch(e){ return null; } })();
 const EL_FINALS = (()=>{ try { return existsSync('data/el-finals.json') ? JSON.parse(readFileSync('data/el-finals.json','utf8')) : null; } catch(e){ return null; } })();
+// ネーションズリーグ 歴代決勝（data/nations-finals.json、出典Wikipedia）。国名は日本語保持。
+const NATIONS_FINALS = (()=>{ try { return existsSync('data/nations-finals.json') ? JSON.parse(readFileSync('data/nations-finals.json','utf8')) : null; } catch(e){ return null; } })();
+// ネーションズリーグ 歴代成績ページ本文（優勝一覧テーブル＋記録＋各大会メモ）。最大流入源の情報を厚くする。
+function nationsFinalsBody(){
+  const d = NATIONS_FINALS; if(!d || !Array.isArray(d.editions) || !d.editions.length) return '<div class="post-body"><p>データを準備中です。</p></div>';
+  const ed = d.editions.slice().sort((a,b)=>String(b.season).localeCompare(String(a.season))); // 新しい順
+  const cLink = ja => (typeof PAGE_OF!=='undefined' && PAGE_OF[ja]) ? `<a href="../${PAGE_OF[ja]}">${esc(ja)}</a>` : esc(ja);
+  const css = `<style>.nlh{overflow-x:auto;margin:10px 0}.nlh table{border-collapse:collapse;width:100%;font-size:13px;min-width:460px}.nlh th,.nlh td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.nlh th{color:var(--muted);font-weight:700;font-size:11.5px}.nlh td.win{font-weight:800}.nlh td.sc{font-variant-numeric:tabular-nums;color:var(--muted)}.nlrec{list-style:none;margin:8px 0;padding:0}.nlrec li{padding:7px 2px 7px 22px;border-bottom:1px solid var(--line);font-size:13.5px;position:relative}.nlrec li::before{content:'🏅';position:absolute;left:0;top:7px;font-size:12px}.nlnote{margin:8px 0}.nlnote .ed{font-weight:800;color:var(--accent);font-size:13px;margin:12px 2px 4px}.nlnote p{margin:2px 2px 8px;font-size:13.5px}</style>`;
+  const rows = ed.map(e=>`<tr><td>${esc(e.season)}</td><td class="win">🏆 ${cLink(e.champion)}</td><td class="sc">${esc(e.score||'')}</td><td>${cLink(e.runnerUp)}</td><td>${e.third?cLink(e.third):''}</td><td>${esc(e.host||'')}</td></tr>`).join('');
+  const notes = ed.map(e=>`<div class="ed">${esc(e.season)}：${esc(e.champion)}優勝</div>${e.note?`<p>${esc(e.note)}</p>`:''}`).join('');
+  return `<div class="post-body">
+    <p>UEFAネーションズリーグ（2018-19シーズン開幕）の<strong>歴代の決勝ラウンド結果</strong >を、優勝国・決勝スコア・準優勝・3位・開催地までまとめました。出典はWikipedia各大会ページです。スコアは確定した歴史記録で、現行試合のネタバレ防止とは別です。</p>
+  </div>
+  ${css}
+  <h2 class="lined">歴代の優勝・決勝ラウンド成績</h2>
+  <div class="nlh"><table><thead><tr><th>大会</th><th>優勝</th><th>決勝スコア</th><th>準優勝</th><th>3位</th><th>開催地</th></tr></thead><tbody>${rows}</tbody></table></div>
+  ${Array.isArray(d.records)&&d.records.length?`<h2 class="lined">記録・トピック</h2><ul class="nlrec">${d.records.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:''}
+  <h2 class="lined">各大会のポイント</h2>
+  <div class="nlnote">${notes}</div>
+  <h2 class="lined">大会フォーマットのおさらい</h2>
+  <div class="post-body"><p>ネーションズリーグは参加国を実力別にリーグA〜Dへ振り分け、グループ戦の成績で昇格・降格が決まります。最上位リーグAを勝ち上がった国が決勝ラウンド（ファイナル4）で優勝を争います。仕組みの詳細は<a href="./uefa-nations-league-guide.html">UEFAネーションズリーグ完全ガイド</a>で解説しています。</p>
+  <p>当サイトでは各大会の公式ハイライトを<strong>スコアを隠したネタバレ防止表示</strong>で掲載しています。</p></div>
+  <p style="margin-top:14px"><a href="../league/nations-league.html">▶ ネーションズリーグ（リーグA〜D・最新ハイライト）</a></p>`;
+}
 // 確定移籍データ（data/transfers.json）。記事本文は転載せず、事実＋出典リンクのみ。噂は載せない（確定のみ）。
 const TRANSFERS = (()=>{ try { return existsSync('data/transfers.json') ? JSON.parse(readFileSync('data/transfers.json','utf8')) : null; } catch(e){ return null; } })();
 // 収録選手の確定移籍まとめ本文を生成。選手ページ・移籍先クラブページへ内部リンク、出典は外部nofollow。
@@ -2304,6 +2328,12 @@ const GUIDES = [
     dek:'UEFAヨーロッパリーグ（UEFAカップ時代を含む）の歴代決勝と優勝クラブを一覧に。最多7回のセビージャから直近の王者まで、年度別の決勝カードとスコアでたどれます。',
     desc:'UEFAヨーロッパリーグの歴代決勝・優勝クラブ一覧。最多7回のセビージャほか優勝回数ランキングと、1972年からの年度別の決勝（優勝・準優勝・スコア）。出典Wikipedia・ネタバレ防止方針。',
     body(){ return finalsGuideBody(EL_FINALS, 'UEFAヨーロッパリーグ', 'europa-league', 'europa-league-finals-history'); } },
+  { slug:'nations-league-past-winners', entities:['ポルトガル','フランス','スペイン'],
+    title:'ネーションズリーグ 歴代優勝国・決勝成績一覧｜UEFAネーションズリーグ',
+    h1:'UEFAネーションズリーグ 歴代優勝国・決勝成績',
+    dek:'UEFAネーションズリーグの歴代優勝国を、決勝スコア・準優勝・3位・開催地まで一覧に。2018-19のポルトガルから直近大会まで、大会の歩みと記録でたどれます。',
+    desc:'UEFAネーションズリーグの歴代優勝国・決勝成績一覧。2018-19ポルトガルから直近まで、決勝スコア・準優勝・3位・開催地・得点王などの記録を網羅。出典Wikipedia・ネタバレ防止方針。',
+    body(){ return nationsFinalsBody(); } },
   { slug:'major-transfers-confirmed', entities:[],
     title:'主要選手の移籍まとめ（確定・出典つき）｜最新の移籍情報',
     h1:'主要選手の移籍まとめ（確定・出典つき）',
@@ -2786,6 +2816,7 @@ function buildLeague(h){
   ${groupBlock}
   ${LEAGUE_GUIDE[h.code]?`<p style="margin:10px 2px 0"><a href="../guide/${LEAGUE_GUIDE[h.code].slug}.html">📘 ${esc(h.name)}の仕組みを完全ガイドで読む（${esc(LEAGUE_GUIDE[h.code].tag)}）</a></p>`:''}
   ${(()=>{ const rel=(LEAGUE_RELATED_GUIDES[h.code]||[]).filter(g=>GUIDE_SLUGS.has(g.slug)); return rel.length?`<div class="hub-guides"><h2 class="lined">関連する解説記事</h2><div class="chips">${rel.map(g=>`<a href="../guide/${g.slug}.html">📘 ${esc(g.label)}</a>`).join('')}</div></div>`:''; })()}
+  ${(h.code==='nations' && typeof NATIONS_FINALS!=='undefined' && NATIONS_FINALS && Array.isArray(NATIONS_FINALS.editions) && NATIONS_FINALS.editions.length)?(()=>{ const ed=NATIONS_FINALS.editions.slice().sort((a,b)=>String(b.season).localeCompare(String(a.season))); const cl=ja=>PAGE_OF[ja]?`<a href="../${PAGE_OF[ja]}">${esc(ja)}</a>`:esc(ja); return `<div class="hub-guides"><h2 class="lined">歴代優勝国</h2><div class="chips">${ed.map(e=>`<span class="pl-badge" style="background:rgba(127,127,127,.14)">${esc(e.season)} 🏆 ${cl(e.champion)}</span>`).join('')}</div><p style="margin:8px 2px 0"><a href="../guide/nations-league-past-winners.html"><b>▶ 歴代優勝国・決勝成績の詳細（スコア・3位・開催地・記録）</b></a></p></div>`; })():''}
   ${mdNavBlock}
   ${histBlock}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
