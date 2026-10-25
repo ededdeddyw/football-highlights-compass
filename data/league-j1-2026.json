@@ -663,6 +663,61 @@
       "finished": true,
       "score": "",
       "videoId": "uGsmZLcg1c8"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "ヴィッセル神戸",
+      "away": "FC町田ゼルビア",
+      "homeSlug": "kobe",
+      "awaySlug": "machida",
+      "finished": true,
+      "score": "",
+      "videoId": "iB1fLAEVspA"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "ガンバ大阪",
+      "away": "京都サンガF.C.",
+      "homeSlug": "gamba-osaka",
+      "awaySlug": "kyoto-sanga",
+      "finished": true,
+      "score": "",
+      "videoId": "u00wQBNcYjs"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "サンフレッチェ広島",
+      "away": "清水エスパルス",
+      "homeSlug": "hiroshima",
+      "awaySlug": "shimizu",
+      "finished": true,
+      "score": "",
+      "videoId": "CuHl2er2rkA"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "鹿島アントラーズ",
+      "away": "柏レイソル",
+      "homeSlug": "kashima",
+      "awaySlug": "kashiwa",
+      "finished": true,
+      "score": "",
+      "videoId": "ohIj2ubCTT0"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "東京ヴェルディ",
+      "away": "アビスパ福岡",
+      "homeSlug": "tokyo-verdy",
+      "awaySlug": "fukuoka",
+      "finished": true,
+      "score": "",
+      "videoId": "nIWlYrsIzHg"
     }
   ]
 }
