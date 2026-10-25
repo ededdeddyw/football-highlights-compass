@@ -1,0 +1,38 @@
+{
+  "_note": "UEFAチャンピオンズリーグ（欧州チャンピオンズカップ時代含む）歴代決勝。出典: Wikipedia『List of European Cup and UEFA Champions League finals』。クラブ名はビルド時に可能な範囲で日本語化。",
+  "comp": "UEFAチャンピオンズリーグ",
+  "source": "Wikipedia (List of European Cup and UEFA Champions League finals)",
+  "titles": [
+    ["Real Madrid", 15], ["Milan", 7], ["Bayern Munich", 6], ["Liverpool", 6], ["Barcelona", 5],
+    ["Ajax", 4], ["Inter Milan", 3], ["Manchester United", 3], ["Benfica", 2], ["Chelsea", 2],
+    ["Juventus", 2], ["Nottingham Forest", 2], ["Paris Saint-Germain", 2], ["Porto", 2],
+    ["Aston Villa", 1], ["Borussia Dortmund", 1], ["Celtic", 1], ["Feyenoord", 1], ["Hamburger SV", 1],
+    ["Manchester City", 1], ["Marseille", 1], ["PSV Eindhoven", 1], ["Red Star Belgrade", 1], ["Steaua București", 1]
+  ],
+  "finals": [
+    [1956, "Real Madrid", "4–3", "Reims"], [1957, "Real Madrid", "2–0", "Fiorentina"], [1958, "Real Madrid", "3–2 (延長)", "Milan"],
+    [1959, "Real Madrid", "2–0", "Reims"], [1960, "Real Madrid", "7–3", "Eintracht Frankfurt"], [1961, "Benfica", "3–2", "Barcelona"],
+    [1962, "Benfica", "5–3", "Real Madrid"], [1963, "Milan", "2–1", "Benfica"], [1964, "Inter Milan", "3–1", "Real Madrid"],
+    [1965, "Inter Milan", "1–0", "Benfica"], [1966, "Real Madrid", "2–1", "Partizan"], [1967, "Celtic", "2–1", "Inter Milan"],
+    [1968, "Manchester United", "4–1 (延長)", "Benfica"], [1969, "Milan", "4–1", "Ajax"], [1970, "Feyenoord", "2–1 (延長)", "Celtic"],
+    [1971, "Ajax", "2–0", "Panathinaikos"], [1972, "Ajax", "2–0", "Inter Milan"], [1973, "Ajax", "1–0", "Juventus"],
+    [1974, "Bayern Munich", "1–1 (再試合 4–0)", "Atlético Madrid"], [1975, "Bayern Munich", "2–0", "Leeds United"], [1976, "Bayern Munich", "1–0", "Saint-Étienne"],
+    [1977, "Liverpool", "3–1", "Borussia Mönchengladbach"], [1978, "Liverpool", "1–0", "Club Brugge"], [1979, "Nottingham Forest", "1–0", "Malmö FF"],
+    [1980, "Nottingham Forest", "1–0", "Hamburger SV"], [1981, "Liverpool", "1–0", "Real Madrid"], [1982, "Aston Villa", "1–0", "Bayern Munich"],
+    [1983, "Hamburger SV", "1–0", "Juventus"], [1984, "Liverpool", "1–1 (PK)", "Roma"], [1985, "Juventus", "1–0", "Liverpool"],
+    [1986, "Steaua București", "0–0 (PK)", "Barcelona"], [1987, "Porto", "2–1", "Bayern Munich"], [1988, "PSV Eindhoven", "0–0 (PK)", "Benfica"],
+    [1989, "Milan", "4–0", "Steaua București"], [1990, "Milan", "1–0", "Benfica"], [1991, "Red Star Belgrade", "0–0 (PK)", "Marseille"],
+    [1992, "Barcelona", "1–0 (延長)", "Sampdoria"], [1993, "Marseille", "1–0", "Milan"], [1994, "Milan", "4–0", "Barcelona"],
+    [1995, "Ajax", "1–0", "Milan"], [1996, "Juventus", "1–1 (PK)", "Ajax"], [1997, "Borussia Dortmund", "3–1", "Juventus"],
+    [1998, "Real Madrid", "1–0", "Juventus"], [1999, "Manchester United", "2–1", "Bayern Munich"],
+    [2000, "Real Madrid", "3–0", "Valencia"], [2001, "Bayern Munich", "1–1 (PK)", "Valencia"], [2002, "Real Madrid", "2–1", "Bayer Leverkusen"],
+    [2003, "Milan", "0–0 (PK)", "Juventus"], [2004, "Porto", "3–0", "Monaco"], [2005, "Liverpool", "3–3 (PK)", "Milan"],
+    [2006, "Barcelona", "2–1", "Arsenal"], [2007, "Milan", "2–1", "Liverpool"], [2008, "Manchester United", "1–1 (PK)", "Chelsea"],
+    [2009, "Barcelona", "2–0", "Manchester United"], [2010, "Inter Milan", "2–0", "Bayern Munich"], [2011, "Barcelona", "3–1", "Manchester United"],
+    [2012, "Chelsea", "1–1 (PK)", "Bayern Munich"], [2013, "Bayern Munich", "2–1", "Borussia Dortmund"], [2014, "Real Madrid", "4–1 (延長)", "Atlético Madrid"],
+    [2015, "Barcelona", "3–1", "Juventus"], [2016, "Real Madrid", "1–1 (PK)", "Atlético Madrid"], [2017, "Real Madrid", "4–1", "Juventus"],
+    [2018, "Real Madrid", "3–1", "Liverpool"], [2019, "Liverpool", "2–0", "Tottenham Hotspur"], [2020, "Bayern Munich", "1–0", "Paris Saint-Germain"],
+    [2021, "Chelsea", "1–0", "Manchester City"], [2022, "Real Madrid", "1–0", "Liverpool"], [2023, "Manchester City", "1–0", "Inter Milan"],
+    [2024, "Real Madrid", "2–0", "Borussia Dortmund"], [2025, "Paris Saint-Germain", "5–0", "Inter Milan"], [2026, "Paris Saint-Germain", "1–1 (PK)", "Arsenal"]
+  ]
+}

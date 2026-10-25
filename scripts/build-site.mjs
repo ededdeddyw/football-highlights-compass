@@ -245,7 +245,11 @@ const LEAGUE_RELATED_GUIDES = {
     { slug:'fifa-international-match-calendar', label:'代表ウィーク（国際マッチデー）とは' },
   ],
   cl: [
+    { slug:'champions-league-finals-history', label:'チャンピオンズリーグ 歴代決勝・優勝クラブ一覧' },
     { slug:'champions-league-past-winners', label:'チャンピオンズリーグ 歴代優勝クラブ' },
+  ],
+  el: [
+    { slug:'europa-league-finals-history', label:'ヨーロッパリーグ 歴代決勝・優勝クラブ一覧' },
   ],
   jpn: [
     { slug:'japan-world-cup-history', label:'日本代表 ワールドカップの歴史' },
@@ -2207,7 +2211,42 @@ function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
       ${club?`<p style="margin-top:14px"><a href="../${club}">▶ ${clubLabel}のクラブページ（歴史・所属日本人選手）</a></p>`:''}`;
     } };
 }
+// CL/EL 歴代決勝データ（data/*-finals.json、出典Wikipedia）。クラブ名はjaTeamHで可能な範囲で日本語化。
+const CL_FINALS = (()=>{ try { return existsSync('data/cl-finals.json') ? JSON.parse(readFileSync('data/cl-finals.json','utf8')) : null; } catch(e){ return null; } })();
+const EL_FINALS = (()=>{ try { return existsSync('data/el-finals.json') ? JSON.parse(readFileSync('data/el-finals.json','utf8')) : null; } catch(e){ return null; } })();
+// 歴代決勝ガイドの本文を生成（優勝回数ランキング＋全決勝一覧）。jaTeamHは後方で定義されるが呼び出し時には解決済み。
+function finalsGuideBody(d, compLabel, hubSlug, guideSlug){
+  if(!d) return '<div class="post-body"><p>データを準備中です。</p></div>';
+  const jt = (typeof jaTeamH==='function') ? jaTeamH : (x=>x);
+  const titleRows = (d.titles||[]).map(([club,n])=>`<li><span class="rk-n">${esc(jt(club))}</span><span class="rk-v">${n}回</span></li>`).join('');
+  const finals = (d.finals||[]).slice().sort((a,b)=>b[0]-a[0]);   // 新しい順
+  const finalRows = finals.map(([yr,win,sc,ru])=>`<tr><td class="rk">${yr}</td><td class="tm"><b>${esc(jt(win))}</b></td><td style="color:var(--muted);font-variant-numeric:tabular-nums">${esc(sc)}</td><td class="tm">${esc(jt(ru))}</td></tr>`).join('');
+  const css = `<style>.flrank{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0}.flrank .rank-list{flex:1;min-width:220px;list-style:none;margin:0;padding:0;counter-reset:rk}.flrank .rank-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13.5px;counter-increment:rk}.flrank .rank-list li::before{content:counter(rk);color:var(--muted);font-weight:800;min-width:1.5em}.flrank .rk-n{flex:1;font-weight:700}.flrank .rk-v{font-weight:800;color:var(--accent)}.fltab{overflow-x:auto;margin:8px 0}.fltab table{border-collapse:collapse;width:100%;font-size:13px;min-width:360px}.fltab th,.fltab td{padding:6px 8px;border-bottom:1px solid var(--line)}.fltab th{color:var(--muted);font-weight:700;font-size:11.5px;text-align:left}.fltab td.rk{color:var(--muted);width:3em;font-weight:700}.fltab td.tm{font-weight:600}</style>`;
+  const half = Math.ceil((d.titles||[]).length/2);
+  const col1 = (d.titles||[]).slice(0,half).map(([c,n])=>`<li><span class="rk-n">${esc(jt(c))}</span><span class="rk-v">${n}回</span></li>`).join('');
+  const col2 = (d.titles||[]).slice(half).map(([c,n])=>`<li><span class="rk-n">${esc(jt(c))}</span><span class="rk-v">${n}回</span></li>`).join('');
+  return `<div class="post-body"><p>${esc(compLabel)}（前身の大会時代を含む）の<strong>歴代決勝・優勝クラブ</strong>を一覧にまとめました。出典はWikipediaの決勝一覧で、クラブ名は可能な範囲で日本語表記にしています。</p></div>
+    ${css}
+    <h2 class="lined">優勝回数ランキング（全期間）</h2>
+    <div class="flrank"><ol class="rank-list">${col1}</ol><ol class="rank-list" start="${half+1}">${col2}</ol></div>
+    <h2 class="lined">歴代決勝一覧（新しい順）</h2>
+    <div class="fltab"><table><thead><tr><th>年</th><th>優勝</th><th>スコア</th><th>準優勝</th></tr></thead><tbody>${finalRows}</tbody></table></div>
+    <p class="stand-note" style="font-size:11.5px;color:var(--muted);margin:6px 2px">※ スコアは決勝のもの（延長・PK・2戦制の表記を含む）。歴代の確定記録であり、現行の動画のネタバレではありません。出典: ${esc(d.source||'Wikipedia')}。</p>
+    <p style="margin-top:14px"><a href="../league/${hubSlug}.html">▶ ${esc(compLabel)}（順位・最新ハイライト）</a></p>`;
+}
 const GUIDES = [
+  { slug:'champions-league-finals-history', entities:[],
+    title:'チャンピオンズリーグ 歴代決勝・優勝クラブ一覧（1956〜）',
+    h1:'UEFAチャンピオンズリーグ 歴代決勝・優勝クラブ',
+    dek:'UEFAチャンピオンズリーグ（欧州チャンピオンズカップ時代を含む）の歴代決勝と優勝クラブを一覧に。最多15回のレアル・マドリードから直近の王者まで、年度別の決勝カードとスコアでたどれます。',
+    desc:'UEFAチャンピオンズリーグの歴代決勝・優勝クラブ一覧。最多15回のレアル・マドリードほか優勝回数ランキングと、1956年からの年度別の決勝（優勝・準優勝・スコア）。出典Wikipedia・ネタバレ防止方針。',
+    body(){ return finalsGuideBody(CL_FINALS, 'UEFAチャンピオンズリーグ', 'champions-league', 'champions-league-finals-history'); } },
+  { slug:'europa-league-finals-history', entities:[],
+    title:'ヨーロッパリーグ 歴代決勝・優勝クラブ一覧（UEFAカップ時代含む）',
+    h1:'UEFAヨーロッパリーグ 歴代決勝・優勝クラブ',
+    dek:'UEFAヨーロッパリーグ（UEFAカップ時代を含む）の歴代決勝と優勝クラブを一覧に。最多7回のセビージャから直近の王者まで、年度別の決勝カードとスコアでたどれます。',
+    desc:'UEFAヨーロッパリーグの歴代決勝・優勝クラブ一覧。最多7回のセビージャほか優勝回数ランキングと、1972年からの年度別の決勝（優勝・準優勝・スコア）。出典Wikipedia・ネタバレ防止方針。',
+    body(){ return finalsGuideBody(EL_FINALS, 'UEFAヨーロッパリーグ', 'europa-league', 'europa-league-finals-history'); } },
   { slug:'world-cup-2026-how-to-watch', entities:['日本'],
     title:'2026 FIFAワールドカップを日本から観る方法｜公式ハイライト全試合まとめ',
     h1:'2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ',
@@ -2809,6 +2848,32 @@ const TEAM_EN2JA = (() => {
     for (const [ja, arr] of Object.entries(al)) { if (ja.startsWith('_') || !Array.isArray(arr)) continue; map[norm(ja)] = ja; for (const a of arr) add(a, ja); } } catch (e) {}
   try { const lt = JSON.parse(readFileSync('data/league-teams.json', 'utf8'));
     for (const [src, ja] of Object.entries(lt)) { if (src.startsWith('_') || typeof ja !== 'string') continue; add(src, ja); } } catch (e) {}
+  // 歴代欧州カップ決勝に登場する主要クラブ（現行リーグ辞書に無い名称）を補完。
+  const HIST = {
+    'Ajax': 'アヤックス', 'Benfica': 'ベンフィカ', 'Porto': 'ポルト', 'FC Porto': 'ポルト',
+    'Celtic': 'セルティック', 'Feyenoord': 'フェイエノールト', 'PSV Eindhoven': 'PSV', 'PSV': 'PSV',
+    'Red Star Belgrade': 'レッドスター・ベオグラード', 'Steaua București': 'ステアウア・ブカレスト',
+    'Sampdoria': 'サンプドリア', 'Panathinaikos': 'パナシナイコス', 'Partizan': 'パルチザン',
+    'Reims': 'ランス', 'Stade de Reims': 'ランス', 'Malmö FF': 'マルメ', 'Saint-Étienne': 'サンテティエンヌ',
+    'Leeds United': 'リーズ', 'Club Brugge': 'クラブ・ブルッヘ', 'Monaco': 'モナコ',
+    'Nottingham Forest': 'ノッティンガム・フォレスト', 'Red Star': 'レッドスター・ベオグラード',
+    'Sevilla': 'セビージャ', 'Valencia': 'バレンシア', 'Villarreal': 'ビジャレアル',
+    'Espanyol': 'エスパニョール', 'Alavés': 'アラベス', 'Athletic Bilbao': 'アスレティック・ビルバオ',
+    'Fiorentina': 'フィオレンティーナ', 'Lazio': 'ラツィオ', 'Roma': 'ローマ', 'Parma': 'パルマ',
+    'Napoli': 'ナポリ', 'Torino': 'トリノ', 'Atalanta': 'アタランタ',
+    'Anderlecht': 'アンデルレヒト', 'Galatasaray': 'ガラタサライ', 'Rangers': 'レンジャーズ',
+    'Arsenal': 'アーセナル', 'Fulham': 'フラム', 'Middlesbrough': 'ミドルズブラ',
+    'Shakhtar Donetsk': 'シャフタール・ドネツク', 'Zenit Saint Petersburg': 'ゼニト',
+    'CSKA Moscow': 'CSKAモスクワ', 'Sporting CP': 'スポルティング', 'Braga': 'ブラガ',
+    'Werder Bremen': 'ヴェルダー・ブレーメン', 'Bordeaux': 'ボルドー', 'Marseille': 'マルセイユ',
+    'Bastia': 'バスティア', 'Twente': 'トゥエンテ', 'AZ': 'AZ', 'Dundee United': 'ダンディー・ユナイテッド',
+    'Videoton': 'ヴィデオトン', 'Austria Salzburg': 'アウストリア・ザルツブルク',
+    'Dnipro Dnipropetrovsk': 'ドニプロ', 'SC Freiburg': 'フライブルク', 'Freiburg': 'フライブルク',
+    'IFK Göteborg': 'IFKヨーテボリ', 'Hamburger SV': 'ハンブルガーSV', 'Eintracht Frankfurt': 'フランクフルト',
+    'Borussia Mönchengladbach': 'ボルシアMG', 'Wolverhampton Wanderers': 'ウルヴァーハンプトン',
+    'Tottenham Hotspur': 'トッテナム', '1. FC Köln': 'ケルン', 'VfB Stuttgart': 'シュトゥットガルト',
+  };
+  for (const [en, ja] of Object.entries(HIST)) add(en, ja);
   subs.sort((a, b) => b.k.length - a.k.length);   // 長い別名を優先（誤一致を減らす）
   return { map, norm, subs };
 })();
