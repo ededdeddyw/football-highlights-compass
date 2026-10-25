@@ -2161,7 +2161,8 @@ function buildPlayerIndex(){
   <h1>選手プロフィール</h1>
   <p class="dek">日本人選手と、海外の主要選手を、ポジション・経歴・プレースタイルからネタバレなしで紹介します。顔写真は権利に配慮し、公式・ライセンス取得後に掲載予定です。</p>
   <p style="margin:2px 0 6px"><a href="./latest.html" style="font-weight:700">🇯🇵 日本人選手の最新ハイライト（出場試合・新着順）→</a></p>
-  ${Object.keys(PLAYER_NEWS).length?`<p style="margin:2px 0 14px"><a href="./news.html" style="font-weight:700">📰 日本人選手の最新ニュースまとめ →</a></p>`:''}
+  ${Object.keys(PLAYER_NEWS).length?`<p style="margin:2px 0 6px"><a href="./news.html" style="font-weight:700">📰 日本人選手の最新ニュースまとめ →</a></p>`:''}
+  ${(typeof TRANSFERS!=='undefined' && TRANSFERS && Array.isArray(TRANSFERS.transfers) && TRANSFERS.transfers.length)?`<p style="margin:2px 0 14px"><a href="../guide/major-transfers-confirmed.html" style="font-weight:700">🔁 主要選手の移籍まとめ（確定・出典つき）→</a></p>`:''}
   ${secs}
   ${AD}
   </div></article>` + FOOTER();
@@ -2214,6 +2215,36 @@ function playerGuide(slug, player, clubKey, clubLabel, leagueLabel, role){
 // CL/EL 歴代決勝データ（data/*-finals.json、出典Wikipedia）。クラブ名はjaTeamHで可能な範囲で日本語化。
 const CL_FINALS = (()=>{ try { return existsSync('data/cl-finals.json') ? JSON.parse(readFileSync('data/cl-finals.json','utf8')) : null; } catch(e){ return null; } })();
 const EL_FINALS = (()=>{ try { return existsSync('data/el-finals.json') ? JSON.parse(readFileSync('data/el-finals.json','utf8')) : null; } catch(e){ return null; } })();
+// 確定移籍データ（data/transfers.json）。記事本文は転載せず、事実＋出典リンクのみ。噂は載せない（確定のみ）。
+const TRANSFERS = (()=>{ try { return existsSync('data/transfers.json') ? JSON.parse(readFileSync('data/transfers.json','utf8')) : null; } catch(e){ return null; } })();
+// 収録選手の確定移籍まとめ本文を生成。選手ページ・移籍先クラブページへ内部リンク、出典は外部nofollow。
+function transfersGuideBody(){
+  const d = TRANSFERS; if(!d || !Array.isArray(d.transfers) || !d.transfers.length) return '<div class="post-body"><p>データを準備中です。</p></div>';
+  const PL = (typeof PLAYERS!=='undefined' && Array.isArray(PLAYERS)) ? PLAYERS : [];
+  const pset = new Set(PL.map(p=>p.slug));
+  const clubLink = ja => { const c = (typeof CLUBS!=='undefined' && CLUBS[ja]) ? CLUBS[ja] : null; return c ? `<a href="../club/${c.slug}.html">${esc(ja)}</a>` : esc(ja); };
+  const playerLink = (slug,name) => pset.has(slug) ? `<a href="../player/${slug}.html">${esc(name)}</a>` : esc(name);
+  // 新しい順（date降順）。
+  const rows = d.transfers.slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  const byWin = {}; for(const t of rows){ const w=t.window||'その他'; (byWin[w]=byWin[w]||[]).push(t); }
+  const winOrder = Object.keys(byWin).sort((a,b)=>String(byWin[b][0].date||'').localeCompare(String(byWin[a][0].date||'')));
+  const css = `<style>.tfg{margin:10px 0}.tfg .win{font-weight:800;font-size:13px;color:var(--accent);margin:16px 2px 6px;border-bottom:1px solid var(--line);padding-bottom:4px}.tfg .tf{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;padding:10px 2px;border-bottom:1px solid var(--line);font-size:14px}.tfg .tf .pl{font-weight:800}.tfg .tf .mv{color:var(--muted);font-variant-numeric:tabular-nums}.tfg .tf .mv b{color:var(--fg,inherit);font-weight:700}.tfg .tf .fee{font-size:12px;color:var(--muted)}.tfg .tf .tag{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--chip,rgba(127,127,127,.14));color:var(--muted)}.tfg .tf .src{font-size:11.5px}.tfg .tf .src a{color:var(--muted)}</style>`;
+  const section = w => `<div class="win">${esc(w)}</div>` + byWin[w].map(t=>`<div class="tf">`+
+    `<span class="pl">${playerLink(t.slug,t.name)}</span>`+
+    `<span class="mv">${esc(t.from||'')} → <b>${clubLink(t.to)}</b></span>`+
+    (t.type?`<span class="tag">${esc(t.type)}</span>`:'')+
+    (t.fee?`<span class="fee">${esc(t.fee)}</span>`:'')+
+    (t.src?`<span class="src">[<a href="${esc(t.src)}" target="_blank" rel="nofollow noopener">${esc(t.srcLabel||'出典')}</a>]</span>`:'')+
+    `</div>`).join('');
+  return `<div class="post-body">
+    <p>当サイトが選手ページを用意している主要選手のうち、<strong>公式発表・一次報道で確認できた「確定移籍」だけ</strong>をまとめました。噂や交渉中の情報は扱いません。各移籍は<strong>出典リンク</strong>を併記し、選手名・移籍先クラブからは当サイトのプロフィール／最新ハイライトへたどれます。</p>
+    <p style="font-size:12.5px;color:var(--muted)">※ 記事本文の転載はしていません（事実関係と出典リンクのみ）。移籍情報は確定後に随時追記します。最終更新: ${esc(d.updated||'')}。</p>
+  </div>
+  ${css}
+  <h2 class="lined">確定移籍一覧（新しい順）</h2>
+  <div class="tfg">${winOrder.map(section).join('')}</div>
+  <p style="margin-top:14px"><a href="../player/">▶ 選手プロフィール一覧（経歴・プレースタイル・最新ハイライト）</a></p>`;
+}
 // 歴代決勝ガイドの本文を生成（優勝回数ランキング＋全決勝一覧）。jaTeamHは後方で定義されるが呼び出し時には解決済み。
 function finalsGuideBody(d, compLabel, hubSlug, guideSlug){
   if(!d) return '<div class="post-body"><p>データを準備中です。</p></div>';
@@ -2247,6 +2278,12 @@ const GUIDES = [
     dek:'UEFAヨーロッパリーグ（UEFAカップ時代を含む）の歴代決勝と優勝クラブを一覧に。最多7回のセビージャから直近の王者まで、年度別の決勝カードとスコアでたどれます。',
     desc:'UEFAヨーロッパリーグの歴代決勝・優勝クラブ一覧。最多7回のセビージャほか優勝回数ランキングと、1972年からの年度別の決勝（優勝・準優勝・スコア）。出典Wikipedia・ネタバレ防止方針。',
     body(){ return finalsGuideBody(EL_FINALS, 'UEFAヨーロッパリーグ', 'europa-league', 'europa-league-finals-history'); } },
+  { slug:'major-transfers-confirmed', entities:[],
+    title:'主要選手の移籍まとめ（確定・出典つき）｜最新の移籍情報',
+    h1:'主要選手の移籍まとめ（確定・出典つき）',
+    dek:'当サイトが紹介する主要選手のうち、公式発表・一次報道で確認できた「確定移籍」だけをまとめました。選手名・移籍先クラブから、プロフィールと最新ハイライトへたどれます。',
+    desc:'サッカー主要選手の確定移籍まとめ。ロドリのバルセロナ移籍など、公式発表・一次報道で確認できた移籍だけを出典リンクつきで掲載。噂は扱いません。選手ページ・クラブの最新ハイライトへ内部リンク。',
+    body(){ return transfersGuideBody(); } },
   { slug:'world-cup-2026-how-to-watch', entities:['日本'],
     title:'2026 FIFAワールドカップを日本から観る方法｜公式ハイライト全試合まとめ',
     h1:'2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ',
