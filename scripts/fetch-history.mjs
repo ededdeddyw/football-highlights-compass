@@ -16,8 +16,8 @@ if (!/^\d{4}$/.test(SEASON)) { console.error('❌ --season=YYYY（4桁）で指�
 const ONLY = arg('code');
 const NO_RESULTS = has('no-results');
 const BASE = 'https://v3.football.api-sports.io';
-// API-Football のリーグID（固定）
-const LEAGUES = { pl: 39, laliga: 140, sa: 135, bl: 78, ligue1: 61 };
+// API-Football のリーグID（固定）。cl/el は欧州カップ戦（グループ or リーグフェーズ＋ノックアウト）。
+const LEAGUES = { pl: 39, laliga: 140, sa: 135, bl: 78, ligue1: 61, cl: 2, el: 3 };
 
 const readJson = (p, d) => { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d; } catch { return d; } };
 const TEAMS = readJson('data/league-teams.json', {});
@@ -33,22 +33,47 @@ async function get(path) {
   return j || {};
 }
 
+const rowOf = r => ({
+  rank: r.rank,
+  team: jaTeam((r.team && r.team.name) || ''),
+  played: (r.all && r.all.played) ?? null,
+  win: (r.all && r.all.win) ?? null,
+  draw: (r.all && r.all.draw) ?? null,
+  lose: (r.all && r.all.lose) ?? null,
+  gf: (r.all && r.all.goals && r.all.goals.for) ?? null,
+  ga: (r.all && r.all.goals && r.all.goals.against) ?? null,
+  gd: r.goalsDiff ?? null,
+  points: r.points ?? null,
+});
+// 順位表を「グループの配列」で返す（国内リーグ=1グループ、CL/EL旧方式=複数グループ、新リーグフェーズ=1グループ）。
 function normStandings(j) {
   const resp = (j.response && j.response[0]) || null;
-  const table = resp && resp.league && resp.league.standings && resp.league.standings[0];
-  if (!Array.isArray(table)) return [];
-  return table.map(r => ({
-    rank: r.rank,
-    team: jaTeam((r.team && r.team.name) || ''),
-    played: (r.all && r.all.played) ?? null,
-    win: (r.all && r.all.win) ?? null,
-    draw: (r.all && r.all.draw) ?? null,
-    lose: (r.all && r.all.lose) ?? null,
-    gf: (r.all && r.all.goals && r.all.goals.for) ?? null,
-    ga: (r.all && r.all.goals && r.all.goals.against) ?? null,
-    gd: r.goalsDiff ?? null,
-    points: r.points ?? null,
+  const groups = resp && resp.league && resp.league.standings;
+  if (!Array.isArray(groups)) return [];
+  return groups.filter(g => Array.isArray(g) && g.length).map(g => ({
+    group: (g[0] && g[0].group) || '',
+    rows: g.map(rowOf),
   }));
+}
+// CL/EL の優勝は順位表トップではなく「決勝(Final)の勝者」。決勝が無ければ（国内リーグ）1グループ首位を優勝とする。
+function findChampion(fixturesJson, standings) {
+  const arr = Array.isArray(fixturesJson.response) ? fixturesJson.response : [];
+  const finals = arr.filter(e => {
+    const rd = String((e.league && e.league.round) || '');
+    return /final/i.test(rd) && !/semi|quarter|1\/|round/i.test(rd) && e.fixture && e.fixture.status && ['FT', 'AET', 'PEN'].includes(e.fixture.status.short);
+  });
+  if (finals.length) {
+    // 複数（2レグ）の場合は最後の試合を採用。winnerフラグ優先、無ければスコアで判定。
+    const f = finals[finals.length - 1];
+    const ht = f.teams && f.teams.home, at = f.teams && f.teams.away;
+    if (ht && at) {
+      if (ht.winner === true) return jaTeam(ht.name || '');
+      if (at.winner === true) return jaTeam(at.name || '');
+      const hg = (f.goals && f.goals.home) ?? 0, ag = (f.goals && f.goals.away) ?? 0;
+      if (hg !== ag) return jaTeam((hg > ag ? ht.name : at.name) || '');
+    }
+  }
+  return (standings[0] && standings[0].rows && standings[0].rows[0] && standings[0].rows[0].team) || '';
 }
 function normScorers(j) {
   const arr = Array.isArray(j.response) ? j.response : [];
@@ -87,15 +112,16 @@ for (const [code, id] of Object.entries(LEAGUES)) {
   const standings = normStandings(standJ);
   const scorersJ = await get(`/players/topscorers?league=${id}&season=${SEASON}`); await sleep(400);
   const scorers = normScorers(scorersJ);
-  let results = [];
-  if (!NO_RESULTS) { const fxJ = await get(`/fixtures?league=${id}&season=${SEASON}`); await sleep(400); results = normResults(fxJ); }
+  let results = [], fxJ = null;
+  if (!NO_RESULTS) { fxJ = await get(`/fixtures?league=${id}&season=${SEASON}`); await sleep(400); results = normResults(fxJ); }
 
-  console.log(`  standings=${standings.length} / scorers=${scorers.length} / results=${results.length}`);
-  if (!standings.length && !scorers.length && !results.length) {
+  const groupN = standings.length, rowN = standings.reduce((s, g) => s + (g.rows ? g.rows.length : 0), 0);
+  console.log(`  standings=${groupN}グループ(計${rowN}) / scorers=${scorers.length} / results=${results.length}`);
+  if (!groupN && !scorers.length && !results.length) {
     console.log('  取得0件（無料プランのシーズン制限 or 未対応の可能性）。保存しない。');
     continue;
   }
-  const champion = standings.length ? standings[0].team : '';
+  const champion = fxJ ? findChampion(fxJ, standings) : ((standings[0] && standings[0].rows && standings[0].rows[0] && standings[0].rows[0].team) || '');
   const out = {
     code, season: SEASON,
     seasonLabel: `${SEASON}-${String((Number(SEASON) + 1) % 100).padStart(2, '0')}`,
