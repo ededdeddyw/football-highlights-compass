@@ -45,9 +45,25 @@ async function tryTitle(title, name) {
   if (!/サッカー選手|フットボール/.test(p.extract || '')) return null; // サッカー選手のみ
   return { name, title: p.title, wikiUrl: `https://ja.wikipedia.org/wiki/${encodeURIComponent(p.title)}`, extract: trimExtract(p.extract), updated: new Date().toISOString() };
 }
-async function fetchOne(name) {
-  // 同名の曖昧さ回避（田中碧→「田中碧 (サッカー選手)」等）にも対応
+// Wikipedia検索で候補タイトルを集める（曖昧さ回避・表記ゆれ対策）。日本語名＋英語名の両方で検索。
+async function searchTitles(q) {
+  try {
+    const j = await jget(`${WP}?action=query&format=json&list=search&srlimit=6&srsearch=${encodeURIComponent(q + ' サッカー選手')}`);
+    return ((j.query && j.query.search) || []).map(s => s.title);
+  } catch { return []; }
+}
+async function fetchOne(name, en, wikiTitle) {
+  // 明示指定のタイトル（players.json の wikiTitle）があれば最優先。同名別人の誤取得を防ぐ。
+  if (wikiTitle) { const rec = await tryTitle(wikiTitle, name); if (rec) return rec; }
+  // まず素直なタイトル（同名の曖昧さ回避「○○ (サッカー選手)」含む）を試す。
   for (const t of [name, `${name} (サッカー選手)`, `${name}(サッカー選手)`]) {
+    const rec = await tryTitle(t, name);
+    if (rec) return rec;
+  }
+  // だめなら検索API（日本語名→英語名）で候補を集め、P31=Q5かつサッカー選手の記事を採用。
+  const cand = [...await searchTitles(name)];
+  if (en) for (const t of await searchTitles(en)) if (!cand.includes(t)) cand.push(t);
+  for (const t of cand) {
     const rec = await tryTitle(t, name);
     if (rec) return rec;
   }
@@ -62,7 +78,7 @@ if (ONLY_SLUG) players = players.filter(p => p.slug === ONLY_SLUG);
 let ok = 0, skip = 0, fail = 0;
 for (const p of players) {
   try {
-    const rec = await fetchOne(p.name);
+    const rec = await fetchOne(p.name, p.en, p.wikiTitle);
     if (rec && rec.extract) { out[p.slug] = rec; ok++; process.stdout.write(`  ✓ ${p.slug} (${rec.title})            \r`); }
     else { skip++; if (!prev[p.slug]) console.error(`\n  ? ${p.slug} (${p.name}): 人物記事を特定できず`); }
   } catch (e) { fail++; console.error(`\n  ⚠ ${p.slug}: ${e.message}（前回分を保持）`); }

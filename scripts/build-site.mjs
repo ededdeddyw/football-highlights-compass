@@ -2045,6 +2045,10 @@ function buildPlayer(p){
   const [c1,c2] = theme;
   const posJa = POS_JA[p.posKey]||p.pos||'';
   const dek = (p.blurb&&p.blurb[0])||'';
+  // 所属リーグのコード→日本の配信サービス名（視聴ガイド・FAQ用）。年齢は生年から概算。
+  const pLeagueCode = clubLeague ? (LEAGUE_LIST.find(h=>h.clubLabel===clubLeague)||{}).code : '';
+  const svcName = pLeagueCode ? (STREAM[LEAGUE_SERVICE[pLeagueCode]||'dazn']||{}).name : '';
+  const ageNow = p.born ? (new Date().getFullYear() - Number(p.born)) : null;
   const desc = `${p.name}の経歴・ポジション・プレースタイルをピッチ図でわかりやすく紹介。${club?club+'（'+clubLeague+'）での歩みや背番号も。':''}所属クラブの最新ハイライト動画への導線つき。`.slice(0,120);
   const ogimg = clubSlug && CREST[clubSlug] ? CREST[clubSlug] : `${DOMAIN}/og.png`;
   // 選手FAQ（GEO：所属クラブ・次の試合・ハイライト所在を事実Q&Aで）＋所属クラブの次戦データ
@@ -2053,6 +2057,9 @@ function buildPlayer(p){
   if(club) pfaq.push({ q:`${p.name}の所属クラブは？`, a:`${p.name}は${club}（${clubLeague}）に所属しています。ポジションは${p.pos}${p.number?`、背番号は${p.number}`:''}。` });
   if(nextC){ const mm=LEAGUE_META[nextC.code]||{}; pfaq.push({ q:`${p.name}（${club}）の次の試合はいつ？`, a:`所属する${club}の次戦は${fixtureJst(nextC.dateUTC)}（日本時間）、${nextC.ha==='H'?'ホームで':'アウェイで'}${nextC.opp}と対戦予定です${mm.jp?`（${mm.jp}${nextC.matchday!=null?` 第${nextC.matchday}節`:''}）`:''}。` }); }
   if(club) pfaq.push({ q:`${p.name}のハイライト動画はどこで見られる？`, a:`所属クラブ${club}の公式ハイライトを、当サイトがスコアを隠したネタバレ防止表示でまとめています。このページ右の「最新ハイライト」から各試合の公式映像へ移動できます。` });
+  { const ne = p.nat || (isJP(p)?'日本':''); if(ne) pfaq.push({ q:`${p.name}の国籍・代表は？`, a:`${p.name}の国籍は${ne}です。${ne}代表としてプレーしています。` }); }
+  if(ageNow && ageNow>12 && ageNow<60) pfaq.push({ q:`${p.name}の年齢は？`, a:`${p.name}は${p.born}年生まれで、${TODAY.slice(0,4)}年時点でおよそ${ageNow}歳です。` });
+  if(svcName && club) pfaq.push({ q:`${p.name}の試合を日本で見るには？`, a:`${p.name}が所属する${club}の試合（${clubLeague}）は、日本では主に${svcName}で生中継・見逃し配信されています。試合後の公式ハイライトは当サイトでネタバレ防止でまとめています。` });
   // スキルセット・持ち味（data/player-skills.json／数値評価はしない＝言葉で強み＋代表的スーパープレー）
   const sk = PLAYER_SKILLS[slug];
   const skillSection = sk ? `<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">スキルセット・持ち味</h2>
@@ -2110,6 +2117,22 @@ function buildPlayer(p){
   const relPool = sameLeaguePlayers.length?sameLeaguePlayers:PLAYERS.filter(q=>q.slug!==slug && q.club!==p.club);
   const relatedPlayers = relPool.length?`<div class="cl-wrap" style="margin-top:14px"><h2 style="margin:0 0 8px">${sameLeaguePlayers.length?esc(clubLeague)+'の注目選手':'ほかの注目選手'}</h2><div class="chips">${relPool.slice(0,10).map(q=>`<a href="./${q.slug}.html">${esc(q.name)}<small style="opacity:.6"> ${esc(q.pos)}</small></a>`).join('')}</div></div>`:'';
   const backAll = `<div class="cl-wrap" style="margin-top:14px"><div class="chips"><a href="./">選手一覧へ →</a></div></div>`;
+  // 視聴ガイド：この選手を日本で観るには（所属リーグ→配信サービス）。サイトの核＝「日本で見られる形で発見」を各選手ページでも補強。
+  const watchGuide = (plLeagueHub && svcName) ? `<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">${esc(p.name)}を日本で観るには</h2>
+    <p class="dek" style="margin:0 0 10px">${esc(p.name)}が所属する${esc(club)}の試合は<b>${esc(clubLeague)}</b>。日本では主に<b>${esc(svcName)}</b>で生中継・見逃し配信されています。試合後は各試合の<b>公式ハイライト</b>を、当サイトがスコアを隠したネタバレ防止表示でまとめています。</p>
+    ${streamCta(plLeagueHub.code)}</div>` : '';
+  // 同じ国の代表選手（海外スターの回遊強化。同クラブ=teammates、同リーグ=relatedPlayers とは別軸）。
+  // 日本人選手は nat 未設定のことがあるため実効国籍で突き合わせる。
+  const natOf = q => q.nat || (isJP(q) ? '日本' : '');
+  const natEff = natOf(p);
+  const sameNat = natEff ? PLAYERS.filter(q=>q.slug!==slug && natOf(q)===natEff) : [];
+  const sameCountry = sameNat.length ? `<div class="cl-wrap" style="margin-top:14px"><h2 style="margin:0 0 8px">${esc(natEff)}の他の選手</h2><div class="chips">${sameNat.slice(0,12).map(q=>`<a href="./${q.slug}.html">${esc(q.name)}<small style="opacity:.6"> ${esc(q.pos)}</small></a>`).join('')}</div></div>` : '';
+  // 移籍情報：この選手に確定移籍があればカードで表示（data/transfers.json）。移籍まとめガイドへ誘導。
+  const myTransfer = (typeof TRANSFERS!=='undefined' && TRANSFERS && Array.isArray(TRANSFERS.transfers)) ? TRANSFERS.transfers.find(t=>t.slug===slug) : null;
+  const transferBlock = myTransfer ? `<div class="cl-wrap" style="margin-top:18px"><h2 style="margin:0 0 8px">移籍情報（確定）</h2>
+    <p class="dek" style="margin:0 0 6px"><b>${esc(myTransfer.window||'')}</b>：${esc(myTransfer.from||'')} → <b>${esc(myTransfer.to||'')}</b>${myTransfer.type?`（${esc(myTransfer.type)}）`:''}${myTransfer.fee?` ／ ${esc(myTransfer.fee)}`:''}</p>
+    ${myTransfer.src?`<p style="font-size:12px;color:var(--muted);margin:0 0 8px">出典: <a href="${esc(myTransfer.src)}" target="_blank" rel="nofollow noopener">${esc(myTransfer.srcLabel||'公式/報道')}</a></p>`:''}
+    <div class="chips"><a href="../guide/major-transfers-confirmed.html">▶ 主要選手の移籍まとめ（確定・出典つき）</a></div></div>` : '';
 
   const clubGuides = club?guideLinksFor(club):'';
   const leftRail = `<div class="rail-card"><div class="rail-h">📋 プロフィール</div>${factHtml}</div>${posCard}${clubSlug?railNextMatch(clubSlug):''}${imgSlot}${clubGuides}`;
@@ -2123,16 +2146,19 @@ function buildPlayer(p){
   ${lead}
   ${body}
   ${playerHighlightsBody(p)}
+  ${transferBlock}
   ${roleViz(p, c1, c2)}
   ${skillSection}
   ${timeline}
   ${AD}
+  ${watchGuide}
   ${clubLink}
   ${aboutBlock(p.name, PLAYER_INFO[p.slug])}
   ${newsBlock(p.name+'の最新ニュース', PLAYER_NEWS[p.slug])}
   ${teammates}
   ${leagueLink}
   ${relatedPlayers}
+  ${sameCountry}
   ${pfaq.length?`<div class="cl-wrap" style="margin-top:16px">${FAQ_STYLE}${faqBlock(pfaq)}</div>`:''}
   ${backAll}
   </article></div>
