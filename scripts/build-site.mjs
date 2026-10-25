@@ -2925,13 +2925,41 @@ const jaTeamH = name => {
 const teamCell = ja => { const cs = CLUBS[ja] ? CLUBS[ja].slug : ''; return cs ? `<a href="../club/${cs}.html">${esc(ja)}</a>` : esc(ja); };
 
 const historyUrls = [];
+// 最終順位表を全試合結果から算出（APIのstandingsが空のとき用）。並びは 勝点→得失差→総得点→名前。
+// 国内リーグの確定記録（結果の集計）なので正確。Serie A等の同勝点時の直接対決規定は反映しないため稀に公式と差異が出うる。
+function computeStandingsFromResults(results) {
+  if (!Array.isArray(results) || !results.length) return [];
+  const T = {};
+  const row = t => (T[t] = T[t] || { team: t, played: 0, win: 0, draw: 0, lose: 0, gf: 0, ga: 0 });
+  for (const r of results) {
+    if (r.hg == null || r.ag == null || !r.home || !r.away) continue;
+    const h = row(r.home), a = row(r.away), hg = Number(r.hg), ag = Number(r.ag);
+    h.played++; a.played++; h.gf += hg; h.ga += ag; a.gf += ag; a.ga += hg;
+    if (hg > ag) { h.win++; a.lose++; } else if (hg < ag) { a.win++; h.lose++; } else { h.draw++; a.draw++; }
+  }
+  const rows = Object.values(T).map(r => ({ ...r, gd: r.gf - r.ga, points: r.win * 3 + r.draw }));
+  rows.sort((x, y) => y.points - x.points || y.gd - x.gd || y.gf - x.gf || String(x.team).localeCompare(String(y.team)));
+  rows.forEach((r, i) => { r.rank = i + 1; });
+  return rows;
+}
 function buildHistory(code, d) {
   const hub = LEAGUE_LIST.find(h => h.code === code);
   const leagueName = hub ? hub.name : code;
   const slug = hub ? hub.slug : code;
   const sl = d.seasonLabel;
   const path = `league/${slug}-${sl}.html`, url = `${DOMAIN}/${path}`;
-  const champ = jaTeamH(d.champion);
+  // 順位表は新旧両形式に対応：グループ配列 [{group,rows}]（CL/EL）／フラット配列（国内リーグ旧データ）。
+  let standGroups = (Array.isArray(d.standings) && d.standings[0] && d.standings[0].rows) ? d.standings : [{ group: '', rows: d.standings || [] }];
+  // APIのstandingsが空（取得欠落）でも、全試合結果があれば順位表を算出して補完する。
+  const standEmpty = standGroups.reduce((s, g) => s + ((g.rows && g.rows.length) || 0), 0) === 0;
+  let standComputed = false;
+  if (standEmpty && d.results && d.results.length) {
+    const computed = computeStandingsFromResults(d.results);
+    if (computed.length) { standGroups = [{ group: '', rows: computed }]; standComputed = true; }
+  }
+  // 優勝クラブ：データに無ければ（国内リーグは）順位表トップを採用。
+  const topTeam = standGroups[0] && standGroups[0].rows && standGroups[0].rows[0] && standGroups[0].rows[0].team;
+  const champ = jaTeamH(d.champion || topTeam || '');
   const ts = d.topScorer;
   const title = `${leagueName} ${sl} 順位表・結果・得点王｜過去シーズン`;
   const desc = `${leagueName} ${sl}シーズンの最終順位表・全試合結果・得点ランキングをまとめた歴代データ。優勝は${champ}${ts ? `、得点王は${ts.name}（${ts.goals}ゴール）` : ''}。公式記録ベース。`.slice(0, 120);
@@ -2946,11 +2974,9 @@ function buildHistory(code, d) {
   ];
   const head = HEAD({ title, ogtitle: `${leagueName} ${sl} 順位表・結果・得点王`, desc, url, ogimg: `${DOMAIN}/og.png`, modified: `${TODAY}T12:00:00+09:00`, jsonld: graph });
   const css = `<style>.hist-sum{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px}.hist-sum .hs{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px}.hist-sum .hs b{font-size:16px}.htab{overflow-x:auto;margin:8px 0}.htab table{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.htab th,.htab td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.htab th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.htab td.tm{text-align:left;font-weight:700;white-space:nowrap}.htab td.tm a{color:var(--accent);text-decoration:none}.htab td.pts{font-weight:800}.htab td.rk{color:var(--muted);width:2em}.hsc{list-style:none;margin:8px 0;padding:0;counter-reset:s}.hsc li{display:flex;gap:8px;align-items:baseline;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:s}.hsc li::before{content:counter(s);color:var(--muted);font-weight:800;min-width:1.4em}.hsc .n{font-weight:700}.hsc .t{color:var(--muted);flex:1;font-size:12px}.hsc .g{font-weight:800}.hres{margin:6px 0}.hrd{font-weight:800;font-size:12.5px;color:var(--accent);margin:12px 0 4px}.hrl{list-style:none;margin:0;padding:0}.hrl li{display:flex;gap:8px;align-items:center;padding:5px 2px;border-bottom:1px solid var(--line);font-size:13px}.hrl .d{color:var(--muted);font-size:11.5px;min-width:5.6em}.hrl .m{flex:1}.hrl .sc{font-weight:800;font-variant-numeric:tabular-nums}</style>`;
-  // 順位表は新旧両形式に対応：グループ配列 [{group,rows}]（CL/EL）／フラット配列（国内リーグ旧データ）。
-  const standGroups = (Array.isArray(d.standings) && d.standings[0] && d.standings[0].rows) ? d.standings : [{ group: '', rows: d.standings || [] }];
   const oneTable = rows => `<div class="htab"><table><thead><tr><th>#</th><th>クラブ</th><th>試</th><th>勝</th><th>分</th><th>敗</th><th>得失</th><th>点</th></tr></thead><tbody>${rows.map(r => `<tr><td class="rk">${r.rank}</td><td class="tm">${teamCell(jaTeamH(r.team))}</td><td>${r.played ?? ''}</td><td>${r.win ?? ''}</td><td>${r.draw ?? ''}</td><td>${r.lose ?? ''}</td><td>${r.gd > 0 ? '+' : ''}${r.gd ?? ''}</td><td class="pts">${r.points ?? ''}</td></tr>`).join('')}</tbody></table></div>`;
   const multi = standGroups.length > 1;
-  const standTable = standGroups.length ? `<h2 class="lined">${esc(leagueName)} ${esc(sl)} ${multi ? 'グループ別順位表' : '最終順位表'}</h2>${standGroups.map(g => `${multi && g.group ? `<div class="hrd">${esc(g.group)}</div>` : ''}${oneTable(g.rows || [])}`).join('')}` : '';
+  const standTable = standGroups.length ? `<h2 class="lined">${esc(leagueName)} ${esc(sl)} ${multi ? 'グループ別順位表' : '最終順位表'}</h2>${standGroups.map(g => `${multi && g.group ? `<div class="hrd">${esc(g.group)}</div>` : ''}${oneTable(g.rows || [])}`).join('')}${standComputed ? `<p style="font-size:11.5px;color:var(--muted);margin:4px 2px">※ 最終順位表は全試合結果の集計から算出（勝点→得失点差→総得点順）。同勝点時の直接対決規定は反映していないため、公式記録とごく一部で順位が異なる場合があります。</p>` : ''}` : '';
   const scorerBlock = d.scorers && d.scorers.length ? `<h2 class="lined">得点ランキング</h2><ol class="hsc">${d.scorers.slice(0, 15).map(s => `<li><span class="n">${esc(s.name)}</span><span class="t">${teamCell(jaTeamH(s.team))}</span><span class="g">${s.goals ?? ''}<small>G</small></span></li>`).join('')}</ol>` : '';
   let resultsBlock = '';
   if (d.results && d.results.length) {
