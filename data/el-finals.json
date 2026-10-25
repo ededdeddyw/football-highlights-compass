@@ -1,0 +1,33 @@
+{
+  "_note": "UEFAヨーロッパリーグ（UEFAカップ時代含む）歴代決勝。出典: Wikipedia『List of UEFA Europa League finals』。1972–1997は2戦制（スコアは第1戦; 第2戦）。クラブ名はビルド時に可能な範囲で日本語化。",
+  "comp": "UEFAヨーロッパリーグ",
+  "source": "Wikipedia (List of UEFA Europa League finals)",
+  "titles": [
+    ["Sevilla", 7], ["Inter Milan", 3], ["Tottenham Hotspur", 3], ["Liverpool", 3], ["Juventus", 3], ["Atlético Madrid", 3],
+    ["Borussia Mönchengladbach", 2], ["Feyenoord", 2], ["Eintracht Frankfurt", 2], ["IFK Göteborg", 2], ["Real Madrid", 2], ["Parma", 2], ["Porto", 2], ["Chelsea", 2],
+    ["Aston Villa", 1], ["Atalanta", 1], ["Anderlecht", 1], ["Ajax", 1], ["Bayer Leverkusen", 1], ["Bayern Munich", 1], ["CSKA Moscow", 1],
+    ["Galatasaray", 1], ["Ipswich Town", 1], ["Manchester United", 1], ["Napoli", 1], ["PSV Eindhoven", 1], ["Schalke 04", 1],
+    ["Shakhtar Donetsk", 1], ["Valencia", 1], ["Villarreal", 1], ["Zenit Saint Petersburg", 1]
+  ],
+  "finals": [
+    [1972, "Tottenham Hotspur", "2–1; 1–1", "Wolverhampton Wanderers"], [1973, "Liverpool", "3–0; 0–2", "Borussia Mönchengladbach"], [1974, "Feyenoord", "2–2; 2–0", "Tottenham Hotspur"],
+    [1975, "Borussia Mönchengladbach", "0–0; 5–1", "Twente"], [1976, "Liverpool", "3–2; 1–1", "Club Brugge"], [1977, "Juventus", "1–0; 1–2 (アウェイゴール)", "Athletic Bilbao"],
+    [1978, "PSV Eindhoven", "0–0; 3–0", "Bastia"], [1979, "Borussia Mönchengladbach", "1–1; 1–0", "Red Star Belgrade"], [1980, "Eintracht Frankfurt", "2–3; 1–0 (アウェイゴール)", "Borussia Mönchengladbach"],
+    [1981, "Ipswich Town", "3–0; 2–4", "AZ"], [1982, "IFK Göteborg", "1–0; 3–0", "Hamburger SV"], [1983, "Anderlecht", "1–0; 1–1", "Benfica"],
+    [1984, "Tottenham Hotspur", "1–1; 1–1 (PK)", "Anderlecht"], [1985, "Real Madrid", "3–0; 0–1", "Videoton"], [1986, "Real Madrid", "5–1; 0–2", "1. FC Köln"],
+    [1987, "IFK Göteborg", "1–0; 1–1", "Dundee United"], [1988, "Bayer Leverkusen", "0–3; 3–0 (PK)", "Espanyol"], [1989, "Napoli", "2–1; 3–3", "VfB Stuttgart"],
+    [1990, "Juventus", "3–1; 0–0", "Fiorentina"], [1991, "Inter Milan", "2–0; 0–1", "Roma"], [1992, "Ajax", "2–2; 0–0 (アウェイゴール)", "Torino"],
+    [1993, "Juventus", "3–1; 3–0", "Borussia Dortmund"], [1994, "Inter Milan", "1–0; 1–0", "Austria Salzburg"], [1995, "Parma", "1–0; 1–1", "Juventus"],
+    [1996, "Bayern Munich", "2–0; 3–1", "Bordeaux"], [1997, "Schalke 04", "1–0; 0–1 (PK)", "Inter Milan"], [1998, "Inter Milan", "3–0", "Lazio"],
+    [1999, "Parma", "3–0", "Marseille"], [2000, "Galatasaray", "0–0 (PK)", "Arsenal"], [2001, "Liverpool", "5–4 (ゴールデンゴール)", "Alavés"],
+    [2002, "Feyenoord", "3–2", "Borussia Dortmund"], [2003, "Porto", "3–2 (延長)", "Celtic"], [2004, "Valencia", "2–0", "Marseille"],
+    [2005, "CSKA Moscow", "3–1", "Sporting CP"], [2006, "Sevilla", "4–0", "Middlesbrough"], [2007, "Sevilla", "2–2 (PK)", "Espanyol"],
+    [2008, "Zenit Saint Petersburg", "2–0", "Rangers"], [2009, "Shakhtar Donetsk", "2–1 (延長)", "Werder Bremen"], [2010, "Atlético Madrid", "2–1 (延長)", "Fulham"],
+    [2011, "Porto", "1–0", "Braga"], [2012, "Atlético Madrid", "3–0", "Athletic Bilbao"], [2013, "Chelsea", "2–1", "Benfica"],
+    [2014, "Sevilla", "0–0 (PK)", "Benfica"], [2015, "Sevilla", "3–2", "Dnipro Dnipropetrovsk"], [2016, "Sevilla", "3–1", "Liverpool"],
+    [2017, "Manchester United", "2–0", "Ajax"], [2018, "Atlético Madrid", "3–0", "Marseille"], [2019, "Chelsea", "4–1", "Arsenal"],
+    [2020, "Sevilla", "3–2", "Inter Milan"], [2021, "Villarreal", "1–1 (PK)", "Manchester United"], [2022, "Eintracht Frankfurt", "1–1 (PK)", "Rangers"],
+    [2023, "Sevilla", "1–1 (PK)", "Roma"], [2024, "Atalanta", "3–0", "Bayer Leverkusen"], [2025, "Tottenham Hotspur", "1–0", "Manchester United"],
+    [2026, "Aston Villa", "3–0", "SC Freiburg"]
+  ]
+}
