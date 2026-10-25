@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "scorers": [
     {
       "rank": 1,
@@ -19,9 +19,9 @@
       "name": "Lassine Sinayoko",
       "team": "パリFC",
       "goals": 6,
-      "assists": 3,
+      "assists": 4,
       "pens": 3,
-      "apps": 7,
+      "apps": 8,
       "nat": "Mali"
     },
     {
@@ -46,6 +46,16 @@
     },
     {
       "rank": 5,
+      "name": "Florian Thauvin",
+      "team": "ランス",
+      "goals": 4,
+      "assists": 8,
+      "pens": 3,
+      "apps": 8,
+      "nat": "France"
+    },
+    {
+      "rank": 6,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 4,
@@ -55,7 +65,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
@@ -65,7 +75,7 @@
       "nat": "Mali"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
@@ -75,7 +85,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Paris Brunner",
       "team": "モナコ",
       "goals": 4,
@@ -85,7 +95,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Cameron Archer",
       "team": "オセール",
       "goals": 4,
@@ -93,16 +103,6 @@
       "pens": null,
       "apps": 5,
       "nat": "England"
-    },
-    {
-      "rank": 10,
-      "name": "Florian Thauvin",
-      "team": "ランス",
-      "goals": 3,
-      "assists": 7,
-      "pens": 3,
-      "apps": 7,
-      "nat": "France"
     },
     {
       "rank": 11,

@@ -1012,9 +1012,9 @@
       "away": "エルチェ",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "elche",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-3",
+      "videoId": "d3jOAyc37Cw"
     },
     {
       "matchday": 10,
@@ -1023,8 +1023,8 @@
       "away": "エスパニョール",
       "homeSlug": "santander",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "vgLdXmaWHaY"
     },
     {
@@ -1034,8 +1034,8 @@
       "away": "ビジャレアル",
       "homeSlug": "valencia",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "aTZvrU9UaHY"
     },
     {
@@ -1045,9 +1045,9 @@
       "away": "デポルティボ",
       "homeSlug": "atleti",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "hXNKrvJH2q8"
     },
     {
       "matchday": 10,

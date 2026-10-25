@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "scorers": [
     {
       "rank": 1,
@@ -29,13 +29,23 @@
       "name": "Donyell Malen",
       "team": "ローマ",
       "goals": 6,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Netherlands"
     },
     {
       "rank": 4,
+      "name": "Anastasios Douvikas",
+      "team": "コモ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "Greece"
+    },
+    {
+      "rank": 5,
       "name": "Nikola Krstović",
       "team": "アタランタ",
       "goals": 4,
@@ -45,7 +55,7 @@
       "nat": "Montenegro"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Adrien Rabiot",
       "team": "ミラン",
       "goals": 4,
@@ -55,7 +65,7 @@
       "nat": "France"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
@@ -65,7 +75,7 @@
       "nat": "Argentina"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Marcus Thuram-Ulien",
       "team": "インテル",
       "goals": 4,
@@ -75,24 +85,14 @@
       "nat": "France"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Daniel Maldini",
       "team": "カリアリ",
       "goals": 4,
       "assists": null,
       "pens": 1,
-      "apps": 7,
+      "apps": 8,
       "nat": "Italy"
-    },
-    {
-      "rank": 9,
-      "name": "Anastasios Douvikas",
-      "team": "コモ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "Greece"
     },
     {
       "rank": 10,
@@ -111,7 +111,7 @@
       "goals": 3,
       "assists": 1,
       "pens": 1,
-      "apps": 7,
+      "apps": 8,
       "nat": "Belgium"
     },
     {
@@ -131,7 +131,7 @@
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Italy"
     },
     {
@@ -146,13 +146,13 @@
     },
     {
       "rank": 15,
-      "name": "Milutin Osmajić",
-      "team": "ジェノア",
+      "name": "Matias Soule",
+      "team": "ローマ",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
-      "nat": "Montenegro"
+      "apps": 8,
+      "nat": "Argentina"
     }
   ]
 }
