@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "scorers": [
     {
       "rank": 1,
@@ -21,11 +21,21 @@
       "goals": 7,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Italy"
     },
     {
       "rank": 3,
+      "name": "Nikola Krstović",
+      "team": "アタランタ",
+      "goals": 6,
+      "assists": 2,
+      "pens": null,
+      "apps": 8,
+      "nat": "Montenegro"
+    },
+    {
+      "rank": 4,
       "name": "Donyell Malen",
       "team": "ローマ",
       "goals": 6,
@@ -35,7 +45,7 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Anastasios Douvikas",
       "team": "コモ",
       "goals": 5,
@@ -45,17 +55,17 @@
       "nat": "Greece"
     },
     {
-      "rank": 5,
-      "name": "Nikola Krstović",
-      "team": "アタランタ",
-      "goals": 4,
-      "assists": 1,
+      "rank": 6,
+      "name": "Marcus Thuram-Ulien",
+      "team": "インテル",
+      "goals": 5,
+      "assists": 2,
       "pens": null,
-      "apps": 7,
-      "nat": "Montenegro"
+      "apps": 8,
+      "nat": "France"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Adrien Rabiot",
       "team": "ミラン",
       "goals": 4,
@@ -65,7 +75,7 @@
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
@@ -73,16 +83,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Argentina"
-    },
-    {
-      "rank": 8,
-      "name": "Marcus Thuram-Ulien",
-      "team": "インテル",
-      "goals": 4,
-      "assists": 2,
-      "pens": null,
-      "apps": 7,
-      "nat": "France"
     },
     {
       "rank": 9,
@@ -101,7 +101,7 @@
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 5,
+      "apps": 6,
       "nat": "Turkey"
     },
     {
@@ -141,7 +141,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Netherlands"
     },
     {

@@ -715,8 +715,8 @@
       "away": "パリFC",
       "homeSlug": "rc-lens",
       "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "z5Kh7dwqdXc"
     },
     {

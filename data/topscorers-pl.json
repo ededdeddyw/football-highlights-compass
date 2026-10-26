@@ -2,20 +2,40 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "scorers": [
     {
       "rank": 1,
       "name": "Erling Haaland",
       "team": "マンチェスター・シティ",
-      "goals": 8,
+      "goals": 9,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Norway"
     },
     {
       "rank": 2,
+      "name": "Alexander Isak",
+      "team": "リバプール",
+      "goals": 6,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Sweden"
+    },
+    {
+      "rank": 3,
+      "name": "Marcus Tavernier",
+      "team": "ボーンマス",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "England"
+    },
+    {
+      "rank": 4,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 5,
@@ -25,33 +45,13 @@
       "nat": "Brazil"
     },
     {
-      "rank": 3,
-      "name": "Alexander Isak",
-      "team": "リバプール",
-      "goals": 5,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Sweden"
-    },
-    {
-      "rank": 4,
-      "name": "Marcus Tavernier",
-      "team": "ボーンマス",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "England"
-    },
-    {
       "rank": 5,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "England"
     },
     {
@@ -61,7 +61,7 @@
       "goals": 4,
       "assists": 2,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "France"
     },
     {
@@ -71,11 +71,21 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Cameroon"
     },
     {
       "rank": 8,
+      "name": "Nicolas Jackson",
+      "team": "アストン・ヴィラ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 9,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -85,74 +95,64 @@
       "nat": "England"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Thierno Barry",
       "team": "エバートン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "France"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Jack Hinshelwood",
       "team": "ブライトン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 2,
+      "apps": 3,
       "nat": "England"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Pedro Neto",
       "team": "チェルシー",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Portugal"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Pascal Groß",
       "team": "ブライトン",
       "goals": 3,
       "assists": 4,
       "pens": 1,
-      "apps": 7,
+      "apps": 8,
       "nat": "Germany"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Kevin Schade",
       "team": "ブレントフォード",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Germany"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Dominic Calvert-Lewin",
       "team": "リーズ",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "England"
-    },
-    {
-      "rank": 15,
-      "name": "Bruno Fernandes",
-      "team": "マンチェスター・ユナイテッド",
-      "goals": 3,
-      "assists": 1,
-      "pens": 1,
-      "apps": 7,
-      "nat": "Portugal"
     }
   ]
 }

@@ -2,37 +2,37 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "scorers": [
     {
       "rank": 1,
+      "name": "Niclas Füllkrug",
+      "team": "ブレーメン",
+      "goals": 8,
+      "assists": null,
+      "pens": 3,
+      "apps": 7,
+      "nat": "Germany"
+    },
+    {
+      "rank": 2,
+      "name": "Michael Olise",
+      "team": "バイエルン",
+      "goals": 6,
+      "assists": 3,
+      "pens": null,
+      "apps": 7,
+      "nat": "France"
+    },
+    {
+      "rank": 3,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
       "goals": 6,
       "assists": 2,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Czech Republic"
-    },
-    {
-      "rank": 2,
-      "name": "Niclas Füllkrug",
-      "team": "ブレーメン",
-      "goals": 6,
-      "assists": null,
-      "pens": 1,
-      "apps": 6,
-      "nat": "Germany"
-    },
-    {
-      "rank": 3,
-      "name": "Michael Olise",
-      "team": "バイエルン",
-      "goals": 5,
-      "assists": 2,
-      "pens": null,
-      "apps": 6,
-      "nat": "France"
     },
     {
       "rank": 4,
@@ -41,7 +41,7 @@
       "goals": 5,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Germany"
     },
     {
@@ -51,7 +51,7 @@
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Germany"
     },
     {
@@ -71,7 +71,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 5,
+      "apps": 6,
       "nat": "Japan"
     },
     {
@@ -81,7 +81,7 @@
       "goals": 4,
       "assists": null,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "Austria"
     },
     {
@@ -101,7 +101,7 @@
       "goals": 4,
       "assists": 4,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "England"
     },
     {
@@ -109,9 +109,9 @@
       "name": "Antonio Nusa",
       "team": "ライプツィヒ",
       "goals": 3,
-      "assists": 3,
+      "assists": 5,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Norway"
     },
     {
@@ -121,7 +121,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Croatia"
     },
     {
@@ -151,7 +151,7 @@
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Germany"
     }
   ]

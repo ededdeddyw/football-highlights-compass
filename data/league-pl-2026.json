@@ -792,8 +792,8 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "aston-villa",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "MQYC0U5GOYI"
     },
     {
@@ -803,8 +803,8 @@
       "away": "エバートン",
       "homeSlug": "arsenal",
       "awaySlug": "everton",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "icZbFwNFaXA"
     },
     {
@@ -814,8 +814,8 @@
       "away": "フラム",
       "homeSlug": "coventry-city",
       "awaySlug": "fulham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "6WQY1dIipUk"
     },
     {
@@ -825,8 +825,8 @@
       "away": "トッテナム",
       "homeSlug": "chelsea",
       "awaySlug": "tottenham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "8SS8xcAmAec"
     },
     {

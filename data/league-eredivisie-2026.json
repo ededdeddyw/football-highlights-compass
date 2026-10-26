@@ -913,8 +913,8 @@
       "away": "PECズヴォレ",
       "homeSlug": "utrecht",
       "awaySlug": "zwolle",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -924,8 +924,8 @@
       "away": "カンブール",
       "homeSlug": "willem-ii",
       "awaySlug": "cambuur",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-6",
       "videoId": ""
     },
     {
@@ -935,8 +935,8 @@
       "away": "ヘーレンフェーン",
       "homeSlug": "den-haag",
       "awaySlug": "heerenveen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {

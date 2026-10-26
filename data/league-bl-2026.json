@@ -618,7 +618,7 @@
       "awaySlug": "sv-07-elversberg",
       "finished": true,
       "score": "4-0",
-      "videoId": ""
+      "videoId": "zh8V0SIF_3s"
     },
     {
       "matchday": 7,
@@ -682,9 +682,9 @@
       "away": "レバークーゼン",
       "homeSlug": "tsg-hoffenheim",
       "awaySlug": "bayer-04-leverkusen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "LjbC_fKeUmE"
     },
     {
       "matchday": 7,
@@ -693,8 +693,8 @@
       "away": "バイエルン",
       "homeSlug": "sc-freiburg",
       "awaySlug": "fc-bayern-munchen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-3",
       "videoId": "BGzIsrB3SI4"
     },
     {
