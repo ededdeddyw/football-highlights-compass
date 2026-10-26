@@ -645,6 +645,17 @@
     {
       "matchday": 11,
       "dateUTC": "",
+      "home": "カターレ富山",
+      "away": "北海道コンサドーレ札幌",
+      "homeSlug": "toyama",
+      "awaySlug": "sapporo",
+      "finished": true,
+      "score": "",
+      "videoId": "58Rb0shFkhs"
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "",
       "home": "サガン鳥栖",
       "away": "RB大宮アルディージャ",
       "homeSlug": "tosu",
@@ -839,6 +850,83 @@
       "finished": true,
       "score": "",
       "videoId": "NMEUMWuCQkY"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "アルビレックス新潟",
+      "away": "ベガルタ仙台",
+      "homeSlug": "niigata",
+      "awaySlug": "sendai",
+      "finished": true,
+      "score": "",
+      "videoId": "nxYKtO7DwFA"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "いわきFC",
+      "away": "ジュビロ磐田",
+      "homeSlug": "iwaki",
+      "awaySlug": "iwata",
+      "finished": true,
+      "score": "",
+      "videoId": "G7x_vTOrkto"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "サガン鳥栖",
+      "away": "ヴァンラーレ八戸",
+      "homeSlug": "tosu",
+      "awaySlug": "hachinohe",
+      "finished": true,
+      "score": "",
+      "videoId": "gJchFw2TZ-0"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "ブラウブリッツ秋田",
+      "away": "FC今治",
+      "homeSlug": "akita",
+      "awaySlug": "imabari",
+      "finished": true,
+      "score": "",
+      "videoId": "HMjO-K4VV8M"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "モンテディオ山形",
+      "away": "テゲバジャーロ宮崎",
+      "homeSlug": "yamagata",
+      "awaySlug": "miyazaki",
+      "finished": true,
+      "score": "",
+      "videoId": "9eplgLqvHnc"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "湘南ベルマーレ",
+      "away": "栃木シティ",
+      "homeSlug": "shonan",
+      "awaySlug": "tochigi-city",
+      "finished": true,
+      "score": "",
+      "videoId": "_HH2EVV3_Mg"
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "",
+      "home": "大分トリニータ",
+      "away": "ヴァンフォーレ甲府",
+      "homeSlug": "oita",
+      "awaySlug": "kofu",
+      "finished": true,
+      "score": "",
+      "videoId": "uDoSxZilau0"
     },
     {
       "matchday": 13,

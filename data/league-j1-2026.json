@@ -667,6 +667,17 @@
     {
       "matchday": 12,
       "dateUTC": "",
+      "home": "FC東京",
+      "away": "水戸ホーリーホック",
+      "homeSlug": "fc-tokyo",
+      "awaySlug": "mito",
+      "finished": true,
+      "score": "",
+      "videoId": "rNLpRyKS2aA"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
       "home": "ヴィッセル神戸",
       "away": "FC町田ゼルビア",
       "homeSlug": "kobe",
@@ -700,6 +711,28 @@
     {
       "matchday": 12,
       "dateUTC": "",
+      "home": "セレッソ大阪",
+      "away": "ジェフユナイテッド千葉",
+      "homeSlug": "cerezo-osaka",
+      "awaySlug": "chiba",
+      "finished": true,
+      "score": "",
+      "videoId": "RjDnzA0Gzhg"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "浦和レッズ",
+      "away": "V・ファーレン長崎",
+      "homeSlug": "urawa",
+      "awaySlug": "nagasaki",
+      "finished": true,
+      "score": "",
+      "videoId": "WdnBld8aPVY"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
       "home": "鹿島アントラーズ",
       "away": "柏レイソル",
       "homeSlug": "kashima",
@@ -711,6 +744,17 @@
     {
       "matchday": 12,
       "dateUTC": "",
+      "home": "川崎フロンターレ",
+      "away": "ファジアーノ岡山",
+      "homeSlug": "kawasaki",
+      "awaySlug": "okayama",
+      "finished": true,
+      "score": "",
+      "videoId": "IGl4zhLjjus"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
       "home": "東京ヴェルディ",
       "away": "アビスパ福岡",
       "homeSlug": "tokyo-verdy",
@@ -718,6 +762,17 @@
       "finished": true,
       "score": "",
       "videoId": "nIWlYrsIzHg"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "名古屋グランパス",
+      "away": "横浜F・マリノス",
+      "homeSlug": "nagoya",
+      "awaySlug": "yokohama-fm",
+      "finished": true,
+      "score": "",
+      "videoId": "3hTDv5EY5sU"
     }
   ]
 }

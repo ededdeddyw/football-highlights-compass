@@ -146,6 +146,39 @@
       "finished": true,
       "score": "",
       "videoId": "W-lpE0_haaM"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "クルブ・ブルッヘ",
+      "away": "シント=トロイデン",
+      "homeSlug": "club-brugge",
+      "awaySlug": "sint-truiden",
+      "finished": true,
+      "score": "",
+      "videoId": "8e8cLb7i5ZU"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "ヘンク",
+      "away": "スタンダール・リエージュ",
+      "homeSlug": "genk",
+      "awaySlug": "standard-liege",
+      "finished": true,
+      "score": "",
+      "videoId": "lFgAabUEav4"
+    },
+    {
+      "matchday": 9,
+      "dateUTC": "",
+      "home": "ヘント",
+      "away": "アンデルレヒト",
+      "homeSlug": "gent",
+      "awaySlug": "anderlecht",
+      "finished": true,
+      "score": "",
+      "videoId": "O2qYxL_LK5g"
     }
   ]
 }
