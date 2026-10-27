@@ -2243,6 +2243,16 @@ const CL_FINALS = (()=>{ try { return existsSync('data/cl-finals.json') ? JSON.p
 const EL_FINALS = (()=>{ try { return existsSync('data/el-finals.json') ? JSON.parse(readFileSync('data/el-finals.json','utf8')) : null; } catch(e){ return null; } })();
 // ネーションズリーグ 歴代決勝（data/nations-finals.json、出典Wikipedia）。国名は日本語保持。
 const NATIONS_FINALS = (()=>{ try { return existsSync('data/nations-finals.json') ? JSON.parse(readFileSync('data/nations-finals.json','utf8')) : null; } catch(e){ return null; } })();
+// 各大会の名場面（data/iconic-moments.json）。切り抜き動画は貼らず事実テキストのみ＝確定記録でネタバレ対象外。
+const ICONIC = (()=>{ try { return existsSync('data/iconic-moments.json') ? JSON.parse(readFileSync('data/iconic-moments.json','utf8')) : {}; } catch(e){ return {}; } })();
+function iconicMomentsBlock(key, compLabel){
+  const arr = (ICONIC && Array.isArray(ICONIC[key])) ? ICONIC[key] : null;
+  if(!arr || !arr.length) return '';
+  const css = `<style>.icm{margin:8px 0}.icm .im{padding:10px 2px 10px 0;border-bottom:1px solid var(--line)}.icm .im .yr{display:inline-block;min-width:3.6em;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}.icm .im .tt{font-weight:800}.icm .im .ds{margin:4px 0 0;font-size:13.5px;color:var(--fg,inherit);line-height:1.7}</style>`;
+  return `${css}<h2 class="lined">${esc(compLabel||'')}の名場面・名勝負</h2>
+  <div class="icm">${arr.map(m=>`<div class="im"><div><span class="yr">${esc(m.year||'')}</span> <span class="tt">${esc(m.title||'')}</span></div>${m.desc?`<p class="ds">${esc(m.desc)}</p>`:''}</div>`).join('')}</div>
+  <p style="font-size:11.5px;color:var(--muted);margin:4px 2px">※ いずれも確定した歴史的記録で、現行試合のネタバレ防止とは別です。各試合の映像は公式・権利元が公開するものに限り各大会ページで紹介しています。</p>`;
+}
 // ネーションズリーグ 歴代成績ページ本文（優勝一覧テーブル＋記録＋各大会メモ）。最大流入源の情報を厚くする。
 function nationsFinalsBody(){
   const d = NATIONS_FINALS; if(!d || !Array.isArray(d.editions) || !d.editions.length) return '<div class="post-body"><p>データを準備中です。</p></div>';
@@ -2263,6 +2273,7 @@ function nationsFinalsBody(){
   <h2 class="lined">大会フォーマットのおさらい</h2>
   <div class="post-body"><p>ネーションズリーグは参加国を実力別にリーグA〜Dへ振り分け、グループ戦の成績で昇格・降格が決まります。最上位リーグAを勝ち上がった国が決勝ラウンド（ファイナル4）で優勝を争います。仕組みの詳細は<a href="./uefa-nations-league-guide.html">UEFAネーションズリーグ完全ガイド</a>で解説しています。</p>
   <p>当サイトでは各大会の公式ハイライトを<strong>スコアを隠したネタバレ防止表示</strong>で掲載しています。</p></div>
+  ${iconicMomentsBlock('nations', 'UEFAネーションズリーグ')}
   <p style="margin-top:14px"><a href="../league/nations-league.html">▶ ネーションズリーグ（リーグA〜D・最新ハイライト）</a></p>`;
 }
 // 確定移籍データ（data/transfers.json）。記事本文は転載せず、事実＋出典リンクのみ。噂は載せない（確定のみ）。
@@ -2313,6 +2324,7 @@ function finalsGuideBody(d, compLabel, hubSlug, guideSlug){
     <h2 class="lined">歴代決勝一覧（新しい順）</h2>
     <div class="fltab"><table><thead><tr><th>年</th><th>優勝</th><th>スコア</th><th>準優勝</th></tr></thead><tbody>${finalRows}</tbody></table></div>
     <p class="stand-note" style="font-size:11.5px;color:var(--muted);margin:6px 2px">※ スコアは決勝のもの（延長・PK・2戦制の表記を含む）。歴代の確定記録であり、現行の動画のネタバレではありません。出典: ${esc(d.source||'Wikipedia')}。</p>
+    ${iconicMomentsBlock(hubSlug, compLabel)}
     <p style="margin-top:14px"><a href="../league/${hubSlug}.html">▶ ${esc(compLabel)}（順位・最新ハイライト）</a></p>`;
 }
 const GUIDES = [
