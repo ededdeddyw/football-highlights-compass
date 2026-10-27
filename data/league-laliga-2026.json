@@ -1056,9 +1056,9 @@
       "away": "ヘタフェ",
       "homeSlug": "athletic",
       "awaySlug": "getafe",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-0",
+      "videoId": "Uhs63qmcB6g"
     },
     {
       "matchday": 10,
@@ -1067,8 +1067,8 @@
       "away": "ベティス",
       "homeSlug": "celta",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "1nFhs6gZq4k"
     },
     {
@@ -1078,8 +1078,8 @@
       "away": "レバンテ",
       "homeSlug": "real-sociedad",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "inIw6yXI34Q"
     },
     {
@@ -1089,8 +1089,8 @@
       "away": "レアル・マドリード",
       "homeSlug": "barca",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "Yp6_RNvi8XA"
     },
     {
@@ -1100,8 +1100,8 @@
       "away": "オサスナ",
       "homeSlug": "sevilla-fc",
       "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "WxSgH_ZJEhM"
     },
     {

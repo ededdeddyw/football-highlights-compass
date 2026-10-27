@@ -836,8 +836,8 @@
       "away": "フィオレンティーナ",
       "homeSlug": "inter",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "hrSnZa3RidQ"
     },
     {
@@ -847,8 +847,8 @@
       "away": "フロジノーネ",
       "homeSlug": "atalanta",
       "awaySlug": "frosinone",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-4",
       "videoId": "3pl07CoM6do"
     },
     {
@@ -858,8 +858,8 @@
       "away": "ヴェネツィア",
       "homeSlug": "genoa",
       "awaySlug": "venezia-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "DnsFNltihIo"
     },
     {
@@ -869,9 +869,9 @@
       "away": "ユベントス",
       "homeSlug": "lecce",
       "awaySlug": "juventus",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-2",
+      "videoId": "0XtlTlbcWv4"
     },
     {
       "matchday": 8,
@@ -880,8 +880,8 @@
       "away": "ミラン",
       "homeSlug": "udinese",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "5POo8888urU"
     },
     {

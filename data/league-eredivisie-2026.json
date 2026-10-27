@@ -946,8 +946,8 @@
       "away": "エクセルシオール",
       "homeSlug": "sittard",
       "awaySlug": "excelsior",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {
@@ -957,8 +957,8 @@
       "away": "フローニンゲン",
       "homeSlug": "nec",
       "awaySlug": "groningen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -968,8 +968,8 @@
       "away": "フェイエノールト",
       "homeSlug": "psv",
       "awaySlug": "feyenoord",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "OmVaMytXBfo"
     },
     {
@@ -979,8 +979,8 @@
       "away": "アヤックス",
       "homeSlug": "sparta",
       "awaySlug": "ajax",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": ""
     },
     {
@@ -990,8 +990,8 @@
       "away": "トゥエンテ",
       "homeSlug": "az",
       "awaySlug": "twente",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {
