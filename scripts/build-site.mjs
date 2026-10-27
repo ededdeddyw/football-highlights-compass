@@ -2691,6 +2691,7 @@ const GUIDES = [
       <h2 class="lined">各代表の公式ハイライト</h2>
       <div class="post-body"><p>当サイトでは、公式・権利元が公開する各代表の公式ハイライトを、スコアを隠した<strong>ネタバレ防止表示</strong>でまとめています。代表ページから、歴代成績や公式ハイライトをご覧いただけます。</p></div>
       <div class="chips">${[...new Set(RANK.map(r=>r.n))].map(cLink).join('')}</div>
+      ${iconicMomentsBlock('world-cup', 'FIFAワールドカップ')}
       <p style="margin-top:14px"><a href="../?league=wc">▶ FIFAワールドカップ26の試合一覧・ハイライト</a> ／ <a href="../guide/world-cup-2026-how-to-watch.html">▶ W杯26を日本から観る方法</a></p>`;
     } },
 ];
