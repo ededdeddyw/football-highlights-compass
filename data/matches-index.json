@@ -1,9 +1,45 @@
 [
   {
+    "id": "WxSgH_ZJEhM",
+    "teams": [
+      "セビージャ",
+      "オサスナ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第10節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "yrj1eNCvf6A",
+    "teams": [
+      "パリ・サンジェルマン",
+      "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "リーグアン 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "BGzIsrB3SI4",
     "teams": [
       "フライブルク",
       "バイエルン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "LjbC_fKeUmE",
+    "teams": [
+      "ホッフェンハイム",
+      "レバークーゼン"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
@@ -232,6 +268,18 @@
     "teams": [
       "ドルトムント",
       "フランクフルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第7節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "zh8V0SIF_3s",
+    "teams": [
+      "ライプツィヒ",
+      "エルファースベルク"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
@@ -908,54 +956,6 @@
     "league": "seriea",
     "leagueName": "セリエA",
     "meta": "セリエA 第7節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "F9-EFn_m6lA",
-    "teams": [
-      "ウディネーゼ",
-      "レッチェ"
-    ],
-    "league": "seriea",
-    "leagueName": "セリエA",
-    "meta": "セリエA 第7節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "VhEZikrfPug",
-    "teams": [
-      "バイエルン",
-      "ライプツィヒ"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第6節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "CkwAi_lPb3I",
-    "teams": [
-      "ウニオン・ベルリン",
-      "ドルトムント"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第6節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "9mUMOCIsCDA",
-    "teams": [
-      "ハンブルガーSV",
-      "シュツットガルト"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第6節",
     "players": [],
     "hasPreview": false
   },
@@ -4652,7 +4652,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第9節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md9-gent-anderlecht",
@@ -17672,7 +17672,7 @@
     "leagueName": "エールディヴィジ",
     "meta": "第34節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md6-fc-tokyo-kyoto",
@@ -18692,7 +18692,7 @@
     "leagueName": "J2リーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md7-niigata-iwata",
