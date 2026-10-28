@@ -135,6 +135,39 @@
       "finished": true,
       "score": "",
       "videoId": "xbhdTBo6GCI"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "ラーチャブリーFC",
+      "away": "柏レイソル",
+      "homeSlug": "x-ラーチャブリーfc",
+      "awaySlug": "kashiwa",
+      "finished": true,
+      "score": "",
+      "videoId": "zMyyTjzdpf0"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "京都サンガF.C.",
+      "away": "ニューカッスル・ジェッツ",
+      "homeSlug": "kyoto-sanga",
+      "awaySlug": "newcastle-jets",
+      "finished": true,
+      "score": "",
+      "videoId": "W0-GFjPTNu8"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "大田ハナ・シチズン",
+      "away": "ヴィッセル神戸",
+      "homeSlug": "daejeon-hana",
+      "awaySlug": "kobe",
+      "finished": true,
+      "score": "",
+      "videoId": "RtMPyOrLpHk"
     }
   ]
 }

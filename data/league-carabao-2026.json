@@ -29,6 +29,17 @@
     {
       "matchday": null,
       "dateUTC": "",
+      "home": "フリートウッド",
+      "away": "アーセナル",
+      "homeSlug": "x-フリートウッド",
+      "awaySlug": "arsenal",
+      "finished": true,
+      "score": "",
+      "videoId": "kubBcaf-kVk"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
       "home": "マンチェスター・シティ",
       "away": "ノリッジ",
       "homeSlug": "manchester-city",
