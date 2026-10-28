@@ -2832,6 +2832,7 @@ function buildLeague(h){
   ${(h.code==='nations' && typeof NATIONS_FINALS!=='undefined' && NATIONS_FINALS && Array.isArray(NATIONS_FINALS.editions) && NATIONS_FINALS.editions.length)?(()=>{ const ed=NATIONS_FINALS.editions.slice().sort((a,b)=>String(b.season).localeCompare(String(a.season))); const cl=ja=>PAGE_OF[ja]?`<a href="../${PAGE_OF[ja]}">${esc(ja)}</a>`:esc(ja); return `<div class="hub-guides"><h2 class="lined">歴代優勝国</h2><div class="chips">${ed.map(e=>`<span class="pl-badge" style="background:rgba(127,127,127,.14)">${esc(e.season)} 🏆 ${cl(e.champion)}</span>`).join('')}</div><p style="margin:8px 2px 0"><a href="../guide/nations-league-past-winners.html"><b>▶ 歴代優勝国・決勝成績の詳細（スコア・3位・開催地・記録）</b></a></p></div>`; })():''}
   ${mdNavBlock}
   ${histBlock}
+  ${['pl','laliga','sa','bl','ligue1','j1'].includes(h.code)?iconicMomentsBlock(h.code, h.name):''}
   ${clubChips?`<h2 class="lined">掲載クラブ</h2><div class="clubchips">${clubChips}</div>`:''}
   ${playerChips}
   ${starChips}
