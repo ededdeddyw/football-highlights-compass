@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "scorers": [
     {
       "rank": 1,
@@ -16,6 +16,16 @@
     },
     {
       "rank": 2,
+      "name": "Donyell Malen",
+      "team": "ローマ",
+      "goals": 7,
+      "assists": 1,
+      "pens": null,
+      "apps": 8,
+      "nat": "Netherlands"
+    },
+    {
+      "rank": 3,
       "name": "Antonio Raimondo",
       "team": "フロジノーネ",
       "goals": 7,
@@ -25,7 +35,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Nikola Krstović",
       "team": "アタランタ",
       "goals": 6,
@@ -35,23 +45,13 @@
       "nat": "Montenegro"
     },
     {
-      "rank": 4,
-      "name": "Donyell Malen",
-      "team": "ローマ",
-      "goals": 6,
-      "assists": 1,
-      "pens": null,
-      "apps": 7,
-      "nat": "Netherlands"
-    },
-    {
       "rank": 5,
       "name": "Anastasios Douvikas",
       "team": "コモ",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Greece"
     },
     {
@@ -66,6 +66,16 @@
     },
     {
       "rank": 7,
+      "name": "Daniel Maldini",
+      "team": "カリアリ",
+      "goals": 5,
+      "assists": null,
+      "pens": 1,
+      "apps": 9,
+      "nat": "Italy"
+    },
+    {
+      "rank": 8,
       "name": "Adrien Rabiot",
       "team": "ミラン",
       "goals": 4,
@@ -75,7 +85,17 @@
       "nat": "France"
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "name": "Che Adams",
+      "team": "トリノ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Scotland"
+    },
+    {
+      "rank": 10,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
@@ -85,17 +105,17 @@
       "nat": "Argentina"
     },
     {
-      "rank": 9,
-      "name": "Daniel Maldini",
-      "team": "カリアリ",
+      "rank": 11,
+      "name": "Tijjani Noslin",
+      "team": "ラツィオ",
       "goals": 4,
-      "assists": null,
-      "pens": 1,
-      "apps": 8,
-      "nat": "Italy"
+      "assists": 2,
+      "pens": null,
+      "apps": 9,
+      "nat": "Netherlands"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Hakan Çalhanoğlu",
       "team": "インテル",
       "goals": 3,
@@ -105,7 +125,7 @@
       "nat": "Turkey"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Kevin De Bruyne",
       "team": "ナポリ",
       "goals": 3,
@@ -115,44 +135,24 @@
       "nat": "Belgium"
     },
     {
-      "rank": 12,
-      "name": "Che Adams",
-      "team": "トリノ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Scotland"
-    },
-    {
-      "rank": 13,
+      "rank": 14,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Italy"
     },
     {
-      "rank": 14,
-      "name": "Jurgen Ekkelenkamp",
-      "team": "ウディネーゼ",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "Netherlands"
-    },
-    {
       "rank": 15,
-      "name": "Matias Soule",
+      "name": "Niccolo Pisilli",
       "team": "ローマ",
       "goals": 3,
-      "assists": 1,
+      "assists": null,
       "pens": null,
-      "apps": 8,
-      "nat": "Argentina"
+      "apps": 9,
+      "nat": "Italy"
     }
   ]
 }
