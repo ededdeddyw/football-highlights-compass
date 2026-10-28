@@ -1,5 +1,18 @@
 {
-  "_note": "各大会の歴史に残る名場面・名勝負。確定した歴史記録でネタバレ防止の対象外。切り抜き動画は貼らず事実ベースのテキストのみ（公式映像は各大会ハブで掲載）。キーは歴代ガイドのhubSlug/コードと一致。",
+  "_note": "各大会の歴史に残る名場面・名勝負。確定した歴史記録でネタバレ防止の対象外。切り抜き動画は貼らず事実ベースのテキストのみ。公式ハイライトは各大会の『検証済み公式YouTubeチャンネル』へ誘導（channels）。キーは歴代ガイドのhubSlug/コードと一致。",
+  "_channels_note": "実機（HTTP200＋チャンネル名）で確認済みの公式チャンネルのみ。非公式・転載は載せない方針。",
+  "channels": {
+    "champions-league": { "name": "UEFA", "url": "https://www.youtube.com/@UEFA" },
+    "europa-league": { "name": "UEFA", "url": "https://www.youtube.com/@UEFA" },
+    "nations": { "name": "UEFA", "url": "https://www.youtube.com/@UEFA" },
+    "world-cup": { "name": "FIFA", "url": "https://www.youtube.com/@FIFA" },
+    "pl": { "name": "プレミアリーグ公式", "url": "https://www.youtube.com/@premierleague" },
+    "laliga": { "name": "ラ・リーガ公式", "url": "https://www.youtube.com/@LaLiga" },
+    "sa": { "name": "セリエA公式", "url": "https://www.youtube.com/@SerieA" },
+    "bl": { "name": "ブンデスリーガ公式", "url": "https://www.youtube.com/Bundesliga" },
+    "ligue1": { "name": "リーグアン公式", "url": "https://www.youtube.com/@Ligue1" },
+    "j1": { "name": "Jリーグ公式", "url": "https://www.youtube.com/@J%E3%83%AA%E3%83%BC%E3%82%B0%E5%85%AC%E5%BC%8F%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB" }
+  },
   "champions-league": [
     { "year": "1999", "title": "マンチェスター・ユナイテッドの劇的逆転（決勝）", "desc": "バイエルンに先行された決勝、後半アディショナルタイムにシェリンガム、続けてスールシャールが立て続けに決めて2-1。わずか2分間の逆転でトレブルを達成した。" },
     { "year": "2005", "title": "イスタンブールの奇跡（決勝）", "desc": "リヴァプールが前半を0-3で折り返しながら、後半にジェラード・シュミツェル・アロンソで3-3に追いつき、PK戦でミランを撃破。CL史上屈指の大逆転劇。" },

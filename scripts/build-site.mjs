@@ -2249,9 +2249,12 @@ function iconicMomentsBlock(key, compLabel){
   const arr = (ICONIC && Array.isArray(ICONIC[key])) ? ICONIC[key] : null;
   if(!arr || !arr.length) return '';
   const css = `<style>.icm{margin:8px 0}.icm .im{padding:10px 2px 10px 0;border-bottom:1px solid var(--line)}.icm .im .yr{display:inline-block;min-width:3.6em;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}.icm .im .tt{font-weight:800}.icm .im .ds{margin:4px 0 0;font-size:13.5px;color:var(--fg,inherit);line-height:1.7}</style>`;
+  const ch = (ICONIC && ICONIC.channels && ICONIC.channels[key]) ? ICONIC.channels[key] : null;
+  const chLink = ch ? `<p style="margin:8px 2px 0"><a href="${esc(ch.url)}" target="_blank" rel="nofollow noopener"><b>▶ ${esc(ch.name)}チャンネル（YouTube）で公式ハイライトを観る</b></a></p>` : '';
   return `${css}<h2 class="lined">${esc(compLabel||'')}の名場面・名勝負</h2>
   <div class="icm">${arr.map(m=>`<div class="im"><div><span class="yr">${esc(m.year||'')}</span> <span class="tt">${esc(m.title||'')}</span></div>${m.desc?`<p class="ds">${esc(m.desc)}</p>`:''}</div>`).join('')}</div>
-  <p style="font-size:11.5px;color:var(--muted);margin:4px 2px">※ いずれも確定した歴史的記録で、現行試合のネタバレ防止とは別です。各試合の映像は公式・権利元が公開するものに限り各大会ページで紹介しています。</p>`;
+  ${chLink}
+  <p style="font-size:11.5px;color:var(--muted);margin:4px 2px">※ いずれも確定した歴史的記録で、現行試合のネタバレ防止とは別です。映像は公式・権利元が公開するものに限ります。上記は各大会の<strong>公式チャンネル</strong>へのリンクで、名場面を含む公式ハイライトを探せます。</p>`;
 }
 // ネーションズリーグ 歴代成績ページ本文（優勝一覧テーブル＋記録＋各大会メモ）。最大流入源の情報を厚くする。
 function nationsFinalsBody(){
