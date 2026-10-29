@@ -1143,6 +1143,20 @@ writeFileSync('site/article.css', CSS);
 
 // ========================= 試合ページ =========================
 const slugs=[]; const noindexSlugs=new Set();
+// 指数化された試合ページから、その大会の「名場面」ページへ誘導する1行リンク（該当大会のみ／薄いnoindexページには出さない）。
+const MOMENTS_PAGE = {
+  cl:{href:'../guide/champions-league-finals-history.html', label:'UEFAチャンピオンズリーグの名場面・歴代決勝'},
+  el:{href:'../guide/europa-league-finals-history.html', label:'UEFAヨーロッパリーグの名場面・歴代決勝'},
+  nations:{href:'../league/nations-league.html', label:'ネーションズリーグの名場面'},
+  wc:{href:'../guide/world-cup-winners-history.html', label:'ワールドカップの名場面・歴代優勝'},
+  pl:{href:'../league/premier-league.html', label:'プレミアリーグの名場面'},
+  laliga:{href:'../league/laliga.html', label:'ラ・リーガの名場面'},
+  sa:{href:'../league/serie-a.html', label:'セリエAの名場面'},
+  bl:{href:'../league/bundesliga.html', label:'ブンデスリーガの名場面'},
+  ligue1:{href:'../league/ligue-1.html', label:'リーグアンの名場面'},
+  j1:{href:'../league/j1-league.html', label:'Jリーグの名場面'},
+};
+const momentsLink = code => { const mm = MOMENTS_PAGE[code]; return mm ? `<p class="moments-link" style="margin:10px 2px 0"><a href="${mm.href}">▶ ${esc(mm.label)}・公式ハイライトを見る</a></p>` : ''; };
 function buildMatch(m){
   if(!m.id || slugs.includes(m.id)) return; slugs.push(m.id);
   const lg = LG[m.league]||''; const teamsTxt = m.teams.join(' vs ');
@@ -1263,6 +1277,7 @@ function buildMatch(m){
   ${teamHtml}
   ${playerHtml}
   ${bottomRel}
+  ${!thin?momentsLink(m.league):''}
   ${footerInner}
   </article></main>
   ${readDrawer(sideContent).aside}
@@ -1407,6 +1422,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   ${clubHlChips?`<h2 class="lined">両クラブの他のハイライト</h2><div class="chips">${clubHlChips}</div>`:''}
   ${sameMdChips?`<h2 class="lined">${esc(L.jp)} ${esc(nara)}の他の試合</h2><div class="chips">${sameMdChips}</div>`:''}
   ${mdHref?`<p style="margin:8px 2px 0"><a href="${mdHref}">▶ ${esc(L.jp)} ${esc(nara)}の全試合・結果をまとめて見る</a></p>`:''}
+  ${hasPreview(slug)?momentsLink(L.code):''}
   ${FAQ_STYLE}${faqBlock(mfaq)}
   ${footer1()}
   </article></main>
