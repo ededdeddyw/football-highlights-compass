@@ -924,8 +924,8 @@
       "away": "ボローニャ",
       "homeSlug": "milan",
       "awaySlug": "bologna",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-4",
       "videoId": "1CLkNprHcAU"
     },
     {
@@ -935,8 +935,8 @@
       "away": "インテル",
       "homeSlug": "venezia-fc",
       "awaySlug": "inter",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "3o8ZLLXugfo"
     },
     {
@@ -946,8 +946,8 @@
       "away": "ウディネーゼ",
       "homeSlug": "parma",
       "awaySlug": "udinese",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "YdXB7hcngu0"
     },
     {
@@ -957,9 +957,9 @@
       "away": "ユベントス",
       "homeSlug": "genoa",
       "awaySlug": "juventus",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "Goxa4KQJup4"
     },
     {
       "matchday": 9,
@@ -968,8 +968,8 @@
       "away": "ナポリ",
       "homeSlug": "monza",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-4",
       "videoId": "jgtW85oOwj8"
     },
     {

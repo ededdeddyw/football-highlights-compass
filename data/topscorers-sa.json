@@ -2,16 +2,16 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "scorers": [
     {
       "rank": 1,
       "name": "Gustavo Varela",
       "team": "モンツァ",
-      "goals": 7,
+      "goals": 8,
       "assists": 1,
       "pens": 1,
-      "apps": 7,
+      "apps": 8,
       "nat": "Portugal"
     },
     {
@@ -61,7 +61,7 @@
       "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "France"
     },
     {
@@ -76,6 +76,26 @@
     },
     {
       "rank": 8,
+      "name": "Kevin De Bruyne",
+      "team": "ナポリ",
+      "goals": 4,
+      "assists": 1,
+      "pens": 1,
+      "apps": 9,
+      "nat": "Belgium"
+    },
+    {
+      "rank": 9,
+      "name": "Alphadjo Cisse",
+      "team": "ミラン",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 9,
+      "nat": "Italy"
+    },
+    {
+      "rank": 10,
       "name": "Adrien Rabiot",
       "team": "ミラン",
       "goals": 4,
@@ -85,7 +105,7 @@
       "nat": "France"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Che Adams",
       "team": "トリノ",
       "goals": 4,
@@ -95,7 +115,7 @@
       "nat": "Scotland"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
@@ -105,7 +125,7 @@
       "nat": "Argentina"
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "Tijjani Noslin",
       "team": "ラツィオ",
       "goals": 4,
@@ -115,39 +135,19 @@
       "nat": "Netherlands"
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "Hakan Çalhanoğlu",
       "team": "インテル",
       "goals": 3,
       "assists": null,
       "pens": 1,
-      "apps": 6,
+      "apps": 7,
       "nat": "Turkey"
     },
     {
-      "rank": 13,
-      "name": "Kevin De Bruyne",
-      "team": "ナポリ",
-      "goals": 3,
-      "assists": 1,
-      "pens": 1,
-      "apps": 8,
-      "nat": "Belgium"
-    },
-    {
-      "rank": 14,
+      "rank": 15,
       "name": "Davide Frattesi",
       "team": "ラツィオ",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 9,
-      "nat": "Italy"
-    },
-    {
-      "rank": 15,
-      "name": "Niccolo Pisilli",
-      "team": "ローマ",
       "goals": 3,
       "assists": null,
       "pens": null,
