@@ -1156,7 +1156,9 @@ const MOMENTS_PAGE = {
   ligue1:{href:'../league/ligue-1.html', label:'リーグアンの名場面'},
   j1:{href:'../league/j1-league.html', label:'Jリーグの名場面'},
 };
-const momentsLink = code => { const mm = MOMENTS_PAGE[code]; return mm ? `<p class="moments-link" style="margin:10px 2px 0"><a href="${mm.href}">▶ ${esc(mm.label)}・公式ハイライトを見る</a></p>` : ''; };
+// buildMatch は別系統の大会コード（LGマップ: bundes/seriea/jl…）を使うため、名場面マップのキー(bl/sa/j1)へ正規化する。
+const MOMENTS_ALIAS = { bundes:'bl', seriea:'sa', jl:'j1' };
+const momentsLink = code => { const mm = MOMENTS_PAGE[MOMENTS_ALIAS[code]||code]; return mm ? `<p class="moments-link" style="margin:10px 2px 0"><a href="${mm.href}">▶ ${esc(mm.label)}・公式ハイライトを見る</a></p>` : ''; };
 function buildMatch(m){
   if(!m.id || slugs.includes(m.id)) return; slugs.push(m.id);
   const lg = LG[m.league]||''; const teamsTxt = m.teams.join(' vs ');
