@@ -139,6 +139,17 @@
     {
       "matchday": 3,
       "dateUTC": "",
+      "home": "ガンバ大阪",
+      "away": "ブリーラム・ユナイテッド",
+      "homeSlug": "gamba-osaka",
+      "awaySlug": "buriram",
+      "finished": true,
+      "score": "",
+      "videoId": "I2qq8iqKpkY"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
       "home": "ラーチャブリーFC",
       "away": "柏レイソル",
       "homeSlug": "x-ラーチャブリーfc",
@@ -157,6 +168,17 @@
       "finished": true,
       "score": "",
       "videoId": "W0-GFjPTNu8"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "鹿島アントラーズ",
+      "away": "浦項スティーラーズ",
+      "homeSlug": "kashima",
+      "awaySlug": "pohang",
+      "finished": true,
+      "score": "",
+      "videoId": "Y3YGVvyH8TM"
     },
     {
       "matchday": 3,

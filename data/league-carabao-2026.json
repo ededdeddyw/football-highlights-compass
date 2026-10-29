@@ -29,6 +29,17 @@
     {
       "matchday": null,
       "dateUTC": "",
+      "home": "フラム",
+      "away": "クリスタルパレス",
+      "homeSlug": "fulham",
+      "awaySlug": "crystal-palace",
+      "finished": true,
+      "score": "",
+      "videoId": "o7itHSwoAwM"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
       "home": "フリートウッド",
       "away": "アーセナル",
       "homeSlug": "x-フリートウッド",
@@ -40,6 +51,17 @@
     {
       "matchday": null,
       "dateUTC": "",
+      "home": "ボーンマス",
+      "away": "アストンヴィラ",
+      "homeSlug": "bournemouth",
+      "awaySlug": "aston-villa",
+      "finished": true,
+      "score": "",
+      "videoId": "bNDMen7-3rQ"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
       "home": "マンチェスター・シティ",
       "away": "ノリッジ",
       "homeSlug": "manchester-city",
@@ -47,6 +69,17 @@
       "finished": true,
       "score": "",
       "videoId": "JLP-ohfw_10"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "マンチェスター・シティ",
+      "away": "ブライトン",
+      "homeSlug": "manchester-city",
+      "awaySlug": "brighton-and-hove-albion",
+      "finished": true,
+      "score": "",
+      "videoId": "XRvUs-ABg8I"
     },
     {
       "matchday": null,
@@ -69,6 +102,17 @@
       "finished": true,
       "score": "",
       "videoId": "jbO3C2mXJPg"
+    },
+    {
+      "matchday": null,
+      "dateUTC": "",
+      "home": "リヴァプール",
+      "away": "チェルシー",
+      "homeSlug": "liverpool",
+      "awaySlug": "chelsea",
+      "finished": true,
+      "score": "",
+      "videoId": "BF9ZeFqcmFw"
     }
   ]
 }
