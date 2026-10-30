@@ -183,6 +183,17 @@
     {
       "matchday": 3,
       "dateUTC": "",
+      "home": "上海申花",
+      "away": "FC町田ゼルビア",
+      "homeSlug": "x-上海申花",
+      "awaySlug": "machida",
+      "finished": true,
+      "score": "",
+      "videoId": "q10sO-ZDigg"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
       "home": "大田ハナ・シチズン",
       "away": "ヴィッセル神戸",
       "homeSlug": "daejeon-hana",
