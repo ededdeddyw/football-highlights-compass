@@ -979,8 +979,8 @@
       "away": "レッチェ",
       "homeSlug": "frosinone",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-1",
       "videoId": "WGvltvpY_8A"
     },
     {
@@ -990,8 +990,8 @@
       "away": "アタランタ",
       "homeSlug": "fiorentina",
       "awaySlug": "atalanta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "M-rqelH_4EI"
     },
     {
