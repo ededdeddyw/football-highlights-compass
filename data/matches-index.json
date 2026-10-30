@@ -1,5 +1,41 @@
 [
   {
+    "id": "M-rqelH_4EI",
+    "teams": [
+      "フィオレンティーナ",
+      "アタランタ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "WGvltvpY_8A",
+    "teams": [
+      "フロジノーネ",
+      "レッチェ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "Goxa4KQJup4",
+    "teams": [
+      "ジェノア",
+      "ユベントス"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "jgtW85oOwj8",
     "teams": [
       "モンツァ",
@@ -920,42 +956,6 @@
     "league": "laliga",
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第9節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ETdwi5i-QV0",
-    "teams": [
-      "リヨン",
-      "ニース"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第7節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "b1RcW33qCBM",
-    "teams": [
-      "ロリアン",
-      "モナコ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第7節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ICeotLdmzwI",
-    "teams": [
-      "パリFC",
-      "レンヌ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第7節",
     "players": [],
     "hasPreview": false
   },
@@ -4521,6 +4521,18 @@
     "meta": "第3節 / 2026-27",
     "players": [],
     "hasPreview": false
+  },
+  {
+    "id": "acl-2526-md3-x-上海申花-machida",
+    "teams": [
+      "上海申花",
+      "FC町田ゼルビア"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md3-daejeon-hana-kobe",
