@@ -787,17 +787,6 @@
     },
     {
       "matchday": 8,
-      "dateUTC": "2026-10-10T12:00:00Z",
-      "home": "ラーヨ・バジェカーノ",
-      "away": "アスレティック・ビルバオ",
-      "homeSlug": "rayo-vallecano",
-      "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 8,
       "dateUTC": "2026-10-10T14:15:00Z",
       "home": "アラベス",
       "away": "アトレティコ・マドリード",
@@ -883,6 +872,17 @@
       "finished": true,
       "score": "3-3",
       "videoId": "1XvBdNnLn5c"
+    },
+    {
+      "matchday": 8,
+      "dateUTC": "2026-12-09T19:00:00Z",
+      "home": "ラーヨ・バジェカーノ",
+      "away": "アスレティック・ビルバオ",
+      "homeSlug": "rayo-vallecano",
+      "awaySlug": "athletic",
+      "finished": false,
+      "score": "",
+      "videoId": ""
     },
     {
       "matchday": 9,
@@ -1111,8 +1111,8 @@
       "away": "エスパニョール",
       "homeSlug": "villarreal",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "JufkT8G3uWU"
     },
     {

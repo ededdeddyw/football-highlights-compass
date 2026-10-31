@@ -803,8 +803,8 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "le-havre",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-5",
       "videoId": "NwrLiBLXJ8c"
     },
     {
@@ -814,8 +814,8 @@
       "away": "レンヌ",
       "homeSlug": "nice",
       "awaySlug": "stade-rennais",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-2",
       "videoId": "BjX0HpphYPA"
     },
     {
@@ -825,8 +825,8 @@
       "away": "ランス",
       "homeSlug": "lille",
       "awaySlug": "rc-lens",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "OfmdewG_C0w"
     },
     {

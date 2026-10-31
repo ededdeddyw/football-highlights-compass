@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "scorers": [
     {
       "rank": 1,
@@ -26,6 +26,16 @@
     },
     {
       "rank": 3,
+      "name": "Sepe Elye Wahi",
+      "team": "ニース",
+      "goals": 6,
+      "assists": 2,
+      "pens": 2,
+      "apps": 8,
+      "nat": "Ivory Coast"
+    },
+    {
+      "rank": 4,
       "name": "Amine Gouiri",
       "team": "マルセイユ",
       "goals": 5,
@@ -35,7 +45,7 @@
       "nat": "Algeria"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Cameron Archer",
       "team": "オセール",
       "goals": 5,
@@ -45,7 +55,7 @@
       "nat": "England"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Casper Tengstedt",
       "team": "トゥールーズ",
       "goals": 5,
@@ -55,17 +65,17 @@
       "nat": "Denmark"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 4,
       "assists": 8,
       "pens": 3,
-      "apps": 8,
+      "apps": 9,
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 4,
@@ -75,7 +85,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
@@ -85,17 +95,27 @@
       "nat": "Mali"
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "name": "Sebastian Szymański",
+      "team": "レンヌ",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "Poland"
+    },
+    {
+      "rank": 11,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Spain"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Paris Brunner",
       "team": "モナコ",
       "goals": 4,
@@ -105,7 +125,27 @@
       "nat": "Germany"
     },
     {
-      "rank": 11,
+      "rank": 13,
+      "name": "Josh Maja",
+      "team": "ルアーブル",
+      "goals": 4,
+      "assists": null,
+      "pens": 1,
+      "apps": 9,
+      "nat": "Nigeria"
+    },
+    {
+      "rank": 14,
+      "name": "Boulaye Dia",
+      "team": "レンヌ",
+      "goals": 4,
+      "assists": null,
+      "pens": 1,
+      "apps": 7,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 15,
       "name": "Daniel Namaso",
       "team": "オセール",
       "goals": 3,
@@ -113,46 +153,6 @@
       "pens": 1,
       "apps": 8,
       "nat": "Cameroon"
-    },
-    {
-      "rank": 12,
-      "name": "Sebastian Szymański",
-      "team": "レンヌ",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "Poland"
-    },
-    {
-      "rank": 13,
-      "name": "Marquinhos",
-      "team": "パリ・サンジェルマン",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Brazil"
-    },
-    {
-      "rank": 14,
-      "name": "Ludovic Ajorque",
-      "team": "ブレスト",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "France"
-    },
-    {
-      "rank": 15,
-      "name": "Ernest Nuamah",
-      "team": "リヨン",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "Ghana"
     }
   ]
 }
