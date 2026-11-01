@@ -12,6 +12,18 @@
     "hasPreview": false
   },
   {
+    "id": "nBdMdjSuXN4",
+    "teams": [
+      "レバークーゼン",
+      "シュツットガルト"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第8節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "lxxyvZe7Pt8",
     "teams": [
       "アウクスブルク",
@@ -76,6 +88,18 @@
     "teams": [
       "ベティス",
       "マラガ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "2-v5Pi2PLvY",
+    "teams": [
+      "ラーヨ・バジェカーノ",
+      "セルタ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -932,30 +956,6 @@
     "league": "seriea",
     "leagueName": "セリエA",
     "meta": "セリエA 第8節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "OxEIBCWkFLs",
-    "teams": [
-      "コモ",
-      "サッスオーロ"
-    ],
-    "league": "seriea",
-    "leagueName": "セリエA",
-    "meta": "セリエA 第8節",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "ctqMymG523I",
-    "teams": [
-      "シュツットガルト",
-      "ボルシアMG"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第7節",
     "players": [],
     "hasPreview": false
   },

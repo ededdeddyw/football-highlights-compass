@@ -5,23 +5,111 @@
 - 掲載するのは公式・権利元がYouTube等で公開している映像のみ（無断アップロードは扱いません）。
 - スコアや結果は既定で隠し、利用者の操作で表示（ネタバレ防止）。
 - サイトマップ: https://highlight-compass.com/sitemap.xml
+- 最新ハイライトのRSS: https://highlight-compass.com/feed.xml
 
 ## 主要ページ
 - [今週の試合日程（欧州5大リーグ・日本時間）](https://highlight-compass.com/schedule/): 全リーグ横断の直近の試合日程。
+- [最新のサッカーハイライト（新着順）](https://highlight-compass.com/latest/): 全大会の最新公式ハイライトを新着順で一覧（ネタバレ防止）。
+- [海外組 日本人選手の最新ハイライト](https://highlight-compass.com/player/latest.html): 久保・三笘・堂安ら日本人選手が出場した最新試合の公式ハイライト（新着順・ネタバレ防止）。
+- [代表・ネーションズリーグの最新ハイライト](https://highlight-compass.com/country/latest.html): UEFAネーションズリーグや日本代表など各国代表の最新試合の公式ハイライト（新着順・ネタバレ防止）。
+- [クラブ別の最新ハイライト](https://highlight-compass.com/club/latest.html): 各クラブの直近試合の公式ハイライトをクラブ別に一覧（ネタバレ防止）。
+- [サイト内検索](https://highlight-compass.com/search.html): クラブ・選手・リーグ・代表を横断検索（ローマ字可）。
+- [English version](https://highlight-compass.com/en/): Official spoiler-free football highlights in English (Champions League, Premier League, La Liga and more).
 - [プレミアリーグ](https://highlight-compass.com/league/premier-league.html): プレミアリーグの順位表・試合日程・次の試合・公式ハイライト。
 - [ラ・リーガ](https://highlight-compass.com/league/laliga.html): ラ・リーガの順位表・試合日程・次の試合・公式ハイライト。
 - [セリエA](https://highlight-compass.com/league/serie-a.html): セリエAの順位表・試合日程・次の試合・公式ハイライト。
 - [ブンデスリーガ](https://highlight-compass.com/league/bundesliga.html): ブンデスリーガの順位表・試合日程・次の試合・公式ハイライト。
 - [リーグアン](https://highlight-compass.com/league/ligue-1.html): リーグアンの順位表・試合日程・次の試合・公式ハイライト。
 - [プリメイラ・リーガ](https://highlight-compass.com/league/primeira-liga.html): プリメイラ・リーガの順位表・試合日程・次の試合・公式ハイライト。
+- [UEFAチャンピオンズリーグ](https://highlight-compass.com/league/champions-league.html): UEFAチャンピオンズリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [エールディヴィジ](https://highlight-compass.com/league/eredivisie.html): エールディヴィジの順位表・試合日程・次の試合・公式ハイライト。
+- [J1リーグ](https://highlight-compass.com/league/j1-league.html): J1リーグの順位表・試合日程・次の試合・公式ハイライト。
+- [J2リーグ](https://highlight-compass.com/league/j2-league.html): J2リーグの順位表・試合日程・次の試合・公式ハイライト。
+- [ベルギー・プロリーグ](https://highlight-compass.com/league/belgian-pro-league.html): ベルギー・プロリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [UEFAネーションズリーグ](https://highlight-compass.com/league/nations-league.html): UEFAネーションズリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [UEFAヨーロッパリーグ](https://highlight-compass.com/league/europa-league.html): UEFAヨーロッパリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [UEFAカンファレンスリーグ](https://highlight-compass.com/league/conference-league.html): UEFAカンファレンスリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [AFCチャンピオンズリーグ](https://highlight-compass.com/league/afc-champions-league.html): AFCチャンピオンズリーグの順位表・試合日程・次の試合・公式ハイライト。
+- [日本代表](https://highlight-compass.com/league/japan-national-team.html): 日本代表の順位表・試合日程・次の試合・公式ハイライト。
+- [EFLカップ（カラバオ）](https://highlight-compass.com/league/carabao-cup.html): EFLカップ（カラバオ）の順位表・試合日程・次の試合・公式ハイライト。
+
+## 今シーズンの最新データ（2026-11-01時点）
+- プレミアリーグ: 首位: マンチェスター・シティ（勝点21・9試合） ／ 得点王: Erling Haaland（マンチェスター・シティ・9ゴール）。
+- ラ・リーガ: 首位: バルセロナ（勝点30・11試合） ／ 得点王: Raphinha（バルセロナ・15ゴール）。
+- セリエA: 首位: ラツィオ（勝点25・9試合） ／ 得点王: Gustavo Varela（モンツァ・9ゴール）。
+- ブンデスリーガ: 首位: バイエルン（勝点18・8試合） ／ 得点王: Niclas Füllkrug（ブレーメン・9ゴール）。
+- リーグアン: 首位: パリ・サンジェルマン（勝点20・9試合） ／ 得点王: Esteban Lepaul（レンヌ・7ゴール）。
+- UEFAチャンピオンズリーグ: 首位: パリ・サンジェルマン（勝点9・3試合）。
+- エールディヴィジ: 首位: フェイエノールト（勝点25・11試合）。
+※ 順位は当サイト掲載結果からの集計、得点王の出典は football-data.org。最新の全順位・得点ランキングは各リーグページを参照。
 
 ## ガイド
+- [UEFAチャンピオンズリーグ 歴代決勝・優勝クラブ](https://highlight-compass.com/guide/champions-league-finals-history.html)
+- [UEFAヨーロッパリーグ 歴代決勝・優勝クラブ](https://highlight-compass.com/guide/europa-league-finals-history.html)
+- [UEFAネーションズリーグ 歴代優勝国・決勝成績](https://highlight-compass.com/guide/nations-league-past-winners.html)
+- [主要選手の移籍まとめ（確定・出典つき）](https://highlight-compass.com/guide/major-transfers-confirmed.html)
 - [2026 FIFAワールドカップを日本から観る方法と公式ハイライトまとめ](https://highlight-compass.com/guide/world-cup-2026-how-to-watch.html)
+- [サッカー名将の系譜・師弟マップ](https://highlight-compass.com/guide/coaching-lineage.html)
 - [久保建英 公式ハイライトまとめ（レアル・ソシエダ／2025-26）](https://highlight-compass.com/guide/kubo-takefusa-highlights.html)
 - [鈴木彩艶 公式ハイライトまとめ（パルマ／2025-26）](https://highlight-compass.com/guide/suzuki-zion-highlights.html)
 - [南野拓実 公式ハイライトまとめ（ASモナコ／2025-26）](https://highlight-compass.com/guide/minamino-takumi-highlights.html)
 - [堂安律 公式ハイライトまとめ（フランクフルト／2025-26）](https://highlight-compass.com/guide/doan-ritsu-highlights.html)
 - [サッカーの結果・スコアを見ずにハイライトを楽しむ方法](https://highlight-compass.com/guide/avoid-spoilers-how-to-watch.html)
+- [UEFAネーションズリーグ 完全ガイド](https://highlight-compass.com/guide/uefa-nations-league-guide.html)
+- [UEFAチャンピオンズリーグ 完全ガイド](https://highlight-compass.com/guide/uefa-champions-league-guide.html)
+- [UEFAヨーロッパリーグ 完全ガイド](https://highlight-compass.com/guide/uefa-europa-league-guide.html)
+- [FIFAワールドカップ 歴代優勝国 完全ガイド](https://highlight-compass.com/guide/world-cup-winners-history.html)
+- [プレミアリーグ 完全ガイド](https://highlight-compass.com/guide/premier-league-guide.html)
+- [ラ・リーガ 完全ガイド](https://highlight-compass.com/guide/laliga-guide.html)
+- [セリエA 完全ガイド](https://highlight-compass.com/guide/serie-a-guide.html)
+- [ブンデスリーガ 完全ガイド](https://highlight-compass.com/guide/bundesliga-guide.html)
+- [リーグアン 完全ガイド](https://highlight-compass.com/guide/ligue1-guide.html)
+- [Jリーグ（J1・J2・J3）完全ガイド](https://highlight-compass.com/guide/j-league-guide.html)
+- [オフサイドのルール 完全ガイド](https://highlight-compass.com/guide/offside-rule-explained.html)
+- [VAR（ビデオ・アシスタント・レフェリー）完全ガイド](https://highlight-compass.com/guide/var-explained.html)
+- [サッカーの基本ルール 完全ガイド（初心者向け）](https://highlight-compass.com/guide/football-basic-rules.html)
+- [カードと出場停止のルール 完全ガイド](https://highlight-compass.com/guide/cards-and-suspensions.html)
+- [サッカーのポジション 完全ガイド](https://highlight-compass.com/guide/football-positions-guide.html)
+- [サッカーのフォーメーション入門](https://highlight-compass.com/guide/formations-guide.html)
+- [海外サッカーを日本で観る方法 完全ガイド](https://highlight-compass.com/guide/how-to-watch-overseas-football.html)
+- [UEFAカンファレンスリーグ 完全ガイド](https://highlight-compass.com/guide/uefa-conference-league-guide.html)
+- [AFCチャンピオンズリーグ エリート 完全ガイド](https://highlight-compass.com/guide/afc-champions-league-guide.html)
+- [移籍市場（移籍ウィンドウ）完全ガイド](https://highlight-compass.com/guide/transfer-window-explained.html)
+- [延長戦とPK戦 完全ガイド](https://highlight-compass.com/guide/extra-time-and-penalty-shootout.html)
+- [昇格・降格の仕組み 完全ガイド](https://highlight-compass.com/guide/promotion-relegation-explained.html)
+- [ダービーマッチ 完全ガイド](https://highlight-compass.com/guide/what-is-a-derby.html)
+- [セットプレー 完全ガイド](https://highlight-compass.com/guide/set-pieces-explained.html)
+- [サッカーの大会の全体像 完全ガイド](https://highlight-compass.com/guide/football-competitions-overview.html)
+- [サッカー日本代表 ワールドカップの歴史](https://highlight-compass.com/guide/japan-world-cup-history.html)
+- [代表ウィーク（国際マッチデー）とは](https://highlight-compass.com/guide/fifa-international-match-calendar.html)
+- [UEFAチャンピオンズリーグ 歴代優勝クラブ](https://highlight-compass.com/guide/champions-league-past-winners.html)
+- [ワールドカップ欧州予選の仕組み](https://highlight-compass.com/guide/world-cup-qualifying-europe.html)
+- [アディショナルタイム（ロスタイム）とは](https://highlight-compass.com/guide/additional-time-explained.html)
+- [バロンドールとは](https://highlight-compass.com/guide/ballon-dor-explained.html)
+- [PK（ペナルティキック）のルール](https://highlight-compass.com/guide/penalty-kick-rules.html)
+- [サッカーの背番号の意味](https://highlight-compass.com/guide/squad-numbers-meaning.html)
+- [サッカーのハンド（ハンドリング）の反則](https://highlight-compass.com/guide/handball-rule-explained.html)
+- [ゴールキーパーの特別なルール](https://highlight-compass.com/guide/goalkeeper-rules-explained.html)
+- [サッカーの交代（5人交代制）のルール](https://highlight-compass.com/guide/substitutions-rule.html)
+- [サッカーのキャプテン（主将）の役割](https://highlight-compass.com/guide/captain-role-explained.html)
+- [FIFAクラブワールドカップとは](https://highlight-compass.com/guide/club-world-cup-explained.html)
+- [プレミアリーグの「ビッグ6」とは](https://highlight-compass.com/guide/premier-league-big-six.html)
+- [世界の有名なダービー](https://highlight-compass.com/guide/famous-derbies-world.html)
+- [FIFAランキングとは](https://highlight-compass.com/guide/fifa-ranking-explained.html)
+- [EURO（UEFA欧州選手権）とは](https://highlight-compass.com/guide/euro-championship-explained.html)
+- [コパ・アメリカとは](https://highlight-compass.com/guide/copa-america-explained.html)
+- [AFCアジアカップとは](https://highlight-compass.com/guide/asian-cup-explained.html)
+- [ゲーゲンプレスとは](https://highlight-compass.com/guide/gegenpressing-explained.html)
+- [ティキタカ（ポゼッションサッカー）とは](https://highlight-compass.com/guide/tiki-taka-explained.html)
+- [ビルドアップとは](https://highlight-compass.com/guide/buildup-explained.html)
+- [サッカーの個人タイトル（得点王・アシスト王など）](https://highlight-compass.com/guide/individual-awards-explained.html)
+- [ホームアンドアウェー方式とは](https://highlight-compass.com/guide/home-and-away-explained.html)
+
+## English guides
+- [UEFA Nations League — Complete Guide](https://highlight-compass.com/en/guide/uefa-nations-league-guide.html)
+- [UEFA Champions League — Complete Guide](https://highlight-compass.com/en/guide/uefa-champions-league-guide.html)
+- [UEFA Europa League — Complete Guide](https://highlight-compass.com/en/guide/uefa-europa-league-guide.html)
+- [FIFA World Cup Winners — Complete Guide](https://highlight-compass.com/en/guide/world-cup-winners-history.html)
 
 ## サイトについて
 - 運営: Football Highlights Compass

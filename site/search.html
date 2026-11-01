@@ -4,7 +4,8 @@
 <script>(function(){try{if(location.hostname==='ededdeddyw.github.io'){var p=location.pathname.replace(/^\/football-highlights-compass/,'')||'/';location.replace('https://highlight-compass.com'+p+location.search+location.hash);}}catch(e){}})();</script>
 <title>サイト内検索｜クラブ・選手・リーグ・代表を横断検索 - Football Highlights Compass</title>
 <meta name="description" content="クラブ・選手・リーグ・大会・代表チームのページを横断検索。チーム名・選手名・ローマ字（barcelona, kubo など）でも探せます。公式ハイライトまとめサイトの検索ページ。">
-<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0c1657">
+<!-- サイト内検索はツールページ（本文が薄い）。Google推奨に従いnoindex（follow維持でリンク評価は流す）。AdSenseの薄いページ露出も避ける。 -->
+<meta name="robots" content="noindex,follow"><meta name="theme-color" content="#0c1657">
 <link rel="canonical" href="https://highlight-compass.com/search.html">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RVGB3EZDB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4RVGB3EZDB');</script>
@@ -48,16 +49,16 @@
   <div class="srch-box"><span class="ic">🔎</span><input id="sq" type="search" placeholder="チーム・選手・リーグ・代表を検索（例：バルセロナ / 久保 / プレミア）" autocomplete="off" autofocus></div>
   <div class="srch-count" id="scount"></div>
   <div id="sresults"></div>
-  <p class="srch-hint">クラブ・選手・リーグ・大会・代表チームの全ページ（199件）から横断検索します。ローマ字（例：barcelona, kubo, premier）でも探せます。各ページから公式ハイライト・順位表・日程へ辿れます。</p>
+  <p class="srch-hint">クラブ・選手・リーグ・大会・代表チームの全ページ（537件）から横断検索します。ローマ字（例：barcelona, kubo, premier）でも探せます。各ページから公式ハイライト・順位表・日程へ辿れます。</p>
 </div>
 <script>
 (function(){
-  var KIND={league:'リーグ・大会',club:'クラブ',player:'選手',country:'代表チーム'};
-  var KORDER=['league','club','player','country'];
+  var KIND={league:'リーグ・大会',club:'クラブ',player:'選手',country:'代表チーム',match:'試合'};
+  var KORDER=['league','club','player','country','match'];
   var IDX=[], input=document.getElementById('sq'), out=document.getElementById('sresults'), cnt=document.getElementById('scount');
   function nrm(s){return String(s||'').replace(/\s+/g,'').toLowerCase();}
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':'🛡️'; }
+  function icon(x){ if(x.img) return '<img src="'+esc(x.img)+'" alt="" loading="lazy">'; if(x.k==='country'&&x.iso) return '<img src="https://flagcdn.com/w40/'+esc(x.iso)+'.png" alt="" loading="lazy">'; return x.k==='player'?'⚽':x.k==='league'?'🏆':x.k==='country'?'🌍':x.k==='match'?'▶':'🛡️'; }
   function render(raw){
     var q=nrm(raw);
     var list = !q ? IDX.slice() : IDX.filter(function(x){return x.kw.indexOf(q)>=0;});
