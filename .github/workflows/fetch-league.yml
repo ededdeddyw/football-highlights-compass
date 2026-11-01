@@ -40,5 +40,18 @@ jobs:
           git add data/league-*.json
           if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
           git commit -m "data: リーグ日程・結果を取得（fetch-league）"
-          git pull --rebase --autostash || true
-          git push
+          SRC=$(git rev-parse HEAD)
+          FILES=$(git diff-tree --no-commit-id --name-only -r "$SRC")
+          # 他ワークフローとのpush競合対策：最新mainの上に本コミットの変更ファイルだけを載せ直してpushをリトライ
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            git fetch origin main || { sleep $(( i * 2 )); continue; }
+            git checkout -B __ci_commit origin/main
+            git checkout "$SRC" -- $FILES
+            git add -A
+            if git diff --cached --quiet; then echo "最新mainに既に反映済み。"; ok=1; break; fi
+            git commit -C "$SRC"
+            if git push origin HEAD:main; then ok=1; echo "push成功（$i 回目）"; break; fi
+            echo "push競合、リトライ $i"; sleep $(( (RANDOM % 4) + i * 2 ))
+          done
+          [ "$ok" = 1 ] || echo "::warning::pushに失敗しました（データ処理は完了済み・次回実行で再試行されるため実害はありません）。"
