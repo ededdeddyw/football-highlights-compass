@@ -88,8 +88,24 @@ jobs:
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/league-*.json data/topscorers-*.json data/deploy-manifest.json data/page-modified.json
+          git add data/league-*.json data/topscorers-*.json data/deploy-manifest.json data/page-modified.json || true
           if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
           git commit -m "chore(season): リーグ日程・結果・ハイライトを自動更新→本番反映"
-          git pull --rebase --autostash || true
-          git push
+          SRC=$(git rev-parse HEAD)
+          FILES=$(git diff-tree --no-commit-id --name-only -r "$SRC")   # 本コミットが変更したファイル一覧
+          # 他ワークフローとのpush競合に備え、「最新mainを取得→その上に本ジョブの変更ファイルだけを
+          # 載せ直して単一コミット→push」を最大6回リトライ。毎回origin/mainから作り直すのでrebase競合なし。
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            git fetch origin main || { sleep $(( i * 2 )); continue; }
+            git checkout -B __season_commit origin/main
+            git checkout "$SRC" -- $FILES
+            git add -A
+            if git diff --cached --quiet; then echo "最新mainに既に反映済み。"; ok=1; break; fi
+            git commit -m "chore(season): リーグ日程・結果・ハイライトを自動更新→本番反映"
+            if git push origin HEAD:main; then ok=1; echo "push成功（$i 回目）"; break; fi
+            echo "push競合、リトライ $i"; sleep $(( (RANDOM % 4) + i * 2 ))
+          done
+          if [ "$ok" != 1 ]; then
+            echo "::warning::データ/マニフェストのpushに失敗しました（本番アップロードは完了済み。次回実行で再取得・再コミットされるため実害はありません）。"
+          fi
