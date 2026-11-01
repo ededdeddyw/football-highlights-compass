@@ -1122,8 +1122,8 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "levante",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "KLM85tioDFc"
     },
     {
@@ -1133,9 +1133,9 @@
       "away": "セルタ",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "celta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-0",
+      "videoId": "2-v5Pi2PLvY"
     },
     {
       "matchday": 11,
@@ -1144,8 +1144,8 @@
       "away": "マラガ",
       "homeSlug": "real-betis",
       "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "VpF0FcbHDCY"
     },
     {
@@ -1155,8 +1155,8 @@
       "away": "アラベス",
       "homeSlug": "barca",
       "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "6-1",
       "videoId": "Pw8sqpsehs0"
     },
     {

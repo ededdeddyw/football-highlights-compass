@@ -1001,8 +1001,8 @@
       "away": "フォルトゥナ・シッタート",
       "homeSlug": "feyenoord",
       "awaySlug": "sittard",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -1012,8 +1012,8 @@
       "away": "NECナイメヘン",
       "homeSlug": "heerenveen",
       "awaySlug": "nec",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {
@@ -1023,8 +1023,8 @@
       "away": "ウィレムII",
       "homeSlug": "psv",
       "awaySlug": "willem-ii",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "7-0",
       "videoId": ""
     },
     {
@@ -1034,8 +1034,8 @@
       "away": "ゴー・アヘッド・イーグルス",
       "homeSlug": "cambuur",
       "awaySlug": "go-ahead",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {
@@ -1045,8 +1045,8 @@
       "away": "AZアルクマール",
       "homeSlug": "ajax",
       "awaySlug": "az",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {

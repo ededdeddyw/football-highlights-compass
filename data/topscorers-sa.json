@@ -2,20 +2,30 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "scorers": [
     {
       "rank": 1,
       "name": "Gustavo Varela",
       "team": "モンツァ",
-      "goals": 8,
+      "goals": 9,
       "assists": 1,
-      "pens": 1,
-      "apps": 8,
+      "pens": 2,
+      "apps": 9,
       "nat": "Portugal"
     },
     {
       "rank": 2,
+      "name": "Donyell Malen",
+      "team": "ローマ",
+      "goals": 8,
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "Netherlands"
+    },
+    {
+      "rank": 3,
       "name": "Antonio Raimondo",
       "team": "フロジノーネ",
       "goals": 8,
@@ -23,16 +33,6 @@
       "pens": null,
       "apps": 9,
       "nat": "Italy"
-    },
-    {
-      "rank": 3,
-      "name": "Donyell Malen",
-      "team": "ローマ",
-      "goals": 7,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "Netherlands"
     },
     {
       "rank": 4,
@@ -56,16 +56,26 @@
     },
     {
       "rank": 6,
+      "name": "Adrien Rabiot",
+      "team": "ミラン",
+      "goals": 5,
+      "assists": 3,
+      "pens": null,
+      "apps": 8,
+      "nat": "France"
+    },
+    {
+      "rank": 7,
       "name": "Marcus Thuram-Ulien",
       "team": "インテル",
       "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Daniel Maldini",
       "team": "カリアリ",
       "goals": 5,
@@ -75,7 +85,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Kevin De Bruyne",
       "team": "ナポリ",
       "goals": 4,
@@ -85,24 +95,14 @@
       "nat": "Belgium"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Italy"
-    },
-    {
-      "rank": 10,
-      "name": "Adrien Rabiot",
-      "team": "ミラン",
-      "goals": 4,
-      "assists": 3,
-      "pens": null,
-      "apps": 7,
-      "nat": "France"
     },
     {
       "rank": 11,
@@ -136,6 +136,16 @@
     },
     {
       "rank": 14,
+      "name": "Diego Moreira",
+      "team": "ミラン",
+      "goals": 4,
+      "assists": 3,
+      "pens": null,
+      "apps": 8,
+      "nat": "Belgium"
+    },
+    {
+      "rank": 15,
       "name": "Giacomo Calò",
       "team": "フロジノーネ",
       "goals": 4,
@@ -143,16 +153,6 @@
       "pens": 1,
       "apps": 9,
       "nat": "Italy"
-    },
-    {
-      "rank": 15,
-      "name": "Hakan Çalhanoğlu",
-      "team": "インテル",
-      "goals": 3,
-      "assists": null,
-      "pens": 1,
-      "apps": 7,
-      "nat": "Turkey"
     }
   ]
 }

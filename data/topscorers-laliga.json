@@ -2,16 +2,16 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "scorers": [
     {
       "rank": 1,
       "name": "Raphinha",
       "team": "バルセロナ",
-      "goals": 13,
+      "goals": 15,
       "assists": 2,
       "pens": 3,
-      "apps": 9,
+      "apps": 10,
       "nat": "Brazil"
     },
     {
@@ -26,6 +26,16 @@
     },
     {
       "rank": 3,
+      "name": "Lamine Yamal",
+      "team": "バルセロナ",
+      "goals": 10,
+      "assists": 7,
+      "pens": 1,
+      "apps": 11,
+      "nat": "Spain"
+    },
+    {
+      "rank": 4,
       "name": "Yassir Zabiri",
       "team": "ラシン・サンタンデール",
       "goals": 8,
@@ -35,23 +45,13 @@
       "nat": "Morocco"
     },
     {
-      "rank": 4,
-      "name": "Lamine Yamal",
-      "team": "バルセロナ",
-      "goals": 8,
-      "assists": 6,
-      "pens": 1,
-      "apps": 10,
-      "nat": "Spain"
-    },
-    {
       "rank": 5,
       "name": "Sergio Camello",
       "team": "ラーヨ・バジェカーノ",
       "goals": 7,
-      "assists": 1,
+      "assists": 2,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Spain"
     },
     {
@@ -99,37 +99,37 @@
       "name": "Álex Baena",
       "team": "アトレティコ・マドリード",
       "goals": 5,
-      "assists": 2,
+      "assists": 3,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Spain"
     },
     {
       "rank": 11,
+      "name": "Fermín López",
+      "team": "バルセロナ",
+      "goals": 5,
+      "assists": 5,
+      "pens": null,
+      "apps": 11,
+      "nat": "Spain"
+    },
+    {
+      "rank": 12,
       "name": "Lucas Boyé",
       "team": "アラベス",
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 9,
+      "apps": 10,
       "nat": "Argentina"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Brugui",
       "team": "レバンテ",
       "goals": 5,
       "assists": 1,
-      "pens": null,
-      "apps": 9,
-      "nat": "Spain"
-    },
-    {
-      "rank": 13,
-      "name": "Fermín López",
-      "team": "バルセロナ",
-      "goals": 4,
-      "assists": 3,
       "pens": null,
       "apps": 10,
       "nat": "Spain"
@@ -138,20 +138,20 @@
       "rank": 14,
       "name": "Adrián",
       "team": "マラガ",
-      "goals": 4,
+      "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 6,
+      "apps": 7,
       "nat": "Spain"
     },
     {
       "rank": 15,
       "name": "Mariano Díaz",
       "team": "アラベス",
-      "goals": 3,
+      "goals": 4,
       "assists": 4,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Dominican Republic"
     }
   ]

@@ -836,8 +836,8 @@
       "away": "ルマン",
       "homeSlug": "troyes",
       "awaySlug": "le-mans",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "K4TaKbbl6Vs"
     },
     {

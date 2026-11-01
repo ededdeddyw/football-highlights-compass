@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "scorers": [
     {
       "rank": 1,
@@ -11,7 +11,7 @@
       "goals": 9,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Norway"
     },
     {
@@ -31,7 +31,7 @@
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "England"
     },
     {
@@ -48,44 +48,54 @@
       "rank": 5,
       "name": "Morgan Rogers",
       "team": "チェルシー",
-      "goals": 4,
+      "goals": 5,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "England"
     },
     {
       "rank": 6,
+      "name": "Nicolas Jackson",
+      "team": "アストン・ヴィラ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 7,
       "name": "Rayan Cherki",
       "team": "マンチェスター・シティ",
       "goals": 4,
       "assists": 2,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Bryan Mbeumo",
       "team": "マンチェスター・ユナイテッド",
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Cameroon"
     },
     {
-      "rank": 8,
-      "name": "Nicolas Jackson",
-      "team": "アストン・ヴィラ",
+      "rank": 9,
+      "name": "Evanilson",
+      "team": "ボーンマス",
       "goals": 4,
-      "assists": null,
+      "assists": 4,
       "pens": null,
-      "apps": 7,
-      "nat": "Senegal"
+      "apps": 9,
+      "nat": "Brazil"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -95,7 +105,7 @@
       "nat": "England"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Thierno Barry",
       "team": "エバートン",
       "goals": 3,
@@ -105,54 +115,44 @@
       "nat": "France"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Jack Hinshelwood",
       "team": "ブライトン",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 3,
+      "apps": 4,
       "nat": "England"
     },
     {
-      "rank": 12,
+      "rank": 13,
+      "name": "Cole Palmer",
+      "team": "チェルシー",
+      "goals": 3,
+      "assists": 3,
+      "pens": 1,
+      "apps": 9,
+      "nat": "England"
+    },
+    {
+      "rank": 14,
       "name": "Pedro Neto",
       "team": "チェルシー",
       "goals": 3,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Portugal"
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "Pascal Groß",
       "team": "ブライトン",
       "goals": 3,
       "assists": 4,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Germany"
-    },
-    {
-      "rank": 14,
-      "name": "Kevin Schade",
-      "team": "ブレントフォード",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 8,
-      "nat": "Germany"
-    },
-    {
-      "rank": 15,
-      "name": "Dominic Calvert-Lewin",
-      "team": "リーズ",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "England"
     }
   ]
 }

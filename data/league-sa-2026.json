@@ -1001,8 +1001,8 @@
       "away": "モンツァ",
       "homeSlug": "bologna",
       "awaySlug": "monza",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "aIdMeAGGt6I"
     },
     {
@@ -1012,8 +1012,8 @@
       "away": "ローマ",
       "homeSlug": "udinese",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-5",
       "videoId": "p4OHWIRSRRk"
     },
     {
@@ -1023,8 +1023,8 @@
       "away": "インテル",
       "homeSlug": "milan",
       "awaySlug": "inter",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "0Fg9gFz3lk8"
     },
     {

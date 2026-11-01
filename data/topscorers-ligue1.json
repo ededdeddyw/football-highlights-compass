@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "scorers": [
     {
       "rank": 1,
@@ -81,7 +81,7 @@
       "goals": 4,
       "assists": null,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Central African Republic"
     },
     {

@@ -891,8 +891,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "chelsea",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "FTFpjRVCctU"
     },
     {
@@ -902,8 +902,8 @@
       "away": "ブライトン",
       "homeSlug": "man-city",
       "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "Evbrv717QJw"
     },
     {
@@ -913,8 +913,8 @@
       "away": "リーズ",
       "homeSlug": "bournemouth",
       "awaySlug": "leeds-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "hgziFcqWWQI"
     },
     {
@@ -924,8 +924,8 @@
       "away": "サンダーランド",
       "homeSlug": "coventry-city",
       "awaySlug": "sunderland",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "oZ6m4w5ilcM"
     },
     {
@@ -935,8 +935,8 @@
       "away": "イプスウィッチ",
       "homeSlug": "hull-city",
       "awaySlug": "ipswich-town",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "aWwc3Liok9s"
     },
     {
@@ -946,8 +946,8 @@
       "away": "ノッティンガム・フォレスト",
       "homeSlug": "brentford",
       "awaySlug": "nottingham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "oJc6pZfz5xs"
     },
     {
@@ -957,8 +957,8 @@
       "away": "クリスタル・パレス",
       "homeSlug": "tottenham",
       "awaySlug": "crystal-palace",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "zYRZ_NflOYk"
     },
     {
@@ -968,8 +968,8 @@
       "away": "フラム",
       "homeSlug": "aston-villa",
       "awaySlug": "fulham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "-kKKDsl44sw"
     },
     {
