@@ -1159,6 +1159,9 @@ const MOMENTS_PAGE = {
 // buildMatch は別系統の大会コード（LGマップ: bundes/seriea/jl…）を使うため、名場面マップのキー(bl/sa/j1)へ正規化する。
 const MOMENTS_ALIAS = { bundes:'bl', seriea:'sa', jl:'j1' };
 const momentsLink = code => { const mm = MOMENTS_PAGE[MOMENTS_ALIAS[code]||code]; return mm ? `<p class="moments-link" style="margin:10px 2px 0"><a href="${mm.href}">▶ ${esc(mm.label)}・公式ハイライトを見る</a></p>` : ''; };
+// buildMatch の other バケット対策：大会コードで判別できなくても、両クラブが確実にプレミア所属ならプレミアの名場面へ。
+// 下部リーグ等の混在を誤判定しないよう「両チームともCLUBS登録かつleague=プレミアリーグ」のときだけ出す。
+const plMomentsLinkByTeams = teams => (Array.isArray(teams) && teams.length>=2 && teams.every(t=>CLUBS[t] && CLUBS[t].league==='プレミアリーグ')) ? momentsLink('pl') : '';
 function buildMatch(m){
   if(!m.id || slugs.includes(m.id)) return; slugs.push(m.id);
   const lg = LG[m.league]||''; const teamsTxt = m.teams.join(' vs ');
@@ -1279,7 +1282,7 @@ function buildMatch(m){
   ${teamHtml}
   ${playerHtml}
   ${bottomRel}
-  ${!thin?momentsLink(m.league):''}
+  ${!thin?(momentsLink(m.league)||plMomentsLinkByTeams(m.teams)):''}
   ${footerInner}
   </article></main>
   ${readDrawer(sideContent).aside}
