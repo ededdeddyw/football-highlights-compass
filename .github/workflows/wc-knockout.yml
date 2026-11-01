@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: wc-knockout
+  group: ftp-deploy      # FTP差分デプロイを行うため、他のデプロイ系と同時実行しない（同一FTPサーバーへの同時書込み・push競合を回避）
   cancel-in-progress: false
 
 jobs:
