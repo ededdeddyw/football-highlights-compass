@@ -41,8 +41,24 @@ jobs:
         run: |
           git config user.name  "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/deploy-manifest.json data/page-modified.json
+          git add data/deploy-manifest.json data/page-modified.json || true
           if git diff --cached --quiet; then echo "変更なし。"; exit 0; fi
           git commit -m "chore(deploy): デプロイ差分マニフェスト・更新日マップ更新"
-          git pull --rebase --autostash || true
-          git push
+          SRC=$(git rev-parse HEAD)   # 自分のマニフェスト内容を保持（直前のアップロードを反映した最新版）
+          # season-refresh 等が同じ生成ファイルを並行更新するため push が競合しやすい。
+          # 「最新 main を取得 → その上に自分の2ファイルだけを載せ直して単一コミット → push」をリトライ。
+          # 毎回 origin/main から作り直すので rebase 競合は起きず、非fast-forward はリトライで解消する。
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            git fetch origin main || { sleep $(( i * 2 )); continue; }
+            git checkout -B __deploy_manifest origin/main
+            git checkout "$SRC" -- data/deploy-manifest.json data/page-modified.json
+            git add data/deploy-manifest.json data/page-modified.json
+            if git diff --cached --quiet; then echo "最新mainに既に反映済み。"; ok=1; break; fi
+            git commit -m "chore(deploy): デプロイ差分マニフェスト・更新日マップ更新"
+            if git push origin HEAD:main; then ok=1; echo "push成功（$i 回目）"; break; fi
+            echo "push競合、リトライ $i"; sleep $(( (RANDOM % 4) + i * 2 ))
+          done
+          if [ "$ok" != 1 ]; then
+            echo "::warning::マニフェストのpushに失敗しました（本番へのアップロードは完了済み。次回デプロイで差分が再計算・再コミットされるため実害はありません）。"
+          fi
