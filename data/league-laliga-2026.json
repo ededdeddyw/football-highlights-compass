@@ -1166,8 +1166,8 @@
       "away": "セビージャ",
       "homeSlug": "getafe",
       "awaySlug": "sevilla-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "nkiNY36uIYw"
     },
     {
@@ -1177,8 +1177,8 @@
       "away": "レアル・マドリード",
       "homeSlug": "santander",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "cooTslCHsHI"
     },
     {
@@ -1188,8 +1188,8 @@
       "away": "バレンシア",
       "homeSlug": "elche",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "FaGp3lZkDKk"
     },
     {
@@ -1199,9 +1199,9 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "athletic",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "vezTrOsT6JU"
     },
     {
       "matchday": 11,

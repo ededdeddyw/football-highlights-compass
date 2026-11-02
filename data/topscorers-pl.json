@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "scorers": [
     {
       "rank": 1,
@@ -21,7 +21,7 @@
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Sweden"
     },
     {
@@ -96,6 +96,16 @@
     },
     {
       "rank": 10,
+      "name": "Kai Havertz",
+      "team": "アーセナル",
+      "goals": 3,
+      "assists": null,
+      "pens": null,
+      "apps": 9,
+      "nat": "Germany"
+    },
+    {
+      "rank": 11,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -105,7 +115,7 @@
       "nat": "England"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Thierno Barry",
       "team": "エバートン",
       "goals": 3,
@@ -115,7 +125,7 @@
       "nat": "France"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Jack Hinshelwood",
       "team": "ブライトン",
       "goals": 3,
@@ -125,7 +135,7 @@
       "nat": "England"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Cole Palmer",
       "team": "チェルシー",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "England"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Pedro Neto",
       "team": "チェルシー",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 9,
       "nat": "Portugal"
-    },
-    {
-      "rank": 15,
-      "name": "Pascal Groß",
-      "team": "ブライトン",
-      "goals": 3,
-      "assists": 4,
-      "pens": 1,
-      "apps": 9,
-      "nat": "Germany"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "scorers": [
     {
       "rank": 1,
@@ -31,7 +31,7 @@
       "goals": 8,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Italy"
     },
     {
@@ -51,7 +51,7 @@
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Greece"
     },
     {
@@ -81,21 +81,31 @@
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 9,
+      "apps": 10,
       "nat": "Italy"
     },
     {
       "rank": 9,
+      "name": "Giacomo Calò",
+      "team": "フロジノーネ",
+      "goals": 5,
+      "assists": 1,
+      "pens": 1,
+      "apps": 10,
+      "nat": "Italy"
+    },
+    {
+      "rank": 10,
       "name": "Kevin De Bruyne",
       "team": "ナポリ",
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 9,
+      "apps": 10,
       "nat": "Belgium"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 4,
@@ -105,17 +115,27 @@
       "nat": "Italy"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Che Adams",
       "team": "トリノ",
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Scotland"
     },
     {
-      "rank": 12,
+      "rank": 13,
+      "name": "Milutin Osmajić",
+      "team": "ジェノア",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "Montenegro"
+    },
+    {
+      "rank": 14,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
@@ -125,34 +145,14 @@
       "nat": "Argentina"
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "Tijjani Noslin",
       "team": "ラツィオ",
       "goals": 4,
-      "assists": 2,
-      "pens": null,
-      "apps": 9,
-      "nat": "Netherlands"
-    },
-    {
-      "rank": 14,
-      "name": "Diego Moreira",
-      "team": "ミラン",
-      "goals": 4,
       "assists": 3,
       "pens": null,
-      "apps": 8,
-      "nat": "Belgium"
-    },
-    {
-      "rank": 15,
-      "name": "Giacomo Calò",
-      "team": "フロジノーネ",
-      "goals": 4,
-      "assists": 1,
-      "pens": 1,
-      "apps": 9,
-      "nat": "Italy"
+      "apps": 10,
+      "nat": "Netherlands"
     }
   ]
 }

@@ -1034,8 +1034,8 @@
       "away": "ヴェネツィア",
       "homeSlug": "como-1907",
       "awaySlug": "venezia-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "4J6nFY4AtVU"
     },
     {
@@ -1045,8 +1045,8 @@
       "away": "トリノ",
       "homeSlug": "frosinone",
       "awaySlug": "torino",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "oueOPiPwH7A"
     },
     {
@@ -1056,8 +1056,8 @@
       "away": "カリアリ",
       "homeSlug": "lazio",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "8fakAH455nQ"
     },
     {
@@ -1067,8 +1067,8 @@
       "away": "ジェノア",
       "homeSlug": "lecce",
       "awaySlug": "genoa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "t6Bnmw-PQQg"
     },
     {
@@ -1078,9 +1078,9 @@
       "away": "ナポリ",
       "homeSlug": "juventus",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "iqciggyhLvM"
     },
     {
       "matchday": 10,

@@ -1056,8 +1056,8 @@
       "away": "ADOデンハーグ",
       "homeSlug": "zwolle",
       "awaySlug": "den-haag",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {
@@ -1067,8 +1067,8 @@
       "away": "ユトレヒト",
       "homeSlug": "telstar",
       "awaySlug": "utrecht",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-2",
       "videoId": ""
     },
     {
@@ -1078,8 +1078,8 @@
       "away": "トゥエンテ",
       "homeSlug": "excelsior",
       "awaySlug": "twente",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-9",
       "videoId": ""
     },
     {
@@ -1089,8 +1089,8 @@
       "away": "スパルタ・ロッテルダム",
       "homeSlug": "groningen",
       "awaySlug": "sparta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {

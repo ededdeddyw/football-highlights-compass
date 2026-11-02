@@ -979,8 +979,8 @@
       "away": "アーセナル",
       "homeSlug": "liverpool",
       "awaySlug": "arsenal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "PGdqEjdqByM"
     },
     {

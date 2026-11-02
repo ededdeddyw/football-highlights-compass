@@ -847,8 +847,8 @@
       "away": "オセール",
       "homeSlug": "strasbourg",
       "awaySlug": "auxerre",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-1",
       "videoId": "Al3K8t8tb5s"
     },
     {
@@ -858,8 +858,8 @@
       "away": "アンジェ",
       "homeSlug": "olympique-lyon",
       "awaySlug": "angers-sco",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "n7NHwyBRxP8"
     },
     {
@@ -869,8 +869,8 @@
       "away": "モナコ",
       "homeSlug": "paris-fc",
       "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "v_iuwE5hNE0"
     },
     {
@@ -880,8 +880,8 @@
       "away": "トゥールーズ",
       "homeSlug": "marseille",
       "awaySlug": "toulouse",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": ""
     },
     {
