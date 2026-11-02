@@ -194,6 +194,17 @@
     {
       "matchday": 10,
       "dateUTC": "",
+      "home": "シント=トロイデン",
+      "away": "ルーヴェン",
+      "homeSlug": "sint-truiden",
+      "awaySlug": "oh-leuven",
+      "finished": true,
+      "score": "",
+      "videoId": "3XK5JH9vhA8"
+    },
+    {
+      "matchday": 10,
+      "dateUTC": "",
       "home": "メヘレン",
       "away": "ヘンク",
       "homeSlug": "mechelen",
