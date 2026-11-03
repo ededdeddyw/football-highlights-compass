@@ -891,8 +891,8 @@
       "away": "ブレスト",
       "homeSlug": "lorient",
       "awaySlug": "brest",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "Hx8nLTNjUmk"
     },
     {

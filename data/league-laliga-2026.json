@@ -1210,9 +1210,9 @@
       "away": "オサスナ",
       "homeSlug": "deportivo",
       "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-1",
+      "videoId": "nYFcrFUwioo"
     },
     {
       "matchday": 12,

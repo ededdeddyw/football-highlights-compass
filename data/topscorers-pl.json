@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "scorers": [
     {
       "rank": 1,
@@ -66,6 +66,16 @@
     },
     {
       "rank": 7,
+      "name": "Thierno Barry",
+      "team": "エバートン",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 9,
+      "nat": "France"
+    },
+    {
+      "rank": 8,
       "name": "Rayan Cherki",
       "team": "マンチェスター・シティ",
       "goals": 4,
@@ -75,7 +85,7 @@
       "nat": "France"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Bryan Mbeumo",
       "team": "マンチェスター・ユナイテッド",
       "goals": 4,
@@ -85,7 +95,7 @@
       "nat": "Cameroon"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Evanilson",
       "team": "ボーンマス",
       "goals": 4,
@@ -95,7 +105,7 @@
       "nat": "Brazil"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Kai Havertz",
       "team": "アーセナル",
       "goals": 3,
@@ -105,7 +115,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -113,16 +123,6 @@
       "pens": 1,
       "apps": 7,
       "nat": "England"
-    },
-    {
-      "rank": 12,
-      "name": "Thierno Barry",
-      "team": "エバートン",
-      "goals": 3,
-      "assists": null,
-      "pens": null,
-      "apps": 8,
-      "nat": "France"
     },
     {
       "rank": 13,

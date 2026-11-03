@@ -1089,8 +1089,8 @@
       "away": "フィオレンティーナ",
       "homeSlug": "sassuolo",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-4",
       "videoId": "YhbsqhC5M5o"
     },
     {
@@ -1100,8 +1100,8 @@
       "away": "パルマ",
       "homeSlug": "atalanta",
       "awaySlug": "parma",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "kfP232UvsLI"
     },
     {

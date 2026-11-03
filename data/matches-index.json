@@ -24,6 +24,18 @@
     "hasPreview": false
   },
   {
+    "id": "vezTrOsT6JU",
+    "teams": [
+      "アスレティック・ビルバオ",
+      "レアル・ソシエダ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第11節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "FaGp3lZkDKk",
     "teams": [
       "エルチェ",
@@ -104,6 +116,18 @@
     "league": "other",
     "leagueName": "",
     "meta": "プレミアリーグ 第9節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "iqciggyhLvM",
+    "teams": [
+      "ユベントス",
+      "ナポリ"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第10節",
     "players": [],
     "hasPreview": false
   },
@@ -928,30 +952,6 @@
     "teams": [
       "アウクスブルク",
       "ウニオン・ベルリン"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第7節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "pbLX3U3Zr78",
-    "teams": [
-      "マインツ",
-      "ブレーメン"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第7節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "YIHCkV4oF7w",
-    "teams": [
-      "ケルン",
-      "シャルケ"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
