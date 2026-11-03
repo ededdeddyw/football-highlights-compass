@@ -1276,17 +1276,18 @@ function buildMatch(m){
   <div class="byline"><span class="b lg">${esc(lg||'')}</span>${m.meta?`<span class="b">📅 ${esc(m.meta)}</span>`:''}${m.players.length?`<span class="b">🇯🇵 ${esc(m.players.join('・'))}</span>`:''}</div>
   ${matchTags}
   <div class="post-body">${bodyHtml}</div>
+  ${sideRead}
   ${daznCta('この試合のフル・見逃し配信もDAZNで。ハイライトの先まで楽しめます。')}
   ${hasPreview(m.id)?AD:''}
   ${factHtml}
   ${teamHtml}
   ${playerHtml}
-  ${bottomRel}
+  ${relHtml}
   ${!thin?(momentsLink(m.league)||plMomentsLinkByTeams(m.teams)):''}
   ${footerInner}
   </article></main>
-  ${readDrawer(sideContent).aside}
-</div>${readDrawer(sideContent).fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
+  ${readDrawer('').aside}
+</div>${readDrawer('').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${m.id}.html`, out);
 }
 // 連続再生（ビンジ）の「次の動画」チェーン。同じ大会（m.league）内でループする。league版は各リーグ生成時に追記。
@@ -1419,6 +1420,7 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   <p class="dek">${esc(dek)}</p>
   ${matchTags}
   <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
+  ${sideRead}
   ${streamCta(L.code)}
   ${hasPreview(slug)?AD:''}
   ${factHtml}
@@ -1431,8 +1433,8 @@ function buildLeagueMatch(mt, L, seasonLbl, allMatches){
   ${FAQ_STYLE}${faqBlock(mfaq)}
   ${footer1()}
   </article></main>
-  ${readDrawer(sideRead||'').aside}
-</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
+  ${readDrawer('').aside}
+</div>${readDrawer('').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${slug}.html`, out);
 }
 function footer1(){ return `<footer class="post-foot"><p>掲載は公式・権利元が公開している映像のみ。動画は各権利元の公式プレイヤーで再生されます。</p><p><a href="../">▶ トップで他の試合を探す</a></p><p><a href="../about.html">このサイトについて</a> ／ <a href="../privacy.html">プライバシーポリシー</a> ／ <a href="../contact.html">お問い合わせ</a></p><p class="cc">© 2026 Football Highlights Compass</p></footer>`; }
@@ -1491,13 +1493,14 @@ function buildPreseasonMatch(mt, season){
   <p class="dek">${esc(dek)}</p>
   ${matchTags}
   <div class="post-body"><div class="body"><ul class="facts"><li><b>ソース：</b>公式ハイライト（YouTube）。<b>スコア：</b>公式映像でご確認ください（ネタバレ防止）。</li></ul><div class="sources">${videoBlock}</div></div></div>
+  ${sideRead}
   ${daznCta('シーズン開幕後のフルマッチ・見逃し配信もDAZNで。')}
   ${hasPreview(slug)?AD:''}
   ${factHtml}
   ${footer1()}
   </article></main>
-  ${readDrawer(sideRead||'').aside}
-</div>${readDrawer(sideRead||'').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
+  ${readDrawer('').aside}
+</div>${readDrawer('').fab}` + NAVJS + COLLAPSE_JS + PLAYER_JS + READ_DRAWER_JS + BOOM + `</body></html>`;
   writeFileSync(`site/match/${slug}.html`, out);
 }
 
