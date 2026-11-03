@@ -1885,7 +1885,7 @@ function buildClub(name, info){
   const infoSection = (cinfo && cinfo.extract && cinfo.extract.length >= 30) ? (()=>{
     const facts = [];
     if (cinfo.capacity) facts.push(`収容 ${Number(cinfo.capacity).toLocaleString('en-US')}人`);
-    if (cinfo.website) facts.push(`<a href="${escA(cinfo.website)}" target="_blank" rel="noopener nofollow">公式サイト</a>`);
+    if (cinfo.website) facts.push(`<a href="${escA(String(cinfo.website).replace(/^http:\/\//i,'https://'))}" target="_blank" rel="noopener nofollow">公式サイト</a>`);
     const factLine = facts.length ? `<p class="clabout-facts">${facts.join('　・　')}</p>` : '';
     const css = `<style>.clabout{margin-top:22px}.clabout>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:1.18em;font-weight:800;color:var(--ink);padding-top:14px;border-top:2px solid var(--ink)}.clabout>summary::-webkit-details-marker{display:none}.clabout-body{font-size:14px;line-height:1.85;margin:12px 0 4px}.clabout-facts{font-size:12.5px;color:var(--muted);margin:6px 0}</style>`;
     return `${css}<div class="cl-wrap"><details class="clabout" open><summary>📖 ${esc(name)}とは<span class="mc-ico"></span></summary>
