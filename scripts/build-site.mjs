@@ -2947,7 +2947,7 @@ try {
   ${nav}
   ${L.hub?`<p style="margin:10px 2px 0"><a href="../${L.hub}">▶ ${esc(L.jp)}の順位表・得点ランキング・全節</a></p>`:''}
   ${streamCta(L.code)}
-  ${AD}
+  ${played?AD:''}
   ${faqBlock(mfaq)}
   ` + FOOTER() + NAVJS + `</body></html>`;
       writeFileSync(`site/matchday/${slug}.html`, out);
