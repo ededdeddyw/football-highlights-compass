@@ -605,8 +605,8 @@
       "away": "スポルティングCP",
       "homeSlug": "shaktar",
       "awaySlug": "sporting-cp",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "qP2pp2SE1X4"
     },
     {
@@ -616,8 +616,8 @@
       "away": "シュツットガルト",
       "homeSlug": "galatasaray",
       "awaySlug": "stuttgart",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": ""
     },
     {
@@ -627,8 +627,8 @@
       "away": "インテル",
       "homeSlug": "feyenoord",
       "awaySlug": "inter",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "SSGXaEFsOFg"
     },
     {
@@ -638,8 +638,8 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "barca",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "Yw6mrjrysKA"
     },
     {
@@ -649,8 +649,8 @@
       "away": "バイエルン",
       "homeSlug": "atleti",
       "awaySlug": "bayern",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "I7gYlRMijx8"
     },
     {
@@ -660,8 +660,8 @@
       "away": "パリ・サンジェルマン",
       "homeSlug": "villarreal",
       "awaySlug": "psg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-6",
       "videoId": "xm7hYt3moyo"
     },
     {
@@ -671,8 +671,8 @@
       "away": "ローマ",
       "homeSlug": "man-united",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "wxE8lf_j6Ik"
     },
     {
@@ -682,8 +682,8 @@
       "away": "リール",
       "homeSlug": "bod-glimt",
       "awaySlug": "lille",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": ""
     },
     {
@@ -693,8 +693,8 @@
       "away": "スロヴァン・ブラチスラヴァ",
       "homeSlug": "lask",
       "awaySlug": "sl-bratislava",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {
