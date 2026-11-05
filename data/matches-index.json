@@ -44219,18 +44219,6 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md16-nottingham-everton",
-    "teams": [
-      "ノッティンガム・フォレスト",
-      "エバートン"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第16節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "pl-2526-md16-man-city-hull-city",
     "teams": [
       "マンチェスター・シティ",
@@ -44271,6 +44259,18 @@
     "teams": [
       "ブライトン",
       "イプスウィッチ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md16-nottingham-everton",
+    "teams": [
+      "ノッティンガム・フォレスト",
+      "エバートン"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",

@@ -704,8 +704,8 @@
       "away": "レアル・マドリード",
       "homeSlug": "pae-aek",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": "iprIOM60Lzk"
     },
     {
@@ -715,8 +715,8 @@
       "away": "リバプール",
       "homeSlug": "fenerbahce",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "h5WU8omi82w"
     },
     {
@@ -726,8 +726,8 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "rb-leipzig",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": "-oh8IPIh34k"
     },
     {
@@ -737,8 +737,8 @@
       "away": "アーセナル",
       "homeSlug": "slavia-praha",
       "awaySlug": "arsenal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "pE-xSjKuslo"
     },
     {
@@ -748,8 +748,8 @@
       "away": "クラブ・ブルッヘ",
       "homeSlug": "psv",
       "awaySlug": "club-brugge",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "PSIHIuZbrVQ"
     },
     {
@@ -759,8 +759,8 @@
       "away": "ベティス",
       "homeSlug": "dortmund",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "W85qP20D6uo"
     },
     {
@@ -770,8 +770,8 @@
       "away": "ナポリ",
       "homeSlug": "porto",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": ""
     },
     {
@@ -781,8 +781,8 @@
       "away": "コモ",
       "homeSlug": "rc-lens",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-9",
       "videoId": ""
     },
     {
@@ -792,8 +792,8 @@
       "away": "サバフ",
       "homeSlug": "viking",
       "awaySlug": "sabah-fk",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-1",
       "videoId": ""
     },
     {

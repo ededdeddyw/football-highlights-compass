@@ -1679,17 +1679,6 @@
     {
       "matchday": 16,
       "dateUTC": "2026-12-19T15:00:00Z",
-      "home": "ノッティンガム・フォレスト",
-      "away": "エバートン",
-      "homeSlug": "nottingham",
-      "awaySlug": "everton",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-19T15:00:00Z",
       "home": "マンチェスター・シティ",
       "away": "ハル・シティ",
       "homeSlug": "man-city",
@@ -1727,6 +1716,17 @@
       "away": "イプスウィッチ",
       "homeSlug": "brighton-hove",
       "awaySlug": "ipswich-town",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-20T14:00:00Z",
+      "home": "ノッティンガム・フォレスト",
+      "away": "エバートン",
+      "homeSlug": "nottingham",
+      "awaySlug": "everton",
       "finished": false,
       "score": "",
       "videoId": ""
