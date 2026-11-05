@@ -227,6 +227,28 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "ブリーラム",
+      "away": "鹿島アントラーズ",
+      "homeSlug": "buriram",
+      "awaySlug": "kashima",
+      "finished": true,
+      "score": "",
+      "videoId": "Nn2rXOIcb9A"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "浦項スティーラーズ",
+      "away": "ガンバ大阪",
+      "homeSlug": "pohang",
+      "awaySlug": "gamba-osaka",
+      "finished": true,
+      "score": "",
+      "videoId": "w6eQda7EnPA"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "柏レイソル",
       "away": "大田ハナ・シチズン",
       "homeSlug": "kashiwa",
