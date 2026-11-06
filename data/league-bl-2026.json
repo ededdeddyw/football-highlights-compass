@@ -1095,7 +1095,7 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-12-05T14:30:00Z",
+      "dateUTC": "2026-12-04T19:30:00Z",
       "home": "バイエルン",
       "away": "パーダーボルン",
       "homeSlug": "fc-bayern-munchen",
@@ -1140,17 +1140,6 @@
     {
       "matchday": 12,
       "dateUTC": "2026-12-05T14:30:00Z",
-      "home": "フランクフルト",
-      "away": "ブレーメン",
-      "homeSlug": "eintracht-frankfurt",
-      "awaySlug": "sv-werder-bremen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 12,
-      "dateUTC": "2026-12-05T14:30:00Z",
       "home": "アウクスブルク",
       "away": "ケルン",
       "homeSlug": "fc-augsburg",
@@ -1172,7 +1161,18 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-12-05T14:30:00Z",
+      "dateUTC": "2026-12-05T17:30:00Z",
+      "home": "フランクフルト",
+      "away": "ブレーメン",
+      "homeSlug": "eintracht-frankfurt",
+      "awaySlug": "sv-werder-bremen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "2026-12-06T14:30:00Z",
       "home": "シャルケ",
       "away": "ドルトムント",
       "homeSlug": "fc-schalke-04",
@@ -1183,11 +1183,22 @@
     },
     {
       "matchday": 12,
-      "dateUTC": "2026-12-05T14:30:00Z",
+      "dateUTC": "2026-12-06T16:30:00Z",
       "home": "エルファースベルク",
       "away": "シュツットガルト",
       "homeSlug": "sv-07-elversberg",
       "awaySlug": "vfb-stuttgart",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-11T19:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "シャルケ",
+      "homeSlug": "hamburger-sv",
+      "awaySlug": "fc-schalke-04",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1217,65 +1228,10 @@
     {
       "matchday": 13,
       "dateUTC": "2026-12-12T14:30:00Z",
-      "home": "ホッフェンハイム",
-      "away": "バイエルン",
-      "homeSlug": "tsg-hoffenheim",
-      "awaySlug": "fc-bayern-munchen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 13,
-      "dateUTC": "2026-12-12T14:30:00Z",
-      "home": "マインツ",
-      "away": "フライブルク",
-      "homeSlug": "1-fsv-mainz-05",
-      "awaySlug": "sc-freiburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 13,
-      "dateUTC": "2026-12-12T14:30:00Z",
-      "home": "ボルシアMG",
-      "away": "フランクフルト",
-      "homeSlug": "borussia-monchengladbach",
-      "awaySlug": "eintracht-frankfurt",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 13,
-      "dateUTC": "2026-12-12T14:30:00Z",
-      "home": "ハンブルガーSV",
-      "away": "シャルケ",
-      "homeSlug": "hamburger-sv",
-      "awaySlug": "fc-schalke-04",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 13,
-      "dateUTC": "2026-12-12T14:30:00Z",
       "home": "ケルン",
       "away": "ライプツィヒ",
       "homeSlug": "1-fc-koln",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 13,
-      "dateUTC": "2026-12-12T14:30:00Z",
-      "home": "ブレーメン",
-      "away": "レバークーゼン",
-      "homeSlug": "sv-werder-bremen",
-      "awaySlug": "bayer-04-leverkusen",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1292,8 +1248,52 @@
       "videoId": ""
     },
     {
+      "matchday": 13,
+      "dateUTC": "2026-12-12T17:30:00Z",
+      "home": "ボルシアMG",
+      "away": "フランクフルト",
+      "homeSlug": "borussia-monchengladbach",
+      "awaySlug": "eintracht-frankfurt",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-13T14:30:00Z",
+      "home": "マインツ",
+      "away": "フライブルク",
+      "homeSlug": "1-fsv-mainz-05",
+      "awaySlug": "sc-freiburg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-13T16:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "バイエルン",
+      "homeSlug": "tsg-hoffenheim",
+      "awaySlug": "fc-bayern-munchen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 13,
+      "dateUTC": "2026-12-13T18:30:00Z",
+      "home": "ブレーメン",
+      "away": "レバークーゼン",
+      "homeSlug": "sv-werder-bremen",
+      "awaySlug": "bayer-04-leverkusen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
       "matchday": 14,
-      "dateUTC": "2026-12-19T14:30:00Z",
+      "dateUTC": "2026-12-18T19:30:00Z",
       "home": "バイエルン",
       "away": "ブレーメン",
       "homeSlug": "fc-bayern-munchen",
@@ -1305,32 +1305,10 @@
     {
       "matchday": 14,
       "dateUTC": "2026-12-19T14:30:00Z",
-      "home": "ライプツィヒ",
-      "away": "ドルトムント",
-      "homeSlug": "rb-leipzig",
-      "awaySlug": "borussia-dortmund",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 14,
-      "dateUTC": "2026-12-19T14:30:00Z",
       "home": "レバークーゼン",
       "away": "フランクフルト",
       "homeSlug": "bayer-04-leverkusen",
       "awaySlug": "eintracht-frankfurt",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 14,
-      "dateUTC": "2026-12-19T14:30:00Z",
-      "home": "フライブルク",
-      "away": "シュツットガルト",
-      "homeSlug": "sc-freiburg",
-      "awaySlug": "vfb-stuttgart",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1360,6 +1338,39 @@
     {
       "matchday": 14,
       "dateUTC": "2026-12-19T14:30:00Z",
+      "home": "エルファースベルク",
+      "away": "ハンブルガーSV",
+      "homeSlug": "sv-07-elversberg",
+      "awaySlug": "hamburger-sv",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-19T17:30:00Z",
+      "home": "ライプツィヒ",
+      "away": "ドルトムント",
+      "homeSlug": "rb-leipzig",
+      "awaySlug": "borussia-dortmund",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-20T14:30:00Z",
+      "home": "フライブルク",
+      "away": "シュツットガルト",
+      "homeSlug": "sc-freiburg",
+      "awaySlug": "vfb-stuttgart",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 14,
+      "dateUTC": "2026-12-20T16:30:00Z",
       "home": "ウニオン・ベルリン",
       "away": "ホッフェンハイム",
       "homeSlug": "1-fc-union-berlin",
@@ -1370,7 +1381,7 @@
     },
     {
       "matchday": 14,
-      "dateUTC": "2026-12-19T14:30:00Z",
+      "dateUTC": "2026-12-20T18:30:00Z",
       "home": "シャルケ",
       "away": "ボルシアMG",
       "homeSlug": "fc-schalke-04",
@@ -1380,19 +1391,8 @@
       "videoId": ""
     },
     {
-      "matchday": 14,
-      "dateUTC": "2026-12-19T14:30:00Z",
-      "home": "エルファースベルク",
-      "away": "ハンブルガーSV",
-      "homeSlug": "sv-07-elversberg",
-      "awaySlug": "hamburger-sv",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
       "matchday": 15,
-      "dateUTC": "2027-01-09T14:30:00Z",
+      "dateUTC": "2027-01-08T19:30:00Z",
       "home": "ドルトムント",
       "away": "マインツ",
       "homeSlug": "borussia-dortmund",
@@ -1437,43 +1437,10 @@
     {
       "matchday": 15,
       "dateUTC": "2027-01-09T14:30:00Z",
-      "home": "ボルシアMG",
-      "away": "バイエルン",
-      "homeSlug": "borussia-monchengladbach",
-      "awaySlug": "fc-bayern-munchen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
-      "dateUTC": "2027-01-09T14:30:00Z",
-      "home": "ハンブルガーSV",
-      "away": "レバークーゼン",
-      "homeSlug": "hamburger-sv",
-      "awaySlug": "bayer-04-leverkusen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
-      "dateUTC": "2027-01-09T14:30:00Z",
       "home": "ケルン",
       "away": "フライブルク",
       "homeSlug": "1-fc-koln",
       "awaySlug": "sc-freiburg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
-      "dateUTC": "2027-01-09T14:30:00Z",
-      "home": "ブレーメン",
-      "away": "ウニオン・ベルリン",
-      "homeSlug": "sv-werder-bremen",
-      "awaySlug": "1-fc-union-berlin",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1490,11 +1457,33 @@
       "videoId": ""
     },
     {
-      "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
-      "home": "バイエルン",
+      "matchday": 15,
+      "dateUTC": "2027-01-09T17:30:00Z",
+      "home": "ボルシアMG",
+      "away": "バイエルン",
+      "homeSlug": "borussia-monchengladbach",
+      "awaySlug": "fc-bayern-munchen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-10T14:30:00Z",
+      "home": "ブレーメン",
+      "away": "ウニオン・ベルリン",
+      "homeSlug": "sv-werder-bremen",
+      "awaySlug": "1-fc-union-berlin",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-10T16:30:00Z",
+      "home": "ハンブルガーSV",
       "away": "レバークーゼン",
-      "homeSlug": "fc-bayern-munchen",
+      "homeSlug": "hamburger-sv",
       "awaySlug": "bayer-04-leverkusen",
       "finished": false,
       "score": "",
@@ -1502,22 +1491,11 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
+      "dateUTC": "2027-01-12T17:30:00Z",
       "home": "ライプツィヒ",
       "away": "シュツットガルト",
       "homeSlug": "rb-leipzig",
       "awaySlug": "vfb-stuttgart",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
-      "home": "フライブルク",
-      "away": "ハンブルガーSV",
-      "homeSlug": "sc-freiburg",
-      "awaySlug": "hamburger-sv",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1547,17 +1525,6 @@
     {
       "matchday": 16,
       "dateUTC": "2027-01-12T19:30:00Z",
-      "home": "ウニオン・ベルリン",
-      "away": "パーダーボルン",
-      "homeSlug": "1-fc-union-berlin",
-      "awaySlug": "sc-paderborn-07",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
       "home": "ケルン",
       "away": "ドルトムント",
       "homeSlug": "1-fc-koln",
@@ -1568,7 +1535,51 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
+      "dateUTC": "2027-01-13T17:30:00Z",
+      "home": "エルファースベルク",
+      "away": "フランクフルト",
+      "homeSlug": "sv-07-elversberg",
+      "awaySlug": "eintracht-frankfurt",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-13T19:30:00Z",
+      "home": "バイエルン",
+      "away": "レバークーゼン",
+      "homeSlug": "fc-bayern-munchen",
+      "awaySlug": "bayer-04-leverkusen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-13T19:30:00Z",
+      "home": "フライブルク",
+      "away": "ハンブルガーSV",
+      "homeSlug": "sc-freiburg",
+      "awaySlug": "hamburger-sv",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-13T19:30:00Z",
+      "home": "ウニオン・ベルリン",
+      "away": "パーダーボルン",
+      "homeSlug": "1-fc-union-berlin",
+      "awaySlug": "sc-paderborn-07",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2027-01-13T19:30:00Z",
       "home": "シャルケ",
       "away": "ブレーメン",
       "homeSlug": "fc-schalke-04",
@@ -1578,12 +1589,12 @@
       "videoId": ""
     },
     {
-      "matchday": 16,
-      "dateUTC": "2027-01-12T19:30:00Z",
-      "home": "エルファースベルク",
-      "away": "フランクフルト",
-      "homeSlug": "sv-07-elversberg",
-      "awaySlug": "eintracht-frankfurt",
+      "matchday": 17,
+      "dateUTC": "2027-01-15T19:30:00Z",
+      "home": "シュツットガルト",
+      "away": "マインツ",
+      "homeSlug": "vfb-stuttgart",
+      "awaySlug": "1-fsv-mainz-05",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1602,43 +1613,10 @@
     {
       "matchday": 17,
       "dateUTC": "2027-01-16T14:30:00Z",
-      "home": "シュツットガルト",
-      "away": "マインツ",
-      "homeSlug": "vfb-stuttgart",
-      "awaySlug": "1-fsv-mainz-05",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 17,
-      "dateUTC": "2027-01-16T14:30:00Z",
       "home": "ホッフェンハイム",
       "away": "ライプツィヒ",
       "homeSlug": "tsg-hoffenheim",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 17,
-      "dateUTC": "2027-01-16T14:30:00Z",
-      "home": "レバークーゼン",
-      "away": "シャルケ",
-      "homeSlug": "bayer-04-leverkusen",
-      "awaySlug": "fc-schalke-04",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 17,
-      "dateUTC": "2027-01-16T14:30:00Z",
-      "home": "フランクフルト",
-      "away": "バイエルン",
-      "homeSlug": "eintracht-frankfurt",
-      "awaySlug": "fc-bayern-munchen",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1668,6 +1646,28 @@
     {
       "matchday": 17,
       "dateUTC": "2027-01-16T14:30:00Z",
+      "home": "パーダーボルン",
+      "away": "ケルン",
+      "homeSlug": "sc-paderborn-07",
+      "awaySlug": "1-fc-koln",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-16T17:30:00Z",
+      "home": "フランクフルト",
+      "away": "バイエルン",
+      "homeSlug": "eintracht-frankfurt",
+      "awaySlug": "fc-bayern-munchen",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "2027-01-17T14:30:00Z",
       "home": "ブレーメン",
       "away": "エルファースベルク",
       "homeSlug": "sv-werder-bremen",
@@ -1678,11 +1678,22 @@
     },
     {
       "matchday": 17,
-      "dateUTC": "2027-01-16T14:30:00Z",
-      "home": "パーダーボルン",
-      "away": "ケルン",
-      "homeSlug": "sc-paderborn-07",
-      "awaySlug": "1-fc-koln",
+      "dateUTC": "2027-01-17T16:30:00Z",
+      "home": "レバークーゼン",
+      "away": "シャルケ",
+      "homeSlug": "bayer-04-leverkusen",
+      "awaySlug": "fc-schalke-04",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-22T19:30:00Z",
+      "home": "ブレーメン",
+      "away": "フライブルク",
+      "homeSlug": "sv-werder-bremen",
+      "awaySlug": "sc-freiburg",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1701,65 +1712,10 @@
     {
       "matchday": 18,
       "dateUTC": "2027-01-23T14:30:00Z",
-      "home": "ホッフェンハイム",
-      "away": "ケルン",
-      "homeSlug": "tsg-hoffenheim",
-      "awaySlug": "1-fc-koln",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 18,
-      "dateUTC": "2027-01-23T14:30:00Z",
-      "home": "レバークーゼン",
-      "away": "エルファースベルク",
-      "homeSlug": "bayer-04-leverkusen",
-      "awaySlug": "sv-07-elversberg",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 18,
-      "dateUTC": "2027-01-23T14:30:00Z",
-      "home": "フランクフルト",
-      "away": "ウニオン・ベルリン",
-      "homeSlug": "eintracht-frankfurt",
-      "awaySlug": "1-fc-union-berlin",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 18,
-      "dateUTC": "2027-01-23T14:30:00Z",
       "home": "ボルシアMG",
       "away": "ライプツィヒ",
       "homeSlug": "borussia-monchengladbach",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 18,
-      "dateUTC": "2027-01-23T14:30:00Z",
-      "home": "ハンブルガーSV",
-      "away": "ドルトムント",
-      "homeSlug": "hamburger-sv",
-      "awaySlug": "borussia-dortmund",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 18,
-      "dateUTC": "2027-01-23T14:30:00Z",
-      "home": "ブレーメン",
-      "away": "フライブルク",
-      "homeSlug": "sv-werder-bremen",
-      "awaySlug": "sc-freiburg",
       "finished": false,
       "score": "",
       "videoId": ""
@@ -1782,6 +1738,50 @@
       "away": "マインツ",
       "homeSlug": "sc-paderborn-07",
       "awaySlug": "1-fsv-mainz-05",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-23T17:30:00Z",
+      "home": "ハンブルガーSV",
+      "away": "ドルトムント",
+      "homeSlug": "hamburger-sv",
+      "awaySlug": "borussia-dortmund",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-24T14:30:00Z",
+      "home": "フランクフルト",
+      "away": "ウニオン・ベルリン",
+      "homeSlug": "eintracht-frankfurt",
+      "awaySlug": "1-fc-union-berlin",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-24T16:30:00Z",
+      "home": "レバークーゼン",
+      "away": "エルファースベルク",
+      "homeSlug": "bayer-04-leverkusen",
+      "awaySlug": "sv-07-elversberg",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "2027-01-24T18:30:00Z",
+      "home": "ホッフェンハイム",
+      "away": "ケルン",
+      "homeSlug": "tsg-hoffenheim",
+      "awaySlug": "1-fc-koln",
       "finished": false,
       "score": "",
       "videoId": ""
