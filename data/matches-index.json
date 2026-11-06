@@ -9,7 +9,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第4節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "pE-xSjKuslo",
@@ -21,7 +21,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第4節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "PSIHIuZbrVQ",
@@ -33,7 +33,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第4節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "W85qP20D6uo",
@@ -57,7 +57,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第4節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "h5WU8omi82w",
@@ -69,7 +69,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第4節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "SSGXaEFsOFg",
@@ -333,7 +333,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第9節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "iqciggyhLvM",
@@ -4547,6 +4547,18 @@
     "hasPreview": true
   },
   {
+    "id": "acl-2526-md4-machida-x-上海申花",
+    "teams": [
+      "FC町田ゼルビア",
+      "上海申花"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "acl-2526-md4-kobe-x-ラーチャブリーfc",
     "teams": [
       "ヴィッセル神戸",
@@ -4568,7 +4580,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第4節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md4-buriram-kashima",
@@ -14060,7 +14072,7 @@
     "leagueName": "UEFAカンファレンスリーグ",
     "meta": "第2節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "conference-2526-md2-x-ミッティラン-sint-truiden",
@@ -14085,6 +14097,30 @@
     "meta": "第2節 / 2026-27",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "conference-2526-md3-x-トラブゾンスポ-freiburg",
+    "teams": [
+      "トラブゾンスポル",
+      "フライブルク"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "conference-2526-md3-as-monaco-x-ノアシェラン",
+    "teams": [
+      "モナコ",
+      "ノアシェラン"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第3節 / 2026-27",
+    "players": [],
+    "hasPreview": false
   },
   {
     "id": "el-2526-md1-anderlecht-olympique-lyonnais",
@@ -14229,6 +14265,54 @@
     "meta": "第3節 / 2026-27",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "el-2526-md4-x-az-x-ユヴェントス",
+    "teams": [
+      "AZ",
+      "ユヴェントス"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md4-crystal-palace-hoffenheim",
+    "teams": [
+      "クリスタル・パレス",
+      "ホッフェンハイム"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md4-ac-milan-x-フェレンツヴァーロ",
+    "teams": [
+      "ミラン",
+      "フェレンツヴァーロシュ"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md4-real-sociedad-olympique-lyonnais",
+    "teams": [
+      "レアル・ソシエダ",
+      "リヨン"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
   },
   {
     "id": "eredivisie-2526-md1-cambuur-excelsior",
@@ -20144,7 +20228,7 @@
     "leagueName": "日本代表",
     "meta": "2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "jpn-2526-japan-ecuador",
