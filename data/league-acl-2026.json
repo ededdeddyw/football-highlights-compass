@@ -205,6 +205,17 @@
     {
       "matchday": 4,
       "dateUTC": "",
+      "home": "FC町田ゼルビア",
+      "away": "上海申花",
+      "homeSlug": "machida",
+      "awaySlug": "x-上海申花",
+      "finished": true,
+      "score": "",
+      "videoId": "DBPLhY8fScU"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
       "home": "ヴィッセル神戸",
       "away": "ラーチャブリーFC",
       "homeSlug": "kobe",

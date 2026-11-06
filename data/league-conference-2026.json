@@ -58,6 +58,28 @@
       "finished": true,
       "score": "",
       "videoId": "vsN7AZZD64Y"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "トラブゾンスポル",
+      "away": "フライブルク",
+      "homeSlug": "x-トラブゾンスポ",
+      "awaySlug": "freiburg",
+      "finished": true,
+      "score": "",
+      "videoId": "WmPMLnSGSJQ"
+    },
+    {
+      "matchday": 3,
+      "dateUTC": "",
+      "home": "モナコ",
+      "away": "ノアシェラン",
+      "homeSlug": "as-monaco",
+      "awaySlug": "x-ノアシェラン",
+      "finished": true,
+      "score": "",
+      "videoId": "C7Unp8sRRd4"
     }
   ]
 }

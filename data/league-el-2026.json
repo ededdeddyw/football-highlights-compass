@@ -135,6 +135,50 @@
       "finished": true,
       "score": "",
       "videoId": "iERuoTMEppA"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "AZ",
+      "away": "ユヴェントス",
+      "homeSlug": "x-az",
+      "awaySlug": "x-ユヴェントス",
+      "finished": true,
+      "score": "",
+      "videoId": "QrOZnyJ7xxM"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "クリスタル・パレス",
+      "away": "ホッフェンハイム",
+      "homeSlug": "crystal-palace",
+      "awaySlug": "hoffenheim",
+      "finished": true,
+      "score": "",
+      "videoId": "aLpSV1K-_pQ"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "ミラン",
+      "away": "フェレンツヴァーロシュ",
+      "homeSlug": "ac-milan",
+      "awaySlug": "x-フェレンツヴァーロ",
+      "finished": true,
+      "score": "",
+      "videoId": "6XWUgOA_EcU"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "レアル・ソシエダ",
+      "away": "リヨン",
+      "homeSlug": "real-sociedad",
+      "awaySlug": "olympique-lyonnais",
+      "finished": true,
+      "score": "",
+      "videoId": "g-AmFbeq_G0"
     }
   ]
 }
