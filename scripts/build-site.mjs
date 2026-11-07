@@ -247,9 +247,11 @@ const LEAGUE_RELATED_GUIDES = {
   cl: [
     { slug:'champions-league-finals-history', label:'チャンピオンズリーグ 歴代決勝・優勝クラブ一覧' },
     { slug:'champions-league-past-winners', label:'チャンピオンズリーグ 歴代優勝クラブ' },
+    { slug:'uefa-conference-league-guide', label:'UEFAカンファレンスリーグとは（欧州3番手の大会）' },
   ],
   el: [
     { slug:'europa-league-finals-history', label:'ヨーロッパリーグ 歴代決勝・優勝クラブ一覧' },
+    { slug:'uefa-conference-league-guide', label:'UEFAカンファレンスリーグとは（欧州3番手の大会）' },
   ],
   jpn: [
     { slug:'japan-world-cup-history', label:'日本代表 ワールドカップの歴史' },
@@ -2637,7 +2639,7 @@ const GUIDES = [
           <li><strong>優勝クラブは、翌シーズンのチャンピオンズリーグ出場権</strong>を得られます。リーグ戦で上位に届かなかったクラブにとって、ELは“CLへの近道”にもなります。</li>
           <li>名門クラブの参戦も多く、好カードが揃います。</li>
         </ul>
-        <p>CLの仕組みは<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ完全ガイド</a>で詳しく解説しています。</p>
+        <p>CLの仕組みは<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ完全ガイド</a>で、ELの下に位置する欧州3番手の大会は<a href="../guide/uefa-conference-league-guide.html">UEFAカンファレンスリーグ完全ガイド</a>で詳しく解説しています。</p>
       </div>
 
       <h2 class="lined">開催時期（カレンダー）</h2>
@@ -2730,7 +2732,7 @@ try {
     for (const a of (Array.isArray(arts) ? arts : (arts.articles||[]))) {
       if (!a || !a.slug || !a.h1 || !a.body) continue;
       if (GUIDES.some(g => g.slug === a.slug)) continue;   // slug衝突は既存GUIDESを優先
-      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], body(){ return a.body; } });
+      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], faq:Array.isArray(a.faq)?a.faq:[], body(){ return a.body; } });
     }
   }
 } catch(e){ console.warn('articles.json読込失敗:', e.message); }
@@ -3844,8 +3846,10 @@ mkdirSync('site/guide', { recursive:true });
 const guideUrls = [];
 for(const g of GUIDES){
   const url = `${DOMAIN}/guide/${g.slug}.html`;
+  const gfaq = (g.faq||[]).filter(x=>x&&x.q&&x.a);   // 記事に faq があれば可視FAQ＋FAQPage構造化データを付与（SERP占有UP＝CTR底上げ）
   const cg = [ {"@type":"Article","headline":g.h1,"description":g.desc,"inLanguage":"ja","author":ORG,"publisher":ORG,"datePublished":`${TODAY}`,"dateModified":`${TODAY}`,"mainEntityOfPage":url},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド',url:DOMAIN+'/'},{name:g.h1,url}]) ];
+  if(gfaq.length) cg.push(faqLd(gfaq));
   const head = HEAD({ title:`${g.title} - Football Highlights Compass`, ogtitle:g.title, desc:g.desc, url, ogimg:`${DOMAIN}/og.png`, ogtype:'article', modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
   const out = head + TOPBAR + `<article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:'ガイド'},{label:g.h1}])}
@@ -3853,6 +3857,7 @@ for(const g of GUIDES){
   <h1 class="headline">${esc(g.h1)}</h1>
   <p class="dek">${esc(g.dek)}</p>
   ${g.body()}
+  ${gfaq.length?FAQ_STYLE+faqBlock(gfaq):''}
   ${AD}
   ` + FOOTER();
   writeFileSync(`site/guide/${g.slug}.html`, out);
