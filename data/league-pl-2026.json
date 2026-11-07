@@ -1001,8 +1001,8 @@
       "away": "コベントリー",
       "homeSlug": "everton",
       "awaySlug": "coventry-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "7D1FViPwDUg"
     },
     {

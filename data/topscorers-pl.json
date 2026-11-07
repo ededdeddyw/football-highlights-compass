@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "scorers": [
     {
       "rank": 1,
@@ -16,6 +16,16 @@
     },
     {
       "rank": 2,
+      "name": "Thierno Barry",
+      "team": "エバートン",
+      "goals": 6,
+      "assists": 1,
+      "pens": null,
+      "apps": 10,
+      "nat": "France"
+    },
+    {
+      "rank": 3,
       "name": "Alexander Isak",
       "team": "リバプール",
       "goals": 6,
@@ -25,7 +35,7 @@
       "nat": "Sweden"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Marcus Tavernier",
       "team": "ボーンマス",
       "goals": 5,
@@ -35,7 +45,7 @@
       "nat": "England"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 5,
@@ -45,7 +55,7 @@
       "nat": "Brazil"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 5,
@@ -55,7 +65,7 @@
       "nat": "England"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Nicolas Jackson",
       "team": "アストン・ヴィラ",
       "goals": 5,
@@ -63,16 +73,6 @@
       "pens": null,
       "apps": 8,
       "nat": "Senegal"
-    },
-    {
-      "rank": 7,
-      "name": "Thierno Barry",
-      "team": "エバートン",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 9,
-      "nat": "France"
     },
     {
       "rank": 8,
@@ -126,6 +126,16 @@
     },
     {
       "rank": 13,
+      "name": "Kiernan Dewsbury Hall",
+      "team": "エバートン",
+      "goals": 3,
+      "assists": 1,
+      "pens": null,
+      "apps": 10,
+      "nat": "England"
+    },
+    {
+      "rank": 14,
       "name": "Jack Hinshelwood",
       "team": "ブライトン",
       "goals": 3,
@@ -135,7 +145,7 @@
       "nat": "England"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Cole Palmer",
       "team": "チェルシー",
       "goals": 3,
@@ -143,16 +153,6 @@
       "pens": 1,
       "apps": 9,
       "nat": "England"
-    },
-    {
-      "rank": 15,
-      "name": "Pedro Neto",
-      "team": "チェルシー",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 9,
-      "nat": "Portugal"
     }
   ]
 }

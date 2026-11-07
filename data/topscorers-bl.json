@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "scorers": [
     {
       "rank": 1,
@@ -116,6 +116,16 @@
     },
     {
       "rank": 12,
+      "name": "Joseph Scally",
+      "team": "ボルシアMG",
+      "goals": 4,
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "USA"
+    },
+    {
+      "rank": 13,
       "name": "Maurice Krattenmacher",
       "team": "エルファースベルク",
       "goals": 4,
@@ -125,7 +135,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Christopher Nkunku",
       "team": "ライプツィヒ",
       "goals": 4,
@@ -135,7 +145,7 @@
       "nat": "France"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Romulo Cruz",
       "team": "ライプツィヒ",
       "goals": 4,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 6,
       "nat": "Brazil"
-    },
-    {
-      "rank": 15,
-      "name": "Harry Kane",
-      "team": "バイエルン",
-      "goals": 4,
-      "assists": 5,
-      "pens": 1,
-      "apps": 8,
-      "nat": "England"
     }
   ]
 }

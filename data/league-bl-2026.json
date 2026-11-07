@@ -803,8 +803,8 @@
       "away": "ボルシアMG",
       "homeSlug": "hamburger-sv",
       "awaySlug": "borussia-monchengladbach",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "EWYVy9ti7Ac"
     },
     {

@@ -26339,22 +26339,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md14-celta-villarreal",
+    "id": "laliga-2526-md14-levante-santander",
     "teams": [
-      "セルタ",
-      "ビジャレアル"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第14節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md14-elche-atleti",
-    "teams": [
-      "エルチェ",
-      "アトレティコ・マドリード"
+      "レバンテ",
+      "ラシン・サンタンデール"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -26375,10 +26363,22 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md14-valencia-osasuna",
+    "id": "laliga-2526-md14-malaga-athletic",
     "teams": [
-      "バレンシア",
-      "オサスナ"
+      "マラガ",
+      "アスレティック・ビルバオ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第14節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md14-elche-atleti",
+    "teams": [
+      "エルチェ",
+      "アトレティコ・マドリード"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -26399,34 +26399,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md14-espanyol-getafe",
+    "id": "laliga-2526-md14-valencia-osasuna",
     "teams": [
-      "エスパニョール",
-      "ヘタフェ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第14節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md14-real-sociedad-sevilla-fc",
-    "teams": [
-      "レアル・ソシエダ",
-      "セビージャ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第14節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md14-levante-santander",
-    "teams": [
-      "レバンテ",
-      "ラシン・サンタンデール"
+      "バレンシア",
+      "オサスナ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -26447,10 +26423,34 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md14-malaga-athletic",
+    "id": "laliga-2526-md14-celta-villarreal",
     "teams": [
-      "マラガ",
-      "アスレティック・ビルバオ"
+      "セルタ",
+      "ビジャレアル"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第14節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md14-real-sociedad-sevilla-fc",
+    "teams": [
+      "レアル・ソシエダ",
+      "セビージャ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第14節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md14-espanyol-getafe",
+    "teams": [
+      "エスパニョール",
+      "ヘタフェ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",

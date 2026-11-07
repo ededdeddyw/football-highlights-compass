@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "scorers": [
     {
       "rank": 1,
@@ -61,7 +61,7 @@
       "goals": 5,
       "assists": 1,
       "pens": 2,
-      "apps": 7,
+      "apps": 8,
       "nat": "Denmark"
     },
     {
@@ -121,7 +121,7 @@
       "goals": 4,
       "assists": 3,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "France"
     },
     {
