@@ -1012,8 +1012,8 @@
       "away": "トッテナム",
       "homeSlug": "leeds-united",
       "awaySlug": "tottenham",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "wUecw21LlqU"
     },
     {
@@ -1023,8 +1023,8 @@
       "away": "ハル・シティ",
       "homeSlug": "arsenal",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "Lmto-xYeXvI"
     },
     {
@@ -1034,8 +1034,8 @@
       "away": "ニューカッスル",
       "homeSlug": "fulham",
       "awaySlug": "newcastle",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "R1GwaELigr8"
     },
     {
@@ -1045,8 +1045,8 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "nottingham",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "nQRsLLNXep8"
     },
     {

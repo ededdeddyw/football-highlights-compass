@@ -2,16 +2,16 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "scorers": [
     {
       "rank": 1,
       "name": "Lassine Sinayoko",
       "team": "パリFC",
-      "goals": 8,
+      "goals": 9,
       "assists": 5,
       "pens": 3,
-      "apps": 9,
+      "apps": 10,
       "nat": "Mali"
     },
     {
@@ -41,7 +41,7 @@
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "England"
     },
     {
@@ -111,7 +111,7 @@
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Spain"
     },
     {

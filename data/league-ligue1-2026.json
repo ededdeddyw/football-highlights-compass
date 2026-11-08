@@ -913,8 +913,8 @@
       "away": "パリFC",
       "homeSlug": "auxerre",
       "awaySlug": "paris-fc",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "ylj45OyahfA"
     },
     {
@@ -924,8 +924,8 @@
       "away": "トロワ",
       "homeSlug": "psg",
       "awaySlug": "troyes",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "XHDjDiHqMzc"
     },
     {

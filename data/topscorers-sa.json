@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "scorers": [
     {
       "rank": 1,
@@ -19,9 +19,9 @@
       "name": "Donyell Malen",
       "team": "ローマ",
       "goals": 8,
-      "assists": 1,
+      "assists": 2,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Netherlands"
     },
     {
@@ -81,7 +81,7 @@
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "Italy"
     },
     {
@@ -91,7 +91,7 @@
       "goals": 5,
       "assists": 1,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "Italy"
     },
     {
@@ -121,11 +121,21 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Scotland"
     },
     {
       "rank": 13,
+      "name": "Rodrigo Mora",
+      "team": "ローマ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 11,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 14,
       "name": "Milutin Osmajić",
       "team": "ジェノア",
       "goals": 4,
@@ -135,23 +145,13 @@
       "nat": "Montenegro"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Lautaro Martínez",
       "team": "インテル",
       "goals": 4,
       "assists": null,
       "pens": null,
       "apps": 6,
-      "nat": "Argentina"
-    },
-    {
-      "rank": 15,
-      "name": "Franco Mastantuono",
-      "team": "フィオレンティーナ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 10,
       "nat": "Argentina"
     }
   ]

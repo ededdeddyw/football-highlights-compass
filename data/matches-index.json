@@ -27563,6 +27563,30 @@
     "hasPreview": false
   },
   {
+    "id": "laliga-2526-md23-real-sociedad-real-madrid",
+    "teams": [
+      "レアル・ソシエダ",
+      "レアル・マドリード"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第23節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md23-barca-atleti",
+    "teams": [
+      "バルセロナ",
+      "アトレティコ・マドリード"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第23節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "laliga-2526-md23-athletic-osasuna",
     "teams": [
       "アスレティック・ビルバオ",
@@ -27647,34 +27671,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md23-real-sociedad-real-madrid",
-    "teams": [
-      "レアル・ソシエダ",
-      "レアル・マドリード"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第23節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "laliga-2526-md23-valencia-santander",
     "teams": [
       "バレンシア",
       "ラシン・サンタンデール"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第23節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md23-barca-atleti",
-    "teams": [
-      "バルセロナ",
-      "アトレティコ・マドリード"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",

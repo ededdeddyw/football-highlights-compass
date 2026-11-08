@@ -1232,8 +1232,8 @@
       "away": "ラシン・サンタンデール",
       "homeSlug": "malaga",
       "awaySlug": "santander",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "ej03_Yi74Dk"
     },
     {
@@ -1243,9 +1243,9 @@
       "away": "デポルティボ",
       "homeSlug": "espanyol",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "z37HZVNSYcU"
     },
     {
       "matchday": 12,
@@ -1254,9 +1254,9 @@
       "away": "アスレティック・ビルバオ",
       "homeSlug": "osasuna",
       "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "EJheGdKnY8k"
     },
     {
       "matchday": 12,
@@ -1265,8 +1265,8 @@
       "away": "レアル・マドリード",
       "homeSlug": "valencia",
       "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "J2mRbi1bo64"
     },
     {
@@ -2426,6 +2426,28 @@
     },
     {
       "matchday": 23,
+      "dateUTC": "2026-12-02T18:00:00Z",
+      "home": "レアル・ソシエダ",
+      "away": "レアル・マドリード",
+      "homeSlug": "real-sociedad",
+      "awaySlug": "real-madrid",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
+      "dateUTC": "2026-12-02T20:30:00Z",
+      "home": "バルセロナ",
+      "away": "アトレティコ・マドリード",
+      "homeSlug": "barca",
+      "awaySlug": "atleti",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 23,
       "dateUTC": "2027-02-07T00:00:00Z",
       "home": "アスレティック・ビルバオ",
       "away": "オサスナ",
@@ -2504,32 +2526,10 @@
     {
       "matchday": 23,
       "dateUTC": "2027-02-07T00:00:00Z",
-      "home": "レアル・ソシエダ",
-      "away": "レアル・マドリード",
-      "homeSlug": "real-sociedad",
-      "awaySlug": "real-madrid",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 23,
-      "dateUTC": "2027-02-07T00:00:00Z",
       "home": "バレンシア",
       "away": "ラシン・サンタンデール",
       "homeSlug": "valencia",
       "awaySlug": "santander",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 23,
-      "dateUTC": "2027-02-07T00:00:00Z",
-      "home": "バルセロナ",
-      "away": "アトレティコ・マドリード",
-      "homeSlug": "barca",
-      "awaySlug": "atleti",
       "finished": false,
       "score": "",
       "videoId": ""

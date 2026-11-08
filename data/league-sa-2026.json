@@ -1122,8 +1122,8 @@
       "away": "レッチェ",
       "homeSlug": "torino",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "7mHWHaOsGJk"
     },
     {
@@ -1133,8 +1133,8 @@
       "away": "フロジノーネ",
       "homeSlug": "cagliari",
       "awaySlug": "frosinone",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "cQVowJC4mNI"
     },
     {
@@ -1144,8 +1144,8 @@
       "away": "ボローニャ",
       "homeSlug": "parma",
       "awaySlug": "bologna",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "OY-ZBzwO5vA"
     },
     {
@@ -1155,8 +1155,8 @@
       "away": "サッスオーロ",
       "homeSlug": "roma",
       "awaySlug": "sassuolo",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "roS85964fcc"
     },
     {

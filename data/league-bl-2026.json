@@ -814,8 +814,8 @@
       "away": "エルファースベルク",
       "homeSlug": "borussia-dortmund",
       "awaySlug": "sv-07-elversberg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": ""
     },
     {
@@ -825,8 +825,8 @@
       "away": "アウクスブルク",
       "homeSlug": "rb-leipzig",
       "awaySlug": "fc-augsburg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-2",
       "videoId": "YXjWziUVBCE"
     },
     {
@@ -836,8 +836,8 @@
       "away": "バイエルン",
       "homeSlug": "1-fsv-mainz-05",
       "awaySlug": "fc-bayern-munchen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "52rDqvXTKlg"
     },
     {
@@ -847,8 +847,8 @@
       "away": "フランクフルト",
       "homeSlug": "sc-paderborn-07",
       "awaySlug": "eintracht-frankfurt",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "hQzLYKAkXKw"
     },
     {
@@ -858,9 +858,9 @@
       "away": "ブレーメン",
       "homeSlug": "vfb-stuttgart",
       "awaySlug": "sv-werder-bremen",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "v5O3VC_qFWA"
     },
     {
       "matchday": 9,
