@@ -212,6 +212,39 @@
       "finished": true,
       "score": "",
       "videoId": "m7ZKBnJZk20"
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "",
+      "home": "クルブ・ブルッヘ",
+      "away": "アンデルレヒト",
+      "homeSlug": "club-brugge",
+      "awaySlug": "anderlecht",
+      "finished": true,
+      "score": "",
+      "videoId": "gB4zVKOJ19Y"
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "",
+      "home": "シント＝トロイデン",
+      "away": "ズルテ・ワレヘム",
+      "homeSlug": "sint-truiden",
+      "awaySlug": "zulte-waregem",
+      "finished": true,
+      "score": "",
+      "videoId": "U7Q9NVqYRRE"
+    },
+    {
+      "matchday": 11,
+      "dateUTC": "",
+      "home": "ユニオン",
+      "away": "ヘンク",
+      "homeSlug": "x-ユニオン",
+      "awaySlug": "genk",
+      "finished": true,
+      "score": "",
+      "videoId": "ASCXAx9hJTQ"
     }
   ]
 }
