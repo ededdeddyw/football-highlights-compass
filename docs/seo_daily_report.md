@@ -2,87 +2,86 @@
 
 > `scripts/fetch_seo_metrics.py`（GitHub Actions 毎朝）が自動生成。
 > Claude はこのファイルを読んで改善案を出す。手動編集は次回実行で上書きされる。
-> 最終更新: 2026-11-08
+> 最終更新: 2026-11-09
 
 ## 📌 ハイライト（前回比）
-- クリック(7日): **16** ↓1
-- 表示(7日): **3425** ↓714
-- 平均順位(7日): **15.2** ↑2.6（数字が小さいほど上位）
-- CTR(7日): **0.5%**
+- クリック(7日): **15** ↓1
+- 表示(7日): **2167** ↓1258
+- 平均順位(7日): **21.2** ↑6（数字が小さいほど上位）
+- CTR(7日): **0.7%**
 - サイトマップ indexed: **0** / submitted 5875 →
   - ※ この`indexed`はSitemaps APIの`contents.indexed`値で、実際のインデックス状況とは無関係に0のまま張り付くことが多い既知の癖（表示/クリックが出ている＝実際は概ねインデックス済み）。実態を見るならGSCの「インデックス作成」カバレッジレポートを参照。
-- GA ユーザー(28日): **817** / セッション 927
+- GA ユーザー(28日): **818** / セッション 929
 
 ## 🔎 検索クエリ 上位（28日）
 | クエリ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
 | 浦和レッズ | 2 | 118 | 11.6 |
-| バルセロナ 対 アラベス | 2 | 59 | 6.0 |
+| バルセロナ 対 アラベス | 2 | 61 | 6.2 |
 | カンファレンスリーグ | 2 | 30 | 12.1 |
 | rbライプツィヒ 対 psv 試合経過 | 1 | 213 | 6.5 |
 | フライブルク 対 vflヴォルフスブルク 試合経過 | 1 | 73 | 8.8 |
 | ポルト 順位 | 1 | 57 | 10.4 |
-| 代表ウィークとは | 1 | 37 | 4.4 |
-| carabao cup highlights | 1 | 34 | 13.8 |
-| la liga highlights | 1 | 19 | 31.5 |
-| ガンバ大阪 | 1 | 16 | 36.2 |
+| 代表ウィークとは | 1 | 38 | 4.4 |
+| carabao cup highlights | 1 | 33 | 13.8 |
+| la liga highlights | 1 | 19 | 30.3 |
+| ガンバ大阪 | 1 | 15 | 37.8 |
 | カラバオ杯 | 1 | 14 | 15.2 |
 | ドルトムント | 1 | 11 | 53.5 |
 | bundesliga highlights | 1 | 10 | 37.6 |
-| サッカーネーションズリーグハイライト | 1 | 7 | 6.4 |
-| jupiler pro league highlights | 1 | 6 | 9.5 |
+| ブンデスリーガ2部 昇格条件 | 1 | 9 | 1.6 |
+| リーズユナイテッド | 1 | 7 | 1.7 |
 
 ## 📄 表示された上位ページ（28日）
 | ページ | クリック | 表示 | 平均順位 |
 |---|---:|---:|---:|
-| / | 13 | 62 | 10.9 |
-| /en/league/carabao-cup.html | 7 | 57 | 13.4 |
-| /league/nations-league.html | 6 | 125 | 16.9 |
-| /en/league/eredivisie.html | 5 | 47 | 9.8 |
-| /guide/bundesliga-guide.html | 4 | 163 | 6.5 |
-| /en/league/laliga.html | 4 | 60 | 27.3 |
-| /guide/fifa-international-match-calendar.html | 3 | 208 | 6.4 |
-| /match/laliga-2526-md36-deportivo-alaves-barcelona.html | 3 | 114 | 5.4 |
-| /league/j2-league.html | 3 | 36 | 7.0 |
-| /guide/uefa-conference-league-guide.html | 2 | 644 | 10.6 |
+| / | 13 | 62 | 11.0 |
+| /league/nations-league.html | 7 | 127 | 18.8 |
+| /en/league/carabao-cup.html | 7 | 58 | 14.1 |
+| /en/league/laliga.html | 5 | 55 | 25.8 |
+| /en/league/eredivisie.html | 5 | 47 | 9.6 |
+| /guide/fifa-international-match-calendar.html | 4 | 227 | 6.5 |
+| /guide/bundesliga-guide.html | 4 | 188 | 6.3 |
+| /match/laliga-2526-md36-deportivo-alaves-barcelona.html | 3 | 119 | 5.5 |
+| /guide/uefa-conference-league-guide.html | 2 | 649 | 10.6 |
 | /club/urawa-reds.html | 2 | 226 | 14.8 |
 | /league/carabao-cup.html | 2 | 155 | 18.1 |
-| /en/league/belgian-pro-league.html | 2 | 70 | 9.8 |
 | /club/juventus.html | 2 | 58 | 29.8 |
 | /en/league/bundesliga.html | 2 | 34 | 41.1 |
+| /league/belgian-pro-league.html | 2 | 34 | 35.9 |
+| /league/j1-league.html | 2 | 27 | 11.3 |
 
 ## 🚪 流入チャネル（GA・28日）
 | チャネル | セッション | エンゲージ | 平均滞在(秒) |
 |---|---:|---:|---:|
-| Organic Search | 700 | 331 | 130 |
-| Direct | 192 | 54 | 177 |
-| AI Assistant | 30 | 23 | 213 |
+| Organic Search | 697 | 338 | 131 |
+| Direct | 198 | 55 | 172 |
+| AI Assistant | 29 | 23 | 220 |
 | Referral | 3 | 2 | 13 |
-| Unassigned | 2 | 1 | 8 |
+| Unassigned | 3 | 1 | 5 |
 
 ## 👀 よく見られたページ（GA・28日）
 | ページ | 表示 | ユーザー | 合計滞在(秒) |
 |---|---:|---:|---:|
-| / | 182 | 68 | 2400 |
-| /match/laliga-2526-md27-villarreal-elche.html | 65 | 65 | 0 |
+| / | 184 | 69 | 2433 |
+| /match/laliga-2526-md27-villarreal-elche.html | 55 | 55 | 0 |
 | /match/pl-2526-md38-manchester-city-aston-villa.html | 50 | 45 | 266 |
+| /en/ | 41 | 38 | 493 |
 | /match/cl-2526-md4-barca-aston-villa.html | 41 | 32 | 478 |
-| /en/ | 37 | 35 | 416 |
-| /en/latest/ | 30 | 20 | 309 |
+| /en/latest/ | 31 | 21 | 313 |
 | /league/champions-league.html | 23 | 10 | 208 |
-| /league/j2-league.html | 22 | 20 | 272 |
 | /match/pl-2526-md9-aston-villa-manchester-city.html | 22 | 19 | 123 |
+| /league/j2-league.html | 21 | 19 | 269 |
 | /league/premier-league.html | 19 | 8 | 215 |
 | /matchday/nations-2026-md3.html | 18 | 3 | 183 |
+| /league/j1-league.html | 15 | 12 | 119 |
+| /match/laliga-2526-md10-real-madrid-barcelona.html | 15 | 14 | 118 |
 | /matchday/nations-2026-md2.html | 15 | 2 | 152 |
-| /league/j1-league.html | 14 | 11 | 113 |
-| /match/cl-2526-md3-psg-barca.html | 14 | 13 | 208 |
-| /match/laliga-2526-md10-real-madrid-barcelona.html | 14 | 13 | 118 |
+| /guide/uefa-conference-league-guide.html | 14 | 11 | 370 |
 
 ## 📈 推移（直近）
 | 日付 | クリック7 | 表示7 | 順位7 | indexed | GAユーザー28 |
 |---|---:|---:|---:|---:|---:|
-| 2026-10-30 | 43 | 3744 | 16.5 | 0 | 693 |
 | 2026-10-31 | 42 | 3535 | 15.4 | 0 | 708 |
 | 2026-11-01 | 37 | 3212 | 14.8 | 0 | 720 |
 | 2026-11-02 | 36 | 3024 | 13.7 | 0 | 727 |
@@ -92,16 +91,16 @@
 | 2026-11-06 | 16 | 4077 | 12.8 | 0 | 790 |
 | 2026-11-07 | 17 | 4139 | 12.6 | 0 | 812 |
 | 2026-11-08 | 16 | 3425 | 15.2 | 0 | 817 |
+| 2026-11-09 | 15 | 2167 | 21.2 | 0 | 818 |
 
 ## 🔄 クラブ/リーグ vs W杯国別ページ（7日・表示回数）
 | カテゴリ | 表示 | クリック | CTR |
 |---|---:|---:|---:|
-| クラブ/リーグ（/club/・/league/） | 453 | 5 | 1.1% |
-| W杯国別（/country/） | 116 | 0 | 0.0% |
+| クラブ/リーグ（/club/・/league/） | 466 | 6 | 1.3% |
+| W杯国別（/country/） | 118 | 0 | 0.0% |
 
 | 日付 | クラブ/リーグ表示7 | W杯国別表示7 |
 |---|---:|---:|
-| 2026-10-30 | 964 | 163 |
 | 2026-10-31 | 858 | 144 |
 | 2026-11-01 | 702 | 122 |
 | 2026-11-02 | 610 | 107 |
@@ -111,4 +110,5 @@
 | 2026-11-06 | 439 | 111 |
 | 2026-11-07 | 455 | 104 |
 | 2026-11-08 | 453 | 116 |
+| 2026-11-09 | 466 | 118 |
 
