@@ -2,7 +2,7 @@
   "code": "sa",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "scorers": [
     {
       "rank": 1,
@@ -11,7 +11,7 @@
       "goals": 9,
       "assists": 1,
       "pens": 2,
-      "apps": 9,
+      "apps": 10,
       "nat": "Portugal"
     },
     {
@@ -38,44 +38,54 @@
       "rank": 4,
       "name": "Nikola Krstović",
       "team": "アタランタ",
-      "goals": 6,
+      "goals": 7,
       "assists": 2,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Montenegro"
     },
     {
       "rank": 5,
+      "name": "Marcus Thuram-Ulien",
+      "team": "インテル",
+      "goals": 6,
+      "assists": 2,
+      "pens": null,
+      "apps": 11,
+      "nat": "France"
+    },
+    {
+      "rank": 6,
       "name": "Anastasios Douvikas",
       "team": "コモ",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Greece"
     },
     {
-      "rank": 6,
-      "name": "Adrien Rabiot",
+      "rank": 7,
+      "name": "Alphadjo Cisse",
       "team": "ミラン",
       "goals": 5,
-      "assists": 3,
+      "assists": null,
       "pens": null,
-      "apps": 8,
-      "nat": "France"
-    },
-    {
-      "rank": 7,
-      "name": "Marcus Thuram-Ulien",
-      "team": "インテル",
-      "goals": 5,
-      "assists": 2,
-      "pens": null,
-      "apps": 10,
-      "nat": "France"
+      "apps": 11,
+      "nat": "Italy"
     },
     {
       "rank": 8,
+      "name": "Adrien Rabiot",
+      "team": "ミラン",
+      "goals": 5,
+      "assists": 4,
+      "pens": null,
+      "apps": 9,
+      "nat": "France"
+    },
+    {
+      "rank": 9,
       "name": "Daniel Maldini",
       "team": "カリアリ",
       "goals": 5,
@@ -85,7 +95,7 @@
       "nat": "Italy"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Giacomo Calò",
       "team": "フロジノーネ",
       "goals": 5,
@@ -95,24 +105,14 @@
       "nat": "Italy"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Kevin De Bruyne",
       "team": "ナポリ",
       "goals": 4,
       "assists": 1,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "Belgium"
-    },
-    {
-      "rank": 11,
-      "name": "Alphadjo Cisse",
-      "team": "ミラン",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 10,
-      "nat": "Italy"
     },
     {
       "rank": 12,
@@ -126,6 +126,16 @@
     },
     {
       "rank": 13,
+      "name": "Davide Frattesi",
+      "team": "ラツィオ",
+      "goals": 4,
+      "assists": null,
+      "pens": null,
+      "apps": 11,
+      "nat": "Italy"
+    },
+    {
+      "rank": 14,
       "name": "Rodrigo Mora",
       "team": "ローマ",
       "goals": 4,
@@ -135,24 +145,14 @@
       "nat": "Portugal"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Milutin Osmajić",
       "team": "ジェノア",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Montenegro"
-    },
-    {
-      "rank": 15,
-      "name": "Lautaro Martínez",
-      "team": "インテル",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Argentina"
     }
   ]
 }

@@ -935,8 +935,8 @@
       "away": "リール",
       "homeSlug": "stade-rennais",
       "awaySlug": "lille",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "_KTVjwOHwoc"
     },
     {
@@ -946,8 +946,8 @@
       "away": "モナコ",
       "homeSlug": "le-mans",
       "awaySlug": "monaco",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "tu7Ti1snW-M"
     },
     {
@@ -957,8 +957,8 @@
       "away": "リヨン",
       "homeSlug": "brest",
       "awaySlug": "olympique-lyon",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "SvDbAfSAutY"
     },
     {
@@ -968,8 +968,8 @@
       "away": "ロリアン",
       "homeSlug": "le-havre",
       "awaySlug": "lorient",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {
@@ -979,8 +979,8 @@
       "away": "ニース",
       "homeSlug": "angers-sco",
       "awaySlug": "nice",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "Z5mEBDJmge8"
     },
     {
@@ -990,8 +990,8 @@
       "away": "マルセイユ",
       "homeSlug": "rc-lens",
       "awaySlug": "marseille",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "c8wHCCK9aXw"
     },
     {

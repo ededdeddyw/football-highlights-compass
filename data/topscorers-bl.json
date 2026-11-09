@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "scorers": [
     {
       "rank": 1,
@@ -18,10 +18,10 @@
       "rank": 2,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
-      "goals": 7,
+      "goals": 8,
       "assists": 2,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Czech Republic"
     },
     {
@@ -56,6 +56,16 @@
     },
     {
       "rank": 6,
+      "name": "Yuito Suzuki",
+      "team": "フライブルク",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "Japan"
+    },
+    {
+      "rank": 7,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 5,
@@ -65,7 +75,7 @@
       "nat": "Austria"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Ermedin Demirovic",
       "team": "シュツットガルト",
       "goals": 5,
@@ -75,7 +85,7 @@
       "nat": "Bosnia-Herzegovina"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Jonathan Burkardt",
       "team": "フランクフルト",
       "goals": 5,
@@ -85,7 +95,7 @@
       "nat": "Germany"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Christopher Nkunku",
       "team": "ライプツィヒ",
       "goals": 5,
@@ -95,7 +105,7 @@
       "nat": "France"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Romulo Cruz",
       "team": "ライプツィヒ",
       "goals": 5,
@@ -105,7 +115,7 @@
       "nat": "Brazil"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Luis Díaz",
       "team": "バイエルン",
       "goals": 4,
@@ -115,7 +125,7 @@
       "nat": "Colombia"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Antonio Nusa",
       "team": "ライプツィヒ",
       "goals": 4,
@@ -125,23 +135,13 @@
       "nat": "Norway"
     },
     {
-      "rank": 13,
-      "name": "Yuito Suzuki",
-      "team": "フライブルク",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "Japan"
-    },
-    {
       "rank": 14,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Croatia"
     },
     {

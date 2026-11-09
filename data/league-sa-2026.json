@@ -1166,8 +1166,8 @@
       "away": "ラツィオ",
       "homeSlug": "napoli",
       "awaySlug": "lazio",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "d61-WRYyWto"
     },
     {
@@ -1177,8 +1177,8 @@
       "away": "ミラン",
       "homeSlug": "genoa",
       "awaySlug": "milan",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "LUjw4qDOYo8"
     },
     {
@@ -1188,8 +1188,8 @@
       "away": "アタランタ",
       "homeSlug": "monza",
       "awaySlug": "atalanta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "thF7vuicZE0"
     },
     {
@@ -1199,8 +1199,8 @@
       "away": "コモ",
       "homeSlug": "inter",
       "awaySlug": "como-1907",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "qnOf33cqEq4"
     },
     {
@@ -1210,8 +1210,8 @@
       "away": "ユベントス",
       "homeSlug": "fiorentina",
       "awaySlug": "juventus",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {

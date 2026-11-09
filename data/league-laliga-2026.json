@@ -1276,8 +1276,8 @@
       "away": "ベティス",
       "homeSlug": "elche",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": "0YigFOpopsY"
     },
     {
@@ -1287,9 +1287,9 @@
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "real-sociedad",
       "awaySlug": "rayo-vallecano",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "g4pvFGxapFM"
     },
     {
       "matchday": 12,
@@ -1298,8 +1298,8 @@
       "away": "レバンテ",
       "homeSlug": "celta",
       "awaySlug": "levante",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-0",
       "videoId": "CSVk7U-xbgs"
     },
     {
@@ -1309,8 +1309,8 @@
       "away": "ヘタフェ",
       "homeSlug": "villarreal",
       "awaySlug": "getafe",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "53LFKcjhHHo"
     },
     {
@@ -1320,8 +1320,8 @@
       "away": "バルセロナ",
       "homeSlug": "atleti",
       "awaySlug": "barca",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-2",
       "videoId": "L1qaxwuoKtI"
     },
     {

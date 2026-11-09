@@ -1144,8 +1144,8 @@
       "away": "フェイエノールト",
       "homeSlug": "heerenveen",
       "awaySlug": "feyenoord",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-3",
       "videoId": ""
     },
     {
@@ -1155,8 +1155,8 @@
       "away": "アヤックス",
       "homeSlug": "twente",
       "awaySlug": "ajax",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -1166,8 +1166,8 @@
       "away": "フローニンゲン",
       "homeSlug": "az",
       "awaySlug": "groningen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-3",
       "videoId": ""
     },
     {
@@ -1177,8 +1177,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "cambuur",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-5",
       "videoId": ""
     },
     {
@@ -1188,8 +1188,8 @@
       "away": "NECナイメヘン",
       "homeSlug": "utrecht",
       "awaySlug": "nec",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {
