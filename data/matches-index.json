@@ -9,7 +9,7 @@
     "leagueName": "ブンデスリーガ",
     "meta": "ブンデスリーガ 第9節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "CAngDSOE4QI",
@@ -21,7 +21,19 @@
     "leagueName": "ブンデスリーガ",
     "meta": "ブンデスリーガ 第9節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
+  },
+  {
+    "id": "6DEh00JjkmE",
+    "teams": [
+      "ケルン",
+      "レバークーゼン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第9節",
+    "players": [],
+    "hasPreview": true
   },
   {
     "id": "L1qaxwuoKtI",
@@ -33,7 +45,7 @@
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第12節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "CSVk7U-xbgs",
@@ -45,7 +57,7 @@
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第12節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "53LFKcjhHHo",
@@ -57,7 +69,19 @@
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第12節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
+  },
+  {
+    "id": "g4pvFGxapFM",
+    "teams": [
+      "レアル・ソシエダ",
+      "ラーヨ・バジェカーノ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "ラ・リーガ 第12節",
+    "players": [],
+    "hasPreview": true
   },
   {
     "id": "0YigFOpopsY",
@@ -69,7 +93,7 @@
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第12節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "c8wHCCK9aXw",
@@ -81,7 +105,7 @@
     "leagueName": "リーグアン",
     "meta": "リーグアン 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "tu7Ti1snW-M",
@@ -93,7 +117,7 @@
     "leagueName": "リーグアン",
     "meta": "リーグアン 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "SvDbAfSAutY",
@@ -105,7 +129,7 @@
     "leagueName": "リーグアン",
     "meta": "リーグアン 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "Z5mEBDJmge8",
@@ -117,7 +141,7 @@
     "leagueName": "リーグアン",
     "meta": "リーグアン 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "_KTVjwOHwoc",
@@ -129,7 +153,7 @@
     "leagueName": "リーグアン",
     "meta": "リーグアン 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "s5laPOlgH00",
@@ -141,7 +165,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "17WgReA5KcY",
@@ -153,7 +177,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "qqdIZfiambI",
@@ -165,7 +189,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "0t-J-JT96lQ",
@@ -177,7 +201,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "wbkpV9jvHjE",
@@ -189,7 +213,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第10節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "qnOf33cqEq4",
@@ -201,7 +225,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "LUjw4qDOYo8",
@@ -213,7 +237,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "thF7vuicZE0",
@@ -225,7 +249,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "d61-WRYyWto",
@@ -244,6 +268,18 @@
     "teams": [
       "シュツットガルト",
       "ブレーメン"
+    ],
+    "league": "bundes",
+    "leagueName": "ブンデスリーガ",
+    "meta": "ブンデスリーガ 第9節",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "HYxfJfIbSvY",
+    "teams": [
+      "ドルトムント",
+      "エルファースベルク"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
@@ -417,7 +453,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "OY-ZBzwO5vA",
@@ -916,42 +952,6 @@
     "teams": [
       "バイエルン",
       "ドルトムント"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第8節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "nBdMdjSuXN4",
-    "teams": [
-      "レバークーゼン",
-      "シュツットガルト"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第8節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "lxxyvZe7Pt8",
-    "teams": [
-      "アウクスブルク",
-      "フライブルク"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第8節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "iT3pGldHMh8",
-    "teams": [
-      "ボルシアMG",
-      "パーダーボルン"
     ],
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
@@ -4856,7 +4856,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md11-sint-truiden-zulte-waregem",
@@ -18992,7 +18992,7 @@
     "leagueName": "J1リーグ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md14-fc-tokyo-kashima",
@@ -19028,7 +19028,7 @@
     "leagueName": "J1リーグ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md14-gamba-osaka-cerezo-osaka",
@@ -19052,7 +19052,7 @@
     "leagueName": "J1リーグ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md14-yokohama-fm-okayama",
