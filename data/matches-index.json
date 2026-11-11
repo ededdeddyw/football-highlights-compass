@@ -216,6 +216,18 @@
     "hasPreview": true
   },
   {
+    "id": "M1SdXxdgC_Q",
+    "teams": [
+      "フィオレンティーナ",
+      "ユベントス"
+    ],
+    "league": "seriea",
+    "leagueName": "セリエA",
+    "meta": "セリエA 第11節",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "qnOf33cqEq4",
     "teams": [
       "インテル",
@@ -261,7 +273,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "v5O3VC_qFWA",
@@ -944,18 +956,6 @@
     "league": "seriea",
     "leagueName": "セリエA",
     "meta": "セリエA 第10節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "GIP5Q57SqGA",
-    "teams": [
-      "バイエルン",
-      "ドルトムント"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第8節",
     "players": [],
     "hasPreview": true
   },
@@ -4880,7 +4880,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第11節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "bl-2526-md1-bayern-leipzig",
@@ -12260,7 +12260,7 @@
     "leagueName": "EFLカップ（カラバオ）",
     "meta": "2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "carabao-2526-x-フリートウッド-arsenal",
@@ -19040,7 +19040,7 @@
     "leagueName": "J1リーグ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md14-chiba-mito",
