@@ -1001,9 +1001,9 @@
       "away": "コベントリー",
       "homeSlug": "everton",
       "awaySlug": "coventry-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "7D1FViPwDUg"
     },
     {
       "matchday": 10,
@@ -1012,9 +1012,9 @@
       "away": "トッテナム",
       "homeSlug": "leeds-united",
       "awaySlug": "tottenham",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "wUecw21LlqU"
     },
     {
       "matchday": 10,
@@ -1023,9 +1023,9 @@
       "away": "ハル・シティ",
       "homeSlug": "arsenal",
       "awaySlug": "hull-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "Lmto-xYeXvI"
     },
     {
       "matchday": 10,
@@ -1034,9 +1034,9 @@
       "away": "ニューカッスル",
       "homeSlug": "fulham",
       "awaySlug": "newcastle",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-1",
+      "videoId": "R1GwaELigr8"
     },
     {
       "matchday": 10,
@@ -1045,9 +1045,9 @@
       "away": "マンチェスター・シティ",
       "homeSlug": "nottingham",
       "awaySlug": "man-city",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "nQRsLLNXep8"
     },
     {
       "matchday": 10,
@@ -1056,9 +1056,9 @@
       "away": "リバプール",
       "homeSlug": "crystal-palace",
       "awaySlug": "liverpool",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-3",
+      "videoId": "17WgReA5KcY"
     },
     {
       "matchday": 10,
@@ -1067,9 +1067,9 @@
       "away": "チェルシー",
       "homeSlug": "sunderland",
       "awaySlug": "chelsea",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-0",
+      "videoId": "qqdIZfiambI"
     },
     {
       "matchday": 10,
@@ -1078,9 +1078,9 @@
       "away": "ボーンマス",
       "homeSlug": "ipswich-town",
       "awaySlug": "bournemouth",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "1-2",
+      "videoId": "0t-J-JT96lQ"
     },
     {
       "matchday": 10,
@@ -1089,9 +1089,9 @@
       "away": "ブレントフォード",
       "homeSlug": "brighton-hove",
       "awaySlug": "brentford",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "2-0",
+      "videoId": "wbkpV9jvHjE"
     },
     {
       "matchday": 10,
@@ -1100,9 +1100,9 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "man-united",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "4-4",
+      "videoId": "s5laPOlgH00"
     },
     {
       "matchday": 11,

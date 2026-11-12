@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-11",
   "scorers": [
     {
       "rank": 1,
@@ -11,31 +11,51 @@
       "goals": 9,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Norway"
     },
     {
       "rank": 2,
       "name": "Alexander Isak",
       "team": "リバプール",
-      "goals": 6,
+      "goals": 7,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Sweden"
     },
     {
       "rank": 3,
+      "name": "Thierno Barry",
+      "team": "エバートン",
+      "goals": 6,
+      "assists": 1,
+      "pens": null,
+      "apps": 10,
+      "nat": "France"
+    },
+    {
+      "rank": 4,
+      "name": "Nicolas Jackson",
+      "team": "アストン・ヴィラ",
+      "goals": 6,
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 5,
       "name": "Marcus Tavernier",
       "team": "ボーンマス",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "England"
     },
     {
-      "rank": 4,
+      "rank": 6,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 5,
@@ -45,77 +65,77 @@
       "nat": "Brazil"
     },
     {
-      "rank": 5,
+      "rank": 7,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 5,
       "assists": 1,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "England"
-    },
-    {
-      "rank": 6,
-      "name": "Nicolas Jackson",
-      "team": "アストン・ヴィラ",
-      "goals": 5,
-      "assists": null,
-      "pens": null,
-      "apps": 8,
-      "nat": "Senegal"
-    },
-    {
-      "rank": 7,
-      "name": "Thierno Barry",
-      "team": "エバートン",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 9,
-      "nat": "France"
     },
     {
       "rank": 8,
       "name": "Rayan Cherki",
       "team": "マンチェスター・シティ",
-      "goals": 4,
+      "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "France"
     },
     {
       "rank": 9,
+      "name": "Evanilson",
+      "team": "ボーンマス",
+      "goals": 5,
+      "assists": 4,
+      "pens": null,
+      "apps": 10,
+      "nat": "Brazil"
+    },
+    {
+      "rank": 10,
+      "name": "Pascal Groß",
+      "team": "ブライトン",
+      "goals": 4,
+      "assists": 4,
+      "pens": 2,
+      "apps": 10,
+      "nat": "Germany"
+    },
+    {
+      "rank": 11,
+      "name": "Bruno Fernandes",
+      "team": "マンチェスター・ユナイテッド",
+      "goals": 4,
+      "assists": 2,
+      "pens": 2,
+      "apps": 10,
+      "nat": "Portugal"
+    },
+    {
+      "rank": 12,
       "name": "Bryan Mbeumo",
       "team": "マンチェスター・ユナイテッド",
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Cameroon"
     },
     {
-      "rank": 10,
-      "name": "Evanilson",
-      "team": "ボーンマス",
-      "goals": 4,
-      "assists": 4,
-      "pens": null,
-      "apps": 9,
-      "nat": "Brazil"
-    },
-    {
-      "rank": 11,
+      "rank": 13,
       "name": "Kai Havertz",
       "team": "アーセナル",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Germany"
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "Bukayo Saka",
       "team": "アーセナル",
       "goals": 3,
@@ -125,34 +145,14 @@
       "nat": "England"
     },
     {
-      "rank": 13,
-      "name": "Jack Hinshelwood",
-      "team": "ブライトン",
+      "rank": 15,
+      "name": "Martin Ødegaard",
+      "team": "アーセナル",
       "goals": 3,
       "assists": null,
       "pens": null,
-      "apps": 4,
-      "nat": "England"
-    },
-    {
-      "rank": 14,
-      "name": "Cole Palmer",
-      "team": "チェルシー",
-      "goals": 3,
-      "assists": 3,
-      "pens": 1,
-      "apps": 9,
-      "nat": "England"
-    },
-    {
-      "rank": 15,
-      "name": "Pedro Neto",
-      "team": "チェルシー",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
-      "apps": 9,
-      "nat": "Portugal"
+      "apps": 10,
+      "nat": "Norway"
     }
   ]
 }

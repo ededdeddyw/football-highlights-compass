@@ -223,6 +223,9 @@ const LEAGUE_FAQ = {
   el: [
     { q:'ヨーロッパリーグの新方式とは？チャンピオンズリーグとの違いは？', a:'UEFAヨーロッパリーグも2024-25シーズンから36クラブの「リーグフェーズ」制に変わりました。チャンピオンズリーグに次ぐ欧州2番手のクラブ大会で、リーグフェーズ上位8クラブがベスト16へ直接進出、9〜24位はプレーオフに回ります。優勝クラブは翌季のチャンピオンズリーグ出場権を得られます。' },
   ],
+  conference: [
+    { q:'UEFAカンファレンスリーグとは？ヨーロッパリーグとの違いは？', a:'UEFAカンファレンスリーグは、チャンピオンズリーグ・ヨーロッパリーグに次ぐ欧州3番目のクラブ大会で、2021-22シーズンに新設されました。2024-25シーズンからはCL・ELと同じく36クラブの「リーグフェーズ」制となり、1つの順位表で上位を争います。上位8クラブがベスト16へ直接進出し、9〜24位はプレーオフに回ります。優勝クラブには翌季のヨーロッパリーグ出場権が与えられます。' },
+  ],
   acl: [
     { q:'AFCチャンピオンズリーグ（エリート）とは？', a:'AFCチャンピオンズリーグエリート（ACLE）は、アジアサッカー連盟（AFC）が主催するアジア最高峰のクラブ大会です。2024-25シーズンに名称と方式が刷新され、アジアを東地区・西地区に分けてリーグステージを戦い、上位クラブが決勝トーナメントに進みます。Jリーグ勢も出場します。' },
   ],
@@ -235,6 +238,7 @@ const LEAGUE_GUIDE = {
   nations:{ slug:'uefa-nations-league-guide', tag:'リーグABCD・昇降格・決勝ラウンド' },
   cl:     { slug:'uefa-champions-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・歴代王者' },
   el:     { slug:'uefa-europa-league-guide', tag:'新方式リーグフェーズ・決勝トーナメント・CLとの違い' },
+  conference:{ slug:'uefa-conference-league-guide', tag:'リーグフェーズ・ELとの関係・新設の狙い' },
 };
 // リーグコード → 関連する解説記事（複数）。ハブ（流入面）から関連記事へ内部リンクし、話題クラスタの網羅性・回遊・順位を強化する。
 // slug は data/articles.json / インラインGUIDES に実在する必要がある（存在チェックは描画側で行う）。
@@ -252,6 +256,10 @@ const LEAGUE_RELATED_GUIDES = {
   el: [
     { slug:'europa-league-finals-history', label:'ヨーロッパリーグ 歴代決勝・優勝クラブ一覧' },
     { slug:'uefa-conference-league-guide', label:'UEFAカンファレンスリーグとは（欧州3番手の大会）' },
+  ],
+  conference: [
+    { slug:'uefa-europa-league-guide', label:'UEFAヨーロッパリーグ完全ガイド' },
+    { slug:'uefa-champions-league-guide', label:'UEFAチャンピオンズリーグ完全ガイド' },
   ],
   jpn: [
     { slug:'japan-world-cup-history', label:'日本代表 ワールドカップの歴史' },

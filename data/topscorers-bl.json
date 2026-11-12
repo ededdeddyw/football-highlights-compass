@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-11",
   "scorers": [
     {
       "rank": 1,
@@ -11,17 +11,17 @@
       "goals": 9,
       "assists": null,
       "pens": 3,
-      "apps": 8,
+      "apps": 9,
       "nat": "Germany"
     },
     {
       "rank": 2,
       "name": "Patrik Schick",
       "team": "レバークーゼン",
-      "goals": 7,
+      "goals": 8,
       "assists": 2,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Czech Republic"
     },
     {
@@ -31,7 +31,7 @@
       "goals": 6,
       "assists": 3,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "France"
     },
     {
@@ -41,41 +41,81 @@
       "goals": 6,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Germany"
     },
     {
       "rank": 5,
+      "name": "Phillip Tietz",
+      "team": "マインツ",
+      "goals": 6,
+      "assists": null,
+      "pens": null,
+      "apps": 9,
+      "nat": "Germany"
+    },
+    {
+      "rank": 6,
+      "name": "Yuito Suzuki",
+      "team": "フライブルク",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 8,
+      "nat": "Japan"
+    },
+    {
+      "rank": 7,
       "name": "Michael Gregoritsch",
       "team": "アウクスブルク",
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Austria"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "Ermedin Demirovic",
       "team": "シュツットガルト",
       "goals": 5,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Bosnia-Herzegovina"
     },
     {
-      "rank": 7,
-      "name": "Phillip Tietz",
-      "team": "マインツ",
+      "rank": 9,
+      "name": "Jonathan Burkardt",
+      "team": "フランクフルト",
       "goals": 5,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Germany"
     },
     {
-      "rank": 8,
+      "rank": 10,
+      "name": "Christopher Nkunku",
+      "team": "ライプツィヒ",
+      "goals": 5,
+      "assists": 2,
+      "pens": null,
+      "apps": 8,
+      "nat": "France"
+    },
+    {
+      "rank": 11,
+      "name": "Romulo Cruz",
+      "team": "ライプツィヒ",
+      "goals": 5,
+      "assists": null,
+      "pens": null,
+      "apps": 7,
+      "nat": "Brazil"
+    },
+    {
+      "rank": 12,
       "name": "Luis Díaz",
       "team": "バイエルン",
       "goals": 4,
@@ -85,74 +125,34 @@
       "nat": "Colombia"
     },
     {
-      "rank": 9,
+      "rank": 13,
       "name": "Antonio Nusa",
       "team": "ライプツィヒ",
       "goals": 4,
-      "assists": 6,
+      "assists": 7,
       "pens": 1,
-      "apps": 8,
+      "apps": 9,
       "nat": "Norway"
     },
     {
-      "rank": 10,
-      "name": "Yuito Suzuki",
-      "team": "フライブルク",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 7,
-      "nat": "Japan"
-    },
-    {
-      "rank": 11,
+      "rank": 14,
       "name": "Igor Matanovic",
       "team": "フライブルク",
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Croatia"
     },
     {
-      "rank": 12,
-      "name": "Maurice Krattenmacher",
-      "team": "エルファースベルク",
-      "goals": 4,
-      "assists": 1,
-      "pens": null,
-      "apps": 8,
-      "nat": "Germany"
-    },
-    {
-      "rank": 13,
-      "name": "Christopher Nkunku",
-      "team": "ライプツィヒ",
-      "goals": 4,
-      "assists": 1,
-      "pens": null,
-      "apps": 7,
-      "nat": "France"
-    },
-    {
-      "rank": 14,
-      "name": "Romulo Cruz",
-      "team": "ライプツィヒ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 6,
-      "nat": "Brazil"
-    },
-    {
       "rank": 15,
-      "name": "Harry Kane",
-      "team": "バイエルン",
+      "name": "Joseph Scally",
+      "team": "ボルシアMG",
       "goals": 4,
-      "assists": 5,
-      "pens": 1,
-      "apps": 8,
-      "nat": "England"
+      "assists": 1,
+      "pens": null,
+      "apps": 9,
+      "nat": "USA"
     }
   ]
 }

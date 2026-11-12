@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-06",
+  "updated": "2026-11-11",
   "scorers": [
     {
       "rank": 1,
@@ -11,17 +11,17 @@
       "goals": 15,
       "assists": 2,
       "pens": 3,
-      "apps": 10,
+      "apps": 11,
       "nat": "Brazil"
     },
     {
       "rank": 2,
       "name": "Kylian Mbappé",
       "team": "レアル・マドリード",
-      "goals": 12,
+      "goals": 13,
       "assists": 2,
       "pens": 3,
-      "apps": 11,
+      "apps": 12,
       "nat": "France"
     },
     {
@@ -29,30 +29,30 @@
       "name": "Lamine Yamal",
       "team": "バルセロナ",
       "goals": 10,
-      "assists": 7,
+      "assists": 8,
       "pens": 1,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
       "rank": 4,
+      "name": "Yassir Zabiri",
+      "team": "ラシン・サンタンデール",
+      "goals": 9,
+      "assists": null,
+      "pens": null,
+      "apps": 12,
+      "nat": "Morocco"
+    },
+    {
+      "rank": 5,
       "name": "Ante Budimir",
       "team": "オサスナ",
       "goals": 8,
       "assists": null,
       "pens": 4,
-      "apps": 11,
+      "apps": 12,
       "nat": "Croatia"
-    },
-    {
-      "rank": 5,
-      "name": "Yassir Zabiri",
-      "team": "ラシン・サンタンデール",
-      "goals": 8,
-      "assists": null,
-      "pens": null,
-      "apps": 11,
-      "nat": "Morocco"
     },
     {
       "rank": 6,
@@ -61,57 +61,57 @@
       "goals": 7,
       "assists": 2,
       "pens": null,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
       "rank": 7,
+      "name": "Fermín López",
+      "team": "バルセロナ",
+      "goals": 7,
+      "assists": 5,
+      "pens": null,
+      "apps": 12,
+      "nat": "Spain"
+    },
+    {
+      "rank": 8,
       "name": "Roberto Fernández",
       "team": "エスパニョール",
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Fer Niño",
       "team": "エルチェ",
       "goals": 6,
       "assists": null,
       "pens": 1,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Pierre-Emerick Aubameyang",
       "team": "デポルティボ",
       "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "Gabon"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Álex Baena",
       "team": "アトレティコ・マドリード",
       "goals": 5,
       "assists": 3,
       "pens": null,
-      "apps": 11,
-      "nat": "Spain"
-    },
-    {
-      "rank": 11,
-      "name": "Fermín López",
-      "team": "バルセロナ",
-      "goals": 5,
-      "assists": 5,
-      "pens": null,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
@@ -121,7 +121,7 @@
       "goals": 5,
       "assists": null,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "Argentina"
     },
     {
@@ -131,7 +131,7 @@
       "goals": 5,
       "assists": 1,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Spain"
     },
     {
@@ -139,9 +139,9 @@
       "name": "Adrián",
       "team": "マラガ",
       "goals": 5,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 7,
+      "apps": 8,
       "nat": "Spain"
     },
     {
@@ -151,7 +151,7 @@
       "goals": 4,
       "assists": 4,
       "pens": null,
-      "apps": 11,
+      "apps": 12,
       "nat": "Dominican Republic"
     }
   ]

@@ -1100,8 +1100,8 @@
       "away": "PECズヴォレ",
       "homeSlug": "willem-ii",
       "awaySlug": "zwolle",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": ""
     },
     {
@@ -1111,8 +1111,8 @@
       "away": "テルスター",
       "homeSlug": "sittard",
       "awaySlug": "telstar",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -1122,8 +1122,8 @@
       "away": "スパルタ・ロッテルダム",
       "homeSlug": "den-haag",
       "awaySlug": "sparta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
@@ -1133,8 +1133,8 @@
       "away": "ゴー・アヘッド・イーグルス",
       "homeSlug": "excelsior",
       "awaySlug": "go-ahead",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": ""
     },
     {
@@ -1144,8 +1144,8 @@
       "away": "フェイエノールト",
       "homeSlug": "heerenveen",
       "awaySlug": "feyenoord",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-3",
       "videoId": ""
     },
     {
@@ -1155,8 +1155,8 @@
       "away": "アヤックス",
       "homeSlug": "twente",
       "awaySlug": "ajax",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": ""
     },
     {
@@ -1166,8 +1166,8 @@
       "away": "フローニンゲン",
       "homeSlug": "az",
       "awaySlug": "groningen",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-3",
       "videoId": ""
     },
     {
@@ -1177,8 +1177,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "cambuur",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-5",
       "videoId": ""
     },
     {
@@ -1188,8 +1188,8 @@
       "away": "NECナイメヘン",
       "homeSlug": "utrecht",
       "awaySlug": "nec",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": ""
     },
     {
