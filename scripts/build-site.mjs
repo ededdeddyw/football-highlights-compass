@@ -251,6 +251,7 @@ const LEAGUE_RELATED_GUIDES = {
   cl: [
     { slug:'champions-league-finals-history', label:'チャンピオンズリーグ 歴代決勝・優勝クラブ一覧' },
     { slug:'champions-league-past-winners', label:'チャンピオンズリーグ 歴代優勝クラブ' },
+    { slug:'uefa-conference-league-guide', label:'UEFAカンファレンスリーグとは（欧州3番手の大会）' },
   ],
   el: [
     { slug:'europa-league-finals-history', label:'ヨーロッパリーグ 歴代決勝・優勝クラブ一覧' },
@@ -276,6 +277,15 @@ const LEAGUE_RELATED_GUIDES = {
     { slug:'famous-derbies-world', label:'世界の有名なダービー（ミラノダービー）' },
   ],
 };
+// ハブ上部の編集リード（検索意図に直接応える導入文＝薄いdek一行を補強し、滞在・網羅感・順位を底上げ）。code→HTML。
+const HUB_INTRO = {
+  nations: `<div class="post-body">
+    <p><strong>UEFAネーションズリーグ</strong>は、欧州各国代表が<strong>実力の近い相手と公式戦でガチンコ勝負</strong>できるようUEFAが創設した国際大会です。中身の薄くなりがちな親善試合に代わる真剣勝負として、強豪国同士の好カードを2年に一度のサイクルで楽しめます。このページでは、公式・権利元がYouTube等で公開する<strong>ハイライトをネタバレ防止</strong>（スコアは既定で非表示）でまとめています。</p>
+    <p>参加国は実力別に<strong>リーグA・B・C・D</strong>の4階層へ分けられ、各グループで昇格・降格を争います。下の「リーグ・グループ別で見る」から各グループの試合ハイライトへ、「歴代優勝国」から大会の歩みへたどれます。仕組みの詳細は<a href="../guide/uefa-nations-league-guide.html">UEFAネーションズリーグ完全ガイド</a>、歴代王者は<a href="../guide/nations-league-past-winners.html">歴代優勝国・決勝成績一覧</a>で解説しています。日本国内のライブ・見逃し配信はDAZNが中心です。</p>
+  </div>`,
+};
+// ハブtitleの末尾に足す大会固有の語（「ハイライト動画」系クエリに加え、大会特有の検索語との一致度を上げる）。
+const HUB_TITLE_TAIL = { nations:'・リーグA〜D' };
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2646,7 +2656,7 @@ const GUIDES = [
           <li><strong>優勝クラブは、翌シーズンのチャンピオンズリーグ出場権</strong>を得られます。リーグ戦で上位に届かなかったクラブにとって、ELは“CLへの近道”にもなります。</li>
           <li>名門クラブの参戦も多く、好カードが揃います。</li>
         </ul>
-        <p>CLの仕組みは<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ完全ガイド</a>で詳しく解説しています。</p>
+        <p>CLの仕組みは<a href="../guide/uefa-champions-league-guide.html">チャンピオンズリーグ完全ガイド</a>で、ELの下に位置する欧州3番手の大会は<a href="../guide/uefa-conference-league-guide.html">UEFAカンファレンスリーグ完全ガイド</a>で詳しく解説しています。</p>
       </div>
 
       <h2 class="lined">開催時期（カレンダー）</h2>
@@ -2739,7 +2749,7 @@ try {
     for (const a of (Array.isArray(arts) ? arts : (arts.articles||[]))) {
       if (!a || !a.slug || !a.h1 || !a.body) continue;
       if (GUIDES.some(g => g.slug === a.slug)) continue;   // slug衝突は既存GUIDESを優先
-      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], body(){ return a.body; } });
+      GUIDES.push({ slug:a.slug, title:a.title||a.h1, h1:a.h1, dek:a.dek||'', desc:a.desc||a.dek||'', entities:a.entities||[], faq:Array.isArray(a.faq)?a.faq:[], body(){ return a.body; } });
     }
   }
 } catch(e){ console.warn('articles.json読込失敗:', e.message); }
@@ -2825,12 +2835,15 @@ function buildLeague(h){
       const sections = ['A','B','C','D'].filter(t=>byTier[t]).map(t=>{
         const grps = Object.keys(byTier[t]).sort((a,b)=>(+a)-(+b)).map(n=>{
           const ms2 = byTier[t][n].slice().sort((a,b)=>(a.matchday||0)-(b.matchday||0));
-          return `<div class="nlg-grp"><div class="nlg-gh">グループ${esc(n)}</div><div class="chips">${ms2.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div></div>`;
+          // このグループの出場国（国ページがあればリンク）。「ネーションズリーグ リーグA 組み合わせ」系クエリ＋回遊を強化
+          const gteams = [...new Set(ms2.flatMap(r=>[r.home,r.away]).filter(Boolean))];
+          const teamsLine = gteams.length ? `<div class="nlg-teams">${gteams.map(tm=>PAGE_OF[tm]?`<a href="../${PAGE_OF[tm]}">${esc(tm)}</a>`:`<span>${esc(tm)}</span>`).join('')}</div>` : '';
+          return `<div class="nlg-grp"><div class="nlg-gh">グループ${esc(n)}</div>${teamsLine}<div class="chips">${ms2.map(r=>`<a href="../match/${r.ms}.html">${esc(r.home)} vs ${esc(r.away)}<small style="opacity:.6"> 第${r.matchday}節</small></a>`).join('')}</div></div>`;
         }).join('');
         return `<div class="nlg-tier" id="nl-tier-${esc(t)}"><h3 class="nlg-th">リーグ${esc(t)}</h3>${grps}</div>`;
       }).join('');
       const tierNav = ['A','B','C','D'].filter(t=>byTier[t]).map(t=>`<a href="#nl-tier-${t}">リーグ${t}</a>`).join('');
-      groupBlock = `<h2 class="lined">リーグ・グループ別で見る</h2><style>.nlg-tier{margin:10px 0 6px;scroll-margin-top:70px}.nlg-th{font-size:14px;font-weight:800;color:var(--accent);margin:12px 0 4px}.nlg-grp{margin:6px 0 10px}.nlg-gh{font-size:12px;font-weight:700;color:var(--muted);margin:4px 2px}.nlg-nav{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.nlg-nav a{font-weight:800;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none}.nlg-nav a:hover{background:var(--card2)}</style>${tierNav?`<div class="nlg-nav">${tierNav}</div>`:''}${sections}`;
+      groupBlock = `<h2 class="lined">リーグ・グループ別で見る</h2><style>.nlg-tier{margin:10px 0 6px;scroll-margin-top:70px}.nlg-th{font-size:14px;font-weight:800;color:var(--accent);margin:12px 0 4px}.nlg-grp{margin:6px 0 10px}.nlg-gh{font-size:12px;font-weight:700;color:var(--muted);margin:4px 2px}.nlg-teams{display:flex;flex-wrap:wrap;gap:6px;margin:2px 2px 6px}.nlg-teams a,.nlg-teams span{font-size:12.5px;font-weight:700;padding:3px 9px;border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none}.nlg-teams span{color:var(--muted);font-weight:600}.nlg-teams a:hover{background:var(--card2)}.nlg-nav{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.nlg-nav a{font-weight:800;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none}.nlg-nav a:hover{background:var(--card2)}</style>${tierNav?`<div class="nlg-nav">${tierNav}</div>`:''}${sections}`;
     }
   }
   // 節別ページへのナビ（第1節〜）＝各節まとめページへの内部リンク網。現行シーズンの全節を列挙。
@@ -2850,12 +2863,13 @@ function buildLeague(h){
   graph.push(itemListLd(ms));
   // 「○○ ハイライト」「○○ 動画」は実クエリで11〜20位（あと一歩）に多いため、titleは「ハイライト動画」を
   // リーグ名の直後（先頭寄り）に置いて完全一致度を上げる（旧: 順位表・得点王が先でハイライトが後ろに埋没）。
-  const head=HEAD({ title:`${h.name} ハイライト動画${stand.length?'・順位表':''}${scList.length?'・得点王':''}｜最新結果`, ogtitle:`${h.name} ハイライト動画${stand.length?'・順位表':''}`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
+  const head=HEAD({ title:`${h.name} ハイライト動画${stand.length?'・順位表':''}${scList.length?'・得点王':''}${HUB_TITLE_TAIL[h.code]||''}｜最新結果`, ogtitle:`${h.name} ハイライト動画${stand.length?'・順位表':''}${HUB_TITLE_TAIL[h.code]||''}`, desc, url, ogimg, modified:`${TODAY}T12:00:00+09:00`, jsonld:graph });
   const out = head + TOPBAR + `<article class="post entity">
   ${crumb([{label:'トップ',href:'../'},{label:'欧州リーグ'},{label:h.name}])}
   <p class="kicker">⚽ 欧州サッカー</p>
   <h1 class="headline">${esc(h.name)}｜公式ハイライト</h1>
   <p class="dek">${esc(h.blurb)}${['cl','nations','el','conference','acl','jpn','carabao'].includes(h.code)?'この大会':`${esc(h.country)}のトップリーグ`}の試合を、公式・権利元が公開するハイライトで掲載しています（公式映像のみ・ネタバレ防止）。新シーズンの試合も随時追加します。</p>
+  ${HUB_INTRO[h.code]||''}
   ${(standTable||fixTable||faqItems.length)?hubCss:''}
   ${standTable}
   ${scorerBlock}
@@ -3853,8 +3867,10 @@ mkdirSync('site/guide', { recursive:true });
 const guideUrls = [];
 for(const g of GUIDES){
   const url = `${DOMAIN}/guide/${g.slug}.html`;
+  const gfaq = (g.faq||[]).filter(x=>x&&x.q&&x.a);   // 記事に faq があれば可視FAQ＋FAQPage構造化データを付与（SERP占有UP＝CTR底上げ）
   const cg = [ {"@type":"Article","headline":g.h1,"description":g.desc,"inLanguage":"ja","author":ORG,"publisher":ORG,"datePublished":`${TODAY}`,"dateModified":`${TODAY}`,"mainEntityOfPage":url},
     crumbLd([{name:'トップ',url:DOMAIN+'/'},{name:'ガイド',url:DOMAIN+'/'},{name:g.h1,url}]) ];
+  if(gfaq.length) cg.push(faqLd(gfaq));
   const head = HEAD({ title:`${g.title} - Football Highlights Compass`, ogtitle:g.title, desc:g.desc, url, ogimg:`${DOMAIN}/og.png`, ogtype:'article', modified:`${TODAY}T12:00:00+09:00`, jsonld:cg });
   const out = head + TOPBAR + `<article class="post">
   ${crumb([{label:'トップ',href:'../'},{label:'ガイド'},{label:g.h1}])}
@@ -3862,6 +3878,7 @@ for(const g of GUIDES){
   <h1 class="headline">${esc(g.h1)}</h1>
   <p class="dek">${esc(g.dek)}</p>
   ${g.body()}
+  ${gfaq.length?FAQ_STYLE+faqBlock(gfaq):''}
   ${AD}
   ` + FOOTER();
   writeFileSync(`site/guide/${g.slug}.html`, out);
