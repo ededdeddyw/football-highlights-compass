@@ -4832,7 +4832,7 @@
     "leagueName": "ベルギー・プロリーグ",
     "meta": "第10節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md10-mechelen-genk",
@@ -19004,7 +19004,7 @@
     "leagueName": "J1リーグ",
     "meta": "第14節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md14-fukuoka-nagasaki",
@@ -25748,7 +25748,7 @@
     "leagueName": "ラ・リーガ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "laliga-2526-md6-atleti-osasuna",
