@@ -276,16 +276,28 @@ const LEAGUE_RELATED_GUIDES = {
   sa: [
     { slug:'famous-derbies-world', label:'世界の有名なダービー（ミラノダービー）' },
   ],
+  carabao: [
+    { slug:'premier-league-guide', label:'プレミアリーグ完全ガイド' },
+    { slug:'premier-league-big-six', label:'プレミアリーグの「ビッグ6」とは' },
+  ],
 };
 // ハブ上部の編集リード（検索意図に直接応える導入文＝薄いdek一行を補強し、滞在・網羅感・順位を底上げ）。code→HTML。
 const HUB_INTRO = {
+  carabao: `<div class="post-body">
+    <p><strong>カラバオカップ</strong>（<strong>カラバオ杯</strong>）は、正式名称を<strong>EFLカップ</strong>というイングランドのリーグカップです。プレミアリーグとEFL（チャンピオンシップ〜リーグ2）の計92クラブが参加し、<strong>一発勝負のノックアウト方式</strong>で優勝を争います。決勝はウェンブリー・スタジアムで行われ、優勝クラブには翌シーズンの欧州カップ戦の出場権が与えられます。</p>
+    <p>下の「最新のハイライト」から各試合の公式ハイライトへ進めます。結果・スコアは既定で隠しているため、録画観戦前でも安心してご覧いただけます。</p>
+  </div>`,
   nations: `<div class="post-body">
     <p><strong>UEFAネーションズリーグ</strong>は、欧州各国代表が<strong>実力の近い相手と公式戦でガチンコ勝負</strong>できるようUEFAが創設した国際大会です。中身の薄くなりがちな親善試合に代わる真剣勝負として、強豪国同士の好カードを2年に一度のサイクルで楽しめます。このページでは、公式・権利元がYouTube等で公開する<strong>ハイライトをネタバレ防止</strong>（スコアは既定で非表示）でまとめています。</p>
     <p>参加国は実力別に<strong>リーグA・B・C・D</strong>の4階層へ分けられ、各グループで昇格・降格を争います。下の「リーグ・グループ別で見る」から各グループの試合ハイライトへ、「歴代優勝国」から大会の歩みへたどれます。仕組みの詳細は<a href="../guide/uefa-nations-league-guide.html">UEFAネーションズリーグ完全ガイド</a>、歴代王者は<a href="../guide/nations-league-past-winners.html">歴代優勝国・決勝成績一覧</a>で解説しています。日本国内のライブ・見逃し配信はDAZNが中心です。</p>
   </div>`,
 };
 // ハブtitleの末尾に足す大会固有の語（「ハイライト動画」系クエリに加え、大会特有の検索語との一致度を上げる）。
-const HUB_TITLE_TAIL = { nations:'・リーグA〜D' };
+const HUB_TITLE_TAIL = { nations:'・リーグA〜D', carabao:'・カラバオ杯' };
+// ハブの meta description を大会固有の検索語で上書き（「カラバオ杯」等の実クエリが11〜20位＝あと一歩のため）。未指定は共通文。
+const HUB_DESC = {
+  carabao: 'カラバオカップ（カラバオ杯・EFLカップ）の公式ハイライト動画・試合日程・結果を掲載。プレミア勢も参戦するイングランドのリーグカップを、公式映像のみ・ネタバレ防止表示でチェックできます。',
+};
 // クラブページ等で使う「日本語リーグ名 → コード」。LEAGUE_HUBS はこの関数より後で定義されるため遅延生成。
 let _label2code = null;
 function labelToCode(label){ if(!_label2code){ try { _label2code = Object.fromEntries(LEAGUE_HUBS.map(h=>[h.clubLabel, h.code])); } catch { _label2code = {}; } } return _label2code[label]; }
@@ -2787,7 +2799,7 @@ function buildLeague(h){
   const leagueStars = PLAYERS.filter(p=>p.club && !isJP(p) && CLUBS[p.club] && CLUBS[p.club].league===h.clubLabel);
   const starChips = leagueStars.length?`<h2 class="lined">このリーグの注目選手</h2><div class="chips">${leagueStars.slice(0,12).map(p=>`<a href="../player/${p.slug}.html">${esc(p.name)}<small style="opacity:.6"> ${esc(p.pos)}</small></a>`).join('')}</div>`:'';
   const ogimg = recent[0]?`https://i.ytimg.com/vi/${recent[0].videoId}/hqdefault.jpg`:(ms[0]?`https://i.ytimg.com/vi/${ms[0].id}/hqdefault.jpg`:`${DOMAIN}/og.png`);
-  const desc = `${h.name}（${h.country}）の順位表・最新ハイライト動画・試合結果・日程をまとめて掲載。公式映像のみ・ネタバレ防止表示に対応。`.slice(0,120);
+  const desc = HUB_DESC[h.code] || `${h.name}（${h.country}）の順位表・最新ハイライト動画・試合結果・日程をまとめて掲載。公式映像のみ・ネタバレ防止表示に対応。`.slice(0,120);
   // 順位表（RAIL_TABLE=リーグJSONの結果から計算済み）。クラブ名は在庫があればクラブ図鑑へリンク。
   const hubCss = `<style>.stand-wrap{overflow-x:auto;margin:8px 0 4px}.stand{border-collapse:collapse;width:100%;font-size:13px;min-width:340px}.stand th,.stand td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.stand th{color:var(--muted);font-weight:700;font-size:11.5px;white-space:nowrap}.stand td.tm{text-align:left;font-weight:700;white-space:nowrap}.stand td.tm a{color:var(--accent);text-decoration:none}.stand td.tm a:hover{text-decoration:underline}.stand td.rk{color:var(--muted);width:2em}.stand td.pts{font-weight:800}.stand tbody tr:hover{background:var(--card2)}.stand-note{font-size:11px;color:var(--muted);margin:4px 2px 0}.fx{list-style:none;margin:8px 0 4px;padding:0}.fx li{display:flex;gap:10px;align-items:baseline;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13.5px;flex-wrap:wrap}.fx .fx-d{color:var(--muted);font-size:12px;min-width:6.8em;font-variant-numeric:tabular-nums}.fx .fx-m{font-weight:700}.fx .fx-m a{color:var(--accent);text-decoration:none}.fx .fx-m a:hover{text-decoration:underline}.fx .fx-m em{color:var(--muted);font-style:normal;font-weight:400;margin:0 4px}.faq{margin:6px 0 2px}.faq-q{border-bottom:1px solid var(--line);padding:9px 2px}.faq-q summary{cursor:pointer;font-weight:700;font-size:14px}.faq-a{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.75}.rank2{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 2px}.rank-col{flex:1;min-width:210px}.rank-h{font-weight:800;font-size:13px;margin:4px 0 4px}.rank-list{margin:0;padding:0;list-style:none;counter-reset:rk}.rank-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:rk}.rank-list li::before{content:counter(rk);color:var(--muted);font-weight:800;min-width:1.3em}.rk-n{flex:1;font-weight:700}.rk-n a{color:var(--accent);text-decoration:none}.rk-n a:hover{text-decoration:underline}.rk-v{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}.scorer-list{margin:8px 0 2px;padding:0;list-style:none;counter-reset:sc}.scorer-list li{display:flex;align-items:baseline;gap:8px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:13px;counter-increment:sc;flex-wrap:wrap}.scorer-list li::before{content:counter(sc);color:var(--muted);font-weight:800;min-width:1.4em}.scorer-list .sc-nm{font-weight:700}.scorer-list .sc-tm{color:var(--muted);font-size:12px;flex:1}.scorer-list .sc-tm a{color:var(--accent);text-decoration:none}.scorer-list .sc-tm a:hover{text-decoration:underline}.scorer-list .sc-g{font-weight:800;font-variant-numeric:tabular-nums}.scorer-list .sc-g small{font-weight:700;color:var(--muted)}.scorer-list .sc-a{color:var(--muted);font-size:11.5px}</style>`;
   // 次節の日程（未消化・日本時間）。クラブは在庫があればクラブ図鑑へリンク。将来試合なのでスコアは無し＝ネタバレ配慮不要。
