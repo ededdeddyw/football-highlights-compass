@@ -33,7 +33,7 @@
 - [日本代表](https://highlight-compass.com/league/japan-national-team.html): 日本代表の順位表・試合日程・次の試合・公式ハイライト。
 - [EFLカップ（カラバオ）](https://highlight-compass.com/league/carabao-cup.html): EFLカップ（カラバオ）の順位表・試合日程・次の試合・公式ハイライト。
 
-## 今シーズンの最新データ（2026-11-12時点）
+## 今シーズンの最新データ（2026-11-13時点）
 - プレミアリーグ: 首位: アーセナル（勝点27・10試合） ／ 得点王: Erling Haaland（マンチェスター・シティ・9ゴール）。
 - ラ・リーガ: 首位: バルセロナ（勝点33・12試合） ／ 得点王: Raphinha（バルセロナ・15ゴール）。
 - セリエA: 首位: ラツィオ（勝点29・11試合） ／ 得点王: Gustavo Varela（モンツァ・9ゴール）。

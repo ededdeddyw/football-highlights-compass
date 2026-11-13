@@ -38195,6 +38195,42 @@
     "hasPreview": true
   },
   {
+    "id": "nations-2526-md5-italy-france",
+    "teams": [
+      "イタリア",
+      "フランス"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-england-croatia",
+    "teams": [
+      "イングランド",
+      "クロアチア"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-czech-spain",
+    "teams": [
+      "チェコ",
+      "スペイン"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "pl-2526-md1-liverpool-bournemouth",
     "teams": [
       "リバプール",
