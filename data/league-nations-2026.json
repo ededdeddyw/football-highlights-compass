@@ -1251,6 +1251,42 @@
       "score": "",
       "videoId": "oqgPYhCB1Pk",
       "group": "B2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "イタリア",
+      "away": "フランス",
+      "homeSlug": "italy",
+      "awaySlug": "france",
+      "finished": true,
+      "score": "",
+      "videoId": "Fz6NwIyWBDQ",
+      "group": "A1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "イングランド",
+      "away": "クロアチア",
+      "homeSlug": "england",
+      "awaySlug": "croatia",
+      "finished": true,
+      "score": "",
+      "videoId": "C36DPO0QUsY",
+      "group": "A3"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "チェコ",
+      "away": "スペイン",
+      "homeSlug": "czech",
+      "awaySlug": "spain",
+      "finished": true,
+      "score": "",
+      "videoId": "GxWKrSU8cdQ",
+      "group": "A3"
     }
   ]
 }
