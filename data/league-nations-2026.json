@@ -1279,6 +1279,66 @@
     {
       "matchday": 5,
       "dateUTC": "",
+      "home": "オランダ",
+      "away": "ギリシャ",
+      "homeSlug": "netherlands",
+      "awaySlug": "greece",
+      "finished": true,
+      "score": "",
+      "videoId": "h674nSqZLUM",
+      "group": "A2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "スコットランド",
+      "away": "北マケドニア",
+      "homeSlug": "scotland",
+      "awaySlug": "north-macedonia",
+      "finished": true,
+      "score": "",
+      "videoId": "3lBU59ilA6Y",
+      "group": "B1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "スロバキア",
+      "away": "フェロー諸島",
+      "homeSlug": "slovakia",
+      "awaySlug": "faroe-islands",
+      "finished": true,
+      "score": "",
+      "videoId": "yFKAKipdm84",
+      "group": "C3"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "スロベニア",
+      "away": "スイス",
+      "homeSlug": "slovenia",
+      "awaySlug": "switzerland",
+      "finished": true,
+      "score": "",
+      "videoId": "9DHVEs4mX3g",
+      "group": "B1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "セルビア",
+      "away": "ドイツ",
+      "homeSlug": "serbia",
+      "awaySlug": "germany",
+      "finished": true,
+      "score": "",
+      "videoId": "iE242ojPYWo",
+      "group": "A2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
       "home": "チェコ",
       "away": "スペイン",
       "homeSlug": "czech",
@@ -1287,6 +1347,30 @@
       "score": "",
       "videoId": "GxWKrSU8cdQ",
       "group": "A3"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "トルコ",
+      "away": "ベルギー",
+      "homeSlug": "turkey",
+      "awaySlug": "belgium",
+      "finished": true,
+      "score": "",
+      "videoId": "VfqeAoklcjo",
+      "group": "A1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "モルドバ",
+      "away": "カザフスタン",
+      "homeSlug": "moldova",
+      "awaySlug": "kazakhstan",
+      "finished": true,
+      "score": "",
+      "videoId": "Ls_tKk4cMyg",
+      "group": "C3"
     }
   ]
 }
