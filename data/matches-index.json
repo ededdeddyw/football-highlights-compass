@@ -38219,10 +38219,94 @@
     "hasPreview": false
   },
   {
+    "id": "nations-2526-md5-netherlands-greece",
+    "teams": [
+      "オランダ",
+      "ギリシャ"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-scotland-north-macedonia",
+    "teams": [
+      "スコットランド",
+      "北マケドニア"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "nations-2526-md5-slovakia-faroe-islands",
+    "teams": [
+      "スロバキア",
+      "フェロー諸島"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-slovenia-switzerland",
+    "teams": [
+      "スロベニア",
+      "スイス"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "nations-2526-md5-serbia-germany",
+    "teams": [
+      "セルビア",
+      "ドイツ"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "nations-2526-md5-czech-spain",
     "teams": [
       "チェコ",
       "スペイン"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-turkey-belgium",
+    "teams": [
+      "トルコ",
+      "ベルギー"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md5-moldova-kazakhstan",
+    "teams": [
+      "モルドバ",
+      "カザフスタン"
     ],
     "league": "nations",
     "leagueName": "UEFAネーションズリーグ",
