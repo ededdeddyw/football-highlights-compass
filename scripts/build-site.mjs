@@ -3336,6 +3336,7 @@ try {
   .en-about{font-size:14px;line-height:1.85;color:var(--ink);margin:4px 2px 6px}
   .en-src{font-size:12px;color:var(--muted);margin:2px 2px 0}
   .en-src a{color:var(--accent2);text-decoration:none}
+  .en-faq h3{font-size:14px;font-weight:800;color:var(--ink);margin:14px 0 4px}.en-faq p{font-size:14px;line-height:1.7;margin:0 0 6px;color:var(--ink)}
   .en-facts{border-collapse:collapse;width:100%;font-size:14px;margin:4px 0 6px}
   .en-facts th,.en-facts td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
   .en-facts th{color:var(--muted);font-weight:700;width:38%;white-space:nowrap}
@@ -3683,11 +3684,24 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
     const teamChips = natTeams.length ? `<h2 class="en-sec">National teams</h2><div class="en-chips">${natTeams.map(([,i])=>`<a href="../country/${i.slug}.html">${esc(prettySlug(i.slug))}</a>`).join('')}</div>` : '';
     const guideChip = enGuideByCode[h.code] ? `<p class="en-leagues" style="margin-top:10px"><a href="../guide/${enGuideByCode[h.code]}.html">📘 ${esc(name)} explained — format, knockouts &amp; winners</a></p>` : '';
     const blurb = LEAGUE_BLURB_EN[h.code] || `Official highlights from ${name}.`;
-    const title = `${name} Highlights & Table｜Spoiler-Free Official Videos`;
-    const desc = `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
+    // GSC: 英語ハブは「<league> highlights」系クエリで11〜25位の"あと一歩"圏。title/descを検索意図（最新の試合動画）寄りにし、
+    // 件数・更新日で鮮度を示してCTRを底上げ。FAQ（可視＋FAQPage）でAI検索からの引用性も上げる。
+    const nShown = Math.min(items.length, 24);
+    const lastDate = items[0] && items[0].date ? items[0].date : '';
+    const title = `${name} Highlights – Latest Official Match Videos${stand.length?' & Table':''} (Spoiler-Free)`;
+    const desc = nShown
+      ? `Watch the latest ${nShown} official ${name} highlight videos${lastDate?` (updated ${lastDate})`:''}${stand.length?', plus the current table':''}. Rights-holder videos only, with scores hidden by default — no spoilers.`
+      : `Official, spoiler-free ${name} highlights and the latest table. Only official/rights-holder videos, with scores hidden by default.`;
+    const hubFaq = [
+      { q:`Where can I watch official ${name} highlights?`, a:`This page collects ${name} highlight videos published on the official YouTube channels of the competition, clubs and rights holders. Open any match card to play the embedded official video — this site does not host or re-upload any footage.` },
+      { q:`Can I watch ${name} highlights without seeing the score?`, a:`Yes. Scores and results are hidden by default on every page so you can watch spoiler-free. You can reveal the score with a toggle on the match page whenever you want.` },
+      { q:`How often are ${name} highlights updated?`, a:`The list is updated automatically every day as official videos are published, with the most recent matches shown first${lastDate?` (latest match: ${lastDate})`:''}.` },
+    ];
+    const faqHtml = `<h2 class="en-sec">${esc(name)} highlights FAQ</h2><div class="en-faq">${hubFaq.map(f=>`<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('')}</div>`;
     const jsonld = [
       {"@type":"CollectionPage","name":`${name} Highlights`,"url":canonical,"inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Football Highlights Compass","url":DOMAIN+"/"}},
-      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":name,"item":canonical}]}
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home (EN)","item":DOMAIN+"/en/"},{"@type":"ListItem","position":2,"name":name,"item":canonical}]},
+      faqLd(hubFaq)
     ];
     const body = `<div class="en-wrap">
   <div class="en-top"><a class="en-brand" href="../"><img src="../../favicon.svg" alt="">Football Highlights Compass</a><a class="en-lang" href="${jaAlt.replace(DOMAIN,'../..')}">日本語版 →</a></div>
@@ -3701,6 +3715,7 @@ ${jsonld?`<script type="application/ld+json">${JSON.stringify(ld(jsonld))}</scri
   ${cards?`<div class="engrid">${cards}</div>`:'<p class="en-leagues">New highlights are added as matches are played.</p>'}
   ${standHtml}
   ${guideChip}
+  ${faqHtml}
   ${clubChips}
   ${teamChips}
   ${otherChips}
