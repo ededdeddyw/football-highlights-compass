@@ -1255,6 +1255,42 @@
     {
       "matchday": 5,
       "dateUTC": "",
+      "home": "アルバニア",
+      "away": "フィンランド",
+      "homeSlug": "albania",
+      "awaySlug": "finland",
+      "finished": true,
+      "score": "",
+      "videoId": "1H20FghsB9k",
+      "group": "C1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "アルメニア",
+      "away": "キプロス",
+      "homeSlug": "armenia",
+      "awaySlug": "cyprus",
+      "finished": true,
+      "score": "",
+      "videoId": "2DbtN387a2Q",
+      "group": "C2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "アンドラ",
+      "away": "ジブラルタル",
+      "homeSlug": "andorra",
+      "awaySlug": "gibraltar",
+      "finished": true,
+      "score": "",
+      "videoId": "TVF-o5PIp4Q",
+      "group": "D1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
       "home": "イタリア",
       "away": "フランス",
       "homeSlug": "italy",
@@ -1287,6 +1323,18 @@
       "score": "",
       "videoId": "h674nSqZLUM",
       "group": "A2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "サンマリノ",
+      "away": "ベラルーシ",
+      "homeSlug": "san-marino",
+      "awaySlug": "belarus",
+      "finished": true,
+      "score": "",
+      "videoId": "19aKQi2DE4A",
+      "group": "C1"
     },
     {
       "matchday": 5,
@@ -1363,6 +1411,42 @@
     {
       "matchday": 5,
       "dateUTC": "",
+      "home": "ノルウェー",
+      "away": "ウェールズ",
+      "homeSlug": "norway",
+      "awaySlug": "wales",
+      "finished": true,
+      "score": "",
+      "videoId": "-YN8sI_FIDs",
+      "group": "A4"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "ブルガリア",
+      "away": "アイスランド",
+      "homeSlug": "bulgaria",
+      "awaySlug": "iceland",
+      "finished": true,
+      "score": "",
+      "videoId": "52yBcr-8RFU",
+      "group": "C4"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "ポルトガル",
+      "away": "デンマーク",
+      "homeSlug": "portugal",
+      "awaySlug": "denmark",
+      "finished": true,
+      "score": "",
+      "videoId": "1Nj9EA6c7xc",
+      "group": "A4"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
       "home": "モルドバ",
       "away": "カザフスタン",
       "homeSlug": "moldova",
@@ -1371,6 +1455,42 @@
       "score": "",
       "videoId": "Ls_tKk4cMyg",
       "group": "C3"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "モンテネグロ",
+      "away": "ラトビア",
+      "homeSlug": "montenegro",
+      "awaySlug": "latvia",
+      "finished": true,
+      "score": "",
+      "videoId": "6n0randPnUo",
+      "group": "C2"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "リヒテンシュタイン",
+      "away": "アゼルバイジャン",
+      "homeSlug": "liechtenstein",
+      "awaySlug": "azerbaijan",
+      "finished": true,
+      "score": "",
+      "videoId": "IWnatDOjQKw",
+      "group": "D1"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "ルクセンブルク",
+      "away": "エストニア",
+      "homeSlug": "luxembourg",
+      "awaySlug": "estonia",
+      "finished": true,
+      "score": "",
+      "videoId": "O5R01viB_6I",
+      "group": "C4"
     }
   ]
 }
