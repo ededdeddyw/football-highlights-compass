@@ -1272,6 +1272,17 @@
     {
       "matchday": 17,
       "dateUTC": "",
+      "home": "FC今治",
+      "away": "ジュビロ磐田",
+      "homeSlug": "imabari",
+      "awaySlug": "iwata",
+      "finished": true,
+      "score": "",
+      "videoId": "WvlVbppdkX8"
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "",
       "home": "RB大宮アルディージャ",
       "away": "モンテディオ山形",
       "homeSlug": "omiya",
@@ -1290,6 +1301,39 @@
       "finished": true,
       "score": "",
       "videoId": "R16DU0Vkgng"
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "",
+      "home": "ヴァンラーレ八戸",
+      "away": "いわきFC",
+      "homeSlug": "hachinohe",
+      "awaySlug": "iwaki",
+      "finished": true,
+      "score": "",
+      "videoId": "yMOv3MUWPk8"
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "",
+      "home": "カターレ富山",
+      "away": "徳島ヴォルティス",
+      "homeSlug": "toyama",
+      "awaySlug": "tokushima",
+      "finished": true,
+      "score": "",
+      "videoId": "MotSRnphEv4"
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "",
+      "home": "ベガルタ仙台",
+      "away": "ブラウブリッツ秋田",
+      "homeSlug": "sendai",
+      "awaySlug": "akita",
+      "finished": true,
+      "score": "",
+      "videoId": "Fgur9bBJdqo"
     },
     {
       "matchday": 17,
@@ -1323,6 +1367,17 @@
       "finished": true,
       "score": "",
       "videoId": "krCN7J1uU5U"
+    },
+    {
+      "matchday": 17,
+      "dateUTC": "",
+      "home": "北海道コンサドーレ札幌",
+      "away": "サガン鳥栖",
+      "homeSlug": "sapporo",
+      "awaySlug": "tosu",
+      "finished": true,
+      "score": "",
+      "videoId": "GeiMB-bu4Fc"
     }
   ]
 }
