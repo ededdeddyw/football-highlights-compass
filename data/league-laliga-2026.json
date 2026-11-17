@@ -1601,28 +1601,6 @@
     },
     {
       "matchday": 15,
-      "dateUTC": "2026-12-06T00:00:00Z",
-      "home": "セビージャ",
-      "away": "マラガ",
-      "homeSlug": "sevilla-fc",
-      "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
-      "dateUTC": "2026-12-06T00:00:00Z",
-      "home": "アトレティコ・マドリード",
-      "away": "ベティス",
-      "homeSlug": "atleti",
-      "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
       "dateUTC": "2026-12-06T13:00:00Z",
       "home": "オサスナ",
       "away": "エルチェ",
@@ -1650,6 +1628,28 @@
       "away": "バレンシア",
       "homeSlug": "getafe",
       "awaySlug": "valencia",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2026-12-06T20:00:00Z",
+      "home": "アトレティコ・マドリード",
+      "away": "ベティス",
+      "homeSlug": "atleti",
+      "awaySlug": "real-betis",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2026-12-07T20:00:00Z",
+      "home": "セビージャ",
+      "away": "マラガ",
+      "homeSlug": "sevilla-fc",
+      "awaySlug": "malaga",
       "finished": false,
       "score": "",
       "videoId": ""

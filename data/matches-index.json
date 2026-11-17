@@ -26915,30 +26915,6 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md15-sevilla-fc-malaga",
-    "teams": [
-      "セビージャ",
-      "マラガ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第15節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md15-atleti-real-betis",
-    "teams": [
-      "アトレティコ・マドリード",
-      "ベティス"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第15節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "laliga-2526-md15-osasuna-elche",
     "teams": [
       "オサスナ",
@@ -26967,6 +26943,30 @@
     "teams": [
       "ヘタフェ",
       "バレンシア"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第15節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md15-atleti-real-betis",
+    "teams": [
+      "アトレティコ・マドリード",
+      "ベティス"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第15節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md15-sevilla-fc-malaga",
+    "teams": [
+      "セビージャ",
+      "マラガ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
