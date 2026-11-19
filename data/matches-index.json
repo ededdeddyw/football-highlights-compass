@@ -4616,7 +4616,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第4節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "belgium-2526-md5-anderlecht-genk",
@@ -14156,7 +14156,7 @@
     "leagueName": "UEFAカンファレンスリーグ",
     "meta": "第3節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "el-2526-md1-anderlecht-olympique-lyonnais",
@@ -20516,7 +20516,7 @@
     "leagueName": "J2リーグ",
     "meta": "第17節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j2-2526-md17-hachinohe-iwaki",
@@ -38756,7 +38756,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-germany-netherlands",
