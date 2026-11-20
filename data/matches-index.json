@@ -45899,10 +45899,10 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md21-bournemouth-ipswich-town",
+    "id": "pl-2526-md21-coventry-city-everton",
     "teams": [
-      "ボーンマス",
-      "イプスウィッチ"
+      "コベントリー",
+      "エバートン"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -45927,54 +45927,6 @@
     "teams": [
       "チェルシー",
       "サンダーランド"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第21節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md21-brentford-brighton-hove",
-    "teams": [
-      "ブレントフォード",
-      "ブライトン"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第21節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md21-aston-villa-man-united",
-    "teams": [
-      "アストン・ヴィラ",
-      "マンチェスター・ユナイテッド"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第21節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md21-tottenham-leeds-united",
-    "teams": [
-      "トッテナム",
-      "リーズ"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第21節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md21-coventry-city-everton",
-    "teams": [
-      "コベントリー",
-      "エバートン"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46019,10 +45971,94 @@
     "hasPreview": false
   },
   {
+    "id": "pl-2526-md21-aston-villa-man-united",
+    "teams": [
+      "アストン・ヴィラ",
+      "マンチェスター・ユナイテッド"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第21節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md21-bournemouth-ipswich-town",
+    "teams": [
+      "ボーンマス",
+      "イプスウィッチ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第21節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md21-tottenham-leeds-united",
+    "teams": [
+      "トッテナム",
+      "リーズ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第21節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md21-brentford-brighton-hove",
+    "teams": [
+      "ブレントフォード",
+      "ブライトン"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第21節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "pl-2526-md22-ipswich-town-hull-city",
     "teams": [
       "イプスウィッチ",
       "ハル・シティ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第22節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md22-fulham-aston-villa",
+    "teams": [
+      "フラム",
+      "アストン・ヴィラ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第22節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md22-arsenal-newcastle",
+    "teams": [
+      "アーセナル",
+      "ニューカッスル"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第22節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md22-brighton-hove-man-city",
+    "teams": [
+      "ブライトン",
+      "マンチェスター・シティ"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46067,34 +46103,10 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md22-arsenal-newcastle",
+    "id": "pl-2526-md22-crystal-palace-tottenham",
     "teams": [
-      "アーセナル",
-      "ニューカッスル"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第22節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md22-leeds-united-chelsea",
-    "teams": [
-      "リーズ",
-      "チェルシー"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第22節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md22-fulham-aston-villa",
-    "teams": [
-      "フラム",
-      "アストン・ヴィラ"
+      "クリスタル・パレス",
+      "トッテナム"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46115,10 +46127,10 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md22-brighton-hove-man-city",
+    "id": "pl-2526-md22-leeds-united-chelsea",
     "teams": [
-      "ブライトン",
-      "マンチェスター・シティ"
+      "リーズ",
+      "チェルシー"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46127,34 +46139,10 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md22-crystal-palace-tottenham",
+    "id": "pl-2526-md23-liverpool-everton",
     "teams": [
-      "クリスタル・パレス",
-      "トッテナム"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第22節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md23-tottenham-sunderland",
-    "teams": [
-      "トッテナム",
-      "サンダーランド"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第23節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md23-brentford-man-united",
-    "teams": [
-      "ブレントフォード",
-      "マンチェスター・ユナイテッド"
+      "リバプール",
+      "エバートン"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46167,6 +46155,42 @@
     "teams": [
       "ニューカッスル",
       "ブライトン"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第23節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md23-aston-villa-ipswich-town",
+    "teams": [
+      "アストン・ヴィラ",
+      "イプスウィッチ"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第23節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md23-chelsea-nottingham",
+    "teams": [
+      "チェルシー",
+      "ノッティンガム・フォレスト"
+    ],
+    "league": "pl",
+    "leagueName": "プレミアリーグ",
+    "meta": "第23節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "pl-2526-md23-tottenham-sunderland",
+    "teams": [
+      "トッテナム",
+      "サンダーランド"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
@@ -46211,30 +46235,6 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md23-chelsea-nottingham",
-    "teams": [
-      "チェルシー",
-      "ノッティンガム・フォレスト"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第23節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "pl-2526-md23-liverpool-everton",
-    "teams": [
-      "リバプール",
-      "エバートン"
-    ],
-    "league": "pl",
-    "leagueName": "プレミアリーグ",
-    "meta": "第23節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "pl-2526-md23-man-city-arsenal",
     "teams": [
       "マンチェスター・シティ",
@@ -46247,10 +46247,10 @@
     "hasPreview": false
   },
   {
-    "id": "pl-2526-md23-aston-villa-ipswich-town",
+    "id": "pl-2526-md23-brentford-man-united",
     "teams": [
-      "アストン・ヴィラ",
-      "イプスウィッチ"
+      "ブレントフォード",
+      "マンチェスター・ユナイテッド"
     ],
     "league": "pl",
     "leagueName": "プレミアリーグ",
