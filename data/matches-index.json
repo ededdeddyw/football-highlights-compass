@@ -2312,7 +2312,7 @@
     "leagueName": "Jリーグ2026",
     "meta": "Jリーグ 2026・プレーオフ 15-16位決定戦 第1戦",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "ASTz49Z4z9k",
@@ -38324,7 +38324,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-armenia-cyprus",
@@ -38639,10 +38639,46 @@
     "hasPreview": false
   },
   {
+    "id": "nations-2526-md6-ireland-kosovo",
+    "teams": [
+      "アイルランド",
+      "コソボ"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md6-israel-austria",
+    "teams": [
+      "イスラエル",
+      "オーストリア"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "nations-2526-md6-wales-portugal",
     "teams": [
       "ウェールズ",
       "ポルトガル"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md6-ukraine-georgia",
+    "teams": [
+      "ウクライナ",
+      "ジョージア"
     ],
     "league": "nations",
     "leagueName": "UEFAネーションズリーグ",
@@ -38660,7 +38696,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-kazakhstan-slovakia",
@@ -38732,7 +38768,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-spain-england",
@@ -38763,6 +38799,18 @@
     "teams": [
       "ドイツ",
       "オランダ"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md6-hungary-northern-ireland",
+    "teams": [
+      "ハンガリー",
+      "北アイルランド"
     ],
     "league": "nations",
     "leagueName": "UEFAネーションズリーグ",
@@ -38831,6 +38879,30 @@
     "hasPreview": true
   },
   {
+    "id": "nations-2526-md6-poland-sweden",
+    "teams": [
+      "ポーランド",
+      "スウェーデン"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "nations-2526-md6-bosnia-romania",
+    "teams": [
+      "ボスニア・ヘルツェゴビナ",
+      "ルーマニア"
+    ],
+    "league": "nations",
+    "leagueName": "UEFAネーションズリーグ",
+    "meta": "第6節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "nations-2526-md6-latvia-armenia",
     "teams": [
       "ラトビア",
@@ -38840,7 +38912,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-lithuania-liechtenstein",
