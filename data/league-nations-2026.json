@@ -1579,6 +1579,30 @@
     {
       "matchday": 6,
       "dateUTC": "",
+      "home": "アイルランド",
+      "away": "コソボ",
+      "homeSlug": "ireland",
+      "awaySlug": "kosovo",
+      "finished": true,
+      "score": "",
+      "videoId": "OgCqHsY9XE4",
+      "group": "B3"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "イスラエル",
+      "away": "オーストリア",
+      "homeSlug": "israel",
+      "awaySlug": "austria",
+      "finished": true,
+      "score": "",
+      "videoId": "DBDr03B9_6U",
+      "group": "B3"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
       "home": "ウェールズ",
       "away": "ポルトガル",
       "homeSlug": "wales",
@@ -1587,6 +1611,18 @@
       "score": "",
       "videoId": "mKwrehNS0z8",
       "group": "A4"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "ウクライナ",
+      "away": "ジョージア",
+      "homeSlug": "ukraine",
+      "awaySlug": "georgia",
+      "finished": true,
+      "score": "",
+      "videoId": "ouuZrMRq89E",
+      "group": "B2"
     },
     {
       "matchday": 6,
@@ -1711,6 +1747,18 @@
     {
       "matchday": 6,
       "dateUTC": "",
+      "home": "ハンガリー",
+      "away": "北アイルランド",
+      "homeSlug": "hungary",
+      "awaySlug": "northern-ireland",
+      "finished": true,
+      "score": "",
+      "videoId": "QSgDNSGI-pw",
+      "group": "B2"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
       "home": "フィンランド",
       "away": "サンマリノ",
       "homeSlug": "finland",
@@ -1767,6 +1815,30 @@
       "score": "",
       "videoId": "1LqVJR38OK0",
       "group": "A1"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "ポーランド",
+      "away": "スウェーデン",
+      "homeSlug": "poland",
+      "awaySlug": "sweden",
+      "finished": true,
+      "score": "",
+      "videoId": "NKq3vmBJ9Og",
+      "group": "B4"
+    },
+    {
+      "matchday": 6,
+      "dateUTC": "",
+      "home": "ボスニア・ヘルツェゴビナ",
+      "away": "ルーマニア",
+      "homeSlug": "bosnia",
+      "awaySlug": "romania",
+      "finished": true,
+      "score": "",
+      "videoId": "NaLXTjn1BFo",
+      "group": "B4"
     },
     {
       "matchday": 6,
