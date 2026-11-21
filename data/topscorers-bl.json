@@ -2,7 +2,7 @@
   "code": "bl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "scorers": [
     {
       "rank": 1,
@@ -31,7 +31,7 @@
       "goals": 6,
       "assists": 3,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "France"
     },
     {

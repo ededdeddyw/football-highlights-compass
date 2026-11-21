@@ -1001,8 +1001,8 @@
       "away": "ルアーブル",
       "homeSlug": "troyes",
       "awaySlug": "le-havre",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {

@@ -1331,9 +1331,9 @@
       "away": "エスパニョール",
       "homeSlug": "athletic",
       "awaySlug": "espanyol",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "4S2WJBRBMnM"
     },
     {
       "matchday": 13,

@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "scorers": [
     {
       "rank": 1,
@@ -56,6 +56,16 @@
     },
     {
       "rank": 6,
+      "name": "Roberto Fernández",
+      "team": "エスパニョール",
+      "goals": 7,
+      "assists": null,
+      "pens": null,
+      "apps": 13,
+      "nat": "Spain"
+    },
+    {
+      "rank": 7,
       "name": "Sergio Camello",
       "team": "ラーヨ・バジェカーノ",
       "goals": 7,
@@ -65,21 +75,11 @@
       "nat": "Spain"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Fermín López",
       "team": "バルセロナ",
       "goals": 7,
       "assists": 5,
-      "pens": null,
-      "apps": 12,
-      "nat": "Spain"
-    },
-    {
-      "rank": 8,
-      "name": "Roberto Fernández",
-      "team": "エスパニョール",
-      "goals": 6,
-      "assists": null,
       "pens": null,
       "apps": 12,
       "nat": "Spain"

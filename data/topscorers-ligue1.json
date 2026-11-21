@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "scorers": [
     {
       "rank": 1,
@@ -86,6 +86,16 @@
     },
     {
       "rank": 9,
+      "name": "Josh Maja",
+      "team": "ルアーブル",
+      "goals": 5,
+      "assists": null,
+      "pens": 1,
+      "apps": 11,
+      "nat": "Nigeria"
+    },
+    {
+      "rank": 10,
       "name": "Boulaye Dia",
       "team": "レンヌ",
       "goals": 5,
@@ -95,7 +105,7 @@
       "nat": "Senegal"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 4,
@@ -105,7 +115,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
@@ -115,7 +125,7 @@
       "nat": "Mali"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Sebastian Szymański",
       "team": "レンヌ",
       "goals": 4,
@@ -125,7 +135,7 @@
       "nat": "Poland"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 4,
@@ -135,7 +145,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Gessime Yassine",
       "team": "ストラスブール",
       "goals": 4,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 10,
       "nat": "France"
-    },
-    {
-      "rank": 15,
-      "name": "Paris Brunner",
-      "team": "モナコ",
-      "goals": 4,
-      "assists": null,
-      "pens": null,
-      "apps": 8,
-      "nat": "Germany"
     }
   ]
 }
