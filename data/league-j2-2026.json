@@ -1378,6 +1378,105 @@
       "finished": true,
       "score": "",
       "videoId": "GeiMB-bu4Fc"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "ヴァンフォーレ甲府",
+      "away": "ヴァンラーレ八戸",
+      "homeSlug": "kofu",
+      "awaySlug": "hachinohe",
+      "finished": true,
+      "score": "",
+      "videoId": "LIYDnx4hVTU"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "カターレ富山",
+      "away": "大分トリニータ",
+      "homeSlug": "toyama",
+      "awaySlug": "oita",
+      "finished": true,
+      "score": "",
+      "videoId": "9pr3tDY9DME"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "サガン鳥栖",
+      "away": "ベガルタ仙台",
+      "homeSlug": "tosu",
+      "awaySlug": "sendai",
+      "finished": true,
+      "score": "",
+      "videoId": "5HiWP0pEjcg"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "ジュビロ磐田",
+      "away": "RB大宮アルディージャ",
+      "homeSlug": "iwata",
+      "awaySlug": "omiya",
+      "finished": true,
+      "score": "",
+      "videoId": "dMGXBc8Fvqk"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "テゲバジャーロ宮崎",
+      "away": "いわきFC",
+      "homeSlug": "miyazaki",
+      "awaySlug": "iwaki",
+      "finished": true,
+      "score": "",
+      "videoId": "kdg1JZmmw8k"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "ブラウブリッツ秋田",
+      "away": "モンテディオ山形",
+      "homeSlug": "akita",
+      "awaySlug": "yamagata",
+      "finished": true,
+      "score": "",
+      "videoId": "e7j6Ni6MwdE"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "横浜FC",
+      "away": "北海道コンサドーレ札幌",
+      "homeSlug": "yokohama-fc",
+      "awaySlug": "sapporo",
+      "finished": true,
+      "score": "",
+      "videoId": "AlbTO60THZQ"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "藤枝MYFC",
+      "away": "FC今治",
+      "homeSlug": "fujieda",
+      "awaySlug": "imabari",
+      "finished": true,
+      "score": "",
+      "videoId": "ZV3r4gTt_r8"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
+      "home": "栃木シティ",
+      "away": "アルビレックス新潟",
+      "homeSlug": "tochigi-city",
+      "awaySlug": "niigata",
+      "finished": true,
+      "score": "",
+      "videoId": "glA_3X8B6D8"
     }
   ]
 }

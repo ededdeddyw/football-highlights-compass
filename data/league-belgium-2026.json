@@ -245,6 +245,39 @@
       "finished": true,
       "score": "",
       "videoId": "ASCXAx9hJTQ"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "シャルルロワ",
+      "away": "シント=トロイデン",
+      "homeSlug": "charleroi",
+      "awaySlug": "sint-truiden",
+      "finished": true,
+      "score": "",
+      "videoId": "Rr6doVCxEX8"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "ヘンク",
+      "away": "ラ・ルヴィエール",
+      "homeSlug": "genk",
+      "awaySlug": "la-louviere",
+      "finished": true,
+      "score": "",
+      "videoId": "fZiSad_rc0I"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
+      "home": "メヘレン",
+      "away": "クルブ・ブルッヘ",
+      "homeSlug": "mechelen",
+      "awaySlug": "club-brugge",
+      "finished": true,
+      "score": "",
+      "videoId": "Su9VYkZ0sno"
     }
   ]
 }
