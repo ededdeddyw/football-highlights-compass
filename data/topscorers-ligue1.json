@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "scorers": [
     {
       "rank": 1,
@@ -41,7 +41,7 @@
       "goals": 6,
       "assists": null,
       "pens": null,
-      "apps": 8,
+      "apps": 9,
       "nat": "England"
     },
     {
@@ -51,7 +51,7 @@
       "goals": 6,
       "assists": 2,
       "pens": 2,
-      "apps": 9,
+      "apps": 10,
       "nat": "Ivory Coast"
     },
     {
@@ -61,31 +61,41 @@
       "goals": 5,
       "assists": 8,
       "pens": 3,
-      "apps": 10,
+      "apps": 11,
       "nat": "France"
     },
     {
       "rank": 7,
+      "name": "Ferrán Torres",
+      "team": "パリ・サンジェルマン",
+      "goals": 5,
+      "assists": 1,
+      "pens": null,
+      "apps": 11,
+      "nat": "Spain"
+    },
+    {
+      "rank": 8,
       "name": "Ludovic Ajorque",
       "team": "ブレスト",
       "goals": 5,
       "assists": 1,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "France"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Casper Tengstedt",
       "team": "トゥールーズ",
       "goals": 5,
       "assists": 1,
       "pens": 2,
-      "apps": 8,
+      "apps": 9,
       "nat": "Denmark"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Josh Maja",
       "team": "ルアーブル",
       "goals": 5,
@@ -95,7 +105,7 @@
       "nat": "Nigeria"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Boulaye Dia",
       "team": "レンヌ",
       "goals": 5,
@@ -105,7 +115,7 @@
       "nat": "Senegal"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Louis Mafouta",
       "team": "ルマン",
       "goals": 4,
@@ -115,7 +125,7 @@
       "nat": "Central African Republic"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Kamory Doumbia",
       "team": "ブレスト",
       "goals": 4,
@@ -125,7 +135,7 @@
       "nat": "Mali"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Sebastian Szymański",
       "team": "レンヌ",
       "goals": 4,
@@ -135,23 +145,13 @@
       "nat": "Poland"
     },
     {
-      "rank": 14,
-      "name": "Ferrán Torres",
-      "team": "パリ・サンジェルマン",
-      "goals": 4,
-      "assists": 1,
-      "pens": null,
-      "apps": 10,
-      "nat": "Spain"
-    },
-    {
       "rank": 15,
       "name": "Gessime Yassine",
       "team": "ストラスブール",
       "goals": 4,
       "assists": 3,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "France"
     }
   ]

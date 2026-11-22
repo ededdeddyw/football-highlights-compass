@@ -1221,8 +1221,8 @@
       "away": "カリアリ",
       "homeSlug": "como-1907",
       "awaySlug": "cagliari",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "hI1lFf0xd7c"
     },
     {
@@ -1232,8 +1232,8 @@
       "away": "レッチェ",
       "homeSlug": "lazio",
       "awaySlug": "lecce",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "THl8cXoVOT0"
     },
     {
@@ -1243,8 +1243,8 @@
       "away": "ローマ",
       "homeSlug": "parma",
       "awaySlug": "roma",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-5",
       "videoId": "e9XhLJ5Nt7Y"
     },
     {
@@ -1254,8 +1254,8 @@
       "away": "トリノ",
       "homeSlug": "napoli",
       "awaySlug": "torino",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "CdcSSKIhtfw"
     },
     {

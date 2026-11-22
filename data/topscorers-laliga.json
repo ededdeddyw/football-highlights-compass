@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "scorers": [
     {
       "rank": 1,
@@ -19,9 +19,9 @@
       "name": "Kylian Mbappé",
       "team": "レアル・マドリード",
       "goals": 13,
-      "assists": 2,
+      "assists": 3,
       "pens": 3,
-      "apps": 12,
+      "apps": 13,
       "nat": "France"
     },
     {
@@ -71,7 +71,7 @@
       "goals": 7,
       "assists": 2,
       "pens": null,
-      "apps": 12,
+      "apps": 13,
       "nat": "Spain"
     },
     {
@@ -96,16 +96,26 @@
     },
     {
       "rank": 10,
+      "name": "Lucas Boyé",
+      "team": "アラベス",
+      "goals": 6,
+      "assists": 1,
+      "pens": 1,
+      "apps": 12,
+      "nat": "Argentina"
+    },
+    {
+      "rank": 11,
       "name": "Pierre-Emerick Aubameyang",
       "team": "デポルティボ",
       "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Gabon"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Álex Baena",
       "team": "アトレティコ・マドリード",
       "goals": 5,
@@ -115,17 +125,17 @@
       "nat": "Spain"
     },
     {
-      "rank": 12,
-      "name": "Lucas Boyé",
-      "team": "アラベス",
+      "rank": 13,
+      "name": "Jude Bellingham",
+      "team": "レアル・マドリード",
       "goals": 5,
-      "assists": null,
-      "pens": 1,
-      "apps": 11,
-      "nat": "Argentina"
+      "assists": 3,
+      "pens": null,
+      "apps": 13,
+      "nat": "England"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Brugui",
       "team": "レバンテ",
       "goals": 5,
@@ -135,7 +145,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Adrián",
       "team": "マラガ",
       "goals": 5,
@@ -143,16 +153,6 @@
       "pens": null,
       "apps": 8,
       "nat": "Spain"
-    },
-    {
-      "rank": 15,
-      "name": "Mariano Díaz",
-      "team": "アラベス",
-      "goals": 4,
-      "assists": 4,
-      "pens": null,
-      "apps": 12,
-      "nat": "Dominican Republic"
     }
   ]
 }

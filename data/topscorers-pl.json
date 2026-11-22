@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "scorers": [
     {
       "rank": 1,
@@ -11,7 +11,7 @@
       "goals": 9,
       "assists": null,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Norway"
     },
     {
@@ -41,21 +41,31 @@
       "goals": 6,
       "assists": 1,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Senegal"
     },
     {
       "rank": 5,
-      "name": "Marcus Tavernier",
+      "name": "Evanilson",
       "team": "ボーンマス",
-      "goals": 5,
-      "assists": null,
+      "goals": 6,
+      "assists": 4,
       "pens": null,
-      "apps": 10,
-      "nat": "England"
+      "apps": 11,
+      "nat": "Brazil"
     },
     {
       "rank": 6,
+      "name": "Marcus Tavernier",
+      "team": "ボーンマス",
+      "goals": 5,
+      "assists": 1,
+      "pens": null,
+      "apps": 11,
+      "nat": "England"
+    },
+    {
+      "rank": 7,
       "name": "João Pedro",
       "team": "チェルシー",
       "goals": 5,
@@ -65,34 +75,24 @@
       "nat": "Brazil"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Morgan Rogers",
       "team": "チェルシー",
       "goals": 5,
-      "assists": 1,
+      "assists": 2,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "England"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Rayan Cherki",
       "team": "マンチェスター・シティ",
       "goals": 5,
       "assists": 2,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "France"
-    },
-    {
-      "rank": 9,
-      "name": "Evanilson",
-      "team": "ボーンマス",
-      "goals": 5,
-      "assists": 4,
-      "pens": null,
-      "apps": 10,
-      "nat": "Brazil"
     },
     {
       "rank": 10,
@@ -106,6 +106,16 @@
     },
     {
       "rank": 11,
+      "name": "Dominic Calvert-Lewin",
+      "team": "リーズ",
+      "goals": 4,
+      "assists": 2,
+      "pens": 1,
+      "apps": 11,
+      "nat": "England"
+    },
+    {
+      "rank": 12,
       "name": "Bruno Fernandes",
       "team": "マンチェスター・ユナイテッド",
       "goals": 4,
@@ -115,7 +125,7 @@
       "nat": "Portugal"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Bryan Mbeumo",
       "team": "マンチェスター・ユナイテッド",
       "goals": 4,
@@ -125,34 +135,24 @@
       "nat": "Cameroon"
     },
     {
-      "rank": 13,
-      "name": "Kai Havertz",
-      "team": "アーセナル",
-      "goals": 3,
+      "rank": 14,
+      "name": "Noah Okafor",
+      "team": "リーズ",
+      "goals": 4,
       "assists": null,
       "pens": null,
       "apps": 10,
-      "nat": "Germany"
-    },
-    {
-      "rank": 14,
-      "name": "Bukayo Saka",
-      "team": "アーセナル",
-      "goals": 3,
-      "assists": null,
-      "pens": 1,
-      "apps": 7,
-      "nat": "England"
+      "nat": "Switzerland"
     },
     {
       "rank": 15,
-      "name": "Martin Ødegaard",
+      "name": "Kai Havertz",
       "team": "アーセナル",
       "goals": 3,
-      "assists": null,
+      "assists": 1,
       "pens": null,
-      "apps": 10,
-      "nat": "Norway"
+      "apps": 11,
+      "nat": "Germany"
     }
   ]
 }

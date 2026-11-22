@@ -913,8 +913,8 @@
       "away": "パーダーボルン",
       "homeSlug": "bayer-04-leverkusen",
       "awaySlug": "sc-paderborn-07",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": ""
     },
     {
@@ -924,8 +924,8 @@
       "away": "ホッフェンハイム",
       "homeSlug": "eintracht-frankfurt",
       "awaySlug": "tsg-hoffenheim",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "qC5yHGpviyI"
     },
     {
@@ -935,8 +935,8 @@
       "away": "ライプツィヒ",
       "homeSlug": "1-fc-union-berlin",
       "awaySlug": "rb-leipzig",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-5",
       "videoId": "ifRaB93PG48"
     },
     {
@@ -946,8 +946,8 @@
       "away": "ドルトムント",
       "homeSlug": "borussia-monchengladbach",
       "awaySlug": "borussia-dortmund",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "6nzlYFc01V8"
     },
     {
@@ -957,8 +957,8 @@
       "away": "フライブルク",
       "homeSlug": "sv-07-elversberg",
       "awaySlug": "sc-freiburg",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": ""
     },
     {
@@ -968,9 +968,9 @@
       "away": "シュツットガルト",
       "homeSlug": "fc-schalke-04",
       "awaySlug": "vfb-stuttgart",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-0",
+      "videoId": "OH2RDPHmdBA"
     },
     {
       "matchday": 10,

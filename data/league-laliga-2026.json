@@ -1342,9 +1342,9 @@
       "away": "デポルティボ",
       "homeSlug": "alaves",
       "awaySlug": "deportivo",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "3-1",
+      "videoId": "IYM7UXWv3tE"
     },
     {
       "matchday": 13,
@@ -1353,9 +1353,9 @@
       "away": "バレンシア",
       "homeSlug": "rayo-vallecano",
       "awaySlug": "valencia",
-      "finished": false,
-      "score": "",
-      "videoId": ""
+      "finished": true,
+      "score": "0-1",
+      "videoId": "AFtt31mdI68"
     },
     {
       "matchday": 13,
@@ -1364,8 +1364,8 @@
       "away": "ベティス",
       "homeSlug": "sevilla-fc",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "wGtO6BkIb5Q"
     },
     {
@@ -1375,8 +1375,8 @@
       "away": "セルタ",
       "homeSlug": "real-madrid",
       "awaySlug": "celta",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-1",
       "videoId": "skhRY3vcrWM"
     },
     {
