@@ -249,6 +249,17 @@
     {
       "matchday": 12,
       "dateUTC": "",
+      "home": "アンデルレヒト",
+      "away": "ルーヴェン",
+      "homeSlug": "anderlecht",
+      "awaySlug": "oh-leuven",
+      "finished": true,
+      "score": "",
+      "videoId": "50bWT5jOkdQ"
+    },
+    {
+      "matchday": 12,
+      "dateUTC": "",
       "home": "シャルルロワ",
       "away": "シント=トロイデン",
       "homeSlug": "charleroi",

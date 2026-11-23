@@ -1470,6 +1470,17 @@
     {
       "matchday": 18,
       "dateUTC": "",
+      "home": "徳島ヴォルティス",
+      "away": "湘南ベルマーレ",
+      "homeSlug": "tokushima",
+      "awaySlug": "shonan",
+      "finished": true,
+      "score": "",
+      "videoId": "whCcIaiBITA"
+    },
+    {
+      "matchday": 18,
+      "dateUTC": "",
       "home": "栃木シティ",
       "away": "アルビレックス新潟",
       "homeSlug": "tochigi-city",
