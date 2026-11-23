@@ -1047,7 +1047,7 @@
       "awaySlug": "olympique-lyon",
       "finished": true,
       "score": "0-1",
-      "videoId": ""
+      "videoId": "DmZvfdNUWC0"
     },
     {
       "matchday": 11,
@@ -1067,8 +1067,8 @@
       "away": "アンジェ",
       "homeSlug": "paris-fc",
       "awaySlug": "angers-sco",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": "SGEI9KOAFFM"
     },
     {
@@ -1078,8 +1078,8 @@
       "away": "レンヌ",
       "homeSlug": "lorient",
       "awaySlug": "stade-rennais",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "QV_d5sRCf3o"
     },
     {
@@ -1089,8 +1089,8 @@
       "away": "ルマン",
       "homeSlug": "marseille",
       "awaySlug": "le-mans",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-3",
       "videoId": "qDPnLqaBWpg"
     },
     {

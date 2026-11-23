@@ -2,7 +2,7 @@
   "code": "ligue1",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "scorers": [
     {
       "rank": 1,
@@ -11,17 +11,17 @@
       "goals": 9,
       "assists": 5,
       "pens": 3,
-      "apps": 10,
+      "apps": 11,
       "nat": "Mali"
     },
     {
       "rank": 2,
       "name": "Amine Gouiri",
       "team": "マルセイユ",
-      "goals": 7,
-      "assists": 3,
+      "goals": 8,
+      "assists": 4,
       "pens": 1,
-      "apps": 10,
+      "apps": 11,
       "nat": "Algeria"
     },
     {
@@ -31,7 +31,7 @@
       "goals": 7,
       "assists": null,
       "pens": 4,
-      "apps": 7,
+      "apps": 8,
       "nat": "France"
     },
     {
@@ -56,6 +56,16 @@
     },
     {
       "rank": 6,
+      "name": "Boulaye Dia",
+      "team": "レンヌ",
+      "goals": 6,
+      "assists": null,
+      "pens": 1,
+      "apps": 9,
+      "nat": "Senegal"
+    },
+    {
+      "rank": 7,
       "name": "Florian Thauvin",
       "team": "ランス",
       "goals": 5,
@@ -65,7 +75,17 @@
       "nat": "France"
     },
     {
-      "rank": 7,
+      "rank": 8,
+      "name": "Louis Mafouta",
+      "team": "ルマン",
+      "goals": 5,
+      "assists": null,
+      "pens": 1,
+      "apps": 11,
+      "nat": "Central African Republic"
+    },
+    {
+      "rank": 9,
       "name": "Ferrán Torres",
       "team": "パリ・サンジェルマン",
       "goals": 5,
@@ -75,7 +95,7 @@
       "nat": "Spain"
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "Ludovic Ajorque",
       "team": "ブレスト",
       "goals": 5,
@@ -85,7 +105,7 @@
       "nat": "France"
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "Casper Tengstedt",
       "team": "トゥールーズ",
       "goals": 5,
@@ -95,7 +115,7 @@
       "nat": "Denmark"
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "Josh Maja",
       "team": "ルアーブル",
       "goals": 5,
@@ -103,26 +123,6 @@
       "pens": 1,
       "apps": 11,
       "nat": "Nigeria"
-    },
-    {
-      "rank": 11,
-      "name": "Boulaye Dia",
-      "team": "レンヌ",
-      "goals": 5,
-      "assists": null,
-      "pens": 1,
-      "apps": 8,
-      "nat": "Senegal"
-    },
-    {
-      "rank": 12,
-      "name": "Louis Mafouta",
-      "team": "ルマン",
-      "goals": 4,
-      "assists": null,
-      "pens": 1,
-      "apps": 10,
-      "nat": "Central African Republic"
     },
     {
       "rank": 13,
@@ -141,7 +141,7 @@
       "goals": 4,
       "assists": 1,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Poland"
     },
     {

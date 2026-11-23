@@ -915,7 +915,7 @@
       "awaySlug": "sc-paderborn-07",
       "finished": true,
       "score": "4-0",
-      "videoId": ""
+      "videoId": "SiEqo0jnp7Q"
     },
     {
       "matchday": 10,
@@ -959,7 +959,7 @@
       "awaySlug": "sc-freiburg",
       "finished": true,
       "score": "0-1",
-      "videoId": ""
+      "videoId": "SlfD9fhbfK0"
     },
     {
       "matchday": 10,
@@ -979,8 +979,8 @@
       "away": "マインツ",
       "homeSlug": "fc-augsburg",
       "awaySlug": "1-fsv-mainz-05",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": "__L_HlGy6-U"
     },
     {
@@ -990,8 +990,8 @@
       "away": "ハンブルガーSV",
       "homeSlug": "sv-werder-bremen",
       "awaySlug": "hamburger-sv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": "qKtiMTU6_ww"
     },
     {

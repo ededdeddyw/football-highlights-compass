@@ -2,7 +2,7 @@
   "code": "pl",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "scorers": [
     {
       "rank": 1,
@@ -21,7 +21,7 @@
       "goals": 7,
       "assists": null,
       "pens": null,
-      "apps": 9,
+      "apps": 10,
       "nat": "Sweden"
     },
     {
@@ -101,7 +101,7 @@
       "goals": 4,
       "assists": 4,
       "pens": 2,
-      "apps": 10,
+      "apps": 11,
       "nat": "Germany"
     },
     {
@@ -121,7 +121,7 @@
       "goals": 4,
       "assists": 2,
       "pens": 2,
-      "apps": 10,
+      "apps": 11,
       "nat": "Portugal"
     },
     {
@@ -131,7 +131,7 @@
       "goals": 4,
       "assists": null,
       "pens": null,
-      "apps": 10,
+      "apps": 11,
       "nat": "Cameroon"
     },
     {
@@ -146,13 +146,13 @@
     },
     {
       "rank": 15,
-      "name": "Kai Havertz",
-      "team": "アーセナル",
-      "goals": 3,
-      "assists": 1,
-      "pens": null,
+      "name": "Oliver McBurnie",
+      "team": "ハル・シティ",
+      "goals": 4,
+      "assists": 2,
+      "pens": 1,
       "apps": 11,
-      "nat": "Germany"
+      "nat": "Scotland"
     }
   ]
 }

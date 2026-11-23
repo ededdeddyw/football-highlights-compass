@@ -1188,8 +1188,8 @@
       "away": "ブライトン",
       "homeSlug": "hull-city",
       "awaySlug": "brighton-hove",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-0",
       "videoId": "EIxWKL0fblU"
     },
     {
@@ -1199,8 +1199,8 @@
       "away": "マンチェスター・ユナイテッド",
       "homeSlug": "liverpool",
       "awaySlug": "man-united",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "4-0",
       "videoId": "kUFkfrNRkM4"
     },
     {

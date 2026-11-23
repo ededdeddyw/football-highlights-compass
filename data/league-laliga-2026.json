@@ -1386,8 +1386,8 @@
       "away": "ビジャレアル",
       "homeSlug": "barca",
       "awaySlug": "villarreal",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "7OTR1QgknCU"
     },
     {
@@ -1397,8 +1397,8 @@
       "away": "レアル・ソシエダ",
       "homeSlug": "santander",
       "awaySlug": "real-sociedad",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-2",
       "videoId": "yK5lc28JQO8"
     },
     {
@@ -1408,8 +1408,8 @@
       "away": "マラガ",
       "homeSlug": "osasuna",
       "awaySlug": "malaga",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "uciy0dpBWM8"
     },
     {
@@ -1419,8 +1419,8 @@
       "away": "アトレティコ・マドリード",
       "homeSlug": "getafe",
       "awaySlug": "atleti",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-3",
       "videoId": "afP7zZFTJng"
     },
     {
