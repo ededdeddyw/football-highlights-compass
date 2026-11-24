@@ -1320,8 +1320,8 @@
       "away": "フィオレンティーナ",
       "homeSlug": "monza",
       "awaySlug": "fiorentina",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-0",
       "videoId": "28lsOKU2R30"
     },
     {

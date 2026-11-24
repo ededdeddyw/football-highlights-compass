@@ -1430,8 +1430,8 @@
       "away": "エルチェ",
       "homeSlug": "levante",
       "awaySlug": "elche",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "1dcgjltVcwg"
     },
     {
@@ -1656,62 +1656,7 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "エスパニョール",
-      "away": "セルタ",
-      "homeSlug": "espanyol",
-      "awaySlug": "celta",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "マラガ",
-      "away": "バルセロナ",
-      "homeSlug": "malaga",
-      "awaySlug": "barca",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "レアル・マドリード",
-      "away": "オサスナ",
-      "homeSlug": "real-madrid",
-      "awaySlug": "osasuna",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "デポルティボ",
-      "away": "アスレティック・ビルバオ",
-      "homeSlug": "deportivo",
-      "awaySlug": "athletic",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "レバンテ",
-      "away": "アラベス",
-      "homeSlug": "levante",
-      "awaySlug": "alaves",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
+      "dateUTC": "2026-12-11T20:00:00Z",
       "home": "エルチェ",
       "away": "セビージャ",
       "homeSlug": "elche",
@@ -1722,7 +1667,18 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
+      "dateUTC": "2026-12-12T13:00:00Z",
+      "home": "レバンテ",
+      "away": "アラベス",
+      "homeSlug": "levante",
+      "awaySlug": "alaves",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-12T15:15:00Z",
       "home": "ビジャレアル",
       "away": "ラーヨ・バジェカーノ",
       "homeSlug": "villarreal",
@@ -1733,7 +1689,18 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
+      "dateUTC": "2026-12-12T17:30:00Z",
+      "home": "マラガ",
+      "away": "バルセロナ",
+      "homeSlug": "malaga",
+      "awaySlug": "barca",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-12T20:00:00Z",
       "home": "ベティス",
       "away": "ラシン・サンタンデール",
       "homeSlug": "real-betis",
@@ -1744,7 +1711,29 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
+      "dateUTC": "2026-12-13T13:00:00Z",
+      "home": "アトレティコ・マドリード",
+      "away": "バレンシア",
+      "homeSlug": "atleti",
+      "awaySlug": "valencia",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-13T15:15:00Z",
+      "home": "デポルティボ",
+      "away": "アスレティック・ビルバオ",
+      "homeSlug": "deportivo",
+      "awaySlug": "athletic",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-13T17:30:00Z",
       "home": "レアル・ソシエダ",
       "away": "ヘタフェ",
       "homeSlug": "real-sociedad",
@@ -1755,11 +1744,22 @@
     },
     {
       "matchday": 16,
-      "dateUTC": "2026-12-13T00:00:00Z",
-      "home": "アトレティコ・マドリード",
-      "away": "バレンシア",
-      "homeSlug": "atleti",
-      "awaySlug": "valencia",
+      "dateUTC": "2026-12-13T20:00:00Z",
+      "home": "レアル・マドリード",
+      "away": "オサスナ",
+      "homeSlug": "real-madrid",
+      "awaySlug": "osasuna",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 16,
+      "dateUTC": "2026-12-14T20:00:00Z",
+      "home": "エスパニョール",
+      "away": "セルタ",
+      "homeSlug": "espanyol",
+      "awaySlug": "celta",
       "finished": false,
       "score": "",
       "videoId": ""

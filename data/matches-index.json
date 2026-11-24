@@ -27287,46 +27287,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md16-espanyol-celta",
+    "id": "laliga-2526-md16-elche-sevilla-fc",
     "teams": [
-      "エスパニョール",
-      "セルタ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第16節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md16-malaga-barca",
-    "teams": [
-      "マラガ",
-      "バルセロナ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第16節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md16-real-madrid-osasuna",
-    "teams": [
-      "レアル・マドリード",
-      "オサスナ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "第16節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
-    "id": "laliga-2526-md16-deportivo-athletic",
-    "teams": [
-      "デポルティボ",
-      "アスレティック・ビルバオ"
+      "エルチェ",
+      "セビージャ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -27347,10 +27311,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md16-elche-sevilla-fc",
+    "id": "laliga-2526-md16-villarreal-rayo-vallecano",
     "teams": [
-      "エルチェ",
-      "セビージャ"
+      "ビジャレアル",
+      "ラーヨ・バジェカーノ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -27359,10 +27323,10 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md16-villarreal-rayo-vallecano",
+    "id": "laliga-2526-md16-malaga-barca",
     "teams": [
-      "ビジャレアル",
-      "ラーヨ・バジェカーノ"
+      "マラガ",
+      "バルセロナ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -27383,6 +27347,30 @@
     "hasPreview": false
   },
   {
+    "id": "laliga-2526-md16-atleti-valencia",
+    "teams": [
+      "アトレティコ・マドリード",
+      "バレンシア"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md16-deportivo-athletic",
+    "teams": [
+      "デポルティボ",
+      "アスレティック・ビルバオ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "laliga-2526-md16-real-sociedad-getafe",
     "teams": [
       "レアル・ソシエダ",
@@ -27395,10 +27383,22 @@
     "hasPreview": false
   },
   {
-    "id": "laliga-2526-md16-atleti-valencia",
+    "id": "laliga-2526-md16-real-madrid-osasuna",
     "teams": [
-      "アトレティコ・マドリード",
-      "バレンシア"
+      "レアル・マドリード",
+      "オサスナ"
+    ],
+    "league": "laliga",
+    "leagueName": "ラ・リーガ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "laliga-2526-md16-espanyol-celta",
+    "teams": [
+      "エスパニョール",
+      "セルタ"
     ],
     "league": "laliga",
     "leagueName": "ラ・リーガ",
@@ -35267,18 +35267,6 @@
     "hasPreview": false
   },
   {
-    "id": "ligue1-2526-md15-paris-fc-le-havre",
-    "teams": [
-      "パリFC",
-      "ルアーブル"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "第15節 / 2026-27",
-    "players": [],
-    "hasPreview": false
-  },
-  {
     "id": "ligue1-2526-md15-lorient-auxerre",
     "teams": [
       "ロリアン",
@@ -35295,6 +35283,18 @@
     "teams": [
       "ルマン",
       "リヨン"
+    ],
+    "league": "ligue1",
+    "leagueName": "リーグアン",
+    "meta": "第15節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ligue1-2526-md15-paris-fc-le-havre",
+    "teams": [
+      "パリFC",
+      "ルアーブル"
     ],
     "league": "ligue1",
     "leagueName": "リーグアン",

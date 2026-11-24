@@ -1437,17 +1437,6 @@
     {
       "matchday": 15,
       "dateUTC": "2027-01-02T20:00:00Z",
-      "home": "パリFC",
-      "away": "ルアーブル",
-      "homeSlug": "paris-fc",
-      "awaySlug": "le-havre",
-      "finished": false,
-      "score": "",
-      "videoId": ""
-    },
-    {
-      "matchday": 15,
-      "dateUTC": "2027-01-02T20:00:00Z",
       "home": "ロリアン",
       "away": "オセール",
       "homeSlug": "lorient",
@@ -1463,6 +1452,17 @@
       "away": "リヨン",
       "homeSlug": "le-mans",
       "awaySlug": "olympique-lyon",
+      "finished": false,
+      "score": "",
+      "videoId": ""
+    },
+    {
+      "matchday": 15,
+      "dateUTC": "2027-01-03T16:15:00Z",
+      "home": "パリFC",
+      "away": "ルアーブル",
+      "homeSlug": "paris-fc",
+      "awaySlug": "le-havre",
       "finished": false,
       "score": "",
       "videoId": ""

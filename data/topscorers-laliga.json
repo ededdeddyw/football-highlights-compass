@@ -2,7 +2,7 @@
   "code": "laliga",
   "season": "2026",
   "source": "football-data.org",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "scorers": [
     {
       "rank": 1,
@@ -101,7 +101,7 @@
       "goals": 6,
       "assists": null,
       "pens": 1,
-      "apps": 12,
+      "apps": 13,
       "nat": "Spain"
     },
     {
@@ -141,7 +141,7 @@
       "goals": 5,
       "assists": 1,
       "pens": null,
-      "apps": 11,
+      "apps": 12,
       "nat": "Spain"
     },
     {
