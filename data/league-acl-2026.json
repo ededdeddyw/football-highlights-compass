@@ -267,6 +267,28 @@
       "finished": true,
       "score": "",
       "videoId": "PY-pyFYG2QQ"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "ニューカッスル・ジェッツ",
+      "away": "柏レイソル",
+      "homeSlug": "newcastle-jets",
+      "awaySlug": "kashiwa",
+      "finished": true,
+      "score": "",
+      "videoId": "kKqr7R_2CaQ"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
+      "home": "京都サンガF.C.",
+      "away": "浦項スティーラーズ",
+      "homeSlug": "kyoto-sanga",
+      "awaySlug": "pohang",
+      "finished": true,
+      "score": "",
+      "videoId": "v4dZ730nY5Y"
     }
   ]
 }
