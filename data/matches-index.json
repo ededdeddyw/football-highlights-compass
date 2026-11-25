@@ -1,5 +1,77 @@
 [
   {
+    "id": "0Hf9Gbl4qGs",
+    "teams": [
+      "レアル・マドリード",
+      "PSVアイントホーフェン"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "LO2EVvq9G6U",
+    "teams": [
+      "マンチェスター・シティ",
+      "ナポリ"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "z2IkYjteBCI",
+    "teams": [
+      "アーセナル",
+      "ドルトムント"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ME5qEOQZ03g",
+    "teams": [
+      "フェイエノールト",
+      "ポルト"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "jaQoAIku7t4",
+    "teams": [
+      "コモ",
+      "AEKアテネ"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "JG4xWhV3HLQ",
+    "teams": [
+      "ガラタサライ",
+      "アストン・ヴィラ"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "1dcgjltVcwg",
     "teams": [
       "レバンテ",
@@ -9,7 +81,7 @@
     "leagueName": "ラ・リーガ",
     "meta": "ラ・リーガ 第13節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "rRvkS1vUt4M",
@@ -21,7 +93,7 @@
     "leagueName": "",
     "meta": "プレミアリーグ 第11節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "28lsOKU2R30",
@@ -33,7 +105,7 @@
     "leagueName": "セリエA",
     "meta": "セリエA 第12節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "qKtiMTU6_ww",
@@ -884,78 +956,6 @@
     "league": "bundes",
     "leagueName": "ブンデスリーガ",
     "meta": "ブンデスリーガ 第9節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "hQzLYKAkXKw",
-    "teams": [
-      "パーダーボルン",
-      "フランクフルト"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第9節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "J2mRbi1bo64",
-    "teams": [
-      "バレンシア",
-      "レアル・マドリード"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "ラ・リーガ 第12節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "EJheGdKnY8k",
-    "teams": [
-      "オサスナ",
-      "アスレティック・ビルバオ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "ラ・リーガ 第12節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "z37HZVNSYcU",
-    "teams": [
-      "エスパニョール",
-      "デポルティボ"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "ラ・リーガ 第12節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "ej03_Yi74Dk",
-    "teams": [
-      "マラガ",
-      "ラシン・サンタンデール"
-    ],
-    "league": "laliga",
-    "leagueName": "ラ・リーガ",
-    "meta": "ラ・リーガ 第12節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "XHDjDiHqMzc",
-    "teams": [
-      "パリ・サンジェルマン",
-      "トロワ"
-    ],
-    "league": "ligue1",
-    "leagueName": "リーグアン",
-    "meta": "リーグアン 第10節",
     "players": [],
     "hasPreview": true
   },
@@ -4615,6 +4615,18 @@
     "league": "acl",
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "acl-2526-md5-cong-an-hanoi-kobe",
+    "teams": [
+      "コンアン・ハノイ",
+      "ヴィッセル神戸"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第5節 / 2026-27",
     "players": [],
     "hasPreview": true
   },
@@ -19244,7 +19256,7 @@
     "leagueName": "J1リーグ",
     "meta": "第15節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "j1-2526-md15-kashima-shimizu",
@@ -38804,7 +38816,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-czech-spain",
@@ -38828,7 +38840,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-norway-wales",
@@ -38996,7 +39008,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-estonia-bulgaria",
@@ -39116,7 +39128,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-hungary-northern-ireland",
@@ -39128,7 +39140,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-finland-san-marino",
