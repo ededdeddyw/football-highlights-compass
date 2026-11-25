@@ -803,8 +803,8 @@
       "away": "アストン・ヴィラ",
       "homeSlug": "galatasaray",
       "awaySlug": "aston-villa",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "JG4xWhV3HLQ"
     },
     {
@@ -814,8 +814,8 @@
       "away": "LASKリンツ",
       "homeSlug": "bod-glimt",
       "awaySlug": "lask",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": ""
     },
     {
@@ -825,8 +825,8 @@
       "away": "PSVアイントホーフェン",
       "homeSlug": "real-madrid",
       "awaySlug": "psv",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "5-1",
       "videoId": "0Hf9Gbl4qGs"
     },
     {
@@ -836,8 +836,8 @@
       "away": "ナポリ",
       "homeSlug": "man-city",
       "awaySlug": "napoli",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "2-2",
       "videoId": "LO2EVvq9G6U"
     },
     {
@@ -847,8 +847,8 @@
       "away": "ドルトムント",
       "homeSlug": "arsenal",
       "awaySlug": "dortmund",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-1",
       "videoId": "z2IkYjteBCI"
     },
     {
@@ -858,8 +858,8 @@
       "away": "ポルト",
       "homeSlug": "feyenoord",
       "awaySlug": "porto",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-1",
       "videoId": "ME5qEOQZ03g"
     },
     {
@@ -869,8 +869,8 @@
       "away": "ベティス",
       "homeSlug": "sl-bratislava",
       "awaySlug": "real-betis",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "0-2",
       "videoId": ""
     },
     {
@@ -880,8 +880,8 @@
       "away": "ランス",
       "homeSlug": "rb-leipzig",
       "awaySlug": "rc-lens",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "3-1",
       "videoId": ""
     },
     {
@@ -891,8 +891,8 @@
       "away": "AEKアテネ",
       "homeSlug": "como-1907",
       "awaySlug": "pae-aek",
-      "finished": false,
-      "score": "",
+      "finished": true,
+      "score": "1-0",
       "videoId": "jaQoAIku7t4"
     },
     {
