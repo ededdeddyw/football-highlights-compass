@@ -271,6 +271,17 @@
     {
       "matchday": 5,
       "dateUTC": "",
+      "home": "コンアン・ハノイ",
+      "away": "ヴィッセル神戸",
+      "homeSlug": "cong-an-hanoi",
+      "awaySlug": "kobe",
+      "finished": true,
+      "score": "",
+      "videoId": "b6p7tfkin-I"
+    },
+    {
+      "matchday": 5,
+      "dateUTC": "",
       "home": "ニューカッスル・ジェッツ",
       "away": "柏レイソル",
       "homeSlug": "newcastle-jets",
