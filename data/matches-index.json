@@ -1,5 +1,65 @@
 [
   {
+    "id": "yyocHdg060k",
+    "teams": [
+      "パリ・サンジェルマン",
+      "ローマ"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "bZAvKskbsok",
+    "teams": [
+      "クラブ・ブルッヘ",
+      "リバプール"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "i75tXtlqfXg",
+    "teams": [
+      "リール",
+      "バイエルン"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "ZYq6ac_HHoE",
+    "teams": [
+      "スポルティングCP",
+      "マンチェスター・ユナイテッド"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "xmWRQRNBVOM",
+    "teams": [
+      "サバフ",
+      "バルセロナ"
+    ],
+    "league": "other",
+    "leagueName": "",
+    "meta": "チャンピオンズリーグ 第5節",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "0Hf9Gbl4qGs",
     "teams": [
       "レアル・マドリード",
@@ -9,7 +69,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "LO2EVvq9G6U",
@@ -21,7 +81,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "z2IkYjteBCI",
@@ -33,7 +93,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "ME5qEOQZ03g",
@@ -45,7 +105,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "jaQoAIku7t4",
@@ -57,7 +117,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "JG4xWhV3HLQ",
@@ -69,7 +129,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "1dcgjltVcwg",
@@ -896,66 +956,6 @@
     "league": "seriea",
     "leagueName": "セリエA",
     "meta": "セリエA 第11節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "d61-WRYyWto",
-    "teams": [
-      "ナポリ",
-      "ラツィオ"
-    ],
-    "league": "seriea",
-    "leagueName": "セリエA",
-    "meta": "セリエA 第11節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "v5O3VC_qFWA",
-    "teams": [
-      "シュツットガルト",
-      "ブレーメン"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第9節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "HYxfJfIbSvY",
-    "teams": [
-      "ドルトムント",
-      "エルファースベルク"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第9節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "YXjWziUVBCE",
-    "teams": [
-      "ライプツィヒ",
-      "アウクスブルク"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第9節",
-    "players": [],
-    "hasPreview": true
-  },
-  {
-    "id": "52rDqvXTKlg",
-    "teams": [
-      "マインツ",
-      "バイエルン"
-    ],
-    "league": "bundes",
-    "leagueName": "ブンデスリーガ",
-    "meta": "ブンデスリーガ 第9節",
     "players": [],
     "hasPreview": true
   },
@@ -4619,6 +4619,18 @@
     "hasPreview": true
   },
   {
+    "id": "acl-2526-md5-gamba-osaka-port-fc",
+    "teams": [
+      "ガンバ大阪",
+      "ポートFC"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
     "id": "acl-2526-md5-cong-an-hanoi-kobe",
     "teams": [
       "コンアン・ハノイ",
@@ -4647,6 +4659,18 @@
     "teams": [
       "京都サンガF.C.",
       "浦項スティーラーズ"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "acl-2526-md5-kashima-jeonbuk",
+    "teams": [
+      "鹿島アントラーズ",
+      "全北"
     ],
     "league": "acl",
     "leagueName": "AFCチャンピオンズリーグ",
@@ -19307,6 +19331,90 @@
     "hasPreview": true
   },
   {
+    "id": "j1-2526-md16-fc-tokyo-hiroshima",
+    "teams": [
+      "FC東京",
+      "サンフレッチェ広島"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-nagasaki-kawasaki",
+    "teams": [
+      "V・ファーレン長崎",
+      "川崎フロンターレ"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-fukuoka-yokohama-fm",
+    "teams": [
+      "アビスパ福岡",
+      "横浜F・マリノス"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-chiba-nagoya",
+    "teams": [
+      "ジェフユナイテッド千葉",
+      "名古屋グランパス"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-okayama-shimizu",
+    "teams": [
+      "ファジアーノ岡山",
+      "清水エスパルス"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-urawa-cerezo-osaka",
+    "teams": [
+      "浦和レッズ",
+      "セレッソ大阪"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j1-2526-md16-mito-tokyo-verdy",
+    "teams": [
+      "水戸ホーリーホック",
+      "東京ヴェルディ"
+    ],
+    "league": "j1",
+    "leagueName": "J1リーグ",
+    "meta": "第16節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "j2-2526-md5-iwata-toyama",
     "teams": [
       "ジュビロ磐田",
@@ -20923,6 +21031,126 @@
     "league": "j2",
     "leagueName": "J2リーグ",
     "meta": "第18節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-imabari-miyazaki",
+    "teams": [
+      "FC今治",
+      "テゲバジャーロ宮崎"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-omiya-tokushima",
+    "teams": [
+      "RB大宮アルディージャ",
+      "徳島ヴォルティス"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-iwaki-toyama",
+    "teams": [
+      "いわきFC",
+      "カターレ富山"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-hachinohe-niigata",
+    "teams": [
+      "ヴァンラーレ八戸",
+      "アルビレックス新潟"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-tosu-oita",
+    "teams": [
+      "サガン鳥栖",
+      "大分トリニータ"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-yamagata-iwata",
+    "teams": [
+      "モンテディオ山形",
+      "ジュビロ磐田"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-yokohama-fc-sendai",
+    "teams": [
+      "横浜FC",
+      "ベガルタ仙台"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-shonan-kofu",
+    "teams": [
+      "湘南ベルマーレ",
+      "ヴァンフォーレ甲府"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-tochigi-city-akita",
+    "teams": [
+      "栃木シティ",
+      "ブラウブリッツ秋田"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "j2-2526-md19-sapporo-fujieda",
+    "teams": [
+      "北海道コンサドーレ札幌",
+      "藤枝MYFC"
+    ],
+    "league": "j2",
+    "leagueName": "J2リーグ",
+    "meta": "第19節 / 2026-27",
     "players": [],
     "hasPreview": true
   },
@@ -38972,7 +39200,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-israel-austria",
@@ -39044,7 +39272,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第6節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md6-greece-serbia",
