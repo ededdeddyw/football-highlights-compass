@@ -21,7 +21,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "i75tXtlqfXg",
@@ -33,7 +33,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "ZYq6ac_HHoE",
@@ -45,7 +45,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "xmWRQRNBVOM",
@@ -57,7 +57,7 @@
     "leagueName": "",
     "meta": "チャンピオンズリーグ 第5節",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "0Hf9Gbl4qGs",
@@ -4619,6 +4619,18 @@
     "hasPreview": true
   },
   {
+    "id": "acl-2526-md5-svay-rieng-machida",
+    "teams": [
+      "PRKスヴァイリエン",
+      "FC町田ゼルビア"
+    ],
+    "league": "acl",
+    "leagueName": "AFCチャンピオンズリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "acl-2526-md5-gamba-osaka-port-fc",
     "teams": [
       "ガンバ大阪",
@@ -4628,7 +4640,7 @@
     "leagueName": "AFCチャンピオンズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "acl-2526-md5-cong-an-hanoi-kobe",
@@ -14267,6 +14279,42 @@
     "hasPreview": true
   },
   {
+    "id": "conference-2526-md4-x-ハーツ-as-monaco",
+    "teams": [
+      "ハーツ",
+      "モナコ"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "conference-2526-md4-brighton-and-hove-albion-x-ウニヴェルシタテア",
+    "teams": [
+      "ブライトン",
+      "ウニヴェルシタテア・クラヨヴァ"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "conference-2526-md4-freiburg-x-トゥエンテ",
+    "teams": [
+      "フライブルク",
+      "トゥエンテ"
+    ],
+    "league": "conference",
+    "leagueName": "UEFAカンファレンスリーグ",
+    "meta": "第4節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
     "id": "el-2526-md1-anderlecht-olympique-lyonnais",
     "teams": [
       "アンデルレヒト",
@@ -14457,6 +14505,54 @@
     "meta": "第4節 / 2026-27",
     "players": [],
     "hasPreview": true
+  },
+  {
+    "id": "el-2526-md5-x-オリンピアコス-ac-milan",
+    "teams": [
+      "オリンピアコス",
+      "ミラン"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": true
+  },
+  {
+    "id": "el-2526-md5-crystal-palace-real-sociedad",
+    "teams": [
+      "クリスタル・パレス",
+      "レアル・ソシエダ"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md5-x-ユヴェントス-x-オモニア",
+    "teams": [
+      "ユヴェントス",
+      "オモニア"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
+  },
+  {
+    "id": "el-2526-md5-olympique-lyonnais-x-リレストロム",
+    "teams": [
+      "リヨン",
+      "リレストロム"
+    ],
+    "league": "el",
+    "leagueName": "UEFAヨーロッパリーグ",
+    "meta": "第5節 / 2026-27",
+    "players": [],
+    "hasPreview": false
   },
   {
     "id": "eredivisie-2526-md1-cambuur-excelsior",
@@ -38948,7 +39044,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-kosovo-israel",
@@ -38960,7 +39056,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-san-marino-belarus",
@@ -39164,7 +39260,7 @@
     "leagueName": "UEFAネーションズリーグ",
     "meta": "第5節 / 2026-27",
     "players": [],
-    "hasPreview": false
+    "hasPreview": true
   },
   {
     "id": "nations-2526-md5-northern-ireland-ukraine",
