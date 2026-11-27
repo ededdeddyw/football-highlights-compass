@@ -80,6 +80,39 @@
       "finished": true,
       "score": "",
       "videoId": "C7Unp8sRRd4"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "ハーツ",
+      "away": "モナコ",
+      "homeSlug": "x-ハーツ",
+      "awaySlug": "as-monaco",
+      "finished": true,
+      "score": "",
+      "videoId": "YkhjAQBqpDI"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "ブライトン",
+      "away": "ウニヴェルシタテア・クラヨヴァ",
+      "homeSlug": "brighton-and-hove-albion",
+      "awaySlug": "x-ウニヴェルシタテア",
+      "finished": true,
+      "score": "",
+      "videoId": "UQs3hSc23n8"
+    },
+    {
+      "matchday": 4,
+      "dateUTC": "",
+      "home": "フライブルク",
+      "away": "トゥエンテ",
+      "homeSlug": "freiburg",
+      "awaySlug": "x-トゥエンテ",
+      "finished": true,
+      "score": "",
+      "videoId": "gJep7iyp9oQ"
     }
   ]
 }
